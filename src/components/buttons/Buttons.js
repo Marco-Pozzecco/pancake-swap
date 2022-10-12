@@ -3,11 +3,17 @@ import React, {useState} from "react";
 
 
 export default function Button(props) {
+    
+    function handleClick() {
+        useEvent()
+    }
 
     return(
-        <button className={props.style} onClick={} >
-            {props.text}
-        </button>
+        <div>
+            <button className={props.className} onClick={handleClick}>
+                {props.text}{props.svg}
+            </button>
+        </div>
     )
 }
 
