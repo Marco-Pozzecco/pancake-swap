@@ -1,3 +1,3 @@
-<Nav />
+{/* <Nav />
 <Home />
-<Footer />
+<Footer /> */}
