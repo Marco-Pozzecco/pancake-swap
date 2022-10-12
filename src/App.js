@@ -1,0 +1,3 @@
+<Nav />
+<Home />
+<Footer />
