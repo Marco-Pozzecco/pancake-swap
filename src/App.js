@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./components/navbar/Navbar";
 import Trade from "./pages/Trade"
 import Earn from "./pages/Earn"
 import Win from "./pages/Win"

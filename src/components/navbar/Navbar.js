@@ -1,13 +1,15 @@
 import React from "react";
 import "./navbar.scss"
 import {Outlet, Link} from 'react-router-dom'
+//import logo from './resources/svgs/logo_black.svg'
+
 
 const Navbar = () => {
     return(
         <nav>
             <div className="flex">
                 <h1><Link to="/">Pancake Swap</Link></h1>
-                
+                {/* <img src={logo} alt="logo"></img> */}
                 <ul className="menu-ul menu-nav">
                 {/* <li><Link to="/">Home</Link></li> */}
                 <li><Link to="/trade">Trade</Link>
