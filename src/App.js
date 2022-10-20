@@ -3,23 +3,29 @@ import Navbar from "./components/navbar/Navbar";
 import Trade from "./pages/Trade"
 import Earn from "./pages/Earn"
 import Win from "./pages/Win"
+import Home from "./pages/Home";
+import NoPage from "./pages/NoPage";
 import "./App.css"
-import { Route, BrowserRouter as Router, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import Layout from "./pages/Layout";
 
 
 function App() {
     return(
-        <header>
-            
-            <Router>
-                <Navbar/>
-                <Route path="/trade" component={Trade}></Route>
-                <Route path="/earn" component={Earn}></Route>
-                <Route path="/earn" component={Win}></Route>
-
-            </Router>
-        </header>
-
+        <div>
+                <Router>
+                <Routes>
+                    <Route path="/" element={<Layout />} >
+                    <Route index element={<Home />} />
+                    <Route path="trade" element={<Trade/>} />
+                    <Route path="earn" element={<Earn/>} />
+                    <Route path="win" element={<Win/>} />
+                    <Route path="*" element={<NoPage/>} />
+                    </Route>
+                </Routes>
+                </Router>
+        </div>
+        
     );
 
 }

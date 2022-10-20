@@ -1,15 +1,17 @@
 import React from "react";
-// import "./Navbar.scss"
+import "../components/navbar/Layout.css"
+
 import {Outlet, Link} from 'react-router-dom'
 
-const Navbar = () => {
+const Layout = () => {
     return(
         <>
-            <h3>Logo</h3>
-            <nav className="navbar">
+            {/* <h3>Logo</h3> */}
+            <li><Link to="/">Pancake Swap</Link></li>
+            <nav className="menu-ul menu-nav">
                 
                 <ul>
-                <li><Link to="/">Home</Link></li>
+                {/* <li><Link to="/">Home</Link></li> */}
                 <li><Link to="/trade">Trade</Link></li>
                 <li><Link to="/earn">Earn</Link></li>  
                 <li><Link to="/win">Win</Link>  </li>     
@@ -20,4 +22,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+export default Layout;

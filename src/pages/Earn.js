@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Earn() {
+const Earn = () => {
   return (
     <div>Earn</div>
   )

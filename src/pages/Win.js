@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Win() {
+const Win = ()=> {
   return (
     <div>Win</div>
   )

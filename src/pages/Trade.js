@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Trade() {
+const Trade = () => {
   return (
     <div>Trade</div>
   )
