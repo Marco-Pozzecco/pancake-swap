@@ -1,4 +1,4 @@
-import './Buttons.scss' ;
+import './buttons.scss' ;
 import React, {useState} from "react";
 
 
