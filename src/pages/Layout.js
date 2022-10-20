@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/navbar/Layout.css"
+import "../components/navbar/Navbar.scss"
 
 import {Outlet, Link} from 'react-router-dom'
 

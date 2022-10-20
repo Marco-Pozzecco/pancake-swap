@@ -2,7 +2,7 @@ import React from 'react'
 
 const Earn = () => {
   return (
-    <div>Earn</div>
+    <div><h1>Earn</h1></div>
   )
 }
 

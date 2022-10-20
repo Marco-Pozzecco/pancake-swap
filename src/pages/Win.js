@@ -2,7 +2,7 @@ import React from 'react'
 
 const Win = ()=> {
   return (
-    <div>Win</div>
+    <div><h1>Win</h1></div>
   )
 }
 
