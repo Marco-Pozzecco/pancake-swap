@@ -1,9 +1,13 @@
 import React from "react";
-import "./FloatingBunny.scss"
+import "./_floating-bunny.scss";
+import bunny from "./bunny.webp";
+import stella1 from "./stella1.webp";
+import stella2 from "./stella2.webp";
+import stella3 from "./stella3.webp";
 
 export default function FloatingBunny() {
     return (
-        <section className="floating-bunny-wrapper">
+        <section className="fb-floating-bunny">
             <div class="fb-wrapper">
                 <div class="fb-contents-section">
                     <h2>The moon is made of pancakes.</h2>
@@ -21,17 +25,17 @@ export default function FloatingBunny() {
 
                 <div class="fb-img-section">
                     <div class="fb-thefloatingbunny">
-                        coniglio
+                            <img src={bunny}/>
                     </div>
                     <div class="fb-thefloatingstars">
                         <div class="fb-star1">
-                            stella 1
+                            <img src={stella1}/>
                         </div>
                         <div class="fb-star2">
-                            stella 2
+                            <img src={stella2}/>
                         </div>
                         <div class="fb-star3">
-                            stella 3
+                            <img src={stella3}/>
                         </div>
                     </div>
                 </div>
