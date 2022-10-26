@@ -1,9 +1,21 @@
 # Presentazione sito PancakeSwap
 
-## Introduzione - Perché pancakeSwap
+## Introduzione - Perché pancakeSwap - Clara
 
-## Organizzazione del lavoro in Trello (AGILE)
+Abbiamo scelto **pancakeSwap** per la completezza delle funzionalità, riteniamo, infatti, che dal punto di vista dell'aspetto
+front-end ci offra l'opportunità di metterci alla prova con la creazione di un'interfaccia dinamica e diversificata.
 
-## Logiche di funzionamento
+Per quanto riguarda il lato back-end comunica con i server per ricevere dalle API finanziarie dati che traduce in schemi e grafici per facilitarne l'intepretazione.
 
-## UI/UX Design
+## Organizzazione del lavoro in Trello (AGILE) - Davide
+
+Trello:
+    - Organizzazione del lavoro in sprint
+    - scrum quotidiani
+    - il ruolo di Davide
+
+## Logiche di funzionamento - Marco, Giuseppe
+
+
+## UI/UX Design - Milton, Giovanni
+
