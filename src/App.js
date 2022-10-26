@@ -8,12 +8,13 @@ import NoPage from "./pages/NoPage";
 import "./App.css"
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Layout from "./pages/Layout";
+import StatSection from "./layouts/home-stats-section/StatSection";
 
 
 function App() {
     return(
         <div>
-                <Router>
+                {/* <Router>
                 <Routes>
                     <Route path="/" element={<Layout />} >
                     <Route index element={<Home />} />
@@ -23,7 +24,10 @@ function App() {
                     <Route path="*" element={<NoPage/>} />
                     </Route>
                 </Routes>
-                </Router>
+                </Router> */}
+
+                <StatSection/>
+
         </div>
         
     );
