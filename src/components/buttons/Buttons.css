@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/* Bottoni nel div-SWAP(a sinistra)-- */
+/* --bottone in alto a sinistra sbarrato----------------- */
+/* blocco bottoni nel div Swap--------------------------------------------*/
+/* --Bottoni scelta valute BNB, CAKE, etc------------------------------------------------- */
+/* BUTTON SWITCH SMALL  --   >>>BSS<<<    Check-Box - Staked Only - (ON/OFF Button)-------------- */
+/* BOTTONE SEMI TRASPARENTE-2 (scuro) --- (HARVEST)------------------------------
+che appare nella sezione che esce dopo che si clicca su una sezione della griglia/lista in Trade → Farm---- */
+/* ----Farm → POOLS---- */
+/*WIN ..............................................*/
+/* ----WIN → PREDICTION (BETA)---- */
+/*ETICHETTE Sovrapposte*/
+/* ----WIN → LOTTERY---- */
+/* Bottoni nel div-SWAP(a sinistra)-- */
+/* --bottone in alto a sinistra sbarrato----------------- */
+/* blocco bottoni nel div Swap--------------------------------------------*/
+/* --Bottoni scelta valute BNB, CAKE, etc------------------------------------------------- */
+/* BUTTON SWITCH SMALL  --   >>>BSS<<<    Check-Box - Staked Only - (ON/OFF Button)-------------- */
+/* BOTTONE SEMI TRASPARENTE-2 (scuro) --- (HARVEST)------------------------------
+che appare nella sezione che esce dopo che si clicca su una sezione della griglia/lista in Trade → Farm---- */
+/* ----Farm → POOLS---- */
+/*WIN ..............................................*/
+/* ----WIN → PREDICTION (BETA)---- */
+/*ETICHETTE Sovrapposte*/
+/* ----WIN → LOTTERY---- */
+/* text color + "need help" */
+/* Inseriti da Clara, da rivedere: */
+/* text input color */
+/* Text color gradient */
+/* cards background color */
+/* text color  */
+/* nav bar color */
+/* website background color */
+/* text input color */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-size: 16px;
+  padding: 0 24px;
+  border-radius: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.65;
+}
+
+.button-aquagreen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(31, 199, 212); /* rgb(31, 199, 212)*/
+  border: none;
+  color: white; /* white*/
+  height: 48px;
+  font-size: 16px; /*16px*/
+  font-weight: 600; /*600*/
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+}
+.button-aquagreen:active {
+  transform: translateY(2px);
+}
+
+.button-onlyborder {
+  background-color: transparent; /*transparent*/
+  color: rgb(31, 199, 212); /* rgb(31, 199, 212)*/
+  border: 2px solid rgb(31, 199, 212); /* 2px solid  rgb(31, 199, 212)*/
+  height: 48px; /**/
+  font-size: 16px; /*16px*/
+  font-weight: 600; /*600*/
+}
+.button-onlyborder:active {
+  transform: translateY(1px);
+}
+
+.button-semitransparent {
+  background-color: rgba(31, 200, 212, 0.65); /*rgba(31, 200, 212, 0.65)*/
+  color: white; /*white*/
+  border: none; /*none*/
+  height: 32px; /**/
+  font-weight: 600; /*600*/
+  padding: 4px 8px; /**/
+  border-radius: 6px; /**/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-osvg {
+  background-color: transparent; /*transparent*/
+  color: rgb(184, 173, 210); /* rgb(184, 173, 210)*/
+  border: none; /*none*/
+  border-radius: 50%; /**/
+  padding: 0 17px; /**/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px; /**/
+  height: 32px;
+  padding: 0;
+}
+.button-osvg:hover, .button-osvg:hover, .button-osvg:hover {
+  opacity: 0.65;
+}
+.button-osvg:active {
+  transform: translateY(2px);
+}
+
+.currency-btn {
+  background-color: transparent; /*transparent*/
+  font-size: 16px; /*16px*/
+  font-weight: 600; /*600*/
+  height: 32px;
+  width: auto;
+  padding: 0 0.5rem;
+  border: none; /*none*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.currency-btn:hover {
+  opacity: 0.65;
+}
+.currency-btn:active {
+  transform: translateY(2px);
+}
+.currency-btn .currency-btn-content-box {
+  max-height: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white; /*white*/
+}
+.currency-btn .currency-btn-content-boxsvg {
+  width: 24px;
+}/*# sourceMappingURL=Buttons.css.map */

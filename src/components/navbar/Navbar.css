@@ -1,0 +1,339 @@
+@charset "UTF-8";
+/* Bottoni nel div-SWAP(a sinistra)-- */
+/* --bottone in alto a sinistra sbarrato----------------- */
+/* blocco bottoni nel div Swap--------------------------------------------*/
+/* --Bottoni scelta valute BNB, CAKE, etc------------------------------------------------- */
+/* BUTTON SWITCH SMALL  --   >>>BSS<<<    Check-Box - Staked Only - (ON/OFF Button)-------------- */
+/* BOTTONE SEMI TRASPARENTE-2 (scuro) --- (HARVEST)------------------------------
+che appare nella sezione che esce dopo che si clicca su una sezione della griglia/lista in Trade → Farm---- */
+/* ----Farm → POOLS---- */
+/*WIN ..............................................*/
+/* ----WIN → PREDICTION (BETA)---- */
+/*ETICHETTE Sovrapposte*/
+/* ----WIN → LOTTERY---- */
+/* text color + "need help" */
+/* Inseriti da Clara, da rivedere: */
+/* text input color */
+/* Text color gradient */
+/* cards background color */
+/* text color  */
+/* nav bar color */
+/* website background color */
+/* text input color */
+.theme-dark {
+  --fa-moon: rgb(39, 38, 44);
+  --fa-sun: rgb(39, 38, 44);
+  --nav-bkground: rgb(39, 38, 44);
+  --popup-bg: rgb(39, 38, 44);
+  --text-color: white;
+  --popup-modal1-bg: linear-gradient(166.77deg, rgb(59, 65, 85), rgb(58, 48, 69));
+  --label-toggle-bg: rgb(102, 97, 112);
+  --border-bottom-pp: rgb(56, 50, 65);
+  --icon-text-color: rgb(184, 173, 210);
+  --hover-nav-ul: rgb(53, 53, 70);
+}
+
+.theme-light {
+  --fa-moon: white;
+  --fa-sun: #f39c12;
+  --nav-bkground: #fff;
+  --popup-bg: #fff;
+  --text-color: rgb(8, 6, 11);
+  --popup-modal1-bg: linear-gradient(111.68deg, rgb(242, 236, 242), rgb(232, 242, 246));
+  --label-toggle-bg: rgb(189, 194, 196);
+  --border-bottom-pp: #d9d9d9;
+  --icon-text-color: rgb(122, 110, 170);
+  --hover-nav-ul: rgb(233, 234, 235);
+}
+
+.mobile-icon {
+  display: none;
+}
+
+.icon i {
+  color: rgb(122, 110, 170);
+}
+
+.menu-nav ul, a, i, li a {
+  text-decoration: none;
+  color: var(--icon-text-color);
+  font-size: 16px;
+  list-style: none;
+}
+.menu-nav ul li, a li, i li, li a li {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-nav ul li i, a li i, i li i, li a li i {
+  color: rgb(40, 13, 95);
+}
+
+.menu-nav li:hover, .menu-nav li:focus {
+  background-color: var(--hover-nav-ul);
+  border-radius: 15px;
+}
+.menu-nav li ul li:hover {
+  background-color: var(--hover-nav-ul);
+  border-radius: 0%;
+}
+
+.menu-ul {
+  list-style: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--nav-bkground);
+  width: 100%;
+  height: 50px;
+  padding: 0 30px;
+  padding-left: 25px;
+  position: fixed;
+  top: 0;
+  z-index: 98;
+  border-bottom: 1px solid var(--border-bottom-pp);
+}
+nav .flex {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+}
+nav .flex div, nav .flex h2, nav .flex ul {
+  padding: 2%;
+  cursor: pointer;
+}
+nav .flex p {
+  color: var(--icon-text-color);
+  font-size: 16px;
+}
+nav .flex ul {
+  display: flex;
+}
+nav .flex ul li {
+  list-style: none;
+  color: var(--icon-text-color);
+  font-size: 16px;
+  padding: 15px;
+  position: relative;
+}
+nav .flex ul li:active {
+  color: rgb(118, 69, 217);
+}
+nav .flex ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+nav .flex ul li ul {
+  position: absolute;
+  top: 3rem;
+  left: -0.25rem;
+  background-color: var(--nav-bkground);
+  border-radius: 15px;
+  border: 1px solid --border-bottom-pp;
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms easy-in-out;
+}
+nav .flex ul li ul li.line-dd {
+  border-bottom: 1px solid rgb(189, 194, 196);
+  border-top: 1px solid rgb(189, 194, 196);
+}
+nav .flex .btn-gear {
+  border: none;
+  background-color: transparent;
+}
+nav .flex .btn-gear i {
+  color: rgb(122, 110, 170);
+}
+nav .flex .btn-gear:hover {
+  color: rgba(154, 106, 255, 0.3);
+}
+nav .flex .button-aquagreen {
+  width: 149px;
+  height: 32px;
+  margin: 2px 4px 4px 0px;
+  padding: 0px 16px;
+}
+nav .flex .modal {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 200ms ease-in-out;
+  background-color: var(--popup-bg);
+  border-radius: 0 0 30px 30px;
+  padding: 3% 2% 2% 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 999;
+  opacity: 0;
+}
+nav .flex .modal.active {
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  opacity: 1;
+}
+nav .flex .modal p, nav .flex .modal sub svg {
+  color: var(--text-color);
+}
+nav .flex .modal sub svg {
+  background-image: var(--text-color);
+}
+nav .flex .modal .modal1 {
+  position: fixed;
+  width: 400px;
+  height: 70px;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: var(--popup-modal1-bg);
+  background-color: var(--popup-modal1-bg);
+  border-radius: 30px 30px 0px 0px;
+  padding: 2% 2% 2% 6%;
+  border-bottom: 1px solid --border-bottom-pp;
+}
+nav .flex .modal .modal1 .close-btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  color: rgb(31, 199, 212);
+  font-size: 1.55rem;
+}
+nav .flex .modal .header {
+  color: var(--text-color);
+}
+nav .flex .modal h4 {
+  color: rgb(118, 69, 217);
+}
+nav .flex .modal a .margine {
+  margin: 2px;
+}
+nav .flex .checkbox {
+  opacity: 0;
+  position: absolute;
+}
+nav .flex .label {
+  background-color: var(--label-toggle-bg);
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+  position: relative;
+  height: 32px;
+  width: 56px;
+  transform: scale(1);
+}
+nav .flex .label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  height: 26px;
+  width: 26px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+  z-index: 1;
+}
+nav .flex .checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+nav .flex .checkbox1 {
+  opacity: 0;
+  position: absolute;
+}
+nav .flex .label1 {
+  background-color: var(--label-toggle-bg);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 32px;
+  width: 56px;
+  transform: scale(1);
+}
+nav .flex .label1 .ball1 {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  height: 26px;
+  width: 26px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+  align-items: center;
+}
+nav .flex .checkbox1:checked + .label1 {
+  background-color: rgb(60, 207, 170);
+}
+nav .flex .checkbox1:checked + .label1 .ball1 {
+  transform: translateX(24px);
+}
+nav .flex .fa-moon {
+  color: var(--fa-moon);
+  z-index: 2;
+  align-self: center;
+}
+nav .flex .fa-sun {
+  color: var(--fa-sun);
+  z-index: 2;
+  align-self: center;
+}
+nav .flex .flex-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .flex .flex-inline {
+  display: flex;
+}
+nav .flex #overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(244, 238, 255, 0.6);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+  z-index: 99;
+}
+nav .flex #overlay.active {
+  opacity: 0.6;
+  pointer-events: all;
+  transition: 350ms ease;
+}
+
+.fa-globe:hover {
+  color: rgba(154, 106, 255, 0.3);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  nav .flex #money, nav .flex .igZcUN {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  nav .flex #money, nav .flex .igZcUN, nav .flex ul {
+    display: none;
+  }
+}/*# sourceMappingURL=Navbar.css.map */

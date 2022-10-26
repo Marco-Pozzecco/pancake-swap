@@ -8,12 +8,15 @@ import NoPage from "./pages/NoPage";
 import "./App.css"
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Layout from "./pages/Layout";
+import { ButtonAG, ButtonOB, ButtonST, ButtonOSvg } from "./components/buttons/Buttons";
 
 
 function App() {
     return(
         <div>
-                <Router>
+
+
+                {/* <Router>
                 <Routes>
                     <Route path="/" element={<Layout />} >
                     <Route index element={<Home />} />
@@ -23,7 +26,16 @@ function App() {
                     <Route path="*" element={<NoPage/>} />
                     </Route>
                 </Routes>
-                </Router>
+                </Router> */}
+
+               <ButtonAG/>
+               <ButtonOB/>
+               <ButtonST/>
+               <ButtonOSvg/>
+               
+
+
+            
         </div>
         
     );
