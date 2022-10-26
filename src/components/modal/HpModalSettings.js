@@ -1,15 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './hp_modal_settings.scss'
 
-function HpModalSettings() {
-  return (
+function HpModalSettings({open, onClose}) {
+
+    const [theme, setTheme] = useState()
+
+    function handleThemeColor(event){
+        const checked = event.target.checked
+        var chk = document.getElementById("chk");
+        
+        
+        setTheme(checked)
+        console.log(checked)
+        if(theme){
+            console.log('theme-dark')
+            document.body.classList.toggle('theme-dark')
+            chk.checked = false;
+            
+        }else {
+            console.log('theme-light')
+            document.body.classList.toggle('theme-light')
+            chk.checked = true;
+            
+           
+        }
+    }
     
-        <div className="modal" id="modal">
-                <div className="modal1 flex-switch"><h3 className="header">Settings</h3>
-                <button data-close-btn className="close-btn">&times;</button></div>
+    if(!open) return null
+
+  return (
+    <section onClick={onClose} className="overlay">
+        <div className="modal" id="modal" onClick={(e)=> {e.stopPropagation()}}>
+        <div className="modal1 flex-switch"><h3 className="header">Settings</h3>
+                <button data-close-btn className="close-btn" onClick={onClose}>&times;</button></div>
                 <h4>GLOBAL</h4>
                 <div className="flex-switch"><p>Dark Mode</p>
-                    <input type="checkbox" className="checkbox" id="chk" />
+                    <input type="checkbox" className="checkbox" id="chk" onChange={handleThemeColor} checked={theme}/>
                     <label className="label" for="chk">
                         <i className="fa-regular fa-moon"></i>
                         <i className="fas fa-sun"></i>
@@ -22,6 +48,8 @@ function HpModalSettings() {
                         <div className="ball1"></div>
                     </label></div>
          </div>
+    </section>
+        
 
     
   )

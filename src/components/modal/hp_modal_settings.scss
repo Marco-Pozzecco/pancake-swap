@@ -65,25 +65,25 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 200ms ease-in-out;
-    background-color: red; //var(--popup-bg)
+    background-color: var(--popup-bg); //var(--popup-bg)
     border-radius: 0 0 30px 30px;
     padding: 3% 2% 2% 2%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     z-index: 999;
-    opacity: 1;
+    //opacity: 0;
 
-    &.active {
-        transform: translate(-50%, -50%);
-        z-index: 999;
-        opacity: 1;
+    // &.active {
+    //     transform: translate(-50%, -50%);
+    //     z-index: 999;
+    //     opacity: 1;
 
-    }
+    // }
 
     p,
     sub svg {
-        color: var(--text-color);
+        color: var(--text-color); //var(--text-color)
     }
 
     sub svg {
@@ -98,7 +98,7 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
         left: 50%;
         transform: translate(-50%, -50%);
         background-image: var(--popup-modal1-bg);
-        background-color: var(--popup-modal1-bg);
+        background-color: var(--popup-modal1-bg); //var(--popup-modal1-bg)
         border-radius: 30px 30px 0px 0px;
         padding: 2% 2% 2% 6%;
         border-bottom: 1px solid --border-bottom-pp;
@@ -128,7 +128,7 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
     }
 
     .label {
-        background-color: var(--label-toggle-bg);
+        background-color: var(--label-toggle-bg) ;//var(--label-toggle-bg)
         border-radius: 50px;
         cursor: pointer;
         display: inline-flex;
@@ -215,7 +215,7 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
     }
 
     .fa-sun {
-        color: var(--fa-sun);
+        color: var(--fa-sun);// var(--fa-sun)
         // width: 20px;
         // height: 20px;
         z-index: 2;
@@ -237,22 +237,23 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
         display: flex;
     }
 
-    #overlay {
+    .overlay {
         position: fixed;
-        opacity: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        // top:0;
+        // bottom: 0;
+        // left: 0;
+        // right: 0;
+        width: 100%;
+        height: 100%;
         background-color: rgba(244, 238, 255, 0.6);
-        pointer-events: none;
+        //pointer-events: none;
         transition: 200ms ease-in-out;
         z-index: 99;
     }
 
-    #overlay.active {
-        opacity: 0.6;
-        pointer-events: all;
-        transition: 350ms ease;
-    }
+    // #overlay.active {
+    //     opacity: 0.6;
+    //     pointer-events: all;
+    //     transition: 350ms ease;
+    // }
 }
