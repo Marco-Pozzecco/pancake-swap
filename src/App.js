@@ -26,9 +26,10 @@ function App() {
                 </Routes>
                 </Router> */}
 
-                <StatSection/>
+                <StatSection />
 
         </div>
+
         
     );
 
