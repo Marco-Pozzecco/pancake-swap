@@ -5,6 +5,7 @@ import settingSvg from "../../resources/svgs/setting-icon.svg"
 import logo from "../../resources/svgs/logo_black.svg"
 import HpModalSettings from "../modal/HpModalSettings";
 import bunnyRound from '../../resources/svgs/bunny-icon-round.svg'
+import exitIcon from '../../resources/home/cake/exit-icon.svg'
 import LanguageSelector from "../language-selector/LanguageSelector";
 
 
@@ -24,7 +25,8 @@ const Navbar = () => {
                         <li><a href="swap" >Swap</a></li>
                         <li><a href="limit" >Limit</a></li>
                         <li><a href="liquidity" >Liquidity</a></li>
-                        <li><a href="perpetual" >Perpetual</a></li>
+                        <li><a href="https://perp.pancakeswap.finance/en/futures/BTCUSDT?theme=light" target='blank'>Perpetual</a><img src={exitIcon} alt="exit icon"/></li>
+                        <li><a href="https://bridge.pancakeswap.finance/" target='blank'>Bridge</a><img src={exitIcon} alt="exit icon"/></li>
                     </ul>
                 </li>
                 <li><Link to="/earn">Earn</Link>
@@ -55,8 +57,8 @@ const Navbar = () => {
                         <li><a href="Info">IFO</a></li>
                         <li><a href="Info">Voting</a></li> 
                         <li className="line-dd"><a href="Info">Leaderboard</a></li>
-                        <li><a href="Info">Blog</a><i className="fa-regular fa-arrow-right-from-bracket"></i></li>
-                        <li><a href="Info">Docs</a><i className="fa-regular fa-arrow-right-from-bracket"></i></li>
+                        <li><a href="https://medium.com/pancakeswap" target='blank'>Blog</a><img src={exitIcon} alt="exit icon" ></img></li>
+                        <li><a href="https://docs.pancakeswap.finance" target='blank'>Docs</a><img src={exitIcon} alt="exit icon" ></img></li>
                     </ul>
                 </li> 
                 </ul>   

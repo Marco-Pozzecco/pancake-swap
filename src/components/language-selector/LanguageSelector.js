@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import globeSvg from "../../resources/svgs/globe-icon.svg"
 import DropdownMenu from '../dropdown-menu/DropdownMenu'
-import '../footer/footer.scss'
+//import '../footer/footer.scss'
 
 function LanguageSelector() {
     const [openDropdown, setDropdown] = useState(false)
@@ -13,22 +13,9 @@ function LanguageSelector() {
               onMouseOver={() => setDropdown(true)}></img>
             
             <DropdownMenu open={openDropdown}
-              elements={[
-                "Arabic",
-                "Chinese",
-                "English",
-                "Français",
-                "Filipino",
-                "German",
-                "Italian",
-                "Ελληνικά",
-                "Magyar",
-                "Nederlands",
-                "Polski",
-                "Русский",
-                "Suomalainen",
-                "Spanish",
-                "Turkish" ]}/>
+              elements={["Arabic", "Chinese", "English", "Français", "Filipino", "German", 
+              "Italian", "Ελληνικά", "Magyar", "Nederlands", "Polski", "Русский", "Suomalainen", 
+              "Spanish", "Turkish" ]}/>
     </div>
   )
 }

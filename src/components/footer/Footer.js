@@ -13,7 +13,6 @@ import LanguageSelector from "../language-selector/LanguageSelector"
 
 const Footer = () => {
    
-
   return (
     <footer className="footer-box">
       <section className="main-footer">
@@ -66,27 +65,11 @@ const Footer = () => {
         <div>
           <h4>Developers</h4>
           <ul className="menu-ul">
-            <li>
-              <a href="https://github.com/pancakeswap">Github</a>
-            </li>
-            <li>
-              <a href="https://docs.pancakeswap.finance/">Documentation</a>
-            </li>
-            <li>
-              <a href="https://docs.pancakeswap.finance/code/bug-bounty">
-                Bug Bounty
-              </a>
-            </li>
-            <li>
-              <a href="https://docs.pancakeswap.finance/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited">
-                Audits
-              </a>
-            </li>
-            <li>
-              <a href="https://docs.pancakeswap.finance/hiring/become-a-chef">
-                Careers
-              </a>
-            </li>
+            <li><a href="https://github.com/pancakeswap">Github</a></li>
+            <li><a href="https://docs.pancakeswap.finance/">Documentation</a></li>
+            <li><a href="https://docs.pancakeswap.finance/code/bug-bounty">Bug Bounty</a></li>
+            <li><a href="https://docs.pancakeswap.finance/help/faq#is-pancakeswap-safe-has-pancakeswap-been-audited">Audits</a></li>
+            <li><a href="https://docs.pancakeswap.finance/hiring/become-a-chef">Careers</a></li>
           </ul>
         </div>
         <div className="flex2">
@@ -100,21 +83,11 @@ const Footer = () => {
           <li className="cursor">
             <img src={twitter} alt="logo twitter"></img>
           </li>
-          <li className="cursor">
-            <img src={reddit} alt="logo reddit"></img>
-          </li>
-          <li className="cursor">
-            <img src={instagram} alt="logo instagram"></img>
-          </li>
-          <li className="cursor">
-            <img src={github} alt="logo github"></img>
-          </li>
-          <li className="cursor">
-            <img src={discord} alt="logo discord"></img>
-          </li>
-          <li className="cursor">
-            <img src={medium} alt="logo medium"></img>
-          </li>
+          <li className="cursor"><img src={reddit} alt="logo reddit"></img></li>
+          <li className="cursor"><img src={instagram} alt="logo instagram"></img></li>
+          <li className="cursor"><img src={github} alt="logo github"></img></li>
+          <li className="cursor"><img src={discord} alt="logo discord"></img></li>
+          <li className="cursor"><img src={medium} alt="logo medium"></img></li>
         </ul>
       </section>
       <hr className="line"></hr>
@@ -129,19 +102,12 @@ const Footer = () => {
             </label>
           </div>
           <div className="flex2 lista">
-           <LanguageSelector/>
-           <p>EN</p>
+            <LanguageSelector />
+            <p>EN</p>
           </div>
         </div>
         <div className="flex2">
-          <svg
-            viewBox="0 0 96 96"
-            id="hover"
-            width="48px"
-            color="text"
-            xmlns="http://www.w3.org/2000/svg"
-            className="sc-8a800401-0 igZcUN"
-          >
+          {/* <svg viewBox="0 0 96 96" id="hover" width="48px" color="text" xmlns="http://www.w3.org/2000/svg" className="sc-8a800401-0 igZcUN">
             <circle
               cx="48"
               cy="48"
@@ -167,19 +133,12 @@ const Footer = () => {
               fill="#633001"
             ></path>
             <defs>
-              <linearGradient
-                id="paint0_linear_10493"
-                x1="48"
-                y1="0"
-                x2="48"
-                y2="96"
-                gradientUnits="userSpaceOnUse"
-              >
+              <linearGradient id="paint0_linear_10493" x1="48" y1="0" x2="48" y2="96" gradientUnits="userSpaceOnUse">
                 <stop stop-color="#53DEE9"></stop>
                 <stop offset="1" stop-color="#1FC7D4"></stop>
               </linearGradient>
             </defs>
-          </svg>
+          </svg> */}
           <p>$4.229</p>
           <a href="#" className="link-aquagreen">
             <button className="btn-footer button-aquagreen ">Buy CAKE</button>
