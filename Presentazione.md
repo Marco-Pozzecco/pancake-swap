@@ -41,6 +41,13 @@ Anche x il font abbiamo deciso di adottare un unico font, per rendere il sito co
 Infine, per rendere il sito più interessante, abbiamo integrato dei grafici che in tempo reale mostrano il valore delle varie crypto.
 Il sito ha un design semplice ma allo stesso tempo accattivante per spingere il cliente ad investire nelle varie cripto.
 
+- 
+- non mostrare il codice
+- creare delle slide (trello, team, agile, )
+- non parlare delle sezioni del sito
+- funzionalità dell utente
+- 
+
 
 
 
