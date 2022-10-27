@@ -5,7 +5,7 @@ import Earn from "./pages/earn/Earn"
 import Win from "./pages/win/Win"
 import Home from "./pages/Home";
 import NoPage from "./pages/notFound/NotFound404";
-import "./App.css"
+import "./main.scss"
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Layout from "./pages/Layout";
 
