@@ -1,6 +1,6 @@
 import React from "react";
 import './_win-prizes.scss';
-import { randomNumInRange, callFuncAtInterval } from '../../scripts/randomize.mjs';
+import { randomNumInRange, callFuncAtInterval } from '../../script/randomize.mjs';
 // import images
 import ball2 from '../../resources/home/winPrizes/ball2-1024.webp';
 import ball4 from '../../resources/home/winPrizes/ball4-1024.webp';
