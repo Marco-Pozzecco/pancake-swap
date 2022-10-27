@@ -26,39 +26,39 @@ import { Simulate } from 'react-dom/test-utils';
 
 
 // BOTTONE GENERICO----------------------------------------------------------------
-export default function Button(props) {
+// export default function Button(props) {
     
-    function handleClick() {
-        useEvent()
-    }
+//     function handleClick() {
+//         useEvent()
+//     }
 
-    return(
-        <div>
-            <button className={props.type}>
-                {props.text && props.text }{props.svg && props.svg}
-            </button>
-        </div>
-    )
-}
-
-
-
-
-
-<Button type="aqua-green" onClick={} />
+//     return(
+//         <div>
+//             <button className={props.type}>
+//                 {props.text && props.text }{props.svg && props.svg}
+//             </button>
+//         </div>
+//     )
+// }
 
 
 
 
-style{   }
 
-se ce svg allora renderizza, se Simulate... color
+// <Button type="aqua-green" onClick={} />
+
+
+
+
+// style{   }
+
+// se ce svg allora renderizza, se Simulate... color
 
 
   
 
 
-prop.test 
+// prop.test 
 
 
 
