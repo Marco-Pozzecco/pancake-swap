@@ -5,7 +5,7 @@ import stella1 from "../../resources/home/bunny/stella1.webp";
 import stella2 from "../../resources/home/bunny/stella2.webp";
 import stella3 from "../../resources/home/bunny/stella3.webp";
 
-export default function FloatingBunny() {
+export function FloatingBunny() {
     return (
         <section className="fb-floating-bunny">
             <div className="fb-wrapper">

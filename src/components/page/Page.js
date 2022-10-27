@@ -1,12 +1,11 @@
-import Navbar from "../navbar/Navbar";
-import Footer from "../footer/Footer";
+import { Navbar } from "../navbar/Navbar";
+
+// Importare navbar e footer una volta funzionanti
 
 export function Page (props) {
     return (
         <>
-            <Navbar />
             {props.children}
-            <Footer />
         </>
     )
 }
