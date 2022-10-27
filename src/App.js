@@ -6,16 +6,14 @@ import Home from "./pages/homepage/Home";
 import NoPage from "./pages/notFound/NotFound404";
 import "../src/main.scss"
 import {BrowserRouter as Router, Route, Routes, Outlet} from 'react-router-dom'
-import Layout from "./pages/Layout";
+import {Layout} from "./pages/Layout";
 import {Footer} from "../src/components/footer/Footer"
 
 
 export function App() {
     return (  
-            <Home />
-    );
-}
-            {/* <Router>
+            <>
+             <Router>
                 <Routes>
                     <Route path="/" element={<Layout />} >
                     <Route index element={<Home />} />
@@ -27,5 +25,9 @@ export function App() {
                 </Routes>
                 </Router>
                 <Home/>
-                <Footer/>
-            </div> */}
+                <Footer/></>
+    );
+    
+}
+            
+            
