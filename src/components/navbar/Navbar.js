@@ -3,14 +3,16 @@ import "./Navbar.scss"
 import {Link} from 'react-router-dom'
 import settingSvg from "../../resources/svgs/setting-icon.svg"
 import logo from "../../resources/svgs/logo_black.svg"
-import HpModalSettings from "../modal/HpModalSettings";
+import {HpModalSettings} from "../modal/HpModalSettings";
 import bunnyRound from '../../resources/svgs/bunny-icon-round.svg'
 import exitIcon from '../../resources/home/cake/exit-icon.svg'
-import LanguageSelector from "../language-selector/LanguageSelector";
+import bnbIcon from '../../resources/home/navbar/bnb.png'
+import arrow from '../../resources/home/navbar/arrow-down.svg'
+import {LanguageSelector} from "../language-selector/LanguageSelector";
 
 
 
-const Navbar = () => {
+export function Navbar() {
     const [openModal, setOpenModal] = useState(false)
    
     return(
@@ -73,8 +75,13 @@ const Navbar = () => {
             <img className="fa-svg-icon" src={settingSvg} alt="setting icon" onClick={() => setOpenModal(true)}></img>
            
             {/* <div  id="overlay"></div> */}
-            
-            <div><a href="/" className="link-aquagreen"><button className="btn-navbar button-aquagreen">Connect Wallet</button></a>
+            <div><a href="/" className="link-popup-navbar">
+                
+                <button className="button-navbar-bnb"><img className="fa-svg-icon" 
+                src={bnbIcon} alt="setting icon"/>BNB Smart Chain<img className="fa-svg-icon" 
+                src={arrow} alt="arrow icon"/></button></a>
+                </div>
+                <div><a href="/" className="link-aquagreen"><button className="btn-navbar button-aquagreen">Connect Wallet</button></a>
                 </div>
             </section>
            
@@ -83,5 +90,3 @@ const Navbar = () => {
        </div>
     )
 }
-
-export default Navbar;

@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import globeSvg from "../../resources/svgs/globe-icon.svg"
-import DropdownMenu from '../dropdown-menu/DropdownMenu'
+import {DropdownMenu} from '../dropdown-menu/DropdownMenu'
 //import '../footer/footer.scss'
 
-function LanguageSelector() {
+export function LanguageSelector() {
     const [openDropdown, setDropdown] = useState(false)
 
   return (
@@ -20,4 +20,3 @@ function LanguageSelector() {
   )
 }
 
-export default LanguageSelector
