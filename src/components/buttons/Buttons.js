@@ -1,5 +1,6 @@
 import './Buttons.scss' ;
 import React, {useState} from "react";
+import { Simulate } from 'react-dom/test-utils';
 
 //DECOMMENTARE IN NAVBAR:  @use "../../components/buttons/Buttons"; E CONTROLLARE SE CE QUALCHE ALTRO PROBLEMA
 
@@ -25,23 +26,39 @@ import React, {useState} from "react";
 
 
 // BOTTONE GENERICO----------------------------------------------------------------
-// export default function Button(props) {
+export default function Button(props) {
     
-//     function handleClick() {
-//         useEvent()
-//     }
+    function handleClick() {
+        useEvent()
+    }
 
-//     return(
-//         <div>
-//             <button className={props.className} onClick={handleClick}>
-//                 {props.text}{props.svg}
-//             </button>
-//         </div>
-//     )
-// }
+    return(
+        <div>
+            <button className={props.type}>
+                {props.text && props.text }{props.svg && props.svg}
+            </button>
+        </div>
+    )
+}
 
 
 
+
+
+<Button type="aqua-green" onClick={} />
+
+
+
+
+style{   }
+
+se ce svg allora renderizza, se Simulate... color
+
+
+  
+
+
+prop.test 
 
 
 
@@ -74,7 +91,7 @@ const ButtonOB = () => {
   
 
 
-// BUTTON-SEMITRANSPARENT----------------------------------------------------------------------
+// BUTTON-SEMITRANSPARENT-----------------------------------------------------------
 const ButtonST = () => {
     return (
       <button className='button-semitransparent '>
@@ -99,7 +116,7 @@ const ButtonOSvg = () => {
   
 
   
-//BUTTON CURRENCY(svg and text)----------------------------------------------------------------------
+//BUTTON CURRENCY(svg and text)----------------------------------------------------------
 const ButtonCurrency = () => {
     return (
 
