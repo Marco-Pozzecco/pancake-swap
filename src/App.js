@@ -3,17 +3,20 @@ import Navbar from "./components/navbar/Navbar";
 import Trade from "./pages/trade/Trade"
 import Earn from "./pages/earn/Earn"
 import Win from "./pages/win/Win"
-import Home from "./pages/Home";
+import Home from "./pages/homepage/Home";
 import NoPage from "./pages/notFound/NotFound404";
-import "./main.scss"
+import "../src/main.scss"
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Layout from "./pages/Layout";
 
 
-function App() {
-    return(
-        <div>
-                <Router>
+export function App() {
+    return (  
+                <Home />
+    );
+
+}
+            {/* <Router>
                 <Routes>
                     <Route path="/" element={<Layout />} >
                     <Route index element={<Home />} />
@@ -23,10 +26,4 @@ function App() {
                     <Route path="*" element={<NoPage/>} />
                     </Route>
                 </Routes>
-                </Router>
-        </div>
-        
-    );
-
-}
-export default App;
+                </Router> */}

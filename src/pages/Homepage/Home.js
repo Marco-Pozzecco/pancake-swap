@@ -1,10 +1,8 @@
 import React from "react";
 import { WinPrizes } from "../../layouts/home-win-prizes/WinPrizes";
 
-export function Home() {
+export default function Home() {
     return (
-        <div>
-            <WinPrizes />
-        </div>
+        <WinPrizes />
     ) 
 }
