@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./navbar.scss"
-import {Outlet, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import globeSvg from "../../resources/svgs/globe-icon.svg"
 import settingSvg from "../../resources/svgs/setting-icon.svg"
 import logo from "../../resources/svgs/logo_black.svg"

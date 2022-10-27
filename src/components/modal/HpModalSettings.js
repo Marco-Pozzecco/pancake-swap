@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+//import HandleThemeColor from '../../script/HandleThemeColor';
 import './hp_modal_settings.scss'
 
 function HpModalSettings({open, onClose}) {
@@ -7,22 +8,22 @@ function HpModalSettings({open, onClose}) {
 
     function handleThemeColor(event){
         const checked = event.target.checked
-        var chk = document.getElementById("chk");
-        
+        //const dark = !checked
+        var chk3 = document.getElementById("chk3");
         
         setTheme(checked)
         console.log(checked)
         if(theme){
             console.log('theme-dark')
-            document.body.classList.toggle('theme-dark')
-            chk.checked = false;
+            document.body.classList.add('theme-dark')
+            document.body.classList.remove('theme-light')
+            chk3.checked = false;
             
         }else {
             console.log('theme-light')
-            document.body.classList.toggle('theme-light')
-            chk.checked = true;
-            
-           
+            document.body.classList.add('theme-light')
+            document.body.classList.remove('theme-dark')
+            chk3.checked = true;
         }
     }
     
@@ -35,7 +36,7 @@ function HpModalSettings({open, onClose}) {
                 <button data-close-btn className="close-btn" onClick={onClose}>&times;</button></div>
                 <h4>GLOBAL</h4>
                 <div className="flex-switch"><p>Dark Mode</p>
-                    <input type="checkbox" className="checkbox" id="chk" onChange={handleThemeColor} checked={theme}/>
+                    <input type="checkbox" className="checkbox" id="chk" onChange={handleThemeColor} checked={theme}/> 
                     <label className="label" for="chk">
                         <i className="fa-regular fa-moon"></i>
                         <i className="fas fa-sun"></i>
@@ -48,6 +49,8 @@ function HpModalSettings({open, onClose}) {
                         <div className="ball1"></div>
                     </label></div>
          </div>
+         {/* <HandleThemeColor theme={theme}/> */}
+
     </section>
         
 
