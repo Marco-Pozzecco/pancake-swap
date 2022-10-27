@@ -7,7 +7,7 @@ import NoPage from "./pages/NoPage";
 import "./App.css"
 import {BrowserRouter as Router, Route, Routes, Outlet} from 'react-router-dom'
 import Layout from "./pages/Layout";
- import Footer from "../src/components/footer/Footer"
+import Footer from "../src/components/footer/Footer"
 
 
 function App() {

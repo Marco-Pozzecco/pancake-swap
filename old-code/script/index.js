@@ -8,7 +8,7 @@ const openModalBtn = document.querySelectorAll('[data-modal-target]');
     const closeModalBtn = document.querySelectorAll('[data-close-btn]');
     const overlay = document.getElementById('overlay');
     
-    const logo = document.getElementById('logo1');
+    const logo = document.getElementById('main-logo');
 
     // const buttonAquaGreen = document.getElementsByClassName('aqua-green');
     // buttonAquaGreen.addEventListener('click',() => {

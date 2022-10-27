@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 import "./navbar.scss"
 import {Link} from 'react-router-dom'
-import globeSvg from "../../resources/svgs/globe-icon.svg"
 import settingSvg from "../../resources/svgs/setting-icon.svg"
 import logo from "../../resources/svgs/logo_black.svg"
 import HpModalSettings from "../modal/HpModalSettings";
 import bunnyRound from '../../resources/svgs/bunny-icon-round.svg'
+import LanguageSelector from "../language-selector/LanguageSelector";
 
 
 
@@ -16,7 +16,7 @@ const Navbar = () => {
        <div>
          <nav>
             <div className="flex">
-                <h1><Link to="/"><img src={logo} alt="logo"></img></Link></h1>
+                <h1><Link to="/"><img src={logo} alt="main-logo" id="main-logo"></img></Link></h1>
                 <ul className="menu-ul menu-nav">
                 {/* <li><Link to="/">Home</Link></li> */}
                 <li><Link to="/trade">Trade</Link>
@@ -64,11 +64,11 @@ const Navbar = () => {
             </div>
             <section className="flex">
             <div>
-            <img src={bunnyRound} alt="logo"></img>
+            <img src={bunnyRound} alt="mini logo" id="hover"></img>
             </div> 
             <div id="money"><p>$4.357</p></div>
-            <img className="fa-svg-icon" src={globeSvg} alt="logo"></img>
-            <img className="fa-svg-icon" src={settingSvg} alt="logo" onClick={() => setOpenModal(true)}></img>
+            <LanguageSelector/>
+            <img className="fa-svg-icon" src={settingSvg} alt="setting icon" onClick={() => setOpenModal(true)}></img>
            
             
             {/* <div  id="overlay"></div> */}
