@@ -1,5 +1,6 @@
+import * as ReactDOM from "react-dom/client";
 import { App } from "./App";
-import ReactDOM from "react-dom/client";
+import { Home } from "./pages/homepage/Home";
 
 const root = ReactDOM.createRoot(
     document.querySelector('#root')
