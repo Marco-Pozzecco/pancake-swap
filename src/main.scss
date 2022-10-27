@@ -1,0 +1,54 @@
+// Built in modules
+@use "sass:map";
+@use "sass:list";
+// Tyography
+@use "../src/abstracts/typography";
+// Pages
+@use "../src/pages/homepage/home";
+@use "../src/pages/trade/trade-swap";
+
+// Dichiarazioni import
+
+@import "../src/abstracts/animations";
+@import "../src/abstracts/mixins";
+@import "../src/abstracts/variables";
+@import "../src/abstracts/colors";
+@import "../src/abstracts/utility";
+// @import "style/components/buttons/buttons-variables";
+
+// Scrollbar
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: #000000;
+    color: purple;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background-color: #c3b4ce;
+    border: none;
+}
+
+// Animations
+@include float(10px, 'NW');
+@include float(20px, 'N');
+@include fade-out;
+
+
+html, body, #root {
+    height: auto;
+    width: 100%;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+}
+

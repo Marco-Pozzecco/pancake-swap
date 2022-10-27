@@ -1,16 +1,16 @@
 import React from "react";
-import Trade from "./pages/Trade"
-import Earn from "./pages/Earn"
-import Win from "./pages/Win"
-import Home from "./pages/Home";
-import NoPage from "./pages/NoPage";
-import "./App.css"
+import Trade from "./pages/trade/Trade"
+import Earn from "./pages/earn/Earn"
+import Win from "./pages/win/Win"
+import Home from "./pages/homepage/Home";
+import NoPage from "./pages/notFound/NotFound404";
+import "../src/main.scss"
 import {BrowserRouter as Router, Route, Routes, Outlet} from 'react-router-dom'
 import Layout from "./pages/Layout";
 import Footer from "../src/components/footer/Footer"
 
 
-function App() {
+export function App() {
     return(
         <div>
                 <Router>
@@ -24,11 +24,10 @@ function App() {
                     </Route>
                 </Routes>
                 </Router>
-                <Outlet></Outlet>
+                <Home/>
                 <Footer/>
         </div>
         
     );
 
 }
-export default App;

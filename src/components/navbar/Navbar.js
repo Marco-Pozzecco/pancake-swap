@@ -72,11 +72,8 @@ const Navbar = () => {
             <LanguageSelector/>
             <img className="fa-svg-icon" src={settingSvg} alt="setting icon" onClick={() => setOpenModal(true)}></img>
            
-            
             {/* <div  id="overlay"></div> */}
             
-
-
             <div><a href="/" className="link-aquagreen"><button className="btn-navbar button-aquagreen">Connect Wallet</button></a>
                 </div>
             </section>

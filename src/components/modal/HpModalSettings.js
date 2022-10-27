@@ -20,7 +20,7 @@ function HpModalSettings({open, onClose}) {
             document.body.classList.add('theme-dark')
             document.body.classList.remove('theme-light')
             chk3.checked = false;
-            logo.setAttribute('src' , '../../resources/svgs/logo_black.svg');
+            //logo.setAttribute('src' , '../../resources/svgs/logo_black.svg');
            
             
         }else {
@@ -28,7 +28,7 @@ function HpModalSettings({open, onClose}) {
             document.body.classList.add('theme-light')
             document.body.classList.remove('theme-dark')
             chk3.checked = true;
-            logo.setAttribute('src', '../../resources/svgs/logo_white.svg');
+            //logo.setAttribute('src', '../../resources/svgs/logo_white.svg');
         }
     }
     
