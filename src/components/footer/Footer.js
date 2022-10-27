@@ -140,7 +140,7 @@ const Footer = () => {
             </defs>
           </svg> */}
           <p>$4.229</p>
-          <a href="#" className="link-aquagreen">
+          <a href="/" className="link-aquagreen">
             <button className="btn-footer button-aquagreen ">Buy CAKE</button>
           </a>
         </div>

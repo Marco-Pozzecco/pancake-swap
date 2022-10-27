@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./navbar.scss"
+import "./Navbar.scss"
 import {Link} from 'react-router-dom'
 import settingSvg from "../../resources/svgs/setting-icon.svg"
 import logo from "../../resources/svgs/logo_black.svg"
@@ -77,7 +77,7 @@ const Navbar = () => {
             
 
 
-            <div><a href="#" className="link-aquagreen"><button className="btn-navbar button-aquagreen">Connect Wallet</button></a>
+            <div><a href="/" className="link-aquagreen"><button className="btn-navbar button-aquagreen">Connect Wallet</button></a>
                 </div>
             </section>
            
