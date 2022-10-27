@@ -1,7 +1,7 @@
 
 import React from "react"
 import './footer.scss'
-import logo from "../../resources/svgs/logo_white.svg"
+import logo from "../../resources/home/navbar/logo_white.svg"
 import discord from "../../resources/footer/discord.svg"
 import instagram from "../../resources/footer/instagram.svg"
 import medium from "../../resources/footer/medium.svg"

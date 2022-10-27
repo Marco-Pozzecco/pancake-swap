@@ -1,13 +1,13 @@
 import React, {useState} from 'react'
-import globeSvg from "../../resources/svgs/globe-icon.svg"
+import globeSvg from "../../resources/home/navbar/globe-icon.svg"
 import {DropdownMenu} from '../dropdown-menu/DropdownMenu'
-//import '../footer/footer.scss'
+import '../language-selector/LanguageSelect.scss'
 
 export function LanguageSelector() {
     const [openDropdown, setDropdown] = useState(false)
 
   return (
-    <div className='flex2'>
+    <div className='flex'>
         <img
               className="fa-globe" src={globeSvg} alt="globe icon" 
               onMouseOver={() => setDropdown(true)}></img>

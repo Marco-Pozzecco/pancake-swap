@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 import "./Navbar.scss"
 import {Link} from 'react-router-dom'
-import settingSvg from "../../resources/svgs/setting-icon.svg"
-import logo from "../../resources/svgs/logo_black.svg"
+import settingSvg from "../../resources/home/navbar/setting-icon.svg"
+import logo from "../../resources/home/navbar/logo_black.svg"
 import {HpModalSettings} from "../modal/HpModalSettings";
-import bunnyRound from '../../resources/svgs/bunny-icon-round.svg'
+import bunnyRound from '../../resources/home/navbar/bunny-icon-round.svg'
+import logoBunny from '../../resources/home/navbar/bunny-logo.svg'
 import exitIcon from '../../resources/home/cake/exit-icon.svg'
 import bnbIcon from '../../resources/home/navbar/bnb.png'
 import arrow from '../../resources/home/navbar/arrow-down.svg'
@@ -19,7 +20,8 @@ export function Navbar() {
        <div>
          <nav>
             <div className="flex">
-                <h1><Link to="/"><img src={logo} alt="main-logo" id="main-logo"></img></Link></h1>
+                <Link to="/"><img src={logo} alt="main-logo" id="main-logo"></img></Link>
+                <Link to="/"><img src={logoBunny} alt="logo bunny" className="logoBunny"></img></Link>
                 <ul className="menu-ul menu-nav">
                 {/* <li><Link to="/">Home</Link></li> */}
                 <li><Link to="/trade">Trade</Link>
@@ -67,21 +69,22 @@ export function Navbar() {
                 {/* <Outlet></Outlet> */}
             </div>
             <section className="flex">
-            <div>
-            <img src={bunnyRound} alt="mini logo" id="hover"></img>
-            </div> 
-            <div id="money"><p>$4.357</p></div>
-            <LanguageSelector/>
-            <img className="fa-svg-icon" src={settingSvg} alt="setting icon" onClick={() => setOpenModal(true)}></img>
-           
-            {/* <div  id="overlay"></div> */}
-            <div><a href="/" className="link-popup-navbar">
-                
-                <button className="button-navbar-bnb"><img className="fa-svg-icon" 
-                src={bnbIcon} alt="setting icon"/>BNB Smart Chain<img className="fa-svg-icon" 
-                src={arrow} alt="arrow icon"/></button></a>
+                <div>
+                <img src={bunnyRound} alt="mini logo" id="hover" className="mini-logo"></img>
+                </div> 
+                <div id="money"><p>$4.357</p></div>
+                <LanguageSelector/>
+                <img className="fa-svg-icon" src={settingSvg} alt="setting icon" onClick={() => setOpenModal(true)}></img>
+            
+                {/* <div  id="overlay"></div> */}
+                <div>
+                    <span className="link-popup-navbar">
+                    <button className="button-navbar-bnb"><img className="fa-svg-icon" 
+                    src={bnbIcon} alt="setting icon"/>BNB Smart Chain<img className="fa-svg-icon" 
+                    src={arrow} alt="arrow icon"/></button></span>
                 </div>
-                <div><a href="/" className="link-aquagreen"><button className="btn-navbar button-aquagreen">Connect Wallet</button></a>
+                <div>
+                    <span className="link-aquagreen"><button className="btn-navbar button-aquagreen">Connect Wallet</button></span>
                 </div>
             </section>
            

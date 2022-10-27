@@ -68,7 +68,7 @@ $theme-light: map.set($theme-light, "btn-bg", $border_color);
 
 }
 
-.mobile-icon{
+.mobile-icon, .logoBunny{
     display: none;
 
 }
@@ -112,7 +112,7 @@ nav {
     @include flex(row, space-between, center);
     background-color: var(--nav-bkground);
     width: 100%;
-    height: 50px;
+    height: 56px;
     padding: 0 30px;
     padding-left: 25px;
     position: fixed;
@@ -215,8 +215,11 @@ nav {
             background-color: var(--btn-bg);
             img{
                 width: 30px;
-                width: 30px;
+                height: 30px;
             }
+            // .fa-svg-icon{
+            //     fill: red;
+            // }
             
 
         }
@@ -253,10 +256,27 @@ nav {
 @include mq('phone', 'phablet'){
     nav{
         .flex{
-            #money, .igZcUN, ul {
+            #money, .igZcUN, ul, .mini-logo {
                 display: none;
             }
-        }    
+            .mobile-icon, .logoBunny{
+                display: inline;
+            
+            }
+            #main-logo{
+                display: none;
+            }
+            .modal{
+                top: 75%;
+                width: 100%;
+                .modal1{
+                    width: 100%;
+                   
+                    
+                }
+            }
+            
+        }   
     }
 }
 

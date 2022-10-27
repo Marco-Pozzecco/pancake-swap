@@ -1,0 +1,12 @@
+// Use rules
+@use "sass:map";
+
+// Import rules
+@import "../../abstracts/mixins";
+@import "../../abstracts/colors";
+
+
+.flex{
+    @include flex(row, center, center);
+
+}
