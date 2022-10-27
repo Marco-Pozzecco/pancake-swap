@@ -12,7 +12,7 @@ import Layout from "./pages/Layout";
 
 export function App() {
     return (  
-                <Home />
+            <Home />
     );
 
 }
