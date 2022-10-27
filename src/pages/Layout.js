@@ -2,11 +2,8 @@ import React from "react";
 
 import {Navbar} from "../components/navbar/Navbar";
 
-const Layout = () => {
+export function Layout () {
     return(
         <Navbar />
-
     )
 }
-
-export default Layout;

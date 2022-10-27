@@ -12,8 +12,8 @@ import arrow from '../../resources/home/navbar/arrow-down.svg'
 import {LanguageSelector} from "../language-selector/LanguageSelector";
 
 
-
 export function Navbar() {
+
     const [openModal, setOpenModal] = useState(false)
    
     return(
@@ -93,3 +93,4 @@ export function Navbar() {
        </div>
     )
 }
+

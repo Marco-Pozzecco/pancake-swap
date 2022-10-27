@@ -5,7 +5,7 @@ import stella1 from "../../resources/home/bunny/stella1.webp";
 import stella2 from "../../resources/home/bunny/stella2.webp";
 import stella3 from "../../resources/home/bunny/stella3.webp";
 
-export default function FloatingBunny() {
+export function FloatingBunny() {
     return (
         <section className="fb-floating-bunny">
             <div className="fb-wrapper">
@@ -51,15 +51,15 @@ export default function FloatingBunny() {
                     <defs>
                         <linearGradient id="paint0_linear_dark" x1="830" y1="83.5" x2="830" y2="338.5"
                             gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#08060B" stop-opacity="0.2"></stop>
-                            <stop offset="0.545554" stop-color="#08060B" stop-opacity="0.5"></stop>
-                            <stop offset="1" stop-color="#08060B"></stop>
+                            <stop stopColor="#08060B" stopOpacity="0.2"></stop>
+                            <stop offset="0.545554" stopColor="#08060B" stopOpacity="0.5"></stop>
+                            <stop offset="1" stopColor="#08060B"></stop>
                         </linearGradient>
                         <linearGradient id="paint0_linear_light" x1="830" y1="83.5" x2="830" y2="338.5"
                             gradientUnits="userSpaceOnUse">
-                            <stop stop-color="white" stop-opacity="0.2"></stop>
-                            <stop offset="0.545554" stop-color="white" stop-opacity="0.5"></stop>
-                            <stop offset="1" stop-color="white"></stop>
+                            <stop stopColor="white" stopOpacity="0.2"></stop>
+                            <stop offset="0.545554" stopColor="white" stopOpacity="0.5"></stop>
+                            <stop offset="1" stopColor="white"></stop>
                         </linearGradient>
                     </defs>
                 </svg>

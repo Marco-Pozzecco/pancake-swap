@@ -11,9 +11,11 @@ import {Footer} from "../src/components/footer/Footer"
 
 
 export function App() {
-    return(
-        <div>
-                <Router>
+    return (  
+            <Home />
+    );
+}
+            {/* <Router>
                 <Routes>
                     <Route path="/" element={<Layout />} >
                     <Route index element={<Home />} />
@@ -26,8 +28,4 @@ export function App() {
                 </Router>
                 <Home/>
                 <Footer/>
-        </div>
-        
-    );
-
-}
+            </div> */}
