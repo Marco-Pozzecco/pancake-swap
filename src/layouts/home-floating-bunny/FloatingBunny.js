@@ -1,9 +1,9 @@
 import React from "react";
 import "./_floating-bunny.scss";
-import bunny from "./bunny.webp";
-import stella1 from "./stella1.webp";
-import stella2 from "./stella2.webp";
-import stella3 from "./stella3.webp";
+import bunny from "../../resources/home/bunny/bunny.webp";
+import stella1 from "../../resources/home/bunny/stella1.webp";
+import stella2 from "../../resources/home/bunny/stella2.webp";
+import stella3 from "../../resources/home/bunny/stella3.webp";
 
 export default function FloatingBunny() {
     return (
