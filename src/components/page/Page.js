@@ -5,8 +5,9 @@ import { Navbar } from "../navbar/Navbar";
 export function Page (props) {
     return (
         <>
-            
+            {/* Navbar */}
             {props.children}
+            {/* Footer */}
         </>
     )
 }
