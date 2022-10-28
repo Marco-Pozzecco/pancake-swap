@@ -94,9 +94,6 @@ $theme-light: map.set($theme-light, "btn-bg", $border_color);
     
 }
 .menu-nav li{
-    &:active{
-        color: red;
-    }
     &:hover, &:focus{
         background-color: var(--hover-nav-ul);
         border-radius: 0px;
@@ -120,8 +117,7 @@ nav {
     background-color: var(--nav-bkground);
     width: 100%;
     height: 56px;
-    padding: 0 30px;
-    padding-left: 25px;
+    padding: 0 20px;
     position: fixed;
     top: 0;
     z-index: 98;
@@ -129,8 +125,12 @@ nav {
     .flex{
         @include flex(center);
         div, h2, ul{
-            padding: 2%;
+            padding: 5px;
             cursor: pointer;
+        }
+        .active{
+            color: $secondary-dk;
+            border-bottom: 2px solid $btn-bg-color;
         }
         p{
             color: var(--icon-text-color);
@@ -246,7 +246,7 @@ nav {
 @include mq('tablet-small', 'tablet') {
     nav{
         .flex{
-            #money, .igZcUN, .mini-logo {
+            #money, .igZcUN, ul, .mini-logo {
                 display: none;
             }
             
@@ -269,15 +269,6 @@ nav {
             }
             #main-logo{
                 display: none;
-            }
-            .modal{
-                top: 75%;
-                width: 100%;
-                .modal1{
-                    width: 100%;
-                   
-                    
-                }
             }
             .button-navbar-bnb{
                 font-size: 0;

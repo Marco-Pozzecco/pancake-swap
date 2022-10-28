@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./Navbar.scss"
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import settingSvg from "../../resources/home/navbar/setting-icon.svg"
 import logo from "../../resources/home/navbar/logo_black.svg"
 import {HpModalSettings} from "../modal/HpModalSettings";
@@ -20,11 +20,11 @@ export function Navbar() {
        <div>
          <nav>
             <div className="flex">
-                <Link to="/"><img src={logo} alt="main-logo" id="main-logo"></img></Link>
+                <Link  to="/" ><img src={logo} alt="main-logo" id="main-logo"></img></Link>
                 <Link to="/"><img src={logoBunny} alt="logo bunny" className="logoBunny"></img></Link>
                 <ul className="menu-ul menu-nav">
-                {/* <li><Link to="/">Home</Link></li> */}
-                <li><Link to="/trade">Trade</Link>
+                {/* <li><NavLink to="/">Home</NavLink></li> */}
+                <li><NavLink activeStyle={{color: "red"}} to="/trade">Trade</NavLink>
                     <ul>
                         <li><a href="swap" >Swap</a></li>
                         <li><a href="limit" >Limit</a></li>
@@ -33,14 +33,14 @@ export function Navbar() {
                         <li><a href="https://bridge.pancakeswap.finance/" target='blank'>Bridge</a><img src={exitIcon} alt="exit icon"/></li>
                     </ul>
                 </li>
-                <li><Link to="/earn">Earn</Link>
+                <li><NavLink activeClassName="active-link" to="/earn">Earn</NavLink>
                     <ul>
                         <li><a href="farms.html">Farms</a></li>
                         <li><a href="pool.html">Pool</a></li>
                     </ul>
                 </li>  
                    
-                <li><Link to="/win">Win</Link>  
+                <li><NavLink activeClassName="active-link" to="/win">Win</NavLink>  
                     <ul>
                         <li><a href="Trading Competition" >Trading Competition</a></li>
                         <li><a href="Prediction">Prediction (Beta)</a></li>
@@ -48,14 +48,14 @@ export function Navbar() {
                         <li><a href="Pottery">Pottery (Beta)</a></li>
                     </ul>
                 </li>  
-                <li><Link to="/win">NTF</Link>
+                <li><NavLink to="/win">NTF</NavLink>
                     <ul>
                         <li><a href="Overview">Overview</a></li>
                         <li><a href="Collection">Collection</a></li>
                         <li><a href="Activity">Activity</a></li>
                     </ul>
                 </li>   
-                <li><Link to="/win">...</Link>
+                <li><NavLink to="/win">...</NavLink>
                     <ul>
                     <li><a href="Info">Info</a></li>
                         <li><a href="Info">IFO</a></li>
