@@ -94,13 +94,20 @@ $theme-light: map.set($theme-light, "btn-bg", $border_color);
     
 }
 .menu-nav li{
+    &:active{
+        color: red;
+    }
     &:hover, &:focus{
         background-color: var(--hover-nav-ul);
-        border-radius: 15px;
+        border-radius: 0px;
+        &:not(:last-child, :first-child){
+            border-radius: 5px;
+        }
+        
     }
     ul li:hover{
         background-color: var(--hover-nav-ul);
-        border-radius: 0%;
+        border-radius: 15%;
 
     }
 }
@@ -137,9 +144,6 @@ nav {
                 font-size: 16px ;
                 padding: 15px;
                 position: relative;
-                &:active{
-                    color: $secondary-color;
-                }
                 &:hover ul{
                     opacity: 1;
                     visibility: visible;
@@ -210,7 +214,7 @@ nav {
             width: 220px;
             height: 32px;
             margin: 2px 4px 4px 0px;
-            padding: 0px 16px;
+            padding: 0px 16px 0px 0px;
             color: var(--btn-bg-tx);
             background-color: var(--btn-bg);
             img{
@@ -242,7 +246,7 @@ nav {
 @include mq('tablet-small', 'tablet') {
     nav{
         .flex{
-            #money, .igZcUN{
+            #money, .igZcUN, .mini-logo {
                 display: none;
             }
             
@@ -274,6 +278,10 @@ nav {
                    
                     
                 }
+            }
+            .button-navbar-bnb{
+                font-size: 0;
+                width: 80px;
             }
             
         }   

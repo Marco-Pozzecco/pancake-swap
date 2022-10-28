@@ -66,7 +66,7 @@ export function Navbar() {
                     </ul>
                 </li> 
                 </ul>   
-                {/* <Outlet></Outlet> */}
+                
             </div>
             <section className="flex">
                 <div>
