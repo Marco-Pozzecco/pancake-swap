@@ -9,5 +9,5 @@
     "braketSameLine": true,
     "arrowParens": "always",
     "endOfLine": "auto",
-    "singleAttributePerLine": true
+    "singleAttributePerLine": false
 }
