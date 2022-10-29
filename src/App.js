@@ -10,10 +10,11 @@ import {Layout} from "./pages/Layout";
 import { Nft } from "./pages/NFT/Nft";
 
 
+
 export function App() {
-    return (  
-            <>
-             <Router>
+    return (
+        <>
+            <Router>
                 <Routes>
                     <Route path="/" element={<Layout />} >
                     <Route index element={<Home />} />
@@ -27,10 +28,9 @@ export function App() {
                 </Routes>
                 </Router>
                 
-                
                 </>
+
     );
-    
+
 }
-            
-            
+
