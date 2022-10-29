@@ -8,12 +8,9 @@ import { FloatingBunny } from "../../layouts/home-floating-bunny/FloatingBunny";
 
 export default function Home() {
     return (
-        // <Page>
-        //     {/* <FloatingBunny/> */}
-        //     <WinPrizes />
-        // </Page>
+        
         <>
-            <Subnav/>
+            <Subnav elements={["Swap", "Limit", "Liquidity", "Perpetual", "Bridge"]} />
             <FloatingBunny />
             <WinPrizes />
             

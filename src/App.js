@@ -16,12 +16,13 @@ export function App() {
             <Router>
                 <Routes>
                     <Route path="/" element={<Layout />} >
-                        <Route index element={<Home />} />
-                        <Route path="trade" element={<Trade />} />
-                        <Route path="earn" element={<Earn />} />
-                        <Route path="win" element={<Win />} />
-                        {/* <Route path="win" element={<Nft/>} /> */}
-                        <Route path="*" element={<NoPage />} />
+                    <Route index element={<Home />} />
+                    <Route path="trade" element={<Trade/>} />
+                    <Route path="earn" element={<Earn/>} />
+                    <Route path="win" element={<Win/>} />
+                    {/* <Route path="win" element={<Nft/>} /> */}
+                    {/* <Route path="win" element={<extra/>} /> */}
+                    <Route path="*" element={<NoPage/>} />
                     </Route>
                 </Routes>
             </Router>

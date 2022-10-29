@@ -4,9 +4,9 @@
 @import "../../abstracts/colors";
 
 .subnav{
-    //display: flex;
-    // justify-content: center;
-    // align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     margin-top: 56px;
     width: 100%;
@@ -17,5 +17,11 @@
     //overflow-x: scroll;
     //flex-grow: 1;
     color: aliceblue;
+    ul{
+        display: flex;
+        li{
+            padding-right: 20px;
+        }
+    }
     
 }

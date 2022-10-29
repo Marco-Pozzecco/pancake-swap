@@ -24,7 +24,7 @@ export function Navbar() {
                 <Link to="/"><img src={logoBunny} alt="logo bunny" className="logoBunny"></img></Link>
                 <ul className="menu-ul menu-nav">
                 {/* <li><NavLink to="/">Home</NavLink></li> */}
-                <li><NavLink activeStyle={{color: "red"}} to="/trade">Trade</NavLink>
+                <li><NavLink to="/trade">Trade</NavLink>
                     <ul>
                         <li><a href="swap" >Swap</a></li>
                         <li><a href="limit" >Limit</a></li>
@@ -33,14 +33,14 @@ export function Navbar() {
                         <li><a href="https://bridge.pancakeswap.finance/" target='blank'>Bridge</a><img src={exitIcon} alt="exit icon"/></li>
                     </ul>
                 </li>
-                <li><NavLink activeClassName="active-link" to="/earn">Earn</NavLink>
+                <li><NavLink to="/earn">Earn</NavLink>
                     <ul>
                         <li><a href="farms.html">Farms</a></li>
                         <li><a href="pool.html">Pool</a></li>
                     </ul>
                 </li>  
                    
-                <li><NavLink activeClassName="active-link" to="/win">Win</NavLink>  
+                <li><NavLink to="/win">Win</NavLink>  
                     <ul>
                         <li><a href="Trading Competition" >Trading Competition</a></li>
                         <li><a href="Prediction">Prediction (Beta)</a></li>
