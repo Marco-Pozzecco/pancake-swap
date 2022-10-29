@@ -3,6 +3,18 @@
 
 @import "../../abstracts/colors";
 
+$theme-dark: map.set($theme-dark, "nav-bkground", $footer-background);
+
+$theme-light: map.set($theme-light, "nav-bkground", #fff); 
+
+.theme-dark{
+    --nav-bkground: #{map.get($theme-dark , "nav-bkground")}; 
+}
+.theme-light{ 
+    
+    --nav-bkground: #{map.get($theme-light , "nav-bkground")};
+}
+
 .subnav{
     display: flex;
     justify-content: center;
@@ -11,7 +23,7 @@
     margin-top: 56px;
     width: 100%;
     height: 45px;
-    background-color: rgb(29, 29, 34);
+    background-color: var(--nav-bkground);
     z-index: 1;
     box-shadow: rgb(133 133 133 / 10%) 0px -2px 0px -0px inset;
     //overflow-x: scroll;

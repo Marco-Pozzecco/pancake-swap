@@ -48,7 +48,7 @@ export function Navbar() {
                         <li><a href="Pottery">Pottery (Beta)</a></li>
                     </ul>
                 </li>  
-                <li><NavLink to="/win">NTF</NavLink>
+                <li><NavLink to="/nft">NTF</NavLink>
                     <ul>
                         <li><a href="Overview">Overview</a></li>
                         <li><a href="Collection">Collection</a></li>
