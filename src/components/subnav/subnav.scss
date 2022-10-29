@@ -3,8 +3,10 @@
 
 @import "../../abstracts/colors";
 
+// Set colori tema scuro
 $theme-dark: map.set($theme-dark, "nav-bkground", $footer-background);
 
+// Set colori tema chiaro
 $theme-light: map.set($theme-light, "nav-bkground", #fff); 
 
 .theme-dark{
