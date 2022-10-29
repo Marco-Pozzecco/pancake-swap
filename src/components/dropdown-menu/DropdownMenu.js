@@ -1,6 +1,6 @@
 import React from 'react'
 
-function DropdownMenu(props) {
+export function DropdownMenu(props) {
     if(!props.open) return null
 
   return (
@@ -15,4 +15,3 @@ function DropdownMenu(props) {
   );
 }
 
-export default DropdownMenu

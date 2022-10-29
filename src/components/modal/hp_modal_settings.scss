@@ -57,7 +57,7 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
 
 }
 
-.modal {
+.modal{
     position: fixed;
     width: 300px;
     height: 300px;
@@ -256,4 +256,21 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
     //     pointer-events: all;
     //     transition: 350ms ease;
     // }
+}
+@include mq('tablet-small', 'tablet') {
+    
+    
+
+}
+
+@include mq('phone', 'phablet'){
+    .modal{
+        top: 75%;
+        width: 100%;
+        .modal1{
+            width: 100%;
+           
+            
+        }
+    }
 }

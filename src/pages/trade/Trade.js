@@ -1,9 +1,16 @@
 import React from 'react'
+import Subnav from '../../components/subnav/Subnav';
+import "./_trade-swap.scss"; 
 
-const Trade = () => {
+
+export function Trade(){
   return (
-    <div><h1>Trade</h1></div>
+    <div>
+      <Subnav elements={["Swap", "Limit"]}/>
+      <h1 className='provaH1'>Trade</h1>
+      
+      
+      </div>
   )
 }
 
-export default Trade

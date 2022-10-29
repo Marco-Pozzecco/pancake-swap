@@ -1,9 +1,10 @@
 import React from 'react'
+import './_earn.scss'
 
-export default function Earn() {
+export function Earn() {
   return (
     <div>
-      <h1>Earn</h1>
+      <h1 className='provaH2'>Earn</h1>
       </div>
   )
 }

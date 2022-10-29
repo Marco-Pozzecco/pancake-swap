@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import './hp_modal_settings.scss'
 
 
-function HpModalSettings({open, onClose}) {
+export function HpModalSettings({open, onClose}) {
 
     const [theme, setTheme] = useState()
 
@@ -11,7 +11,7 @@ function HpModalSettings({open, onClose}) {
         const checked = event.target.checked
         //const dark = !checked
         var chk3 = document.getElementById("chk3");
-        const logo = document.getElementById('main-logo');
+        //const logo = document.getElementById('main-logo');
         
         setTheme(checked)
         console.log(checked)
@@ -64,4 +64,3 @@ function HpModalSettings({open, onClose}) {
   )
 }
 
-export default HpModalSettings;
