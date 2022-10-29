@@ -72,6 +72,8 @@ i{
     .main-footer{
         @include flex(row, space-between, flex-start);
         margin-bottom: 32px;
+        max-width: 1200px;
+        
            h3{
                color: #fff;
                font-weight: 100;
