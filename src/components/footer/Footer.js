@@ -15,6 +15,7 @@ export function Footer() {
    
   return (
     <footer className="footer-box">
+      <section className="external-box">
       <section className="main-footer">
         <div>
           <h4>About</h4>
@@ -113,6 +114,7 @@ export function Footer() {
             <button className="btn-footer button-aquagreen ">Buy CAKE</button>
           </a>
         </div>
+      </section>
       </section>
     </footer>
   );
