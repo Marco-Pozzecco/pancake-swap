@@ -20,31 +20,11 @@ export function WinPrizes() {
     return (
         <section className="win-prizes">
             <div className="floating-balls">
-                <img
-                    src={ball2}
-                    alt="Lottery ball number 2"
-                    id="ball-n2"
-                />
-                <img
-                    src={ball4}
-                    alt="Lottery ball number 4"
-                    id="ball-n4"
-                />
-                <img
-                    src={ball6}
-                    alt="Lottery ball number 6"
-                    id="ball-n6"
-                />
-                <img
-                    src={ball7}
-                    alt="Lottery ball number 7"
-                    id="ball-n7"
-                />
-                <img
-                    src={ball9}
-                    alt="Lottery ball number 9"
-                    id="ball-n9"
-                />
+                <img src={ball2} alt="Lottery ball number 2" id="ball-n2" />
+                <img src={ball4} alt="Lottery ball number 4" id="ball-n4" />
+                <img src={ball6} alt="Lottery ball number 6" id="ball-n6" />
+                <img src={ball7} alt="Lottery ball number 7" id="ball-n7" />
+                <img src={ball9} alt="Lottery ball number 9" id="ball-n9" />
             </div>
             <div className="floating-cards">
                 <img
@@ -52,16 +32,8 @@ export function WinPrizes() {
                     alt="Card top right (placeholder)"
                     id="card-top-right"
                 />
-                <img
-                    src={cardGreen}
-                    alt="card green"
-                    id="card-green"
-                />
-                <img
-                    src={cardRed}
-                    alt="card red"
-                    id="card-red"
-                />
+                <img src={cardGreen} alt="card green" id="card-green" />
+                <img src={cardRed} alt="card red" id="card-red" />
                 <img
                     src={cardBottomLeft}
                     alt="card bottom left"
@@ -78,10 +50,7 @@ export function WinPrizes() {
                     <div className="card card-prediction">
                         <div className="card-content">
                             <div className="card-img">
-                                <img
-                                    src={crystalBall}
-                                    alt="Crystal ball"
-                                />
+                                <img src={crystalBall} alt="Crystal ball" />
                             </div>
                             <h3>Prediction</h3>
                             <h2>
@@ -90,10 +59,7 @@ export function WinPrizes() {
                             <h3>in BNB + CAKE won so far</h3>
                             <p>Predict the price trend of BNB or CAKE to win</p>
 
-                            <a
-                                href="#"
-                                className="link-aquagreen"
-                            >
+                            <a href="#" className="link-aquagreen">
                                 <button className="button-aquagreen buttons-home">
                                     Play
                                 </button>
@@ -103,10 +69,7 @@ export function WinPrizes() {
                     <div className="card card-lottery">
                         <div className="card-content">
                             <div className="card-img">
-                                <img
-                                    src={ticket}
-                                    alt="Ticket"
-                                />
+                                <img src={ticket} alt="Ticket" />
                             </div>
                             <h3>Lottery</h3>
                             <h2>
@@ -118,10 +81,7 @@ export function WinPrizes() {
                                 match
                             </p>
 
-                            <a
-                                href="#"
-                                className="link-aquagreen"
-                            >
+                            <a href="#" className="link-aquagreen">
                                 <button className="button-aquagreen buttons-home">
                                     Buy tickets
                                 </button>
