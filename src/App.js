@@ -12,7 +12,7 @@ import {Layout} from "./pages/Layout";
 
 export function App() {
     return (  
-            <>
+            <div>
              <Router>
                 <Routes>
                     <Route path="/" element={<Layout />} >
@@ -29,7 +29,7 @@ export function App() {
                 
                 {/* <Home/> */}
                 {/* <Footer/> */}
-                </>
+                </div>
     );
     
 }
