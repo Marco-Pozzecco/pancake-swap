@@ -21,6 +21,7 @@ export function App() {
                     <Route path="earn" element={<Earn/>} />
                     <Route path="win" element={<Win/>} />
                     {/* <Route path="win" element={<Nft/>} /> */}
+                    {/* <Route path="win" element={<extra/>} /> */}
                     <Route path="*" element={<NoPage/>} />
                     </Route>
                 </Routes>

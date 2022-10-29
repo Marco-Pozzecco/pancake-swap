@@ -10,10 +10,12 @@ export function Layout () {
     return (
       <div>
         <Navbar />
-        {/* <Subnav/> */}
+        
         {/* <Home/> */}
 
-        <Outlet />
+        <Outlet>
+          <Subnav/>
+        </Outlet>
         <Footer />
         <ResponsiveNavbar />
       </div>
