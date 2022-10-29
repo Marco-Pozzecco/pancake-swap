@@ -1,8 +1,7 @@
 import React from 'react'
 import Subnav from '../../components/subnav/Subnav';
 import "./_trade-swap.scss"; 
-import { NavLink } from 'react-router-dom';
-import exitIcon from '../../resources/home/cake/exit-icon.svg'
+
 
 
 export function Trade(){

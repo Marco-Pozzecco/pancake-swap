@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./_floating-bunny.scss";
 import bunny from "../../resources/home/bunny/bunny.webp";
 import stella1 from "../../resources/home/bunny/stella1.webp";
 import stella2 from "../../resources/home/bunny/stella2.webp";
 import stella3 from "../../resources/home/bunny/stella3.webp";
 
-function FloatingBunny() {
+export function FloatingBunny() {
+
+    let [theme, setTheme] = React.useState(null);
+
+    useEffect(() => {
+        const pippo = document.querySelector("body").classList[0];
+        setTheme(pippo);
+    }, [theme])
+
     return (
         <section className="fb-floating-bunny">
             <div className="fb-wrapper">
@@ -47,7 +55,7 @@ function FloatingBunny() {
                     className="sc-8a800401-0 Mvnec">
                     <path
                         d="M804 166.523C520.5 166.523 267.5 290.022 0 304V338.5H1660V0C1358.83 0 1104 166.523 804 166.523Z"
-                        fill="url(#paint0_linear_dark)"></path>
+                        fill={theme === "theme-dark" ? "#paint0_linear_dark" : "#paint0_linear_light"}></path>
                     <defs>
                         <linearGradient id="paint0_linear_dark" x1="830" y1="83.5" x2="830" y2="338.5"
                             gradientUnits="userSpaceOnUse">
@@ -67,4 +75,3 @@ function FloatingBunny() {
         </section>
     )
 }
-export default FloatingBunny

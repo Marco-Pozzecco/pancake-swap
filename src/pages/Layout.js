@@ -17,7 +17,7 @@ export function Layout () {
           <Subnav/>
         </Outlet>
         <Footer />
-        <ResponsiveNavbar/>
+        <ResponsiveNavbar />
       </div>
     );
 }
