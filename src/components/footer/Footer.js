@@ -9,6 +9,7 @@ import reddit from "../../resources/footer/reddit.svg"
 import github from "../../resources/footer/github.svg"
 import twitter from "../../resources/footer/twitter.svg"
 import {LanguageSelector} from "../language-selector/LanguageSelector"
+import {HandleThemeColor} from "../../script/HandleThemeColor"
 
 
 
@@ -100,14 +101,7 @@ export function Footer() {
       <hr className="line"></hr>
       <section className="bottom-footer-2 flex2">
         <div className="flex2">
-          <div>
-            <input type="checkbox" className="checkbx3" id="chk3" />
-            <label className="label3" for="chk3">
-              <i className="fa-regular fa-moon"></i>
-              <i className="fas fa-sun"></i>
-              <div className="ball3 circle-toggle"></div>
-            </label>
-          </div>
+          <HandleThemeColor/>
           <div className="flex2 lista">
             <LanguageSelector style={dropdownStyle}/>
             <p>EN</p>
