@@ -169,21 +169,7 @@ export function Navbar() {
                     {/* <div  id="overlay"></div> */}
                     <div>
                         <DropdownCrypto selected={selected} setSelected={setSelected}/>
-                        {/* <span className="link-popup-navbar">
-                            <button className="button-navbar-bnb">
-                                <img
-                                    className="fa-svg-icon"
-                                    src={bnbIcon}
-                                    alt="setting icon"
-                                />
-                                BNB Smart Chain
-                                <img
-                                    className="fa-svg-icon"
-                                    src={arrow}
-                                    alt="arrow icon"
-                                />
-                            </button>
-                        </span> */}
+                       
                     </div>
                     <div>
                         <span className="link-aquagreen">
