@@ -16,14 +16,14 @@ export default function DropdownCrypto() {
     <div className="dropdown-crypto">
       <span className="link-popup-navbar">
         <button className="button-navbar-bnb"
-          onMouseOver={(e) =>  {setDropdown(!openDropdown, e)}} > 
+          onMouseOver={(e) =>  {setDropdown(!openDropdown)}} > 
           <img className="fa-svg-icon" src={bnbIcon} alt="setting icon"></img>
           {(selected === '') ? 'BNB Smart Chain' : selected}
           <img className="fa-svg-icon" src={arrow} alt="arrow icon"/>
         </button>
       </span>
       
-     {openDropdown && (
+       {openDropdown && (
       <div className='drop-content'>
           <ul className="menu-nav" >
             {options.map((option)=> {
@@ -31,9 +31,18 @@ export default function DropdownCrypto() {
                       {option}
                       </li>})}
           </ul>
-        </div>)}
+        </div>)} 
 
         {/* onmouseout={(e) => {setDropdown(false)}} */}
+        {/* {openDropdown && (
+      <div className='drop-content'>
+          <ul className="menu-nav" >
+            {options.map((option)=> {
+              return <li onClick={(e)=> {setSelected(option, e); setDropdown(false)}}>
+                      {option}
+                      </li>})}
+          </ul>
+        </div>)} */}
         
     </div>
     

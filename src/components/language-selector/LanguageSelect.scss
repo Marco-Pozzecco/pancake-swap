@@ -6,18 +6,18 @@
 @import "../../abstracts/colors";
 
 
-.flex{
+.flex {
     @include flex(row, center, center);
-    .fa-globe{
+
+    .fa-globe {
+
         // fill: $secondary-color;
-        &:hover{
+        &:hover {
             color: rgb(154, 106, 255, 30%);
             cursor: pointer;
             position: relative;
-    
         }
-        
-        
     }
+
 
 }

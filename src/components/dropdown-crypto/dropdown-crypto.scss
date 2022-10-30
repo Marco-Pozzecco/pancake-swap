@@ -6,6 +6,25 @@
 @import "../../abstracts/mixins";
 @import "../../abstracts/colors";
 
+// Set colori tema scuro
+$theme-dark: map.set($theme-dark, "nav-bkground", $footer-background);
+$theme-dark: map.set($theme-dark, "icon-text-color", $primary-dk);
+
+// Set colori tema chiaro
+$theme-light: map.set($theme-light, "nav-bkground", #fff);
+$theme-light: map.set($theme-light, "icon-text-color", $primary-color);
+
+.theme-dark {
+    --nav-bkground: #{map.get($theme-dark , "nav-bkground")};
+    --icon-text-color: #{map.get($theme-dark , "icon-text-color")};
+}
+
+.theme-light {
+
+    --nav-bkground: #{map.get($theme-light , "nav-bkground")};
+    --icon-text-color: #{map.get($theme-light , "icon-text-color")};
+}
+
 .dropdown-crypto {
     width: 220px;
     margin: 100px auto;
@@ -31,19 +50,26 @@
         //visibility: hidden;
         position: absolute;
         //top: 3rem;
+        left: 2rem;
         background-color: var(--nav-bkground);
         @include setRadius (15px);
         border: 1px solid --border-bottom-pp;
-        //width: 12rem;
+        width: 12rem;
         //padding: 2px;
         transition: opacity 200ms easy-in-out;
+        z-index: 98;
 
         ul {
             display: flex;
             flex-direction: column;
+            list-style: none;
 
             li {
                 text-align: left;
+                text-decoration: none;
+                padding: 5px;
+                color: var(--icon-text-color);
+                ;
             }
         }
     }

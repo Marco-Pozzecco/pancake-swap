@@ -11,7 +11,13 @@ import twitter from "../../resources/footer/twitter.svg"
 import {LanguageSelector} from "../language-selector/LanguageSelector"
 
 
+
+
 export function Footer() {
+
+  const dropdownStyle={
+    position: 'absolute'
+  }
    
   return (
     <footer className="footer-box">
@@ -103,7 +109,7 @@ export function Footer() {
             </label>
           </div>
           <div className="flex2 lista">
-            <LanguageSelector />
+            <LanguageSelector style={dropdownStyle}/>
             <p>EN</p>
           </div>
         </div>

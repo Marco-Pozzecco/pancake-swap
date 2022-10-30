@@ -16,6 +16,7 @@ export function Navbar() {
     const [openModal, setOpenModal] = useState(false);
     const [selected, setSelected] = useState("")
 
+
     return (
         <div>
             <nav>
@@ -30,7 +31,7 @@ export function Navbar() {
                             className="logoBunny"
                         ></img>
                     </Link>
-                    <ul className="menu-ul menu-nav">
+                    <ul className="menu-ul menu-nav menu-nav-ul">
                         {/* <li><NavLink to="/">Home</NavLink></li> */}
                         <li>
                             <NavLink to="/trade">Trade</NavLink>
@@ -158,7 +159,9 @@ export function Navbar() {
                     <div id="money">
                         <p>$4.357</p>
                     </div>
-                    <LanguageSelector />
+                    <div className="flex2 lista">
+                        <LanguageSelector />
+                    </div>
                     <img
                         className="fa-svg-icon"
                         src={settingSvg}
