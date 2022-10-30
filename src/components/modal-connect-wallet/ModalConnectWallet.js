@@ -1,11 +1,14 @@
 import React from 'react'
-import '.modalConnectWallet.scss'
+import './modalConnectWallet.scss'
 
 export default function ModalConnectWallet({open, onClose}) {
+
+  if(!open) return null
+
   return (
-    <div>
+    <div className='.modalConnectWallet'>
         <div class="modalHeader flex-switch"><h3 class="header">Connect Wallet</h3>
-                <button data-close-wallet class="close-popup">&times;</button></div>
+                <button data-close-wallet class="close-popup"  onClick={onClose} >&times;</button></div>
                 <p>Start by connecting with one of the wallets below. Be sure to store your private keys or seed phrase securely.
                      Never share them with anyone.
                 </p>

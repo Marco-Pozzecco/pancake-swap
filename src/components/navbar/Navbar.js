@@ -11,9 +11,11 @@ import bnbIcon from "../../resources/home/navbar/bnb.png";
 import arrow from "../../resources/home/navbar/arrow-down.svg";
 import {LanguageSelector} from "../language-selector/LanguageSelector";
 import DropdownCrypto from "../dropdown-crypto/DropdownCrypto";
+import ModalConnectWallet from "../modal-connect-wallet/ModalConnectWallet";
 
 export function Navbar() {
     const [openModal, setOpenModal] = useState(false);
+    const [openModalWallet, setOpenModalWallet] = useState(false);
     const [selected, setSelected] = useState("")
 
 
@@ -176,13 +178,17 @@ export function Navbar() {
                     </div>
                     <div>
                         <span className="link-aquagreen">
-                            <button className="btn-navbar button-aquagreen">
+                            <button className="btn-navbar button-aquagreen"
+                            onClick={() => setOpenModalWallet(true)}>
                                 Connect Wallet
                             </button>
                         </span>
                     </div>
                 </section>
             </nav>
+            <ModalConnectWallet
+            open={openModalWallet}
+            onClose={()=> setOpenModalWallet(false)}/>
             <HpModalSettings
                 open={openModal}
                 onClose={() => setOpenModal(false)}
