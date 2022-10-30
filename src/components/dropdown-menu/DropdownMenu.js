@@ -5,12 +5,13 @@ export function DropdownMenu(props) {
 
   return (
     <div >
-      <ul className="menu-ul menu-nav dropdown" >
+      <ul>
         {props.elements.map((element)=> {
-            return <li>{element}</li>
+            return <li onClick={(props) => {props.setSelected(element); props.setIsActive(false)}} >{element}</li>
         })}
      
       </ul>
+      {/* className="menu-ul menu-nav dropdown"  */}
     </div>
   );
 }

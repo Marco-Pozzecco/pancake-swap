@@ -177,16 +177,16 @@ nav {
         }
         
         .dropdown{
-            visibility: hidden;
+            //visibility: hidden;
             position: absolute;
-            top: 2.5rem;
+            top: 10rem;
             background-color: #7A6EAA;
             border-radius: 1%;
             width: 12rem;
             //height: 14rem;
             display: flex;
             flex-direction: column;
-            opacity: 0;
+            //opacity: 0;
             padding: 2px;
             transition: opacity 200ms easy-in-out;
             text-align: center;

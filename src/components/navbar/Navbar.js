@@ -10,9 +10,11 @@ import exitIcon from "../../resources/home/cake/exit-icon.svg";
 import bnbIcon from "../../resources/home/navbar/bnb.png";
 import arrow from "../../resources/home/navbar/arrow-down.svg";
 import {LanguageSelector} from "../language-selector/LanguageSelector";
+import DropdownCrypto from "../dropdown-crypto/DropdownCrypto";
 
 export function Navbar() {
     const [openModal, setOpenModal] = useState(false);
+    const [selected, setSelected] = useState("")
 
     return (
         <div>
@@ -166,7 +168,8 @@ export function Navbar() {
 
                     {/* <div  id="overlay"></div> */}
                     <div>
-                        <span className="link-popup-navbar">
+                        <DropdownCrypto selected={selected} setSelected={setSelected}/>
+                        {/* <span className="link-popup-navbar">
                             <button className="button-navbar-bnb">
                                 <img
                                     className="fa-svg-icon"
@@ -180,7 +183,7 @@ export function Navbar() {
                                     alt="arrow icon"
                                 />
                             </button>
-                        </span>
+                        </span> */}
                     </div>
                     <div>
                         <span className="link-aquagreen">
