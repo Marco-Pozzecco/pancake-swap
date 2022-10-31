@@ -2,17 +2,18 @@
 @use "sass:map";
 @use "sass:list";
 // Tyography
-@use "../style/abstracts/typography";
+@use "../src/abstracts/typography";
 // Pages
-@use "pages/home";
-@use "pages/trade-swap";
+@use "../src/pages/homepage/home";
+// @use "../src/pages/trade/trade-swap";
 
 // Dichiarazioni import
-@import "abstracts/animations";
-@import "abstracts/mixins";
-@import "abstracts/variables";
-@import "abstracts/colors";
-@import "base/utility";
+
+@import "../src/abstracts/animations";
+@import "../src/abstracts/mixins";
+@import "../src/abstracts/variables";
+@import "../src/abstracts/colors";
+@import "../src/abstracts/utility";
 // @import "style/components/buttons/buttons-variables";
 
 // Scrollbar
@@ -37,10 +38,11 @@
 @include fade-out;
 
 
-html, body {
+html, body, #root {
     height: auto;
-    width: 100%
+    width: 100%;
 }
+
 
 body {
     display: flex;

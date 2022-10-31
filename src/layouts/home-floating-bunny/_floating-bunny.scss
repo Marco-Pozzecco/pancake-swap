@@ -1,5 +1,5 @@
 // Use rules
-@use "../../components/buttons/buttons";
+// @use "../../components/buttons/buttons";
 @use "sass:map";
 
 // Import rules
@@ -139,9 +139,9 @@ body {
             .fb-thefloatingstars {
                 height: auto;
                 position: absolute;
-                width: 100%;
-                top: 0px;
-                right: 50px;
+                width: 90%;
+                top: 50px;
+                right: 100px;
                 z-index: 2;
 
                 .fb-star1 img {

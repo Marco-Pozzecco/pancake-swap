@@ -1,0 +1,23 @@
+// Use rules
+@use "sass:map";
+
+// Import rules
+@import "../../abstracts/mixins";
+@import "../../abstracts/colors";
+
+
+.flex{
+    @include flex(row, center, center);
+    .fa-globe{
+        // fill: $secondary-color;
+        &:hover{
+            color: rgb(154, 106, 255, 30%);
+            cursor: pointer;
+            position: relative;
+    
+        }
+        
+        
+    }
+
+}
