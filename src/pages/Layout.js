@@ -3,7 +3,7 @@ import React from "react";
 import { Footer } from "../components/footer/Footer";
 import {Navbar} from "../components/navbar/Navbar";
 import { Outlet } from "react-router-dom";
-import { ResponsiveNavbar } from "../components/responsive-navbar/ResponsiveNavbar";
+// import { ResponsiveNavbar } from "../components/responsive-navbar/ResponsiveNavbar";
 import Subnav from "../components/subnav/Subnav";
 
 export function Layout () {
@@ -17,7 +17,7 @@ export function Layout () {
           <Subnav/>
         </Outlet>
         <Footer />
-        <ResponsiveNavbar />
+        {/* <ResponsiveNavbar /> */}
       </div>
     );
 }

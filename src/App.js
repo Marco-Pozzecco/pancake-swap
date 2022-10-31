@@ -7,7 +7,7 @@ import {NoPage} from "./pages/notFound/NotFound404";
 import "../src/main.scss";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {Layout} from "./pages/Layout";
-import {Nft} from "./pages/NFT/Nft";
+import {Nft} from "./pages/nft/Nft";
 
 export function App() {
     return (

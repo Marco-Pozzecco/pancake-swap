@@ -47,102 +47,81 @@ $theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
     z-index: 999;
     opacity: 1;
 
-    .left-card {
-        background-color: #d9d9d9;
-        border-radius: 30px;
-        width: 60%;
+    .container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
         height: 100%;
-        left: 0;
-        padding: 32px 48px 32px 48px;
-        @include flex(column, space-evenly);
+        margin: 20px auto 0;
 
-        .header {
-            flex: 1;
-            width: 100%;
-            background-color: bisque;
-        }
+        .left-card {
+            background-color: #d9d9d9;
+            border-radius: 30px;
+            width: 60%;
+            height: 100%;
+            left: 0;
+            padding: 32px 48px 32px 48px;
+            @include flex(column, space-evenly);
 
-        .main-img-box {
-
-            flex: 2;
-            width: 100%;
-            background-color: #fff;
-
-            .flex {
-                background-color: aqua;
+            .header {
+                flex: 1;
                 width: 100%;
-                margin-bottom: 20px;
-                //@include flex(row, space-between, center);
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                row-gap: 24px;
-                column-gap: 16px;
+                background-color: bisque;
+            }
 
-                .img-box {
-                    @include flex(column, center, center);
+            .main-img-box {
+
+                flex: 2;
+                width: 100%;
+                background-color: #fff;
+
+                .grid {
+                    background-color: aqua;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    row-gap: 24px;
+                    column-gap: 16px;
+
+                    .img-box {
+                        @include flex(column, center, center);
+
+                    }
 
                 }
 
             }
 
-        }
-
-
-    }
-
-    .right-card {}
-
-
-    p {
-        color: var(--text-color);
-    }
-
-    .logo-flex {
-        width: 100%;
-
-        div {
-            @include flex(column);
-            padding: 16px 24px;
-            margin: 2px 0px;
-            width: 50%;
-            height: 100%;
-            cursor: pointer;
 
         }
-    }
 
-    h4 {
-        padding-top: 5%;
-    }
+        .right-card {}
 
-    #btn-section-pop {
-        width: 100%;
-    }
-
-    .bottom_popup {
-        border-top: 1px solid $secondary-color;
-        width: 100%;
-        padding: 10px 0px 0px 0px;
-        @include flex(column, center, center);
 
         p {
-            margin-bottom: 16px;
-
+            color: var(--text-color);
         }
-    }
 
-    .modalHeader {
-        position: fixed;
-        width: 340px;
-        height: 70px;
-        top: 3%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-image: var(--popup-modal1-bg);
-        background-color: var(--popup-modal1-bg);
-        border-radius: 30px 30px 0px 0px;
-        padding: 2% 2% 2% 6%;
-        border-bottom: 1px solid --border-bottom-pp;
+        .logo-flex {
+            width: 100%;
+
+            div {
+                @include flex(column);
+                padding: 16px 24px;
+                margin: 2px 0px;
+                width: 50%;
+                height: 100%;
+                cursor: pointer;
+
+            }
+        }
+
+        h4 {
+            padding-top: 5%;
+        }
+
 
         .close-btn {
             cursor: pointer;
@@ -167,5 +146,44 @@ $theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
                 margin: 2px;
             }
         }
+
+        .bloc-tabs {
+            display: flex;
+        }
+
+        .tabs {
+
+            padding: 15px;
+            text-align: center;
+            width: 50%;
+            background: rgba(128, 128, 128, 0.075);
+            cursor: pointer;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+            box-sizing: content-box;
+            position: relative;
+            outline: none;
+        }
+
+        .active-tabs {}
+
+        .content-tabs {
+            flex-grow: 1;
+        }
+
+        .content {
+
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .active-content {
+            display: block;
+        }
+
+
     }
+
+
 }
