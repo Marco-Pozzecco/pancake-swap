@@ -1,4 +1,4 @@
-import "./Buttons.scss";
+import "./_buttons.scss";
 import React, {useState} from "react";
 
 export default function Button(props) {
@@ -8,9 +8,9 @@ export default function Button(props) {
 
     return (
         <div>
-            <button className={props.className} onClick={handleClick}>
-                {props.text}
-                {props.svg}
+            <button className={props.style} onClick={handleClick}>
+                {props.text && props.text}
+                {props.svg && props.svg}
             </button>
         </div>
     );

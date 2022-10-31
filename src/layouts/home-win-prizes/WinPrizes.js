@@ -15,6 +15,7 @@ import cardTopRight from "../../resources/home/winPrizes/card-top-right-1024.web
 
 import crystalBall from "../../resources/svgs/crystal-ball.svg";
 import ticket from "../../resources/svgs/ticket.svg";
+import Button from "../../components/buttons/Buttons";
 
 export function WinPrizes() {
     return (
@@ -81,11 +82,10 @@ export function WinPrizes() {
                                 match
                             </p>
 
-                            <a href="#" className="link-aquagreen">
-                                <button className="button-aquagreen buttons-home">
-                                    Buy tickets
-                                </button>
-                            </a>
+                            <Button
+                                style="button-acquagreen buttons-home"
+                                text="Buy tickets"
+                            />
                         </div>
                     </div>
                 </div>
