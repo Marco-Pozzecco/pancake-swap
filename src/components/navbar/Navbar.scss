@@ -118,6 +118,8 @@ nav {
     top: 0;
     z-index: 98;
     border-bottom: 1px solid var(--border-bottom-pp);
+    transition: top 0.2s ease 0;
+    transform: translate3d(0px, 0px, 0px);
     .flex {
         @include flex(center);
         div,

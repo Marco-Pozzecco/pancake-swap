@@ -93,6 +93,8 @@ body {
 //end scrollbar
 
 .fb-floating-bunny {
+    margin-top: 56px;
+
     padding-top: 110px;
     padding-bottom: 150px;
     @include mq("desktop");

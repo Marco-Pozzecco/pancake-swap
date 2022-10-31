@@ -91,7 +91,7 @@ export function Navbar() {
                             </ul>
                         </li>
                         <li>
-                            <NavLink to="/win">NTF</NavLink>
+                            <NavLink to="/nft">NFT</NavLink>
                             <ul>
                                 <li>
                                     <a href="Overview">Overview</a>
