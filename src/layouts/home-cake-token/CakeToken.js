@@ -13,35 +13,35 @@ import "./cake-token.scss";
 
 export function CakeToken() {
     return (
-        <section class="cake-token">
-            <div class="cake-wrapper">
-                <div class="cake-content">
-                    <div class="cake-info">
+        <section className="cake-token">
+            <div className="cake-wrapper">
+                <div className="cake-content">
+                    <div className="cake-info">
                         <h1>
-                            <span class="accent-color-text">CAKE</span> makes
-                            our world go round.
+                            <span className="accent-color-text">CAKE </span>
+                            makes our world go round.
                         </h1>
                         <p>
                             CAKE token is at the heart of the PancakeSwap
                             ecosystem. Buy it, win it, farm it, spend it, stake
                             it... heck, you can even vote with it!
                         </p>
-                        <div class="cake-info-buttons">
+                        <div className="cake-info-buttons">
                             <a
                                 href="#links to swap page"
-                                class="link-aquagreen">
-                                <button class="button-aquagreen buttons-home">
+                                className="link-aquagreen">
+                                <button className="button-aquagreen buttons-home">
                                     Buy CAKE
                                 </button>
                             </a>
                             <a
                                 href="#links to documentation"
-                                class="learn-link">
+                                className="learn-link">
                                 Learn
                             </a>
                         </div>
                     </div>
-                    <div class="cake-coins">
+                    <div className="cake-coins">
                         <img
                             id="pancake-bottom-right"
                             srcSet={`${bottomRight} 512w, ${bottomRight2x} 1024w`}
@@ -65,40 +65,40 @@ export function CakeToken() {
                     </div>
                 </div>
 
-                <div class="cake-stats">
-                    <div class="cake-circulating-supply">
-                        <p class="text-subtle">Circulating Supply</p>
-                        <p class="text-cake-stats" id="circulating-supply">
+                <div className="cake-stats">
+                    <div className="cake-circulating-supply">
+                        <p className="text-subtle">Circulating Supply</p>
+                        <p className="text-cake-stats" id="circulating-supply">
                             139,897,449
                         </p>
                     </div>
-                    <div class="cake-supply">
-                        <p class="text-subtle">Total Supply</p>
-                        <p class="text-cake-stats" id="total-supply">
+                    <div className="cake-supply">
+                        <p className="text-subtle">Total Supply</p>
+                        <p className="text-cake-stats" id="total-supply">
                             328,219,229
                         </p>
                     </div>
-                    <div class="cake-max-supply">
-                        <p class="text-subtle">Max Supply</p>
-                        <p class="text-cake-stats" id="max-supply">
+                    <div className="cake-max-supply">
+                        <p className="text-subtle">Max Supply</p>
+                        <p className="text-cake-stats" id="max-supply">
                             750,000,000
                         </p>
                     </div>
-                    <div class="cake-cap">
-                        <p class="text-subtle">Market cap</p>
-                        <p class="text-cake-stats" id="market-cap">
+                    <div className="cake-cap">
+                        <p className="text-subtle">Market cap</p>
+                        <p className="text-cake-stats" id="market-cap">
                             $610 million
                         </p>
                     </div>
-                    <div class="cake-burned">
-                        <p class="text-subtle">Burned to date</p>
-                        <p class="text-cake-stats" id="cake-burned">
+                    <div className="cake-burned">
+                        <p className="text-subtle">Burned to date</p>
+                        <p className="text-cake-stats" id="cake-burned">
                             585,593,391
                         </p>
                     </div>
-                    <div class="cake-emissions">
-                        <p class="text-subtle">Current emissionis</p>
-                        <p class="text-cake-stats" id="cake-stats">
+                    <div className="cake-emissions">
+                        <p className="text-subtle">Current emissionis</p>
+                        <p className="text-cake-stats" id="cake-stats">
                             11.16/block
                         </p>
                     </div>
