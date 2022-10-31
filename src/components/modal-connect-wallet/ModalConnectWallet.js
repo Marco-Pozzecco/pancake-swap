@@ -3,15 +3,22 @@ import './modalConnectWallet.scss'
 import binance from "../../resources/home/crypto-wallet-logo/binance-logo.svg";
 import metamask from "../../resources/home/crypto-wallet-logo/metamask-logo.svg";
 import coinbase from "../../resources/home/crypto-wallet-logo/coinbase-logo.svg";
+import walletImg from "../../resources/modal-wallet/wallet_intro.png";
+import globeImg from "../../resources/modal-wallet/world_lock.png";
 
 export default function ModalConnectWallet({open, onClose}) {
 
   const [toggleState, setTab] = useState(1);
+  const [switchImg, setSwitchImg] = useState(1);
 
   const toggleTab = (index) => {
     setTab(index);
     console.log(index)
   };
+
+  const toggleImg = (index) => {
+    setSwitchImg(index)
+  }
 
   if(!open) return null
 
@@ -76,10 +83,17 @@ export default function ModalConnectWallet({open, onClose}) {
           </div>
 
           <div className={toggleState === 2 ? "content  active-content" : "content"}>
-            <section >
-              <h3></h3>
-              <img src='' alt=''/>
-              <p>A Web3 Wallet allows you to send and receive crypto assets like bitcoin, BNB, ETH, NFTs and much more.</p>
+            <section className='second-card'>
+              <h3 className={switchImg === 1 ? "switchImg active-switchImg" : "switchImg"} >Your first step in the DeFi world</h3>
+              <h3 className={switchImg === 2 ? "switchImg active-switchImg" : "switchImg"}>Login using a wallet connectio</h3>
+              <img className={switchImg === 1 ? "switchImg active-switchImg" : "switchImg"} src={walletImg} alt='wallet'/>
+              <img className={switchImg === 2 ? "switchImg active-switchImg" : "switchImg"} src={globeImg} alt='wallet'/>
+              <p className={switchImg === 1 ? "switchImg active-switchImg" : "switchImg"}>A Web3 Wallet allows you to send and receive crypto assets like bitcoin, BNB, ETH, NFTs and much more.</p>
+              <p className={switchImg === 2 ? "switchImg active-switchImg" : "switchImg"}>Instead of setting up new accounts and passwords for every website, simply set up your wallet in one go, and connect it to your favorite DApps.</p>
+              <div className='toggle-box'>
+                <div className={switchImg === 1 ? 'toggle-btn active-toggle' : 'toggle-btn'} onClick={() =>toggleImg(1)}></div>
+                <div className={switchImg === 2 ? 'toggle-btn-right active-toggle-right' : 'toggle-btn-right'} onClick={() => toggleImg(2)}></div>
+              </div>
               <button>Learn How To Connect</button>
                     
             </section>
