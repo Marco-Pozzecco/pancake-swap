@@ -102,10 +102,7 @@ export function Footer() {
       <section className="bottom-footer-2 flex2">
         <div className="flex2">
           <HandleThemeColor/>
-          <div className="flex2 lista">
-            <LanguageSelector style={dropdownStyle}/>
-            <p>EN</p>
-          </div>
+          <LanguageSelector />
         </div>
         <div className="flex2">
          
