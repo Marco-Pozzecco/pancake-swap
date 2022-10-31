@@ -12,8 +12,7 @@ export function LanguageSelector() {
                 className="fa-globe"
                 src={globeSvg}
                 alt="globe icon"
-                onMouseOver={() => setDropdown(true)}
-            ></img>
+                onMouseOver={() => setDropdown(true)}></img>
 
             <DropdownMenu
                 open={openDropdown}

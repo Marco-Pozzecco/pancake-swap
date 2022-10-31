@@ -1,10 +1,12 @@
-import React from 'react'
-import './_earn.scss'
+import React from "react";
+import Subnav from "../../components/subnav/Subnav";
+import "./_earn.scss";
 
 export function Earn() {
-  return (
-    <div>
-      <h1 className='provaH2'>Earn</h1>
-      </div>
-  )
+    return (
+        <div>
+            <Subnav elements={["Farms", "Pools"]} />
+            <h1 className="provaH2">Earn</h1>
+        </div>
+    );
 }

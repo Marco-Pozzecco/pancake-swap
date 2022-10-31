@@ -1,9 +1,15 @@
 import React from "react";
 // images imports
-import bottomRight from '../../resources/home/cake/bottom-right.webp';
-import coin from '../../resources/home/cake/coin.webp';
-import topLeft from '../../resources/home/cake/top-left.webp';
-import topRight from '../../resources/home/cake/top-right.webp';
+import bottomRight from "../../resources/home/cake/bottom-right.webp";
+import bottomRight2x from "../../resources/home/cake/bottom-right@2x.webp";
+import coin from "../../resources/home/cake/coin.webp";
+import coin2x from "../../resources/home/cake/coin@2x.webp";
+import topLeft from "../../resources/home/cake/top-left.webp";
+import topLeft2x from "../../resources/home/cake/top-left@2x.webp";
+import topRight from "../../resources/home/cake/top-right.webp";
+import topRight2x from "../../resources/home/cake/top-right@2x.webp";
+// Import scss
+import "./cake-token.scss";
 
 export function CakeToken() {
     return (
@@ -12,7 +18,7 @@ export function CakeToken() {
                 <div class="cake-content">
                     <div class="cake-info">
                         <h1>
-                            <Span class="accent-color-text">CAKE</Span> makes
+                            <span class="accent-color-text">CAKE</span> makes
                             our world go round.
                         </h1>
                         <p>
@@ -23,16 +29,14 @@ export function CakeToken() {
                         <div class="cake-info-buttons">
                             <a
                                 href="#links to swap page"
-                                class="link-aquagreen"
-                            >
+                                class="link-aquagreen">
                                 <button class="button-aquagreen buttons-home">
                                     Buy CAKE
                                 </button>
                             </a>
                             <a
                                 href="#links to documentation"
-                                class="learn-link"
-                            >
+                                class="learn-link">
                                 Learn
                             </a>
                         </div>
@@ -40,22 +44,22 @@ export function CakeToken() {
                     <div class="cake-coins">
                         <img
                             id="pancake-bottom-right"
-                            srcset="../../../resources/home/cake/bottom-right.webp 512w, ../../../resources/home/cake/bottom-right@2x.webp 1024w,"
+                            srcSet={`${bottomRight} 512w, ${bottomRight2x} 1024w`}
                             alt="Small 3d pancake"
                         />
                         <img
                             id="pancake-top-left"
-                            srcSet="../../resources/home/cake/top-left.webp 512w, ../../resources/home/cake/top-left@2x.webp 1024w,"
+                            srcSet={`${topLeft} 512w, ${topLeft2x} 1024w`}
                             alt="Small 3d pancake"
                         />
                         <img
                             id="pancake-top-right"
-                            srcset="../../../resources/home/cake/top-right.webp 512w, ../../../resources/home/cake/top-right@2x.webp 1024w,"
+                            srcSet={`${topRight} 512w, ${topRight2x} 1024w`}
                             alt="Small 3d pancake"
                         />
                         <img
                             id="cake-coin"
-                            srcset="../../../resources/home/cake/coin.webp 512w, ../../../resources/home/cake/coin@2x.webp 1024w,"
+                            srcSet={`${coin} 512w, ${coin2x} 1024w`}
                             alt="Pancake coin"
                         />
                     </div>

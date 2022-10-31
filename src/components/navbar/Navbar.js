@@ -25,8 +25,7 @@ export function Navbar() {
                         <img
                             src={logoBunny}
                             alt="logo bunny"
-                            className="logoBunny"
-                        ></img>
+                            className="logoBunny"></img>
                     </Link>
                     <ul className="menu-ul menu-nav">
                         {/* <li><NavLink to="/">Home</NavLink></li> */}
@@ -45,8 +44,7 @@ export function Navbar() {
                                 <li>
                                     <a
                                         href="https://perp.pancakeswap.finance/en/futures/BTCUSDT?theme=light"
-                                        target="blank"
-                                    >
+                                        target="blank">
                                         Perpetual
                                     </a>
                                     <img src={exitIcon} alt="exit icon" />
@@ -54,8 +52,7 @@ export function Navbar() {
                                 <li>
                                     <a
                                         href="https://bridge.pancakeswap.finance/"
-                                        target="blank"
-                                    >
+                                        target="blank">
                                         Bridge
                                     </a>
                                     <img src={exitIcon} alt="exit icon" />
@@ -94,7 +91,7 @@ export function Navbar() {
                             </ul>
                         </li>
                         <li>
-                            <NavLink to="/win">NTF</NavLink>
+                            <NavLink to="/nft">NFT</NavLink>
                             <ul>
                                 <li>
                                     <a href="Overview">Overview</a>
@@ -125,8 +122,7 @@ export function Navbar() {
                                 <li>
                                     <a
                                         href="https://medium.com/pancakeswap"
-                                        target="blank"
-                                    >
+                                        target="blank">
                                         Blog
                                     </a>
                                     <img src={exitIcon} alt="exit icon"></img>
@@ -134,8 +130,7 @@ export function Navbar() {
                                 <li>
                                     <a
                                         href="https://docs.pancakeswap.finance"
-                                        target="blank"
-                                    >
+                                        target="blank">
                                         Docs
                                     </a>
                                     <img src={exitIcon} alt="exit icon"></img>
@@ -150,8 +145,7 @@ export function Navbar() {
                             src={bunnyRound}
                             alt="mini logo"
                             id="hover"
-                            className="mini-logo"
-                        ></img>
+                            className="mini-logo"></img>
                     </div>
                     <div id="money">
                         <p>$4.357</p>
@@ -161,8 +155,7 @@ export function Navbar() {
                         className="fa-svg-icon"
                         src={settingSvg}
                         alt="setting icon"
-                        onClick={() => setOpenModal(true)}
-                    ></img>
+                        onClick={() => setOpenModal(true)}></img>
 
                     {/* <div  id="overlay"></div> */}
                     <div>

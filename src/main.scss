@@ -16,6 +16,19 @@
 @import "../src/abstracts/utility";
 // @import "style/components/buttons/buttons-variables";
 
+// Set colori tema scuro
+$theme-dark: map.set($theme-dark, "body-bkground-color", $black);
+
+// Set colori tema chiaro
+$theme-light: map.set($theme-light, "body-bkground-color", #fff);
+
+.theme-dark {
+    --body-bkground-color: #{map.get($theme-dark, "body-bkground-color")};
+}
+.theme-light {
+    --body-bkground-color: #{map.get($theme-light, "body-bkground-color")};
+}
+
 // Scrollbar
 
 ::-webkit-scrollbar {
@@ -33,16 +46,16 @@
 }
 
 // Animations
-@include float(10px, 'NW');
-@include float(20px, 'N');
+@include float(10px, "NW");
+@include float(20px, "N");
 @include fade-out;
 
-
-html, body, #root {
+html,
+body,
+#root {
     height: auto;
     width: 100%;
 }
-
 
 body {
     display: flex;
@@ -50,5 +63,5 @@ body {
     justify-content: center;
     flex-direction: column;
     gap: 0;
+    background-color: var(--body-bkground-color);
 }
-

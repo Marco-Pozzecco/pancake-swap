@@ -8,6 +8,4 @@ export default class Utilities {
     static getElement(str) {
         return document.querySelector(str);
     }
-
-
 }

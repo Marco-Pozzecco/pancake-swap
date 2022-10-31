@@ -8,32 +8,86 @@
 @import "../../abstracts/animations";
 
 // Set colori tema scuro
-$theme-dark: map.set($theme-dark, "win-prizes", "background-gradient", linear-gradient(rgb(11, 69, 118) 0%, rgb(9, 17, 21) 100%));
-$theme-dark: map.set($theme-dark, "win-prizes", "background-wrapper", rgba(8, 6, 11, 0.6));
-$theme-dark: map.set($theme-dark, "win-text", "paragraph-dark", rgb(184, 173, 210));
-$theme-dark: map.set($theme-dark, "win-text", "header2-text", rgb(244, 238, 255));
+$theme-dark: map.set(
+    $theme-dark,
+    "win-prizes",
+    "background-gradient",
+    linear-gradient(rgb(11, 69, 118) 0%, rgb(9, 17, 21) 100%)
+);
+$theme-dark: map.set(
+    $theme-dark,
+    "win-prizes",
+    "background-wrapper",
+    rgba(8, 6, 11, 0.6)
+);
+$theme-dark: map.set(
+    $theme-dark,
+    "win-text",
+    "paragraph-dark",
+    rgb(184, 173, 210)
+);
+$theme-dark: map.set(
+    $theme-dark,
+    "win-text",
+    "header2-text",
+    rgb(244, 238, 255)
+);
 
 // Set colori tema chiaro
-$theme-light: map.set($theme-light, "win-prizes", "background-gradient", linear-gradient(rgb(111, 182, 241) 0%, rgb(234, 242, 246) 100%));
-$theme-light: map.set($theme-light, "win-prizes", "background-wrapper", rgba(255, 255, 255, 0.6));
-$theme-light: map.set($theme-light, "win-text", "paragraph-light", rgb(122, 110, 170));
-$theme-light: map.set($theme-light, "win-text", "header2-text", rgb(40, 13, 95));
+$theme-light: map.set(
+    $theme-light,
+    "win-prizes",
+    "background-gradient",
+    linear-gradient(rgb(111, 182, 241) 0%, rgb(234, 242, 246) 100%)
+);
+$theme-light: map.set(
+    $theme-light,
+    "win-prizes",
+    "background-wrapper",
+    rgba(255, 255, 255, 0.6)
+);
+$theme-light: map.set(
+    $theme-light,
+    "win-text",
+    "paragraph-light",
+    rgb(122, 110, 170)
+);
+$theme-light: map.set(
+    $theme-light,
+    "win-text",
+    "header2-text",
+    rgb(40, 13, 95)
+);
 
 .theme-dark {
-    --background-win-prizes: #{map.get($theme-dark, "win-prizes", "background-gradient")};
-    --background-win-wrapper: #{map.get($theme-dark, "win-prizes", "background-wrapper")};
+    --background-win-prizes: #{map.get(
+            $theme-dark,
+            "win-prizes",
+            "background-gradient"
+        )};
+    --background-win-wrapper: #{map.get(
+            $theme-dark,
+            "win-prizes",
+            "background-wrapper"
+        )};
     --win-text-paragraph: #{map.get($theme-dark, "win-text", "paragraph-dark")};
     --win-heading-2: #{map.get($theme-dark, "win-text", "header2-text")};
 }
 
-
 .theme-light {
-    --background-win-prizes: #{map.get($theme-light, "win-prizes", "background-gradient")};
-    --background-win-wrapper: #{map.get($theme-light, "win-prizes", "background-wrapper")};
+    --background-win-prizes: #{map.get(
+            $theme-light,
+            "win-prizes",
+            "background-gradient"
+        )};
+    --background-win-wrapper: #{map.get(
+            $theme-light,
+            "win-prizes",
+            "background-wrapper"
+        )};
     --win-text-paragraph: #{map.get($theme-light, "win-text", "paragraph-light")};
     --win-heading-2: #{map.get($theme-light, "win-text", "header2-text")};
 }
-
 
 .win-prizes {
     background: var(--background-win-prizes);
@@ -44,173 +98,190 @@ $theme-light: map.set($theme-light, "win-text", "header2-text", rgb(40, 13, 95))
     overflow: hidden;
     @include flex(column);
     // @include mq('laptop', 'desktop-wide') {
-        .floating-balls {
+    .floating-balls {
+        position: absolute;
+        z-index: 1;
+        right: 0px;
+        top: -60px;
+        height: 512px;
+        width: 512px;
+        img {
+            z-index: 2;
             position: absolute;
-            z-index: 1;
-            right: 0px;
-            top: -60px;
-            height: 512px;
-            width: 512px;
-            img {
-                z-index: 2;
-                position: absolute;
-                height: 100%;
-                width: auto;
-            }
-            img#ball-n2 { @include float-anim(5s, 'N');}
-            img#ball-n4 { @include float-anim(6s, 'N');}
-            img#ball-n6 { @include float-anim(4s, 'N');}
-            img#ball-n7 { @include float-anim(5s, 'N');}
-            img#ball-n9 { @include float-anim(6s, 'N');}
+            height: 100%;
+            width: auto;
         }
-        .floating-cards {
+        img#ball-n2 {
+            @include float-anim(5s, "N");
+        }
+        img#ball-n4 {
+            @include float-anim(6s, "N");
+        }
+        img#ball-n6 {
+            @include float-anim(4s, "N");
+        }
+        img#ball-n7 {
+            @include float-anim(5s, "N");
+        }
+        img#ball-n9 {
+            @include float-anim(6s, "N");
+        }
+    }
+    .floating-cards {
+        position: absolute;
+        z-index: 1;
+        height: 512px;
+        width: 512px;
+        bottom: -80px;
+        left: 0px;
+        & img {
+            z-index: 2;
             position: absolute;
-            z-index: 1;
-            height: 512px;
-            width: 512px;
-            bottom: -80px;
-            left: 0px;
-            & img {
-                z-index: 2;
-                position: absolute;
-                height: 100%;
-                width: auto;
-            }
-            #card-bottom-left {
-                z-index: -1;
-                @include float-anim(6s, 'NW');
-            }
-            #card-top-right {@include float-anim(5s, 'NW');}
-            #card-green {@include float-anim(5.5s, 'NW');}
-            #card-red {@include float-anim(7s, 'NW');}
+            height: 100%;
+            width: auto;
         }
-        .prizes-wrapper {
-            z-index: 10;
-            @include flex(column);
-            height: auto;
-            width: 920px;
-            background-color: var(--background-win-wrapper);
-            @include css3-prefix(backdrop-filter, blur(12px));
-            border-radius: 72px;
-            padding: 40px;
-            & h2 {
-                // Rules
-                font-size: 40px;
-                font-weight: 600;
-                margin-bottom: 30px;
-                color: var(--win-heading-2);
-                & span {
-                    color: $secondary-dk;
+        #card-bottom-left {
+            z-index: -1;
+            @include float-anim(6s, "NW");
+        }
+        #card-top-right {
+            @include float-anim(5s, "NW");
+        }
+        #card-green {
+            @include float-anim(5.5s, "NW");
+        }
+        #card-red {
+            @include float-anim(7s, "NW");
+        }
+    }
+    .prizes-wrapper {
+        z-index: 10;
+        @include flex(column);
+        height: auto;
+        width: 920px;
+        background-color: var(--background-win-wrapper);
+        @include css3-prefix(backdrop-filter, blur(12px));
+        border-radius: 72px;
+        padding: 40px;
+        & h2 {
+            // Rules
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: var(--win-heading-2);
+            & span {
+                color: $secondary-dk;
+            }
+
+            #value-prediction {
+                color: rgb(40, 13, 95);
+            }
+
+            #value-lottery {
+                color: rgb(255, 178, 55);
+            }
+        }
+        & p {
+            // Rules
+            color: var(--win-text-paragraph);
+            font-weight: 400;
+            line-height: 1.5;
+            font-size: 16px;
+            margin: 0;
+        }
+        & p.last {
+            margin-bottom: 40px;
+        }
+        .card-container {
+            @include flex();
+            .card {
+                margin: 0 10px;
+                padding: 20px;
+
+                width: 280px;
+                height: 350px;
+
+                border-radius: 24px;
+
+                .button-aquagreen {
+                    width: 100%;
+                    color: rgb(25, 32, 50);
                 }
 
-                #value-prediction {
+                .card-content {
+                    .card-img {
+                        @include flex(row, flex-end, center);
+                    }
+
+                    h3 {
+                        font-weight: 6000;
+                        font-size: 16px;
+                    }
+                    h2 {
+                        font-weight: 600;
+                        font-size: 40px;
+                        margin-bottom: 5px;
+                    }
+                    p {
+                        font-size: 16px;
+                        margin: 0;
+                        margin-top: 20px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+            .card-prediction {
+                background: linear-gradient(
+                    rgb(255, 178, 55),
+                    rgb(255, 229, 104)
+                );
+
+                border: solid 1px rgb(255, 178, 55);
+                border-bottom: solid rgb(255, 178, 55);
+
+                transform: rotate(-3deg);
+
+                & h3 {
                     color: rgb(40, 13, 95);
                 }
-
-                #value-lottery {
-                    color: rgb(255, 178, 55);
+                & h2 {
+                    color: rgb(40, 13, 95);
+                }
+                & p {
+                    color: rgb(40, 13, 95);
                 }
             }
-            & p {
-                // Rules
-                color: var(--win-text-paragraph);
-                font-weight: 400;
-                line-height: 1.5;
-                font-size: 16px;
-                margin: 0;
-            }
-            & p.last {
-                margin-bottom: 40px;
-            }
-            .card-container {
-                @include flex();
-                .card {
-                    margin: 0 10px;
-                    padding: 20px;
+            .card-lottery {
+                background: linear-gradient(
+                    rgb(112, 63, 210),
+                    rgb(82, 34, 178)
+                );
 
-                    width: 280px;
-                    height: 350px;
-                    
-                    border-radius: 24px;
-        
-                    .button-aquagreen {
-                        width: 100%;
-                        color: rgb(25, 32, 50);
-                    }
-                    
-                    .card-content {
-                        
-                        .card-img {
-                            @include flex(row, flex-end, center);
-                        }
+                border: solid 1px rgb(60, 23, 134);
+                border-bottom: solid 5px rgb(60, 23, 134);
 
-                        h3 {
-                            font-weight: 6000;
-                            font-size: 16px;
-                        }
-                        h2 {
-                            font-weight: 600;
-                            font-size: 40px;
-                            margin-bottom: 5px;
-                        }
-                        p {
-                            font-size: 16px;
-                            margin: 0; 
-                            margin-top: 20px;
-                            margin-bottom: 30px;
-                        }
-                    }
+                transform: rotate(2deg);
 
-                }
-                .card-prediction {
-                    background: linear-gradient(rgb(255, 178, 55), rgb(255, 229, 104));
-
-                    border: solid 1px rgb(255, 178, 55);
-                    border-bottom: solid rgb(255, 178, 55);
-                    
-                    transform: rotate(-3deg);
-
+                .card-content {
                     & h3 {
-                        color: rgb(40, 13, 95);
+                        color: white;
                     }
                     & h2 {
-                        color: rgb(40, 13, 95);
+                        color: rgb(255, 178, 55);
                     }
                     & p {
-                        color: rgb(40, 13, 95);
-                    }
-                }
-                .card-lottery {
-                    background: linear-gradient(rgb(112, 63, 210), rgb(82, 34, 178));
-
-                    border: solid 1px rgb(60, 23, 134);
-                    border-bottom: solid 5px rgb(60, 23, 134);
-
-                    
-                    transform: rotate(2deg);
-
-                    .card-content {
-
-                        
-                        & h3 {
-                            color: white;
-                        }
-                        & h2 {
-                            color: rgb(255, 178, 55);
-                        }
-                        & p {
-                            color: white;
-                        }
+                        color: white;
                     }
                 }
             }
         }
     }
+}
 // }
 // Tablet media query
 .win-prizes {
     height: auto;
-    @include mq('tablet-small', 'tablet') {
+    @include mq("tablet-small", "tablet") {
         .floating-balls {
             position: absolute;
             z-index: 1;
@@ -248,9 +319,7 @@ $theme-light: map.set($theme-light, "win-text", "header2-text", rgb(40, 13, 95))
             .card-container {
                 @include flex(column);
                 .card {
-                                        
                     .card-content {
-
                         h3 {
                             font-weight: 6000;
                             font-size: 16px;
@@ -262,19 +331,21 @@ $theme-light: map.set($theme-light, "win-text", "header2-text", rgb(40, 13, 95))
                         }
                         p {
                             font-size: 16px;
-                            margin: 0; 
+                            margin: 0;
                             margin-top: 20px;
                             margin-bottom: 30px;
                         }
                     }
-
                 }
                 .card-prediction {
-                    background: linear-gradient(rgb(255, 178, 55), rgb(255, 229, 104));
+                    background: linear-gradient(
+                        rgb(255, 178, 55),
+                        rgb(255, 229, 104)
+                    );
 
                     border: solid 1px rgb(255, 178, 55);
                     border-bottom: solid rgb(255, 178, 55);
-                    
+
                     transform: none;
 
                     margin-bottom: 30px;
@@ -290,7 +361,10 @@ $theme-light: map.set($theme-light, "win-text", "header2-text", rgb(40, 13, 95))
                     }
                 }
                 .card-lottery {
-                    background: linear-gradient(rgb(112, 63, 210), rgb(82, 34, 178));
+                    background: linear-gradient(
+                        rgb(112, 63, 210),
+                        rgb(82, 34, 178)
+                    );
 
                     border: solid 1px rgb(60, 23, 134);
                     border-bottom: solid 5px rgb(60, 23, 134);
@@ -298,7 +372,6 @@ $theme-light: map.set($theme-light, "win-text", "header2-text", rgb(40, 13, 95))
                     transform: none;
 
                     .card-content {
-
                         & h3 {
                             color: white;
                         }
@@ -315,12 +388,10 @@ $theme-light: map.set($theme-light, "win-text", "header2-text", rgb(40, 13, 95))
     }
 }
 
-
-
 // Mobile media query
 .win-prizes {
     height: auto;
-    @include mq('phone', 'phablet') {
+    @include mq("phone", "phablet") {
         .floating-balls {
             position: absolute;
             z-index: 1;
@@ -359,9 +430,7 @@ $theme-light: map.set($theme-light, "win-text", "header2-text", rgb(40, 13, 95))
             .card-container {
                 @include flex(column);
                 .card {
-                                    
                     .card-content {
-
                         h3 {
                             font-weight: 6000;
                             font-size: 16px;
@@ -373,19 +442,21 @@ $theme-light: map.set($theme-light, "win-text", "header2-text", rgb(40, 13, 95))
                         }
                         p {
                             font-size: 16px;
-                            margin: 0; 
+                            margin: 0;
                             margin-top: 20px;
                             margin-bottom: 30px;
                         }
                     }
-
                 }
                 .card-prediction {
-                    background: linear-gradient(rgb(255, 178, 55), rgb(255, 229, 104));
+                    background: linear-gradient(
+                        rgb(255, 178, 55),
+                        rgb(255, 229, 104)
+                    );
 
                     border: solid 1px rgb(255, 178, 55);
                     border-bottom: solid rgb(255, 178, 55);
-                    
+
                     transform: none;
 
                     margin-bottom: 30px;
@@ -401,7 +472,10 @@ $theme-light: map.set($theme-light, "win-text", "header2-text", rgb(40, 13, 95))
                     }
                 }
                 .card-lottery {
-                    background: linear-gradient(rgb(112, 63, 210), rgb(82, 34, 178));
+                    background: linear-gradient(
+                        rgb(112, 63, 210),
+                        rgb(82, 34, 178)
+                    );
 
                     border: solid 1px rgb(60, 23, 134);
                     border-bottom: solid 5px rgb(60, 23, 134);
@@ -409,7 +483,6 @@ $theme-light: map.set($theme-light, "win-text", "header2-text", rgb(40, 13, 95))
                     transform: none;
 
                     .card-content {
-
                         & h3 {
                             color: white;
                         }

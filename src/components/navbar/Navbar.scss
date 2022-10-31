@@ -6,7 +6,6 @@
 @import "../../abstracts/mixins";
 @import "../../abstracts/colors";
 
-
 // Set colori tema scuro
 $theme-dark: map.set($theme-dark, "fa-moon", rgb(39, 38, 44));
 $theme-dark: map.set($theme-dark, "fa-sun", $footer-background);
@@ -15,7 +14,7 @@ $theme-dark: map.set($theme-dark, "popup-bg", $footer-background);
 $theme-dark: map.set($theme-dark, "text-color", white);
 $theme-dark: map.set($theme-dark, "popup-modal1-bg", $popup-gradient);
 $theme-dark: map.set($theme-dark, "label-bg", $label-toggle-bg-dk);
-$theme-dark: map.set($theme-dark, "border-bottom-pp",rgb(56,50,65));
+$theme-dark: map.set($theme-dark, "border-bottom-pp", rgb(56, 50, 65));
 $theme-dark: map.set($theme-dark, "icon-text-color", $primary-dk);
 $theme-dark: map.set($theme-dark, "hover-nav-ul", $hover-navbar-ul);
 $theme-dark: map.set($theme-dark, "btn-bg-tx", $border_color);
@@ -24,93 +23,90 @@ $theme-dark: map.set($theme-dark, "btn-bg", $button-bg-color-dk);
 // Set colori tema chiaro
 $theme-light: map.set($theme-light, "fa-moon", white);
 $theme-light: map.set($theme-light, "fa-sun", #f39c12);
-$theme-light: map.set($theme-light, "nav-bkground", #fff); 
-$theme-light: map.set($theme-light, "popup-bg", #fff); 
+$theme-light: map.set($theme-light, "nav-bkground", #fff);
+$theme-light: map.set($theme-light, "popup-bg", #fff);
 $theme-light: map.set($theme-light, "text-color", $background-color-dk);
 $theme-light: map.set($theme-light, "popup-modal1-bg", $header-popup-gradient);
 $theme-light: map.set($theme-light, "label-bg", $label-toggle-bg);
-$theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9 );
+$theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
 $theme-light: map.set($theme-light, "icon-text-color", $primary-color);
 $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
 $theme-light: map.set($theme-light, "btn-bg-tx", $tertiary-color);
 $theme-light: map.set($theme-light, "btn-bg", $border_color);
 
-
-.theme-dark{
-    --fa-moon: #{map.get($theme-dark , "fa-moon")};
-    --fa-sun: #{map.get($theme-dark , "fa-sun" )};
-    --nav-bkground: #{map.get($theme-dark , "nav-bkground")}; 
-    --popup-bg: #{map.get($theme-dark , "popup-bg")}; 
-    --text-color: #{map.get($theme-dark , "text-color")};
-    --popup-modal1-bg: #{map.get($theme-dark , "popup-modal1-bg")};
-    --label-toggle-bg: #{map.get($theme-dark , "label-bg")};
-    --border-bottom-pp: #{map.get($theme-dark , "border-bottom-pp")};
-    --icon-text-color: #{map.get($theme-dark , "icon-text-color")};
-    --hover-nav-ul: #{map.get($theme-dark , "hover-nav-ul")};
-    --btn-bg-tx: #{map.get($theme-dark , "btn-bg-tx")};
-    --btn-bg: #{map.get($theme-dark , "btn-bg")};
-    
-
+.theme-dark {
+    --fa-moon: #{map.get($theme-dark, "fa-moon")};
+    --fa-sun: #{map.get($theme-dark, "fa-sun")};
+    --nav-bkground: #{map.get($theme-dark, "nav-bkground")};
+    --popup-bg: #{map.get($theme-dark, "popup-bg")};
+    --text-color: #{map.get($theme-dark, "text-color")};
+    --popup-modal1-bg: #{map.get($theme-dark, "popup-modal1-bg")};
+    --label-toggle-bg: #{map.get($theme-dark, "label-bg")};
+    --border-bottom-pp: #{map.get($theme-dark, "border-bottom-pp")};
+    --icon-text-color: #{map.get($theme-dark, "icon-text-color")};
+    --hover-nav-ul: #{map.get($theme-dark, "hover-nav-ul")};
+    --btn-bg-tx: #{map.get($theme-dark, "btn-bg-tx")};
+    --btn-bg: #{map.get($theme-dark, "btn-bg")};
 }
-.theme-light{ 
-    --fa-moon: #{map.get($theme-light , "fa-moon")};
-    --fa-sun: #{map.get($theme-light , "fa-sun" )};
-    --nav-bkground: #{map.get($theme-light , "nav-bkground")};
-    --popup-bg: #{map.get($theme-light , "popup-bg")}; 
-    --text-color: #{map.get($theme-light , "text-color")};
-    --popup-modal1-bg: #{map.get($theme-light , "popup-modal1-bg")};
-    --label-toggle-bg: #{map.get($theme-light , "label-bg")};
-    --border-bottom-pp: #{map.get($theme-light , "border-bottom-pp")};
-    --icon-text-color: #{map.get($theme-light , "icon-text-color")};
-    --hover-nav-ul: #{map.get($theme-light , "hover-nav-ul")};
-    --btn-bg-tx: #{map.get($theme-light , "btn-bg-tx")};
-    --btn-bg: #{map.get($theme-light , "btn-bg")};
-
+.theme-light {
+    --fa-moon: #{map.get($theme-light, "fa-moon")};
+    --fa-sun: #{map.get($theme-light, "fa-sun")};
+    --nav-bkground: #{map.get($theme-light, "nav-bkground")};
+    --popup-bg: #{map.get($theme-light, "popup-bg")};
+    --text-color: #{map.get($theme-light, "text-color")};
+    --popup-modal1-bg: #{map.get($theme-light, "popup-modal1-bg")};
+    --label-toggle-bg: #{map.get($theme-light, "label-bg")};
+    --border-bottom-pp: #{map.get($theme-light, "border-bottom-pp")};
+    --icon-text-color: #{map.get($theme-light, "icon-text-color")};
+    --hover-nav-ul: #{map.get($theme-light, "hover-nav-ul")};
+    --btn-bg-tx: #{map.get($theme-light, "btn-bg-tx")};
+    --btn-bg: #{map.get($theme-light, "btn-bg")};
 }
 
-.mobile-icon, .logoBunny{
+.mobile-icon,
+.logoBunny {
     display: none;
-
 }
-.icon{
-    i{
+.icon {
+    i {
         color: $primary-color;
     }
 }
- 
-.menu-nav ul, a, i, li a{
+
+.menu-nav ul,
+a,
+i,
+li a {
     //@include list-style();
     text-decoration: none;
     color: var(--icon-text-color);
-    font-size: 16px ;
+    font-size: 16px;
     list-style: none;
     li {
         display: flex;
         justify-content: space-between;
-        i{
+        i {
             color: $tertiary-color;
         }
     }
-    
 }
-.menu-nav li{
-    &:hover, &:focus{
+.menu-nav li {
+    &:hover,
+    &:focus {
         background-color: var(--hover-nav-ul);
         border-radius: 0px;
-        &:not(:last-child, :first-child){
+        &:not(:last-child, :first-child) {
             border-radius: 5px;
         }
-        
     }
-    ul li:hover{
+    ul li:hover {
         background-color: var(--hover-nav-ul);
         border-radius: 15%;
-
     }
 }
 
-.menu-ul{
-     list-style: none;
+.menu-ul {
+    list-style: none;
 }
 nav {
     @include flex(row, space-between, center);
@@ -122,40 +118,44 @@ nav {
     top: 0;
     z-index: 98;
     border-bottom: 1px solid var(--border-bottom-pp);
-    .flex{
+    transition: top 0.2s ease 0;
+    transform: translate3d(0px, 0px, 0px);
+    .flex {
         @include flex(center);
-        div, h2, ul{
+        div,
+        h2,
+        ul {
             padding: 5px;
             cursor: pointer;
         }
-        .active{
+        .active {
             color: $secondary-dk;
             border-bottom: 2px solid $btn-bg-color;
         }
-        p{
+        p {
             color: var(--icon-text-color);
-            font-size: 16px ;   
+            font-size: 16px;
         }
-        ul{
+        ul {
             display: flex;
-            li{
+            li {
                 list-style: none;
                 color: var(--icon-text-color);
-                font-size: 16px ;
+                font-size: 16px;
                 padding: 15px;
                 position: relative;
-                &:hover ul{
+                &:hover ul {
                     opacity: 1;
                     visibility: visible;
                 }
-               
-                ul{
+
+                ul {
                     position: absolute;
                     top: 3rem;
                     left: -0.25rem;
                     //box-shadow: 0 0 3px gray;
                     background-color: var(--nav-bkground);
-                    @include setRadius (15px);
+                    @include setRadius(15px);
                     border: 1px solid --border-bottom-pp;
                     width: 12rem;
                     display: flex;
@@ -163,22 +163,22 @@ nav {
                     opacity: 0;
                     visibility: hidden;
                     transition: opacity 200ms easy-in-out;
-                    li.line-dd{
+                    li.line-dd {
                         border-bottom: 1px solid $input-color;
-                        border-top:    1px solid $input-color;
+                        border-top: 1px solid $input-color;
                     }
                 }
             }
         }
-        #hover:hover{
+        #hover:hover {
             width: 32px;
         }
-        
-        .dropdown{
+
+        .dropdown {
             visibility: hidden;
             position: absolute;
             top: 2.5rem;
-            background-color: #7A6EAA;
+            background-color: #7a6eaa;
             border-radius: 1%;
             width: 12rem;
             //height: 14rem;
@@ -189,97 +189,87 @@ nav {
             transition: opacity 200ms easy-in-out;
             text-align: center;
             color: #fff;
-            li{
+            li {
                 margin-bottom: 5px;
             }
         }
-        
+
         .btn-gear {
             border: none;
             background-color: transparent;
-            i{
-               color: $primary-color;
+            i {
+                color: $primary-color;
             }
             &:hover {
                 color: rgb(154, 106, 255, 30%);
             }
         }
-        .button-aquagreen{
+        .button-aquagreen {
             width: 149px;
             height: 32px;
             margin: 2px 4px 4px 0px;
             padding: 0px 16px;
         }
-        .button-navbar-bnb{
+        .button-navbar-bnb {
             width: 220px;
             height: 32px;
             margin: 2px 4px 4px 0px;
             padding: 0px 16px 0px 0px;
             color: var(--btn-bg-tx);
             background-color: var(--btn-bg);
-            img{
+            img {
                 width: 30px;
                 height: 30px;
             }
             // .fa-svg-icon{
             //     fill: red;
             // }
-            
-
         }
-        
-    } 
+    }
 }
 
-
-.fa-svg-icon{
+.fa-svg-icon {
     // fill: $secondary-color;
-    &:hover{
+    &:hover {
         color: rgb(154, 106, 255, 30%);
         cursor: pointer;
-
     }
-    
 }
 //update untill now
 
-@include mq('tablet-small', 'tablet') {
-    nav{
-        .flex{
-            #money, .igZcUN, ul, .mini-logo {
+@include mq("tablet-small", "tablet") {
+    nav {
+        .flex {
+            #money,
+            .igZcUN,
+            ul,
+            .mini-logo {
                 display: none;
             }
-            
         }
-        
     }
-    
-
 }
 
-@include mq('phone', 'phablet'){
-    nav{
-        .flex{
-            #money, .igZcUN, ul, .mini-logo {
+@include mq("phone", "phablet") {
+    nav {
+        .flex {
+            #money,
+            .igZcUN,
+            ul,
+            .mini-logo {
                 display: none;
             }
-            .mobile-icon, .logoBunny{
+            .mobile-icon,
+            .logoBunny {
                 display: inline;
-            
             }
-            #main-logo{
+            #main-logo {
                 display: none;
             }
-            .button-navbar-bnb{
+            .button-navbar-bnb {
                 font-size: 0;
                 width: 80px;
             }
-            
-        }   
+        }
     }
 }
-
-
-
-
-
