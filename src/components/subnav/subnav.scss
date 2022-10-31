@@ -3,7 +3,7 @@
 
 @import "../../abstracts/colors";
 
-.subnav{
+.subnav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,11 +17,10 @@
     //overflow-x: scroll;
     //flex-grow: 1;
     color: aliceblue;
-    ul{
+    ul {
         display: flex;
-        li{
+        li {
             padding-right: 20px;
         }
     }
-    
 }

@@ -33,16 +33,16 @@
 }
 
 // Animations
-@include float(10px, 'NW');
-@include float(20px, 'N');
+@include float(10px, "NW");
+@include float(20px, "N");
 @include fade-out;
 
-
-html, body, #root {
+html,
+body,
+#root {
     height: auto;
     width: 100%;
 }
-
 
 body {
     display: flex;
@@ -51,4 +51,3 @@ body {
     flex-direction: column;
     gap: 0;
 }
-

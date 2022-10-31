@@ -1,25 +1,17 @@
-import './Buttons.scss' ;
+import "./Buttons.scss";
 import React, {useState} from "react";
 
-
 export default function Button(props) {
-    
     function handleClick() {
-        useEvent()
+        useEvent();
     }
 
-    return(
+    return (
         <div>
             <button className={props.className} onClick={handleClick}>
-                {props.text}{props.svg}
+                {props.text}
+                {props.svg}
             </button>
         </div>
-    )
+    );
 }
-
-
-
-
-
-
-
