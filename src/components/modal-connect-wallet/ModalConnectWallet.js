@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import './modalConnectWallet.scss'
-import binance from "../../resources/home/crypto-wallet-logo/binance-logo.svg";
-import metamask from "../../resources/home/crypto-wallet-logo/metamask-logo.svg";
-import coinbase from "../../resources/home/crypto-wallet-logo/coinbase-logo.svg";
+import binance from "../../resources/home/crypto-wallet-logo/binance.png";
+import metamask from "../../resources/home/crypto-wallet-logo/metamask.png";
+import coinbase from "../../resources/home/crypto-wallet-logo/coinbase.png";
 import walletImg from "../../resources/modal-wallet/wallet_intro.png";
 import globeImg from "../../resources/modal-wallet/world_lock.png";
+import trustWallet from "../../resources/home/crypto-wallet-logo/trust.png";
+import walletConnect from "../../resources/home/crypto-wallet-logo/walletconnect.png";
 
 export default function ModalConnectWallet({open, onClose}) {
 
@@ -22,18 +24,30 @@ export default function ModalConnectWallet({open, onClose}) {
 
   if(!open) return null
 
+  // const styleTab1 = (index) => {
+  //   {index === 1 ? 'left:-2rem' : 'left:-2rem'}
+  // }
+
+  const styleTab1 = {
+    left: '-9rem'
+  }
+  // const styleTab2 = {
+  //   left: '-9rem'
+  // }
+
   return (
     <div className='modalConnectWallet' onClick={(e)=> {e.stopPropagation()}}>
-      <div className='container'>
-        <div className="bloc-tabs">
+      <div className="bloc-tabs">
               <button className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(1)}>
+            onClick={() => toggleTab(1)} style={styleTab1}>
               Connect Wallet</button>
               <button className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
-              onClick={() => toggleTab(2)}>
+              onClick={() => toggleTab(2)} style={styleTab1}>
                 What's a Web3 Wallet</button>
               <button  onClick={onClose} >&times;</button>
         </div>
+      <div className='container'>
+        
               
         <div className='content-tabs'>
           <div className={toggleState === 1 ? "content  active-content" : "content"}>
@@ -59,12 +73,12 @@ export default function ModalConnectWallet({open, onClose}) {
                       <p>coinbase</p>
                     </div>
                     <div className='img-box'>
-                      <img src={metamask} alt='metamask'/>
-                      <p></p>
+                      <img src={trustWallet} alt='metamask'/>
+                      <p>Trust Wallet</p>
                     </div>
                     <div className='img-box'>
-                      <img src={binance} alt='binance'/>
-                      <p></p>
+                      <img src={walletConnect} alt='binance'/>
+                      <p>walletConnect</p>
                     </div>
                     <div className='img-box'>
                       <img src={coinbase} alt='coinbase'/>
