@@ -173,7 +173,7 @@ export function Navbar() {
 
                     {/* <div  id="overlay"></div> */}
                     <div>
-                        <DropdownCrypto selected={selected} setSelected={setSelected}/>
+                        <DropdownCrypto />
                        
                     </div>
                     <div>

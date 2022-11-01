@@ -9,20 +9,24 @@
 // Set colori tema scuro
 $theme-dark: map.set($theme-dark, "nav-bkground", $footer-background);
 $theme-dark: map.set($theme-dark, "icon-text-color", $primary-dk);
+$theme-dark: map.set($theme-dark, "dropdown-line", $dropdown-line-dk);
 
 // Set colori tema chiaro
 $theme-light: map.set($theme-light, "nav-bkground", #fff);
 $theme-light: map.set($theme-light, "icon-text-color", $primary-color);
+$theme-light: map.set($theme-light, "dropdown-line", $dropdown-line);
 
 .theme-dark {
     --nav-bkground: #{map.get($theme-dark , "nav-bkground")};
     --icon-text-color: #{map.get($theme-dark , "icon-text-color")};
+    --dropdown-line: #{map.get($theme-dark, "dropdown-line")};
 }
 
 .theme-light {
 
     --nav-bkground: #{map.get($theme-light , "nav-bkground")};
     --icon-text-color: #{map.get($theme-light , "icon-text-color")};
+    --dropdown-line: #{map.get($theme-light, "dropdown-line")};
 }
 
 .dropdown-crypto {
@@ -49,27 +53,45 @@ $theme-light: map.set($theme-light, "icon-text-color", $primary-color);
     .drop-content {
         //visibility: hidden;
         position: absolute;
-        //top: 3rem;
+        top: 3rem;
         left: 2rem;
         background-color: var(--nav-bkground);
         @include setRadius (15px);
-        border: 1px solid --border-bottom-pp;
-        width: 12rem;
-        //padding: 2px;
+        width: 280px;
         transition: opacity 200ms easy-in-out;
         z-index: 98;
+        border: 1px solid var(--dropdown-line);
 
         ul {
             display: flex;
             flex-direction: column;
             list-style: none;
+            //padding: 0px 4px;
+
+            .dropd-header {
+                padding: 8px 16px;
+            }
+
+            .linea-dropdown {
+                border: 1px solid var(--dropdown-line);
+                width: 100%;
+                margin-bottom: 10px;
+            }
 
             li {
                 text-align: left;
                 text-decoration: none;
-                padding: 5px;
+                padding: 1px 16px;
                 color: var(--icon-text-color);
-                ;
+                display: flex;
+                align-items: center;
+                height: 48px;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 16px;
+                }
             }
         }
     }
