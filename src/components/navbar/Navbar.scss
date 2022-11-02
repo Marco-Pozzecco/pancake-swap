@@ -258,10 +258,8 @@ nav {
                 height: 30px;
             }
         }
-
     }
 }
-
 
 .fa-svg-icon {
 
@@ -269,10 +267,30 @@ nav {
     &:hover {
         color: rgb(154, 106, 255, 30%);
         cursor: pointer;
-
     }
-
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(244, 238, 255, 0.6);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+    z-index: 99;
+    opacity: 0;
+}
+
+.overlay-active {
+    opacity: 1;
+    z-index: 99;
+}
+
+
 
 //update untill now
 
@@ -300,7 +318,7 @@ nav {
 
             #money,
             .igZcUN,
-            ul,
+            .menu-nav ul,
             .mini-logo {
                 display: none;
             }

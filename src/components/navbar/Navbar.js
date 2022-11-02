@@ -17,6 +17,7 @@ export function Navbar() {
     const [openModal, setOpenModal] = useState(false);
     const [openModalWallet, setOpenModalWallet] = useState(false);
     const [selected, setSelected] = useState("")
+    
 
 
     return (
@@ -171,7 +172,7 @@ export function Navbar() {
                         onClick={() => setOpenModal(true)}
                     ></img>
 
-                    {/* <div  id="overlay"></div> */}
+                    
                     <div>
                         <DropdownCrypto />
                        
@@ -186,13 +187,14 @@ export function Navbar() {
                     </div>
                 </section>
             </nav>
-            <ModalConnectWallet
-            open={openModalWallet}
+            <ModalConnectWallet open={openModalWallet}
             onClose={()=> setOpenModalWallet(false)}/>
-            <HpModalSettings
-                open={openModal}
-                onClose={() => setOpenModal(false)}
-            />
+            <HpModalSettings open={openModal}
+                onClose={() => setOpenModal(false)}/>
+                
+            <div className={openModal === true || openModalWallet === true ? 'overlay overlay-active' : 'overlay'}
+             onClick={() => setOpenModal(false)}>
+             </div>
         </div>
     );
 }

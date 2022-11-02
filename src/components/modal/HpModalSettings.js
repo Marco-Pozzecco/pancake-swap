@@ -33,9 +33,10 @@ export function HpModalSettings({open, onClose}) {
     }
     
     if(!open) return null
+    
 
   return (
-    <section onClick={onClose} className="overlay">
+    <section >
         <div className="modal" id="modal" onClick={(e)=> {e.stopPropagation()}}>
             <div className="modal1 flex-switch">
                 <h3 className="header">Settings</h3>
