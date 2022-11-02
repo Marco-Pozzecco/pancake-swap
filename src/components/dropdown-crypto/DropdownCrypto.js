@@ -7,12 +7,14 @@ import arrow from "../../resources/home/navbar/arrow-down.svg";
 import './dropdown-crypto.scss'
 
 export default function DropdownCrypto() {
-    const [selected, setSelected] = useState('')
-    const [openDropdown, setDropdown] = useState(false)
-    //const [isActive, setIsActive] = useState(false)
-    const options = ['BNB Smart Chain' , 'Ethereum', 'Aptos']
-    //if(!open) return null
+  const options = [{name:'BNB Smart Chain', img:<img className='fa-svg-icon' src={bnbIcon} alt="bnb icon"></img> },
+                      {name:'Ethereum', img:<img className='fa-svg-icon' src={Ethereum} alt="ethereum icon"></img>},
+                      {name:'Aptos', img:<img className='fa-svg-icon' src={aptos} alt="aptos icon"></img>}]
 
+    const [selected, setSelected] = useState({ ...options[1] })
+    const [openDropdown, setDropdown] = useState(false)
+    
+    
     
   return (
     <div className="dropdown-crypto"
@@ -20,13 +22,11 @@ export default function DropdownCrypto() {
      onMouseLeave={() => {setDropdown(false)}}
     >
       <span className="link-popup-navbar">
+      
         <button className="button-navbar-bnb"> 
-          {(selected === 'BNB Smart Chain') && <img className='fa-svg-icon' src={bnbIcon} alt="setting icon"></img>}
-          {(selected === 'Ethereum') && <img className='fa-svg-icon' src={Ethereum} alt="setting icon"></img>}
-          {(selected === 'Aptos') && <img className='fa-svg-icon' src={aptos} alt="setting icon"></img>}
-          {(selected === '') ? 'BNB Smart Chain' : selected}
-          <img className="fa-svg-icon" 
-          src={arrow} alt="arrow icon"/>
+        {selected.img}
+          {selected.name}
+          <img className="fa-svg-icon" src={arrow} alt="arrow icon"/>
         </button>
       </span>
       
@@ -37,24 +37,10 @@ export default function DropdownCrypto() {
             <hr className='linea-dropdown'></hr>
             {options.map((option)=> {
               return <li onClick={()=> {setSelected(option); setDropdown(false)}}>
-                      {(option === 'BNB Smart Chain') && <img className='fa-svg-icon' src={bnbIcon} alt="setting icon"></img>}
-                      {(option === 'Ethereum') && <img className='fa-svg-icon' src={Ethereum} alt="setting icon"></img>}
-                      {(option === 'Aptos') && <img className='fa-svg-icon' src={aptos} alt="setting icon"></img>}
-                      {option}
+                      {option.img} {option.name} 
                       </li>})}
           </ul>
         </div>)} 
-
-        {/* onmouseout={(e) => {setDropdown(false)}} */}
-        {/* {openDropdown && (
-      <div className='drop-content'>
-          <ul className="menu-nav" >
-            {options.map((option)=> {
-              return <li onClick={(e)=> {setSelected(option, e); setDropdown(false)}}>
-                      {option}
-                      </li>})}
-          </ul>
-        </div>)} */}
         
     </div>
     
