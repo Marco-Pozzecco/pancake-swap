@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { DropdownMenu } from '../dropdown-menu/DropdownMenu'
+// import { DropdownMenu } from '../dropdown-menu/DropdownMenu'
 import bnbIcon from "../../resources/home/navbar/bnb.png";
 import aptos from "../../resources/home/navbar/aptos.png";
 import Ethereum from "../../resources/home/navbar/ethereum.png";
@@ -14,15 +14,13 @@ export default function DropdownCrypto() {
     const [selected, setSelected] = useState({ ...options[1] })
     const [openDropdown, setDropdown] = useState(false)
     
-    
+
     
   return (
     <div className="dropdown-crypto"
      onMouseEnter={() =>  {setDropdown(!openDropdown)}}
-     onMouseLeave={() => {setDropdown(false)}}
-    >
-      <span className="link-popup-navbar">
-      
+     onMouseLeave={() => {setDropdown(false)}}>
+      <span className="link-popup-navbar">     
         <button className="button-navbar-bnb"> 
         {selected.img}
           {selected.name}
@@ -36,8 +34,8 @@ export default function DropdownCrypto() {
             <p className='dropd-header'>Select a Network</p>
             <hr className='linea-dropdown'></hr>
             {options.map((option)=> {
-              return <li onClick={()=> {setSelected(option); setDropdown(false)}}>
-                      {option.img} {option.name} 
+              return <li className='active-li' onClick={()=> {setSelected(option); setDropdown(false)}}>
+                      {option.img} {option.name}
                       </li>})}
           </ul>
         </div>)} 

@@ -142,6 +142,14 @@ nav {
     .flex {
         @include flex(center);
 
+        .logo {
+            display: none;
+        }
+
+        .logo-active {
+            display: block;
+        }
+
         div,
         h2 {
             padding: 5px;
@@ -300,7 +308,7 @@ nav {
 
             #money,
             .igZcUN,
-            ul,
+            .menu-nav-ul,
             .mini-logo {
                 display: none;
             }
@@ -318,7 +326,7 @@ nav {
 
             #money,
             .igZcUN,
-            .menu-nav ul,
+            .menu-nav-ul,
             .mini-logo {
                 display: none;
             }

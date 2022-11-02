@@ -28,7 +28,7 @@ export function HpModalSettings({open, onClose}) {
             document.body.classList.add('theme-light')
             document.body.classList.remove('theme-dark')
             chk3.checked = true;
-            //logo.setAttribute('src', '../../resources/svgs/logo_white.svg');
+            //logo.setAttribute('src' = logo_white);
         }
     }
     

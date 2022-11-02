@@ -3,29 +3,35 @@ import "./Navbar.scss";
 import {Link, NavLink} from "react-router-dom";
 import settingSvg from "../../resources/home/navbar/setting-icon.svg";
 import logo from "../../resources/home/navbar/logo_black.svg";
+import logoWhite from "../../resources/home/navbar/logo_white.svg";
 import {HpModalSettings} from "../modal/HpModalSettings";
 import bunnyRound from "../../resources/home/navbar/bunny-icon-round.svg";
 import logoBunny from "../../resources/home/navbar/bunny-logo.svg";
 import exitIcon from "../../resources/home/cake/exit-icon.svg";
-import bnbIcon from "../../resources/home/navbar/bnb.png";
-import arrow from "../../resources/home/navbar/arrow-down.svg";
 import {LanguageSelector} from "../language-selector/LanguageSelector";
 import DropdownCrypto from "../dropdown-crypto/DropdownCrypto";
 import ModalConnectWallet from "../modal-connect-wallet/ModalConnectWallet";
 
+
 export function Navbar() {
     const [openModal, setOpenModal] = useState(false);
     const [openModalWallet, setOpenModalWallet] = useState(false);
-    const [selected, setSelected] = useState("")
-    
 
+    let themeClass = document.body.className
+    
 
     return (
         <div>
             <nav>
                 <div className="flex">
                     <Link to="/">
-                        <img src={logo} alt="main-logo" id="main-logo"></img>
+                        {/* {themeClass === 'theme-dark' &&  <Logo src={logoWhite}/>}
+                        {themeClass === 'theme-light' &&  <Logo src={logo}/>} */}
+                         <img src={logoWhite} alt="main-logo" id="main-logo" 
+                         className={themeClass === 'theme-dark' ? 'logo-active' : 'logo'}></img>
+                         <img src={logo} alt="main-logo" id="main-logo" 
+                         className={themeClass === 'theme-light' ? 'logo-active' : 'logo'}></img>
+                       
                     </Link>
                     <Link to="/">
                         <img
@@ -51,8 +57,7 @@ export function Navbar() {
                                 <li>
                                     <a
                                         href="https://perp.pancakeswap.finance/en/futures/BTCUSDT?theme=light"
-                                        target="blank"
-                                    >
+                                        target="blank">
                                         Perpetual
                                     </a>
                                     <img src={exitIcon} alt="exit icon" />
@@ -60,8 +65,7 @@ export function Navbar() {
                                 <li>
                                     <a
                                         href="https://bridge.pancakeswap.finance/"
-                                        target="blank"
-                                    >
+                                        target="blank">
                                         Bridge
                                     </a>
                                     <img src={exitIcon} alt="exit icon" />
@@ -169,13 +173,9 @@ export function Navbar() {
                         className="fa-svg-icon"
                         src={settingSvg}
                         alt="setting icon"
-                        onClick={() => setOpenModal(true)}
-                    ></img>
-
-                    
+                        onClick={() => setOpenModal(true)}></img>
                     <div>
-                        <DropdownCrypto />
-                       
+                        <DropdownCrypto /> 
                     </div>
                     <div>
                         <span className="link-aquagreen">

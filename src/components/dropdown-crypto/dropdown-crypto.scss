@@ -87,6 +87,10 @@ $theme-light: map.set($theme-light, "dropdown-line", $dropdown-line);
                 align-items: center;
                 height: 48px;
 
+                .active-li {
+                    color: $primary-dk;
+                }
+
                 img {
                     width: 28px;
                     height: 28px;
