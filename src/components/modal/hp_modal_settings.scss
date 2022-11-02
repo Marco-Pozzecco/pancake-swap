@@ -10,9 +10,8 @@
 // Set colori tema scuro
 $theme-dark: map.set($theme-dark, "fa-moon", rgb(39, 38, 44));
 $theme-dark: map.set($theme-dark, "fa-sun", $footer-background);
-
 $theme-dark: map.set($theme-dark, "popup-bg", $footer-background);
-$theme-dark: map.set($theme-dark, "text-color", white);
+$theme-dark: map.set($theme-dark, "text-color", #fff);
 $theme-dark: map.set($theme-dark, "popup-modal1-bg", $popup-gradient);
 $theme-dark: map.set($theme-dark, "label-bg", $label-toggle-bg-dk);
 $theme-dark: map.set($theme-dark, "border-bottom-pp", rgb(56, 50, 65));

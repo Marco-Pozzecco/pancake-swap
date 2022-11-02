@@ -6,29 +6,45 @@
 @import "../../abstracts/mixins";
 @import "../../abstracts/colors";
 
+$theme-dark: map.set($theme-dark, "modal-bar", $modal-bar-dk);
+$theme-dark: map.set($theme-dark, "modal-bar-active", $secondary-dk);
+$theme-dark: map.set($theme-dark, "icon-txt", #fff);
 $theme-dark: map.set($theme-dark, "popup-bg", $footer-background);
-$theme-dark: map.set($theme-dark, "text-color", white);
+$theme-dark: map.set($theme-dark, "text-color-modal", $background-color-cards);
 $theme-dark: map.set($theme-dark, "popup-modal1-bg", $popup-gradient);
 $theme-dark: map.set($theme-dark, "border-bottom-pp", rgb(56, 50, 65));
+$theme-dark: map.set($theme-dark, "background-modal-btn", $primary-dk);
 
+$theme-light: map.set($theme-light, "modal-bar", $modal-bar);
+$theme-light: map.set($theme-light, "modal-bar-active", $secondary-color);
+$theme-light: map.set($theme-light, "icon-txt", $tertiary-color);
 $theme-light: map.set($theme-light, "popup-bg", #fff);
-$theme-light: map.set($theme-light, "text-color", $background-color-dk);
+$theme-light: map.set($theme-light, "text-color-modal", #fff);
 $theme-light: map.set($theme-light, "popup-modal1-bg", $header-popup-gradient);
 $theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
+$theme-light: map.set($theme-light, "background-modal-btn", $primary-color);
 
 .theme-dark {
+    --modal-bar: #{map-get($theme-dark, "modal-bar" )};
+    --modal-bar-active: #{map-get($theme-dark, "modal-bar-active" )};
+    --icon-txt: #{map-get($theme-dark, "icon-txt" )};
     --popup-bg: #{map.get($theme-dark , "popup-bg")};
-    --text-color: #{map.get($theme-dark , "text-color")};
+    --text-color-modal: #{map.get($theme-dark , "text-color-modal")};
     --popup-modal1-bg: #{map.get($theme-dark , "popup-modal1-bg")};
     --border-bottom-pp: #{map.get($theme-dark , "border-bottom-pp")};
+    --background-modal-btn: #{map.get($theme-dark , "background-modal-btn")};
 }
 
 
 .theme-light {
+    --modal-bar: #{map-get($theme-light, "modal-bar" )};
+    --modal-bar-active: #{map-get($theme-light, "modal-bar-active" )};
+    --icon-txt: #{map-get($theme-light, "icon-txt" )};
     --popup-bg: #{map.get($theme-light , "popup-bg")};
-    --text-color: #{map.get($theme-light , "text-color")};
+    --text-color-modal: #{map.get($theme-light , "text-color-modal")};
     --popup-modal1-bg: #{map.get($theme-light , "popup-modal1-bg")};
     --border-bottom-pp: #{map.get($theme-light , "border-bottom-pp")};
+    --background-modal-btn: #{map.get($theme-light , "background-modal-btn")};
 }
 
 
@@ -48,6 +64,20 @@ $theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
     .bloc-tabs {
         display: flex;
         //position: relative;
+
+    }
+
+    .h3-9a6aff {
+        color: var(--modal-bar-active);
+    }
+
+    .btn-modal-connect {
+        background-color: var(--background-modal-btn);
+        width: 242px;
+        height: 48px;
+        color: var(--text-color-modal);
+        //box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+        font-weight: bold;
 
     }
 
@@ -100,15 +130,19 @@ $theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
                     border-radius: 30px;
                     width: 50%;
                     height: 100%;
-                    left: 0;
                     padding: 32px 48px 32px 48px;
+                    flex: 1;
+
+                    p {
+                        color: $primary-color
+                    }
 
                     @include flex(column, space-evenly);
 
                     .header {
                         flex: 1;
                         width: 100%;
-                        background-color: bisque;
+                        //background-color: bisque;
                     }
 
                     .main-img-box {
@@ -118,7 +152,7 @@ $theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
                         background-color: #fff;
 
                         .grid {
-                            background-color: aqua;
+                            //background-color: aqua;
                             width: 100%;
                             margin-bottom: 20px;
                             display: grid;
@@ -134,6 +168,18 @@ $theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
                                     height: 50px;
                                 }
 
+                                .dot-icon {
+                                    background-color: $dot-icon;
+                                    width: 50px;
+                                    height: 50px;
+                                    border-radius: 12px;
+                                }
+
+                                p {
+                                    color: var(--icon-txt);
+                                    font-size: 12px;
+                                }
+
                             }
 
                         }
@@ -143,11 +189,29 @@ $theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
 
                 }
 
+                .right-card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0px 24px;
+                    width: 50%;
+                    flex: 1;
 
+                    * {
+                        margin-bottom: 24px;
+                    }
 
+                    img {
+                        width: 198px;
+                        height: 178px;
+
+                    }
+
+                }
 
                 p {
-                    color: var(--text-color);
+                    color: $background-color-dk;
 
                 }
 
@@ -180,11 +244,6 @@ $theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
                 color: rgb(118, 69, 217);
             }
 
-            a {
-                .margine {
-                    margin: 2px;
-                }
-            }
         }
 
     }
@@ -213,7 +272,7 @@ $theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
         .toggle-btn {
             width: 56px;
             height: 8px;
-            background-color: $nav-bar-dk;
+            background-color: var(--modal-bar);
             border-radius: 16px 0px 0px 16px;
             margin-right: 10px;
         }
@@ -221,19 +280,19 @@ $theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
         .toggle-btn-right {
             width: 56px;
             height: 8px;
-            background-color: $nav-bar-dk;
+            background-color: var(--modal-bar);
             border-radius: 0px 16px 16px 0px;
             margin-right: 10px;
         }
 
 
         .active-toggle {
-            background-color: $secondary-dk;
+            background-color: var(--modal-bar-active);
             border-radius: 16px 0px 0px 16px;
         }
 
         .active-toggle-right {
-            background-color: $secondary-dk;
+            background-color: var(--modal-bar-active);
             border-radius: 0px 16px 16px 0px;
         }
 

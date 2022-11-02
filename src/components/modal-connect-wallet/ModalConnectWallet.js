@@ -7,6 +7,7 @@ import walletImg from "../../resources/modal-wallet/wallet_intro.png";
 import globeImg from "../../resources/modal-wallet/world_lock.png";
 import trustWallet from "../../resources/home/crypto-wallet-logo/trust.png";
 import walletConnect from "../../resources/home/crypto-wallet-logo/walletconnect.png";
+import dotIcon from "../../resources/home/crypto-wallet-logo/dot.svg";
 
 export default function ModalConnectWallet({open, onClose}) {
 
@@ -81,7 +82,7 @@ export default function ModalConnectWallet({open, onClose}) {
                       <p>walletConnect</p>
                     </div>
                     <div className='img-box'>
-                      <img src={coinbase} alt='coinbase'/>
+                      <img className='dot-icon' src={dotIcon} alt='coinbase'/>
                       <p></p>
                     </div>
 
@@ -90,16 +91,16 @@ export default function ModalConnectWallet({open, onClose}) {
                 </div>
             </section>
             <section className='right-card'>
-              <h3>Haven’t got a wallet yet?</h3>
-              <img src="" alt=''/>
-              <button>Learn How to Connect</button>
+              <h3 className='h3-9a6aff'>Haven’t got a wallet yet?</h3>
+              <img src={walletImg} alt='wallet'/>
+              <button className='btn-modal-connect'>Learn How to Connect</button>
             </section>
           </div>
 
           <div className={toggleState === 2 ? "content  active-content" : "content"}>
             <section className='second-card'>
-              <h3 className={switchImg === 1 ? "switchImg active-switchImg" : "switchImg"} >Your first step in the DeFi world</h3>
-              <h3 className={switchImg === 2 ? "switchImg active-switchImg" : "switchImg"}>Login using a wallet connectio</h3>
+              <h3 className={switchImg === 1 ? "h3-9a6aff switchImg active-switchImg" : "h3-9a6aff switchImg"} >Your first step in the DeFi world</h3>
+              <h3 className={switchImg === 2 ? "h3-9a6aff switchImg active-switchImg" : "h3-9a6aff switchImg"}>Login using a wallet connectio</h3>
               <img className={switchImg === 1 ? "switchImg active-switchImg" : "switchImg"} src={walletImg} alt='wallet'/>
               <img className={switchImg === 2 ? "switchImg active-switchImg" : "switchImg"} src={globeImg} alt='wallet'/>
               <p className={switchImg === 1 ? "switchImg active-switchImg" : "switchImg"}>A Web3 Wallet allows you to send and receive crypto assets like bitcoin, BNB, ETH, NFTs and much more.</p>
@@ -108,7 +109,7 @@ export default function ModalConnectWallet({open, onClose}) {
                 <div className={switchImg === 1 ? 'toggle-btn active-toggle' : 'toggle-btn'} onClick={() =>toggleImg(1)}></div>
                 <div className={switchImg === 2 ? 'toggle-btn-right active-toggle-right' : 'toggle-btn-right'} onClick={() => toggleImg(2)}></div>
               </div>
-              <button>Learn How To Connect</button>
+              <button className='btn-modal-connect'>Learn How To Connect</button>
                     
             </section>
           </div>

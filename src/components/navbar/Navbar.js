@@ -11,6 +11,7 @@ import exitIcon from "../../resources/home/cake/exit-icon.svg";
 import {LanguageSelector} from "../language-selector/LanguageSelector";
 import DropdownCrypto from "../dropdown-crypto/DropdownCrypto";
 import ModalConnectWallet from "../modal-connect-wallet/ModalConnectWallet";
+import Logo from '../logo/Logo.js'
 
 
 export function Navbar() {
@@ -25,6 +26,7 @@ export function Navbar() {
             <nav>
                 <div className="flex">
                     <Link to="/">
+                        
                         {/* {themeClass === 'theme-dark' &&  <Logo src={logoWhite}/>}
                         {themeClass === 'theme-light' &&  <Logo src={logo}/>} */}
                          <img src={logoWhite} alt="main-logo" id="main-logo" 
