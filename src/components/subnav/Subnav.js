@@ -22,14 +22,7 @@ export default function Subnav(props) {
                 })}
             </ul>
 
-            {/* <ul className='menu-ul'>
-        <li><NavLink><a href="swap" >Swap</a></NavLink></li>
-        <li><NavLink><a href="limit">Limit</a></NavLink></li>
-        <li><NavLink><a href="liquidity" >Liquidity</a></NavLink></li>
-        <li><NavLink><a href="https://perp.pancakeswap.finance/en/futures/BTCUSDT?theme=light" target='blank'>Perpetual</a><img src={exitIcon} 
-        alt="exit icon"/></NavLink></li>
-        <li><NavLink><a href="https://bridge.pancakeswap.finance/" target='blank'>Bridge</a><img src={exitIcon} alt="exit icon"/></NavLink></li>
-      </ul> */}
-        </div>
-    );
+
+    </div>
+  );
 }

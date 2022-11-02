@@ -10,9 +10,15 @@ import exitIcon from "../../resources/home/cake/exit-icon.svg";
 import bnbIcon from "../../resources/home/navbar/bnb.png";
 import arrow from "../../resources/home/navbar/arrow-down.svg";
 import {LanguageSelector} from "../language-selector/LanguageSelector";
+import DropdownCrypto from "../dropdown-crypto/DropdownCrypto";
+import ModalConnectWallet from "../modal-connect-wallet/ModalConnectWallet";
 
 export function Navbar() {
     const [openModal, setOpenModal] = useState(false);
+    const [openModalWallet, setOpenModalWallet] = useState(false);
+    const [selected, setSelected] = useState("")
+    
+
 
     return (
         <div>
@@ -27,7 +33,7 @@ export function Navbar() {
                             alt="logo bunny"
                             className="logoBunny"></img>
                     </Link>
-                    <ul className="menu-ul menu-nav">
+                    <ul className="menu-ul menu-nav menu-nav-ul">
                         {/* <li><NavLink to="/">Home</NavLink></li> */}
                         <li>
                             <NavLink to="/trade">Trade</NavLink>
@@ -150,44 +156,38 @@ export function Navbar() {
                     <div id="money">
                         <p>$4.357</p>
                     </div>
-                    <LanguageSelector />
+                    <div className="flex2 lista">
+                        <LanguageSelector />
+                    </div>
                     <img
                         className="fa-svg-icon"
                         src={settingSvg}
                         alt="setting icon"
                         onClick={() => setOpenModal(true)}></img>
 
-                    {/* <div  id="overlay"></div> */}
+                    
                     <div>
-                        <span className="link-popup-navbar">
-                            <button className="button-navbar-bnb">
-                                <img
-                                    className="fa-svg-icon"
-                                    src={bnbIcon}
-                                    alt="setting icon"
-                                />
-                                BNB Smart Chain
-                                <img
-                                    className="fa-svg-icon"
-                                    src={arrow}
-                                    alt="arrow icon"
-                                />
-                            </button>
-                        </span>
+                        <DropdownCrypto />
+                       
                     </div>
                     <div>
                         <span className="link-aquagreen">
-                            <button className="btn-navbar button-aquagreen">
+                            <button className="btn-navbar button-aquagreen"
+                            onClick={() => setOpenModalWallet(true)}>
                                 Connect Wallet
                             </button>
                         </span>
                     </div>
                 </section>
             </nav>
-            <HpModalSettings
-                open={openModal}
-                onClose={() => setOpenModal(false)}
-            />
+            <ModalConnectWallet open={openModalWallet}
+            onClose={()=> setOpenModalWallet(false)}/>
+            <HpModalSettings open={openModal}
+                onClose={() => setOpenModal(false)}/>
+                
+            <div className={openModal === true || openModalWallet === true ? 'overlay overlay-active' : 'overlay'}
+             onClick={() => setOpenModal(false)}>
+             </div>
         </div>
     );
 }

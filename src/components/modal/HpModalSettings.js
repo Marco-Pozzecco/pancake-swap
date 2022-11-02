@@ -27,26 +27,16 @@ export function HpModalSettings({open, onClose}) {
             //logo.setAttribute('src', '../../resources/svgs/logo_white.svg');
         }
     }
+    
+    if(!open) return null
+    
 
-    if (!open) return null;
-
-    return (
-        <section onClick={onClose} className="overlay">
-            <div
-                className="modal"
-                id="modal"
-                onClick={(e) => {
-                    e.stopPropagation();
-                }}>
-                <div className="modal1 flex-switch">
-                    <h3 className="header">Settings</h3>
-                    <button
-                        data-close-btn
-                        className="close-btn"
-                        onClick={onClose}>
-                        &times;
-                    </button>
-                </div>
+  return (
+    <section >
+        <div className="modal" id="modal" onClick={(e)=> {e.stopPropagation()}}>
+            <div className="modal1 flex-switch">
+                <h3 className="header">Settings</h3>
+                <button data-close-btn className="close-btn" onClick={onClose}>&times;</button></div>
                 <h4>GLOBAL</h4>
                 <div className="flex-switch">
                     <p>Dark Mode</p>
