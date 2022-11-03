@@ -11,7 +11,7 @@ export default function DropdownCrypto() {
                       {name:'Ethereum', img:<img className='fa-svg-icon' src={Ethereum} alt="ethereum icon"></img>},
                       {name:'Aptos', img:<img className='fa-svg-icon' src={aptos} alt="aptos icon"></img>}]
 
-    const [selected, setSelected] = useState({ ...options[1] })
+    const [selected, setSelected] = useState({ ...options[0] })
     const [openDropdown, setDropdown] = useState(false)
     
 

@@ -126,7 +126,7 @@ $theme-light: map.set($theme-light, "background-modal-btn", $primary-color);
                 display: none;
 
                 .left-card {
-                    background-color: #d9d9d9;
+                    background-color: var(--text-color-modal);
                     border-radius: 30px;
                     width: 50%;
                     height: 100%;
@@ -147,9 +147,12 @@ $theme-light: map.set($theme-light, "background-modal-btn", $primary-color);
 
                     .main-img-box {
 
-                        flex: 2;
+                        //flex: 2;
                         width: 100%;
-                        background-color: #fff;
+                        height: 264px;
+                        //background-color: #fff;
+                        overflow-y: auto;
+                        overflow-x: hidden;
 
                         .grid {
                             //background-color: aqua;
@@ -159,6 +162,7 @@ $theme-light: map.set($theme-light, "background-modal-btn", $primary-color);
                             grid-template-columns: 1fr 1fr 1fr;
                             row-gap: 24px;
                             column-gap: 16px;
+
 
                             .img-box {
                                 @include flex(column, center, center);
@@ -175,18 +179,29 @@ $theme-light: map.set($theme-light, "background-modal-btn", $primary-color);
                                     border-radius: 12px;
                                 }
 
+                                .dot-icon-hide {
+                                    display: none;
+                                }
+
                                 p {
                                     color: var(--icon-txt);
                                     font-size: 12px;
+                                    margin-top: 10px;
                                 }
 
                             }
 
+                            .img-box-hide {
+                                display: none;
+                            }
+
                         }
 
+                        .grid2 {
+                            display: none;
+
+                        }
                     }
-
-
                 }
 
                 .right-card {
@@ -255,6 +270,9 @@ $theme-light: map.set($theme-light, "background-modal-btn", $primary-color);
         margin: 48px 130px;
         text-align: center;
 
+        p .primary-col {
+            color: $primary-color
+        }
 
         * {
             margin-bottom: 20px;
