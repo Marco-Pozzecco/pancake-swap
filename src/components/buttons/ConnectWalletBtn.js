@@ -1,3 +1,4 @@
+import React from "react";
 import Button from "./Button";
 
 export function ConnectWallet(props) {
@@ -11,3 +12,9 @@ export function ConnectWallet(props) {
         />
     );
 }
+
+
+
+
+
+

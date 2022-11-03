@@ -57,6 +57,9 @@
     color: rgb(31, 199, 212);
     background-color: transparent;
     border: none;
+        &:hover {
+            text-decoration: underline;
+        }
 }
 
 .pillButton {
