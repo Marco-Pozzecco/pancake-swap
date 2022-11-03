@@ -2,12 +2,6 @@
 @import "../../abstracts/mixins";
 @import "../../abstracts/colors";
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 .linea {
     height: 1px;
     width: 90%;

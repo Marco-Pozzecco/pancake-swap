@@ -1,3 +1,7 @@
+//Root module
+
+@use "../src/abstracts/root"
+
 // Built in modules
 @use "sass:map";
 @use "sass:list";
