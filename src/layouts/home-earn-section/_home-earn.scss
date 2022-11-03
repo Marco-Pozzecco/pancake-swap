@@ -7,7 +7,6 @@
 @import "../../abstracts/colors";
 @import "../../abstracts/animations";
 
-
 // Set colori tema scuro
 $theme-dark: map.set($theme-dark, "earn", "background-gradient", #3a364a);
 $theme-dark: map.set($theme-dark, "text", "paragraph-dark", rgb(154, 106, 255));
@@ -15,8 +14,22 @@ $theme-dark: map.set($theme-dark, "text", "header2-text", rgb(244, 238, 255));
 $theme-dark: map.set($theme-dark, "text", "header3-text", rgb(184, 173, 210));
 
 // Set colori tema chiaro
-$theme-light: map.set($theme-light, "earn", "background-gradient", linear-gradient(102deg, rgba(241,237,243,1) 100%, rgba(233,242,246,1) 100%));
-$theme-light: map.set($theme-light, "text", "paragraph-light", rgb(118, 69, 217));
+$theme-light: map.set(
+    $theme-light,
+    "earn",
+    "background-gradient",
+    linear-gradient(
+        102deg,
+        rgba(241, 237, 243, 1) 100%,
+        rgba(233, 242, 246, 1) 100%
+    )
+);
+$theme-light: map.set(
+    $theme-light,
+    "text",
+    "paragraph-light",
+    rgb(118, 69, 217)
+);
 $theme-light: map.set($theme-light, "text", "header2-text", rgb(40, 13, 95));
 $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
 
@@ -27,14 +40,12 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
     --heading-3: #{map.get($theme-dark, "text", "header3-text")};
 }
 
-
 .theme-light {
     --background-earn: #{map.get($theme-light, "earn", "background-gradient")};
     --text-paragraph: #{map.get($theme-light, "text", "paragraph-light")};
     --heading-2: #{map.get($theme-light, "text", "header2-text")};
     --heading-3: #{map.get($theme-light, "text", "header3-text")};
 }
-
 
 //scrollbar
 
@@ -70,13 +81,11 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
         @include flex(row-reverse, center);
         z-index: 2;
 
-
         .ea-contents-section {
             text-align: left;
             width: 100%;
             // flex: 1 1 50%;
             max-width: 500px;
-
 
             h2 {
                 color: var(--heading-2);
@@ -109,15 +118,12 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
                     width: 170px;
                     margin-right: 10px;
                 }
-
             }
 
             .link-aquagreen {
                 text-decoration: none;
             }
-
         }
-
 
         .ea-img-section {
             position: relative;
@@ -127,7 +133,6 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
             max-width: 380px;
             min-width: 300px;
             flex-shrink: 2;
-
 
             .ea-goldencoin {
                 position: absolute;
@@ -161,9 +166,7 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
                     width: 90%;
                 }
             }
-
         }
-
     }
 
     // .fb-bottomgradient {
@@ -173,18 +176,14 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
     //     bottom: 180px;
     //     width: 100%;
 
-
     //     svg {
     //         z-index: 1;
     //     }
 
     // }
-
 }
 
-
 // ########################################################################àà
-
 
 .earn-bottom-banner-main-container {
     // width: 100%;
@@ -199,8 +198,6 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
         width: 100%;
         padding-bottom: 50px;
         // background-color: rgba(255, 255, 0, 0.649);
-
-
 
         .ebb-title-container-a {
             display: flex;
@@ -227,8 +224,6 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
 
                 //     }
             }
-
-
         }
 
         .ebb-title-container-b {
@@ -239,22 +234,15 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
 
                 .ebb-title-b2 {
                     color: rgb(154, 106, 255);
-                    ;
                 }
             }
-
         }
-
-
-
     }
 
     // BODY------------------------------------
     .ebb-main-body-container {
         width: 100%;
         height: calc(100% - 24px);
-
-
 
         .ebb-main-body-items-container {
             width: 100%;
@@ -265,7 +253,6 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
             grid-template-rows: 1fr;
             flex-direction: column;
 
-
             .ebb-item {
                 // background-color: rgba(0, 255, 255, 0.468);
                 display: flex;
@@ -274,11 +261,9 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
                 border-left: 1px solid grey;
                 padding-left: 16px;
 
-
                 &:first-child {
                     border-left: none;
                 }
-
 
                 .ebbi-s1 {
                     color: rgb(154, 106, 255);
@@ -291,51 +276,39 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
                     color: var(--heading-2);
                     font-size: 16px;
                     font-weight: 600;
-
                 }
 
                 .ebbi-s3 {
                     color: rgb(184, 173, 210);
                     font-size: 16px;
                     font-weight: 400;
-
                 }
-
             }
 
             .ebbi-1 {
                 // background-color: red;
                 grid-template-columns: 1 / 2;
-
             }
 
             .ebbi-2 {
                 // background-color:blue ;
                 grid-template-columns: 2 / 3;
-
             }
 
             .ebbi-3 {
                 // background-color: green;
                 grid-template-columns: 3 / 4;
-
             }
 
             .ebbi-4 {
                 // background-color: yellow;
                 grid-template-columns: 4 / 5;
-
             }
 
             .ebbi-5 {
                 // background-color: white;
                 grid-template-columns: 5 / 6;
-
             }
-
-
-
-
         }
 
         // .ebb-body-a {
@@ -433,7 +406,6 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
         }
     }
 }
-
 
 @include mq("phone-wide") {
     .ea-earn {

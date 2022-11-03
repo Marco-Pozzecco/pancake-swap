@@ -8,31 +8,44 @@
 @import "../../abstracts/animations";
 
 // Set colori tema scuro
-$theme-dark: map.set($theme-dark, 'cake-coin', 'background', rgb(8, 6, 11));
-$theme-dark: map.set($theme-dark, "text", "paragraph-title", rgb(184, 173, 210));
-$theme-dark: map.set($theme-dark, 'text', 'paragraph-text', rgb(244, 238, 255));
+$theme-dark: map.set($theme-dark, "cake-coin", "background", rgb(8, 6, 11));
+$theme-dark: map.set(
+    $theme-dark,
+    "text",
+    "paragraph-title",
+    rgb(184, 173, 210)
+);
+$theme-dark: map.set($theme-dark, "text", "paragraph-text", rgb(244, 238, 255));
 $theme-dark: map.set($theme-dark, "text", "header2-text", rgb(244, 238, 255));
 $theme-dark: map.set($theme-dark, "text", "span-text", rgb(118, 69, 217));
 
-
 // Set colori tema chiaro
-$theme-light: map.set($theme-light, 'cake-coin', 'background', rgb(250, 249, 250));
-$theme-light: map.set($theme-light, "text", "paragraph-title", rgb(122, 110, 170));
-$theme-light: map.set($theme-light, 'text', 'paragraph-text', rgb(40, 13, 95));
+$theme-light: map.set(
+    $theme-light,
+    "cake-coin",
+    "background",
+    rgb(250, 249, 250)
+);
+$theme-light: map.set(
+    $theme-light,
+    "text",
+    "paragraph-title",
+    rgb(122, 110, 170)
+);
+$theme-light: map.set($theme-light, "text", "paragraph-text", rgb(40, 13, 95));
 $theme-light: map.set($theme-light, "text", "header2-text", rgb(40, 13, 95));
 $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
 
 .theme-dark {
-    --background-color: #{map.get($theme-dark, 'cake-coin', 'background')};
+    --background-color: #{map.get($theme-dark, "cake-coin", "background")};
     --text-subtle-color: #{map.get($theme-dark, "text", "paragraph-title")};
     --text-cake-stats-color: #{map.get($theme-dark, "text", "paragraph-text")};
     --heading-2: #{map.get($theme-dark, "text", "header2-text")};
     --span-text: #{map.get($theme-dark, "text", "span-text")};
 }
 
-
 .theme-light {
-    --background-color: #{map.get($theme-light, 'cake-coin', 'background')};
+    --background-color: #{map.get($theme-light, "cake-coin", "background")};
     --text-subtle-color: #{map.get($theme-light, "text", "paragraph-title")};
     --text-cake-stats-color: #{map.get($theme-light, "text", "paragraph-text")};
     --heading-2: #{map.get($theme-light, "text", "header2-text")};
@@ -42,7 +55,6 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
 .cake-token {
     background-color: var(--background-color);
 }
-
 
 .cake-token {
     padding: 48px 0;
@@ -55,7 +67,6 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
         padding: 48px 24px;
 
         .cake-content {
-            
             @include flex();
 
             h1 {
@@ -68,11 +79,6 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
 
             .cake-info {
                 width: calc(100% - 400px);
-                
-
-                & * {
-                    width: 100%;
-                }
 
                 h1 {
                     font-size: 40px;
@@ -93,7 +99,6 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
                     margin-bottom: 24px;
                     font-size: 16px;
                 }
-
 
                 .cake-info-buttons {
                     @include flex(row, flex-start);
@@ -129,25 +134,25 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
                 #pancake-bottom-right {
                     width: 100%;
                     z-index: 0;
-                    @include float-anim(5s, 'Nw', 0s);
+                    @include float-anim(5s, "Nw", 0s);
                 }
 
                 #pancake-top-left {
                     width: 100%;
                     z-index: 2;
-                    @include float-anim(5s, 'NW', 0.2s);
+                    @include float-anim(5s, "NW", 0.2s);
                 }
 
                 #pancake-top-right {
                     width: 100%;
                     z-index: 1;
-                    @include float-anim(5s, 'NW', 0.3s);
+                    @include float-anim(5s, "NW", 0.3s);
                 }
 
                 #cake-coin {
                     width: 100%;
                     z-index: 1;
-                    @include float-anim(5s, 'NW', 1s);
+                    @include float-anim(5s, "NW", 1s);
                 }
             }
         }
@@ -161,7 +166,6 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
             margin-top: 24px;
 
             div {
-
                 .text-subtle {
                     color: var(--text-subtle-color);
                     font-weight: 400;
@@ -208,68 +212,55 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
                 border-left: 1px solid rgb(38, 33, 48);
                 padding: 0 15px;
             }
-
-            
-
         }
-
-
     }
 }
 
-@include mq('tablet-small', 'tablet') {
+@include mq("tablet-small", "tablet") {
     .cake-token {
         padding: 48px 0;
         @include flex(column);
         width: 100%;
-    
+
         .cake-wrapper {
             width: 100%;
             max-width: 968px;
             padding: 48px 24px;
             padding-top: 200px;
-    
+
             .cake-content {
                 position: relative;
                 @include flex(column-reverse);
-    
+
                 .cake-info {
                     width: 100%;
-                    
-    
-                    & * {
-                        width: 100%;
-                    }
-    
+
                     h1 {
                         font-size: 40px;
                         font-weight: 600;
                         line-height: 1.1;
 
                         margin-bottom: 24px;
-
                     }
-    
-                    p {
 
+                    p {
                         font-weight: 400;
                         line-height: 1.5;
                         margin-bottom: 24px;
                         font-size: 16px;
                     }
-    
-    
+
                     .cake-info-buttons {
                         @include flex(row, flex-start);
-    
+
                         .link-aquagreen {
                             width: auto;
                         }
-    
+
                         .button-aquagreen {
                             width: auto;
                         }
-    
+
                         .learn-link {
                             margin-left: 10px;
                             width: fit-content;
@@ -280,9 +271,9 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
                         }
                     }
                 }
-    
+
                 .cake-coins {
-                    width: 200px;   
+                    width: 200px;
                     height: auto;
                     align-self: flex-end;
                     position: relative;
@@ -290,33 +281,33 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
                     img {
                         position: absolute;
                     }
-    
+
                     #pancake-bottom-right {
                         width: 100%;
                         z-index: 0;
-                        @include float-anim(5s, 'Nw', 0s);
+                        @include float-anim(5s, "Nw", 0s);
                     }
-    
+
                     #pancake-top-left {
                         width: 100%;
                         z-index: 2;
-                        @include float-anim(5s, 'NW', 0.2s);
+                        @include float-anim(5s, "NW", 0.2s);
                     }
-    
+
                     #pancake-top-right {
                         width: 100%;
                         z-index: 1;
-                        @include float-anim(5s, 'NW', 0.3s);
+                        @include float-anim(5s, "NW", 0.3s);
                     }
-    
+
                     #cake-coin {
                         width: 100%;
                         z-index: 1;
-                        @include float-anim(5s, 'NW', 1s);
+                        @include float-anim(5s, "NW", 1s);
                     }
                 }
             }
-    
+
             .cake-stats {
                 display: grid;
                 grid-template-areas:
@@ -324,71 +315,63 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
                     "market-cap burn current-emissions";
                 gap: 32px;
                 margin-top: 24px;
-    
-                div {
-    
-                    .text-subtle {
 
+                div {
+                    .text-subtle {
                         font-weight: 400;
                         line-height: 1.5;
                         font-size: 16px;
                     }
-    
-                    .text-cake-stats {
 
+                    .text-cake-stats {
                         font-weight: 600;
                         line-height: 1.1;
                         font-size: 24px;
                     }
                 }
-    
+
                 .cake-circulating-supply {
                     grid-area: circ-s;
                 }
-    
+
                 .cake-supply {
                     grid-area: total-s;
                     border-left: 1px solid rgb(38, 33, 48);
                     padding: 0 15px;
                 }
-    
+
                 .cake-max-supply {
                     grid-area: max-s;
                     border-left: 1px solid rgb(38, 33, 48);
                     padding: 0 15px;
                 }
-    
+
                 .cake-cap {
                     grid-area: market-cap;
                 }
-    
+
                 .cake-burned {
                     grid-area: burn;
                     border-left: 1px solid rgb(38, 33, 48);
                     padding: 0 15px;
                 }
-    
+
                 .cake-emissions {
                     grid-area: current-emissions;
                     border-left: 1px solid rgb(38, 33, 48);
                     padding: 0 15px;
                 }
-    
-                
-    
             }
-    
-    
         }
     }
 }
 
-@include mq('phone', 'phablet') {
+@include mq("phone", "phablet") {
     .cake-token {
         padding: 48px 0;
         @include flex(column);
         width: 100%;
-    
+
         .cake-wrapper {
             width: 100%;
             max-width: 968px;
@@ -398,44 +381,36 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
             .cake-content {
                 position: relative;
                 @include flex(column-reverse);
-    
+
                 .cake-info {
                     width: 100%;
-                    
-    
-                    & * {
-                        width: 100%;
-                    }
-    
+
                     h1 {
                         font-size: 32px;
                         font-weight: 600;
                         line-height: 1.1;
 
                         margin-bottom: 24px;
-
                     }
-    
-                    p {
 
+                    p {
                         font-weight: 400;
                         line-height: 1.5;
                         margin-bottom: 24px;
                         font-size: 16px;
                     }
-    
-    
+
                     .cake-info-buttons {
                         @include flex(row, flex-start);
-    
+
                         .link-aquagreen {
                             width: auto;
                         }
-    
+
                         .button-aquagreen {
                             width: auto;
                         }
-    
+
                         .learn-link {
                             margin-left: 10px;
                             width: fit-content;
@@ -446,43 +421,43 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
                         }
                     }
                 }
-    
+
                 .cake-coins {
-                    width: 200px;   
+                    width: 200px;
                     height: auto;
                     align-self: flex-end;
                     position: relative;
-    
+
                     img {
                         position: absolute;
                     }
-    
+
                     #pancake-bottom-right {
                         width: 100%;
                         z-index: 0;
-                        @include float-anim(5s, 'Nw', 0s);
+                        @include float-anim(5s, "Nw", 0s);
                     }
-    
+
                     #pancake-top-left {
                         width: 100%;
                         z-index: 2;
-                        @include float-anim(5s, 'NW', 0.2s);
+                        @include float-anim(5s, "NW", 0.2s);
                     }
-    
+
                     #pancake-top-right {
                         width: 100%;
                         z-index: 1;
-                        @include float-anim(5s, 'NW', 0.3s);
+                        @include float-anim(5s, "NW", 0.3s);
                     }
-    
+
                     #cake-coin {
                         width: 100%;
                         z-index: 1;
-                        @include float-anim(5s, 'NW', 1s);
+                        @include float-anim(5s, "NW", 1s);
                     }
                 }
             }
-    
+
             .cake-stats {
                 display: grid;
                 grid-template-areas:
@@ -491,64 +466,57 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
                     "burn current-emissions";
                 gap: 10%;
                 margin-top: 24px;
-    
+
                 div {
                     font-size: 100%;
 
                     .text-subtle {
-
                         font-weight: 400;
                         line-height: 1.5;
                         font-size: 14px;
                     }
-    
-                    .text-cake-stats {
 
+                    .text-cake-stats {
                         font-weight: 600;
                         line-height: 1.1;
                         font-size: 20px;
                     }
                 }
-    
+
                 .cake-circulating-supply {
                     grid-area: circ-s;
                 }
-    
+
                 .cake-supply {
                     grid-area: total-s;
                     border-left: 1px solid rgb(38, 33, 48);
                     padding: 0 15px;
                 }
-    
+
                 .cake-max-supply {
                     grid-area: max-s;
                     border: none;
                     padding: 0;
                 }
-    
+
                 .cake-cap {
                     grid-area: market-cap;
                     border-left: 1px solid rgb(38, 33, 48);
                     padding: 0 15px;
                 }
-    
+
                 .cake-burned {
                     grid-area: burn;
                     border: none;
                     padding: 0;
                 }
-    
+
                 .cake-emissions {
                     grid-area: current-emissions;
                     border-left: 1px solid rgb(38, 33, 48);
                     padding: 0 15px;
                 }
-    
-                
-    
             }
-    
-    
         }
     }
 }

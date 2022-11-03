@@ -6,7 +6,6 @@
 @import "../../abstracts/mixins";
 @import "../../abstracts/colors";
 
-
 // Set colori tema scuro
 $theme-dark: map.set($theme-dark, "fa-moon", rgb(39, 38, 44));
 $theme-dark: map.set($theme-dark, "fa-sun", $footer-background);
@@ -15,39 +14,40 @@ $theme-dark: map.set($theme-dark, "popup-bg", $footer-background);
 $theme-dark: map.set($theme-dark, "text-color", white);
 $theme-dark: map.set($theme-dark, "popup-modal1-bg", $popup-gradient);
 $theme-dark: map.set($theme-dark, "label-bg", $label-toggle-bg-dk);
-$theme-dark: map.set($theme-dark, "border-bottom-pp",rgb(56,50,65));
+$theme-dark: map.set($theme-dark, "border-bottom-pp", rgb(56, 50, 65));
 $theme-dark: map.set($theme-dark, "icon-text-color", $primary-dk);
 $theme-dark: map.set($theme-dark, "hover-nav-ul", $hover-navbar-ul);
 
 // Set colori tema chiaro
 $theme-light: map.set($theme-light, "fa-moon", white);
 $theme-light: map.set($theme-light, "fa-sun", #f39c12);
-$theme-light: map.set($theme-light, "popup-bg", #fff); 
+$theme-light: map.set($theme-light, "popup-bg", #fff);
 $theme-light: map.set($theme-light, "text-color", $background-color-dk);
 $theme-light: map.set($theme-light, "popup-modal1-bg", $header-popup-gradient);
 $theme-light: map.set($theme-light, "label-bg", $label-toggle-bg);
-$theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9 );
+$theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
 $theme-light: map.set($theme-light, "icon-text-color", $primary-color);
 $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
 
 
-.theme-dark{
+.theme-dark {
     --fa-moon: #{map.get($theme-dark , "fa-moon")};
     --fa-sun: #{map.get($theme-dark , "fa-sun" )};
-    --popup-bg: #{map.get($theme-dark , "popup-bg")}; 
+    --popup-bg: #{map.get($theme-dark , "popup-bg")};
     --text-color: #{map.get($theme-dark , "text-color")};
     --popup-modal1-bg: #{map.get($theme-dark , "popup-modal1-bg")};
     --label-toggle-bg: #{map.get($theme-dark , "label-bg")};
     --border-bottom-pp: #{map.get($theme-dark , "border-bottom-pp")};
     --icon-text-color: #{map.get($theme-dark , "icon-text-color")};
     --hover-nav-ul: #{map.get($theme-dark , "hover-nav-ul")};
-    
+
 
 }
-.theme-light{ 
+
+.theme-light {
     --fa-moon: #{map.get($theme-light , "fa-moon")};
     --fa-sun: #{map.get($theme-light , "fa-sun" )};
-    --popup-bg: #{map.get($theme-light , "popup-bg")}; 
+    --popup-bg: #{map.get($theme-light , "popup-bg")};
     --text-color: #{map.get($theme-light , "text-color")};
     --popup-modal1-bg: #{map.get($theme-light , "popup-modal1-bg")};
     --label-toggle-bg: #{map.get($theme-light , "label-bg")};
@@ -121,14 +121,13 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
         color: rgb(118, 69, 217);
     }
 
-
     .checkbox {
         opacity: 0;
         position: absolute;
     }
 
     .label {
-        background-color: var(--label-toggle-bg) ;//var(--label-toggle-bg)
+        background-color: var(--label-toggle-bg); //var(--label-toggle-bg)
         border-radius: 50px;
         cursor: pointer;
         display: inline-flex;
@@ -139,7 +138,6 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
         height: 32px;
         width: 56px;
         transform: scale(1);
-
     }
 
     .label .ball {
@@ -157,7 +155,6 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
         //     border: 2px solid rgb(118, 69, 217);
 
         // }
-
     }
 
     .checkbox:checked+.label .ball {
@@ -181,7 +178,6 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
         height: 32px;
         width: 56px;
         transform: scale(1);
-
     }
 
     .label1 .ball1 {
@@ -195,7 +191,6 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
         transform: translateX(0px);
         transition: transform 0.2s linear;
         align-items: center;
-
     }
 
     .checkbox1:checked+.label1 {
@@ -215,7 +210,7 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
     }
 
     .fa-sun {
-        color: var(--fa-sun);// var(--fa-sun)
+        color: var(--fa-sun); // var(--fa-sun)
         // width: 20px;
         // height: 20px;
         z-index: 2;
@@ -230,30 +225,44 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
         display: flex;
         align-items: center;
         justify-content: space-between;
-
     }
 
     .flex-inline {
         display: flex;
     }
 
-    .overlay {
-        position: fixed;
-        // top:0;
-        // bottom: 0;
-        // left: 0;
-        // right: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(244, 238, 255, 0.6);
-        //pointer-events: none;
-        transition: 200ms ease-in-out;
-        z-index: 99;
-    }
+    // .overlay {
+    //     position: fixed;
+    //     top: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     right: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(244, 238, 255, 0.6);
+    //     //pointer-events: none;
+    //     transition: 200ms ease-in-out;
+    //     z-index: 99;
+    // }
 
     // #overlay.active {
     //     opacity: 0.6;
     //     pointer-events: all;
     //     transition: 350ms ease;
     // }
+}
+
+@include mq('tablet-small', 'tablet') {}
+
+@include mq('phone', 'phablet') {
+    .modal {
+        top: 75%;
+        width: 100%;
+
+        .modal1 {
+            width: 100%;
+
+
+        }
+    }
 }

@@ -8,29 +8,56 @@
 @import "../../abstracts/animations";
 
 // Set colori tema scuro
-$theme-dark: map.set($theme-dark, "floating-bunny", "background-gradient", linear-gradient(180deg, rgba(22, 9, 49, 1) 0%, rgba(22, 9, 49, 1) 47%, rgba(19, 8, 43, 1) 65%, rgba(11, 5, 25, 1) 100%, rgba(0, 0, 0, 1) 100%));
+$theme-dark: map.set($theme-dark,
+        "floating-bunny",
+        "background-gradient",
+        linear-gradient(180deg,
+            rgba(22, 9, 49, 1) 0%,
+            rgba(22, 9, 49, 1) 47%,
+            rgba(19, 8, 43, 1) 65%,
+            rgba(11, 5, 25, 1) 100%,
+            rgba(0, 0, 0, 1) 100%));
 $theme-dark: map.set($theme-dark, "text", "paragraph-dark", rgb(154, 106, 255));
 $theme-dark: map.set($theme-dark, "text", "header2-text", rgb(244, 238, 255));
 
 // Set colori tema chiaro
-$theme-light: map.set($theme-light, "floating-bunny", "background-gradient", linear-gradient(102deg, rgba(231,252,255,1) 100%, rgb(239, 244, 255) 100%));
-$theme-light: map.set($theme-light, "text", "paragraph-light", rgb(122, 110, 170));
+$theme-light: map.set($theme-light,
+        "floating-bunny",
+        "background-gradient",
+        linear-gradient(102deg,
+            rgba(231, 252, 255, 1) 100%,
+            rgb(239, 244, 255) 100%));
+$theme-light: map.set($theme-light,
+        "text",
+        "paragraph-light",
+        rgb(122, 110, 170));
 $theme-light: map.set($theme-light, "text", "header2-text", rgb(40, 13, 95));
 
 .theme-dark {
-    --background-floating-bunny: #{map.get($theme-dark, "floating-bunny", "background-gradient")};
-    --text-paragraph: #{map.get($theme-dark, "text", "paragraph-dark")};
-    --heading-2: #{map.get($theme-dark, "text", "header2-text")};
+    --background-floating-bunny: #{map.get(
+ $theme-dark,
+    "floating-bunny",
+    "background-gradient"
+    )
 }
 
+;
+--text-paragraph: #{map.get($theme-dark, "text", "paragraph-dark")};
+--heading-2: #{map.get($theme-dark, "text", "header2-text")};
+}
 
 .theme-light {
-    --background-floating-bunny: #{map.get($theme-light, "floating-bunny", "background-gradient")};
-    --text-paragraph: #{map.get($theme-light, "text", "paragraph-light")};
-    --heading-2: #{map.get($theme-light, "text", "header2-text")};
+    --background-floating-bunny: #{map.get(
+ $theme-light,
+    "floating-bunny",
+    "background-gradient"
+    )
 }
 
-
+;
+--text-paragraph: #{map.get($theme-light, "text", "paragraph-light")};
+--heading-2: #{map.get($theme-light, "text", "header2-text")};
+}
 
 * {
     box-sizing: border-box;
@@ -43,36 +70,17 @@ body {
     height: 100vh;
 }
 
-//scrollbar
-
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    background: #000000;
-    color: purple;
-}
-
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    background-color: #c3b4ce;
-    border: none;
-}
-
-//end scrollbar
-
 .fb-floating-bunny {
+    margin-top: 56px;
 
     padding-top: 110px;
     padding-bottom: 150px;
-    @include mq('desktop');
+    @include mq("desktop");
     @include flex(column);
     position: relative;
     width: 100%;
     height: auto;
     background: var(--background-floating-bunny);
-    // margin-top: ;
-
 
     .fb-wrapper {
         color: var(--text-paragraph);
@@ -82,13 +90,11 @@ body {
         position: relative;
         z-index: 2;
 
-
         .fb-contents-section {
             text-align: left;
             width: 50%;
             flex-shrink: 1;
             padding-left: 60px;
-
 
             h2 {
                 padding-top: 20px;
@@ -107,17 +113,15 @@ body {
                 margin-top: 20px;
                 display: flex;
 
-                .button-aquagreen {
+                .fb-button {
                     width: 170px;
                     margin-right: 10px;
                 }
-
             }
 
             .link-aquagreen {
                 text-decoration: none;
             }
-
         }
 
         .fb-img-section {
@@ -139,9 +143,9 @@ body {
             .fb-thefloatingstars {
                 height: auto;
                 position: absolute;
-                width: 100%;
-                top: 0px;
-                right: 50px;
+                width: 90%;
+                top: 50px;
+                right: 100px;
                 z-index: 2;
 
                 .fb-star1 img {
@@ -164,25 +168,19 @@ body {
                     position: absolute;
                     width: 100%;
                 }
-
             }
-
         }
     }
 
     .fb-bottomgradient {
-
         position: absolute;
         bottom: -8px;
         width: 100%;
 
-
         svg {
             z-index: 1;
         }
-
     }
-
 }
 
 @include mq("laptop") {
@@ -233,99 +231,98 @@ body {
     }
 }
 
-    @include mq("tablet-small") {
-        .fb-floating-bunny {
-            .fb-wrapper {
-                @include flex(column-reverse, center);
+@include mq("tablet-small") {
+    .fb-floating-bunny {
+        .fb-wrapper {
+            @include flex(column-reverse, center);
 
-                .fb-contents-section {
-                    width: 100%;
-                }
+            .fb-contents-section {
+                width: 100%;
+            }
 
-                .fb-img-section {
-                    align-self: flex-end;
-                    right: 0;
-                    min-width: 10px;
-                    max-width: 150px;
+            .fb-img-section {
+                align-self: flex-end;
+                right: 0;
+                min-width: 10px;
+                max-width: 150px;
 
-                    img {
-                        padding-bottom: 80px;
-                        width: 20%;
-                    }
+                img {
+                    padding-bottom: 80px;
+                    width: 20%;
                 }
             }
         }
     }
+}
 
-        @include mq("phablet") {
-            .fb-floating-bunny {
-                .fb-wrapper {
-                    @include flex(column-reverse, center);
+@include mq("phablet") {
+    .fb-floating-bunny {
+        .fb-wrapper {
+            @include flex(column-reverse, center);
 
-                    .fb-contents-section {
-                        width: 100%;
-                    }
+            .fb-contents-section {
+                width: 100%;
+            }
 
-                    .fb-img-section {
-                        align-self: flex-end;
-                        right: 0;
-                        min-width: 10px;
-                        max-width: 150px;
+            .fb-img-section {
+                align-self: flex-end;
+                right: 0;
+                min-width: 10px;
+                max-width: 150px;
 
-                        img {
-                            padding-bottom: 80px;
-                            width: 20%;
-                        }
-                    }
+                img {
+                    padding-bottom: 80px;
+                    width: 20%;
                 }
             }
         }
+    }
+}
 
-            @include mq("phone-wide") {
-                .fb-floating-bunny {
-                    .fb-wrapper {
-                        @include flex(column-reverse, center);
+@include mq("phone-wide") {
+    .fb-floating-bunny {
+        .fb-wrapper {
+            @include flex(column-reverse, center);
 
-                        .fb-contents-section {
-                            width: 100%;
-                        }
-
-                        .fb-img-section {
-                            align-self: flex-end;
-                            right: 0;
-                            min-width: 10px;
-                            max-width: 150px;
-
-                            img {
-                                padding-bottom: 80px;
-                                width: 20%;
-                            }
-                        }
-                    }
-                }
+            .fb-contents-section {
+                width: 100%;
             }
 
-                @include mq("phone") {
-                    .fb-floating-bunny {
-                        .fb-wrapper {
-                            @include flex(column-reverse, center);
+            .fb-img-section {
+                align-self: flex-end;
+                right: 0;
+                min-width: 10px;
+                max-width: 150px;
 
-                            .fb-contents-section {
-                                width: 100%;
-                            }
-
-                            .fb-img-section {
-                                align-self: flex-end;
-                                right: 0;
-                                min-width: 10px;
-                                max-width: 150px;
-
-                                img {
-                                    padding-bottom: 80px;
-                                    width: 20%;
-                                }
-                            }
-                        }
-                    }
+                img {
+                    padding-bottom: 80px;
+                    width: 20%;
                 }
-                
+            }
+        }
+    }
+}
+
+@include mq("phone") {
+    .fb-floating-bunny {
+        .fb-wrapper {
+            @include flex(column-reverse, center);
+
+            .fb-contents-section {
+                width: 100%;
+            }
+
+            .fb-img-section {
+                align-self: flex-end;
+                right: 0;
+                min-width: 10px;
+                max-width: 150px;
+
+                img {
+                    padding-bottom: 80px;
+                    width: 20%;
+                }
+            }
+        }
+    }
+}

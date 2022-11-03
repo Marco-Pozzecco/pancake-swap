@@ -6,7 +6,7 @@
     import img2 from "../../resources/stonks@2x.webp"
     import img3 from "../../resources/pie@2x.webp"
 
-    export default function HomeEarn() {
+    export function HomeEarn() {
         const switchBoxes = useRef()
 
         function handleClick() {

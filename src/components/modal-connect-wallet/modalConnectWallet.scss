@@ -1,0 +1,253 @@
+// Use rules
+@use "../../components/buttons/buttons";
+@use "sass:map";
+
+// Import rules
+@import "../../abstracts/mixins";
+@import "../../abstracts/colors";
+
+$theme-dark: map.set($theme-dark, "popup-bg", $footer-background);
+$theme-dark: map.set($theme-dark, "text-color", white);
+$theme-dark: map.set($theme-dark, "popup-modal1-bg", $popup-gradient);
+$theme-dark: map.set($theme-dark, "border-bottom-pp", rgb(56, 50, 65));
+
+$theme-light: map.set($theme-light, "popup-bg", #fff);
+$theme-light: map.set($theme-light, "text-color", $background-color-dk);
+$theme-light: map.set($theme-light, "popup-modal1-bg", $header-popup-gradient);
+$theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
+
+.theme-dark {
+    --popup-bg: #{map.get($theme-dark , "popup-bg")};
+    --text-color: #{map.get($theme-dark , "text-color")};
+    --popup-modal1-bg: #{map.get($theme-dark , "popup-modal1-bg")};
+    --border-bottom-pp: #{map.get($theme-dark , "border-bottom-pp")};
+}
+
+
+.theme-light {
+    --popup-bg: #{map.get($theme-light , "popup-bg")};
+    --text-color: #{map.get($theme-light , "text-color")};
+    --popup-modal1-bg: #{map.get($theme-light , "popup-modal1-bg")};
+    --border-bottom-pp: #{map.get($theme-light , "border-bottom-pp")};
+}
+
+
+
+.modalConnectWallet {
+    @include flex(column);
+    position: fixed;
+    width: 792px;
+    height: 490px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 200ms ease-in-out;
+    z-index: 999;
+
+    //opacity: 1;
+    .bloc-tabs {
+        display: flex;
+        //position: relative;
+
+    }
+
+    .tabs {
+        padding: 8px;
+        text-align: center;
+        width: auto;
+        background: $primary-dk;
+        cursor: pointer;
+        box-sizing: content-box;
+        position: relative;
+        outline: none;
+        color: $input-color-dk;
+        border-style: none;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0%;
+        font-size: 14px;
+        font-weight: 600;
+        //@include setRadius(16px 16px 0px 0px);
+    }
+
+    .active-tabs {
+        background-color: $input-color-dk;
+        color: $primary-dk;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 792px;
+        height: 490px;
+        margin: 0px auto 0;
+        background-color: var(--popup-modal1-bg);
+        background-image: var(--popup-modal1-bg);
+        border-radius: 30px;
+
+
+        .content-tabs {
+            flex-grow: 1;
+
+            .content {
+                //padding: 20px;
+                width: 100%;
+                height: 100%;
+                display: none;
+
+                .left-card {
+                    background-color: #d9d9d9;
+                    border-radius: 30px;
+                    width: 50%;
+                    height: 100%;
+                    left: 0;
+                    padding: 32px 48px 32px 48px;
+
+                    @include flex(column, space-evenly);
+
+                    .header {
+                        flex: 1;
+                        width: 100%;
+                        background-color: bisque;
+                    }
+
+                    .main-img-box {
+
+                        flex: 2;
+                        width: 100%;
+                        background-color: #fff;
+
+                        .grid {
+                            background-color: aqua;
+                            width: 100%;
+                            margin-bottom: 20px;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                            row-gap: 24px;
+                            column-gap: 16px;
+
+                            .img-box {
+                                @include flex(column, center, center);
+
+                                img {
+                                    width: 50px;
+                                    height: 50px;
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+
+                }
+
+                .right-card {}
+
+
+                p {
+                    color: var(--text-color);
+
+                }
+
+
+                h4 {
+                    padding-top: 5%;
+                }
+            }
+
+            .active-content {
+                display: flex;
+
+            }
+
+            .close-btn {
+                cursor: pointer;
+                border: none;
+                outline: none;
+                background: none;
+                color: $btn-bg-color;
+                font-size: 1.55rem;
+            }
+
+            .header {
+                color: var(--text-color);
+                margin-bottom: 20px;
+            }
+
+            h4 {
+                color: rgb(118, 69, 217);
+            }
+
+            a {
+                .margine {
+                    margin: 2px;
+                }
+            }
+        }
+
+    }
+
+    .second-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 48px 130px;
+        text-align: center;
+
+
+        * {
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 198px;
+            height: 178px;
+        }
+
+        .toggle-box {
+            @include flex(row)
+        }
+
+        .toggle-btn {
+            width: 56px;
+            height: 8px;
+            background-color: $nav-bar-dk;
+            border-radius: 16px 0px 0px 16px;
+            margin-right: 10px;
+        }
+
+        .toggle-btn-right {
+            width: 56px;
+            height: 8px;
+            background-color: $nav-bar-dk;
+            border-radius: 0px 16px 16px 0px;
+            margin-right: 10px;
+        }
+
+
+        .active-toggle {
+            background-color: $secondary-dk;
+            border-radius: 16px 0px 0px 16px;
+        }
+
+        .active-toggle-right {
+            background-color: $secondary-dk;
+            border-radius: 0px 16px 16px 0px;
+        }
+
+        .switchImg {
+            display: none;
+        }
+
+        .active-switchImg {
+            display: block;
+        }
+
+    }
+
+
+
+
+}
