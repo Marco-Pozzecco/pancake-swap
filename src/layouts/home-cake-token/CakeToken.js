@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "../../components/buttons/Button";
 import {LearnBtn} from "../../components/buttons/LearnBtn"
 // images imports
@@ -14,6 +14,20 @@ import topRight2x from "../../resources/home/cake/top-right@2x.webp";
 import "./cake-token.scss";
 
 export function CakeToken() {
+    let [token, setToken] = useState(null);
+
+    async function getPancakeSwapValue() {
+        let response = await fetch("https://api.coingecko.com/api/v3/coins/pancakeswap-token?tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=true");
+        let data = await response.json();
+        setToken(data);
+    }
+    
+    useEffect(() => {
+        getPancakeSwapValue();
+    }, [])
+
+    console.log(token);
+
     return (
         <section className="cake-token">
             <div className="cake-wrapper">
@@ -64,7 +78,7 @@ export function CakeToken() {
                     <div className="cake-circulating-supply">
                         <p className="text-subtle">Circulating Supply</p>
                         <p className="text-cake-stats" id="circulating-supply">
-                            139,897,449
+                            {token && token.market_data?.circulating_supply.toLocaleString("en")}
                         </p>
                     </div>
                     <div className="cake-supply">
