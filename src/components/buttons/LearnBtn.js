@@ -1,55 +1,9 @@
-import React from 'react'
+import React from "react";
 // import { Link } from 'react-router-dom'
-import { Button } from './Button'
-
+import {Button} from "./Button";
 
 export function LearnBtn() {
+    function openLearnBtn() {}
 
-    function openLearnBtn() {
-
-    }
-
-  return (
-    <Button type='noBorderButton'
-            text='Learn'
-            onClick={openLearnBtn}
-    />
- 
-
-
-
-
-  )
+    return <Button type="noBorderButton" text="Learn" onClick={openLearnBtn} />;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .nobordebtn
-
-
-
-
-
-

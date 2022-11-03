@@ -1,19 +1,8 @@
-import React from 'react'
-import { Button } from './Button'
+import React from "react";
+import {Button} from "./Button";
 
 export function TradeNowBtn() {
+    function openTradeNow() {}
 
-    function openTradeNow() {
-        
-    }
-
-  return (
-
-    <Button
-        type='fullButton'
-        action={openTradeNow}
-        text='Trade Now'
-
-    />
-  )
+    return <Button type="fullButton" action={openTradeNow} text="Trade Now" />;
 }
