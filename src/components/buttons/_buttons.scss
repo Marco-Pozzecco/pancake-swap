@@ -2,37 +2,8 @@
 @import "../../abstracts/mixins";
 @import "../../abstracts/colors";
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.linea {
-    height: 1px;
-    width: 90%;
-    background-color: white;
-}
-
-.linea-corta {
-    height: 1px;
-    width: 50%;
-    background-color: white;
-}
-
-// Causa errori con il resto del sito web
-// body {
-//     width: 100vw;
-//     height: 400vh;
-//     display: flex;
-//     justify-content: space-evenly;
-//     align-items: center;
-//     flex-direction: column;
-//     background-color:rgb(48, 47, 49);
-//     padding:  50px;
-// }
-
-button {
+// All buttons have these rules
+.generalButtonRules {
     font-size: 16px;
     padding: 0 24px;
     border-radius: 16px;
@@ -43,29 +14,41 @@ button {
     }
 }
 
-// -------------STILI DI BOTTONI------------------------------------------------
-
-// dalla HOME.................
-
-/* -------BOTTONE VERDE ACQUA----------- */
-.link-aquagreen {
+.fullButton {
     text-decoration: none;
+    @include flex();
+    background-color: $main-buttons-background-color; /* rgb(31, 199, 212)*/
+    border: none;
+    color: $main-buttons-color; /* white*/
+    height: 48px;
+    font-size: $main-buttons-font-size; /*16px*/
+    font-weight: $main-buttons-font-weigth; /*600*/
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
 
-    .button-aquagreen {
-        @include flex();
-        background-color: $main-buttons-background-color; /* rgb(31, 199, 212)*/
-        border: none;
-        color: $main-buttons-color; /* white*/
-        height: 48px;
-        font-size: $main-buttons-font-size; /*16px*/
-        font-weight: $main-buttons-font-weigth; /*600*/
-        box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
-
-        &:active {
-            transform: translateY(2px);
-        }
+    &:active {
+        transform: translateY(2px);
     }
 }
+
+.onlyBorderButton {
+    background-color: $ob-buttons-background-color; /*transparent*/
+    color: $ob-buttons-color; /* rgb(31, 199, 212)*/
+    border: $ob-buttons-border; /* 2px solid  rgb(31, 199, 212)*/
+    height: 48px; /**/
+    font-size: $ob-buttons-font-size; /*16px*/
+    font-weight: $ob-buttons-font-weigth; /*600*/
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
+
+.noBorderButton {
+    color: rgb(31, 199, 212);
+    background-color: transparent;
+    border: none;
+}
+
 /* -------BOTTONE POPUP NAVBAR----------- */
 .link-popup-navbar {
     text-decoration: none;
