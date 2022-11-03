@@ -60,11 +60,11 @@ export function WinPrizes() {
                             <h3>in BNB + CAKE won so far</h3>
                             <p>Predict the price trend of BNB or CAKE to win</p>
 
-                            <a href="#" className="link-aquagreen">
-                                <button className="button-aquagreen buttons-home">
-                                    Play
-                                </button>
-                            </a>
+                            <Button
+                                type="fullButton"
+                                text="Play"
+                                style={{width: "100%"}}
+                            />
                         </div>
                     </div>
                     <div className="card card-lottery">
@@ -85,7 +85,7 @@ export function WinPrizes() {
                             <Button
                                 type="fullButton"
                                 text="Buy tickets"
-                                svg={ticket}
+                                style={{width: "100%"}}
                             />
                         </div>
                     </div>
