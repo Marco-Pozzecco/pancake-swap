@@ -15,7 +15,7 @@ import cardTopRight from "../../resources/home/winPrizes/card-top-right-1024.web
 
 import crystalBall from "../../resources/svgs/crystal-ball.svg";
 import ticket from "../../resources/svgs/ticket.svg";
-import Button from "../../components/buttons/Buttons";
+import {Button} from "../../components/buttons/Button";
 
 export function WinPrizes() {
     return (

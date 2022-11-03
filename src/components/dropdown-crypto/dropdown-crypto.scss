@@ -17,15 +17,14 @@ $theme-light: map.set($theme-light, "icon-text-color", $primary-color);
 $theme-light: map.set($theme-light, "dropdown-line", $dropdown-line);
 
 .theme-dark {
-    --nav-bkground: #{map.get($theme-dark , "nav-bkground")};
-    --icon-text-color: #{map.get($theme-dark , "icon-text-color")};
+    --nav-bkground: #{map.get($theme-dark, "nav-bkground")};
+    --icon-text-color: #{map.get($theme-dark, "icon-text-color")};
     --dropdown-line: #{map.get($theme-dark, "dropdown-line")};
 }
 
 .theme-light {
-
-    --nav-bkground: #{map.get($theme-light , "nav-bkground")};
-    --icon-text-color: #{map.get($theme-light , "icon-text-color")};
+    --nav-bkground: #{map.get($theme-light, "nav-bkground")};
+    --icon-text-color: #{map.get($theme-light, "icon-text-color")};
     --dropdown-line: #{map.get($theme-light, "dropdown-line")};
 }
 
@@ -56,7 +55,7 @@ $theme-light: map.set($theme-light, "dropdown-line", $dropdown-line);
         top: 3rem;
         left: 2rem;
         background-color: var(--nav-bkground);
-        @include setRadius (15px);
+        @include setRadius(15px);
         width: 280px;
         transition: opacity 200ms easy-in-out;
         z-index: 98;

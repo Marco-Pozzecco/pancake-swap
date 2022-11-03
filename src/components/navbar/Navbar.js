@@ -16,9 +16,7 @@ import ModalConnectWallet from "../modal-connect-wallet/ModalConnectWallet";
 export function Navbar() {
     const [openModal, setOpenModal] = useState(false);
     const [openModalWallet, setOpenModalWallet] = useState(false);
-    const [selected, setSelected] = useState("")
-    
-
+    const [selected, setSelected] = useState("");
 
     return (
         <div>
@@ -165,29 +163,36 @@ export function Navbar() {
                         alt="setting icon"
                         onClick={() => setOpenModal(true)}></img>
 
-                    
                     <div>
                         <DropdownCrypto />
-                       
                     </div>
                     <div>
                         <span className="link-aquagreen">
-                            <button className="btn-navbar button-aquagreen"
-                            onClick={() => setOpenModalWallet(true)}>
+                            <button
+                                className="btn-navbar button-aquagreen"
+                                onClick={() => setOpenModalWallet(true)}>
                                 Connect Wallet
                             </button>
                         </span>
                     </div>
                 </section>
             </nav>
-            <ModalConnectWallet open={openModalWallet}
-            onClose={()=> setOpenModalWallet(false)}/>
-            <HpModalSettings open={openModal}
-                onClose={() => setOpenModal(false)}/>
-                
-            <div className={openModal === true || openModalWallet === true ? 'overlay overlay-active' : 'overlay'}
-             onClick={() => setOpenModal(false)}>
-             </div>
+            <ModalConnectWallet
+                open={openModalWallet}
+                onClose={() => setOpenModalWallet(false)}
+            />
+            <HpModalSettings
+                open={openModal}
+                onClose={() => setOpenModal(false)}
+            />
+
+            <div
+                className={
+                    openModal === true || openModalWallet === true
+                        ? "overlay overlay-active"
+                        : "overlay"
+                }
+                onClick={() => setOpenModal(false)}></div>
         </div>
     );
 }

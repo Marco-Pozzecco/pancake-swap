@@ -21,8 +21,6 @@ export default function Subnav(props) {
                     );
                 })}
             </ul>
-
-
-    </div>
-  );
+        </div>
+    );
 }

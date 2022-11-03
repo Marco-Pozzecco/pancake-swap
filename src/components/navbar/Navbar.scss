@@ -34,38 +34,34 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
 $theme-light: map.set($theme-light, "btn-bg-tx", $tertiary-color);
 $theme-light: map.set($theme-light, "btn-bg", $border_color);
 
-
 .theme-dark {
-    --fa-moon: #{map.get($theme-dark , "fa-moon")};
-    --fa-sun: #{map.get($theme-dark , "fa-sun" )};
-    --nav-bkground: #{map.get($theme-dark , "nav-bkground")};
-    --popup-bg: #{map.get($theme-dark , "popup-bg")};
-    --text-color: #{map.get($theme-dark , "text-color")};
-    --popup-modal1-bg: #{map.get($theme-dark , "popup-modal1-bg")};
-    --label-toggle-bg: #{map.get($theme-dark , "label-bg")};
-    --border-bottom-pp: #{map.get($theme-dark , "border-bottom-pp")};
-    --icon-text-color: #{map.get($theme-dark , "icon-text-color")};
-    --hover-nav-ul: #{map.get($theme-dark , "hover-nav-ul")};
-    --btn-bg-tx: #{map.get($theme-dark , "btn-bg-tx")};
-    --btn-bg: #{map.get($theme-dark , "btn-bg")};
-
-
+    --fa-moon: #{map.get($theme-dark, "fa-moon")};
+    --fa-sun: #{map.get($theme-dark, "fa-sun")};
+    --nav-bkground: #{map.get($theme-dark, "nav-bkground")};
+    --popup-bg: #{map.get($theme-dark, "popup-bg")};
+    --text-color: #{map.get($theme-dark, "text-color")};
+    --popup-modal1-bg: #{map.get($theme-dark, "popup-modal1-bg")};
+    --label-toggle-bg: #{map.get($theme-dark, "label-bg")};
+    --border-bottom-pp: #{map.get($theme-dark, "border-bottom-pp")};
+    --icon-text-color: #{map.get($theme-dark, "icon-text-color")};
+    --hover-nav-ul: #{map.get($theme-dark, "hover-nav-ul")};
+    --btn-bg-tx: #{map.get($theme-dark, "btn-bg-tx")};
+    --btn-bg: #{map.get($theme-dark, "btn-bg")};
 }
 
 .theme-light {
-    --fa-moon: #{map.get($theme-light , "fa-moon")};
-    --fa-sun: #{map.get($theme-light , "fa-sun" )};
-    --nav-bkground: #{map.get($theme-light , "nav-bkground")};
-    --popup-bg: #{map.get($theme-light , "popup-bg")};
-    --text-color: #{map.get($theme-light , "text-color")};
-    --popup-modal1-bg: #{map.get($theme-light , "popup-modal1-bg")};
-    --label-toggle-bg: #{map.get($theme-light , "label-bg")};
-    --border-bottom-pp: #{map.get($theme-light , "border-bottom-pp")};
-    --icon-text-color: #{map.get($theme-light , "icon-text-color")};
-    --hover-nav-ul: #{map.get($theme-light , "hover-nav-ul")};
-    --btn-bg-tx: #{map.get($theme-light , "btn-bg-tx")};
-    --btn-bg: #{map.get($theme-light , "btn-bg")};
-
+    --fa-moon: #{map.get($theme-light, "fa-moon")};
+    --fa-sun: #{map.get($theme-light, "fa-sun")};
+    --nav-bkground: #{map.get($theme-light, "nav-bkground")};
+    --popup-bg: #{map.get($theme-light, "popup-bg")};
+    --text-color: #{map.get($theme-light, "text-color")};
+    --popup-modal1-bg: #{map.get($theme-light, "popup-modal1-bg")};
+    --label-toggle-bg: #{map.get($theme-light, "label-bg")};
+    --border-bottom-pp: #{map.get($theme-light, "border-bottom-pp")};
+    --icon-text-color: #{map.get($theme-light, "icon-text-color")};
+    --hover-nav-ul: #{map.get($theme-light, "hover-nav-ul")};
+    --btn-bg-tx: #{map.get($theme-light, "btn-bg-tx")};
+    --btn-bg: #{map.get($theme-light, "btn-bg")};
 }
 
 .mobile-icon,
@@ -97,11 +93,9 @@ li a {
             color: $tertiary-color;
         }
     }
-
 }
 
 .menu-nav li {
-
     &:hover,
     &:focus {
         background-color: var(--hover-nav-ul);
@@ -110,7 +104,6 @@ li a {
         &:not(:last-child, :first-child) {
             border-radius: 5px;
         }
-
     }
 
     ul li:hover {
@@ -199,8 +192,6 @@ nav {
             width: 32px;
         }
 
-
-
         // .dropdown-nav {
         //     visibility: hidden;
         //     position: absolute;
@@ -259,7 +250,6 @@ nav {
 }
 
 .fa-svg-icon {
-
     // fill: $secondary-color;
     &:hover {
         color: rgb(154, 106, 255, 30%);
@@ -287,32 +277,24 @@ nav {
     z-index: 99;
 }
 
-
-
 //update untill now
 
-@include mq('tablet-small', 'tablet') {
+@include mq("tablet-small", "tablet") {
     nav {
         .flex {
-
             #money,
             .igZcUN,
             ul,
             .mini-logo {
                 display: none;
             }
-
         }
-
     }
-
-
 }
 
-@include mq('phone', 'phablet') {
+@include mq("phone", "phablet") {
     nav {
         .flex {
-
             #money,
             .igZcUN,
             .menu-nav ul,
@@ -323,7 +305,6 @@ nav {
             .mobile-icon,
             .logoBunny {
                 display: inline;
-
             }
 
             #main-logo {
@@ -334,7 +315,6 @@ nav {
                 font-size: 0;
                 width: 80px;
             }
-
         }
     }
 }

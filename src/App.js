@@ -8,6 +8,7 @@ import "../src/main.scss";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {Layout} from "./pages/Layout";
 import {Nft} from "./pages/nft/Nft";
+import {Perpetual} from "./pages/perpetual/Perpetual";
 
 export function App() {
     return (
@@ -16,11 +17,11 @@ export function App() {
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Home />} />
-                        <Route path="trade" element={<Trade />} />
-                        <Route path="earn" element={<Earn />} />
-                        <Route path="win" element={<Win />} />
-                        <Route path="nft" element={<Nft />} />
-                        {/* <Route path="win" element={<extra/>} /> */}
+                        <Route path="/trade" element={<Trade />} />
+                        <Route path="/earn" element={<Earn />} />
+                        <Route path="/win" element={<Win />} />
+                        <Route path="/nft" element={<Nft />} />
+                        <Route path="/perpetual" element={<Perpetual />} />
                         <Route path="*" element={<NoPage />} />
                     </Route>
                 </Routes>
