@@ -15,19 +15,17 @@ $theme-light: map.set($theme-light, "fa-moon", $footer-background);
 $theme-light: map.set($theme-light, "fa-sun", #f39c12);
 
 .theme-dark {
-    --fa-moon: #{map-get($theme-dark , "fa-moon")};
-    --fa-sun: #{map-get($theme-dark , "fa-sun" )};
-
+    --fa-moon: #{map-get($theme-dark, "fa-moon")};
+    --fa-sun: #{map-get($theme-dark, "fa-sun")};
 }
 
 .theme-light {
-    --fa-moon: #{map-get($theme-light , "fa-moon")};
-    --fa-sun: #{map-get($theme-light , "fa-sun" )};
-
+    --fa-moon: #{map-get($theme-light, "fa-moon")};
+    --fa-sun: #{map-get($theme-light, "fa-sun")};
 }
 
 i {
-    color: $primary-dk
+    color: $primary-dk;
 }
 
 // .menu-ul {  //no style for list including this class
@@ -41,8 +39,6 @@ i {
 //     visibility: visible;
 //     opacity: 1;
 // }
-
-
 
 .footer-box {
     width: 100%;
@@ -91,7 +87,6 @@ i {
 
                     &:hover {
                         text-decoration: underline;
-
                     }
                 }
             }
@@ -104,7 +99,6 @@ i {
 
         .flex2 {
             @include flex(row, space-between, center);
-
         }
 
         #hover:hover {
@@ -125,7 +119,6 @@ i {
             padding: 40px 0px 40px 0px;
 
             div {
-
                 //@include flex(row, space-between, center);
                 div,
                 p {
@@ -138,7 +131,7 @@ i {
                     position: absolute;
                     top: -1rem;
                     left: -3rem;
-                    background-color: #7A6EAA;
+                    background-color: #7a6eaa;
                     border-radius: 1%;
                     width: 12rem;
                     //height: 14rem;
@@ -153,7 +146,6 @@ i {
                         margin-bottom: 5px;
                     }
                 }
-
 
                 .button-aquagreen {
                     width: 149px;
@@ -182,7 +174,6 @@ i {
             width: 50px;
             transform: scale(1);
             z-index: 1;
-
         }
 
         .label3 .ball3 {
@@ -206,10 +197,9 @@ i {
 
         //  }
 
-        .checkbx3:checked+.label3 .ball3 {
+        .checkbx3:checked + .label3 .ball3 {
             transform: translateX(24px);
         }
-
 
         .fa-moon {
             color: var(--fa-moon);
@@ -233,14 +223,12 @@ i {
                 //color: $primary-color;
                 border: 1px solid $primary-color;
             }
-
-
         }
 
-        @include mq('tablet-small', 'tablet') {}
+        @include mq("tablet-small", "tablet") {
+        }
 
-        @include mq('phone', 'phablet') {
-
+        @include mq("phone", "phablet") {
             .footer-box {
                 .main-footer {
                     display: flex;
@@ -257,3 +245,6 @@ i {
                     z-index: 2;
                 }
             }
+        }
+    }
+}
