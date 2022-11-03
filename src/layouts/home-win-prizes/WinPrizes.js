@@ -1,6 +1,5 @@
 import React from "react";
 import "./_win-prizes.scss";
-import {randomNumInRange, callFuncAtInterval} from "../../script/randomize.mjs";
 // import images
 import ball2 from "../../resources/home/winPrizes/ball2-1024.webp";
 import ball4 from "../../resources/home/winPrizes/ball4-1024.webp";
@@ -15,7 +14,8 @@ import cardTopRight from "../../resources/home/winPrizes/card-top-right-1024.web
 
 import crystalBall from "../../resources/svgs/crystal-ball.svg";
 import ticket from "../../resources/svgs/ticket.svg";
-import Button from "../../components/buttons/Buttons";
+// Components
+import {Button} from "../../components/buttons/Button";
 
 export function WinPrizes() {
     return (
@@ -83,8 +83,9 @@ export function WinPrizes() {
                             </p>
 
                             <Button
-                                style="button-acquagreen buttons-home"
+                                type="fullButton"
                                 text="Buy tickets"
+                                svg={ticket}
                             />
                         </div>
                     </div>
