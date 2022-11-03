@@ -34,39 +34,45 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
 $theme-light: map.set($theme-light, "btn-bg-tx", $tertiary-color);
 $theme-light: map.set($theme-light, "btn-bg", $border_color);
 
+
 .theme-dark {
-    --fa-moon: #{map.get($theme-dark, "fa-moon")};
-    --fa-sun: #{map.get($theme-dark, "fa-sun")};
-    --nav-bkground: #{map.get($theme-dark, "nav-bkground")};
-    --popup-bg: #{map.get($theme-dark, "popup-bg")};
-    --text-color: #{map.get($theme-dark, "text-color")};
-    --popup-modal1-bg: #{map.get($theme-dark, "popup-modal1-bg")};
-    --label-toggle-bg: #{map.get($theme-dark, "label-bg")};
-    --border-bottom-pp: #{map.get($theme-dark, "border-bottom-pp")};
-    --icon-text-color: #{map.get($theme-dark, "icon-text-color")};
-    --hover-nav-ul: #{map.get($theme-dark, "hover-nav-ul")};
-    --btn-bg-tx: #{map.get($theme-dark, "btn-bg-tx")};
-    --btn-bg: #{map.get($theme-dark, "btn-bg")};
+    --fa-moon: #{map.get($theme-dark , "fa-moon")};
+    --fa-sun: #{map.get($theme-dark , "fa-sun" )};
+    --nav-bkground: #{map.get($theme-dark , "nav-bkground")};
+    --popup-bg: #{map.get($theme-dark , "popup-bg")};
+    --text-color: #{map.get($theme-dark , "text-color")};
+    --popup-modal1-bg: #{map.get($theme-dark , "popup-modal1-bg")};
+    --label-toggle-bg: #{map.get($theme-dark , "label-bg")};
+    --border-bottom-pp: #{map.get($theme-dark , "border-bottom-pp")};
+    --icon-text-color: #{map.get($theme-dark , "icon-text-color")};
+    --hover-nav-ul: #{map.get($theme-dark , "hover-nav-ul")};
+    --btn-bg-tx: #{map.get($theme-dark , "btn-bg-tx")};
+    --btn-bg: #{map.get($theme-dark , "btn-bg")};
+
+
 }
+
 .theme-light {
-    --fa-moon: #{map.get($theme-light, "fa-moon")};
-    --fa-sun: #{map.get($theme-light, "fa-sun")};
-    --nav-bkground: #{map.get($theme-light, "nav-bkground")};
-    --popup-bg: #{map.get($theme-light, "popup-bg")};
-    --text-color: #{map.get($theme-light, "text-color")};
-    --popup-modal1-bg: #{map.get($theme-light, "popup-modal1-bg")};
-    --label-toggle-bg: #{map.get($theme-light, "label-bg")};
-    --border-bottom-pp: #{map.get($theme-light, "border-bottom-pp")};
-    --icon-text-color: #{map.get($theme-light, "icon-text-color")};
-    --hover-nav-ul: #{map.get($theme-light, "hover-nav-ul")};
-    --btn-bg-tx: #{map.get($theme-light, "btn-bg-tx")};
-    --btn-bg: #{map.get($theme-light, "btn-bg")};
+    --fa-moon: #{map.get($theme-light , "fa-moon")};
+    --fa-sun: #{map.get($theme-light , "fa-sun" )};
+    --nav-bkground: #{map.get($theme-light , "nav-bkground")};
+    --popup-bg: #{map.get($theme-light , "popup-bg")};
+    --text-color: #{map.get($theme-light , "text-color")};
+    --popup-modal1-bg: #{map.get($theme-light , "popup-modal1-bg")};
+    --label-toggle-bg: #{map.get($theme-light , "label-bg")};
+    --border-bottom-pp: #{map.get($theme-light , "border-bottom-pp")};
+    --icon-text-color: #{map.get($theme-light , "icon-text-color")};
+    --hover-nav-ul: #{map.get($theme-light , "hover-nav-ul")};
+    --btn-bg-tx: #{map.get($theme-light , "btn-bg-tx")};
+    --btn-bg: #{map.get($theme-light , "btn-bg")};
+
 }
 
 .mobile-icon,
 .logoBunny {
     display: none;
 }
+
 .icon {
     i {
         color: $primary-color;
@@ -82,23 +88,31 @@ li a {
     color: var(--icon-text-color);
     font-size: 16px;
     list-style: none;
+
     li {
         display: flex;
         justify-content: space-between;
+
         i {
             color: $tertiary-color;
         }
     }
+
 }
+
 .menu-nav li {
+
     &:hover,
     &:focus {
         background-color: var(--hover-nav-ul);
         border-radius: 0px;
+
         &:not(:last-child, :first-child) {
             border-radius: 5px;
         }
+
     }
+
     ul li:hover {
         background-color: var(--hover-nav-ul);
         border-radius: 15%;
@@ -108,6 +122,7 @@ li a {
 .menu-ul {
     list-style: none;
 }
+
 nav {
     @include flex(row, space-between, center);
     background-color: var(--nav-bkground);
@@ -120,30 +135,38 @@ nav {
     border-bottom: 1px solid var(--border-bottom-pp);
     transition: top 0.2s ease 0;
     transform: translate3d(0px, 0px, 0px);
+
     .flex {
         @include flex(center);
+
         div,
-        h2,
-        ul {
+        h2 {
             padding: 5px;
             cursor: pointer;
         }
+
         .active {
             color: $secondary-dk;
             border-bottom: 2px solid $btn-bg-color;
         }
+
         p {
             color: var(--icon-text-color);
             font-size: 16px;
         }
-        ul {
+
+        .menu-nav-ul {
             display: flex;
+            padding: 5px;
+            cursor: pointer;
+
             li {
                 list-style: none;
                 color: var(--icon-text-color);
                 font-size: 16px;
                 padding: 15px;
                 position: relative;
+
                 &:hover ul {
                     opacity: 1;
                     visibility: visible;
@@ -163,6 +186,7 @@ nav {
                     opacity: 0;
                     visibility: hidden;
                     transition: opacity 200ms easy-in-out;
+
                     li.line-dd {
                         border-bottom: 1px solid $input-color;
                         border-top: 1px solid $input-color;
@@ -170,46 +194,54 @@ nav {
                 }
             }
         }
+
         #hover:hover {
             width: 32px;
         }
 
-        .dropdown {
-            visibility: hidden;
-            position: absolute;
-            top: 2.5rem;
-            background-color: #7a6eaa;
-            border-radius: 1%;
-            width: 12rem;
-            //height: 14rem;
-            display: flex;
-            flex-direction: column;
-            opacity: 0;
-            padding: 2px;
-            transition: opacity 200ms easy-in-out;
-            text-align: center;
-            color: #fff;
-            li {
-                margin-bottom: 5px;
-            }
-        }
+
+
+        // .dropdown-nav {
+        //     visibility: hidden;
+        //     position: absolute;
+        //     top: 10rem;
+        //     background-color: #7A6EAA;
+        //     border-radius: 1%;
+        //     width: 12rem;
+        //     //height: 14rem;
+        //     display: flex;
+        //     flex-direction: column;
+        //     //opacity: 0;
+        //     padding: 2px;
+        //     transition: opacity 200ms easy-in-out;
+        //     text-align: center;
+        //     color: #fff;
+
+        //     li {
+        //         margin-bottom: 5px;
+        //     }
+        // }
 
         .btn-gear {
             border: none;
             background-color: transparent;
+
             i {
                 color: $primary-color;
             }
+
             &:hover {
                 color: rgb(154, 106, 255, 30%);
             }
         }
+
         .button-aquagreen {
             width: 149px;
             height: 32px;
             margin: 2px 4px 4px 0px;
             padding: 0px 16px;
         }
+
         .button-navbar-bnb {
             width: 220px;
             height: 32px;
@@ -217,59 +249,92 @@ nav {
             padding: 0px 16px 0px 0px;
             color: var(--btn-bg-tx);
             background-color: var(--btn-bg);
+
             img {
                 width: 30px;
                 height: 30px;
             }
-            // .fa-svg-icon{
-            //     fill: red;
-            // }
         }
     }
 }
 
 .fa-svg-icon {
+
     // fill: $secondary-color;
     &:hover {
         color: rgb(154, 106, 255, 30%);
         cursor: pointer;
     }
 }
-//update untill now
 
-@include mq("tablet-small", "tablet") {
-    nav {
-        .flex {
-            #money,
-            .igZcUN,
-            ul,
-            .mini-logo {
-                display: none;
-            }
-        }
-    }
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(244, 238, 255, 0.6);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+    z-index: 99;
+    opacity: 0;
 }
 
-@include mq("phone", "phablet") {
+.overlay-active {
+    opacity: 1;
+    z-index: 99;
+}
+
+
+
+//update untill now
+
+@include mq('tablet-small', 'tablet') {
     nav {
         .flex {
+
             #money,
             .igZcUN,
             ul,
             .mini-logo {
                 display: none;
             }
+
+        }
+
+    }
+
+
+}
+
+@include mq('phone', 'phablet') {
+    nav {
+        .flex {
+
+            #money,
+            .igZcUN,
+            .menu-nav ul,
+            .mini-logo {
+                display: none;
+            }
+
             .mobile-icon,
             .logoBunny {
                 display: inline;
+
             }
+
             #main-logo {
                 display: none;
             }
+
             .button-navbar-bnb {
                 font-size: 0;
                 width: 80px;
             }
+
         }
     }
 }
