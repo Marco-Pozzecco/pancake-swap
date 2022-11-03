@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from "../../components/buttons/Button";
+import {LearnBtn} from "../../components/buttons/LearnBtn"
 // images imports
 import bottomRight from "../../resources/home/cake/bottom-right.webp";
 import bottomRight2x from "../../resources/home/cake/bottom-right@2x.webp";
@@ -27,18 +29,11 @@ export function CakeToken() {
                             it... heck, you can even vote with it!
                         </p>
                         <div className="cake-info-buttons">
-                            <a
-                                href="#links to swap page"
-                                className="link-aquagreen">
-                                <button className="button-aquagreen buttons-home">
-                                    Buy CAKE
-                                </button>
-                            </a>
-                            <a
-                                href="#links to documentation"
-                                className="learn-link">
-                                Learn
-                            </a>
+                            <Button 
+                                type="fullButton"
+                                text="Buy CAKE"
+                            />
+                            <LearnBtn />
                         </div>
                     </div>
                     <div className="cake-coins">

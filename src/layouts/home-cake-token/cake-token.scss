@@ -80,10 +80,6 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
             .cake-info {
                 width: calc(100% - 400px);
 
-                & * {
-                    width: 100%;
-                }
-
                 h1 {
                     font-size: 40px;
                     font-weight: 600;
@@ -239,10 +235,6 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
                 .cake-info {
                     width: 100%;
 
-                    & * {
-                        width: 100%;
-                    }
-
                     h1 {
                         font-size: 40px;
                         font-weight: 600;
@@ -392,10 +384,6 @@ $theme-light: map.set($theme-light, "text", "span-text", rgb(154, 106, 255));
 
                 .cake-info {
                     width: 100%;
-
-                    & * {
-                        width: 100%;
-                    }
 
                     h1 {
                         font-size: 32px;
