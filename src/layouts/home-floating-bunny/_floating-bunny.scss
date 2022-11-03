@@ -183,50 +183,18 @@ body {
     }
 }
 
-@include mq("laptop") {
-    .fb-floating-bunny {
-        .fb-wrapper {
-            @include flex(column-reverse, center);
-
-            .fb-contents-section {
-                width: 100%;
-            }
-
-            .fb-img-section {
-                align-self: flex-end;
-                right: 0;
-                min-width: 10px;
-                max-width: 150px;
-
-                img {
-                    padding-bottom: 130px;
-                    width: 20%;
-                }
-            }
-        }
-    }
-}
-
 @include mq("tablet") {
     .fb-floating-bunny {
         .fb-wrapper {
-            @include flex(column-reverse, center);
-
             .fb-contents-section {
-                width: 100%;
-            }
-
-            .fb-img-section {
-                align-self: flex-end;
-                right: 0;
-                min-width: 10px;
-                max-width: 150px;
-
-                img {
-                    padding-bottom: 80px;
-                    width: 20%;
+                h2 {
+                    padding-top: 20px;
+                    font-size: 48px;
+                    font-weight: 600;
+                    line-height: 1.1;
                 }
             }
+
         }
     }
 }
@@ -236,9 +204,15 @@ body {
         .fb-wrapper {
             @include flex(column-reverse, center);
 
-            .fb-contents-section {
-                width: 100%;
-            }
+                .fb-contents-section {
+                    width: 100%;
+                    h2 {
+                        padding-top: 20px;
+                        font-size: 48px;
+                        font-weight: 600;
+                        line-height: 1.1;
+                    }
+                }
 
             .fb-img-section {
                 align-self: flex-end;
@@ -247,8 +221,7 @@ body {
                 max-width: 150px;
 
                 img {
-                    padding-bottom: 80px;
-                    width: 20%;
+                    width: 50%;
                 }
             }
         }
@@ -260,9 +233,16 @@ body {
         .fb-wrapper {
             @include flex(column-reverse, center);
 
-            .fb-contents-section {
-                width: 100%;
-            }
+                .fb-contents-section {
+                    width: 100%;
+
+                    h2 {
+                        padding-top: 20px;
+                        font-size: 48px;
+                        font-weight: 600;
+                        line-height: 1.1;
+                    }
+                }
 
             .fb-img-section {
                 align-self: flex-end;
@@ -271,8 +251,7 @@ body {
                 max-width: 150px;
 
                 img {
-                    padding-bottom: 80px;
-                    width: 20%;
+                    width: 50%;
                 }
             }
         }
@@ -284,9 +263,15 @@ body {
         .fb-wrapper {
             @include flex(column-reverse, center);
 
-            .fb-contents-section {
-                width: 100%;
-            }
+                .fb-contents-section {
+                    width: 100%;
+                    h2 {
+                        padding-top: 20px;
+                        font-size: 48px;
+                        font-weight: 600;
+                        line-height: 1.1;
+                    }
+                }
 
             .fb-img-section {
                 align-self: flex-end;
@@ -295,8 +280,7 @@ body {
                 max-width: 150px;
 
                 img {
-                    padding-bottom: 80px;
-                    width: 20%;
+                    width: 50%;
                 }
             }
         }
@@ -308,9 +292,15 @@ body {
         .fb-wrapper {
             @include flex(column-reverse, center);
 
-            .fb-contents-section {
-                width: 100%;
-            }
+                .fb-contents-section {
+                    width: 100%;
+                    h2 {
+                        padding-top: 20px;
+                        font-size: 48px;
+                        font-weight: 600;
+                        line-height: 1.1;
+                    }
+                }
 
             .fb-img-section {
                 align-self: flex-end;
@@ -319,8 +309,7 @@ body {
                 max-width: 150px;
 
                 img {
-                    padding-bottom: 80px;
-                    width: 20%;
+                    width: 50%;
                 }
             }
         }
