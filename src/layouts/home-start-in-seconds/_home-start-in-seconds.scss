@@ -85,7 +85,7 @@
             text-decoration: underline;
         }
 
-        & .mainbuttons {
+        & .connectWallet {
             position: relative;
             -webkit-box-align: center;
             align-items: center;
@@ -112,7 +112,7 @@
         }
     }
 
-     .mainbuttons:hover {
+     .connectWallet:hover {
         opacity: 50%;
         transition: 0.2s ease-in-out;
     }

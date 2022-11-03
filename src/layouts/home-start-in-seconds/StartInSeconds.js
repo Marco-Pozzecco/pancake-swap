@@ -13,17 +13,17 @@ function StartInSeconds() {
             <div className="box-img-animated-1">
                 <div className="img-down" id="img-down-res">
                     <picture>
-                        <img className="first-img" src="https://pancakeswap.finance/images/home/flying-pancakes/1-bottom@2x.webp" alt="Pancake flying on the bottom" />
+                        <img className="first-img" src="https://pancakeswap.finance/images/home/flying-pancakes/1-bottom@2x.webp"/>
                     </picture>
                 </div>
                 <div className="img-middle" id="img-middle-res">
                     <picture>
-                        <img className="second-img" src="https://pancakeswap.finance/images/home/flying-pancakes/1-left@2x.webp" alt="Pancake flying on the left" />
+                        <img className="second-img" src="https://pancakeswap.finance/images/home/flying-pancakes/1-left@2x.webp"/>
                     </picture>
                 </div>
                 <div className="img-up" id="img-up-res">
                     <picture>
-                        <img className="third-img" src="https://pancakeswap.finance/images/home/flying-pancakes/1-top@2x.webp" alt="Pancake flying on the top" />
+                        <img className="third-img" src="https://pancakeswap.finance/images/home/flying-pancakes/1-top@2x.webp"/>
                     </picture>
                 </div>
             </div>
@@ -32,17 +32,17 @@ function StartInSeconds() {
             <div className="box-img-animated-2">
                 <div className="img-down-2" id="img-down-res-2">
                     <picture>
-                        <img className="first-img-2" src="https://pancakeswap.finance/images/home/flying-pancakes/2-bottom@2x.webp" alt="Pancake flying on the bottom" />
+                        <img className="first-img-2" src="https://pancakeswap.finance/images/home/flying-pancakes/2-bottom@2x.webp"/>
                     </picture>
                 </div>
                 <div className="img-middle-2" id="img-middle-res-2">
                     <picture>
-                        <img className="second-img-2" src="https://pancakeswap.finance/images/home/flying-pancakes/2-top@2x.webp" alt="Pancake flying on the left" />
+                        <img className="second-img-2" src="https://pancakeswap.finance/images/home/flying-pancakes/2-top@2x.webp"/>
                     </picture>
                 </div>
                 <div className="img-up-2" id="img-up-res-2">
                     <picture>
-                        <img className="third-img-2" src="https://pancakeswap.finance/images/home/flying-pancakes/2-right@2x.webp" alt="Pancake flying on the top" />
+                        <img className="third-img-2" src="https://pancakeswap.finance/images/home/flying-pancakes/2-right@2x.webp"/>
                     </picture>
                 </div>
             </div>
@@ -60,7 +60,7 @@ function StartInSeconds() {
                 <a href="https://docs.pancakeswap.finance" target="_blank" className="link-a">Learn how to start</a>
                 <div className="container-btn">
                 </div>
-                <button className="mainbuttons">Connect Wallet</button>
+                <button className="connectWallet">Connect Wallet</button>
             </div>
         </div>
      );
