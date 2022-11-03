@@ -8,59 +8,55 @@
 @import "../../abstracts/animations";
 
 // Set colori tema scuro
-$theme-dark: map.set(
-    $theme-dark,
-    "floating-bunny",
-    "background-gradient",
-    linear-gradient(
-        180deg,
-        rgba(22, 9, 49, 1) 0%,
-        rgba(22, 9, 49, 1) 47%,
-        rgba(19, 8, 43, 1) 65%,
-        rgba(11, 5, 25, 1) 100%,
-        rgba(0, 0, 0, 1) 100%
-    )
-);
+$theme-dark: map.set($theme-dark,
+        "floating-bunny",
+        "background-gradient",
+        linear-gradient(180deg,
+            rgba(22, 9, 49, 1) 0%,
+            rgba(22, 9, 49, 1) 47%,
+            rgba(19, 8, 43, 1) 65%,
+            rgba(11, 5, 25, 1) 100%,
+            rgba(0, 0, 0, 1) 100%));
 $theme-dark: map.set($theme-dark, "text", "paragraph-dark", rgb(154, 106, 255));
 $theme-dark: map.set($theme-dark, "text", "header2-text", rgb(244, 238, 255));
 
 // Set colori tema chiaro
-$theme-light: map.set(
-    $theme-light,
-    "floating-bunny",
-    "background-gradient",
-    linear-gradient(
-        102deg,
-        rgba(231, 252, 255, 1) 100%,
-        rgb(239, 244, 255) 100%
-    )
-);
-$theme-light: map.set(
-    $theme-light,
-    "text",
-    "paragraph-light",
-    rgb(122, 110, 170)
-);
+$theme-light: map.set($theme-light,
+        "floating-bunny",
+        "background-gradient",
+        linear-gradient(102deg,
+            rgba(231, 252, 255, 1) 100%,
+            rgb(239, 244, 255) 100%));
+$theme-light: map.set($theme-light,
+        "text",
+        "paragraph-light",
+        rgb(122, 110, 170));
 $theme-light: map.set($theme-light, "text", "header2-text", rgb(40, 13, 95));
 
 .theme-dark {
     --background-floating-bunny: #{map.get(
-            $theme-dark,
-            "floating-bunny",
-            "background-gradient"
-        )};
-    --text-paragraph: #{map.get($theme-dark, "text", "paragraph-dark")};
-    --heading-2: #{map.get($theme-dark, "text", "header2-text")};
+ $theme-dark,
+    "floating-bunny",
+    "background-gradient"
+    )
+}
+
+;
+--text-paragraph: #{map.get($theme-dark, "text", "paragraph-dark")};
+--heading-2: #{map.get($theme-dark, "text", "header2-text")};
 }
 
 .theme-light {
     --background-floating-bunny: #{map.get(
-            $theme-light,
-            "floating-bunny",
-            "background-gradient"
-        )};
-    --text-paragraph: #{map.get($theme-light, "text", "paragraph-light")};
-    --heading-2: #{map.get($theme-light, "text", "header2-text")};
+ $theme-light,
+    "floating-bunny",
+    "background-gradient"
+    )
+}
+
+;
+--text-paragraph: #{map.get($theme-light, "text", "paragraph-light")};
+--heading-2: #{map.get($theme-light, "text", "header2-text")};
 }
 
 * {
@@ -74,24 +70,6 @@ body {
     height: 100vh;
 }
 
-//scrollbar
-
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    background: #000000;
-    color: purple;
-}
-
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    background-color: #c3b4ce;
-    border: none;
-}
-
-//end scrollbar
-
 .fb-floating-bunny {
     margin-top: 56px;
 
@@ -103,7 +81,6 @@ body {
     width: 100%;
     height: auto;
     background: var(--background-floating-bunny);
-    // margin-top: ;
 
     .fb-wrapper {
         color: var(--text-paragraph);
@@ -136,7 +113,7 @@ body {
                 margin-top: 20px;
                 display: flex;
 
-                .button-aquagreen {
+                .fb-button {
                     width: 170px;
                     margin-right: 10px;
                 }
