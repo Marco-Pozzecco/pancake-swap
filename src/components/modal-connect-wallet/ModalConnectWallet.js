@@ -32,8 +32,6 @@ export default function ModalConnectWallet({open, onClose}) {
     setSwitchImg(index)
   }
 
-  
-
   const styleTab1 = {
     left: '-12rem'
   }

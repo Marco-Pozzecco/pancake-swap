@@ -124,15 +124,13 @@ i {
 
         .bottom-footer-2 {
             padding: 40px 0px 40px 0px;
+            display: flex;
+            background-color: #f39c12;
 
-            div {
-
-                //@include flex(row, space-between, center);
-                div,
-                p {
-                    padding-right: 22px;
-                    color: $primary-dk;
-                }
+            .mqflex {
+                display: flex;
+                align-items: center;
+                background-color: aqua;
 
                 .dropdown {
                     //visibility: hidden;
@@ -154,15 +152,15 @@ i {
                         margin-bottom: 5px;
                     }
                 }
-
-
-                .button-aquagreen {
-                    width: 149px;
-                    height: 32px;
-                    margin: 2px 4px 4px 0px;
-                    padding: 0px 16px;
-                }
             }
+
+            .button-aquagreen {
+                width: 149px;
+                height: 32px;
+                margin: 2px 4px 4px 0px;
+                padding: 0px 16px;
+            }
+
         }
 
         .checkbx3 {
@@ -232,10 +230,33 @@ i {
 @include mq('phone', 'phablet') {
 
     .footer-box {
-        .main-footer {
-            display: flex;
-            flex-direction: column;
-        }
+        .external-box {
+            .main-footer {
+                display: flex;
+                flex-direction: column;
+                order: 3;
+            }
 
+            .logoFlex {
+                display: flex;
+                order: 1;
+            }
+
+            .bottom-footer {
+                order: 4;
+            }
+
+        }
+    }
+
+    .bottom-footer2 {
+        order: 2;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .mqflex {
+        display: flex;
+        //justify-content: flex-start;
     }
 }

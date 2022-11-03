@@ -10,6 +10,7 @@ import github from "../../resources/footer/github.svg"
 import twitter from "../../resources/footer/twitter.svg"
 import {LanguageSelector} from "../language-selector/LanguageSelector"
 import {HandleThemeColor} from "../../script/HandleThemeColor"
+import Checkbox from "../checkbox/Checkbox"
 
 
 
@@ -80,7 +81,7 @@ export function Footer() {
             <li><a href="https://docs.pancakeswap.finance/hiring/become-a-chef">Careers</a></li>
           </ul>
         </div>
-        <div className="flex2">
+        <div className="flex2 logoFlex">
           <h1>
             <img src={logo} alt="logo"></img>
           </h1>
@@ -99,9 +100,9 @@ export function Footer() {
         </ul>
       </section>
       <hr className="line"></hr>
-      <section className="bottom-footer-2 flex2">
-        <div className="flex2">
-          <HandleThemeColor/>
+      <section className="bottom-footer-2">
+        <div className="mqflex">
+          <Checkbox/>
           <LanguageSelector />
         </div>
         <div className="flex2">

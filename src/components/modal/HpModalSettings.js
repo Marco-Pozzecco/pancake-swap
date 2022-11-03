@@ -1,36 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { HandleThemeColor } from '../../script/HandleThemeColor'
 //import HandleThemeColor from '../../script/HandleThemeColor';
 import './hp_modal_settings.scss'
 
 
 export function HpModalSettings({open, onClose}) {
 
-    const [theme, setTheme] = useState()
+    const {theme, handleThemeColor} = HandleThemeColor()
 
-    function handleThemeColor(event){
-        const checked = event.target.checked
-        //const dark = !checked
-        var chk3 = document.getElementById("chk3");
-        //const logo = document.getElementById('main-logo');
-        
-        setTheme(checked)
-        console.log(checked)
-        if(theme){
-            console.log('theme-dark')
-            document.body.classList.add('theme-dark')
-            document.body.classList.remove('theme-light')
-            chk3.checked = false;
-            //logo.setAttribute('src' , '../../resources/svgs/logo_black.svg');
-           
-            
-        }else {
-            console.log('theme-light')
-            document.body.classList.add('theme-light')
-            document.body.classList.remove('theme-dark')
-            chk3.checked = true;
-            //logo.setAttribute('src' = logo_white);
-        }
-    }
+  
     
     if(!open) return null
     

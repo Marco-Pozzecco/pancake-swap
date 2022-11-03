@@ -18,19 +18,21 @@ export function Navbar() {
     const [openModal, setOpenModal] = useState(false);
     const [openModalWallet, setOpenModalWallet] = useState(false);
 
-    let themeClass = document.body.className
+    const themeClass = document.body.className
     
 
     return (
         <div>
             <nav>
-                <div className="flex">
+               <div className="extern-box">
+               <div className="flex">
                     <Link to="/">
                         
                         {/* {themeClass === 'theme-dark' &&  <Logo src={logoWhite}/>}
                         {themeClass === 'theme-light' &&  <Logo src={logo}/>} */}
                          <img src={logoWhite} alt="main-logo" id="main-logo" 
                          className={themeClass === 'theme-dark' ? 'logo-active' : 'logo'}></img>
+
                          <img src={logo} alt="main-logo" id="main-logo" 
                          className={themeClass === 'theme-light' ? 'logo-active' : 'logo'}></img>
                        
@@ -39,8 +41,7 @@ export function Navbar() {
                         <img
                             src={logoBunny}
                             alt="logo bunny"
-                            className="logoBunny"
-                        ></img>
+                            className="logoBunny"></img>
                     </Link>
                     <ul className="menu-ul menu-nav menu-nav-ul">
                         {/* <li><NavLink to="/">Home</NavLink></li> */}
@@ -48,17 +49,16 @@ export function Navbar() {
                             <NavLink to="/trade">Trade</NavLink>
                             <ul>
                                 <li>
-                                    <a href="swap">Swap</a>
+                                    <Link to="/swap">Swap</Link>
                                 </li>
                                 <li>
-                                    <a href="limit">Limit</a>
+                                    <NavLink to="/limit">Limit</NavLink>  
                                 </li>
                                 <li>
-                                    <a href="liquidity">Liquidity</a>
+                                    <Link to="/liquidity">Liquidity</Link>   
                                 </li>
                                 <li>
-                                    <a
-                                        href="https://perp.pancakeswap.finance/en/futures/BTCUSDT?theme=light"
+                                    <a href="https://perp.pancakeswap.finance/en/futures/BTCUSDT?theme=light"
                                         target="blank">
                                         Perpetual
                                     </a>
@@ -176,9 +176,7 @@ export function Navbar() {
                         src={settingSvg}
                         alt="setting icon"
                         onClick={() => setOpenModal(true)}></img>
-                    <div>
-                        <DropdownCrypto /> 
-                    </div>
+                    <DropdownCrypto />
                     <div>
                         <span className="link-aquagreen">
                             <button className="btn-navbar button-aquagreen"
@@ -188,6 +186,7 @@ export function Navbar() {
                         </span>
                     </div>
                 </section>
+               </div>
             </nav>
             <ModalConnectWallet open={openModalWallet}
             onClose={()=> setOpenModalWallet(false)}/>

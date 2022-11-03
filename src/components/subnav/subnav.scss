@@ -7,17 +7,18 @@
 $theme-dark: map.set($theme-dark, "nav-bkground", $footer-background);
 
 // Set colori tema chiaro
-$theme-light: map.set($theme-light, "nav-bkground", #fff); 
+$theme-light: map.set($theme-light, "nav-bkground", #fff);
 
-.theme-dark{
-    --nav-bkground: #{map.get($theme-dark , "nav-bkground")}; 
+.theme-dark {
+    --nav-bkground: #{map.get($theme-dark , "nav-bkground")};
 }
-.theme-light{ 
-    
+
+.theme-light {
+
     --nav-bkground: #{map.get($theme-light , "nav-bkground")};
 }
 
-.subnav{
+.subnav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,11 +32,21 @@ $theme-light: map.set($theme-light, "nav-bkground", #fff);
     //overflow-x: scroll;
     //flex-grow: 1;
     color: aliceblue;
-    ul{
+
+    ul {
         display: flex;
-        li{
-            padding-right: 20px;
+        align-items: center;
+
+        li {
+            padding-right: 10px;
+
+            a {
+                display: flex;
+                align-items: center;
+                padding-right: 10px;
+            }
+
         }
     }
-    
+
 }

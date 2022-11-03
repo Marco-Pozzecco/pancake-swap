@@ -153,11 +153,12 @@ $theme-light: map.set($theme-light, "background-modal-btn", $primary-color);
                         //background-color: #fff;
                         overflow-y: auto;
                         overflow-x: hidden;
+                        margin-bottom: 20px;
 
                         .grid {
                             //background-color: aqua;
                             width: 100%;
-                            margin-bottom: 20px;
+
                             display: grid;
                             grid-template-columns: 1fr 1fr 1fr;
                             row-gap: 24px;

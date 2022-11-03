@@ -1,6 +1,9 @@
 import React from 'react'
 import Subnav from '../../components/subnav/Subnav';
 import "./_trade-swap.scss"; 
+import {BrowserRouter as Router, Route, Routes, NavLink} from "react-router-dom";
+import Limit from '../limit/Limit';
+import Liquidity from '../liquidity/Liquidity'
 
 
 
@@ -9,7 +12,23 @@ export function Trade(){
     <div>
       <Subnav elements={["Swap", "Limit", "Liquidity", "Perpetual", "Bridge"]}/> 
       <h1 className='provaH1'>Trade</h1>
-      {/* elements={["Swap", "Limit"]} */}
+
+      {/* <Router>
+        <Routes>
+           <Route path='/' element={<Trade/>}>
+            <Route path='/limit' element={<Limit/>}/>
+            <Route path='/liquidity' element={<Liquidity/>}/>
+          </Route>
+          {/* <Route path='/perpetual' element={<Perpetual/>}></Route>
+          <Route path='/bridge' element={<Bridge/>}></Route> 
+        </Routes>
+      </Router>
+
+      <NavLink to="/limit">Limit</NavLink>
+      <NavLink to="/liquidity">Liquidity</NavLink> */}
+
+
+
       {/* <ul className='menu-ul'>
         <li><NavLink><a href="swap" >Swap</a></NavLink></li>
         <li><NavLink><a href="limit">Limit</a></NavLink></li>
