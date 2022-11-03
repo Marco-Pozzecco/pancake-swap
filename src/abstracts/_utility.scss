@@ -1,7 +1,27 @@
-.visible {
-    opacity: 100%;
+.hidden {
+    display: none;
 }
 
-.invisible {
-    opacity: 0%;
+.opacity0 {
+    opacity: 0;
+}
+
+.opacity20 {
+    opacity: 20;
+}
+
+.opacity40 {
+    opacity: 40;
+}
+
+.opacity50 {
+    opacity: 50;
+}
+
+.opacity60 {
+    opacity: 60;
+}
+
+.opacity80 {
+    opacity: 80;
 }

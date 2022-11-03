@@ -6,56 +6,55 @@
 @import "../../abstracts/colors";
 @import "../../abstracts/variables";
 
-.box-layout6{
+.box-layout6 {
     //@include flex(column);
     // display: flex;
     // flex-direction: column;
-    
-    padding: 48px ;
+
+    padding: 48px;
     background-color: $black;
-    h2{
+    h2 {
         color: white;
         font-size: 45px;
         //font-weight: 100;
         line-height: 1.1;
         padding-bottom: 2%;
-        .tx-span{
-            color:#9A6AFF;
+        .tx-span {
+            color: #9a6aff;
         }
     }
-    .main-p{
+    .main-p {
         color: $primary-dk;
     }
-    .sec-p{
+    .sec-p {
         font-size: 24px;
         font-weight: bolder;
     }
 
-    .box-flex{
+    .box-flex {
         //@include flex(row, center, center);
         display: flex;
         justify-content: center;
-        padding: 48px 24px ;
+        padding: 48px 24px;
         width: 90%;
         //background-color: antiquewhite;
         height: 50vh;
 
-        .box-flex1{
+        .box-flex1 {
             @include flex(column, center, flex-start);
             //background-color: aquamarine;
             width: 45%;
             padding-left: 3%;
-            div{
+            div {
                 padding: 2%;
-                
             }
             .buttons-buyCake {
                 margin-right: 10px;
             }
-            a{
+            a {
                 color: $btn-bg-color;
                 font-weight: bold;
-                &:hover{
+                &:hover {
                     text-decoration: underline;
                 }
             }
@@ -64,12 +63,12 @@
             width: 50%;
             height: 100%;
             @include flex();
-    
+
             .bottom-right-pill {
                 //margin-right: 20%;
                 margin-top: 10%;
                 @include float-anim(5s, "NW");
-                
+
                 img {
                     z-index: 3;
                     height: 400px;
@@ -94,7 +93,6 @@
                     //z-index: 100;
                 }
                 img {
-
                     position: absolute;
                     height: 100%;
                     width: auto;
@@ -102,46 +100,42 @@
             }
         }
     }
-    
-    .box-flex-table{
+
+    .box-flex-table {
         width: 100%;
         display: grid;
-        grid-template-columns:  repeat(1fr 1fr 1fr);
+        grid-template-columns: repeat(1fr 1fr 1fr);
         column-gap: 32px;
-        
+
         row-gap: 32px;
-        padding: 0px 150px ;
-    
-        .box-flex-data{
+        padding: 0px 150px;
+
+        .box-flex-data {
             //@include flex(column, space-evenly, center);
             //background-color: red;
             color: white;
-            div{
+            div {
                 //background-color: yellow;
                 padding-left: 16px;
                 margin-bottom: 16px;
             }
-            
         }
-        .box-flex-data1{
+        .box-flex-data1 {
             grid-column: 1/2;
-            
         }
-         .box-flex-data2{
-             grid-column: 2/3;
-             div{
+        .box-flex-data2 {
+            grid-column: 2/3;
+            div {
                 border-left: 1px solid gray;
-             }
-            
-         }
-         .box-flex-data3{
+            }
+        }
+        .box-flex-data3 {
             grid-column: 3/4;
             //background-color: red;
-            div{
+            div {
                 border-left: 1px solid gray;
-             }
-            
-         }
+            }
+        }
         // .box-flex4{
         //     @include flex(column);
         //     div{
@@ -150,19 +144,15 @@
         //         background-color: #9A6AFF;
         //     }
         // }
-       
     }
 }
 
-.flott{
-        width: 20%;
-        height: 40%;
-    }
+.flott {
+    width: 20%;
+    height: 40%;
+}
 
-
-
-.line-side{
+.line-side {
     border-left: 1px solid white;
-    padding-left: 6px; 
-
+    padding-left: 6px;
 }

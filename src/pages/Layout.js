@@ -1,25 +1,23 @@
 import React from "react";
-import "../components/navbar/Navbar.scss"
+// import Home from "../pages/homepage/Home";
+import {Footer} from "../components/footer/Footer";
+import {Navbar} from "../components/navbar/Navbar";
+import {Outlet} from "react-router-dom";
+import {ResponsiveNavbar} from "../components/responsive-navbar/ResponsiveNavbar";
+import Subnav from "../components/subnav/Subnav";
 
-import {Outlet, Link} from 'react-router-dom'
+export function Layout() {
+    return (
+        <div>
+            <Navbar />
 
-const Layout = () => {
-    return(
-        <>
-            {/* <h3>Logo</h3> */}
-            <li><Link to="/">Pancake Swap</Link></li>
-            <nav className="menu-ul menu-nav">
-                
-                <ul>
-                {/* <li><Link to="/">Home</Link></li> */}
-                <li><Link to="/trade">Trade</Link></li>
-                <li><Link to="/earn">Earn</Link></li>  
-                <li><Link to="/win">Win</Link>  </li>     
-                </ul>   
-            </nav> 
-            <Outlet></Outlet>
-        </>
-    )
+            {/* <Home/> */}
+
+            <Outlet>
+                <Subnav />
+            </Outlet>
+            <Footer />
+            <ResponsiveNavbar />
+        </div>
+    );
 }
-
-export default Layout;

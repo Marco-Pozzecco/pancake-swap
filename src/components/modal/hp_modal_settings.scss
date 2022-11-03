@@ -1,0 +1,260 @@
+// Use rules
+
+@use "sass:map";
+
+// Import rules
+@import "../../abstracts/mixins";
+@import "../../abstracts/colors";
+
+// Set colori tema scuro
+$theme-dark: map.set($theme-dark, "fa-moon", rgb(39, 38, 44));
+$theme-dark: map.set($theme-dark, "fa-sun", $footer-background);
+
+$theme-dark: map.set($theme-dark, "popup-bg", $footer-background);
+$theme-dark: map.set($theme-dark, "text-color", white);
+$theme-dark: map.set($theme-dark, "popup-modal1-bg", $popup-gradient);
+$theme-dark: map.set($theme-dark, "label-bg", $label-toggle-bg-dk);
+$theme-dark: map.set($theme-dark, "border-bottom-pp", rgb(56, 50, 65));
+$theme-dark: map.set($theme-dark, "icon-text-color", $primary-dk);
+$theme-dark: map.set($theme-dark, "hover-nav-ul", $hover-navbar-ul);
+
+// Set colori tema chiaro
+$theme-light: map.set($theme-light, "fa-moon", white);
+$theme-light: map.set($theme-light, "fa-sun", #f39c12);
+$theme-light: map.set($theme-light, "popup-bg", #fff);
+$theme-light: map.set($theme-light, "text-color", $background-color-dk);
+$theme-light: map.set($theme-light, "popup-modal1-bg", $header-popup-gradient);
+$theme-light: map.set($theme-light, "label-bg", $label-toggle-bg);
+$theme-light: map.set($theme-light, "border-bottom-pp", #d9d9d9);
+$theme-light: map.set($theme-light, "icon-text-color", $primary-color);
+$theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
+
+.theme-dark {
+    --fa-moon: #{map.get($theme-dark, "fa-moon")};
+    --fa-sun: #{map.get($theme-dark, "fa-sun")};
+    --popup-bg: #{map.get($theme-dark, "popup-bg")};
+    --text-color: #{map.get($theme-dark, "text-color")};
+    --popup-modal1-bg: #{map.get($theme-dark, "popup-modal1-bg")};
+    --label-toggle-bg: #{map.get($theme-dark, "label-bg")};
+    --border-bottom-pp: #{map.get($theme-dark, "border-bottom-pp")};
+    --icon-text-color: #{map.get($theme-dark, "icon-text-color")};
+    --hover-nav-ul: #{map.get($theme-dark, "hover-nav-ul")};
+}
+.theme-light {
+    --fa-moon: #{map.get($theme-light, "fa-moon")};
+    --fa-sun: #{map.get($theme-light, "fa-sun")};
+    --popup-bg: #{map.get($theme-light, "popup-bg")};
+    --text-color: #{map.get($theme-light, "text-color")};
+    --popup-modal1-bg: #{map.get($theme-light, "popup-modal1-bg")};
+    --label-toggle-bg: #{map.get($theme-light, "label-bg")};
+    --border-bottom-pp: #{map.get($theme-light, "border-bottom-pp")};
+    --icon-text-color: #{map.get($theme-light, "icon-text-color")};
+    --hover-nav-ul: #{map.get($theme-light, "hover-nav-ul")};
+}
+
+.modal {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 200ms ease-in-out;
+    background-color: var(--popup-bg); //var(--popup-bg)
+    border-radius: 0 0 30px 30px;
+    padding: 3% 2% 2% 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 999;
+    //opacity: 0;
+
+    // &.active {
+    //     transform: translate(-50%, -50%);
+    //     z-index: 999;
+    //     opacity: 1;
+
+    // }
+
+    p,
+    sub svg {
+        color: var(--text-color); //var(--text-color)
+    }
+
+    sub svg {
+        background-image: var(--text-color);
+    }
+
+    .modal1 {
+        position: fixed;
+        width: 300px;
+        height: 70px;
+        top: 3%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: var(--popup-modal1-bg);
+        background-color: var(--popup-modal1-bg); //var(--popup-modal1-bg)
+        border-radius: 30px 30px 0px 0px;
+        padding: 2% 2% 2% 6%;
+        border-bottom: 1px solid --border-bottom-pp;
+
+        .close-btn {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: none;
+            color: $btn-bg-color;
+            font-size: 1.55rem;
+        }
+    }
+
+    .header {
+        color: var(--text-color);
+    }
+
+    h4 {
+        color: rgb(118, 69, 217);
+    }
+
+    .checkbox {
+        opacity: 0;
+        position: absolute;
+    }
+
+    .label {
+        background-color: var(--label-toggle-bg); //var(--label-toggle-bg)
+        border-radius: 50px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5px;
+        position: relative;
+        height: 32px;
+        width: 56px;
+        transform: scale(1);
+    }
+
+    .label .ball {
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        height: 26px;
+        width: 26px;
+        transform: translateX(0px);
+        transition: transform 0.2s linear;
+        z-index: 1;
+        // &:hover{
+        //     border: 2px solid rgb(118, 69, 217);
+
+        // }
+    }
+
+    .checkbox:checked + .label .ball {
+        transform: translateX(24px);
+    }
+
+    .checkbox1 {
+        opacity: 0;
+        position: absolute;
+    }
+
+    .label1 {
+        background-color: var(--label-toggle-bg);
+        border-radius: 50px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+        position: relative;
+        height: 32px;
+        width: 56px;
+        transform: scale(1);
+    }
+
+    .label1 .ball1 {
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        height: 26px;
+        width: 26px;
+        transform: translateX(0px);
+        transition: transform 0.2s linear;
+        align-items: center;
+    }
+
+    .checkbox1:checked + .label1 {
+        background-color: rgb(60, 207, 170);
+
+        .ball1 {
+            transform: translateX(24px);
+        }
+    }
+
+    .fa-moon {
+        color: var(--fa-moon);
+        // width: 20px;
+        // height: 20px;
+        z-index: 2;
+        align-self: center;
+    }
+
+    .fa-sun {
+        color: var(--fa-sun); // var(--fa-sun)
+        // width: 20px;
+        // height: 20px;
+        z-index: 2;
+        align-self: center;
+        // display: block;
+        // flex-shrink: 0;
+        // overflow-y: hidden;
+        // overflow-x: hidden;
+    }
+
+    .flex-switch {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .flex-inline {
+        display: flex;
+    }
+
+    .overlay {
+        position: fixed;
+        // top:0;
+        // bottom: 0;
+        // left: 0;
+        // right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(244, 238, 255, 0.6);
+        //pointer-events: none;
+        transition: 200ms ease-in-out;
+        z-index: 99;
+    }
+
+    // #overlay.active {
+    //     opacity: 0.6;
+    //     pointer-events: all;
+    //     transition: 350ms ease;
+    // }
+}
+@include mq("tablet-small", "tablet") {
+}
+
+@include mq("phone", "phablet") {
+    .modal {
+        top: 75%;
+        width: 100%;
+        .modal1 {
+            width: 100%;
+        }
+    }
+}
