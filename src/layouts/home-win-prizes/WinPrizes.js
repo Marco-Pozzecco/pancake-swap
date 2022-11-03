@@ -1,6 +1,5 @@
 import React from "react";
 import "./_win-prizes.scss";
-import {randomNumInRange, callFuncAtInterval} from "../../script/randomize.mjs";
 // import images
 import ball2 from "../../resources/home/winPrizes/ball2-1024.webp";
 import ball4 from "../../resources/home/winPrizes/ball4-1024.webp";
@@ -15,7 +14,8 @@ import cardTopRight from "../../resources/home/winPrizes/card-top-right-1024.web
 
 import crystalBall from "../../resources/svgs/crystal-ball.svg";
 import ticket from "../../resources/svgs/ticket.svg";
-import { Button } from "../../components/buttons/Button";
+// Components
+import {Button} from "../../components/buttons/Button";
 
 export function WinPrizes() {
     return (
@@ -60,11 +60,11 @@ export function WinPrizes() {
                             <h3>in BNB + CAKE won so far</h3>
                             <p>Predict the price trend of BNB or CAKE to win</p>
 
-                            <a href="#" className="link-aquagreen">
-                                <button className="button-aquagreen buttons-home">
-                                    Play
-                                </button>
-                            </a>
+                            <Button
+                                type="fullButton"
+                                text="Play"
+                                style={{width: "100%"}}
+                            />
                         </div>
                     </div>
                     <div className="card card-lottery">
@@ -83,8 +83,9 @@ export function WinPrizes() {
                             </p>
 
                             <Button
-                                style="button-acquagreen buttons-home"
+                                type="fullButton"
                                 text="Buy tickets"
+                                style={{width: "100%"}}
                             />
                         </div>
                     </div>

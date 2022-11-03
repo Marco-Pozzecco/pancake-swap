@@ -4,6 +4,7 @@ import bunny from "../../resources/home/bunny/bunny.webp";
 import stella1 from "../../resources/home/bunny/stella1.webp";
 import stella2 from "../../resources/home/bunny/stella2.webp";
 import stella3 from "../../resources/home/bunny/stella3.webp";
+import {Button} from "../../components/buttons/Button";
 
 export function FloatingBunny() {
     let [theme, setTheme] = React.useState(null);
@@ -24,15 +25,18 @@ export function FloatingBunny() {
                     </h3>
                     <div className="fb-buttons-section">
                         <a href="" className="link-aquagreen">
-                            <button className="button-aquagreen buttons-home">
-                                Connect Wallet
-                            </button>
+                            <Button
+                                className="fb-button"
+                                type={"fullButton fb-button"}
+                                text={"Connect Wallet"}
+                            />
                         </a>
 
                         <a href="" className="link-onlyborder">
-                            <button className="button-onlyborder buttons-trade-swap-grafico">
-                                Trade Now
-                            </button>
+                            <Button
+                                type={"onlyBorderButton"}
+                                text={"Trade Now"}
+                            />
                         </a>
                     </div>
                 </div>
