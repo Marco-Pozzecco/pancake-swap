@@ -1,17 +1,19 @@
 import React from 'react'
 import { Button } from './Button'
 
-export const TradeNowBtn = () => {
+export function TradeNowBtn() {
 
     function openTradeNow() {
         
     }
 
   return (
+
     <Button
-        type={props.type}
+        type='fullButton'
         action={openTradeNow}
         text='Trade Now'
+
     />
   )
 }

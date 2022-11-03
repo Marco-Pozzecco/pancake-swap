@@ -3,18 +3,18 @@ import React from 'react'
 import { Button } from './Button'
 
 
-export const LearnBtn = () => {
+export function LearnBtn() {
 
     function openLearnBtn() {
-        
+
     }
 
   return (
-    <Button className='noBorderButton'
+    <Button type='noBorderButton'
             text='Learn'
-            type='type'
             onClick={openLearnBtn}
     />
+ 
 
 
 
