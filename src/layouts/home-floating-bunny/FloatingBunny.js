@@ -34,7 +34,7 @@ export function FloatingBunny() {
 
                         <a href="" className="link-onlyborder">
                             <Button
-                                type={"onlyBorderButton fb-button"}
+                                type={"onlyBorderButton"}
                                 text={"Trade Now"}
                             />
                         </a>
