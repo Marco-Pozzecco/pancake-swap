@@ -85,7 +85,7 @@ export function WinPrizes() {
                             <Button
                                 type="fullButton"
                                 text="Buy tickets"
-                                style={{width: "100%"}}
+                                style={{width: '100%'}}
                             />
                         </div>
                     </div>

@@ -209,6 +209,11 @@ $theme-light: map.set(
                 }
 
                 .card-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100%;
+
                     .card-img {
                         @include flex(row, flex-end, center);
                     }
