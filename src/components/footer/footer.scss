@@ -58,7 +58,7 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
   transition: transform 0.2s linear;
 }
 
-.checkbx3:checked+.label3 .ball3 {
+.checkbx3:checked + .label3 .ball3 {
   transform: translateX(24px);
 }
 
@@ -150,9 +150,9 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
   }
 
   &-Latestbar {
-    width: 100%;
+    width: 90%;
     height: 10%;
-    margin-left: 2.2%;
+    margin-left: 5.2%;
     margin-top: 1.5%;
     display: flex;
     justify-content: center;
