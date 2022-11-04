@@ -78,6 +78,12 @@ $theme-light: map.set($theme-light, "background-modal-btn", $primary-color);
         color: var(--text-color-modal);
         //box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
         font-weight: bold;
+        border-radius: 16px;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
 
     }
 
@@ -96,6 +102,8 @@ $theme-light: map.set($theme-light, "background-modal-btn", $primary-color);
         border-bottom-right-radius: 0%;
         font-size: 14px;
         font-weight: 600;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
         //@include setRadius(16px 16px 0px 0px);
     }
 
@@ -104,12 +112,18 @@ $theme-light: map.set($theme-light, "background-modal-btn", $primary-color);
         color: $primary-dk;
     }
 
+    .closeBtn {
+        width: 20px;
+        background-color: antiquewhite;
+        padding: 5px;
+    }
+
     .container {
         display: flex;
         flex-direction: column;
         position: relative;
         width: 792px;
-        height: 490px;
+        height: 502px;
         margin: 0px auto 0;
         background-color: var(--popup-modal1-bg);
         background-image: var(--popup-modal1-bg);
@@ -134,7 +148,8 @@ $theme-light: map.set($theme-light, "background-modal-btn", $primary-color);
                     flex: 1;
 
                     p {
-                        color: $primary-color
+                        color: $primary-color;
+                        margin-top: 10px;
                     }
 
                     @include flex(column, space-evenly);
@@ -226,10 +241,6 @@ $theme-light: map.set($theme-light, "background-modal-btn", $primary-color);
 
                 }
 
-                p {
-                    color: $background-color-dk;
-
-                }
 
 
                 h4 {
@@ -271,7 +282,7 @@ $theme-light: map.set($theme-light, "background-modal-btn", $primary-color);
         margin: 48px 130px;
         text-align: center;
 
-        p .primary-col {
+        p {
             color: $primary-color
         }
 

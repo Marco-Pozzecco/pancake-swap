@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./_floating-bunny.scss";
 import bunny from "../../resources/home/bunny/bunny.webp";
 import stella1 from "../../resources/home/bunny/stella1.webp";
@@ -7,9 +7,11 @@ import stella3 from "../../resources/home/bunny/stella3.webp";
 import { Button } from "../../components/buttons/Button";
 import { TradeNowBtn } from "../../components/buttons/TradeNowBtn";
 import { ConnectWalletBtn } from "../../components/buttons/ConnectWalletBtn";
+import ModalConnectWallet from "../../components/modal-connect-wallet/ModalConnectWallet";
 
 export function FloatingBunny() {
     let [theme, setTheme] = React.useState(null);
+    const [openModalWallet, setOpenModalWallet] = useState(false);
 
     useEffect(() => {
         const pippo = document.querySelector("body").classList[0];
@@ -27,7 +29,7 @@ export function FloatingBunny() {
                     </h3>
                     <div className="fb-buttons-section">
 
-                        <ConnectWalletBtn type="fullButton fb-button" />
+                        <ConnectWalletBtn type="fullButton fb-button" action={() => setOpenModalWallet(true)} />
                         <TradeNowBtn />
 
                     </div>
@@ -97,6 +99,8 @@ export function FloatingBunny() {
                     </defs>
                 </svg>
             </div>
+            <ModalConnectWallet open={openModalWallet}
+            onClose={()=> setOpenModalWallet(false)}/>
         </section>
     );
 }

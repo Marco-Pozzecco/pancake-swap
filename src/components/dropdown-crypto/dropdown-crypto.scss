@@ -34,20 +34,23 @@ $theme-light: map.set($theme-light, "dropdown-line", $dropdown-line);
     margin: 100px auto;
     position: relative;
     margin-right: 10px;
-    // background-color: #fff;
+
 
     .button-navbar-bnb {
+        @include flex (row, space-between, center);
         width: 220px;
         height: 32px;
         margin: 2px 4px 4px 0px;
-        padding: 0px 16px 0px 0px;
-        color: white;
-        background-color: blue;
+        padding: 0px 8px 8px 0px;
+        color: var(--btn-bg-tx);
+        background-color: var(--btn-bg);
+        border-radius: 16px;
         display: flex;
 
         img {
             width: 30px;
             height: 30px;
+
         }
     }
 
@@ -62,6 +65,7 @@ $theme-light: map.set($theme-light, "dropdown-line", $dropdown-line);
         transition: opacity 200ms easy-in-out;
         z-index: 98;
         border: 1px solid var(--dropdown-line);
+        border-radius: 15px;
 
         ul {
             display: flex;
