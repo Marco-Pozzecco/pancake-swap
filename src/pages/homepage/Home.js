@@ -1,6 +1,6 @@
 import React from "react";
 import { WinPrizes } from "../../layouts/home-win-prizes/WinPrizes";
-
+import { UsedBy } from "../../components/used-by-millions/UsedBy";
 import { FloatingBunny } from "../../layouts/home-floating-bunny/FloatingBunny";
 import { CakeToken } from "../../layouts/home-cake-token/CakeToken";
 import { HomeEarn } from "../../layouts/home-earn-section/home-earn";
@@ -12,8 +12,9 @@ import { StartInSeconds } from "../../layouts/home-start-in-seconds/StartInSecon
 export default function Home() {
     return (
         <>
-            
+
             <FloatingBunny />
+            <UsedBy />
             <TradeAnything />
             <HomeEarn />
             <WinPrizes />
