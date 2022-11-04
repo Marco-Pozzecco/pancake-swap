@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {Button} from "./Button";
 
 export function TradeNowBtn() {
-    function openTradeNow() {}
+    const navigate = useNavigate();
 
-    return <Button type="fullButton" action={openTradeNow} text="Trade Now" />;
+    function openTradeNow() {
+        navigate('trade')
+    }
+
+    return <Button type="onlyBorderButton" action={openTradeNow} text="Trade Now" />;
 }

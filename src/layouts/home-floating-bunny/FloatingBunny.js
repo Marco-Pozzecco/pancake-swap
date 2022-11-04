@@ -1,10 +1,12 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./_floating-bunny.scss";
 import bunny from "../../resources/home/bunny/bunny.webp";
 import stella1 from "../../resources/home/bunny/stella1.webp";
 import stella2 from "../../resources/home/bunny/stella2.webp";
 import stella3 from "../../resources/home/bunny/stella3.webp";
-import {Button} from "../../components/buttons/Button";
+import { Button } from "../../components/buttons/Button";
+import { TradeNowBtn } from "../../components/buttons/TradeNowBtn";
+import { ConnectWalletBtn } from "../../components/buttons/ConnectWalletBtn";
 
 export function FloatingBunny() {
     let [theme, setTheme] = React.useState(null);
@@ -24,20 +26,10 @@ export function FloatingBunny() {
                         decentralized platform in the galaxy.
                     </h3>
                     <div className="fb-buttons-section">
-                        <a href="" className="link-aquagreen">
-                            <Button
-                                className="fb-button"
-                                type={"fullButton fb-button"}
-                                text={"Connect Wallet"}
-                            />
-                        </a>
 
-                        <a href="" className="link-onlyborder">
-                            <Button
-                                type={"onlyBorderButton"}
-                                text={"Trade Now"}
-                            />
-                        </a>
+                        <ConnectWalletBtn type="fullButton fb-button" />
+                        <TradeNowBtn />
+
                     </div>
                 </div>
 
