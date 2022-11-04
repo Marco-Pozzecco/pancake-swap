@@ -3,29 +3,39 @@ import "./Navbar.scss";
 import {Link, NavLink} from "react-router-dom";
 import settingSvg from "../../resources/home/navbar/setting-icon.svg";
 import logo from "../../resources/home/navbar/logo_black.svg";
+import logoWhite from "../../resources/home/navbar/logo_white.svg";
 import {HpModalSettings} from "../modal/HpModalSettings";
 import bunnyRound from "../../resources/home/navbar/bunny-icon-round.svg";
 import logoBunny from "../../resources/home/navbar/bunny-logo.svg";
 import exitIcon from "../../resources/home/cake/exit-icon.svg";
-import bnbIcon from "../../resources/home/navbar/bnb.png";
-import arrow from "../../resources/home/navbar/arrow-down.svg";
 import {LanguageSelector} from "../language-selector/LanguageSelector";
 import DropdownCrypto from "../dropdown-crypto/DropdownCrypto";
 import ModalConnectWallet from "../modal-connect-wallet/ModalConnectWallet";
+import Logo from '../logo/Logo.js'
+
 
 export function Navbar() {
     const [openModal, setOpenModal] = useState(false);
     const [openModalWallet, setOpenModalWallet] = useState(false);
-    const [selected, setSelected] = useState("")
-    
 
+    const themeClass = document.body.className
+    
 
     return (
         <div>
             <nav>
-                <div className="flex">
+               <div className="extern-box">
+               <div className="flex">
                     <Link to="/">
-                        <img src={logo} alt="main-logo" id="main-logo"></img>
+                        
+                        {/* {themeClass === 'theme-dark' &&  <Logo src={logoWhite}/>}
+                        {themeClass === 'theme-light' &&  <Logo src={logo}/>} */}
+                         <img src={logoWhite} alt="main-logo" id="main-logo" 
+                         className={themeClass === 'theme-dark' ? 'logo-active' : 'logo'}></img>
+
+                         <img src={logo} alt="main-logo" id="main-logo" 
+                         className={themeClass === 'theme-light' ? 'logo-active' : 'logo'}></img>
+                       
                     </Link>
                     <Link to="/">
                         <img
@@ -39,17 +49,16 @@ export function Navbar() {
                             <NavLink to="/trade">Trade</NavLink>
                             <ul>
                                 <li>
-                                    <a href="swap">Swap</a>
+                                    <Link to="/swap">Swap</Link>
                                 </li>
                                 <li>
-                                    <a href="limit">Limit</a>
+                                    <NavLink to="/limit">Limit</NavLink>  
                                 </li>
                                 <li>
-                                    <a href="liquidity">Liquidity</a>
+                                    <Link to="/liquidity">Liquidity</Link>   
                                 </li>
                                 <li>
-                                    <a
-                                        href="https://perp.pancakeswap.finance/en/futures/BTCUSDT?theme=light"
+                                    <a href="https://perp.pancakeswap.finance/en/futures/BTCUSDT?theme=light"
                                         target="blank">
                                         Perpetual
                                     </a>
@@ -164,12 +173,7 @@ export function Navbar() {
                         src={settingSvg}
                         alt="setting icon"
                         onClick={() => setOpenModal(true)}></img>
-
-                    
-                    <div>
-                        <DropdownCrypto />
-                       
-                    </div>
+                    <DropdownCrypto />
                     <div>
                         <span className="link-aquagreen">
                             <button className="btn-navbar button-aquagreen"
@@ -179,6 +183,7 @@ export function Navbar() {
                         </span>
                     </div>
                 </section>
+               </div>
             </nav>
             <ModalConnectWallet open={openModalWallet}
             onClose={()=> setOpenModalWallet(false)}/>

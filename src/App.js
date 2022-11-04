@@ -9,6 +9,9 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {Layout} from "./pages/Layout";
 import {Nft} from "./pages/nft/Nft";
 
+import {Limit} from './pages/limit/Limit';
+import {Liquidity} from './pages/liquidity/Liquidity'
+
 export function App() {
     return (
         <div>
@@ -17,6 +20,8 @@ export function App() {
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Home />} />
                         <Route path="trade" element={<Trade />} />
+                            <Route path='limit' element={<Limit/>}/>
+                            <Route path='liquidity' element={<Liquidity/>}/>
                         <Route path="earn" element={<Earn />} />
                         <Route path="win" element={<Win />} />
                         <Route path="nft" element={<Nft />} />
