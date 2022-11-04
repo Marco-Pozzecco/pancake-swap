@@ -199,13 +199,14 @@ body {
     }
 }
 
-@include mq("tablet-small") {
+@include mq("tablet-small", "tablet") {
     .fb-floating-bunny {
         .fb-wrapper {
             @include flex(column-reverse, center);
 
                 .fb-contents-section {
                     width: 100%;
+                    padding-left: 25px;
                     h2 {
                         padding-top: 20px;
                         font-size: 48px;
@@ -216,26 +217,31 @@ body {
 
             .fb-img-section {
                 align-self: flex-end;
-                right: 0;
-                min-width: 10px;
-                max-width: 150px;
+                right: 25px;
+                min-width: 20px;
+                max-width: 200px;
 
                 img {
                     width: 50%;
+                }
+                .fb-thefloatingstars {
+                    right: 25px;
+                    top: 30px
                 }
             }
         }
     }
 }
 
-@include mq("phablet") {
+@include mq("phablet", "tablet-small") {
     .fb-floating-bunny {
+       
         .fb-wrapper {
             @include flex(column-reverse, center);
 
                 .fb-contents-section {
                     width: 100%;
-
+                    padding-left: 25px;
                     h2 {
                         padding-top: 20px;
                         font-size: 48px;
@@ -246,24 +252,30 @@ body {
 
             .fb-img-section {
                 align-self: flex-end;
-                right: 0;
-                min-width: 10px;
-                max-width: 150px;
+                right: 25px;
+                min-width: 20px;
+                max-width: 200px;
 
                 img {
                     width: 50%;
+                }
+                .fb-thefloatingstars {
+                    right: 25px;
+                    top: 30px
                 }
             }
         }
     }
 }
 
-@include mq("phone-wide") {
+@include mq("phone-wide", "phablet") {
     .fb-floating-bunny {
+        
         .fb-wrapper {
             @include flex(column-reverse, center);
 
                 .fb-contents-section {
+                    padding-left: 25px;
                     width: 100%;
                     h2 {
                         padding-top: 20px;
@@ -275,24 +287,31 @@ body {
 
             .fb-img-section {
                 align-self: flex-end;
-                right: 0;
-                min-width: 10px;
-                max-width: 150px;
+                right: 25px;
+                min-width: 20px;
+                max-width: 200px;
 
                 img {
                     width: 50%;
+                }
+                .fb-thefloatingstars {
+                    right: 25px;
+                    top: 30px
                 }
             }
         }
     }
 }
 
-@include mq("phone") {
+@include mq("phone", "phone-wide") {
     .fb-floating-bunny {
+        
         .fb-wrapper {
+            
             @include flex(column-reverse, center);
 
                 .fb-contents-section {
+                    padding-left: 25px;
                     width: 100%;
                     h2 {
                         padding-top: 20px;
@@ -303,13 +322,22 @@ body {
                 }
 
             .fb-img-section {
+                width: 80%;
                 align-self: flex-end;
-                right: 0;
-                min-width: 10px;
-                max-width: 150px;
+                right: 25px;
+                min-width: 20px;
+                max-width: 200px;
 
                 img {
                     width: 50%;
+                }
+
+                min-width: 20px;
+                max-width: 200px;
+
+                .fb-thefloatingstars {
+                    right: 25px;
+                    top: 30px
                 }
             }
         }
