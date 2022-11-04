@@ -4,7 +4,7 @@ import { HandleThemeColor } from '../../script/HandleThemeColor'
 import "./hp_modal_settings.scss";
 
 export function HpModalSettings({open, onClose}) {
-    const [theme, setTheme] = useState();
+    
 
     const {theme, handleThemeColor} = HandleThemeColor()
 
