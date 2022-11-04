@@ -12,7 +12,7 @@ export function Layout() {
             <Navbar />
 
         <Outlet>
-          <Subnav/>
+          {/* <Subnav/> */}
         </Outlet>
         <Footer />
         {/* <ResponsiveNavbar /> */}
