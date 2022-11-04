@@ -336,12 +336,13 @@ nav {
 }
 
 .pancakeicon {
-  margin-top: 7px;
+  margin-top: 8px;
   transition: 0.5s all;
   transition-delay: 0s;
 
   &:hover {
-    width: 27px;
+    margin-top: 8px;
+    width: 28px;
     margin: -2px;
     transition-delay: 0s;
   }
