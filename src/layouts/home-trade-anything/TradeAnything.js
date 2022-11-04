@@ -3,6 +3,8 @@ import './_home-trade-anything.scss';
 import BNB from "../../resources/BNB@2x.webp";
 import BTC from "../../resources/BTC@2x.webp";
 import CAKE from "../../resources/CAKE@2x.webp";
+import { TradeNowBtn } from '../../components/buttons/TradeNowBtn';
+import { LearnBtn } from '../../components/buttons/LearnBtn';
 
 export function TradeAnything() {
     return (
@@ -13,11 +15,11 @@ export function TradeAnything() {
                     <h3>Trade any token on BNB Smart Chain in seconds, just by connecting your wallet.</h3>
                     <div className="ta-buttons-section">
                         <a href="" className="link-aquagreen">
-                            <button className="button-aquagreen buttons-home">Trade now</button>
+                            <TradeNowBtn />
                         </a>
 
                         <a href="" className="link-onlyborder">
-                            <button className="button-onlyborder buttons-trade-swap-grafico">Learn</button>
+                            <LearnBtn />
                         </a>
                     </div>
                 </div>
