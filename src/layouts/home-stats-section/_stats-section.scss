@@ -249,17 +249,17 @@ $theme-light: map.set(
                         top: 24px;
                         right: 24px;
 
-                        .cdsvg-color1 {
-                            fill: $card-dist-title-2a;
-                        }
+                        // .cdsvg-color1 {
+                        //     fill: $card-dist-title-2a;
+                        // }
 
-                        .cdsvg-color2 {
-                            fill: $card-dist-title-2b;
-                        }
+                        // .cdsvg-color2 {
+                        //     fill: $card-dist-title-2b;
+                        // }
 
-                        .cdsvg-color3 {
-                            fill: $card-dist-title-2c;
-                        }
+                        // .cdsvg-color3 {
+                            // fill: $card-dist-title-2c;
+                        // }
                     }
 
                     .card-dist-title {
@@ -319,7 +319,7 @@ $theme-light: map.set(
             }
         }
     }
-// }
+}
 
 
 // MEDIA -->  851px  ####################### 851px  ########################### 851px  #################################à
@@ -614,4 +614,3 @@ $theme-light: map.set(
     }
 }
 
-}
