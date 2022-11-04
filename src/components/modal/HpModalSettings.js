@@ -3,22 +3,21 @@ import { HandleThemeColor } from '../../script/HandleThemeColor'
 //import HandleThemeColor from '../../script/HandleThemeColor';
 import "./hp_modal_settings.scss";
 
-export function HpModalSettings({open, onClose}) {
-    
+export function HpModalSettings({ open, onClose }) {
 
-    const {theme, handleThemeColor} = HandleThemeColor()
+    const { theme, handleThemeColor } = HandleThemeColor()
 
-  
-    
-    if(!open) return null
-    
 
-  return (
-    <section >
-        <div className="modal" id="modal" onClick={(e)=> {e.stopPropagation()}}>
-            <div className="modal1 flex-switch">
-                <h3 className="header">Settings</h3>
-                <button data-close-btn className="close-btn" onClick={onClose}>&times;</button></div>
+
+    if (!open) return null
+
+
+    return (
+        <section >
+            <div className="modal" id="modal" onClick={(e) => { e.stopPropagation() }}>
+                <div className="modal1 flex-switch">
+                    <h3 className="header">Settings</h3>
+                    <button data-close-btn className="close-btn" onClick={onClose}>&times;</button></div>
                 <h4>GLOBAL</h4>
                 <div className="flex-switch">
                     <p>Dark Mode</p>
