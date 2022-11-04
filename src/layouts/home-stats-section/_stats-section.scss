@@ -229,9 +229,8 @@ $theme-light: map.set(
 
             .card-container-dst {
                 @include flex();
-                // width: 100%;
-                // flex-wrap: wrap;
-
+                width: 100%;
+                flex-wrap: wrap;
                 .card-dst {
                     background: var(--background-stat-card);
                     @include flex(column);
@@ -303,6 +302,9 @@ $theme-light: map.set(
                         }
                     }
                 }
+
+// ---------------------------------------------------------------------------------------------------
+
             }
         }
 
@@ -317,7 +319,9 @@ $theme-light: map.set(
             }
         }
     }
-}
+// }
+
+
 // MEDIA -->  851px  ####################### 851px  ########################### 851px  #################################à
 
 @media screen and (min-width: 851px) and (max-width: 968px) {
@@ -377,8 +381,8 @@ $theme-light: map.set(
 
             .card-container-dst {
                 @include flex();
-                // width: 100%;
-                // flex-wrap: wrap;
+                width: 100%;
+                flex-wrap: wrap;
 
                 .card-dst {
                     background: var(--background-stat-card);
@@ -610,10 +614,4 @@ $theme-light: map.set(
     }
 }
 
-// @media  screen and (max-width: 851px){
-//             .wrapper-stat {
-//                 .card-container-dst {
-//                     @include flex(column);
-//                 }
-//             }
-//     }
+}
