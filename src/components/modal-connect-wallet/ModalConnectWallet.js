@@ -14,6 +14,7 @@ import opera from "../../resources/home/crypto-wallet-logo/opera.png";
 import safePal from "../../resources/home/crypto-wallet-logo/safepal.png";
 import coin98 from "../../resources/home/crypto-wallet-logo/coin98.png";
 import block from "../../resources/home/crypto-wallet-logo/blocto.png";
+import { PurpleModalBtn } from '../buttons/PurpleModalBtn';
 
 export default function ModalConnectWallet({open, onClose}) {
 
@@ -33,7 +34,7 @@ export default function ModalConnectWallet({open, onClose}) {
   }
 
   const styleTab1 = {
-    left: '-12rem'
+    left: '-14rem'
   }
   
   
@@ -41,13 +42,13 @@ export default function ModalConnectWallet({open, onClose}) {
   return (
     <div className='modalConnectWallet' onClick={(e)=> {e.stopPropagation()}}>
       <div className="bloc-tabs">
-              <button className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
+              <div className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
             onClick={() => toggleTab(1)} style={styleTab1}>
-              Connect Wallet</button>
-              <button className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
+              Connect Wallet</div>
+              <div className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
               onClick={() => toggleTab(2)} style={styleTab1}>
-                What's a Web3 Wallet</button>
-              <button  onClick={onClose} >&times;</button>
+                What's a Web3 Wallet</div>
+              <div className='closeBtn' onClick={onClose} >&times;</div>
         </div>
       <div className='container'>
         
@@ -121,7 +122,8 @@ export default function ModalConnectWallet({open, onClose}) {
             <section className='right-card'>
               <h3 className='h3-9a6aff'>Haven’t got a wallet yet?</h3>
               <img src={walletImg} alt='wallet'/>
-              <button className='btn-modal-connect'>Learn How to Connect</button>
+              <a href='https://docs.pancakeswap.finance/get-started/connection-guide'target='blank'><PurpleModalBtn 
+              type="btn-modal-connect"/></a>
             </section>
           </div>
 
@@ -137,7 +139,8 @@ export default function ModalConnectWallet({open, onClose}) {
                 <div className={switchImg === 1 ? 'toggle-btn active-toggle' : 'toggle-btn'} onClick={() =>toggleImg(1)}></div>
                 <div className={switchImg === 2 ? 'toggle-btn-right active-toggle-right' : 'toggle-btn-right'} onClick={() => toggleImg(2)}></div>
               </div>
-              <button className='btn-modal-connect'>Learn How To Connect</button>
+              <a href='https://docs.pancakeswap.finance/get-started/connection-guide'target='blank'><PurpleModalBtn 
+              type="btn-modal-connect"/></a>
                     
             </section>
           </div>

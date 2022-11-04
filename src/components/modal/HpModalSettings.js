@@ -7,8 +7,6 @@ export function HpModalSettings({ open, onClose }) {
 
     const { theme, handleThemeColor } = HandleThemeColor()
 
-
-
     if (!open) return null
 
 

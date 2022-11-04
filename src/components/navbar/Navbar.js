@@ -12,6 +12,7 @@ import {LanguageSelector} from "../language-selector/LanguageSelector";
 import DropdownCrypto from "../dropdown-crypto/DropdownCrypto";
 import ModalConnectWallet from "../modal-connect-wallet/ModalConnectWallet";
 import Logo from '../logo/Logo.js'
+import { ConnectWalletBtn } from "../buttons/ConnectWalletBtn";
 
 
 export function Navbar() {
@@ -175,12 +176,8 @@ export function Navbar() {
                         onClick={() => setOpenModal(true)}></img>
                     <DropdownCrypto />
                     <div>
-                        <span className="link-aquagreen">
-                            <button className="btn-navbar button-aquagreen"
-                            onClick={() => setOpenModalWallet(true)}>
-                                Connect Wallet
-                            </button>
-                        </span>
+                    <ConnectWalletBtn type="fullButton button-aquagreen" action={() => setOpenModalWallet(true)} />
+                        
                     </div>
                 </section>
                </div>
