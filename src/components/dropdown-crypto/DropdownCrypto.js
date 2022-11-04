@@ -20,13 +20,13 @@ export default function DropdownCrypto() {
     <div className="dropdown-crypto"
      onMouseEnter={() =>  {setDropdown(!openDropdown)}}
      onMouseLeave={() => {setDropdown(false)}}>
-      <span className="link-popup-navbar">     
-        <button className="button-navbar-bnb"> 
+         
+        <div className="button-navbar-bnb"> 
         {selected.img}
           {selected.name}
           <img className="fa-svg-icon" src={arrow} alt="arrow icon"/>
-        </button>
-      </span>
+        </div>
+      
       
        {openDropdown && (
       <div className='drop-content'>

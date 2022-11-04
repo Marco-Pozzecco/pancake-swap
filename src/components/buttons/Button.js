@@ -10,6 +10,7 @@ export function Button(props) {
             {props.text && props.text}
             {props.svg && <img src={props.svg} />}
             {props.children}
+            
         </button>
     );
 }

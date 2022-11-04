@@ -1,8 +1,8 @@
 import React  from "react";
-import { useNavigate } from "react-router-dom";
+
 import {Button} from "./Button";
 
-export function ConnectWalletBtn (props) {
+export function PurpleModalBtn (props) {
 
     
     
@@ -10,13 +10,7 @@ export function ConnectWalletBtn (props) {
         <Button
             type={props.type}
             action={props.action}
-            text="Connect Wallet"
+            text="Learn How to Connect"
         />
     );
 }
-
-
-
-
-
-

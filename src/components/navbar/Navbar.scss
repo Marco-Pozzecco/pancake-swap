@@ -256,25 +256,13 @@ nav {
             }
 
             .button-aquagreen {
-                width: 149px;
+                width: 179px;
                 height: 32px;
                 margin: 2px 4px 4px 0px;
                 padding: 0px 16px;
             }
 
-            .button-navbar-bnb {
-                width: 220px;
-                height: 32px;
-                margin: 2px 4px 4px 0px;
-                padding: 0px 16px 0px 0px;
-                color: var(--btn-bg-tx);
-                background-color: var(--btn-bg);
 
-                img {
-                    width: 30px;
-                    height: 30px;
-                }
-            }
         }
     }
 
@@ -365,6 +353,10 @@ nav {
                     font-size: 0;
                     width: 80px;
 
+                }
+
+                .button-aquagreen {
+                    width: auto;
                 }
 
             }
