@@ -5,6 +5,7 @@ import stella1 from "../../resources/home/bunny/stella1.webp";
 import stella2 from "../../resources/home/bunny/stella2.webp";
 import stella3 from "../../resources/home/bunny/stella3.webp";
 import {Button} from "../../components/buttons/Button";
+import { MainBanner } from "../home-main-banner/MainBanner";
 
 export function FloatingBunny() {
     let [theme, setTheme] = React.useState(null);
@@ -16,6 +17,9 @@ export function FloatingBunny() {
 
     return (
         <section className="fb-floating-bunny">
+
+            <MainBanner/>
+
             <div className="fb-wrapper">
                 <div className="fb-contents-section">
                     <h2>The moon is made of pancakes.</h2>

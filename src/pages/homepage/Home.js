@@ -14,8 +14,7 @@ export default function Home() {
             <Subnav
                 elements={["Swap", "Limit", "Liquidity", "Perpetual", "Bridge"]}
             />
-            <MainBanner />
-            {/* <FloatingBunny /> */}
+            <FloatingBunny />
             <CakeToken />
             <WinPrizes />
         </>
