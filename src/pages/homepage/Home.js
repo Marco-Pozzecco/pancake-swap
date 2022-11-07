@@ -15,7 +15,7 @@ export default function Home() {
                 elements={["Swap", "Limit", "Liquidity", "Perpetual", "Bridge"]}
             />
             <MainBanner />
-            <FloatingBunny />
+            {/* <FloatingBunny /> */}
             <CakeToken />
             <WinPrizes />
         </>
