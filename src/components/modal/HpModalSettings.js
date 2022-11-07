@@ -1,11 +1,9 @@
 import React from 'react'
-import { HandleThemeColor } from '../../script/HandleThemeColor'
-//import HandleThemeColor from '../../script/HandleThemeColor';
+import { handleThemeChange, useThemeChanger } from '../../hooks/useThemeChanger'
 import "./hp_modal_settings.scss";
 
 export function HpModalSettings({ open, onClose }) {
-
-    const { theme, handleThemeColor } = HandleThemeColor()
+    const [toggled, handleThemeChange] = useThemeChanger();
 
     if (!open) return null
 
@@ -23,8 +21,8 @@ export function HpModalSettings({ open, onClose }) {
                         type="checkbox"
                         className="checkbox"
                         id="chk"
-                        onChange={handleThemeColor}
-                        checked={theme}
+                        onChange={handleThemeChange}
+                        checked={toggled}
                     />
                     <label className="label" for="chk">
                         <i className="fa-regular fa-moon"></i>
