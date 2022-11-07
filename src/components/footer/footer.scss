@@ -151,7 +151,7 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
 
   &-Latestbar {
     width: 90%;
-    height: 10%;
+    height: 10px;
     margin-left: 5.2%;
     margin-top: 1.5%;
     display: flex;
@@ -159,7 +159,7 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
     align-content: center;
     align-items: center;
     margin-bottom: 1%;
-    gap: 41%;
+    gap: 41.5%;
 
     &-Left {
       display: flex;
@@ -199,6 +199,7 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
           border: 1px solid #27262c;
           border-radius: 16px;
           margin-top: -25rem;
+          margin-left: -2rem;
           padding-bottom: 4px;
           padding-top: 4px;
           width: 150px;
@@ -238,8 +239,8 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
         transition-delay: 0s;
 
         &:hover {
+          margin-right: -4px;
           width: 30px;
-          margin: -3.2px;
           transition-delay: 0s;
         }
       }
@@ -280,11 +281,6 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
         }
       }
     }
-  }
-
-  [id*="Container-Footer-Icons-"] {
-    width: 20px;
-    height: 20px;
   }
 }
 
@@ -373,6 +369,11 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
 
     &-Latestbar {
       display: none;
+    }
+    .pancakeicon {
+      &:hover {
+        margin-bottom: 4px;
+      }
     }
   }
 
