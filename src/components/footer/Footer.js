@@ -8,6 +8,7 @@ import Medium from "../../resources/Medium.webp"
 import Reddit from "../../resources/Reddit.webp"
 import Telegram from "../../resources/Telegram.webp"
 import Twitter from "../../resources/Twitter.webp"
+import { ToggleTheme } from "../toggle/ToggleTheme";
 
 export function Footer() {
     return (
@@ -218,12 +219,7 @@ export function Footer() {
                     <div className="Container-Footer-Latestbar">
                         <div className="Container-Footer-Latestbar-Left">
                             <div>
-                                <input type="checkbox" className="checkbx3" id="chk3" />
-                                <label className="label3" for="chk3">
-                                    <i className="fa-regular fa-moon"></i>
-                                    <i className="fas fa-sun"></i>
-                                    <div className="ball3 circle-toggle"></div>
-                                </label>
+                                <ToggleTheme />
                             </div>
                             <div className="language">
                                 <svg

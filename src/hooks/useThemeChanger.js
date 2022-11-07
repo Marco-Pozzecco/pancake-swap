@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export function useThemeChanger () {
-  const [toggled, setToggled] = useState(false);
+  const [toggled, setToggled] = useState(true);
 
   function handleThemeChange(event) {
 
@@ -10,11 +10,11 @@ export function useThemeChanger () {
 
     if (toggledStatus) {
   
-      document.body.setAttribute('class', "theme-light");
+      document.body.setAttribute('class', "theme-dark");
   
     } else {
   
-      document.body.setAttribute('class', "theme-dark");
+      document.body.setAttribute('class', "theme-light");
   
     }
   }

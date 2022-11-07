@@ -1,0 +1,48 @@
+.hidden-checkbox {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+}
+
+.toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #666171;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 30px;
+    width: 54px;
+    transform: scale(1);
+    z-index: 1;
+    &:hover .circle-toggle {
+        border: 2px solid #7050af;
+        transition: 0.2s;
+    }
+}
+
+  
+.circle-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #27262c;
+    border-radius: 50%;
+    // -moz-border-radius:50%;
+    // -webkit-border-radius:50%;
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+    z-index: 3;
+}
+
+
