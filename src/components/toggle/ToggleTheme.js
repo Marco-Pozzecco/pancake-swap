@@ -1,5 +1,5 @@
 import { useThemeChanger } from "../../hooks/useThemeChanger"
-import "./_themeToggle.scss";
+import "./_toggleTheme.scss";
 import {BiSun} from "react-icons/bi"
 import {BiMoon} from "react-icons/bi"
 
