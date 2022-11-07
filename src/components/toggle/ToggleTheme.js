@@ -1,5 +1,5 @@
 import { useThemeChanger } from "../../hooks/useThemeChanger"
-import "./_toggle.scss";
+import "./_themeToggle.scss";
 import {BiSun} from "react-icons/bi"
 import {BiMoon} from "react-icons/bi"
 
@@ -17,6 +17,5 @@ export function ToggleTheme () {
                 </div>
                 <input type="checkbox" checked={toggled} onChange={handleThemechange} className=".hidden-checkbox" style={{display: "none"}}/>
             </label>
-        
     )
 }
