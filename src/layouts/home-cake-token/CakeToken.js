@@ -16,17 +16,23 @@ import "./cake-token.scss";
 export function CakeToken() {
     let [token, setToken] = useState(null);
 
-    async function getPancakeSwapValue() {
-        let response = await fetch("https://api.coingecko.com/api/v3/coins/pancakeswap-token?tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=true");
+    const baseURL = "https://api.coingecko.com/api/v3/"
+
+    async function getPancakeSwapData() {
+        let response = await fetch(`${baseURL}coins/pancakeswap-token?tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=true`);
         let data = await response.json();
         setToken(data);
+        console.log(data);
     }
     
     useEffect(() => {
-        getPancakeSwapValue();
+        getPancakeSwapData();
     }, [])
 
-    console.log(token);
+    useEffect(() => {
+        const intervalID = setInterval(() => getPancakeSwapData(), 6000);
+        return clearInterval(intervalID);
+    }, []) 
 
     return (
         <section className="cake-token">
@@ -84,19 +90,19 @@ export function CakeToken() {
                     <div className="cake-supply">
                         <p className="text-subtle">Total Supply</p>
                         <p className="text-cake-stats" id="total-supply">
-                            328,219,229
+                            {token && token.market_data?.total_supply.toLocaleString("en")}
                         </p>
                     </div>
                     <div className="cake-max-supply">
                         <p className="text-subtle">Max Supply</p>
                         <p className="text-cake-stats" id="max-supply">
-                            750,000,000
+                            {token && token.market_data?.max_supply.toLocaleString("en")}
                         </p>
                     </div>
                     <div className="cake-cap">
                         <p className="text-subtle">Market cap</p>
                         <p className="text-cake-stats" id="market-cap">
-                            $610 million
+                            ${token && token.market_data?.market_cap.usd.toLocaleString("en")}
                         </p>
                     </div>
                     <div className="cake-burned">

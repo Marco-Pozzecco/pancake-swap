@@ -1,7 +1,6 @@
 import React from "react";
-import { useHref, useNavigate } from "react-router-dom";
 // import { Link } from 'react-router-dom'
-import {Button} from "./Button";
+import { Button } from "./Button";
 
 export function LearnBtn() {
     function handleClick() {
