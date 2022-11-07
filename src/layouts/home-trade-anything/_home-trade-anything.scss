@@ -78,6 +78,17 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
 }
 
 //end scrollbar
+.earnColors {
+  fill: var(--background-trade);
+  background: var(--background-earn);
+  width: 150%;
+}
+
+.usedbyColors {
+  fill: white;
+  background: var(--background-trade);
+  width: 100%;
+}
 
 .ta-trade-anything {
   position: relative;
@@ -339,5 +350,15 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .earnColors {
+    width: 150%;
+  }
+
+  .usedbyColors {
+    width: 150%;
   }
 }

@@ -47,6 +47,10 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
   --heading-3: #{map.get($theme-light, "text", "header3-text")};
 }
 
+body {
+  overflow-x: hidden;
+}
+
 //scrollbar
 
 ::-webkit-scrollbar {
@@ -393,6 +397,7 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
 }
 
 @include mq("tablet-small") {
+  
   .ea-earn {
     .ea-wrapper {
       @include flex(column-reverse, center);
