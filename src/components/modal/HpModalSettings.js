@@ -1,42 +1,19 @@
-import React, {useState} from "react";
-//import HandleThemeColor from '../../script/HandleThemeColor';
+import React from 'react'
+import { handleThemeChange, useThemeChanger } from '../../hooks/useThemeChanger'
 import "./hp_modal_settings.scss";
 
-export function HpModalSettings({open, onClose}) {
-    const [theme, setTheme] = useState();
+export function HpModalSettings({ open, onClose }) {
+    const [toggled, handleThemeChange] = useThemeChanger();
 
-    function handleThemeColor(event) {
-        const checked = event.target.checked;
-        //const dark = !checked
-        var chk3 = document.getElementById("chk3");
-        //const logo = document.getElementById('main-logo');
+    if (!open) return null
 
-        setTheme(checked);
-        console.log(checked);
-        if (theme) {
-            console.log("theme-dark");
-            document.body.classList.add("theme-dark");
-            document.body.classList.remove("theme-light");
-            chk3.checked = false;
-            //logo.setAttribute('src' , '../../resources/svgs/logo_black.svg');
-        } else {
-            console.log("theme-light");
-            document.body.classList.add("theme-light");
-            document.body.classList.remove("theme-dark");
-            chk3.checked = true;
-            //logo.setAttribute('src', '../../resources/svgs/logo_white.svg');
-        }
-    }
-    
-    if(!open) return null
-    
 
-  return (
-    <section >
-        <div className="modal" id="modal" onClick={(e)=> {e.stopPropagation()}}>
-            <div className="modal1 flex-switch">
-                <h3 className="header">Settings</h3>
-                <button data-close-btn className="close-btn" onClick={onClose}>&times;</button></div>
+    return (
+        <section >
+            <div className="modal" id="modal" onClick={(e) => { e.stopPropagation() }}>
+                <div className="modal1 flex-switch">
+                    <h3 className="header">Settings</h3>
+                    <button data-close-btn className="close-btn" onClick={onClose}>&times;</button></div>
                 <h4>GLOBAL</h4>
                 <div className="flex-switch">
                     <p>Dark Mode</p>
@@ -44,8 +21,8 @@ export function HpModalSettings({open, onClose}) {
                         type="checkbox"
                         className="checkbox"
                         id="chk"
-                        onChange={handleThemeColor}
-                        checked={theme}
+                        onChange={handleThemeChange}
+                        checked={toggled}
                     />
                     <label className="label" for="chk">
                         <i className="fa-regular fa-moon"></i>

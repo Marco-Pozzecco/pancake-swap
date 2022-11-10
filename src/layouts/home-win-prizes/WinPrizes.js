@@ -1,4 +1,7 @@
 import React from "react";
+// Components
+import {Button} from "../../components/buttons/Button";
+// CSS
 import "./_win-prizes.scss";
 // import images
 import ball2 from "../../resources/home/winPrizes/ball2-1024.webp";
@@ -14,8 +17,8 @@ import cardTopRight from "../../resources/home/winPrizes/card-top-right-1024.web
 
 import crystalBall from "../../resources/svgs/crystal-ball.svg";
 import ticket from "../../resources/svgs/ticket.svg";
-// Components
-import {Button} from "../../components/buttons/Button";
+// Icons
+import { BiRightArrowAlt } from "react-icons/bi";
 
 export function WinPrizes() {
     return (
@@ -64,7 +67,9 @@ export function WinPrizes() {
                                 type="fullButton"
                                 text="Play"
                                 style={{width: "100%"}}
-                            />
+                            >
+                                <BiRightArrowAlt fillRule="white" style={{height: "1.5em", width: "1.5em"}}/>
+                            </Button>
                         </div>
                     </div>
                     <div className="card card-lottery">
@@ -86,7 +91,9 @@ export function WinPrizes() {
                                 type="fullButton"
                                 text="Buy tickets"
                                 style={{width: '100%'}}
-                            />
+                            >
+                                <BiRightArrowAlt fillRule="white" style={{height: "1.5em", width: "1.5em"}}/>
+                            </Button>
                         </div>
                     </div>
                 </div>

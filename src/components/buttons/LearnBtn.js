@@ -1,9 +1,11 @@
 import React from "react";
 // import { Link } from 'react-router-dom'
-import {Button} from "./Button";
+import { Button } from "./Button";
 
 export function LearnBtn() {
-    function openLearnBtn() {}
+    function handleClick() {
+        window.location.assign("https://docs.pancakeswap.finance/");
+    }
 
-    return <Button type="noBorderButton" text="Learn" onClick={openLearnBtn} />;
+    return <Button type="noBorderButton" text="Learn" action={handleClick} />;
 }

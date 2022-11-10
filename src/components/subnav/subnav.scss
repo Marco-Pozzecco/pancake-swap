@@ -10,10 +10,12 @@ $theme-dark: map.set($theme-dark, "nav-bkground", $footer-background);
 $theme-light: map.set($theme-light, "nav-bkground", #fff);
 
 .theme-dark {
-    --nav-bkground: #{map.get($theme-dark, "nav-bkground")};
+    --nav-bkground: #{map.get($theme-dark , "nav-bkground")};
 }
+
 .theme-light {
-    --nav-bkground: #{map.get($theme-light, "nav-bkground")};
+
+    --nav-bkground: #{map.get($theme-light , "nav-bkground")};
 }
 
 .subnav {
@@ -30,10 +32,21 @@ $theme-light: map.set($theme-light, "nav-bkground", #fff);
     //overflow-x: scroll;
     //flex-grow: 1;
     color: aliceblue;
+
     ul {
         display: flex;
+        align-items: center;
+
         li {
-            padding-right: 20px;
+            padding-right: 10px;
+
+            a {
+                display: flex;
+                align-items: center;
+                padding-right: 10px;
+            }
+
         }
     }
+
 }
