@@ -2,6 +2,8 @@ import React from 'react'
 import "./_home-main-banner.scss"
 
 
+
+
 // PRIMO BANNER - BANNER-A
 export  function BannerA() {
   return (
