@@ -20,6 +20,9 @@ export function FloatingBunny() {
 
     return (
         <section className="fb-floating-bunny">
+
+            <MainBanner/>
+
             <div className="fb-wrapper">
                 <div className="fb-contents-section">
                     <h2>The moon is made of pancakes.</h2>

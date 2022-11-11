@@ -1,4 +1,5 @@
 import React from "react";
+// --------------------------------------------
 import {Trade} from "./pages/trade/Trade";
 import {Earn} from "./pages/earn/Earn";
 import {Win} from "./pages/win/Win";
@@ -8,6 +9,9 @@ import "../src/main.scss";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {Layout} from "./pages/Layout";
 import {Nft} from "./pages/nft/Nft";
+// ---------------------------------------------------
+import Navbar from "./components/navbar/Navbar";
+// import "./App.css"
 
 import {Limit} from './pages/limit/Limit';
 import {Liquidity} from './pages/liquidity/Liquidity'
@@ -16,9 +20,10 @@ export function App() {
     return (
         <div>
             <Router>
+
                 <Routes>
                     <Route path="/" element={<Layout />}>
-                        <Route index element={<Home />} />
+                        <Route index element={<Home /> } />
                         <Route path="trade" element={<Trade />} />
                             <Route path='limit' element={<Limit/>}/>
                             <Route path='liquidity' element={<Liquidity/>}/>
@@ -30,6 +35,11 @@ export function App() {
                     </Route>
                 </Routes>
             </Router>
+
+                
+
+
+
         </div>
     );
 }
