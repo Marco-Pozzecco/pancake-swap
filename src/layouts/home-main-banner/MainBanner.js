@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BannerA, BannerB, BannerC } from './InternalBanners'
 import { MainBannerSwiper } from './MainBannerSwiper'
 import "./_home-main-banner.scss"
@@ -6,29 +6,49 @@ import "./_home-main-banner.scss"
 export function MainBanner() {
 
 
-const [ slideA, setSlideA ] = useState()
-const [ slideB, setSlideB ] = useState()
-const [ slideC, setSlideC ] = useState()
+// const [ slides, setSlides ] = useState('a')
 
 
 
+// const visibilityA = () => {
+//     setSlides('a')
+// }
+
+// const visibilityB = () => {
+//     setSlides('b')
+
+// }
+
+// const visibilityC = () => {
+//     setSlides('c')
+// }
 
 
+    // useEffect(() => {
+    //     setSlides()
+    // }, [slides])
 
 
   return (
 
-    <section className="main-banner-container">          {/*COLORE PLACEHOLDER*/}
+    <section className="main-banner-container">          
         <div className="main-banner-sub-container">
 
-            <BannerA />
-            <BannerB />
-            <BannerC />
-
-            <MainBannerSwiper />
+ {/* {slides === 'a' && <BannerA /> }
+ {slides === 'b' && <BannerB /> }
+ {slides === 'c' && <BannerC /> } */}
 
 
-        </div>
+    <BannerA />
+    <BannerB />
+    <BannerC />
+ 
+
+{/* <MainBannerSwiper a={visibilityA} b={visibilityB} c={visibilityC}/> */}
+    <MainBannerSwiper />
+
+
+</div>
     </section>
 
     )
