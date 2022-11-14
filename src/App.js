@@ -10,26 +10,36 @@ import {Layout} from "./pages/Layout";
 import {Nft} from "./pages/nft/Nft";
 
 import {Limit} from './pages/limit/Limit';
-import {Liquidity} from './pages/liquidity/Liquidity'
+import {Liquidity} from './pages/liquidity/Liquidity';
+import {ThemeContext} from './context/ThemeContext';
 
 export function App() {
+    const [theme, setTheme] = useState('theme-dark');
+
+    const contextValue = {
+        theme,
+        setTheme
+    }
+
     return (
         <div>
-            <Router>
-                <Routes>
-                    <Route path="/" element={<Layout />}>
-                        <Route index element={<Home />} />
-                        <Route path="trade" element={<Trade />} />
-                            <Route path='limit' element={<Limit/>}/>
-                            <Route path='liquidity' element={<Liquidity/>}/>
-                        <Route path="earn" element={<Earn />} />
-                        <Route path="win" element={<Win />} />
-                        <Route path="nft" element={<Nft />} />
-                        {/* <Route path="win" element={<extra/>} /> */}
-                        <Route path="*" element={<NoPage />} />
-                    </Route>
-                </Routes>
-            </Router>
+            <ThemeContext.Provider value={contextValue}>
+                <Router>
+                    <Routes>
+                        <Route path="/" element={<Layout />}>
+                            <Route index element={<Home />} />
+                            <Route path="trade" element={<Trade />} />
+                                <Route path='limit' element={<Limit/>}/>
+                                <Route path='liquidity' element={<Liquidity/>}/>
+                            <Route path="earn" element={<Earn />} />
+                            <Route path="win" element={<Win />} />
+                            <Route path="nft" element={<Nft />} />
+                            {/* <Route path="win" element={<extra/>} /> */}
+                            <Route path="*" element={<NoPage />} />
+                        </Route>
+                    </Routes>
+                </Router>
+            </ThemeContext.Provider>
         </div>
     );
 }

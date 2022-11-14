@@ -12,7 +12,6 @@ import { StartInSeconds } from "../../layouts/home-start-in-seconds/StartInSecon
 export default function Home() {
     return (
         <>
-
             <FloatingBunny />
             <UsedBy />
             <TradeAnything />
