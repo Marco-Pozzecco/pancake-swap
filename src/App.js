@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+// --------------------------------------------
 import {Trade} from "./pages/trade/Trade";
 import {Earn} from "./pages/earn/Earn";
 import {Win} from "./pages/win/Win";
@@ -8,6 +9,9 @@ import "../src/main.scss";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {Layout} from "./pages/Layout";
 import {Nft} from "./pages/nft/Nft";
+// ---------------------------------------------------
+import Navbar from "./components/navbar/Navbar";
+// import "./App.css"
 
 import {Limit} from './pages/limit/Limit';
 import {Liquidity} from './pages/liquidity/Liquidity';
@@ -15,7 +19,7 @@ import {ThemeContext} from './context/ThemeContext';
 
 export function App() {
     const [theme, setTheme] = useState('theme-dark');
-
+    
     const contextValue = {
         theme,
         setTheme
