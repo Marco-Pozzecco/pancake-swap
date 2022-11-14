@@ -8,6 +8,7 @@ import { Button } from "../../components/buttons/Button";
 import { TradeNowBtn } from "../../components/buttons/TradeNowBtn";
 import { ConnectWalletBtn } from "../../components/buttons/ConnectWalletBtn";
 import ModalConnectWallet from "../../components/modal-connect-wallet/ModalConnectWallet";
+import { MainBanner } from "../home-main-banner/MainBanner";
 
 export function FloatingBunny() {
     let [theme, setTheme] = React.useState(null);
