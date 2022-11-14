@@ -59,6 +59,8 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
   --text-paragraph: #{map.get($theme-light, "text", "paragraph-light")};
   --heading-2: #{map.get($theme-light, "text", "header2-text")};
   --heading-3: #{map.get($theme-light, "text", "header3-text")};
+  --card-color: #27262c;
+  --card-border: #1c112f;
 }
 
 //scrollbar
@@ -85,7 +87,7 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
 }
 
 .usedbyColors {
-  fill: white;
+  fill: #201335;
   background: var(--background-trade);
   width: 100%;
 }

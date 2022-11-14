@@ -2,7 +2,7 @@
   height: 50rem;
   width: 100%;
   padding-top: 100px;
-  background: white;
+  background: linear-gradient(180deg, #09070c 22%, #201335 100%);
 
   .usedby_usedtop {
     width: 100%;
@@ -39,14 +39,15 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
-
+    --card-color: #27262c;
+    --card-border: #1c112f;
     .usedby_card {
       width: 280px;
       height: 300px;
-      background-color: var(--background-earn);
+      background-color: var(--card-color);
       border-radius: 30px;
       padding: 30px;
-      border-bottom: 1.4px solid var(--span-text);
+      border-bottom: 5px solid var(--card-border);
       flex-wrap: wrap;
 
       .usedby_card_top,

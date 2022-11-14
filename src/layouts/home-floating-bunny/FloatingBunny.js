@@ -62,6 +62,7 @@ export function FloatingBunny() {
                     viewBox="0 0 1660 339"
                     width="100%"
                     color="text"
+                    fill="url(#paint0_linear_dark)"
                     xmlns="http://www.w3.org/2000/svg"
                     className="sc-8a800401-0 Mvnec">
                     <path
@@ -104,7 +105,7 @@ export function FloatingBunny() {
                 </svg>
             </div>
             <ModalConnectWallet open={openModalWallet}
-            onClose={()=> setOpenModalWallet(false)}/>
+                onClose={() => setOpenModalWallet(false)} />
         </section>
     );
 }
