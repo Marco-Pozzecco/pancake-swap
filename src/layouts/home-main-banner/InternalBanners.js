@@ -2,6 +2,7 @@ import React from 'react'
 import "./_home-main-banner.scss"
 import { Button } from "../../components/buttons/Button";
 import { FaArrowRight } from "react-icons/fa";
+import { MainBannerCounterLottery } from './MainBannerCounterLottery';
 
 // PRIMO BANNER - BANNER-A
 export  function BannerA() {
@@ -33,7 +34,7 @@ export  function BannerA() {
         </a> */}
 
 
-        <Button text="Trade Now" type={"fullButton"}></Button>
+        <Button text="Trade Now" type={"fullButton"}><FaArrowRight/></Button>
     </div>
 
     {/* <!-- -- IMAGE Container A -- -- -- --> */}
@@ -66,7 +67,10 @@ export  function BannerB() {
                 Win <span>$102.181</span> in Lottery
             </h2>
             {/* <!--- -- -- -- -- Titles Content - COUNTER Lottery-- -- -- -- -- ---- -- -- -- --> */}
-            <div className="mb-counter-lottery">
+
+            <MainBannerCounterLottery/>
+
+            {/* <div className="mb-counter-lottery">
                 <h2 className="mbcl-item mbcli-number">1</h2>
                 <h2 className="mbcl-item mbcli-time">d</h2>
                 <h2 className="mbcl-item mbcli-number">3</h2>
@@ -75,7 +79,7 @@ export  function BannerB() {
                 <h2 className="mbcl-item mbcli-time">m</h2>
                 <h2 className="mbcl-item mbcli-number">36</h2>
                 <h2 className="mbcl-item mbcli-time">s</h2>
-            </div>
+            </div> */}
 
             {/* <!-- -- -- -- -- --Button- -- -- -- -- -- -- -- -- -- -- -- --  --> */}
             {/* <a href="#" className="link-aquagreen"> */}
@@ -92,7 +96,7 @@ export  function BannerB() {
                     </svg>
                 </button> */}
 
-            <Button text="Play Now" type={"fullButton"}></Button>
+            <Button text="Play Now" type={"fullButton"}><FaArrowRight/></Button>
 
         </div>
 
@@ -142,7 +146,7 @@ export  function BannerC() {
                 </button> */}
             {/* </a> */}
 
-            <Button text="Discover Now" type={"fullButton"}></Button>
+            <Button text="Discover Now" type={"fullButton"}><FaArrowRight style={{marginRigth: "12"}}/></Button>
 
         </div>
 
