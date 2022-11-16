@@ -96,6 +96,7 @@ li a {
 }
 
 .menu-nav li {
+
   &:hover,
   &:focus {
     background-color: var(--hover-nav-ul);
@@ -255,6 +256,7 @@ nav {
 }
 
 .fa-svg-icon {
+
   // fill: $secondary-color;
   &:hover {
     color: rgb(154, 106, 255, 30%);
@@ -271,9 +273,9 @@ nav {
   width: 100%;
   height: 100%;
   background-color: rgba(244, 238, 255, 0.6);
-  pointer-events: none;
+  //pointer-events: none;
   transition: 200ms ease-in-out;
-  z-index: 99;
+  //z-index: 99;
   opacity: 0;
 }
 
@@ -288,6 +290,7 @@ nav {
   nav {
     .extern-box {
       .flex {
+
         #money,
         .igZcUN,
         .menu-nav-ul,

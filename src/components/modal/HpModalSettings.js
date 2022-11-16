@@ -1,9 +1,9 @@
 import React from 'react'
-import { handleThemeChange, useThemeChanger } from '../../hooks/useThemeChanger'
+import { ToggleTheme } from '../toggle/ToggleTheme';
 import "./hp_modal_settings.scss";
 
 export function HpModalSettings({ open, onClose }) {
-    const [toggled, handleThemeChange] = useThemeChanger();
+   
 
     if (!open) return null
 
@@ -17,18 +17,7 @@ export function HpModalSettings({ open, onClose }) {
                 <h4>GLOBAL</h4>
                 <div className="flex-switch">
                     <p>Dark Mode</p>
-                    <input
-                        type="checkbox"
-                        className="checkbox"
-                        id="chk"
-                        onChange={handleThemeChange}
-                        checked={toggled}
-                    />
-                    <label className="label" for="chk">
-                        <i className="fa-regular fa-moon"></i>
-                        <i className="fas fa-sun"></i>
-                        <div className="ball"></div>
-                    </label>
+                    <ToggleTheme/>
                 </div>
                 <div className="flex-switch">
                     <p>Subgraph Health Indicator</p>
@@ -48,7 +37,7 @@ export function HpModalSettings({ open, onClose }) {
                     </label>
                 </div>
             </div>
-            {/* <HandleThemeColor theme={theme}/> */}
+            
         </section>
     );
 }

@@ -1,0 +1,102 @@
+// Use rules
+// @use "../../components/buttons/buttons";
+@use "sass:map";
+
+// Import rules
+@import "../../abstracts/mixins";
+@import "../../abstracts/colors";
+@import "../../abstracts/animations";
+
+.limit-external-box {
+    margin-top: 56px;
+    //padding-top: 110px;
+    padding-bottom: 150px;
+    //@include mq("desktop");
+    background-color: brown;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+
+    .col-1 {
+        background-color: aliceblue;
+        height: 100vh;
+        flex: 60%;
+    }
+
+    .col-2 {
+        background-color: aqua;
+        flex: 40%;
+        padding: 2%;
+
+        .ConverterCard {
+            width: 325px;
+            height: 600px;
+            background-color: var(--popup-bg); //var(--popup-bg)
+            border-radius: 30px;
+            //padding: 0px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .headerCard {
+                padding: 24px;
+                @include flex(column, center, center);
+                border-bottom: 1px solid red;
+
+                .headerRow {
+                    //background-color: aliceblue;
+                    width: 90%;
+                    @include flex(row, space-between, center);
+
+                    .header {
+                        color: var(--text-color-modal);
+                    }
+
+                    .modal-pg-tx {
+                        color: $primary-color;
+                    }
+
+                }
+            }
+
+            .ext-bottomCard {
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                justify-content: space-between;
+                align-items: center;
+                //background-color: red;
+                width: 100%;
+                height: 100%;
+
+                .bottomCard {
+                    display: grid;
+                    row-gap: 8px;
+                    height: 100%;
+                    width: 100%;
+                    //background-color: yellow;
+
+                    .input1Converter {
+                        width: 100%;
+
+                        .convertInput {
+                            border-radius: 20px;
+                            height: 45px;
+                            width: 100%;
+
+
+
+                        }
+                    }
+                }
+
+            }
+
+
+
+        }
+    }
+
+}

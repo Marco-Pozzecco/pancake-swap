@@ -89,6 +89,7 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
         background-image: var(--text-color);
     }
 
+
     .modal1 {
         position: fixed;
         width: 300px;
@@ -109,6 +110,7 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
             background: none;
             color: $btn-bg-color;
             font-size: 1.55rem;
+            margin-right: 20px;
         }
     }
 
@@ -200,25 +202,6 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
         }
     }
 
-    .fa-moon {
-        color: var(--fa-moon);
-        // width: 20px;
-        // height: 20px;
-        z-index: 2;
-        align-self: center;
-    }
-
-    .fa-sun {
-        color: var(--fa-sun); // var(--fa-sun)
-        // width: 20px;
-        // height: 20px;
-        z-index: 2;
-        align-self: center;
-        // display: block;
-        // flex-shrink: 0;
-        // overflow-y: hidden;
-        // overflow-x: hidden;
-    }
 
     .flex-switch {
         display: flex;

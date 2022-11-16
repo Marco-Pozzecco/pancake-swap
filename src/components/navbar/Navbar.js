@@ -5,7 +5,6 @@ import settingSvg from "../../resources/home/navbar/setting-icon.svg";
 import logo from "../../resources/home/navbar/logo_black.svg";
 import logoWhite from "../../resources/home/navbar/logo_white.svg";
 import { HpModalSettings } from "../modal/HpModalSettings";
-import bunnyRound from "../../resources/home/navbar/bunny-icon-round.svg";
 import logoBunny from "../../resources/home/navbar/bunny-logo.svg";
 import exitIcon from "../../resources/home/cake/exit-icon.svg";
 import { LanguageSelector } from "../language-selector/LanguageSelector";
@@ -270,7 +269,7 @@ export function Navbar() {
                 onClose={() => setOpenModal(false)} />
 
             <div className={openModal === true || openModalWallet === true ? 'overlay overlay-active' : 'overlay'}
-                onClick={() => setOpenModal(false)}>
+                onClick={() => {setOpenModal(false); setOpenModalWallet(false)}}>
             </div>
         </div>
     );
