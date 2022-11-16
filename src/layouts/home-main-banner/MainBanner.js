@@ -7,17 +7,12 @@ import "./_home-main-banner.scss"
 export function MainBanner() {
 
   return (
-
     <section className="main-banner-container">          
         <div className="main-banner-sub-container">
-
-        <BannerA />
+            <BannerA />
             <BannerB />
             <BannerC />
             <MainBannerSwiper />
-
-
-
         </div>
     </section>
     )
