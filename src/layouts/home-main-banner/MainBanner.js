@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { BannerA, BannerB, BannerC } from './InternalBanners'
+
 import { MainBannerSwiper } from './MainBannerSwiper'
 import "./_home-main-banner.scss"
 
@@ -39,8 +40,8 @@ export function MainBanner() {
  {slides === 'c' && <BannerC /> } */}
 
 
-    <BannerA />
-    <BannerB />
+    {/* <BannerA /> */}
+    {/* <BannerB /> */}
     <BannerC />
  
 

@@ -7,8 +7,10 @@ export function Button(props) {
             className={"generalButtonRules " + props.type}
             onClick={props.action}
             style={props.style}>
+            
             {props.text && props.text}
             {props.svg && <img src={props.svg} />}
+            
         </button>
     );
 }
