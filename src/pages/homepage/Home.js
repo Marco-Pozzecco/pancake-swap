@@ -15,7 +15,7 @@ export default function Home() {
         <>
 
             <FloatingBunny />
-            <UsedBy />
+            {/* <UsedBy /> */}
             <TradeAnything />
             <HomeEarn />
             <WinPrizes />

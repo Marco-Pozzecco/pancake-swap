@@ -7,32 +7,113 @@
 @import "../../abstracts/colors";
 @import "../../abstracts/animations";
 
+$theme-dark: map.set($theme-dark, "limit-bg", $dark-gradientBubblegum);
+
+
+$theme-light: map.set($theme-light, "limit-bg", $colors-gradientBubblegum);
+
+
+.theme-dark {
+    --colors-gradientBubblegum: #{map.get($theme-dark ,"limit-bg")};
+}
+
+.theme-light {
+    --colors-gradientBubblegum: #{map.get($theme-light , "limit-bg")};
+}
+
+
+
 .limit-external-box {
     margin-top: 56px;
     //padding-top: 110px;
-    padding-bottom: 150px;
+    padding-bottom: 10px;
     //@include mq("desktop");
-    background-color: brown;
+    background-color: var(--colors-gradientBubblegum);
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: row;
 
     .col-1 {
-        background-color: aliceblue;
-        height: 100vh;
+        //background-color: aliceblue;
+        //height: 100vh;
         flex: 60%;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: end;
+
+        .fakeGraph {
+            height: 500px;
+            width: 680px;
+            border: 1px solid $modal-bar;
+            border-radius: 16px;
+            margin-bottom: 46px;
+        }
+
+        .col1-bottom-card {
+            background-color: var(--text-color-modal);
+            width: 680px;
+            height: 300px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+
+            .bloc-tabs-bottom-card {
+                display: flex;
+                //background-color: aliceblue;
+                justify-content: space-around;
+
+                .tabs {
+                    padding: 24px;
+                }
+            }
+
+            .container-bottom-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 680px;
+                height: 250px;
+                margin: 0px auto 0;
+                background-color: var(--popup-modal1-bg);
+                background-image: var(--popup-modal1-bg);
+                border-radius: 16px;
+
+                .table {
+                    width: inherit;
+
+                    .th-table {
+                        padding: 16px;
+                    }
+                }
+
+                .content-bottom-card {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+
+                .card-bottom-row {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+            }
+        }
     }
 
     .col-2 {
-        background-color: aqua;
+        //background-color: aqua;
         flex: 40%;
         padding: 2%;
 
         .ConverterCard {
             width: 325px;
             height: 600px;
-            background-color: var(--popup-bg); //var(--popup-bg)
+            background-color: var(--popup-bg);
             border-radius: 30px;
             //padding: 0px 40px;
             display: flex;
@@ -51,11 +132,11 @@
                     @include flex(row, space-between, center);
 
                     .header {
-                        color: var(--text-color-modal);
+                        color: var(--text-color);
                     }
 
                     .modal-pg-tx {
-                        color: $primary-color;
+                        color: red;
                     }
 
                 }
@@ -81,14 +162,62 @@
                     .input1Converter {
                         width: 100%;
 
+                        .switchCryptoBtn {
+                            padding: 2%;
+                            width: 40%;
+                            color: var(--text-color);
+
+                            //background-color: aliceblue;
+                            * {
+                                margin-right: 8px;
+                            }
+                        }
+
+
                         .convertInput {
                             border-radius: 20px;
                             height: 45px;
                             width: 100%;
-
-
-
+                            padding: 3%;
+                            text-align: end;
                         }
+                    }
+
+                    .arrrowBtn {
+
+                        width: 32px;
+                        box-shadow: rgb(0 0 0 / 10%) 0px -2px 0px inset;
+                        align-items: center;
+                        border: 0px;
+                        border-radius: 16px;
+                        cursor: pointer;
+                        display: inline-flex;
+                        font-family: inherit;
+                        font-size: 16px;
+                        font-weight: 600;
+                        -webkit-box-pack: center;
+                        justify-content: center;
+                        letter-spacing: 0.03em;
+                        line-height: 1;
+                        opacity: 1;
+                        outline: 0px;
+                        transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+                        height: 32px;
+                    }
+
+                    .fx-inline {
+                        @include flex(row, flex-start);
+                    }
+
+                    .emptyDiv {
+                        border-radius: 20px;
+                        height: 45px;
+                        width: 100%;
+                        padding: 3%;
+                        background-color: aliceblue;
+                        border: 1px solid $modal-bar;
+
+
                     }
                 }
 

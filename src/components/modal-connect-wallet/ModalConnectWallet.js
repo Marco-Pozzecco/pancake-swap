@@ -48,7 +48,7 @@ export default function ModalConnectWallet({open, onClose}) {
               <div className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
               onClick={() => toggleTab(2)} style={styleTab1}>
                 What's a Web3 Wallet</div>
-              <div className='closeBtn' onClick={onClose} >&times;</div>
+              
         </div>
       <div className='container'>
         

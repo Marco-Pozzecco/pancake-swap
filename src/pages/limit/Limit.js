@@ -6,13 +6,77 @@ import { ConnectWalletBtn } from "../../components/buttons/ConnectWalletBtn";
 import arrow from "../../resources/home/navbar/arrow-down.svg";
 import barChart from '../../resources/limit/barIcon.svg'
 import historyIcon from '../../resources/limit/history.svg'
+import arrowLimit from '../../resources/limit/arrowLimit.svg'
+import doubleArrow from '../../resources/limit/doubleArrow.svg'
+import bunnyLogo from '../../resources/home/navbar/bunny-icon-round.svg'
+import copied from '../../resources/limit/copied.svg'
+import bunnyCard from '../../resources/limit/imgBunnyBottmCard.svg'
+import leftArrow from '../../resources/limit/leftArrow.svg'
+import rightArrow from '../../resources/limit/rightArrow.svg'
 
 export function Limit() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
+  const [toggleState, setTab] = useState(1);
+ 
+
+  const toggleTab = (index) => {
+    setTab(index);
+    console.log(index)
+  };
 
   return (
     <div className='limit-external-box'>
       <section className='col-1'>
+        <div className='fakeGraph'>
+        </div>
+
+        <div className='col1-bottom-card'>
+          <div className="bloc-tabs-bottom-card">
+                  <div className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
+                onClick={() => toggleTab(1)} >
+                  Open Orders</div>
+                  <div className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
+                  onClick={() => toggleTab(2)} >
+                    Order History</div>
+                  
+          </div>
+          <div className='container-bottom-card'>      
+            
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th className='th-table'>
+                      <div>From</div>
+                    </th>
+                    <th className='th-table'>
+                      <div>To</div>
+                    </th>
+                    <th className='th-table'>
+                      <div>Limit Price</div>
+                    </th>
+                    <th className='th-table'>
+                      <div>Status</div>
+                    </th>
+                  </tr>
+
+                </thead>     
+              </table>
+
+              <div className="content-bottom-card">
+                  <img className="switchImg" src={bunnyCard} alt='wallet'/>
+                  <p className={toggleState === 1 ? "primary-col switchImg active-switchImg" : "primary-col switchImg"}>No Open orders</p>
+                  <p className={toggleState === 2 ? "primary-col switchImg active-switchImg" : "primary-col switchImg"}>No Order History</p>
+
+              </div>
+              <div className='card-bottom-row'>
+                <img className="switchImg" src={leftArrow} alt='wallet'/>
+                <p>Page 1 of 1</p>
+                <img className="switchImg" src={rightArrow} alt='wallet'/>
+              </div>
+              
+            
+          </div>
+        </div>
 
       </section>
       <section className='col-2'>
@@ -31,16 +95,30 @@ export function Limit() {
                 <div className='ext-bottomCard'>
                   <div className='bottomCard'>
                       <div className="input1Converter">
-                          <div>CAKE<img className="fa-svg-icon" src={arrow} alt="arrow icon"/></div>
+                          <div className='fx-inline switchCryptoBtn'><img src={bunnyLogo} alt='history icon'>
+                            </img>CAKE<img className="fa-svg-icon" src={arrow} alt="arrow icon"/>
+                            <img className="fa-svg-icon" src={copied} alt="arrow icon"/>
+                          </div>
                           <input placeholder='0.0' className='convertInput'></input>
-                          
-                        
+                      </div>
+                      <div className='flex'> 
+                        <button className='arrrowBtn'><img src={arrowLimit} alt='history icon'></img></button>
                       </div>
                       <div className="input1Converter ">
-                          <div>BTCB<img className="fa-svg-icon" src={arrow} alt="arrow icon"/></div>
+                          <div className='fx-inline switchCryptoBtn'><img src={bunnyLogo} alt='history icon'></img>BTCB
+                          <img className="fa-svg-icon" src={arrow} alt="arrow icon"/>
+                          <img className="fa-svg-icon" src={copied} alt="arrow icon"/></div>
                           <input placeholder='0.0'  className='convertInput'></input>
-                          
-                        
+                      </div>
+                      <div className='fx-inline'>
+                        <p>Price</p>
+                        <p>Market</p>
+                      </div>
+                      <input className='emptyDiv'>
+                      </input>
+                      <div className='rowAfterEmptyDiv'>
+                        <p>BTCB</p>
+                        <p>CAKE</p>
                       </div>
                     </div>
                     <ConnectWalletBtn type="fullButton button-aquagreen" action={() => setOpenModalWallet(true)} />
