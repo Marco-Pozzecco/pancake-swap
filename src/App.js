@@ -16,6 +16,7 @@ import Navbar from "./components/navbar/Navbar";
 import {Limit} from './pages/limit/Limit';
 import {Liquidity} from './pages/liquidity/Liquidity';
 import {ThemeContext} from './context/ThemeContext';
+import { Perpetual } from "./pages/perpetual/Perpetual";
 
 export function App() {
     const [theme, setTheme] = useState('theme-dark');
@@ -35,6 +36,7 @@ export function App() {
                             <Route path="trade" element={<Trade />} />
                                 <Route path='limit' element={<Limit/>}/>
                                 <Route path='liquidity' element={<Liquidity/>}/>
+                                <Route path="perpetual" element={<Perpetual />} />
                             <Route path="earn" element={<Earn />} />
                             <Route path="win" element={<Win />} />
                             <Route path="nft" element={<Nft />} />

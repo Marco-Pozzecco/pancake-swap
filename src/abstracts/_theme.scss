@@ -3,8 +3,10 @@
     // background colors
     --background-primary: #08060b;
     --background-secondary: #27262c;
-    --background-terziary: rgba(39,38,44,.7);
+    --background-tertiary: rgba(39,38,44,.7);
     --background-disabled: #3c3742; 
+    --background-perpetual: #5b4f82;
+    --background-perpetual-item: rgb(24, 26, 32);
 
     // gradients
     --gradient-bubblegum: linear-gradient(139.73deg,#313d5c,#3d2a54);
@@ -78,9 +80,10 @@
     // background colors
     --background-primary: #faf9fa;
     --background-secondary: #fff;
-    --background-terziary: hsla(0,0%,100%,.7);
+    --background-tertiary: hsla(0,0%,100%,.7);
     --background-disabled:#e9eaeb;
-    ; 
+    --background-perpetual: #5b4f82; 
+    --background-perpetual-item: rgb(24, 26, 32);
 
     // gradients
     --gradient-bubblegum: linear-gradient(139.73deg,#e5fdff,#f3efff);

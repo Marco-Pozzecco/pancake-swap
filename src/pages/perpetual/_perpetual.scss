@@ -1,0 +1,20 @@
+@import "../../abstracts/theme";
+
+body {
+    background-color: var(--background-perpetual);
+}
+
+.perpetual-item {
+    box-sizing: border-box;
+    color: white;
+    margin: 0px;
+    min-width: 0px;
+    border-radius: 16px;
+    box-shadow: rgb(64, 51, 84) 0px 2px 0px;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    overflow: hidden auto;
+    background-color: var(--background-perpetual-item);
+
+}

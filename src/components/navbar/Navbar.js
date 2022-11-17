@@ -59,10 +59,7 @@ export function Navbar() {
                                         <Link to="/liquidity">Liquidity</Link>
                                     </li>
                                     <li>
-                                        <a href="https://perp.pancakeswap.finance/en/futures/BTCUSDT?theme=light"
-                                            target="blank">
-                                            Perpetual
-                                        </a>
+                                        <NavLink to='/perpetual'>Perpetual</NavLink>
                                         <img src={exitIcon} alt="exit icon" />
                                     </li>
                                     <li>

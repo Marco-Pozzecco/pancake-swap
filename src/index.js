@@ -1,7 +1,11 @@
+import React, { StrictMode } from "react";
 import * as ReactDOM from "react-dom/client";
-import { App } from "./App";
-import React from "react";
+import { Perpetual } from "./pages/perpetual/Perpetual";
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 
-root.render(<App />);
+root.render(
+    <StrictMode>
+        <Perpetual />
+    </StrictMode>
+);
