@@ -1,18 +1,19 @@
 import React from "react";
-import Subnav from "../../components/subnav/Subnav";
+import Subnav from "../../../components/subnav/Subnav";
 
-export function Win() {
+export function Lottery() {
     return (
         <div>
             <Subnav
                 elements={[
-                    "Trading Competition",
+                    "Trading",
                     "Prediction (BETA)",
                     "Lottery",
                     "Pottery (BETA)",
                 ]}
             />
-            <h1>Win</h1>
+            
+            <h1 className="provaH1">Lottery</h1>
         </div>
     );
 }

@@ -1,11 +1,12 @@
 import React from 'react'
 import Subnav from '../../../components/subnav/Subnav';
 
-export function Farm() {
+export function Pools() {
   return (
     <div>
         <Subnav elements={["Farms", "Pools"]} />
-        <h1 className='provaH1'>Farms</h1>
+        <h1 className='provaH1'>Pool</h1>
+
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import Subnav from "../../components/subnav/Subnav";
+import Subnav from "../../../components/subnav/Subnav";
 
 export function Liquidity() {
   return (
