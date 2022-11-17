@@ -5,6 +5,7 @@
 @import "../../abstracts/mixins";
 @import "../../abstracts/colors";
 @import "../../abstracts/animations";
+@import "../../abstracts/theme";
 
 * {
     box-sizing: border-box;
@@ -89,8 +90,8 @@
                 }
 
                 .main-banner-button-a {
-                    color: $black;
-                    fill: $black;
+                    color: var(--background-primary);
+                    fill: var(--background-primary);
 
                     & svg {
                         width: 20px;
@@ -228,8 +229,8 @@
                 }
 
                 .main-banner-button-c {
-                    color: $black;
-                    fill: $black;
+                    color: var(--background-primary);
+                    fill: var(--background-primary);
 
                     & svg {
                         width: 20px;
@@ -305,15 +306,15 @@
                 height: 100%;
                 background-color: $white;
             }
-            .swpr-a {
-                opacity: 1;
-            }
-            .swpr-b {
-                opacity: 1;
-            }
-            .swpr-c {
-                opacity: 1;
-            }
+            // .swpr-a {
+            //     opacity: 1;
+            // }
+            // .swpr-b {
+            //     opacity: 1;
+            // }
+            // .swpr-c {
+            //     opacity: 1;
+            // }
         }
     }
 
@@ -396,8 +397,8 @@
                 }
 
                 .main-banner-button-a {
-                    color: $black;
-                    fill: $black;
+                    color: var(--background-primary);
+                    fill: var(--background-primary);
 
                     & svg {
                         width: 20px;
@@ -479,8 +480,8 @@
                     }
 
                     .main-banner-button-b {
-                        color: $black;
-                        fill: $black;
+                        color: var(--background-primary);
+                        fill: var(--background-primary);
 
                         & svg {
                             width: 20px;
@@ -541,8 +542,8 @@
                 }
 
                 .main-banner-button-c {
-                    color: $black;
-                    fill: $black;
+                    color: var(--background-primary);
+                    fill: var(--background-primary);
 
                     & svg {
                         width: 20px;
@@ -620,15 +621,15 @@
                 background-color: $white;
                 z-index: 1;
             }
-            .swpr-a {
-                opacity: 1;
-            }
-            .swpr-b {
-                opacity: 1;
-            }
-            .swpr-c {
-                opacity: 1;
-            }
+            // .swpr-a {
+            //     opacity: 1;
+            // }
+            // .swpr-b {
+            //     opacity: 1;
+            // }
+            // .swpr-c {
+            //     opacity: 1;
+            // }
         }
     }
 
@@ -718,8 +719,8 @@
                 }
 
                 .main-banner-button-a {
-                    color: $black;
-                    fill: $black;
+                    color: var(--background-primary);
+                    fill: var(--background-primary);
 
                     & svg {
                         width: 20px;
@@ -801,8 +802,8 @@
                     }
 
                     .main-banner-button-b {
-                        color: $black;
-                        fill: $black;
+                        color: var(--background-primary);
+                        fill: var(--background-primary);
 
                         & svg {
                             width: 20px;
@@ -813,7 +814,7 @@
                 // STILE IMMAGINE
                 .bunny-container-b {
                     // border: 2px solid yellow;
-                    width: 27%;
+                    width: 140px;
                     height: 65%;
                     border-radius: 24px;
                     contain: content;
@@ -865,8 +866,8 @@
                 }
 
                 .main-banner-button-c {
-                    color: $black;
-                    fill: $black;
+                    color: var(--background-primary);
+                    fill: var(--background-primary);
 
                     & svg {
                         width: 20px;
@@ -947,15 +948,15 @@
                 background-color: $white;
                 z-index: 1;
             }
-            .swpr-a {
-                opacity: 1;
-            }
-            .swpr-b {
-                opacity: 1;
-            }
-            .swpr-c {
-                opacity: 1;
-            }
+            // .swpr-a {
+            //     opacity: 1;
+            // }
+            // .swpr-b {
+            //     opacity: 1;
+            // }
+            // .swpr-c {
+            //     opacity: 1;
+            // }
         }
     }
 

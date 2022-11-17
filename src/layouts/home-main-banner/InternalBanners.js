@@ -3,6 +3,9 @@ import "./_home-main-banner.scss"
 import { Button } from "../../components/buttons/Button";
 import { FaArrowRight } from "react-icons/fa";
 import { MainBannerCounterLottery } from './MainBannerCounterLottery';
+import "../../abstracts/_theme.scss"
+
+
 
 // PRIMO BANNER - BANNER-A
 export  function BannerA() {
@@ -34,7 +37,7 @@ export  function BannerA() {
         </a> */}
 
 
-        <Button text="Trade Now" type={"fullButton"}><FaArrowRight/></Button>
+        <Button text="Trade Now" type={"fullButton"} style={{color: "var(--background-primary)"}}><FaArrowRight/></Button>
     </div>
 
     {/* <!-- -- IMAGE Container A -- -- -- --> */}
@@ -96,7 +99,7 @@ export  function BannerB() {
                     </svg>
                 </button> */}
 
-            <Button text="Play Now" type={"fullButton"}><FaArrowRight/></Button>
+            <Button text="Play Now" type={"fullButton"} style={{color: "var(--background-primary)"}}><FaArrowRight/></Button>
 
         </div>
 
@@ -104,7 +107,7 @@ export  function BannerB() {
         <div className="bunny-container-b banner-b2">
             <picture>
                 <source
-                    media="(max-width: 968px) and (min-width: 576px)"
+                    media="(max-width: 968px)"
                     srcset="
                         https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FlotteryMobile.7ad41ede.png&w=384&q=75
                     " />
@@ -146,7 +149,7 @@ export  function BannerC() {
                 </button> */}
             {/* </a> */}
 
-            <Button text="Discover Now" type={"fullButton"}><FaArrowRight style={{marginRigth: "12"}}/></Button>
+            <Button text="Discover Now" type={"fullButton"} style={{color: "var(--background-primary)"}}><FaArrowRight/></Button>
 
         </div>
 

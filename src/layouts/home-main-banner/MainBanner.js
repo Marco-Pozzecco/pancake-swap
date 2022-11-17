@@ -12,6 +12,7 @@ export function MainBanner() {
 
         window.setInterval(() => {
             bannerIdx += 1;
+            console.log(bannerIndex);
             if(bannerIdx < 3)setBannerIndex(bannerIdx);
             else {bannerIdx = 0; setBannerIndex(0)}
         }, 5000)
