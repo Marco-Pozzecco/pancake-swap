@@ -46,7 +46,7 @@ export function Navbar() {
                         <ul className="menu-ul menu-nav menu-nav-ul">
                             {/* <li><NavLink to="/">Home</NavLink></li> */}
                             <li>
-                                <NavLink to="/trade">Trade</NavLink>
+                                <Link to="/trade">Trade</Link>
                                 <ul>
                                     <li>
                                         <Link to="/swap">Swap</Link>

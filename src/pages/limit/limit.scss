@@ -8,224 +8,296 @@
 @import "../../abstracts/animations";
 
 $theme-dark: map.set($theme-dark, "limit-bg", $dark-gradientBubblegum);
+$theme-dark: map.set($theme-dark, "tab-bg", $deActive-tab-dk);
+$theme-dark: map.set($theme-dark, "disable-text", $colors-textDisabled-dk);
 
 
 $theme-light: map.set($theme-light, "limit-bg", $colors-gradientBubblegum);
+$theme-light: map.set($theme-light, "tab-bg", $deActive-tab);
+$theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
+
 
 
 .theme-dark {
-    --colors-gradientBubblegum: #{map.get($theme-dark ,"limit-bg")};
+    --limit-bg: #{map.get($theme-dark ,"limit-bg")};
+    --tab-bg: #{map.get($theme-dark , "tab-bg")};
+    --disable-text: #{map.get($theme-dark , "disable-text")};
 }
 
 .theme-light {
-    --colors-gradientBubblegum: #{map.get($theme-light , "limit-bg")};
+    --limit-bg: #{map.get($theme-light , "limit-bg")};
+    --tab-bg: #{map.get($theme-light , "tab-bg")};
+    --disable-text: #{map.get($theme-light , "disable-text")};
 }
 
+.body-limit {
+    background-color: var(--limit-bg);
+    background-image: var(--limit-bg);
 
+    .limit-external-box {
 
-.limit-external-box {
-    margin-top: 56px;
-    //padding-top: 110px;
-    padding-bottom: 10px;
-    //@include mq("desktop");
-    background-color: var(--colors-gradientBubblegum);
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-
-    .col-1 {
-        //background-color: aliceblue;
-        //height: 100vh;
-        flex: 60%;
-        padding: 2%;
+        padding-bottom: 10px;
+        //@include mq("desktop");
+        width: 100%;
+        height: auto;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: end;
+        flex-direction: row;
 
-        .fakeGraph {
-            height: 500px;
-            width: 680px;
-            border: 1px solid $modal-bar;
-            border-radius: 16px;
-            margin-bottom: 46px;
-        }
-
-        .col1-bottom-card {
-            background-color: var(--text-color-modal);
-            width: 680px;
-            height: 300px;
-            border-radius: 16px;
-            margin-bottom: 24px;
-
-            .bloc-tabs-bottom-card {
-                display: flex;
-                //background-color: aliceblue;
-                justify-content: space-around;
-
-                .tabs {
-                    padding: 24px;
-                }
-            }
-
-            .container-bottom-card {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 680px;
-                height: 250px;
-                margin: 0px auto 0;
-                background-color: var(--popup-modal1-bg);
-                background-image: var(--popup-modal1-bg);
-                border-radius: 16px;
-
-                .table {
-                    width: inherit;
-
-                    .th-table {
-                        padding: 16px;
-                    }
-                }
-
-                .content-bottom-card {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                }
-
-                .card-bottom-row {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                }
-            }
-        }
-    }
-
-    .col-2 {
-        //background-color: aqua;
-        flex: 40%;
-        padding: 2%;
-
-        .ConverterCard {
-            width: 325px;
-            height: 600px;
-            background-color: var(--popup-bg);
-            border-radius: 30px;
-            //padding: 0px 40px;
+        .col-1 {
+            //background-color: aliceblue;
+            //height: 100vh;
+            flex: 60%;
+            padding: 2%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: flex-start;
+            align-items: end;
 
-            .headerCard {
-                padding: 24px;
-                @include flex(column, center, center);
-                border-bottom: 1px solid red;
-
-                .headerRow {
-                    //background-color: aliceblue;
-                    width: 90%;
-                    @include flex(row, space-between, center);
-
-                    .header {
-                        color: var(--text-color);
-                    }
-
-                    .modal-pg-tx {
-                        color: red;
-                    }
-
-                }
+            .fakeGraph {
+                height: 500px;
+                width: 680px;
+                border: 1px solid $modal-bar;
+                border-radius: 16px;
+                margin-bottom: 46px;
             }
 
-            .ext-bottomCard {
+            .col1-bottom-card {
+                background-color: var(--text-color-modal);
+                width: 680px;
+                height: 300px;
+                border-radius: 16px;
+                margin-bottom: 24px;
+
+                .bloc-tabs-bottom-card {
+                    display: flex;
+                    //background-color: aliceblue;
+                    justify-content: space-around;
+
+                    .tabs {
+                        width: 100%;
+                        padding: 0px 24px;
+                        height: 48px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        background-color: var(--tab-bg);
+                        color: $primary-color;
+
+                    }
+
+                    .active-tabs {
+                        background-color: var(--pop-bg);
+                        color: var(--text-color);
+
+
+
+                    }
+                }
+
+                .container-bottom-card {
+                    width: 680px;
+                    height: 250px;
+                    margin: 0px auto 0;
+                    background-color: var(--popup-bg);
+                    background-image: var(--popup-bg);
+                    border-radius: 16px;
+
+                    .table {
+                        width: inherit;
+
+                        .th-table {
+                            padding: 16px;
+                            color: $primary-color;
+                        }
+                    }
+
+                    .content-bottom-card {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        margin-top: 20px;
+                    }
+
+                    .switchTxt {
+                        display: none;
+                        color: var(--disable-text);
+                    }
+
+                    .active-switchImg {
+                        display: block;
+                        color: var(--disable-text);
+                    }
+
+                    .card-bottom-row {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: var(--text-color);
+
+                    }
+                }
+            }
+        }
+
+        .col-2 {
+            //background-color: aqua;
+            flex: 40%;
+            padding: 2% 2% 0% 2%;
+
+            .ConverterCard {
+                width: 325px;
+                height: 600px;
+                background-color: var(--popup-bg);
+                border-radius: 30px;
+                //padding: 0px 40px;
                 display: flex;
                 flex-direction: column;
-                padding: 1rem;
                 justify-content: space-between;
                 align-items: center;
-                //background-color: red;
-                width: 100%;
-                height: 100%;
 
-                .bottomCard {
-                    display: grid;
-                    row-gap: 8px;
-                    height: 100%;
-                    width: 100%;
-                    //background-color: yellow;
+                .headerCard {
+                    padding: 24px;
+                    @include flex(column, center, center);
+                    border-bottom: 1px solid var(--dropdown-line);
+                    text-align: center;
 
-                    .input1Converter {
-                        width: 100%;
 
-                        .switchCryptoBtn {
-                            padding: 2%;
-                            width: 40%;
+
+                    .headerRow {
+                        //background-color: aliceblue;
+                        width: 90%;
+                        @include flex(row, space-between, center);
+
+                        .header {
                             color: var(--text-color);
+                        }
 
-                            //background-color: aliceblue;
-                            * {
-                                margin-right: 8px;
+                        .pg-tx {
+                            color: $primary-color;
+                            font-size: 12px;
+                        }
+
+                    }
+                }
+
+                .ext-bottomCard {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1rem;
+                    justify-content: space-between;
+                    align-items: center;
+                    //background-color: red;
+                    width: 100%;
+                    height: 100%;
+
+                    .bottomCard {
+                        display: grid;
+                        row-gap: 8px;
+                        height: 100%;
+                        width: 100%;
+                        //background-color: yellow;
+
+                        .input1Converter {
+                            width: 100%;
+
+                            .switchCryptoBtn {
+                                padding: 2%;
+                                width: 40%;
+                                color: var(--text-color);
+
+                                //background-color: aliceblue;
+                                * {
+                                    margin-right: 8px;
+                                }
+                            }
+
+
+                            .convertInput {
+                                border-radius: 20px;
+                                height: 45px;
+                                width: 100%;
+                                padding: 3%;
+                                text-align: end;
                             }
                         }
 
+                        .arrrowBtn {
 
-                        .convertInput {
+                            width: 32px;
+                            box-shadow: rgb(0 0 0 / 10%) 0px -2px 0px inset;
+                            align-items: center;
+                            border: 0px;
+                            border-radius: 16px;
+                            cursor: pointer;
+                            display: inline-flex;
+                            font-family: inherit;
+                            font-size: 16px;
+                            font-weight: 600;
+                            -webkit-box-pack: center;
+                            justify-content: center;
+                            letter-spacing: 0.03em;
+                            line-height: 1;
+                            opacity: 1;
+                            outline: 0px;
+                            transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+                            height: 32px;
+                        }
+
+                        .fx-inline {
+                            @include flex(row, flex-start);
+                        }
+
+                        .emptyDiv {
                             border-radius: 20px;
                             height: 45px;
                             width: 100%;
                             padding: 3%;
-                            text-align: end;
+                            background-color: aliceblue;
+                            border: 1px solid $modal-bar;
+
+                        }
+
+                        .var-text-color {
+                            color: var(--text-color);
                         }
                     }
+                }
+            }
 
-                    .arrrowBtn {
+            .extBox-bunnyHelp {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
 
-                        width: 32px;
-                        box-shadow: rgb(0 0 0 / 10%) 0px -2px 0px inset;
-                        align-items: center;
-                        border: 0px;
-                        border-radius: 16px;
-                        cursor: pointer;
-                        display: inline-flex;
-                        font-family: inherit;
-                        font-size: 16px;
-                        font-weight: 600;
-                        -webkit-box-pack: center;
-                        justify-content: center;
-                        letter-spacing: 0.03em;
-                        line-height: 1;
-                        opacity: 1;
-                        outline: 0px;
-                        transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
-                        height: 32px;
-                    }
-
-                    .fx-inline {
-                        @include flex(row, flex-start);
-                    }
-
-                    .emptyDiv {
-                        border-radius: 20px;
-                        height: 45px;
-                        width: 100%;
-                        padding: 3%;
-                        background-color: aliceblue;
-                        border: 1px solid $modal-bar;
-
-
-                    }
+                .emptyDiv-helpBunny {
+                    display: flex;
+                    flex-grow: 1;
+                    height: 200px;
+                    vertical-align: baseline;
                 }
 
+                .helpBunny {
+                    display: flex;
+                    flex-grow: 0;
+                    align-items: center;
+                    justify-content: end;
+                    width: 370px;
+                    height: 100px;
+
+                    img {
+                        max-height: 108px;
+                        max-width: 160px;
+                        //position: relative;
+                        width: 100%;
+                    }
+                }
             }
 
 
-
         }
+
     }
 
 }

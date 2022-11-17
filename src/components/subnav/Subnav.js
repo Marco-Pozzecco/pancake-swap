@@ -8,7 +8,7 @@ export default function Subnav(props) {
     <div className='subnav'>
       <ul className='menu-ul'>
         {props.elements.map((element,index)=> {
-            return <li key={index}><NavLink><a href={element.toLowerCase()}>{element}</a>
+            return <li key={index}><NavLink to={"/" + element.toLowerCase()}>{element}
             {(element === 'Perpetual' || element === 'Bridge') && <img src={exitIcon} alt="exit icon"/>}
             </NavLink></li>
         })}

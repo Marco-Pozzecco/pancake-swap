@@ -11,8 +11,10 @@ import doubleArrow from '../../resources/limit/doubleArrow.svg'
 import bunnyLogo from '../../resources/home/navbar/bunny-icon-round.svg'
 import copied from '../../resources/limit/copied.svg'
 import bunnyCard from '../../resources/limit/imgBunnyBottmCard.svg'
+import bunnyCardLighTheme from '../../resources/limit/bunnyBtmCardLightTheme.svg'
 import leftArrow from '../../resources/limit/leftArrow.svg'
 import rightArrow from '../../resources/limit/rightArrow.svg'
+import helpBunny from '../../resources/limit/help.png'
 
 export function Limit() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
@@ -25,7 +27,10 @@ export function Limit() {
   };
 
   return (
-    <div className='limit-external-box'>
+    <div className='body-limit'>
+       <Subnav elements={["Swap", "Limit", "Liquidity", "Perpetual", "Bridge"]}/> 
+
+      <div className='limit-external-box'>
       <section className='col-1'>
         <div className='fakeGraph'>
         </div>
@@ -63,9 +68,9 @@ export function Limit() {
               </table>
 
               <div className="content-bottom-card">
-                  <img className="switchImg" src={bunnyCard} alt='wallet'/>
-                  <p className={toggleState === 1 ? "primary-col switchImg active-switchImg" : "primary-col switchImg"}>No Open orders</p>
-                  <p className={toggleState === 2 ? "primary-col switchImg active-switchImg" : "primary-col switchImg"}>No Order History</p>
+                  <img className="" src={bunnyCard} alt='wallet'/>
+                  <p className={toggleState === 1 ? " switchTxt active-switchImg" : "switchTxt"}>No Open orders</p>
+                  <p className={toggleState === 2 ? " switchTxt active-switchImg" : "switchTxt"}>No Order History</p>
 
               </div>
               <div className='card-bottom-row'>
@@ -80,17 +85,16 @@ export function Limit() {
 
       </section>
       <section className='col-2'>
-      
-              <div className="ConverterCard ">
-                    <div className="headerCard">
-                      <div className='headerRow'>
-                      <img src={barChart} alt='history icon'></img>
-                        <h3 className="header">LIMIT</h3>
-                        <img src={historyIcon} alt='history icon'></img>
-                        
-                      </div>
-                      <p className='modal-pg-tx'>Place a limit order to trade at a set price</p>
-                    </div>
+        <div className="ConverterCard ">
+          <div className="headerCard">
+              <div className='headerRow'>
+                        <img src={barChart} alt='history icon'></img>
+                          <h3 className="header">LIMIT</h3>
+                          <img src={historyIcon} alt='history icon'></img>
+                          
+              </div>
+              <p className='pg-tx'>Place a limit order to trade at a set price</p>
+          </div>
                     
                 <div className='ext-bottomCard'>
                   <div className='bottomCard'>
@@ -122,17 +126,26 @@ export function Limit() {
                       </div>
                     </div>
                     <ConnectWalletBtn type="fullButton button-aquagreen" action={() => setOpenModalWallet(true)} />
-                    <p>Powered by Gelato</p>
+                    <p>Powered by <span className='var-text-color'>Gelato</span></p>
                 </div>
                 
                 
               </div>
+              <div className='extBox-bunnyHelp'>
+                <div className='emptyDiv-helpBunny'></div>
+                <div className='helpBunny'>
+                  <img src={helpBunny} alt='history icon'></img>
+                </div>
+
+              </div>
+              
         
       </section>
       <ModalConnectWallet open={openModalWallet}
                   onClose={() => setOpenModalWallet(false)} />
       
     
+    </div>
     </div>
   )
 }

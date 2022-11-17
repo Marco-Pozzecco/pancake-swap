@@ -29,6 +29,7 @@ $theme-light: map.set($theme-light, "body-bkground-color", #fff);
 .theme-dark {
     --body-bkground-color: #{map.get($theme-dark, "body-bkground-color")};
 }
+
 .theme-light {
     --body-bkground-color: #{map.get($theme-light, "body-bkground-color")};
 }
