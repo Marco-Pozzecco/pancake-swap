@@ -149,7 +149,7 @@ export  function BannerC() {
                 </button> */}
             {/* </a> */}
 
-            <Button text="Discover Now" type={"fullButton"} style={{color: "var(--background-primary)"}}><FaArrowRight/></Button>
+            <Button text="Go to IFO" type={"fullButton"} style={{color: "var(--background-primary)"}}><FaArrowRight/></Button>
 
         </div>
 
