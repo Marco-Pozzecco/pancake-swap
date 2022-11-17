@@ -3,9 +3,9 @@
 @use "sass:map";
 
 // Import rules
-@import "../../abstracts/mixins";
-@import "../../abstracts/colors";
-@import "../../abstracts/animations";
+@import "../../../abstracts/mixins";
+@import "../../../abstracts/colors";
+@import "../../../abstracts/animations";
 
 $theme-dark: map.set($theme-dark, "limit-bg", $dark-gradientBubblegum);
 $theme-dark: map.set($theme-dark, "tab-bg", $deActive-tab-dk);

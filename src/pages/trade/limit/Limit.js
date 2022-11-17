@@ -1,20 +1,20 @@
 import React, {useState} from 'react'
-import Subnav from "../../components/subnav/Subnav";
+import Subnav from "../../../components/subnav/Subnav";
 import './limit.scss'
-import ModalConnectWallet from "../../components/modal-connect-wallet/ModalConnectWallet";
-import { ConnectWalletBtn } from "../../components/buttons/ConnectWalletBtn";
-import arrow from "../../resources/home/navbar/arrow-down.svg";
-import barChart from '../../resources/limit/barIcon.svg'
-import historyIcon from '../../resources/limit/history.svg'
-import arrowLimit from '../../resources/limit/arrowLimit.svg'
-import doubleArrow from '../../resources/limit/doubleArrow.svg'
-import bunnyLogo from '../../resources/home/navbar/bunny-icon-round.svg'
-import copied from '../../resources/limit/copied.svg'
-import bunnyCard from '../../resources/limit/imgBunnyBottmCard.svg'
-import bunnyCardLighTheme from '../../resources/limit/bunnyBtmCardLightTheme.svg'
-import leftArrow from '../../resources/limit/leftArrow.svg'
-import rightArrow from '../../resources/limit/rightArrow.svg'
-import helpBunny from '../../resources/limit/help.png'
+import ModalConnectWallet from "../../../components/modal-connect-wallet/ModalConnectWallet";
+import { ConnectWalletBtn } from "../../../components/buttons/ConnectWalletBtn";
+import arrow from "../../../resources/home/navbar/arrow-down.svg";
+import barChart from '../../../resources/limit/barIcon.svg'
+import historyIcon from '../../../resources/limit/history.svg'
+import arrowLimit from '../../../resources/limit/arrowLimit.svg'
+import doubleArrow from '../../../resources/limit/doubleArrow.svg'
+import bunnyLogo from '../../../resources/home/navbar/bunny-icon-round.svg'
+import copied from '../../../resources/limit/copied.svg'
+import bunnyCard from '../../../resources/limit/imgBunnyBottmCard.svg'
+import bunnyCardLighTheme from '../../../resources/limit/bunnyBtmCardLightTheme.svg'
+import leftArrow from '../../../resources/limit/leftArrow.svg'
+import rightArrow from '../../../resources/limit/rightArrow.svg'
+import helpBunny from '../../../resources/limit/help.png'
 
 export function Limit() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
