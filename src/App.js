@@ -22,7 +22,7 @@ import { Lottery } from "./pages/win/lottery/Lottery";
 import {Info} from "./pages/info/Info";
 import { Ifo } from "./pages/info/ifo/Ifo";
 import { Voting } from "./pages/info/voting/Voting";
-import LeaderBoard from "./pages/info/leaderboard/LeaderBoard";
+import {LeaderBoard} from "./pages/info/leaderboard/LeaderBoard";
 
 export function App() {
     return (
