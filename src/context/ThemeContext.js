@@ -1,8 +1,10 @@
 import { createContext } from "react";
 
-function setThemeContext() {
-    let theme = document.body.classList;
-    return theme;
+// Utilizzare la sintassi const {theme} = useContext(ThemeContext) per ottenere in stringa il tema corrente
+
+const context = {
+    theme: '',
+    setTheme: () => {}
 }
 
-export const ThemeContext = createContext(setThemeContext());
+export const ThemeContext = createContext(context);

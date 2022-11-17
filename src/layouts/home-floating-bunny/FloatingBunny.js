@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./_floating-bunny.scss";
 import bunny from "../../resources/home/bunny/bunny.webp";
 import stella1 from "../../resources/home/bunny/stella1.webp";
@@ -9,15 +9,12 @@ import { TradeNowBtn } from "../../components/buttons/TradeNowBtn";
 import { ConnectWalletBtn } from "../../components/buttons/ConnectWalletBtn";
 import ModalConnectWallet from "../../components/modal-connect-wallet/ModalConnectWallet";
 import { MainBanner } from "../home-main-banner/MainBanner";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export function FloatingBunny() {
-    let [theme, setTheme] = React.useState(null);
-    const [openModalWallet, setOpenModalWallet] = useState(false);
 
-    useEffect(() => {
-        const pippo = document.querySelector("body").classList[0];
-        setTheme(pippo);
-    }, [theme]);
+    const {theme} = useContext(ThemeContext);
+    const [openModalWallet, setOpenModalWallet] = useState(false);
 
     return (
         <section className="fb-floating-bunny">
@@ -62,16 +59,12 @@ export function FloatingBunny() {
                     viewBox="0 0 1660 339"
                     width="100%"
                     color="text"
-                    fill="url(#paint0_linear_dark)"
+                    fill={theme === 'theme-dark' ? "url(#paint0_linear_dark)" : "url(#paint0_linear_light)"}
                     xmlns="http://www.w3.org/2000/svg"
                     className="sc-8a800401-0 Mvnec">
                     <path
                         d="M804 166.523C520.5 166.523 267.5 290.022 0 304V338.5H1660V0C1358.83 0 1104 166.523 804 166.523Z"
-                        fill={
-                            theme === "theme-dark"
-                                ? "#paint0_linear_dark"
-                                : "#paint0_linear_light"
-                        }></path>
+                    ></path>
                     <defs>
                         <linearGradient
                             id="paint0_linear_dark"
