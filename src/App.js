@@ -1,6 +1,6 @@
 import React from "react";
 // --------------------------------------------
-import {Trade} from "./pages/trade/Trade";
+import {Swap} from "./pages/swap/Swap";
 import {Earn} from "./pages/earn/Earn";
 import {Win} from "./pages/win/Win";
 import Home from "./pages/homepage/Home";
@@ -24,7 +24,7 @@ export function App() {
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Home /> } />
-                        <Route path="trade" element={<Trade />} />
+                        <Route path="swap" element={<Swap />} />
                             <Route path='limit' element={<Limit/>}/>
                             <Route path='liquidity' element={<Liquidity/>}/>
                         <Route path="earn" element={<Earn />} />

@@ -46,13 +46,13 @@ export function Navbar() {
                         <ul className="menu-ul menu-nav menu-nav-ul">
                             {/* <li><NavLink to="/">Home</NavLink></li> */}
                             <li>
-                                <Link to="/trade">Trade</Link>
+                                <Link to="/swap">Trade</Link>
                                 <ul>
                                     <li>
                                         <Link to="/swap">Swap</Link>
                                     </li>
                                     <li>
-                                        <NavLink to="/limit">Limit</NavLink>
+                                        <Link to="/limit">Limit</Link>
                                     </li>
                                     <li>
                                         <Link to="/liquidity">Liquidity</Link>
@@ -75,33 +75,33 @@ export function Navbar() {
                                 </ul>
                             </li>
                             <li>
-                                <NavLink to="/earn">Earn</NavLink>
+                                <Link to="/earn">Earn</Link>
                                 <ul>
-                                    <li>
-                                        <a href="farms.html">Farms</a>
+                                    <li>                                        
+                                        <Link to="/farms">Farms</Link>
                                     </li>
-                                    <li>
-                                        <a href="pool.html">Pool</a>
+                                    <li>                                        
+                                        <Link to="/pools">Pool</Link>
                                     </li>
                                 </ul>
                             </li>
 
                             <li>
-                                <NavLink to="/win">Win</NavLink>
+                                <Link to="/win">Win</Link>
                                 <ul>
                                     <li>
-                                        <a href="Trading Competition">
-                                            Trading Competition
-                                        </a>
+                                        
+                                        <Link to="/TradingCompetition">Trading Competition</Link>
+                                    </li>
+                                    <li>                                        
+                                        <Link to="/prediction">Prediction (Beta)</Link>
+                                    </li>
+                                    <li>                                        
+                                        <Link to="/lottery">Lottery</Link>
                                     </li>
                                     <li>
-                                        <a href="Prediction">Prediction (Beta)</a>
-                                    </li>
-                                    <li>
-                                        <a href="Lottery">Lottery</a>
-                                    </li>
-                                    <li>
-                                        <a href="Pottery">Pottery (Beta)</a>
+                                        
+                                        <Link to="/pottery">Pottery</Link>
                                     </li>
                                 </ul>
                             </li>
