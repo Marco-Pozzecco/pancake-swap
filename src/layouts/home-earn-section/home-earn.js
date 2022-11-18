@@ -10,6 +10,7 @@
         const switchBoxes = useRef()
 
         function handleClick() {
+        const [hidesA, sethidesA] = useState(false)
         }
 
         return (
