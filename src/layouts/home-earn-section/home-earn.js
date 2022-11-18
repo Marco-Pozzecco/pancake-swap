@@ -10,11 +10,12 @@ import { Button } from '../../components/buttons/Button';
 export function HomeEarn(props) {
     const switchBoxes = useRef()
 
-    function handleClick() {
-    }
+        function handleClick() {
+        const [hidesA, sethidesA] = useState(false)
+        }
 
-    return (
-        <>
+        return (
+            <>
             <section className="ea-earn">
 
                 <div className="ea-wrapper">
