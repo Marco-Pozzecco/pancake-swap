@@ -1,9 +1,212 @@
-.provaH1 {
+// Use rules
+// @use "../../components/buttons/buttons";
+@use "sass:map";
 
-    width: 100%;
-    height: 60vh;
-    font-size: 50px;
-    margin-top: 60px;
-    margin-left: 20px;
-    color: aliceblue;
+// Import rules
+@import "../../abstracts/mixins";
+@import "../../abstracts/colors";
+@import "../../abstracts/animations";
+
+
+
+.swap-box{
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100vw;
+    
+
+    .jskBUs{
+        
+            max-width: 100%;
+            padding: 32px 32px 0px;
+            background-color: var(--limit-bg);
+            background-image: var(--limit-bg);
+
+
+        .col-2 {
+            
+            display: flex;
+            justify-content: center;
+            
+            //padding: 2% 2% 4% 2%;
+            
+        
+            .ConverterCard {
+                width: 325px;
+                height: 600px;
+                background-color: var(--popup-bg);
+                border-radius: 30px;
+                //padding: 0px 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+        
+                .headerCard {
+                    padding: 24px;
+                    @include flex(column, center, center);
+                    border-bottom: 1px solid var(--dropdown-line);
+                    text-align: center;
+        
+                    .headerRow {
+                        //background-color: aliceblue;
+                        width: 90%;
+                        @include flex(row, space-between, center);
+        
+                        .header {
+                            color: var(--text-color);
+                            margin-bottom: 10px;
+                        }
+                    }
+        
+                    .pg-tx {
+                        color: var(--icon-text-color);
+                        font-size: 12px;
+                    }
+                }
+        
+                .ext-bottomCard {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1rem;
+                    justify-content: space-between;
+                    align-items: center;
+                    //background-color: red;
+                    width: 100%;
+                    height: 100%;
+        
+                    .bottomCard {
+                        display: grid;
+                        row-gap: 8px;
+                        height: 100%;
+                        width: 100%;
+                        //background-color: yellow;
+        
+                        .input1Converter {
+                            width: 100%;
+        
+                            .switchCryptoBtn {
+                                padding: 2%;
+                                width: 40%;
+                                color: var(--text-color);
+        
+                                //background-color: aliceblue;
+                                * {
+                                    margin-right: 8px;
+                                }
+                            }
+        
+        
+                            .convertInput {
+                                border-radius: 16px;
+                                height: 55px;
+                                width: 100%;
+                                padding: 3%;
+                                text-align: end;
+                                border: none;
+                                background-color: var(--tab-bg);
+                            }
+                        }
+        
+                        .arrrowBtn {
+                            width: 32px;
+                            box-shadow: rgb(0 0 0 / 10%) 0px -2px 0px inset;
+                            align-items: center;
+                            border: 0px;
+                            border-radius: 16px;
+                            cursor: pointer;
+                            display: inline-flex;
+                            font-family: inherit;
+                            font-size: 16px;
+                            font-weight: 600;
+                            -webkit-box-pack: center;
+                            justify-content: center;
+                            letter-spacing: 0.03em;
+                            line-height: 1;
+                            opacity: 1;
+                            outline: 0px;
+                            transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+                            height: 32px;
+                        }
+        
+                        .fx-inline {
+                            @include flex(row, flex-start);
+                        }
+        
+                        .emptyDiv {
+                            border-radius: 20px;
+                            height: 45px;
+                            width: 100%;
+                            padding: 3%;
+                            background-color: aliceblue;
+                            border: 1px solid $modal-bar;
+                        }
+        
+                        .rowAfterEmptyDiv {
+                            display: flex;
+                            justify-content: flex-end;
+                            color: var(--text-color);
+        
+                            * {
+                                margin-left: 6px;
+                            }
+                        }
+                    }
+        
+                    .button-aqg {
+                        width: 100%;
+                        //height: 32px;
+                        margin: 0px 0px 10px 0px;
+                        //padding: 0px 16px;
+                    }
+        
+                    .var-text-color {
+                        color: var(--text-color);
+                    }
+                }
+            }
+        
+        
+        
+        }
+        .bottom-page-swap{
+            display: flex;
+            justify-content: space-around;
+
+            .extBox-bunnyHelp {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+        
+                .emptyDiv-helpBunny {
+                    display: flex;
+                    flex-grow: 1;
+                    height: 100px;
+                    vertical-align: baseline;
+                }
+        
+                .helpBunny {
+                    display: flex;
+                    flex-grow: 0;
+                    align-items: center;
+                    justify-content: end;
+                    width: 370px;
+                    height: 100px;
+        
+                    img {
+                        max-height: 108px;
+                        max-width: 160px;
+                        //position: relative;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
+
+
+
