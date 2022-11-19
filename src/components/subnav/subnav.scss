@@ -4,13 +4,13 @@
 @import "../../abstracts/colors";
 
 // Set colori tema scuro
-$theme-dark: map.set($theme-dark, "sub-nav-bg", red);
+$theme-dark: map.set($theme-dark, "sub-nav-bg", $sub-nav-dk);
 
 // Set colori tema chiaro
 $theme-light: map.set($theme-light, "sub-nav-bg", #fff);
 
 .theme-dark {
-    --nav-bkground: #{map.get($theme-dark ,"sub-nav-bg")};
+    --sub-nav-bg: #{map.get($theme-dark ,"sub-nav-bg")};
 }
 
 .theme-light {
@@ -38,12 +38,17 @@ $theme-light: map.set($theme-light, "sub-nav-bg", #fff);
         align-items: center;
 
         li {
-            padding-right: 10px;
+            margin-right: 15px;
 
             a {
                 display: flex;
                 align-items: center;
                 padding-right: 10px;
+            }
+
+            .active {
+                color: $secondary-dk;
+                border-bottom: 3px solid $btn-bg-color;
             }
 
         }

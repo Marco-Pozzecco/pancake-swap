@@ -7,11 +7,11 @@ import arrow from "../../../resources/home/navbar/arrow-down.svg";
 import barChart from "../../../resources/limit/barIcon.svg";
 import historyIcon from "../../../resources/limit/history.svg";
 import arrowLimit from "../../../resources/limit/arrowLimit.svg";
-import doubleArrow from "../../../resources/limit/doubleArrow.svg";
+//import doubleArrow from "../../../resources/limit/doubleArrow.svg";
 import bunnyLogo from "../../../resources/home/navbar/bunny-icon-round.svg";
 import copied from "../../../resources/limit/copied.svg";
 import bunnyCard from "../../../resources/limit/imgBunnyBottmCard.svg";
-import bunnyCardLighTheme from "../../../resources/limit/bunnyBtmCardLightTheme.svg";
+//import bunnyCardLighTheme from "../../../resources/limit/bunnyBtmCardLightTheme.svg";
 import leftArrow from "../../../resources/limit/leftArrow.svg";
 import rightArrow from "../../../resources/limit/rightArrow.svg";
 import helpBunny from "../../../resources/limit/help.png";
@@ -27,9 +27,7 @@ export function Limit() {
 
   return (
     <div className="body-limit">
-      <Subnav
-        elements={["Swap", "Limit", "Liquidity", "Perpetual", "Bridge"]}
-      />
+      <Subnav elements={["Swap", "Limit", "Liquidity", "Perpetual", "Bridge"]} />
 
       <div className="limit-external-box">
         <section className="col-1">
@@ -38,16 +36,10 @@ export function Limit() {
           <div className="col1-btm-page">
             <div className="col1-bottom-card">
               <div className="bloc-tabs-bottom-card">
-                <div
-                  className={toggleState === 1 ? "tabs2 active-tabs" : "tabs2"}
-                  onClick={() => toggleTab(1)}
-                >
+                <div className={toggleState === 1 ? "tabs2 active-tabs" : "tabs2"} onClick={() => toggleTab(1)}>
                   Open Orders
                 </div>
-                <div
-                  className={toggleState === 2 ? "tabs2 active-tabs" : "tabs2"}
-                  onClick={() => toggleTab(2)}
-                >
+                <div className={toggleState === 2 ? "tabs2 active-tabs" : "tabs2"} onClick={() => toggleTab(2)}>
                   Order History
                 </div>
               </div>
@@ -73,24 +65,8 @@ export function Limit() {
 
                 <div className="content-bottom-card">
                   <img className="" src={bunnyCard} alt="wallet" />
-                  <p
-                    className={
-                      toggleState === 1
-                        ? " switchTxt active-switchImg"
-                        : "switchTxt"
-                    }
-                  >
-                    No Open orders
-                  </p>
-                  <p
-                    className={
-                      toggleState === 2
-                        ? " switchTxt active-switchImg"
-                        : "switchTxt"
-                    }
-                  >
-                    No Order History
-                  </p>
+                  <p className={toggleState === 1 ? " switchTxt active-switchImg" : "switchTxt"}>No Open orders</p>
+                  <p className={toggleState === 2 ? " switchTxt active-switchImg" : "switchTxt"}>No Order History</p>
                 </div>
                 <div className="card-bottom-row">
                   <img className="switchImg" src={leftArrow} alt="wallet" />
@@ -110,9 +86,7 @@ export function Limit() {
                 <h3 className="header">LIMIT</h3>
                 <img src={historyIcon} alt="history icon"></img>
               </div>
-              <p className="pg-tx">
-                Place a limit order to trade at a set price
-              </p>
+              <p className="pg-tx">Place a limit order to trade at a set price</p>
             </div>
 
             <div className="ext-bottomCard">
@@ -121,11 +95,7 @@ export function Limit() {
                   <div className="fx-inline switchCryptoBtn">
                     <img src={bunnyLogo} alt="history icon"></img>CAKE
                     <img className="fa-svg-icon" src={arrow} alt="arrow icon" />
-                    <img
-                      className="fa-svg-icon"
-                      src={copied}
-                      alt="arrow icon"
-                    />
+                    <img className="fa-svg-icon" src={copied} alt="arrow icon" />
                   </div>
                   <input placeholder="0.0" className="convertInput"></input>
                 </div>
@@ -138,11 +108,7 @@ export function Limit() {
                   <div className="fx-inline switchCryptoBtn">
                     <img src={bunnyLogo} alt="history icon"></img>BTCB
                     <img className="fa-svg-icon" src={arrow} alt="arrow icon" />
-                    <img
-                      className="fa-svg-icon"
-                      src={copied}
-                      alt="arrow icon"
-                    />
+                    <img className="fa-svg-icon" src={copied} alt="arrow icon" />
                   </div>
                   <input placeholder="0.0" className="convertInput"></input>
                 </div>
@@ -157,10 +123,7 @@ export function Limit() {
                   <p>CAKE</p>
                 </div>
               </div>
-              <ConnectWalletBtn
-                type="fullButton button-aqg"
-                action={() => setOpenModalWallet(true)}
-              />
+              <ConnectWalletBtn type="fullButton button-aqg" action={() => setOpenModalWallet(true)} />
               <p className="var-text-color">
                 Powered by <strong>Gelato</strong>
               </p>
@@ -173,10 +136,7 @@ export function Limit() {
             </div>
           </div>
         </section>
-        <ModalConnectWallet
-          open={openModalWallet}
-          onClose={() => setOpenModalWallet(false)}
-        />
+        <ModalConnectWallet open={openModalWallet} onClose={() => setOpenModalWallet(false)} />
       </div>
     </div>
   );
