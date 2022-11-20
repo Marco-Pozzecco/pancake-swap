@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.scss";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import settingSvg from "../../resources/home/navbar/setting-icon.svg";
 import logo from "../../resources/home/navbar/logo_black.svg";
 import logoWhite from "../../resources/home/navbar/logo_white.svg";
@@ -37,25 +37,25 @@ export function Navbar() {
                                 className={themeClass === 'theme-light' ? 'logo-active' : 'logo'}></img>
 
                         </Link>
-                        <Link to="/">
+                        <NavLink to="/">
                             <img
                                 src={logoBunny}
                                 alt="logo bunny"
                                 className="logoBunny"></img>
-                        </Link>
+                        </NavLink>
                         <ul className="menu-ul menu-nav menu-nav-ul">
-                            {/* <li><Link to="/">Home</Link></li> */}
+                            {/* <li><NavLink to="/">Home</NavLink></li> */}
                             <li>
-                                <Link to="/swap">Trade</Link>
+                                <NavLink to="/swap">Trade</NavLink>
                                 <ul>
                                     <li>
-                                        <Link to="/swap">Swap</Link>
+                                        <NavLink to="/swap">Swap</NavLink>
                                     </li>
                                     <li>
-                                        <Link to="/limit">Limit</Link>
+                                        <NavLink to="/limit">Limit</NavLink>
                                     </li>
                                     <li>
-                                        <Link to="/liquidity">Liquidity</Link>
+                                        <NavLink to="/liquidity">Liquidity</NavLink>
                                     </li>
                                     <li>
                                         <a href="https://perp.pancakeswap.finance/en/futures/BTCUSDT?theme=light"
@@ -75,64 +75,64 @@ export function Navbar() {
                                 </ul>
                             </li>
                             <li>
-                                <Link to="/farms">Earn</Link>
+                                <NavLink to="/farms">Earn</NavLink>
                                 <ul>
                                     <li>                                        
-                                        <Link to="/farms">Farms</Link>
+                                        <NavLink to="/farms">Farms</NavLink>
                                     </li>
                                     <li>                                        
-                                        <Link to="/pools">Pools</Link>
+                                        <NavLink to="/pools">Pools</NavLink>
                                     </li>
                                 </ul>
                             </li>
 
                             <li>
-                                <Link to="/trading">Win</Link>
+                                <NavLink to="/trading">Win</NavLink>
                                 <ul>
                                     <li>
                                         
-                                        <Link to="/trading">Trading Competition</Link>
+                                        <NavLink to="/trading">Trading Competition</NavLink>
                                     </li>
                                     <li>                                        
-                                        <Link to="/prediction">Prediction (Beta)</Link>
+                                        <NavLink to="/prediction">Prediction (Beta)</NavLink>
                                     </li>
                                     <li>                                        
-                                        <Link to="/lottery">Lottery</Link>
+                                        <NavLink to="/lottery">Lottery</NavLink>
                                     </li>
                                     <li>
                                         
-                                        <Link to="/pottery">Pottery</Link>
+                                        <NavLink to="/pottery">Pottery</NavLink>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <Link to="/overview">NFT</Link>
+                                <NavLink to="/overview">NFT</NavLink>
                                 <ul>
                                     <li>
-                                        <Link to="/overview">Overview</Link>
+                                        <NavLink to="/overview">Overview</NavLink>
                                     </li>
                                     <li>
-                                        <Link to="/collections">Collections</Link>
+                                        <NavLink to="/collections">Collections</NavLink>
                                     </li>
                                     <li>
-                                        <Link to="/activity">Activity</Link>
+                                        <NavLink to="/activity">Activity</NavLink>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <Link to="/info">...</Link>
+                                <NavLink to="/info">...</NavLink>
                                 <ul>
                                     <li>
-                                        <Link to="info">Info</Link>
+                                        <NavLink to="info">Info</NavLink>
                                     </li>
                                     <li>
-                                        <Link to="ifo">IFO</Link>
+                                        <NavLink to="ifo">IFO</NavLink>
                                     </li>
                                     <li>
-                                        <Link to="voting">Voting</Link>
+                                        <NavLink to="voting">Voting</NavLink>
                                     </li>
                                     <li className="line-dd">
-                                        <Link to="leaderboard">Leaderboard</Link>
+                                        <NavLink to="leaderboard">Leaderboard</NavLink>
                                     </li>
                                     <li>
                                         <a
