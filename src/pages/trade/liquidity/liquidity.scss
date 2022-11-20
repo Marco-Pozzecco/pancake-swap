@@ -1,0 +1,22 @@
+// Use rules
+@use "sass:map";
+
+// Import rules
+@import "../../../abstracts/mixins";
+@import "../../../abstracts/colors";
+
+
+.liquidity-ext-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100vw;
+
+
+    .liquidity-box-page {
+        max-width: 100%;
+        padding: 32px 32px 0px;
+        background-color: var(--limit-bg);
+        background-image: var(--limit-bg);
+    }
+}
