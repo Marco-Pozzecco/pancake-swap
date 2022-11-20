@@ -24,7 +24,7 @@
 $theme-dark: map.set($theme-dark, "body-bkground-color", $black);
 
 // Set colori tema chiaro
-$theme-light: map.set($theme-light, "body-bkground-color", #fff);
+$theme-light: map.set($theme-light, "body-bkground-color", $dot-icon);
 
 .theme-dark {
     --body-bkground-color: #{map.get($theme-dark, "body-bkground-color")};

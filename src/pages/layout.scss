@@ -1,0 +1,19 @@
+// Use rules
+// @use "../../components/buttons/buttons";
+@use "sass:map";
+
+// Import rules
+@import "../abstracts/mixins";
+
+
+
+.bottomNavbar {
+    display: none;
+}
+
+@include mq("phone", "tablet") {
+    .bottomNavbar {
+        display: block;
+    }
+
+}

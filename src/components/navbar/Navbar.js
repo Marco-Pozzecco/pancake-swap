@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.scss";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import settingSvg from "../../resources/home/navbar/setting-icon.svg";
 import logo from "../../resources/home/navbar/logo_black.svg";
 import logoWhite from "../../resources/home/navbar/logo_white.svg";
@@ -26,7 +26,7 @@ export function Navbar() {
             <nav>
                 <div className="extern-box">
                     <div className="flex">
-                        <NavLink to="/">
+                        <Link to="/">
 
                             {/* {themeClass === 'theme-dark' &&  <Logo src={logoWhite}/>}
                         {themeClass === 'theme-light' &&  <Logo src={logo}/>} */}
@@ -36,7 +36,7 @@ export function Navbar() {
                             <img src={logo} alt="main-logo" id="main-logo"
                                 className={themeClass === 'theme-light' ? 'logo-active' : 'logo'}></img>
 
-                        </NavLink>
+                        </Link>
                         <NavLink to="/">
                             <img
                                 src={logoBunny}

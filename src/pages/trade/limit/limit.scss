@@ -41,7 +41,7 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
         width: 100%;
         height: auto;
         display: flex;
-        flex-direction: row;
+
 
         .col-1 {
             //background-color: aliceblue;
@@ -61,84 +61,112 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
                 margin-bottom: 46px;
             }
 
-            .col1-bottom-card {
-                background-color: var(--text-color-modal);
-                width: 680px;
-                height: 300px;
-                border-radius: 16px;
-                margin-bottom: 24px;
+            .col1-btm-page {
+                max-width: 680px;
+                //background-color: aqua;
+                display: flex;
+                justify-content: center;
 
-                .bloc-tabs-bottom-card {
-                    display: flex;
+                .col1-bottom-card {
+                    //background-color: var(--text-color-modal);
                     //background-color: aliceblue;
-                    justify-content: space-around;
-
-                    .tabs {
-                        width: 100%;
-                        padding: 0px 24px;
-                        height: 48px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        cursor: pointer;
-                        background-color: var(--tab-bg);
-                        color: $primary-color;
-
-                    }
-
-                    .active-tabs {
-                        background-color: var(--pop-bg);
-                        color: var(--text-color);
-
-
-
-                    }
-                }
-
-                .container-bottom-card {
-                    width: 680px;
-                    height: 250px;
-                    margin: 0px auto 0;
-                    background-color: var(--popup-bg);
-                    background-image: var(--popup-bg);
+                    max-width: 680px;
+                    height: 300px;
                     border-radius: 16px;
+                    margin-bottom: 24px;
+                    display: flex;
+                    flex-direction: column;
 
-                    .table {
-                        width: inherit;
+                    .bloc-tabs-bottom-card {
+                        display: flex;
+                        border-top-left-radius: 16px;
+                        border-top-right-radius: 16px;
+                        background-color: var(--tab-bg);
+                        z-index: 1;
 
-                        .th-table {
-                            padding: 16px;
-                            color: $primary-color;
+                        //cursor: pointer;
+
+                        .tabs2 {
+                            width: 100%;
+                            padding: 0px 24px;
+                            height: 48px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            background-color: var(--tab-bg);
+                            color: var(--icon-text-color);
+                            border-top-right-radius: 16px;
+                            border-top-left-radius: 16px;
+                            z-index: 98;
+
+                            &:hover {
+                                opacity: 0.3;
+                                //background-color: var(--hover-nav-ul);
+                            }
+
+                        }
+
+                        .active-tabs {
+                            background-color: var(--popup-bg);
+                            color: var(--text-color);
+                            border-top-left-radius: 16px;
+                            z-index: 98;
+                            //border-top-right-radius: 16px;
                         }
                     }
 
-                    .content-bottom-card {
+                    .container-bottom-card {
                         display: flex;
-                        align-items: center;
-                        justify-content: center;
                         flex-direction: column;
-                        margin-top: 20px;
-                    }
+                        max-width: 680px;
+                        height: 250px;
+                        margin: 0px auto 0;
+                        background-color: var(--popup-bg);
+                        border-bottom-left-radius: 16px;
+                        border-bottom-right-radius: 16px;
 
-                    .switchTxt {
-                        display: none;
-                        color: var(--disable-text);
-                    }
+                        .table {
+                            width: inherit;
 
-                    .active-switchImg {
-                        display: block;
-                        color: var(--disable-text);
-                    }
+                            .th-table {
+                                padding: 16px;
+                                color: var(--icon-text-color);
+                                border-bottom: 1px solid var(--dropdown-line);
+                            }
+                        }
 
-                    .card-bottom-row {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        color: var(--text-color);
+                        .content-bottom-card {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            //width: auto;
+                            margin-top: 20px;
 
+                        }
+
+                        .switchTxt {
+                            display: none;
+                            color: var(--disable-text);
+                        }
+
+                        .active-switchImg {
+                            display: block;
+                            color: var(--disable-text);
+                        }
+
+                        .card-bottom-row {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: var(--text-color);
+
+                        }
                     }
                 }
             }
+
         }
 
         .col-2 {
@@ -163,8 +191,6 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
                     border-bottom: 1px solid var(--dropdown-line);
                     text-align: center;
 
-
-
                     .headerRow {
                         //background-color: aliceblue;
                         width: 90%;
@@ -172,13 +198,13 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
 
                         .header {
                             color: var(--text-color);
+                            margin-bottom: 10px;
                         }
+                    }
 
-                        .pg-tx {
-                            color: $primary-color;
-                            font-size: 12px;
-                        }
-
+                    .pg-tx {
+                        color: var(--icon-text-color);
+                        font-size: 12px;
                     }
                 }
 
@@ -215,16 +241,17 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
 
 
                             .convertInput {
-                                border-radius: 20px;
-                                height: 45px;
+                                border-radius: 16px;
+                                height: 55px;
                                 width: 100%;
                                 padding: 3%;
                                 text-align: end;
+                                border: none;
+                                background-color: var(--tab-bg);
                             }
                         }
 
                         .arrrowBtn {
-
                             width: 32px;
                             box-shadow: rgb(0 0 0 / 10%) 0px -2px 0px inset;
                             align-items: center;
@@ -256,12 +283,28 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
                             padding: 3%;
                             background-color: aliceblue;
                             border: 1px solid $modal-bar;
-
                         }
 
-                        .var-text-color {
+                        .rowAfterEmptyDiv {
+                            display: flex;
+                            justify-content: flex-end;
                             color: var(--text-color);
+
+                            * {
+                                margin-left: 6px;
+                            }
                         }
+                    }
+
+                    .button-aqg {
+                        width: 100%;
+                        //height: 32px;
+                        margin: 0px 0px 10px 0px;
+                        //padding: 0px 16px;
+                    }
+
+                    .var-text-color {
+                        color: var(--text-color);
                     }
                 }
             }
@@ -297,6 +340,60 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
 
 
         }
+
+    }
+
+}
+
+@include mq("tablet", "desktop") {
+    .col1-btm-page {
+        width: 680px;
+    }
+
+    .col1-bottom-card {
+        width: 680px;
+
+
+    }
+
+    .content-bottom-card {
+        width: 680px;
+
+    }
+
+}
+
+@include mq("phone", "phablet") {
+    .limit-external-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+
+        .col1-btm-page {
+            width: 350px;
+
+            .col1-bottom-card {
+                flex: 2;
+                width: 350px;
+
+                .content-bottom-card {
+                    width: 350px;
+                }
+
+            }
+
+            .col-2 {
+                flex: 1;
+                display: contents;
+
+            }
+        }
+
+        .fakeGraph {
+            display: none;
+        }
+
 
     }
 
