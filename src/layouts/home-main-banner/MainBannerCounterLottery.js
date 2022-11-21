@@ -1,19 +1,52 @@
-import React from 'react'
-import "./_home-main-banner.scss"
+import React, { useState } from "react";
+import "./_home-main-banner.scss";
 
-//creare un unico <h2> in cui renderizzare il countdown?
+export function MainBannerCounterLottery() {
+  let countDownDate = new Date("Jan 5, 2023 15:37:25").getTime();
 
-export  function MainBannerCounterLottery() {
+  let x = setInterval(function () {
+    let now = new Date().getTime();
+
+    let distance = countDownDate - now;
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("counterLottery").innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+    // const parent = document.getElementById("counterLottery");
+    // for (let child of parent.childNodes) {
+    //   console.log(child.split());
+    // }
+
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("counterLottery").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+
+  // -----------------------------------------------------------------------------
+
+  // let boxes = document.getElementsById("counterLottery");
+  // boxes.forEach(function (box, index) {
+  //   if (index === "string") {
+  //     //even elements are here, you can access it by box
+  //     box.setAttribute("fontSize", "10");
+  //   } else {
+  //     //odd elements are here, you can access it by box
+  //   }
+  // });
+
   return (
     <div className="mb-counter-lottery">
-        <h2 className="mbcl-item mbcli-number">1</h2>
-        <h2 className="mbcl-item mbcli-time">d</h2>
-        <h2 className="mbcl-item mbcli-number">3</h2>
-        <h2 className="mbcl-item mbcli-time">h</h2>
-        <h2 className="mbcl-item mbcli-number">5</h2>
-        <h2 className="mbcl-item mbcli-time">m</h2>
-        <h2 className="mbcl-item mbcli-number">36</h2>
-        <h2 className="mbcl-item mbcli-time">s</h2>
+      <span></span>
+
+      <h2 className="mbcl-item mbcli-number" id="counterLottery"></h2>
     </div>
-    )
+  );
 }
