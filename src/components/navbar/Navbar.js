@@ -19,14 +19,7 @@ export function Navbar() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
   //const [theme, setLogo] = useState(false);
 
-  const themeClass = document.body.className;
-  const theme = useContext(ThemeContext);
-
-  // if (themeClass === "theme-dark") {
-  //   setLogo(true);
-  // } else {
-  //   setLogo(false);
-  // }
+  const { theme } = useContext(ThemeContext);
 
   return (
     <div>
@@ -34,17 +27,6 @@ export function Navbar() {
         <div className="extern-box">
           <div className="flex">
             <Link to="/">{theme === "theme-dark" ? <img alt="" src={logoWhite} /> : <img alt="" src={logo} />}</Link>
-
-            {/* <img src={logoWhite}
-              alt="main-logo"
-              id="main-logo"
-              className={themeClass === "theme-dark" ? "logo-active" : "logo"}></img>
-
-            <img
-              src={logo}
-              alt="main-logo"
-              id="main-logo"
-              className={themeClass === "theme-light" ? "logo-active" : "logo"}></img> */}
 
             <NavLink to="/">
               <img src={logoBunny} alt="logo bunny" className="logoBunny"></img>

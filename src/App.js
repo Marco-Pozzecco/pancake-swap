@@ -36,30 +36,32 @@ export function App() {
 
   return (
     <div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="swap" element={<Swap />} />
-            <Route path="limit" element={<Limit />} />
-            <Route path="liquidity" element={<Liquidity />} />
-            <Route path="farms" element={<Farms />} />
-            <Route path="pools" element={<Pools />} />
-            <Route path="trading" element={<TradingCompetition />} />
-            <Route path="lottery" element={<Lottery />} />
+      <ThemeContext.Provider value={contextValue}>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="swap" element={<Swap />} />
+              <Route path="limit" element={<Limit />} />
+              <Route path="liquidity" element={<Liquidity />} />
+              <Route path="farms" element={<Farms />} />
+              <Route path="pools" element={<Pools />} />
+              <Route path="trading" element={<TradingCompetition />} />
+              <Route path="lottery" element={<Lottery />} />
 
-            <Route path="overview" element={<Overview />} />
-            <Route path="collections" element={<Collections />} />
-            <Route path="activity" element={<Activity />} />
-            <Route path="info" element={<Info />} />
-            <Route path="ifo" element={<Ifo />} />
-            <Route path="voting" element={<Voting />} />
-            <Route path="leaderboard" element={<LeaderBoard />} />
-            {/* <Route path="win" element={<extra/>} /> */}
-            <Route path="*" element={<NoPage />} />
-          </Route>
-        </Routes>
-      </Router>
+              <Route path="overview" element={<Overview />} />
+              <Route path="collections" element={<Collections />} />
+              <Route path="activity" element={<Activity />} />
+              <Route path="info" element={<Info />} />
+              <Route path="ifo" element={<Ifo />} />
+              <Route path="voting" element={<Voting />} />
+              <Route path="leaderboard" element={<LeaderBoard />} />
+              {/* <Route path="win" element={<extra/>} /> */}
+              <Route path="*" element={<NoPage />} />
+            </Route>
+          </Routes>
+        </Router>
+      </ThemeContext.Provider>
     </div>
   );
 }
