@@ -1,19 +1,19 @@
 import React, { useState } from "react";
+import { useCountdown } from "../../hooks/useCountdown";
 import "./_home-main-banner.scss";
-import { useCountdown } from "../../../src/hooks/useCountdown";
-
-//INIZIO VECCHIO--------------------------------------------------------
 
 export function MainBannerCounterLottery({ days, hours, minutes, seconds }) {
-  const [days, hours, minutes, seconds] = useCountdown(targetDate);
-
   return (
-    <div className="mb-counter-lottery">
-      <span></span>
-
-      <h2 className="mbcl-item mbcli-number" id="">
-        AAAAAAAAAA
-      </h2>
+    //   COUNTER Lottery
+    <div class="mb-counter-lottery">
+      {<h2 class="mbcl-item mbcli-number" value={days}></h2>}
+      <h2 class="mbcl-item mbcli-time">d</h2>
+      <h2 class="mbcl-item mbcli-number" value={hours}></h2>
+      <h2 class="mbcl-item mbcli-time">h</h2>
+      <h2 class="mbcl-item mbcli-number" value={minutes}></h2>
+      <h2 class="mbcl-item mbcli-time">m</h2>
+      <h2 class="mbcl-item mbcli-number" value={seconds}></h2>
+      <h2 class="mbcl-item mbcli-time">s</h2>
     </div>
   );
 }
