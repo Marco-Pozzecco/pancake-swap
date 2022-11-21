@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Navbar.scss";
 import { NavLink, Link } from "react-router-dom";
 import settingSvg from "../../resources/home/navbar/setting-icon.svg";
@@ -12,13 +12,16 @@ import DropdownCrypto from "../dropdown-crypto/DropdownCrypto";
 import ModalConnectWallet from "../modal-connect-wallet/ModalConnectWallet";
 import Logo from "../logo/Logo.js";
 import { ConnectWalletBtn } from "../buttons/ConnectWalletBtn";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export function Navbar() {
   const [openModal, setOpenModal] = useState(false);
   const [openModalWallet, setOpenModalWallet] = useState(false);
-  const [theme, setLogo] = useState(false);
+  //const [theme, setLogo] = useState(false);
 
   const themeClass = document.body.className;
+  const theme = useContext(ThemeContext);
+
   // if (themeClass === "theme-dark") {
   //   setLogo(true);
   // } else {
@@ -30,21 +33,19 @@ export function Navbar() {
       <nav>
         <div className="extern-box">
           <div className="flex">
-            <Link to="/">
-              {/* {themeClass === 'theme-dark' &&  <Logo src={logoWhite}/>}
-                        {themeClass === 'theme-light' &&  <Logo src={logo}/>} */}
-              <img
-                src={logoWhite}
-                alt="main-logo"
-                id="main-logo"
-                className={themeClass === "theme-dark" ? "logo-active" : "logo"}></img>
+            <Link to="/">{theme === "theme-dark" ? <img alt="" src={logoWhite} /> : <img alt="" src={logo} />}</Link>
 
-              <img
-                src={logo}
-                alt="main-logo"
-                id="main-logo"
-                className={themeClass === "theme-light" ? "logo-active" : "logo"}></img>
-            </Link>
+            {/* <img src={logoWhite}
+              alt="main-logo"
+              id="main-logo"
+              className={themeClass === "theme-dark" ? "logo-active" : "logo"}></img>
+
+            <img
+              src={logo}
+              alt="main-logo"
+              id="main-logo"
+              className={themeClass === "theme-light" ? "logo-active" : "logo"}></img> */}
+
             <NavLink to="/">
               <img src={logoBunny} alt="logo bunny" className="logoBunny"></img>
             </NavLink>
