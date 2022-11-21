@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./swap.scss";
 import Subnav from "../../components/subnav/Subnav";
 import barChart from "../../resources/limit/barIcon.svg";
@@ -13,13 +13,17 @@ import linkNewPage from "../../resources/limit/linkNewPage.svg";
 import bubble from "../../resources/limit/bubbleSwap.svg";
 //import reload from "../../resources/limit/reload.svg";
 import settingSvg from "../../resources/home/navbar/setting-icon.svg";
-
+import { HpModalSettings } from "../../components/modal/HpModalSettings";
 import ModalConnectWallet from "../../components/modal-connect-wallet/ModalConnectWallet";
 import { ConnectWalletBtn } from "../../components/buttons/ConnectWalletBtn";
+import { BiCog } from "react-icons/bi";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export function Swap() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
   const [toggleState, setTab] = useState(2);
+  const [openModal, setOpenModal] = useState(false);
+  const { theme } = useContext(ThemeContext);
 
   const toggleTab = (index) => {
     setTab(index);
@@ -47,7 +51,11 @@ export function Swap() {
                   <img src={barChart} alt="history icon"></img>
                   <h3 className={toggleState === 1 ? "header active-header" : "header"}>SWAP</h3>
                   <h3 className={toggleState === 2 ? "header active-header" : "header"}>STABLE SWAP</h3>
-                  <img src={settingSvg} alt="reload icon"></img>
+                  <BiCog
+                    fillRule={theme === "theme-dark" ? "red" : "white"}
+                    style={{ height: "1.5em", width: "1.5em" }}
+                  />
+                  <img src={settingSvg} alt="setting icon" onClick={() => setOpenModal(true)}></img>
                   <img src={historyIcon} alt="history icon"></img>
                   <img src={barChart} alt="reload icon"></img>
                 </div>
@@ -102,7 +110,7 @@ export function Swap() {
             </div>
           </div>
         </section>
-        <ModalConnectWallet open={openModalWallet} onClose={() => setOpenModalWallet(false)} />
+
         <div className="bottom-page-swap">
           <p>Bridge assets to BNB Chain</p>
           <img src={linkNewPage} alt="history icon"></img>
@@ -118,6 +126,15 @@ export function Swap() {
           </div>
         </div>
       </div>
+      <HpModalSettings open={openModal} onClose={() => setOpenModal(false)} />
+      <ModalConnectWallet open={openModalWallet} onClose={() => setOpenModalWallet(false)} />
+
+      <div
+        className={openModal === true || openModalWallet === true ? "overlay overlay-active" : "overlay"}
+        onClick={() => {
+          setOpenModal(false);
+          setOpenModalWallet(false);
+        }}></div>
     </div>
   );
 }

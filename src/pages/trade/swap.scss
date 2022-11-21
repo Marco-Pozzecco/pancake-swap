@@ -14,6 +14,7 @@
     flex-direction: column;
     justify-content: center;
     max-width: 100vw;
+    
 
 
     .jskBUs-box-page {
@@ -93,6 +94,8 @@
 
                         * {
                             margin-left: 5px;
+                            cursor: pointer;
+                            z-index: 97;
                         }
 
                         .header {
@@ -213,6 +216,7 @@
                         //height: 32px;
                         margin: 0px 0px 10px 0px;
                         //padding: 0px 16px;
+                        z-index: 99;
                     }
 
                     .var-text-color {
@@ -236,8 +240,10 @@
             p {
                 color: $main-buttons-background-color;
                 margin-right: 10px;
+                z-index: 97;
                 &:hover{
                     text-decoration: underline;
+                    
                 }
             }
 
@@ -246,6 +252,7 @@
                 justify-content: flex-end;
                 align-items: center;
                 flex-grow: 1;
+                z-index: 97;
                
 
                 .bubbleDiv{
