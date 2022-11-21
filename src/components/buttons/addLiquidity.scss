@@ -1,0 +1,10 @@
+// Use rules
+@use "sass:map";
+
+// Import rules
+@import "../../../abstracts/mixins";
+@import "../../../abstracts/colors";
+
+.addLiquiText{
+    color: var(--text-color);
+}

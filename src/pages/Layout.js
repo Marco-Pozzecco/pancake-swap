@@ -1,21 +1,23 @@
 import React from "react";
 // import Home from "../pages/homepage/Home";
-import {Footer} from "../components/footer/Footer";
-import {Navbar} from "../components/navbar/Navbar";
+import { Footer } from "../components/footer/Footer";
+import { Navbar } from "../components/navbar/Navbar";
 import { Outlet } from "react-router-dom";
-// import { ResponsiveNavbar } from "../components/responsive-navbar/ResponsiveNavbar";
-import Subnav from "../components/subnav/Subnav";
+import { ResponsiveNavbar } from "../components/responsive-navbar/ResponsiveNavbar";
+import "./layout.scss";
+import { ScrollToTop } from "../components/buttons/ScrollToTop";
 
 export function Layout() {
-    return (
-        <div>
-            <Navbar />
+  return (
+    <div>
+      <Navbar />
+      <Outlet></Outlet>
+      <ScrollToTop />
+      <Footer />
 
-        <Outlet>
-          {/* <Subnav/> */}
-        </Outlet>
-        <Footer />
-        {/* <ResponsiveNavbar /> */}
+      <div className="bottomNavbar">
+        <ResponsiveNavbar />
       </div>
-    );
+    </div>
+  );
 }
