@@ -43,8 +43,15 @@ export function BannerA() {
   );
 }
 
-// SECONDO BANNER - BANNER-B
+//--------------------------
+
+// SECONDO BANNER - BANNER-B  ---> woth Counter
 export function BannerB() {
+  const TheDate = new Date("Jan 5, 2023 15:37:25").getTime();
+  const NowDate = new Date().getTime();
+
+  const StartCountdown = NowDate + NowDate;
+
   return (
     <div className="mbssc banner-b" id="banner2">
       {/* <!-- -----BANNER B------------------------------ --> */}
@@ -53,9 +60,10 @@ export function BannerB() {
         <h2 className="main-banner-title-b mbt-b1">
           Win <span>$102.181</span> in Lottery
         </h2>
+
         {/* <!--- -- -- -- -- Titles Content - COUNTER Lottery-- -- -- -- -- ---- -- -- -- --> */}
 
-        <MainBannerCounterLottery />
+        <MainBannerCounterLottery targetDay={StartCountdown} />
 
         <Button
           text="Play Now"
@@ -84,6 +92,8 @@ export function BannerB() {
     </div>
   );
 }
+
+//--------------------------
 
 // TERZO BANNER - BANNER-C
 export function BannerC() {
