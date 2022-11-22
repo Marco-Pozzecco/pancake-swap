@@ -38,12 +38,15 @@ $theme-light: map.set($theme-light, "sub-nav-bg", #fff);
         align-items: center;
 
         li {
-            margin-right: 15px;
+            margin-right: 20px;
 
             a {
                 display: flex;
                 align-items: center;
                 padding-right: 10px;
+                img{
+                    margin-left: 5px;
+                }
             }
 
             .active {
