@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Subnav from "../../../components/subnav/Subnav";
 import "./limit.scss";
 import ModalConnectWallet from "../../../components/modal-connect-wallet/ModalConnectWallet";
 import { ConnectWalletBtn } from "../../../components/buttons/ConnectWalletBtn";
 import arrow from "../../../resources/home/navbar/arrow-down.svg";
-import barChart from "../../../resources/limit/barIcon.svg";
-import historyIcon from "../../../resources/limit/history.svg";
 import arrowLimit from "../../../resources/limit/arrowLimit.svg";
 //import doubleArrow from "../../../resources/limit/doubleArrow.svg";
 import bunnyLogo from "../../../resources/home/navbar/bunny-icon-round.svg";
@@ -15,10 +13,16 @@ import bunnyCard from "../../../resources/limit/imgBunnyBottmCard.svg";
 import leftArrow from "../../../resources/limit/leftArrow.svg";
 import rightArrow from "../../../resources/limit/rightArrow.svg";
 import helpBunny from "../../../resources/limit/help.png";
+import { RiHistoryLine } from "react-icons/ri";
+import { FaChartBar } from "react-icons/fa";
+import { TbArrowsLeftRight } from "react-icons/tb";
+import { HiSwitchVertical } from "react-icons/hi";
+import { ThemeContext } from "../../../context/ThemeContext";
 
 export function Limit() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
   const [toggleState, setTab] = useState(1);
+  const { theme } = useContext(ThemeContext);
 
   const toggleTab = (index) => {
     setTab(index);
@@ -82,9 +86,15 @@ export function Limit() {
           <div className="ConverterCard ">
             <div className="headerCard">
               <div className="headerRow">
-                <img src={barChart} alt="history icon"></img>
+                <FaChartBar
+                  fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                  style={{ height: "1.4em", width: "1.4em" }}
+                />
                 <h3 className="header">LIMIT</h3>
-                <img src={historyIcon} alt="history icon"></img>
+                <RiHistoryLine
+                  fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                  style={{ height: "1.4em", width: "1.4em" }}
+                />
               </div>
               <p className="pg-tx">Place a limit order to trade at a set price</p>
             </div>
