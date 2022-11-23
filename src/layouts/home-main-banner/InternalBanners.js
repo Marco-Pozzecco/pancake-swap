@@ -47,11 +47,6 @@ export function BannerA() {
 
 // SECONDO BANNER - BANNER-B  ---> woth Counter
 export function BannerB() {
-  const TheDate = new Date("Jan 5, 2023 15:37:25").getTime();
-  const NowDate = new Date().getTime();
-
-  const StartCountdown = NowDate + NowDate;
-
   return (
     <div className="mbssc banner-b" id="banner2">
       {/* <!-- -----BANNER B------------------------------ --> */}
@@ -63,7 +58,7 @@ export function BannerB() {
 
         {/* <!--- -- -- -- -- Titles Content - COUNTER Lottery-- -- -- -- -- ---- -- -- -- --> */}
 
-        <MainBannerCounterLottery targetDay={StartCountdown} />
+        <MainBannerCounterLottery />
 
         <Button
           text="Play Now"
