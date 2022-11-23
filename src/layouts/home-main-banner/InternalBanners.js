@@ -47,6 +47,8 @@ export function BannerA() {
 
 // SECONDO BANNER - BANNER-B  ---> woth Counter
 export function BannerB() {
+  let eventDate = "December, 31, 202202";
+
   return (
     <div className="mbssc banner-b" id="banner2">
       {/* <!-- -----BANNER B------------------------------ --> */}
@@ -58,7 +60,7 @@ export function BannerB() {
 
         {/* <!--- -- -- -- -- Titles Content - COUNTER Lottery-- -- -- -- -- ---- -- -- -- --> */}
 
-        <MainBannerCounterLottery />
+        <MainBannerCounterLottery deadline={eventDate} />
 
         <Button
           text="Play Now"

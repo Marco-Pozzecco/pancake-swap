@@ -18,7 +18,7 @@ export function MainBanner() {
         bannerIdx = 0;
         setBannerIndex(0);
       }
-    }, 50000);
+    }, 5000);
   }, []);
   return (
     <section className="main-banner-container">
