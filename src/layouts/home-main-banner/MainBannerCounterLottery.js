@@ -46,8 +46,3 @@ export function MainBannerCounterLottery({ deadline }) {
     </div>
   );
 }
-
-// METTERE LE PROPS!!!!  https://blog.greenroots.info/how-to-create-a-countdown-timer-using-react-hooks#heading-the-countdown-app
-//--------------------------------------------
-//CODE SANS BOX  questo è meglio, sono riuscito
-//https://codesandbox.io/s/countdown-timer-forked-hooks-version-forked-1hiiru?file=/src/Clock.js
