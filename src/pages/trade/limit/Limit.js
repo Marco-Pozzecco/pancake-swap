@@ -138,6 +138,11 @@ export function Limit() {
         </section>
         <ModalConnectWallet open={openModalWallet} onClose={() => setOpenModalWallet(false)} />
       </div>
+      <div
+        className={openModalWallet === true ? "overlay overlay-active" : "overlay"}
+        onClick={() => {
+          setOpenModalWallet(false);
+        }}></div>
     </div>
   );
 }

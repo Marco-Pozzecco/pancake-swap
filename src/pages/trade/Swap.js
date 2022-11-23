@@ -2,7 +2,8 @@ import React, { useState, useContext } from "react";
 import "./swap.scss";
 import Subnav from "../../components/subnav/Subnav";
 import barChart from "../../resources/limit/barIcon.svg";
-import historyIcon from "../../resources/limit/history.svg";
+import barChartHide from "../../resources/limit/barIconHide.svg";
+
 //import doubleArrow from "../../resources/limit/doubleArrow.svg";
 import bunnyLogo from "../../resources/home/navbar/bunny-icon-round.svg";
 import copied from "../../resources/limit/copied.svg";
@@ -12,12 +13,14 @@ import helpBunny from "../../resources/limit/help.png";
 import linkNewPage from "../../resources/limit/linkNewPage.svg";
 import bubble from "../../resources/limit/bubbleSwap.svg";
 //import reload from "../../resources/limit/reload.svg";
-import settingSvg from "../../resources/home/navbar/setting-icon.svg";
 import { HpModalSettings } from "../../components/modal/HpModalSettings";
 import ModalConnectWallet from "../../components/modal-connect-wallet/ModalConnectWallet";
 import { ConnectWalletBtn } from "../../components/buttons/ConnectWalletBtn";
-import { BiCog } from "react-icons/bi";
 import { ThemeContext } from "../../context/ThemeContext";
+import { FaCog } from "react-icons/fa";
+import { RiHistoryLine } from "react-icons/ri";
+import { FaChartBar } from "react-icons/fa";
+import { MdContentCopy } from "react-icons/md";
 
 export function Swap() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
@@ -48,16 +51,24 @@ export function Swap() {
             <div className="ConverterCard ">
               <div className="headerCard">
                 <div className="headerRow">
-                  <img src={barChart} alt="history icon"></img>
+                  <FaChartBar
+                    fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                    style={{ height: "1.4em", width: "1.4em" }}
+                    onClick={() => setOpenModal(true)}
+                  />
                   <h3 className={toggleState === 1 ? "header active-header" : "header"}>SWAP</h3>
                   <h3 className={toggleState === 2 ? "header active-header" : "header"}>STABLE SWAP</h3>
-                  <BiCog
-                    fillRule={theme === "theme-dark" ? "red" : "white"}
-                    style={{ height: "1.5em", width: "1.5em" }}
+                  <FaCog
+                    fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                    style={{ height: "1.4em", width: "1.4em" }}
+                    onClick={() => setOpenModal(true)}
                   />
-                  <img src={settingSvg} alt="setting icon" onClick={() => setOpenModal(true)}></img>
-                  <img src={historyIcon} alt="history icon"></img>
-                  <img src={barChart} alt="reload icon"></img>
+                  <RiHistoryLine
+                    fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                    style={{ height: "1.4em", width: "1.4em" }}
+                    onClick={() => setOpenModal(true)}
+                  />
+                  <img src={barChartHide} alt="reload icon"></img>
                 </div>
                 <p className="pg-tx">Trade tokens in an instant</p>
               </div>
@@ -72,10 +83,9 @@ export function Swap() {
                         src={arrow}
                         alt="arrow icon"
                       />
-                      <img
-                        className={toggleState === 2 ? "fa-svg-icon active-fab" : "fa-svg-icon"}
-                        src={copied}
-                        alt="copy icon"
+                      <MdContentCopy
+                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                        style={{ height: "1.2em", width: "1.em" }}
                       />
                     </div>
                     <input placeholder="0.0" className="convertInput"></input>
