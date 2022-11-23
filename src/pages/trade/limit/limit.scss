@@ -196,6 +196,11 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
                         //background-color: aliceblue;
                         width: 90%;
                         @include flex(row, space-between, center);
+                        * {
+                            
+                            cursor: pointer;
+                            z-index: 97;
+                        }
 
                         .header {
                             color: var(--text-color);
@@ -228,11 +233,13 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
 
                         .input1Converter {
                             width: 100%;
+                            z-index: 97;
 
                             .switchCryptoBtn {
                                 padding: 2%;
                                 width: 40%;
                                 color: var(--text-color);
+                                z-index: 97;
 
                                 //background-color: aliceblue;
                                 * {
@@ -249,12 +256,14 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
                                 text-align: end;
                                 border: none;
                                 background-color: var(--tab-bg);
+                                z-index: 97;
                             }
                         }
 
                         .arrrowBtn {
                             width: 32px;
                             box-shadow: rgb(0 0 0 / 10%) 0px -2px 0px inset;
+                            background-color: var(--tab-bg);
                             align-items: center;
                             border: 0px;
                             border-radius: 16px;
@@ -271,6 +280,7 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
                             outline: 0px;
                             transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
                             height: 32px;
+                            z-index: 97;
                         }
 
                         .fx-inline {
@@ -281,9 +291,11 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
                             border-radius: 20px;
                             height: 45px;
                             width: 100%;
-                            padding: 3%;
-                            background-color: aliceblue;
-                            border: 1px solid $modal-bar;
+                            padding: 3%; 
+                            border: 1px solid var(--colors-inputSecondary);                      
+                            background-color: var( --background-disabled);
+                            cursor: not-allowed;
+                            z-index: 97;
                         }
 
                         .rowAfterEmptyDiv {

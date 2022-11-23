@@ -28,6 +28,7 @@ export function Swap() {
   const [toggleState, setTab] = useState(1);
   const [openModal, setOpenModal] = useState(false);
   const { theme } = useContext(ThemeContext);
+  const [isVisible, setVisibile] = useState(false);
 
   const toggleTab = (index) => {
     setTab(index);
@@ -100,7 +101,20 @@ export function Swap() {
                   </div>
                   <div className="flex">
                     <button className="arrrowBtn">
-                      <BiDownArrowAlt fill="#1fc7d4" style={{ height: "1.3em", width: "1.3em" }} />
+                      {isVisible === false && (
+                        <BiDownArrowAlt
+                          fill="#1fc7d4"
+                          style={{ height: "1.3em", width: "1.3em" }}
+                          onMouseEnter={() => setVisibile(true)}
+                        />
+                      )}
+                      {isVisible === true && (
+                        <HiSwitchVertical
+                          fill="#1fc7d4"
+                          style={{ height: "1.3em", width: "1.3em" }}
+                          onMouseLeave={() => setVisibile(false)}
+                        />
+                      )}
                     </button>
                   </div>
                   <div className="input1Converter ">

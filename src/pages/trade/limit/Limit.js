@@ -18,11 +18,15 @@ import { FaChartBar } from "react-icons/fa";
 import { TbArrowsLeftRight } from "react-icons/tb";
 import { HiSwitchVertical } from "react-icons/hi";
 import { ThemeContext } from "../../../context/ThemeContext";
+import { BiDownArrowAlt } from "react-icons/bi";
+import { BiHide } from "react-icons/bi";
 
 export function Limit() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
   const [toggleState, setTab] = useState(1);
   const { theme } = useContext(ThemeContext);
+  const [isVisible, setVisibile] = useState(false);
+  const [visible, setView] = useState(false);
 
   const toggleTab = (index) => {
     setTab(index);
@@ -35,7 +39,7 @@ export function Limit() {
 
       <div className="limit-external-box">
         <section className="col-1">
-          <div className="fakeGraph"></div>
+          {visible === false && <div className="fakeGraph"></div>}
 
           <div className="col1-btm-page">
             <div className="col1-bottom-card">
@@ -86,10 +90,20 @@ export function Limit() {
           <div className="ConverterCard ">
             <div className="headerCard">
               <div className="headerRow">
-                <FaChartBar
-                  fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
-                  style={{ height: "1.4em", width: "1.4em" }}
-                />
+                {visible === false && (
+                  <FaChartBar
+                    fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                    style={{ height: "1.4em", width: "1.4em" }}
+                    onClick={() => setView(true)}
+                  />
+                )}
+                {visible === true && (
+                  <BiHide
+                    fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                    style={{ height: "1.4em", width: "1.4em" }}
+                    onClick={() => setView(false)}
+                  />
+                )}
                 <h3 className="header">LIMIT</h3>
                 <RiHistoryLine
                   fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
@@ -111,7 +125,20 @@ export function Limit() {
                 </div>
                 <div className="flex">
                   <button className="arrrowBtn">
-                    <img src={arrowLimit} alt="history icon"></img>
+                    {isVisible === false && (
+                      <BiDownArrowAlt
+                        fill="#1fc7d4"
+                        style={{ height: "1.3em", width: "1.3em" }}
+                        onMouseEnter={() => setVisibile(true)}
+                      />
+                    )}
+                    {isVisible === true && (
+                      <HiSwitchVertical
+                        fill="#1fc7d4"
+                        style={{ height: "1.3em", width: "1.3em" }}
+                        onMouseLeave={() => setVisibile(false)}
+                      />
+                    )}
                   </button>
                 </div>
                 <div className="input1Converter ">
