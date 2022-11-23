@@ -47,7 +47,7 @@ export function BannerA() {
 
 // SECONDO BANNER - BANNER-B  ---> woth Counter
 export function BannerB() {
-  const TheDate = new Date("Jan 5, 2023 15:37:25").getTime();
+  const TheDate = 3 * 24 * 60 * 60 * 1000;
   const NowDate = new Date().getTime();
 
   const StartCountdown = NowDate + NowDate;
