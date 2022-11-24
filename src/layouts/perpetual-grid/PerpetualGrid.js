@@ -15,15 +15,6 @@ import { FinancialOrders } from "../../components/finance/FinancialOrders";
 export function PerpetualGrid () {
     const ResponsiveGridLayout = WidthProvider(Responsive);
 
-    function position(position, axisX, axisY) {
-        const position = 0;
-
-
-
-        return position 
-
-    }
-
     const layout = {
         desktop: [
             { x: 0, y: 0, w: 18, h: 3, i: 'favorite-fi'},
