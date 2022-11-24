@@ -182,7 +182,7 @@ $theme-light: map.set($theme-light, "hover-nav-ul", $border_color);
     }
 
     .label1 .ball1 {
-        background-color: #fff;
+        background-color: var(--popup-bg);
         border-radius: 50%;
         position: absolute;
         top: 3px;

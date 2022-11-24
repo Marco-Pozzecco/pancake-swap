@@ -4,7 +4,7 @@ import "./limit.scss";
 import ModalConnectWallet from "../../../components/modal-connect-wallet/ModalConnectWallet";
 import { ConnectWalletBtn } from "../../../components/buttons/ConnectWalletBtn";
 import arrow from "../../../resources/home/navbar/arrow-down.svg";
-import arrowLimit from "../../../resources/limit/arrowLimit.svg";
+
 //import doubleArrow from "../../../resources/limit/doubleArrow.svg";
 import bunnyLogo from "../../../resources/home/navbar/bunny-icon-round.svg";
 import copied from "../../../resources/limit/copied.svg";
@@ -150,8 +150,8 @@ export function Limit() {
                   <input placeholder="0.0" className="convertInput"></input>
                 </div>
                 <div className="fx-inline">
-                  <p>Price</p>
-                  <p>Market</p>
+                  <p className="textAccent">Price</p>
+                  <p className="smallBtnText">Market</p>
                 </div>
                 <input className="emptyDiv"></input>
                 <div className="rowAfterEmptyDiv">

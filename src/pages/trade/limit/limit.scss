@@ -259,6 +259,18 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
                                 z-index: 97;
                             }
                         }
+                        .textAccent{
+                            color: var(--text-accent);
+                            margin-right: 10px;
+                        }
+                        .smallBtnText{
+                            //background-color: var(--text-accent-alt);
+                            border-radius: 12px;
+                            border: 1px solid var(--disable-text);
+                            padding: 0px 5px;
+                            color: var(--disable-text);
+                            font-size: 14px;
+                        }
 
                         .arrrowBtn {
                             width: 32px;
@@ -301,7 +313,7 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
                         .rowAfterEmptyDiv {
                             display: flex;
                             justify-content: flex-end;
-                            color: var(--text-color);
+                            
 
                             * {
                                 margin-left: 6px;
