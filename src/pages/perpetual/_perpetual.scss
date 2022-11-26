@@ -6,6 +6,7 @@ body {
 
 .perpetual-item {
     box-sizing: border-box;
+    padding: 20px;
     color: white;
     margin: 0px;
     min-width: 0px;
@@ -16,5 +17,10 @@ body {
     height: 100%;
     overflow: hidden auto;
     background-color: var(--background-perpetual-item);
+}
 
+.graph-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

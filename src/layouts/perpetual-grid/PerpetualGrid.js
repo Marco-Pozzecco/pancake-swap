@@ -29,12 +29,12 @@ export function PerpetualGrid () {
             { x: 0, y: 35, w: 21, h: 8, i: 'depth'},
             { x: 0, y: 43, w: 21, h: 10, i: 'orders'}
         ],
-        tablet: {
+        tablet: [
 
-        },
-        mobile: {
-
-        }
+        ],
+        mobile: [
+            
+        ]
     }
 
     return (
