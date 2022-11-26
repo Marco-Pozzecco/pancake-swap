@@ -22,6 +22,7 @@ import { BiDownArrowAlt } from "react-icons/bi";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { BiHide } from "react-icons/bi";
 import { ModalSettingSwap } from "../../components/modalSettinSwap/ModalSettingSwap";
+import ModalCryptoSwap from "../../components/modalCryptoSwap/ModalCryptoSwap";
 
 export function Swap() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
@@ -30,6 +31,7 @@ export function Swap() {
   const { theme } = useContext(ThemeContext);
   const [isVisible, setVisibile] = useState(false);
   const [visible, setView] = useState(false);
+  const [openCryptoModal, setOpenModalCrypto] = useState(false);
 
   const toggleTab = (index) => {
     setTab(index);
@@ -130,7 +132,7 @@ export function Swap() {
                       </button>
                     </div>
                     <div className="input1Converter ">
-                      <div className="fx-inline switchCryptoBtn">
+                      <div className="fx-inline switchCryptoBtn" onClick={() => setOpenModalCrypto(true)}>
                         <img src={bunnyLogo} alt="history icon"></img>
                         <p>BTCB</p>
                         {toggleState === 1 && (
@@ -188,12 +190,18 @@ export function Swap() {
       </div>
       <ModalSettingSwap open={openModal} onClose={() => setOpenModal(false)} />
       <ModalConnectWallet open={openModalWallet} onClose={() => setOpenModalWallet(false)} />
+      <ModalCryptoSwap open={openCryptoModal} onClose={() => setOpenModalCrypto(false)} />
 
       <div
-        className={openModal === true || openModalWallet === true ? "overlay overlay-active" : "overlay"}
+        className={
+          openModal === true || openModalWallet === true || openCryptoModal === true
+            ? "overlay overlay-active"
+            : "overlay"
+        }
         onClick={() => {
           setOpenModal(false);
           setOpenModalWallet(false);
+          setOpenModalCrypto(false);
         }}></div>
     </div>
   );

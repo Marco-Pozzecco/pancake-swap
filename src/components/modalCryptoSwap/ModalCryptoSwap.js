@@ -1,0 +1,94 @@
+import React, { useState } from "react";
+import { RadioButtons } from "../buttons/RadioButtons";
+import "./modalCryptoSwap.scss";
+import bnbIcon from "../../resources/home/navbar/bnb.png";
+import aptos from "../../resources/home/navbar/aptos.png";
+import Ethereum from "../../resources/home/navbar/ethereum.png";
+
+export default function ModalCryptoSwap(open, onClose) {
+  if (!open) return null;
+
+  const options = [
+    {
+      name: "BNB",
+      img: <img className="fa-svg-icon" src={bnbIcon} alt="bnb icon"></img>,
+      description: "Binance Chain Native Token",
+    },
+    {
+      name: "Ethereum",
+      img: <img className="fa-svg-icon" src={Ethereum} alt="ethereum icon"></img>,
+      description: "lalala",
+    },
+    { name: "Aptos", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    {
+      name: "BNB",
+      img: <img className="fa-svg-icon" src={bnbIcon} alt="bnb icon"></img>,
+      description: "Binance Chain Native Token",
+    },
+    {
+      name: "Ethereum",
+      img: <img className="fa-svg-icon" src={Ethereum} alt="ethereum icon"></img>,
+      description: "lalala",
+    },
+    { name: "Aptos", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    {
+      name: "BNB",
+      img: <img className="fa-svg-icon" src={bnbIcon} alt="bnb icon"></img>,
+      description: "Binance Chain Native Token",
+    },
+    {
+      name: "Ethereum",
+      img: <img className="fa-svg-icon" src={Ethereum} alt="ethereum icon"></img>,
+      description: "lalala",
+    },
+    { name: "Aptos", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+  ];
+
+  //const [selected, setSelected] = useState({ ...options[0] });
+  //const [selected, setSelected] = useState();
+
+  return (
+    <div
+      className="modalCryptoSwap"
+      id="modal"
+      onClick={(e) => {
+        e.stopPropagation();
+      }}>
+      <div className="modalHeader flex-switch">
+        <h3 className="header">Select a Token</h3>
+        <button data-close-btn className="close-btn" onClick={onClose}>
+          &times;
+        </button>
+      </div>
+      <div>
+        <div className="input1Converter">
+          <input className="convertInput" placeholder="Search name or paste address"></input>
+        </div>
+
+        <div className="flex-switch">
+          <p className="parag">Common tokens</p>
+        </div>
+        <div className="flex-switch">
+          <RadioButtons radioGroup={["0.1%", "0.5%", "1%"]} />
+        </div>
+        <div className="cryptoList">
+          {options.map((option) => {
+            return (
+              <div
+                className="cryptoElement"
+                // onClick={() => {
+                //   setSelected(option);}}
+              >
+                <div className="cryptoLogo">{option.img}</div>
+                <div className="cryptoContent">
+                  <div className="cryptoName">{option.name}</div>
+                  <div className="cryptoDesc">{option.description}</div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
