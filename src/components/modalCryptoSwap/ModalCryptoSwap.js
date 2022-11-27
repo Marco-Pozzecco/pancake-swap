@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import { RadioButtons } from "../buttons/RadioButtons";
+import React, { useState, useContext } from "react";
+import { CryptoModalRadioButtons } from "../buttons/CryptoModalRadioButtons";
 import "./modalCryptoSwap.scss";
 import bnbIcon from "../../resources/home/navbar/bnb.png";
 import aptos from "../../resources/home/navbar/aptos.png";
 import Ethereum from "../../resources/home/navbar/ethereum.png";
+import { SelectedOptionContext } from "../../context/SelectetOptionContext";
 
-export default function ModalCryptoSwap(open, onClose) {
-  if (!open) return null;
-
+export function ModalCryptoSwap(open, onClose) {
   const options = [
     {
       name: "BNB",
@@ -45,7 +44,15 @@ export default function ModalCryptoSwap(open, onClose) {
   ];
 
   //const [selected, setSelected] = useState({ ...options[0] });
-  //const [selected, setSelected] = useState();
+  const [selected, setSelected] = useState({});
+  //const {setSelected} = useContext(SelectedOptionContext);
+  if (!open) return null;
+
+  // const selected =  {
+  //   option: '',
+  //   setSelected: () => {}
+
+  // };
 
   return (
     <div
@@ -56,11 +63,12 @@ export default function ModalCryptoSwap(open, onClose) {
       }}>
       <div className="modalHeader flex-switch">
         <h3 className="header">Select a Token</h3>
-        <button data-close-btn className="close-btn" onClick={onClose}>
+        <button data-close-btn className="close-btn-modal" onClick={onClose}>
           &times;
         </button>
       </div>
-      <div>
+      <div className="bordeBottom"></div>
+      <div className="bottomModal">
         <div className="input1Converter">
           <input className="convertInput" placeholder="Search name or paste address"></input>
         </div>
@@ -69,16 +77,17 @@ export default function ModalCryptoSwap(open, onClose) {
           <p className="parag">Common tokens</p>
         </div>
         <div className="flex-switch">
-          <RadioButtons radioGroup={["0.1%", "0.5%", "1%"]} />
+          <CryptoModalRadioButtons radioGroup={["BNB", "CAKE", "BUSD", "BTCB"]} />
         </div>
         <div className="cryptoList">
           {options.map((option) => {
             return (
               <div
                 className="cryptoElement"
-                // onClick={() => {
-                //   setSelected(option);}}
-              >
+                onClick={() => {
+                  setSelected(option.name);
+                  onClose(ModalCryptoSwap(false));
+                }}>
                 <div className="cryptoLogo">{option.img}</div>
                 <div className="cryptoContent">
                   <div className="cryptoName">{option.name}</div>

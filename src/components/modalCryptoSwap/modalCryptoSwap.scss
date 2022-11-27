@@ -15,11 +15,9 @@
   transition: 200ms ease-in-out;
   background-color: var(--popup-bg); //var(--popup-bg)
   border-radius: 30px;
-  padding: 3% 2% 2% 2%;
   display: flex;
   flex-direction: column;
-
-  z-index: 999;
+  z-index: 100;
 
   .flex-switch {
     display: flex;
@@ -30,20 +28,21 @@
   .modalHeader {
     position: relative;
     width: 100%;
-    //height: 70px;
+    margin-bottom: 20px;
+    padding: 24px 24px 0px 24px;
     top: 0%;
     // left: 50%;
     // transform: translate(-50%, -50%);
     // background-image: var(--popup-modal1-bg);
     // background-color: var(--popup-modal1-bg); //var(--popup-modal1-bg)
     //border-radius: 30px 30px 0px 0px;
-    padding: 2% 2% 2% 6%;
-    border-bottom: 1px solid --border-bottom-pp;
+    //padding: 2% 2% 2% 6%;
+
     .header {
       color: var(--text-color);
     }
 
-    .close-btn {
+    .close-btn-modal {
       cursor: pointer;
       border: none;
       outline: none;
@@ -51,54 +50,69 @@
       color: $btn-bg-color;
       font-size: 1.55rem;
       margin-right: 20px;
+      z-index: 97;
     }
   }
-  .input1Converter {
+  .bordeBottom {
+    border-bottom: 1px solid var(--border-bottom-pp);
+    margin-bottom: 20px;
+
     width: 100%;
-
-    .convertInput {
-      border-radius: 16px;
-      height: 55px;
-      width: 100%;
-      padding: 3%;
-      border: none;
-      background-color: var(--tab-bg);
-    }
   }
-  .cryptoList {
-    height: 420px;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    overflow-x: hidden;
+  .bottomModal {
+    padding: 0px 24px 24px 24px;
+    .parag {
+      color: var(--text-color);
+      padding: 2%;
+    }
 
-    .cryptoElement {
-      margin-top: 10px;
-      display: flex;
-      align-items: center;
-      &:hover {
-        background-color: black;
-      }
+    .input1Converter {
+      width: 100%;
 
-      .cryptoLogo img {
-        width: 26px;
-        height: 26px;
-        margin-right: 6px;
-      }
-
-      .cryptoContent {
-        display: flex;
-        flex-direction: column;
-        -webkit-box-pack: start;
-        justify-content: flex-start;
+      .convertInput {
+        border-radius: 16px;
+        height: 55px;
         width: 100%;
+        padding: 3%;
+        border: none;
+        background-color: var(--tab-bg);
+      }
+    }
+    .cryptoList {
+      height: 420px;
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      overflow-x: hidden;
 
-        .cryptoName {
-          color: var(--text-color);
+      .cryptoElement {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        &:hover {
+          background-color: black;
         }
-        .cryptoDesc {
-          color: $primary-color;
+
+        .cryptoLogo img {
+          width: 26px;
+          height: 26px;
+          margin-right: 6px;
+        }
+
+        .cryptoContent {
+          display: flex;
+          flex-direction: column;
+          -webkit-box-pack: start;
+          justify-content: flex-start;
+          width: 100%;
+
+          .cryptoName {
+            color: var(--text-color);
+          }
+          .cryptoDesc {
+            color: $primary-color;
+          }
         }
       }
     }
