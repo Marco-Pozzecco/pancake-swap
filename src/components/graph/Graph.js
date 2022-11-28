@@ -15,17 +15,16 @@ export function Graph(props) {
       var graph = new Chart(document.getElementById(props.id), props.config);
     } else {
       var graph = new Chart(document.getElementById(props.id), {
-        type: props.type,
+        type: props.type, // string
         data: {
-          
+          datasets: props.data // object[]
         },
         options: {
-            responsive: props.responsive,
+            responsive: props.responsive, // boolean
         },
-        plugins: props.plugins
+        plugins: props.plugins 
       })
     }
-    
     
     graph.render();
 
