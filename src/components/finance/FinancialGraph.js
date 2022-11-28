@@ -1,22 +1,19 @@
+import { useEffect } from "react";
+import { BiCaretDown, BiSliderAlt } from "react-icons/bi";
 import { Button } from "../buttons/Button";
 import { PerpetualItem } from "../container/PerpetualItem";
-import { BiCaretDown } from "react-icons/bi";
-import { BiSliderAlt } from "react-icons/bi";
 import { Graph } from "../graph/Graph";
-import { Chart } from "chart.js/auto";
-import { useEffect } from "react";
-import { Bar } from "react-chartjs-2";
+import { fetchModule } from "../../script/fetchModule";
 
 export function FinancialGraph() {
-  const data = [
-    { year: 2010, count: 10 },
-    { year: 2011, count: 20 },
-    { year: 2012, count: 15 },
-    { year: 2013, count: 25 },
-    { year: 2014, count: 22 },
-    { year: 2015, count: 30 },
-    { year: 2016, count: 28 },
-  ];
+  const data = {};
+
+  const fetcher = new fetchModule();
+
+  useEffect(() => {
+    let data = fetcher.fetchHystoricalData(Math.round((Date.now() - 2629743000) / 1000 ), "bitcoin", "usd");
+    console.log(data);
+  })
 
   return (
     <PerpetualItem>
@@ -48,11 +45,11 @@ export function FinancialGraph() {
           config={{
             type: "bar",
             data: {
-              labels: data.map((row) => row.year),
+              labels: "Some day",
               datasets: [
                 {
                   label: "Acquisitions by year",
-                  data: data.map((row) => row.count),
+                  data: data,
                 },
               ],
               options: {
