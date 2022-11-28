@@ -4,20 +4,37 @@ import React from "react";
 export function Graph(props) {
   // Basic configuration
   // const config = {
-  //     type: 'line' 
+  //     type: 'line' | 'bar'
   //     data: {}
   //     options: {}
   //     plugins: []
   // }
 
   React.useEffect(() => {
-    const myChart = new Chart(document.getElementById(props.id), props.config);
-    console.log(props.id, props.config)
+    if (props.config) {
+      var graph = new Chart(document.getElementById(props.id), props.config);
+    } else {
+      var graph = new Chart(document.getElementById(props.id), {
+        type: props.type,
+        data: {
+          
+        },
+        options: {
+            responsive: props.responsive,
+        },
+        plugins: props.plugins
+      })
+    }
     
-    myChart.render();
+    
+    graph.render();
 
-    return myChart.destroy();
-  });
+    return () => graph.destroy();
+  }, []);
 
   return <canvas id={props.id}></canvas>;
+}
+
+Graph.defaultProps = {
+  responsive: true,
 }

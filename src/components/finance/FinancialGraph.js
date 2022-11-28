@@ -55,6 +55,9 @@ export function FinancialGraph() {
                   data: data.map((row) => row.count),
                 },
               ],
+              options: {
+                responsive: true,
+              },
             },
           }}
         />
