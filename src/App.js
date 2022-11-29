@@ -4,7 +4,7 @@ import { Swap } from "./pages/trade/Swap";
 import { Limit } from "./pages/trade/limit/Limit";
 import { Liquidity } from "./pages/trade/liquidity/Liquidity";
 import { Farms } from "./pages/earn/Farms";
-import { TradingCompetition } from "./pages/win/TradingCompetition";
+import { TradingCompetition } from "./pages/win/trading-competition/TradingCompetition";
 import Home from "./pages/homepage/Home";
 import { NoPage } from "./pages/notFound/NotFound404";
 import "../src/main.scss";
