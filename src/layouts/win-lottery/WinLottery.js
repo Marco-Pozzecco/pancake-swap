@@ -4,6 +4,7 @@ import { InPrizeTicket } from "../win-lottery-in-prize-ticket/InPrizeTicket";
 import { GetYourTickets } from "../win-lottery-get-your-tickets/GetYourTickets";
 import { ConnectYourWalletWN } from "../win-lottery-connect-wallet/ConnectYourWalletWN";
 import { FinishedRoundWN } from "../win-lottery-finished-rounds/FinishedRoundWN";
+import { HowToPlayWN } from "../win-lottery-how-to-play/HowToPlayWN";
 
 export function WinLottery() {
   return (
@@ -12,6 +13,7 @@ export function WinLottery() {
       <GetYourTickets />
       <ConnectYourWalletWN />
       <FinishedRoundWN />
+      <HowToPlayWN />
     </div>
   );
 }
