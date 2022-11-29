@@ -33,6 +33,7 @@ export function Swap() {
   const [isVisible, setVisibile] = useState(false);
   const [visible, setView] = useState(false);
   const [openCryptoModal, setOpenModalCrypto] = useState(false);
+  const [switchText, setSwitch] = useState(false);
 
   const [option, setSelected] = useState("BTC");
 
@@ -44,10 +45,6 @@ export function Swap() {
   const toggleTab = (index) => {
     setTab(index);
     console.log(index);
-  };
-
-  const print = () => {
-    console.log(openCryptoModal);
   };
 
   return (
@@ -94,7 +91,7 @@ export function Swap() {
                     <RiHistoryLine
                       fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
                       style={{ height: "1.4em", width: "1.4em" }}
-                      onClick={() => setOpenModal(true)}
+                      // onClick={setOpenTry()}
                     />
                     <AiOutlineReload
                       fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
@@ -111,10 +108,9 @@ export function Swap() {
                         className="fx-inline switchCryptoBtn"
                         onClick={() => {
                           setOpenModalCrypto(true);
-                          print(openCryptoModal);
                         }}>
                         <img src={bunnyLogo} alt="history icon"></img>
-                        <p>CAKE</p>
+                        {switchText === false ? <p>CAKE</p> : <p>BTCB</p>}
                         {toggleState === 1 && (
                           <IoIosArrowDown
                             fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
@@ -144,6 +140,9 @@ export function Swap() {
                             fill="#1fc7d4"
                             style={{ height: "1.3em", width: "1.3em" }}
                             onMouseLeave={() => setVisibile(false)}
+                            onClick={() => {
+                              switchText === false ? setSwitch(true) : setSwitch(false);
+                            }}
                           />
                         )}
                       </button>
@@ -151,7 +150,7 @@ export function Swap() {
                     <div className="input1Converter ">
                       <div className="fx-inline switchCryptoBtn" onClick={() => setOpenModalCrypto(true)}>
                         <img src={bunnyLogo} alt="history icon"></img>
-                        <p>BTCB</p>
+                        {switchText === false ? <p>BTCB</p> : <p>CAKE</p>}
                         <SelectedOptionContext.Provider value={contextValue} />
                         {toggleState === 1 && (
                           <IoIosArrowDown
@@ -206,13 +205,32 @@ export function Swap() {
           </div>
         </div>
       </div>
-      <ModalSettingSwap open={openModal} onClose={() => setOpenModal(false)} />
-      <ModalConnectWallet open={openModalWallet} onClose={() => setOpenModalWallet(false)} />
-      <ModalCryptoSwap open={openCryptoModal} onClose={() => setOpenModalCrypto(false)} />
+      <ModalSettingSwap
+        open={openModal}
+        onClose={() => {
+          setOpenModal(false);
+          document.body.style.overflow = "unset";
+        }}
+      />
+      <ModalConnectWallet
+        open={openModalWallet}
+        onClose={() => {
+          setOpenModalWallet(false);
+          document.body.style.overflow = "unset";
+        }}
+      />
+      <ModalCryptoSwap
+        open={openCryptoModal}
+        onClose={() => {
+          setOpenModalCrypto(false);
+          document.body.style.overflow = "unset";
+        }}
+      />
 
       <div
         className={
-          openModal === true || openModalWallet === true || openCryptoModal === true
+          (openModal === true || openModalWallet === true || openCryptoModal === true) &&
+          (document.body.style.overflow = "hidden")
             ? "overlay overlay-active"
             : "overlay"
         }
@@ -220,7 +238,12 @@ export function Swap() {
           setOpenModal(false);
           setOpenModalWallet(false);
           setOpenModalCrypto(false);
+          document.body.style.overflow = "unset";
         }}></div>
+
+      {/* {openModal === true || openModalWallet === true || openCryptoModal === true
+        ? (document.body.style.overflow = "hidden")
+        : (document.body.style.overflow = "unset")} */}
     </div>
   );
 }

@@ -4,10 +4,8 @@ import "./limit.scss";
 import ModalConnectWallet from "../../../components/modal-connect-wallet/ModalConnectWallet";
 import { ConnectWalletBtn } from "../../../components/buttons/ConnectWalletBtn";
 import arrow from "../../../resources/home/navbar/arrow-down.svg";
-
 //import doubleArrow from "../../../resources/limit/doubleArrow.svg";
 import bunnyLogo from "../../../resources/home/navbar/bunny-icon-round.svg";
-import copied from "../../../resources/limit/copied.svg";
 import bunnyCard from "../../../resources/limit/imgBunnyBottmCard.svg";
 //import bunnyCardLighTheme from "../../../resources/limit/bunnyBtmCardLightTheme.svg";
 import leftArrow from "../../../resources/limit/leftArrow.svg";
@@ -15,11 +13,13 @@ import rightArrow from "../../../resources/limit/rightArrow.svg";
 import helpBunny from "../../../resources/limit/help.png";
 import { RiHistoryLine } from "react-icons/ri";
 import { FaChartBar } from "react-icons/fa";
-import { TbArrowsLeftRight } from "react-icons/tb";
 import { HiSwitchVertical } from "react-icons/hi";
 import { ThemeContext } from "../../../context/ThemeContext";
 import { BiDownArrowAlt } from "react-icons/bi";
 import { BiHide } from "react-icons/bi";
+import { MdContentCopy } from "react-icons/md";
+import poweredByGelato from "../../../resources/limit/powered_by_gelato_bk.svg";
+import poweredByGelatoWhite from "../../../resources/limit/powered_by_gelato_white.svg";
 
 export function Limit() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
@@ -27,6 +27,7 @@ export function Limit() {
   const { theme } = useContext(ThemeContext);
   const [isVisible, setVisibile] = useState(false);
   const [visible, setView] = useState(false);
+  const [switchText, setSwitch] = useState(false);
 
   const toggleTab = (index) => {
     setTab(index);
@@ -117,9 +118,9 @@ export function Limit() {
               <div className="bottomCard">
                 <div className="input1Converter">
                   <div className="fx-inline switchCryptoBtn">
-                    <img src={bunnyLogo} alt="history icon"></img>CAKE
+                    <img src={bunnyLogo} alt="history icon"></img>
+                    {switchText === false ? <p>CAKE</p> : <p>BTCB</p>}
                     <img className="fa-svg-icon" src={arrow} alt="arrow icon" />
-                    <img className="fa-svg-icon" src={copied} alt="arrow icon" />
                   </div>
                   <input placeholder="0.0" className="convertInput"></input>
                 </div>
@@ -137,15 +138,22 @@ export function Limit() {
                         fill="#1fc7d4"
                         style={{ height: "1.3em", width: "1.3em" }}
                         onMouseLeave={() => setVisibile(false)}
+                        onClick={() => {
+                          switchText === false ? setSwitch(true) : setSwitch(false);
+                        }}
                       />
                     )}
                   </button>
                 </div>
                 <div className="input1Converter ">
                   <div className="fx-inline switchCryptoBtn">
-                    <img src={bunnyLogo} alt="history icon"></img>BTCB
+                    <img src={bunnyLogo} alt="history icon"></img>
+                    {switchText === false ? <p>BTCB</p> : <p>CAKE</p>}
                     <img className="fa-svg-icon" src={arrow} alt="arrow icon" />
-                    <img className="fa-svg-icon" src={copied} alt="arrow icon" />
+                    <MdContentCopy
+                      fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                      style={{ height: "1em", width: "1em" }}
+                    />
                   </div>
                   <input placeholder="0.0" className="convertInput"></input>
                 </div>
@@ -161,15 +169,17 @@ export function Limit() {
                 </div>
               </div>
               <ConnectWalletBtn type="fullButton button-aqg" action={() => setOpenModalWallet(true)} />
-              <p className="var-text-color">
-                Powered by <strong>Gelato</strong>
-              </p>
+              {theme === "theme-dark" ? (
+                <img src={poweredByGelatoWhite} alt="gelato icon" className="gelotoLogo"></img>
+              ) : (
+                <img src={poweredByGelato} alt="gelato icon" className="gelotoLogo"></img>
+              )}
             </div>
           </div>
           <div className="extBox-bunnyHelp">
             <div className="emptyDiv-helpBunny"></div>
             <div className="helpBunny">
-              <img src={helpBunny} alt="history icon"></img>
+              <img src={helpBunny} alt="bunnyHelp icon"></img>
             </div>
           </div>
         </section>

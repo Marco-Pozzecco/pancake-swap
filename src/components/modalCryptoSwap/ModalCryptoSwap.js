@@ -6,7 +6,7 @@ import aptos from "../../resources/home/navbar/aptos.png";
 import Ethereum from "../../resources/home/navbar/ethereum.png";
 import { SelectedOptionContext } from "../../context/SelectetOptionContext";
 
-export function ModalCryptoSwap(open, onClose) {
+export function ModalCryptoSwap({ open, onClose }) {
   const options = [
     {
       name: "BNB",
@@ -48,12 +48,6 @@ export function ModalCryptoSwap(open, onClose) {
   //const {setSelected} = useContext(SelectedOptionContext);
   if (!open) return null;
 
-  // const selected =  {
-  //   option: '',
-  //   setSelected: () => {}
-
-  // };
-
   return (
     <div
       className="modalCryptoSwap"
@@ -77,7 +71,7 @@ export function ModalCryptoSwap(open, onClose) {
           <p className="parag">Common tokens</p>
         </div>
         <div className="flex-switch">
-          <CryptoModalRadioButtons radioGroup={["BNB", "CAKE", "BUSD", "BTCB"]} />
+          <CryptoModalRadioButtons />
         </div>
         <div className="cryptoList">
           {options.map((option) => {

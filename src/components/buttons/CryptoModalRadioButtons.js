@@ -4,6 +4,12 @@ import bnblogo from "../../resources/swap/BNB-logo.png";
 
 export function CryptoModalRadioButtons(props) {
   const [i, setIndex] = useState(1);
+  const radioGroup = [
+    { name: "BNB", img: bnblogo },
+    { name: "CAKE", img: bnblogo },
+    { name: "BUSD", img: bnblogo },
+    { name: "BTCB", img: bnblogo },
+  ];
 
   const toggleTab = (i) => {
     setIndex(i);
@@ -15,9 +21,9 @@ export function CryptoModalRadioButtons(props) {
       {props.radioGroup.map((button, index) => {
         return (
           <div className={i === index ? "cryptoBtn cryptoBtn-active" : "cryptoBtn"}>
-            <img src={bnblogo} alt="" className="cryptologo" />
+            <img src={radioGroup.img} alt="" className="cryptologo" />
             <div key={index} onClick={() => toggleTab(index)}>
-              {button}{" "}
+              {(button = radioGroup.name)}{" "}
             </div>
           </div>
         );

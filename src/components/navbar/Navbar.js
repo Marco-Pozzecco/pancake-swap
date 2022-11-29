@@ -17,7 +17,6 @@ import { IoIosGlobe } from "react-icons/io";
 export function Navbar() {
   const [openModal, setOpenModal] = useState(false);
   const [openModalWallet, setOpenModalWallet] = useState(false);
-  //const [theme, setLogo] = useState(false);
 
   const { theme } = useContext(ThemeContext);
 
@@ -226,14 +225,31 @@ export function Navbar() {
           </section>
         </div>
       </nav>
-      <ModalConnectWallet open={openModalWallet} onClose={() => setOpenModalWallet(false)} />
-      <HpModalSettings open={openModal} onClose={() => setOpenModal(false)} />
+      <ModalConnectWallet
+        open={openModalWallet}
+        onClose={() => {
+          setOpenModalWallet(false);
+          document.body.style.overflow = "unset";
+        }}
+      />
+      <HpModalSettings
+        open={openModal}
+        onClose={() => {
+          setOpenModal(false);
+          document.body.style.overflow = "unset";
+        }}
+      />
 
       <div
-        className={openModal === true || openModalWallet === true ? "overlay overlay-active" : "overlay"}
+        className={
+          (openModal === true || openModalWallet === true) && (document.body.style.overflow = "hidden")
+            ? "overlay overlay-active"
+            : "overlay"
+        }
         onClick={() => {
           setOpenModal(false);
           setOpenModalWallet(false);
+          document.body.style.overflow = "unset";
         }}></div>
     </div>
   );
