@@ -14,6 +14,7 @@ export function GetYourTickets() {
           </div>
         </div>
 
+        {/* CREARE QUESTA CARD COME COMPONENTE ESTERNO E IMPORTARLO */}
         <div className="gyt-body">
           <div className="gyt-body-sc">
             <div className="gytb-header">
@@ -43,6 +44,8 @@ export function GetYourTickets() {
             <div className="gytb-footer">
               <button>PACEHOLDER DETAILS</button>
             </div>
+
+            {/* ------------------- */}
           </div>
         </div>
       </div>
