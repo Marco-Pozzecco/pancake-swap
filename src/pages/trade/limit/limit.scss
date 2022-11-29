@@ -11,392 +11,393 @@ $theme-dark: map.set($theme-dark, "limit-bg", $dark-gradientBubblegum);
 $theme-dark: map.set($theme-dark, "tab-bg", $deActive-tab-dk);
 $theme-dark: map.set($theme-dark, "disable-text", $colors-textDisabled-dk);
 
-
 $theme-light: map.set($theme-light, "limit-bg", $colors-gradientBubblegum);
 $theme-light: map.set($theme-light, "tab-bg", $deActive-tab);
 $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
 
-
-
 .theme-dark {
-    --limit-bg: #{map.get($theme-dark ,"limit-bg")};
-    --tab-bg: #{map.get($theme-dark , "tab-bg")};
-    --disable-text: #{map.get($theme-dark , "disable-text")};
+  --limit-bg: #{map.get($theme-dark, "limit-bg")};
+  --tab-bg: #{map.get($theme-dark, "tab-bg")};
+  --disable-text: #{map.get($theme-dark, "disable-text")};
 }
 
 .theme-light {
-    --limit-bg: #{map.get($theme-light , "limit-bg")};
-    --tab-bg: #{map.get($theme-light , "tab-bg")};
-    --disable-text: #{map.get($theme-light , "disable-text")};
+  --limit-bg: #{map.get($theme-light, "limit-bg")};
+  --tab-bg: #{map.get($theme-light, "tab-bg")};
+  --disable-text: #{map.get($theme-light, "disable-text")};
 }
 
 .body-limit {
-   
+  .limit-external-box {
+    background-color: var(--limit-bg);
+    background-image: var(--limit-bg);
 
-    .limit-external-box {
-        background-color: var(--limit-bg);
-        background-image: var(--limit-bg);
+    padding-bottom: 10px;
+    //@include mq("desktop");
+    width: 100%;
+    height: auto;
+    display: flex;
 
-        padding-bottom: 10px;
-        //@include mq("desktop");
-        width: 100%;
-        height: auto;
+    .col-1 {
+      //background-color: aliceblue;
+      //height: 100vh;
+      flex: 60%;
+      padding: 2%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: end;
+
+      .fakeGraph {
+        height: 500px;
+        width: 680px;
+        border: 1px solid $modal-bar;
+        border-radius: 16px;
+        margin-bottom: 46px;
+      }
+
+      .col1-btm-page {
+        max-width: 680px;
+        //background-color: aqua;
         display: flex;
+        justify-content: center;
 
+        .col1-bottom-card {
+          //background-color: var(--text-color-modal);
+          //background-color: aliceblue;
+          max-width: 680px;
+          height: 300px;
+          border-radius: 16px;
+          margin-bottom: 24px;
+          display: flex;
+          flex-direction: column;
 
-        .col-1 {
-            //background-color: aliceblue;
-            //height: 100vh;
-            flex: 60%;
-            padding: 2%;
+          .bloc-tabs-bottom-card {
+            display: flex;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            background-color: var(--tab-bg);
+            z-index: 1;
+
+            //cursor: pointer;
+
+            .tabs2 {
+              width: 100%;
+              padding: 0px 24px;
+              height: 48px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              background-color: var(--tab-bg);
+              color: var(--icon-text-color);
+              border-top-right-radius: 16px;
+              border-top-left-radius: 16px;
+              z-index: 98;
+
+              &:hover {
+                opacity: 0.3;
+                //background-color: var(--hover-nav-ul);
+              }
+            }
+
+            .active-tabs {
+              background-color: var(--popup-bg);
+              color: var(--text-color);
+              border-top-left-radius: 16px;
+              z-index: 98;
+              //border-top-right-radius: 16px;
+            }
+          }
+
+          .container-bottom-card {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            align-items: end;
+            max-width: 680px;
+            height: 250px;
+            margin: 0px auto 0;
+            background-color: var(--popup-bg);
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
 
-            .fakeGraph {
-                height: 500px;
-                width: 680px;
-                border: 1px solid $modal-bar;
-                border-radius: 16px;
-                margin-bottom: 46px;
+            .table {
+              width: inherit;
+
+              .th-table {
+                padding: 16px;
+                color: var(--icon-text-color);
+                border-bottom: 1px solid var(--dropdown-line);
+              }
             }
 
-            .col1-btm-page {
-                max-width: 680px;
-                //background-color: aqua;
-                display: flex;
-                justify-content: center;
-
-                .col1-bottom-card {
-                    //background-color: var(--text-color-modal);
-                    //background-color: aliceblue;
-                    max-width: 680px;
-                    height: 300px;
-                    border-radius: 16px;
-                    margin-bottom: 24px;
-                    display: flex;
-                    flex-direction: column;
-
-                    .bloc-tabs-bottom-card {
-                        display: flex;
-                        border-top-left-radius: 16px;
-                        border-top-right-radius: 16px;
-                        background-color: var(--tab-bg);
-                        z-index: 1;
-
-                        //cursor: pointer;
-
-                        .tabs2 {
-                            width: 100%;
-                            padding: 0px 24px;
-                            height: 48px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            cursor: pointer;
-                            background-color: var(--tab-bg);
-                            color: var(--icon-text-color);
-                            border-top-right-radius: 16px;
-                            border-top-left-radius: 16px;
-                            z-index: 98;
-
-                            &:hover {
-                                opacity: 0.3;
-                                //background-color: var(--hover-nav-ul);
-                            }
-
-                        }
-
-                        .active-tabs {
-                            background-color: var(--popup-bg);
-                            color: var(--text-color);
-                            border-top-left-radius: 16px;
-                            z-index: 98;
-                            //border-top-right-radius: 16px;
-                        }
-                    }
-
-                    .container-bottom-card {
-                        display: flex;
-                        flex-direction: column;
-                        max-width: 680px;
-                        height: 250px;
-                        margin: 0px auto 0;
-                        background-color: var(--popup-bg);
-                        border-bottom-left-radius: 16px;
-                        border-bottom-right-radius: 16px;
-
-                        .table {
-                            width: inherit;
-
-                            .th-table {
-                                padding: 16px;
-                                color: var(--icon-text-color);
-                                border-bottom: 1px solid var(--dropdown-line);
-                            }
-                        }
-
-                        .content-bottom-card {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            flex-direction: column;
-                            //width: auto;
-                            margin-top: 20px;
-
-                        }
-
-                        .switchTxt {
-                            display: none;
-                            color: var(--disable-text);
-                        }
-
-                        .active-switchImg {
-                            display: block;
-                            color: var(--disable-text);
-                        }
-
-                        .card-bottom-row {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            color: var(--text-color);
-
-                        }
-                    }
-                }
+            .content-bottom-card {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              //width: auto;
+              margin-top: 20px;
             }
 
+            .switchTxt {
+              display: none;
+              color: var(--disable-text);
+            }
+
+            .active-switchImg {
+              display: block;
+              color: var(--disable-text);
+            }
+
+            .card-bottom-row {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: var(--text-color);
+            }
+          }
         }
-
-        .col-2 {
-            //background-color: aqua;
-            flex: 40%;
-            padding: 2% 2% 0% 2%;
-
-            .ConverterCard {
-                width: 325px;
-                height: 600px;
-                background-color: var(--popup-bg);
-                border-radius: 30px;
-                //padding: 0px 40px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-
-                .headerCard {
-                    padding: 24px;
-                    @include flex(column, center, center);
-                    border-bottom: 1px solid var(--dropdown-line);
-                    text-align: center;
-
-                    .headerRow {
-                        //background-color: aliceblue;
-                        width: 90%;
-                        @include flex(row, space-between, center);
-
-                        .header {
-                            color: var(--text-color);
-                            margin-bottom: 10px;
-                        }
-                    }
-
-                    .pg-tx {
-                        color: var(--icon-text-color);
-                        font-size: 12px;
-                    }
-                }
-
-                .ext-bottomCard {
-                    display: flex;
-                    flex-direction: column;
-                    padding: 1rem;
-                    justify-content: space-between;
-                    align-items: center;
-                    //background-color: red;
-                    width: 100%;
-                    height: 100%;
-
-                    .bottomCard {
-                        display: grid;
-                        row-gap: 8px;
-                        height: 100%;
-                        width: 100%;
-                        //background-color: yellow;
-
-                        .input1Converter {
-                            width: 100%;
-
-                            .switchCryptoBtn {
-                                padding: 2%;
-                                width: 40%;
-                                color: var(--text-color);
-
-                                //background-color: aliceblue;
-                                * {
-                                    margin-right: 8px;
-                                }
-                            }
-
-
-                            .convertInput {
-                                border-radius: 16px;
-                                height: 55px;
-                                width: 100%;
-                                padding: 3%;
-                                text-align: end;
-                                border: none;
-                                background-color: var(--tab-bg);
-                            }
-                        }
-
-                        .arrrowBtn {
-                            width: 32px;
-                            box-shadow: rgb(0 0 0 / 10%) 0px -2px 0px inset;
-                            align-items: center;
-                            border: 0px;
-                            border-radius: 16px;
-                            cursor: pointer;
-                            display: inline-flex;
-                            font-family: inherit;
-                            font-size: 16px;
-                            font-weight: 600;
-                            -webkit-box-pack: center;
-                            justify-content: center;
-                            letter-spacing: 0.03em;
-                            line-height: 1;
-                            opacity: 1;
-                            outline: 0px;
-                            transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
-                            height: 32px;
-                        }
-
-                        .fx-inline {
-                            @include flex(row, flex-start);
-                        }
-
-                        .emptyDiv {
-                            border-radius: 20px;
-                            height: 45px;
-                            width: 100%;
-                            padding: 3%;
-                            background-color: aliceblue;
-                            border: 1px solid $modal-bar;
-                        }
-
-                        .rowAfterEmptyDiv {
-                            display: flex;
-                            justify-content: flex-end;
-                            color: var(--text-color);
-
-                            * {
-                                margin-left: 6px;
-                            }
-                        }
-                    }
-
-                    .button-aqg {
-                        width: 100%;
-                        //height: 32px;
-                        margin: 0px 0px 10px 0px;
-                        //padding: 0px 16px;
-                        z-index: 1;
-                    }
-
-                    .var-text-color {
-                        color: var(--text-color);
-                    }
-                }
-            }
-
-            .extBox-bunnyHelp {
-                display: flex;
-                justify-content: space-between;
-                flex-direction: column;
-
-                .emptyDiv-helpBunny {
-                    display: flex;
-                    flex-grow: 1;
-                    height: 200px;
-                    vertical-align: baseline;
-                }
-
-                .helpBunny {
-                    display: flex;
-                    flex-grow: 0;
-                    align-items: center;
-                    justify-content: end;
-                    width: 370px;
-                    height: 100px;
-
-                    img {
-                        max-height: 108px;
-                        max-width: 160px;
-                        //position: relative;
-                        width: 100%;
-                    }
-                }
-            }
-
-
-        }
-
+      }
     }
 
+    .col-2 {
+      //background-color: aqua;
+      flex: 40%;
+      padding: 2% 2% 0% 2%;
+
+      .ConverterCard {
+        width: 325px;
+        height: 600px;
+        background-color: var(--popup-bg);
+        border-radius: 30px;
+        //padding: 0px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .headerCard {
+          padding: 24px;
+          @include flex(column, center, center);
+          border-bottom: 1px solid var(--dropdown-line);
+          text-align: center;
+
+          .headerRow {
+            //background-color: aliceblue;
+            width: 90%;
+            @include flex(row, space-between, center);
+            * {
+              cursor: pointer;
+              z-index: 97;
+            }
+
+            .header {
+              color: var(--text-color);
+              margin-bottom: 10px;
+            }
+          }
+
+          .pg-tx {
+            color: var(--icon-text-color);
+            font-size: 12px;
+          }
+        }
+
+        .ext-bottomCard {
+          display: flex;
+          flex-direction: column;
+          padding: 1rem;
+          justify-content: space-between;
+          align-items: center;
+          //background-color: red;
+          width: 100%;
+          height: 100%;
+
+          .bottomCard {
+            display: grid;
+            row-gap: 8px;
+            height: 100%;
+            width: 100%;
+            //background-color: yellow;
+
+            .input1Converter {
+              width: 100%;
+              z-index: 97;
+
+              .switchCryptoBtn {
+                padding: 2%;
+                width: 40%;
+                color: var(--text-color);
+                z-index: 97;
+
+                //background-color: aliceblue;
+                * {
+                  margin-right: 8px;
+                }
+              }
+
+              .convertInput {
+                border-radius: 16px;
+                height: 55px;
+                width: 100%;
+                padding: 3%;
+                text-align: end;
+                border: none;
+                background-color: var(--tab-bg);
+                z-index: 97;
+              }
+            }
+            .textAccent {
+              color: var(--text-accent);
+              margin-right: 10px;
+            }
+            .smallBtnText {
+              //background-color: var(--text-accent-alt);
+              border-radius: 12px;
+              border: 1px solid var(--disable-text);
+              padding: 0px 5px;
+              color: var(--disable-text);
+              font-size: 14px;
+            }
+
+            .arrrowBtn {
+              width: 32px;
+              box-shadow: rgb(0 0 0 / 10%) 0px -2px 0px inset;
+              background-color: var(--tab-bg);
+              align-items: center;
+              border: 0px;
+              border-radius: 16px;
+              cursor: pointer;
+              display: inline-flex;
+              font-family: inherit;
+              font-size: 16px;
+              font-weight: 600;
+              -webkit-box-pack: center;
+              justify-content: center;
+              letter-spacing: 0.03em;
+              line-height: 1;
+              opacity: 1;
+              outline: 0px;
+              transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+              height: 32px;
+              z-index: 97;
+            }
+
+            .fx-inline {
+              @include flex(row, flex-start);
+            }
+
+            .emptyDiv {
+              border-radius: 20px;
+              height: 45px;
+              width: 100%;
+              padding: 3%;
+              border: 1px solid var(--colors-inputSecondary);
+              background-color: var(--background-disabled);
+              cursor: not-allowed;
+              z-index: 97;
+            }
+
+            .rowAfterEmptyDiv {
+              display: flex;
+              justify-content: flex-end;
+
+              * {
+                margin-left: 6px;
+              }
+            }
+          }
+
+          .button-aqg {
+            width: 100%;
+            //height: 32px;
+            margin: 0px 0px 14px 0px;
+            //padding: 0px 16px;
+            z-index: 1;
+          }
+
+          .var-text-color {
+            color: var(--text-color);
+          }
+          .gelotoLogo {
+            height: 22px;
+          }
+        }
+      }
+
+      .extBox-bunnyHelp {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .emptyDiv-helpBunny {
+          display: flex;
+          flex-grow: 1;
+          height: 200px;
+          vertical-align: baseline;
+        }
+
+        .helpBunny {
+          display: flex;
+          flex-grow: 0;
+          align-items: center;
+          justify-content: end;
+          width: 370px;
+          height: 100px;
+
+          img {
+            max-height: 108px;
+            max-width: 160px;
+            //position: relative;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 
 @include mq("tablet", "desktop") {
-    .col1-btm-page {
-        width: 680px;
-    }
+  .col1-btm-page {
+    width: 680px;
+  }
 
-    .col1-bottom-card {
-        width: 680px;
+  .col1-bottom-card {
+    width: 680px;
+  }
 
-
-    }
-
-    .content-bottom-card {
-        width: 680px;
-
-    }
-
+  .content-bottom-card {
+    width: 680px;
+  }
 }
 
 @include mq("phone", "phablet") {
-    .limit-external-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
+  .limit-external-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
 
-        .col1-btm-page {
-            width: 350px;
+    .col1-btm-page {
+      width: 350px;
 
-            .col1-bottom-card {
-                flex: 2;
-                width: 350px;
+      .col1-bottom-card {
+        flex: 2;
+        width: 350px;
 
-                .content-bottom-card {
-                    width: 350px;
-                }
-
-            }
-
-            .col-2 {
-                flex: 1;
-                display: contents;
-
-            }
+        .content-bottom-card {
+          width: 350px;
         }
+      }
 
-        .fakeGraph {
-            display: none;
-        }
-
-
+      .col-2 {
+        flex: 1;
+        display: contents;
+      }
     }
 
+    .fakeGraph {
+      display: none;
+    }
+  }
 }

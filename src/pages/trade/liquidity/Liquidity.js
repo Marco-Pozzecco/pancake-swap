@@ -12,6 +12,7 @@ import { ThemeContext } from "../../../context/ThemeContext";
 import { FaCog } from "react-icons/fa";
 import { RiHistoryLine } from "react-icons/ri";
 import { RiAddFill } from "react-icons/ri";
+import { BiLeftArrowAlt } from "react-icons/bi";
 
 export function Liquidity() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
@@ -32,11 +33,20 @@ export function Liquidity() {
           <div>
             <div className="liquidityCard ">
               <div className="rowCard">
-                <div>
-                  {show === 2 && (
-                    <img src={leftArrow} alt="arrow icon" onClick={() => toggleTab(1)} className="leftArrow"></img>
-                  )}
-                </div>
+                {show === 2 && (
+                  <img
+                    src={leftArrow}
+                    alt="arrow icon"
+                    onClick={() => {
+                      toggleTab(1);
+                    }}
+                    className="leftArrow"></img>
+                  //   <BiLeftArrowAlt
+                  //     fillRule={theme === "theme-dark" ? "white" : "black"}
+                  //     style={{ height: "1.5em", width: "1.5em" }}
+                  //   />
+                )}
+
                 <div className="headerCard">
                   <div className="headerRow">
                     {show === 1 ? (

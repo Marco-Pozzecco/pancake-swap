@@ -1,0 +1,46 @@
+@import "../../abstracts/mixins";
+@import "../../abstracts/colors";
+
+
+.checkbx {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: var(--label-toggle-bg); //var(--label-toggle-bg)
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    position: relative;
+    height: 32px;
+    width: 56px;
+    transform: scale(1);
+}
+
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    height: 26px;
+    width: 26px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+    z-index: 1;
+    // &:hover{
+    //     border: 2px solid rgb(118, 69, 217);
+
+    // }
+}
+
+.checkbx:checked+.label{
+    background-color: rgb(60, 207, 170);
+    .ball {
+        transform: translateX(24px);
+    }
+}
