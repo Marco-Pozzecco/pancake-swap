@@ -1,5 +1,242 @@
+@import "../../abstracts/mixins";
+@import "../../abstracts/colors";
+@import "../../abstracts/animations";
+
 .dalarniaWrapper {
-    h1 {
-        color: white;
+    padding-top: 0px;
+    background-color: rgb(25, 19, 53);
+    overflow: hidden;
+    position: relative;
+
+    .dalarniaBottomSvg {
+        background-size: cover;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        height: 242px;
+        background-color: yellow;
+        background-image: url("../../resources/win/trading-competition/mod-mesh.f35f83b0.png");
+    }
+
+    .dalarniaContentsWrapper {
+        position: relative;
+        padding: 28px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1050px;
+        height: 570px;
+        overflow: hidden;
+
+
+        .sectionBox {
+            margin-bottom: 50px;
+
+            .dalarniaMinerBunny {
+                position: absolute;
+                z-index: 2;
+                width: 525px;
+                right: -10px;
+                bottom: -20px;
+            }
+        }
+
+        .dalarniaContents {
+
+
+            .dalarniaTextWrapper {
+                color: white;
+                margin-left: -25px;
+
+                .dalarniaBlueShadow {
+                    position: absolute;
+                    top: 35px;
+                    margin-left: -140px;
+                    width: 599px;
+                    height: 184px;
+                    background-image: url("../../resources/win/trading-competition/mod-text-light.0459781b.png");
+                }
+
+                .dalarniaMinesTextWrap {
+                    position: relative;
+                }
+
+                .dalarniaDate {
+                    color: rgb(255, 213, 133);
+                    font-weight: 600;
+                    line-height: 1.5;
+                    margin-bottom: 16px;
+                    font-size: 16px;
+                }
+
+                .minesOfDalarnia {
+                    z-index: 1;
+                }
+
+                .dalarniaTradingCompetition {
+                    margin-top: 10px;
+                    margin-bottom: 5px;
+                    position: relative;
+                    top: -10px;
+                    font-family: Kanit;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 45px;
+                    line-height: 100%;
+                    display: flex;
+                    -webkit-box-align: center;
+                    align-items: center;
+                    letter-spacing: 0.06em;
+                    text-transform: uppercase;
+                    font-feature-settings: "liga" 0;
+                    color: rgb(255, 255, 255);
+                    text-shadow: rgb(19 16 29) 0px 5px 0px;
+                }
+
+                .dalarniaPrizesTokens {
+                    width: 410px;
+                    font-size: 40px;
+                    line-height: 110%;
+                    color: rgb(106, 225, 197);
+                    text-shadow: rgb(0 255 209 / 22%) 0px 0px 10px, rgb(0 56 255 / 25%) 0px 0px 8px, rgb(0 255 71 / 52%) 0px 0px 18px;
+                }
+
+                .dalarniaCompeteText {
+                    margin-top: 16px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 1.1;
+                    text-shadow: rgb(255 255 255 / 25%) 0px 0px 8px, rgb(161 101 194 / 88%) 0px 0px 18px, rgb(161 0 255 / 55%) 0px 0px 49px;
+                }
+            }
+
+            .dalarniaTimeBanner {
+                position: absolute;
+                width: fit-content;
+                height: 200px;
+                top: 0;
+                right: 20px;
+                background: linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+                border: 1px solid rgb(118, 69, 217);
+                border-radius: 0px 0px 24px 24px;
+                justify-content: space-around;
+                display: flex;
+                flex-direction: column;
+
+                .dalarniaTimeBannerUpperSection {
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    & svg {
+                        width: 64px;
+                        height: 64px;
+                    }
+                }
+
+                .dalarniaTimeBannerLowerSection {
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    & h3 {
+                        font-size: 24px;
+                        color: rgb(254, 194, 24);
+                        margin-bottom: 20px;
+                        margin-top: -10px;
+                        font-weight: 100;
+                    }
+
+                    .dalarniaTimeBannerLowerSectionIcons {
+                        display: flex;
+                        margin-bottom: 15px;
+                        width: 100%;
+
+                        .dalarniaIcon {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+
+                            & svg {
+                                fill: #f4eeff;
+                            }
+
+                            & h4 {
+                                margin-top: 2px;
+                                color: #b8add2;
+                                font-weight: 600;
+                                font-size: 12px
+                            }
+                        }
+
+                        .dalarniaLines {
+                            margin: 12px -15px 0px;
+                            width: 100px;
+                            background-color: #b8add2;
+                            height: 2px;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+
+            }
+
+            .dalarniaDisc1 {
+                position: absolute;
+                left: 25%;
+                top: -3px;
+
+                & img {
+                    width: 100px;
+                }
+            }
+
+            .dalarniaDisc2 {
+                position: absolute;
+                top: 50px;
+                right: 25%;
+
+                & img {
+                    width: 90px;
+                }
+            }
+        }
+    }
+
+    @include mq("tablet") {
+        .dalarniaContentsWrapper {
+            background-color: purple;
+        }
+    }
+
+    @include mq("tablet-small", "tablet") {
+        .dalarniaContentsWrapper {
+            background-color: blue;
+        }
+    }
+
+    @include mq("phablet", "tablet-small") {
+        .dalarniaContentsWrapper {
+            background-color: greenyellow;
+        }
+    }
+
+    @include mq("phone-wide", "phablet") {
+        .dalarniaContentsWrapper {
+            background-color: yellow;
+        }
+    }
+
+    @include mq("phone", "phone-wide") {
+        .dalarniaContentsWrapper {
+            background-color: red;
+        }
     }
 }
