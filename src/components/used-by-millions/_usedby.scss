@@ -2,7 +2,7 @@
   height: 50rem;
   width: 100%;
   padding-top: 100px;
-  background: linear-gradient(180deg, #09070c 22%, #201335 100%);
+  background: var(--gradient-usedby);
 
   .usedby_usedtop {
     width: 100%;
@@ -44,10 +44,10 @@
     .usedby_card {
       width: 280px;
       height: 300px;
-      background-color: var(--card-color);
+      background-color: var(--colors-usedbt-card);
       border-radius: 30px;
       padding: 30px;
-      border-bottom: 5px solid var(--card-border);
+      border-bottom: 5px solid var(--colors-cardBorder);
       flex-wrap: wrap;
 
       .usedby_card_top,

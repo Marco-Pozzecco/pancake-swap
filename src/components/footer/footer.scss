@@ -141,9 +141,9 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
 
     display: flex;
     flex-direction: row;
-    gap: 2%;
-    margin-top: 3%;
-    margin-left: 22.25%;
+    gap: 20px;
+    margin-top: 20px;
+    margin-left: 22%;
     align-self: start;
     width: 60%;
     border-bottom: #342f3b solid 0.5px;
@@ -151,9 +151,8 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
 
   &-Latestbar {
     width: 90%;
-    height: 10px;
+    height: 100%;
     margin-left: 5.2%;
-    margin-top: 1.5%;
     display: flex;
     justify-content: center;
     align-content: center;
