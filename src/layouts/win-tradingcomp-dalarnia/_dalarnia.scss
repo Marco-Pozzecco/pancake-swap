@@ -36,7 +36,7 @@
                 position: absolute;
                 z-index: 2;
                 width: 525px;
-                right: -10px;
+                right: 30px;
                 bottom: -20px;
             }
         }
@@ -86,7 +86,7 @@
                     display: flex;
                     -webkit-box-align: center;
                     align-items: center;
-                    letter-spacing: 0.06em;
+                    letter-spacing: 0.10em;
                     text-transform: uppercase;
                     font-feature-settings: "liga" 0;
                     color: rgb(255, 255, 255);
@@ -165,7 +165,7 @@
                             flex-direction: column;
 
                             & svg {
-                                fill: #f4eeff;
+                                fill: #b8add2;
                             }
 
                             & h4 {
@@ -173,6 +173,10 @@
                                 color: #b8add2;
                                 font-weight: 600;
                                 font-size: 12px
+                            }
+
+                            .dalarniaTextEnd {
+                                color: #53dee9;
                             }
                         }
 

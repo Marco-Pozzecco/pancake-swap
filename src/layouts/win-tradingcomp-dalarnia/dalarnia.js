@@ -8,7 +8,6 @@ export function Dalarnia() {
   return (
     <div className="dalarniaWrapper">
         <div className="dalarniaBottomSvg"></div>
-        
       <div className="dalarniaContentsWrapper">
         <div className="sectionBox">
           
@@ -176,7 +175,7 @@ export function Dalarnia() {
                         fill="#633001"
                       ></path>
                     </svg>
-                    <h4>END</h4>
+                    <h4 className="dalarniaTextEnd">END</h4>
                   </div>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Subnav from "../../../components/subnav/Subnav";
 import { Dalarnia } from "../../../layouts/win-tradingcomp-dalarnia/dalarnia";
+import VioletSection from "../../../layouts/win-tradingcomp-violetSecion/VioletSection";
 
 export function TradingCompetition() {
     return (
@@ -12,6 +13,7 @@ export function TradingCompetition() {
                 ]}
             />
             <Dalarnia/>
+            <VioletSection/>
         </div>
     );
 }
