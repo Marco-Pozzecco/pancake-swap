@@ -220,7 +220,7 @@ export function Navbar() {
 
             <DropdownCrypto />
             <div>
-              <ConnectWalletBtn type="fullButton button-aquagreen" action={() => setOpenModalWallet(true)} />
+              <ConnectWalletBtn className="" type="fullButton button-aquagreen" action={() => setOpenModalWallet(true)} />
             </div>
           </section>
         </div>

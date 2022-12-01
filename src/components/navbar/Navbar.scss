@@ -318,8 +318,8 @@ nav {
         }
 
         .mobile-icon,
-        .logoBunny {
-          display: inline;
+        .pancakeicon {
+          display: none;
         }
 
         #main-logo {
@@ -414,4 +414,8 @@ nav {
       }
     }
   }
+}
+
+@media screen and (max-width: 480px) {
+  
 }
