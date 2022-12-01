@@ -88,12 +88,7 @@ export function Footer() {
                             </div>
                             <div id="firstbar-left" className="Container-Footer-Latestbar-Left">
                                 <div>
-                                    <input type="checkbox" className="checkbx3" id="chk3" />
-                                    <label className="label3" for="chk3">
-                                        <i className="fa-regular fa-moon"></i>
-                                        <i className="fas fa-sun"></i>
-                                        <div className="ball3 circle-toggle"></div>
-                                    </label>
+                                    <ToggleTheme />
                                 </div>
                                 <div className="language">
                                     <svg
@@ -144,69 +139,67 @@ export function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="Container-Footer-Wrapper">
-                        <div className="Container-Footer-Sub">
-                            <div className="Container-Footer-Sub-Info">
-                                <ul className="Container-Footer-Sub-Info-Ul">
-                                    <li className="Container-Footer-Sub-Info-Ul-Titles">ABOUT</li>
-                                    <li className="Container-Footer-Sub-Info-Ul-Li">
-                                        <a href="/" className="Container-Footer-Sub-Info-Ul-Li-Contact">Contact</a>
-                                    </li>
-                                    <li className="Container-Footer-Sub-Info-Ul-Li">
-                                        <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Brand</a>
-                                    </li>
-                                    <li className="Container-Footer-Sub-Info-Ul-Li">
-                                        <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Blog</a>
-                                    </li>
-                                    <li className="Container-Footer-Sub-Info-Ul-Li">
-                                        <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Community</a>
-                                    </li>
-                                    <li className="Container-Footer-Sub-Info-Ul-Li">
-                                        <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Litepaper</a>
-                                    </li>
-                                    <hr className="Container-Footer-Sub-Info-Ul-hr1" />
-                                    <li className="Container-Footer-Sub-Info-Ul-Li">
-                                        <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Online Store</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="Container-Footer-Sub-Info">
-                                <ul className="Container-Footer-Sub-Info-Ul">
-                                    <li className="Container-Footer-Sub-Info-Ul-Titles">HELP</li>
-                                    <li className="Container-Footer-Sub-Info-Ul-Li">
-                                        <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Customer Support</a>
-                                    </li>
-                                    <li className="Container-Footer-Sub-Info-Ul-Li">
-                                        <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Trobuleshooting</a>
-                                    </li>
-                                    <li className="Container-Footer-Sub-Info-Ul-Li">
-                                        <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Guides</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="Container-Footer-Sub-Info">
-                                <ul className="Container-Footer-Sub-Info-Ul">
-                                    <li className="Container-Footer-Sub-Info-Ul-Titles">DEVELOPERS</li>
-                                    <li className="Container-Footer-Sub-Info-Ul-Li">
-                                        <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Github</a>
-                                    </li>
-                                    <li className="Container-Footer-Sub-Info-Ul-Li">
-                                        <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Documentation</a>
-                                    </li>
-                                    <li className="Container-Footer-Sub-Info-Ul-Li">
-                                        <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Bug Bounty</a>
-                                    </li>
-                                    <li className="Container-Footer-Sub-Info-Ul-Li">
-                                        <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Audits</a>
-                                    </li>
-                                    <li className="Container-Footer-Sub-Info-Ul-Li">
-                                        <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Careers</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="Container-Footer-Sub-PancakeSwapLogo">
-                                <img src={fpancakelogo} alt="" />
-                            </div>
+                    <div className="Container-Footer-Sub">
+                        <div className="Container-Footer-Sub-Info">
+                            <ul className="Container-Footer-Sub-Info-Ul">
+                                <li className="Container-Footer-Sub-Info-Ul-Titles">ABOUT</li>
+                                <li className="Container-Footer-Sub-Info-Ul-Li">
+                                    <a href="/" className="Container-Footer-Sub-Info-Ul-Li-Contact">Contact</a>
+                                </li>
+                                <li className="Container-Footer-Sub-Info-Ul-Li">
+                                    <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Brand</a>
+                                </li>
+                                <li className="Container-Footer-Sub-Info-Ul-Li">
+                                    <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Blog</a>
+                                </li>
+                                <li className="Container-Footer-Sub-Info-Ul-Li">
+                                    <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Community</a>
+                                </li>
+                                <li className="Container-Footer-Sub-Info-Ul-Li">
+                                    <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Litepaper</a>
+                                </li>
+                                <hr className="Container-Footer-Sub-Info-Ul-hr1" />
+                                <li className="Container-Footer-Sub-Info-Ul-Li">
+                                    <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Online Store</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="Container-Footer-Sub-Info">
+                            <ul className="Container-Footer-Sub-Info-Ul">
+                                <li className="Container-Footer-Sub-Info-Ul-Titles">HELP</li>
+                                <li className="Container-Footer-Sub-Info-Ul-Li">
+                                    <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Customer Support</a>
+                                </li>
+                                <li className="Container-Footer-Sub-Info-Ul-Li">
+                                    <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Trobuleshooting</a>
+                                </li>
+                                <li className="Container-Footer-Sub-Info-Ul-Li">
+                                    <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Guides</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="Container-Footer-Sub-Info">
+                            <ul className="Container-Footer-Sub-Info-Ul">
+                                <li className="Container-Footer-Sub-Info-Ul-Titles">DEVELOPERS</li>
+                                <li className="Container-Footer-Sub-Info-Ul-Li">
+                                    <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Github</a>
+                                </li>
+                                <li className="Container-Footer-Sub-Info-Ul-Li">
+                                    <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Documentation</a>
+                                </li>
+                                <li className="Container-Footer-Sub-Info-Ul-Li">
+                                    <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Bug Bounty</a>
+                                </li>
+                                <li className="Container-Footer-Sub-Info-Ul-Li">
+                                    <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Audits</a>
+                                </li>
+                                <li className="Container-Footer-Sub-Info-Ul-Li">
+                                    <a href="/" className="Container-Footer-Sub-Info-Ul-Li-a">Careers</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="Container-Footer-Sub-PancakeSwapLogo">
+                            <img src={fpancakelogo} alt="" />
                         </div>
                         <div className="Container-Footer-Icons">
                             <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-Twitter" src={Twitter} alt="" />
