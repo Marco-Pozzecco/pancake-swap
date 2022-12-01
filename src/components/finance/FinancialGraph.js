@@ -4,6 +4,8 @@ import { Button } from "../buttons/Button";
 import { PerpetualItem } from "../container/PerpetualItem";
 import { Graph } from "../graph/Graph";
 import { fetchModule } from "../../script/fetchModule";
+import { useExternalScript } from "../../hooks/useExternalScript";
+import { AdvancedChart } from "react-tradingview-embed";
 
 export function FinancialGraph() {
   const data = {};
@@ -16,7 +18,7 @@ export function FinancialGraph() {
   })
 
   return (
-    <PerpetualItem>
+    <PerpetualItem className="graph">
       <div className="graph-bar">
         <div className="graph-settings">
           <Button
@@ -44,48 +46,22 @@ export function FinancialGraph() {
         </div>
       </div>
       <div className="graph-body">
-        {/* <!-- TradingView Widget BEGIN --> */}
-        <div class="tradingview-widget-container">
-          <div id="tradingview_45930"></div>
-          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/CAKEBNB/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">CAKEBNB Chart</span></a> by TradingView</div>
-          <script type="text/javascript" src="https://s3.tradingview.com/tv.js">
-            { new TradingView.widget(
-              {
-              "autosize": true,
-              "symbol": "BINANCE:CAKEBNB",
-              "interval": "D",
-              "timezone": "Etc/UTC",
-              "theme": "dark",
-              "style": "1",
-              "locale": "en",
-              "toolbar_bg": "#f1f3f6",
-              "enable_publishing": false,
-              "withdateranges": true,
-              "hide_side_toolbar": false,
-              "allow_symbol_change": true,
-              "container_id": "tradingview_45930"
-              }
-              )
-            }
-          </script>
-        </div>
-        {/* <!-- TradingView Widget END --> */}
-        <Graph
-          id="financial-graph"
-          config={{
-            type: "bar",
-            data: {
-              labels: "Some day",
-              datasets: [
-                {
-                  label: "Acquisitions by year",
-                  data: data,
-                },
-              ],
-              options: {
-                responsive: true,
-              },
-            },
+        <AdvancedChart 
+          widgetProps={{
+            height: "100%",
+            autosize: true,
+            symbol: "BINANCE:CAKEBNB",
+            interval: "D",
+            timezone: "UTC+1",
+            theme: "dark",
+            style: "1",
+            locale: "en",
+            toolbar_bg: "#f1f3f6",
+            enable_publishing: false,
+            withdateranges: true,
+            hide_top_toolbar: true,
+            hide_side_toolbar: false,
+            allow_symbol_change: true
           }}
         />
       </div>

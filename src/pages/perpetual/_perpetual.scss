@@ -1,12 +1,13 @@
 @import "../../abstracts/theme";
 
+$graph-bar-height: 30px;
+
 body {
     background-color: var(--background-perpetual);
 }
 
 .perpetual-item {
     box-sizing: border-box;
-    padding: 20px;
     color: white;
     margin: 0px;
     min-width: 0px;
@@ -19,13 +20,29 @@ body {
     background-color: var(--background-perpetual-item);
 }
 
-.graph-bar {
+.graph {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    .graph-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: $graph-bar-height;
+        padding: 5px 20px;
 
-.graph-body {
-    width: 100%;
-    height: 90%;
+        .generalButtonRules {
+            padding: 0;
+            margin: 5px;
+            font-size: 80%;
+            color: var(--background-perpetual);
+        }
+
+    }
+    
+    .graph-body {
+        overflow: hidden;
+    }
 }

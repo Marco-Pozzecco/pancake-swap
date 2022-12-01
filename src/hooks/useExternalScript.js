@@ -1,19 +1,16 @@
 import { useEffect } from "react";
 
-export function useExternalScript (url, head, scriptTag) {
-    
+export function useExternalScript (url) {
+
     useEffect(() => {
-        const headEl = document.querySelector(head);
+        const headEl = document.querySelector('head');
         const scriptEl = document.createElement('script');
+        
         scriptEl.setAttribute("src", url);
         headEl.appendChild(scriptEl);
 
-        if (scriptTag) {
-            headEl.appendChild(scriptTag);
-        }
-
         return () => {
-            document.removeChild(headEl);
+            document.removeChild(scriptEl);
         }
     }, [url]) 
 }
