@@ -51,4 +51,28 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+
+    padding: 5px 20px;
+    
+
+    .fis-menu {
+        display: flex;
+        flex-direction: row;
+        
+        .instrument-selector {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            margin-right: 10px;
+            border-right: 1px solid gray;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+
+            margin: 0 5px;
+        }
+    }
 }

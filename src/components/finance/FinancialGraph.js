@@ -14,6 +14,8 @@ export function FinancialGraph() {
     let data = fetcher.fetchHystoricalData(Math.round((Date.now() - 2629743000) / 1000), "bitcoin", "usd");
     console.log(data);
   })
+  // moment.unix(1454521239279/1000).format("DD MMM YYYY hh:mm a")
+  // closings.map(x => [x[0], moment.unix(parseInt(x[1]) / 1000).format("DD MM YYYY hh:mm:ss"))
 
   return (
     <PerpetualItem className="graph">
