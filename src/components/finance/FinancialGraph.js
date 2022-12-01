@@ -1,11 +1,9 @@
 import { useEffect } from "react";
 import { BiCaretDown, BiSliderAlt } from "react-icons/bi";
+import { AdvancedChart } from "react-tradingview-embed";
+import { fetchModule } from "../../script/fetchModule";
 import { Button } from "../buttons/Button";
 import { PerpetualItem } from "../container/PerpetualItem";
-import { Graph } from "../graph/Graph";
-import { fetchModule } from "../../script/fetchModule";
-import { useExternalScript } from "../../hooks/useExternalScript";
-import { AdvancedChart } from "react-tradingview-embed";
 
 export function FinancialGraph() {
   const data = {};
@@ -52,7 +50,7 @@ export function FinancialGraph() {
             autosize: true,
             symbol: "BINANCE:CAKEBNB",
             interval: "D",
-            timezone: "UTC+1",
+            timezone: "UTC",
             theme: "dark",
             style: "1",
             locale: "en",

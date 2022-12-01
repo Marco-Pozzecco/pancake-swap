@@ -46,3 +46,9 @@ body {
         overflow: hidden;
     }
 }
+
+.fis-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
