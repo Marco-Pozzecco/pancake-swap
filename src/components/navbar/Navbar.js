@@ -25,7 +25,7 @@ export function Navbar() {
       <nav>
         <div className="extern-box">
           <div className="flex">
-            <Link to="/">{theme === "theme-dark" ? <img alt="" src={logoWhite} /> : <img alt="" src={logo} />}</Link>
+            <Link className="PancakeLogo" to="/">{theme === "theme-dark" ? <img alt="" src={logoWhite} /> : <img alt="" src={logo} />}</Link>
 
             <NavLink to="/">
               <img src={logoBunny} alt="logo bunny" className="logoBunny"></img>

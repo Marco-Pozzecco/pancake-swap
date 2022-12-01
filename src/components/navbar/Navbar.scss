@@ -316,6 +316,12 @@ nav {
         .mini-logo {
           display: none;
         }
+        .logoBunny {
+          display: inline;
+        }
+        .PancakeLogo {
+          display: none;
+        }
 
         .mobile-icon,
         .pancakeicon {
@@ -414,8 +420,4 @@ nav {
       }
     }
   }
-}
-
-@media screen and (max-width: 480px) {
-  
 }
