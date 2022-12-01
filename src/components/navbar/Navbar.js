@@ -133,7 +133,7 @@ export function Navbar() {
             </ul>
           </div>
           <section className="flex">
-            <div style={{ padding: "10px" }}>
+            <div>
               <svg
                 viewBox="0 0 96 96"
                 width="24px"
