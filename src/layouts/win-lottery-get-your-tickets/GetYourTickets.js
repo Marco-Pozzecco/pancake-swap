@@ -7,11 +7,11 @@ export function GetYourTickets() {
       <div className="gyt-main-container">
         <div className="gyt-sub-main-container">
           <div className="gyt-header">
-            <h2>Get your tickets now!</h2>
+            <h2 className="gyt-h-title-a">Get your tickets now!</h2>
 
-            <div>
-              <span>PCD</span>
-              <span>until the draw</span>
+            <div className="countdown-placeholder">
+              <span>23h 15m</span>
+              <span className="gyt-h-title-b">until the draw</span>
             </div>
           </div>
 

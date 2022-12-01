@@ -9,7 +9,11 @@ import { HowToPlayWN } from "../win-lottery-how-to-play/HowToPlayWN";
 export function WinLottery() {
   return (
     <div className="win-lottery-main-container">
-      <InPrizeTicket />
+      <InPrizeTicket
+        ipt_title_a="The PancakeSwap Lottery"
+        ipt_amount_prize="$58,762"
+        ipt_title_b="in prizes!"
+      />
       <GetYourTickets />
       <ConnectYourWalletWN />
       <FinishedRoundWN />
