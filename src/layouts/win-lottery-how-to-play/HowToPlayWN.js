@@ -1,6 +1,7 @@
 import React from "react";
 import "./how-to-play-wn.scss";
 import { HowToPlayCard } from "./HowToPlayCard";
+import { StillGotQuestions } from "./StillGotQuestions";
 
 export function HowToPlayWN() {
   return (
@@ -173,8 +174,7 @@ export function HowToPlayWN() {
           <div className="htp-div-line"></div>
           {/* ----------------- */}
           <div className="htp-content htpc-5">
-            <div className="htpc-5-svg-box">CARD</div>
-            <div className="htpc-5-text">TESTO</div>
+            <StillGotQuestions />
           </div>
         </div>
       </div>

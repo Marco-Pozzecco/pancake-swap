@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Kanit, sans-serif;
+}
+
+.sgq-main-container {
+  //   background-color: rgba(76, 0, 130, 0.445);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .sgq-sub-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .sgqs-image {
+      width: 240px;
+      height: 170px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    .sgqs-titles {
+      width: 300px;
+      height: 86px;
+
+      .sgqs-title {
+        font-size: 20px;
+        margin: 0 0 16px;
+        color: rgb(244, 238, 255);
+      }
+      .sgqs-description {
+        color: rgb(224, 218, 234);
+        font-size: 16px;
+
+        & a {
+          color: rgb(31, 199, 212);
+        }
+      }
+    }
+  }
+}
