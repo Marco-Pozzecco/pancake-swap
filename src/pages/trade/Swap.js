@@ -1,19 +1,20 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
+
+//Coponents
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./swap.scss";
 import Subnav from "../../components/subnav/Subnav";
-//import doubleArrow from "../../resources/limit/doubleArrow.svg";
-import bunnyLogo from "../../resources/home/navbar/bunny-icon-round.svg";
-import attentionIcon from "../../resources/limit/attentionIcon.svg";
-import helpBunny from "../../resources/limit/help.png";
-import linkNewPage from "../../resources/limit/linkNewPage.svg";
-import bubble from "../../resources/limit/bubbleSwap.svg";
-import bubbleLight from "../../resources/limit/bubbleSwapLightTheme.svg";
-//import reload from "../../resources/limit/reload.svg";
+import { ModalSettingSwap } from "../../components/modalSettinSwap/ModalSettingSwap";
+import { ModalCryptoSwap } from "../../components/modalCryptoSwap/ModalCryptoSwap";
+import { SelectedOptionContext } from "../../context/SelectetOptionContext";
+import { Graph } from "../../components/graph/Graph";
+import { fetchModule } from "../../script/fetchModule";
 import ModalConnectWallet from "../../components/modal-connect-wallet/ModalConnectWallet";
 import { ConnectWalletBtn } from "../../components/buttons/ConnectWalletBtn";
 import { ThemeContext } from "../../context/ThemeContext";
+
+//icon
 import { FaCog } from "react-icons/fa";
 import { RiHistoryLine } from "react-icons/ri";
 import { FaChartBar } from "react-icons/fa";
@@ -21,12 +22,16 @@ import { MdContentCopy } from "react-icons/md";
 import { AiOutlineReload } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiSwitchVertical } from "react-icons/hi";
+import { HiOutlineSwitchHorizontal } from "react-icons/hi";
 import { BiDownArrowAlt } from "react-icons/bi";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { BiHide } from "react-icons/bi";
-import { ModalSettingSwap } from "../../components/modalSettinSwap/ModalSettingSwap";
-import { ModalCryptoSwap } from "../../components/modalCryptoSwap/ModalCryptoSwap";
-import { SelectedOptionContext } from "../../context/SelectetOptionContext";
+import bunnyLogo from "../../resources/home/navbar/bunny-icon-round.svg";
+import attentionIcon from "../../resources/limit/attentionIcon.svg";
+import helpBunny from "../../resources/limit/help.png";
+import linkNewPage from "../../resources/limit/linkNewPage.svg";
+import bubble from "../../resources/limit/bubbleSwap.svg";
+import bubbleLight from "../../resources/limit/bubbleSwapLightTheme.svg";
 
 export function Swap() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
@@ -39,6 +44,37 @@ export function Swap() {
   const [switchText, setSwitch] = useState(false);
   const [option, setSelected] = useState("BTC");
   const [infoMessage, setMessageInfo] = useState(false);
+  // Financial Graph
+  const [timeframe, setTimeframe] = useState("D");
+  const [financialInstrument, setFinancialInstrument] = useState(["bitcoin", "usd"]);
+  const [labels, setLabels] = useState([]);
+  const [fiPrice, setFiPrice] = useState([]);
+
+  // API
+  const fetcher = new fetchModule();
+
+  // "D" in ms: 86_400_000
+  // "W" in ms: 604_800_000
+  // "M"
+  // "Y" in ms: 31_536_000_000
+
+  useEffect(() => {
+    let startDate;
+
+    if (timeframe === "D") {
+      startDate = Math.round(Date() - 86_400_000);
+    } else if (timeframe === "W") {
+      startDate = Math.round(Date() - 604_800_000);
+    } else if (timeframe === "M") {
+      startDate = Math.round(Date() - 86_400_000);
+    } else {
+      startDate = Math.round(Date() - 31_536_000_000);
+    }
+
+    const data = fetcher.fetchHystoricalData(startDate, financialInstrument[0], financialInstrument[1]);
+    setLabels(data.prices.map((row) => row[0]));
+    setFiPrice(data.prices.map((row) => row[1]));
+  }, [timeframe, financialInstrument]);
 
   const contextValue = {
     option,
@@ -75,7 +111,36 @@ export function Swap() {
 
       <div className="swap-int-page">
         <div className="jskBUs-box-page">
-          <section className="col-1">{visible === false && <div className="fakeGraph"></div>}</section>
+          <section className="col-1">
+            {visible === false && (
+              <div className="fakeGraph">
+                <div className="jBdktT-topRow">
+                  <div className="cryptoTitle"></div>
+                  <div className=""></div>
+                </div>
+                <div className="cJNWTI-bottomRow"></div>
+                <Graph
+                  id="swap-graph"
+                  config={{
+                    type: "line",
+                    data: {
+                      labels: labels, // string[]
+                      datasets: [
+                        {
+                          label: "My First Dataset", // omettere
+                          data: fiPrice, //number[]
+                          fill: true, // boolean
+                          borderColor: "rgb(75, 192, 192)", // string
+                          tension: 0.1, // ???
+                        },
+                      ],
+                    },
+                  }}
+                />
+              </div>
+            )}
+          </section>
+
           <section className="main-swap-card">
             <div className="swap-card">
               <div className="bloc-tabs-card">

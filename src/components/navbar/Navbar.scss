@@ -236,9 +236,10 @@ nav {
       // }
 
       .btn-gear {
-        border: none;
-        background-color: transparent;
+        // border: none;
+        // background-color: transparent;
         cursor: pointer;
+        z-index: 98;
 
         i {
           color: $primary-color;

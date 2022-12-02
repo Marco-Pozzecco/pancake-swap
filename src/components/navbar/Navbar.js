@@ -25,7 +25,9 @@ export function Navbar() {
       <nav>
         <div className="extern-box">
           <div className="flex">
-            <Link className="PancakeLogo" to="/">{theme === "theme-dark" ? <img alt="" src={logoWhite} /> : <img alt="" src={logo} />}</Link>
+            <Link className="PancakeLogo" to="/">
+              {theme === "theme-dark" ? <img alt="" src={logoWhite} /> : <img alt="" src={logo} />}
+            </Link>
 
             <NavLink to="/">
               <img src={logoBunny} alt="logo bunny" className="logoBunny"></img>
@@ -213,14 +215,28 @@ export function Navbar() {
               </div>
             </div>
             {theme === "theme-dark" ? (
-              <FaCog fill="#b8add2" onClick={() => setOpenModal(true)} style={{ height: "1.2em", width: "1.2em" }} />
+              <FaCog
+                fill="#b8add2"
+                onClick={() => setOpenModal(true)}
+                style={{ height: "1.2em", width: "1.2em" }}
+                className="btn-gear"
+              />
             ) : (
-              <FaCog fill="#7a6eaa" onClick={() => setOpenModal(true)} style={{ height: "1.2em", width: "1.2em" }} />
+              <FaCog
+                fill="#7a6eaa"
+                onClick={() => setOpenModal(true)}
+                style={{ height: "1.2em", width: "1.2em" }}
+                className="btn-gear"
+              />
             )}
 
             <DropdownCrypto />
             <div>
-              <ConnectWalletBtn className="" type="fullButton button-aquagreen" action={() => setOpenModalWallet(true)} />
+              <ConnectWalletBtn
+                className=""
+                type="fullButton button-aquagreen"
+                action={() => setOpenModalWallet(true)}
+              />
             </div>
           </section>
         </div>
