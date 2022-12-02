@@ -11,7 +11,7 @@ export function FinancialGraph() {
   const fetcher = new fetchModule();
 
   useEffect(() => {
-    let data = fetcher.fetchHystoricalData(Math.round((Date.now() - 2629743000) / 1000), "bitcoin", "usd");
+    let data = fetcher.fetchHystoricalData(Math.round((Date.now() - 2_629_743_000) / 1000), "bitcoin", "usd");
     console.log(data);
   })
   // moment.unix(1454521239279/1000).format("DD MMM YYYY hh:mm a")
