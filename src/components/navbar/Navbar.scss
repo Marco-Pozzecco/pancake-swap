@@ -308,8 +308,8 @@ nav {
   nav {
     .extern-box {
       .flex {
-        //width: 60%;
-        //padding-right: 10px;
+        // width: 100%;
+        // padding-right: 30px;
 
         #money,
         .igZcUN,
@@ -317,10 +317,16 @@ nav {
         .mini-logo {
           display: none;
         }
-
-        .mobile-icon,
         .logoBunny {
           display: inline;
+        }
+        .PancakeLogo {
+          display: none;
+        }
+
+        .mobile-icon,
+        .pancakeicon {
+          display: none;
         }
 
         #main-logo {

@@ -9,7 +9,12 @@
 
 // Set colori tema scuro
 $theme-dark: map.set($theme-dark, "earn", "background-gradient", #3a364a);
-$theme-dark: map.set($theme-dark, "trade", "background-gradient", rgb(8, 6, 11));
+$theme-dark: map.set(
+  $theme-dark,
+  "trade",
+  "background-gradient",
+  rgb(8, 6, 11)
+);
 $theme-dark: map.set($theme-dark, "text", "paragraph-dark", rgb(154, 106, 255));
 $theme-dark: map.set($theme-dark, "text", "header2-text", rgb(244, 238, 255));
 $theme-dark: map.set($theme-dark, "text", "header3-text", rgb(184, 173, 210));
@@ -19,10 +24,24 @@ $theme-light: map.set(
   $theme-light,
   "earn",
   "background-gradient",
-  linear-gradient(102deg, rgba(241, 237, 243, 1) 100%, rgba(233, 242, 246, 1) 100%)
+  linear-gradient(
+    102deg,
+    rgba(241, 237, 243, 1) 100%,
+    rgba(233, 242, 246, 1) 100%
+  )
 );
-$theme-light: map.set($theme-light, "trade", "background-gradient", rgb(250, 249, 250));
-$theme-light: map.set($theme-light, "text", "paragraph-light", rgb(118, 69, 217));
+$theme-light: map.set(
+  $theme-light,
+  "trade",
+  "background-gradient",
+  rgb(250, 249, 250)
+);
+$theme-light: map.set(
+  $theme-light,
+  "text",
+  "paragraph-light",
+  rgb(118, 69, 217)
+);
 $theme-light: map.set($theme-light, "text", "header2-text", rgb(40, 13, 95));
 $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
 
@@ -68,7 +87,7 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
 }
 
 .usedbyColors {
-  fill: var(--background-trade);
+  fill: var(--usedby-colors-trade);
   background: var(--background-trade);
   width: 100%;
 }
@@ -343,5 +362,31 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
 
   .usedbyColors {
     width: 150%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .ta-contents-section {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .earnColors {
+    margin-top: -1px;
+  }
+
+  .usedbyColors {
+    margin-top: -1px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .earnColors {
+    margin-top: -7px;
+  }
+
+  .usedbyColors {
+    width: 200%;
   }
 }
