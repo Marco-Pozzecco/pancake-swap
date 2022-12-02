@@ -3,8 +3,8 @@
   // background colors
   --background-primary: #08060b;
   --background-secondary: #27262c;
-  --background-tertiary: rgba(39,38,44,.7);
-  --background-disabled: #3c3742; 
+  --background-tertiary: rgba(39, 38, 44, 0.7);
+  --background-disabled: #3c3742;
   --background-perpetual: #5b4f82;
   --background-perpetual-item: rgb(24, 26, 32);
 
@@ -19,19 +19,13 @@
   --gradient-bold: linear-gradient(#53dee9, #9a6aff);
   --gradient-usedby: linear-gradient(180deg, #09070c 22%, #201335 100%);
   // shadows
-  --shadows-level1: 0px 2px 12px -8px rgba(25, 19, 38, 0.1),
-    0px 1px 1px rgba(25, 19, 38, 0.05);
-  --shadows-active: 0px 0px 0px 1px #0098a1,
-    0px 0px 4px 8px rgba(31, 199, 212, 0.4);
-  --shadows-success: 0px 0px 0px 1px #31d0aa,
-    0px 0px 0px 4px rgba(49, 208, 170, 0.2);
-  --shadows-warning: 0px 0px 0px 1px #ed4b9e,
-    0px 0px 0px 4px rgba(237, 75, 158, 0.2);
-  --shadows-focus: 0px 0px 0px 1px #7645d9,
-    0px 0px 0px 4px rgba(118, 69, 217, 0.6);
+  --shadows-level1: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.05);
+  --shadows-active: 0px 0px 0px 1px #0098a1, 0px 0px 4px 8px rgba(31, 199, 212, 0.4);
+  --shadows-success: 0px 0px 0px 1px #31d0aa, 0px 0px 0px 4px rgba(49, 208, 170, 0.2);
+  --shadows-warning: 0px 0px 0px 1px #ed4b9e, 0px 0px 0px 4px rgba(237, 75, 158, 0.2);
+  --shadows-focus: 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px rgba(118, 69, 217, 0.6);
   --shadows-inset: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
-  --shadows-tooltip: 0px 0px 2px rgba(0, 0, 0, 0.2),
-    0px 4px 12px -8px rgba(14, 14, 44, 0.1);
+  --shadows-tooltip: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 4px 12px -8px rgba(14, 14, 44, 0.1);
 
   // text colors
   --text-primary: #f4eeff;
@@ -82,6 +76,7 @@
   --colors-inputSecondary: #262130;
   --colors-disabled: #524b63;
   --colors-backgroundAlt: #27262c;
+  --graph-backgroud: rgba(39, 38, 44, 0.5);
 }
 
 // theme-light colors
@@ -91,9 +86,9 @@
   --background-secondary: #fff;
   --background-terziary: hsla(0, 0%, 100%, 0.7);
   --background-disabled: #e9eaeb;
-  --background-perpetual: #5b4f82; 
+  --background-perpetual: #5b4f82;
   --background-perpetual-item: rgb(24, 26, 32);
-  
+
   // gradients
   --gradient-bubblegum: linear-gradient(139.73deg, #e5fdff, #f3efff);
   --gradient-inverseBubblegum: linear-gradient(139.73deg, #f3efff, #e5fdff);
@@ -105,19 +100,13 @@
   --gradient-bold: linear-gradient(#53dee9, #7645d9);
   --gradient-usedby: linear-gradient(180deg, #fff 22%, #d7caec 100%);
   // shadows
-  --shadows-level1: 0px 2px 12px -8px rgba(25, 19, 38, 0.1),
-    0px 1px 1px rgba(25, 19, 38, 0.05);
-  --shadows-active: 0px 0px 0px 1px #0098a1,
-    0px 0px 4px 8px rgba(31, 199, 212, 0.4);
-  --shadows-success: 0px 0px 0px 1px #31d0aa,
-    0px 0px 0px 4px rgba(49, 208, 170, 0.2);
-  --shadows-warning: 0px 0px 0px 1px #ed4b9e,
-    0px 0px 0px 4px rgba(237, 75, 158, 0.2);
-  --shadows-focus: 0px 0px 0px 1px #7645d9,
-    0px 0px 0px 4px rgba(118, 69, 217, 0.6);
+  --shadows-level1: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.05);
+  --shadows-active: 0px 0px 0px 1px #0098a1, 0px 0px 4px 8px rgba(31, 199, 212, 0.4);
+  --shadows-success: 0px 0px 0px 1px #31d0aa, 0px 0px 0px 4px rgba(49, 208, 170, 0.2);
+  --shadows-warning: 0px 0px 0px 1px #ed4b9e, 0px 0px 0px 4px rgba(237, 75, 158, 0.2);
+  --shadows-focus: 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px rgba(118, 69, 217, 0.6);
   --shadows-inset: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
-  --shadows-tooltip: 0px 0px 2px rgba(0, 0, 0, 0.2),
-    0px 4px 12px -8px rgba(14, 14, 44, 0.1);
+  --shadows-tooltip: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 4px 12px -8px rgba(14, 14, 44, 0.1);
 
   // text colors
   --text-primary: #280d5f;
@@ -168,4 +157,5 @@
   --colors-input: #eeeaf4;
   --colors-inputSecondary: #d7caec;
   --colors-disabled: #e9eaeb;
+  --graph-backgroud: rgba(255, 255, 255, 0.5);
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./cryptoModalradioButtons.scss";
-import bnblogo from "../../resources/swap/BNB-logo.png";
+import bnblogo from "../../resources/swap/BUSD-logo.png";
 
 export function CryptoModalRadioButtons(props) {
   const [i, setIndex] = useState(1);

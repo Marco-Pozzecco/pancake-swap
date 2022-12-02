@@ -54,12 +54,91 @@
         justify-content: flex-start;
         align-items: end;
 
-        .fakeGraph {
+        .Graph {
           height: 500px;
           width: 680px;
           border: 1px solid $modal-bar;
-          border-radius: 16px;
           margin-bottom: 46px;
+          padding-top: 8px;
+          background: var(--graph-backgroud);
+          border: 1px solid var(--colors-cardBorder);
+          border-radius: 16px;
+          // width: 50%;
+          // height: 516px;
+
+          .jBdktT-topRow {
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 24px;
+            padding-right: 24px;
+            height: 48px;
+
+            .logoDivGraph {
+              margin-right: 4px;
+              * {
+                margin-right: 4px;
+                height: 24px;
+              }
+            }
+            .cryptoTitle {
+              display: flex;
+              -webkit-box-align: center;
+              align-items: center;
+              color: var(--text-primary);
+              margin-right: 8px;
+            }
+            .switchArrowGraph {
+              margin-left: 12px;
+              z-index: 97;
+              cursor: pointer;
+            }
+            // .iconBox {
+            //   width: 48px;
+            //   height: 48px;
+            // }
+          }
+          .cJNWTI-bottomRow {
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 24px;
+            padding-right: 24px;
+
+            .jMqaHv-Left-row {
+              display: flex;
+              flex-direction: column;
+              padding-top: 12px;
+
+              .priceRow {
+                display: flex;
+                -webkit-box-align: center;
+                align-items: baseline;
+                color: var(--text-primary);
+
+                .price {
+                  font-size: 40px;
+                  margin-right: 8px;
+                  font-weight: bold;
+                }
+                .cryptoTextGraph {
+                  color: var(--text-muted);
+                  font-size: 20px;
+                  font-weight: bold;
+                }
+                .priceVariation {
+                  color: var(--status-success);
+                  font-size: 20px;
+                  margin-left: 8px;
+                }
+              }
+              .dateNow {
+                color: $primary-color;
+              }
+            }
+          }
         }
       }
 

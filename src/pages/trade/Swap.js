@@ -21,7 +21,9 @@ import { FaChartBar } from "react-icons/fa";
 import { MdContentCopy } from "react-icons/md";
 import { AiOutlineReload } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
+import { IoIosResize } from "react-icons/io";
 import { HiSwitchVertical } from "react-icons/hi";
+import { MdCloseFullscreen } from "react-icons/md";
 import { HiOutlineSwitchHorizontal } from "react-icons/hi";
 import { BiDownArrowAlt } from "react-icons/bi";
 import { AiOutlineInfoCircle } from "react-icons/ai";
@@ -32,6 +34,8 @@ import helpBunny from "../../resources/limit/help.png";
 import linkNewPage from "../../resources/limit/linkNewPage.svg";
 import bubble from "../../resources/limit/bubbleSwap.svg";
 import bubbleLight from "../../resources/limit/bubbleSwapLightTheme.svg";
+import btclogo from "../../resources/swap/BTC.png";
+import busdlogo from "../../resources/swap/BUSD-logo.png";
 
 export function Swap() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
@@ -58,23 +62,23 @@ export function Swap() {
   // "M"
   // "Y" in ms: 31_536_000_000
 
-  useEffect(() => {
-    let startDate;
+  // useEffect(() => {
+  //   let startDate;
 
-    if (timeframe === "D") {
-      startDate = Math.round(Date() - 86_400_000);
-    } else if (timeframe === "W") {
-      startDate = Math.round(Date() - 604_800_000);
-    } else if (timeframe === "M") {
-      startDate = Math.round(Date() - 86_400_000);
-    } else {
-      startDate = Math.round(Date() - 31_536_000_000);
-    }
+  //   if (timeframe === "D") {
+  //     startDate = Math.round(Date() - 86_400_000);
+  //   } else if (timeframe === "W") {
+  //     startDate = Math.round(Date() - 604_800_000);
+  //   } else if (timeframe === "M") {
+  //     startDate = Math.round(Date() - 86_400_000);
+  //   } else {
+  //     startDate = Math.round(Date() - 31_536_000_000);
+  //   }
 
-    const data = fetcher.fetchHystoricalData(startDate, financialInstrument[0], financialInstrument[1]);
-    setLabels(data.prices.map((row) => row[0]));
-    setFiPrice(data.prices.map((row) => row[1]));
-  }, [timeframe, financialInstrument]);
+  //   const data = fetcher.fetchHystoricalData(startDate, financialInstrument[0], financialInstrument[1]);
+  //   setLabels(data.prices.map((row) => row[0]));
+  //   setFiPrice(data.prices.map((row) => row[1]));
+  // }); //[timeframe, financialInstrument]
 
   const contextValue = {
     option,
@@ -113,23 +117,62 @@ export function Swap() {
         <div className="jskBUs-box-page">
           <section className="col-1">
             {visible === false && (
-              <div className="fakeGraph">
+              <div className="Graph">
                 <div className="jBdktT-topRow">
-                  <div className="cryptoTitle"></div>
-                  <div className=""></div>
+                  <div className="cryptoTitle">
+                    <div className="logoDivGraph">
+                      <img src={bunnyLogo} alt="cryto icon"></img>
+                      <img src={btclogo} alt="crypto icon"></img>
+                    </div>
+                    {switchText === false ? <p>CAKE</p> : <p>BTCB</p>}
+                    <p>/</p>
+                    {switchText === false ? <p>BTCB</p> : <p>CAKE</p>}
+                    <HiOutlineSwitchHorizontal
+                      className="switchArrowGraph"
+                      style={{ height: "1.4em", width: "1.4em" }}
+                      fill="#0098a1"
+                      onClick={() => {
+                        switchText === false ? setSwitch(true) : setSwitch(false);
+                      }}
+                    />
+                  </div>
+                  <div className="iconBox">
+                    <IoIosResize fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} />
+                  </div>
                 </div>
-                <div className="cJNWTI-bottomRow"></div>
+                <div className="cJNWTI-bottomRow">
+                  <div className="jMqaHv-Left-row ">
+                    <div className="priceRow">
+                      <p className="price">3.94</p>
+                      {switchText === false ? (
+                        <p className="cryptoTextGraph">CAKE</p>
+                      ) : (
+                        <p className="cryptoTextGraph">BTCB</p>
+                      )}
+                      <p className="cryptoTextGraph">/</p>
+                      {switchText === false ? (
+                        <p className="cryptoTextGraph">BTCB</p>
+                      ) : (
+                        <p className="cryptoTextGraph">CAKE</p>
+                      )}
+                      <p className="priceVariation">+0.014 (0.36%)</p>
+                    </div>
+                    <p className="dateNow">Dec 02, 2022, 03:39PM</p>
+                  </div>
+
+                  <div className="timeframeBtn"></div>
+                </div>
                 <Graph
                   id="swap-graph"
                   config={{
                     type: "line",
                     data: {
-                      labels: labels, // string[]
+                      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"], //labels, // string[]
                       datasets: [
                         {
                           label: "My First Dataset", // omettere
-                          data: fiPrice, //number[]
-                          fill: true, // boolean
+                          data: [20, 10, 12, 19, 3, 5], //fiPrice, //number[]
+                          fill: "start", // boolean
                           borderColor: "rgb(75, 192, 192)", // string
                           tension: 0.1, // ???
                         },
