@@ -25,7 +25,7 @@ export function Navbar() {
       <nav>
         <div className="extern-box">
           <div className="flex">
-            <Link to="/">{theme === "theme-dark" ? <img alt="" src={logoWhite} /> : <img alt="" src={logo} />}</Link>
+            <Link className="PancakeLogo" to="/">{theme === "theme-dark" ? <img alt="" src={logoWhite} /> : <img alt="" src={logo} />}</Link>
 
             <NavLink to="/">
               <img src={logoBunny} alt="logo bunny" className="logoBunny"></img>
@@ -133,7 +133,7 @@ export function Navbar() {
             </ul>
           </div>
           <section className="flex">
-            <div style={{ padding: "10px" }}>
+            <div>
               <svg
                 viewBox="0 0 96 96"
                 width="24px"
@@ -220,7 +220,7 @@ export function Navbar() {
 
             <DropdownCrypto />
             <div>
-              <ConnectWalletBtn type="fullButton button-aquagreen" action={() => setOpenModalWallet(true)} />
+              <ConnectWalletBtn className="" type="fullButton button-aquagreen" action={() => setOpenModalWallet(true)} />
             </div>
           </section>
         </div>

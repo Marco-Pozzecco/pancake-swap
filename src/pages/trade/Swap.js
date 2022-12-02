@@ -1,4 +1,6 @@
 import React, { useState, useContext } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./swap.scss";
 import Subnav from "../../components/subnav/Subnav";
 //import doubleArrow from "../../resources/limit/doubleArrow.svg";
@@ -7,6 +9,7 @@ import attentionIcon from "../../resources/limit/attentionIcon.svg";
 import helpBunny from "../../resources/limit/help.png";
 import linkNewPage from "../../resources/limit/linkNewPage.svg";
 import bubble from "../../resources/limit/bubbleSwap.svg";
+import bubbleLight from "../../resources/limit/bubbleSwapLightTheme.svg";
 //import reload from "../../resources/limit/reload.svg";
 import ModalConnectWallet from "../../components/modal-connect-wallet/ModalConnectWallet";
 import { ConnectWalletBtn } from "../../components/buttons/ConnectWalletBtn";
@@ -34,8 +37,8 @@ export function Swap() {
   const [visible, setView] = useState(false);
   const [openCryptoModal, setOpenModalCrypto] = useState(false);
   const [switchText, setSwitch] = useState(false);
-
   const [option, setSelected] = useState("BTC");
+  const [infoMessage, setMessageInfo] = useState(false);
 
   const contextValue = {
     option,
@@ -46,6 +49,25 @@ export function Swap() {
     setTab(index);
     console.log(index);
   };
+
+  const Msg = () => (
+    <div>
+      <h4>Scanning Risk.</h4>
+      <p>Please wait until we scan the risk for CAKE token</p>
+    </div>
+  );
+
+  const infoAlert = () =>
+    toast.info(Msg, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
 
   return (
     <div className="swap-ext-page">
@@ -167,11 +189,25 @@ export function Swap() {
                     </div>
 
                     <div className="rowAfterEmptyDiv">
-                      <p className="smallGreenBtnText">Scann Risk</p>
-                      <AiOutlineInfoCircle
-                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
-                        style={{ height: "1.2em", width: "1.2em" }}
-                      />
+                      <p className="smallGreenBtnText" onClick={infoAlert}>
+                        Scann Risk
+                      </p>
+                      <div>
+                        <AiOutlineInfoCircle
+                          fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                          style={{ height: "1.2em", width: "1.2em" }}
+                          className="infoRisk"
+                          onMouseEnter={() => setMessageInfo(true)}
+                          onMouseLeave={() => setMessageInfo(false)}
+                        />
+                        {infoMessage === true && (
+                          <div className="infoRiskMEssage">
+                            The scan result is provided by 3rd parties and may not cover every token. Therefore the
+                            result is for reference only, do NOT take it as investment or financial advice. Always DYOR!
+                            Powered by Hashdit.
+                          </div>
+                        )}
+                      </div>
                     </div>
                     <div className="fx-inline secondRow">
                       <p className="textAccent">Slippage Tolerance</p>
@@ -197,7 +233,11 @@ export function Swap() {
           <div className="extBox-bunnyHelp">
             <div className="bubbleDiv">
               <div className="needHelpBubble">Need Help ?</div>
-              <img className="bubbleIcon" src={bubble} alt="bubble icon"></img>
+              {theme === "theme-dark" ? (
+                <img className="bubbleIcon" src={bubble} alt="bubble icon"></img>
+              ) : (
+                <img className="bubbleIcon" src={bubbleLight} alt="bubble icon"></img>
+              )}
               <div className="helpBunny">
                 <img src={helpBunny} alt="history icon"></img>
               </div>
@@ -205,6 +245,8 @@ export function Swap() {
           </div>
         </div>
       </div>
+
+      <ToastContainer />
       <ModalSettingSwap
         open={openModal}
         onClose={() => {
@@ -240,10 +282,6 @@ export function Swap() {
           setOpenModalCrypto(false);
           document.body.style.overflow = "unset";
         }}></div>
-
-      {/* {openModal === true || openModalWallet === true || openCryptoModal === true
-        ? (document.body.style.overflow = "hidden")
-        : (document.body.style.overflow = "unset")} */}
     </div>
   );
 }
