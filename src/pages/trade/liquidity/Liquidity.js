@@ -13,6 +13,7 @@ import { FaCog } from "react-icons/fa";
 import { RiHistoryLine } from "react-icons/ri";
 import { RiAddFill } from "react-icons/ri";
 import { BiLeftArrowAlt } from "react-icons/bi";
+import bubbleLight from "../../../resources/limit/bubbleSwapLightTheme.svg";
 
 export function Liquidity() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
@@ -33,19 +34,22 @@ export function Liquidity() {
           <div>
             <div className="liquidityCard ">
               <div className="rowCard">
-                {show === 2 && (
-                  <img
-                    src={leftArrow}
-                    alt="arrow icon"
-                    onClick={() => {
-                      toggleTab(1);
-                    }}
-                    className="leftArrow"></img>
-                  //   <BiLeftArrowAlt
-                  //     fillRule={theme === "theme-dark" ? "white" : "black"}
-                  //     style={{ height: "1.5em", width: "1.5em" }}
-                  //   />
-                )}
+                {show === 2 &&
+                  (theme === "theme-dark" ? (
+                    <BiLeftArrowAlt
+                      className="leftArrow"
+                      onClick={() => toggleTab(1)}
+                      style={{ height: "2.5em", width: "2.5em" }}
+                      fill="#fff"
+                    />
+                  ) : (
+                    <BiLeftArrowAlt
+                      className="leftArrow"
+                      onClick={() => toggleTab(1)}
+                      style={{ height: "2.5em", width: "2.5em" }}
+                      fill="#27262c"
+                    />
+                  ))}
 
                 <div className="headerCard">
                   <div className="headerRow">
@@ -56,8 +60,16 @@ export function Liquidity() {
                     )}
 
                     <div className="headerIcon">
-                      {theme === "theme-dark" ? <FaCog fill="#b8add2" /> : <FaCog fill="#7a6eaa" />}
-                      {theme === "theme-dark" ? <RiHistoryLine fill="#b8add2" /> : <RiHistoryLine fill="#7a6eaa" />}
+                      {theme === "theme-dark" ? (
+                        <FaCog fill="#b8add2" style={{ height: "1.5em", width: "1.5em" }} />
+                      ) : (
+                        <FaCog fill="#7a6eaa" style={{ height: "1.5em", width: "1.5em" }} />
+                      )}
+                      {theme === "theme-dark" ? (
+                        <RiHistoryLine fill="#b8add2" style={{ height: "1.5em", width: "1.5em" }} />
+                      ) : (
+                        <RiHistoryLine fill="#7a6eaa" style={{ height: "1.5em", width: "1.5em" }} />
+                      )}
                     </div>
                   </div>
                   <p className="pg-tx">Remove liquidity to receive tokens back</p>
@@ -110,7 +122,11 @@ export function Liquidity() {
             <div className="extBox-bunnyHelp">
               <div className="bubbleDiv">
                 <div className="needHelpBubble">Need Help ?</div>
-                <img className="bubbleIcon" src={bubble} alt="bubble icon"></img>
+                {theme === "theme-dark" ? (
+                  <img className="bubbleIcon" src={bubble} alt="bubble icon"></img>
+                ) : (
+                  <img className="bubbleIcon" src={bubbleLight} alt="bubble icon"></img>
+                )}
                 <div className="helpBunny">
                   <img src={helpBunny} alt="history icon"></img>
                 </div>

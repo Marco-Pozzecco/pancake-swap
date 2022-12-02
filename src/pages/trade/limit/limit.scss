@@ -32,7 +32,6 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
     background-color: var(--limit-bg);
     background-image: var(--limit-bg);
 
-    padding-bottom: 10px;
     //@include mq("desktop");
     width: 100%;
     height: auto;
@@ -329,12 +328,48 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        align-items: end;
 
         .emptyDiv-helpBunny {
           display: flex;
           flex-grow: 1;
           height: 200px;
+          width: 100%;
           vertical-align: baseline;
+        }
+        .bubbleDiv {
+          display: flex;
+          align-items: center;
+
+          .needHelpBubble {
+            position: relative;
+            -webkit-box-align: center;
+            align-items: center;
+            border: 0px;
+            border-radius: 16px;
+            box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+            cursor: pointer;
+            display: inline-flex;
+            font-weight: 600;
+            -webkit-box-pack: center;
+            justify-content: center;
+            letter-spacing: 0.03em;
+            line-height: 1;
+            opacity: 1;
+            outline: 0px;
+            transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+            height: 48px;
+            padding: 0px 24px;
+            background-color: var(--icon-text-color);
+            color: var(--text-color);
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+          .bubbleIcon {
+            fill: var(--icon-text-color);
+            align-items: center;
+          }
         }
 
         .helpBunny {
@@ -342,8 +377,9 @@ $theme-light: map.set($theme-light, "disable-text", $colors-textDisabled);
           flex-grow: 0;
           align-items: center;
           justify-content: end;
-          width: 370px;
+
           height: 100px;
+          margin-bottom: 3px;
 
           img {
             max-height: 108px;

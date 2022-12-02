@@ -39,7 +39,7 @@
     //padding: 2% 2% 2% 6%;
 
     .header {
-      color: var(--text-color);
+      color: var(--text-primary);
     }
 
     .close-btn-modal {
@@ -62,7 +62,7 @@
   .bottomModal {
     padding: 0px 24px 24px 24px;
     .parag {
-      color: var(--text-color);
+      color: var(--text-primary);
       padding: 2%;
     }
 
@@ -108,7 +108,7 @@
           width: 100%;
 
           .cryptoName {
-            color: var(--text-color);
+            color: var(--text-primary);
           }
           .cryptoDesc {
             color: $primary-color;

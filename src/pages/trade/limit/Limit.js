@@ -20,6 +20,8 @@ import { BiHide } from "react-icons/bi";
 import { MdContentCopy } from "react-icons/md";
 import poweredByGelato from "../../../resources/limit/powered_by_gelato_bk.svg";
 import poweredByGelatoWhite from "../../../resources/limit/powered_by_gelato_white.svg";
+import bubble from "../../../resources/limit/bubbleSwap.svg";
+import bubbleLight from "../../../resources/limit/bubbleSwapLightTheme.svg";
 
 export function Limit() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
@@ -178,8 +180,16 @@ export function Limit() {
           </div>
           <div className="extBox-bunnyHelp">
             <div className="emptyDiv-helpBunny"></div>
-            <div className="helpBunny">
-              <img src={helpBunny} alt="bunnyHelp icon"></img>
+            <div className="bubbleDiv">
+              <div className="needHelpBubble">Need Help ?</div>
+              {theme === "theme-dark" ? (
+                <img className="bubbleIcon" src={bubble} alt="bubble icon"></img>
+              ) : (
+                <img className="bubbleIcon" src={bubbleLight} alt="bubble icon"></img>
+              )}
+              <div className="helpBunny">
+                <img src={helpBunny} alt="history icon"></img>
+              </div>
             </div>
           </div>
         </section>
