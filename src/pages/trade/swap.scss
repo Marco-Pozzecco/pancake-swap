@@ -29,6 +29,10 @@
     //visibility: hidden;
     transition: opacity 200ms easy-in-out;
   }
+  .iconSize {
+    height: 24px;
+    width: 24px;
+  }
 
   .greenText {
     color: $main-buttons-background-color;

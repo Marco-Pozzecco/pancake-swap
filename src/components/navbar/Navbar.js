@@ -172,7 +172,7 @@ export function Navbar() {
               </svg>
             </div>
             <div id="money">
-              <p>$4.357</p>
+              <p>$3.383</p>
             </div>
             <div className="language">
               {theme === "theme-dark" ? (

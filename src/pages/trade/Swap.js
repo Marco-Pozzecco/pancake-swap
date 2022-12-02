@@ -121,8 +121,16 @@ export function Swap() {
                 <div className="jBdktT-topRow">
                   <div className="cryptoTitle">
                     <div className="logoDivGraph">
-                      <img src={bunnyLogo} alt="cryto icon"></img>
-                      <img src={btclogo} alt="crypto icon"></img>
+                      {switchText === false ? (
+                        <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img>
+                      ) : (
+                        <img src={btclogo} alt="crypto icon" className="iconSize"></img>
+                      )}
+                      {switchText === false ? (
+                        <img src={btclogo} alt="crypto icon" className="iconSize"></img>
+                      ) : (
+                        <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img>
+                      )}
                     </div>
                     {switchText === false ? <p>CAKE</p> : <p>BTCB</p>}
                     <p>/</p>
@@ -172,7 +180,7 @@ export function Swap() {
                         {
                           label: "My First Dataset", // omettere
                           data: [20, 10, 12, 19, 3, 5], //fiPrice, //number[]
-                          fill: "start", // boolean
+                          fill: "start", // string o boolean
                           borderColor: "rgb(75, 192, 192)", // string
                           tension: 0.1, // ???
                         },
@@ -213,20 +221,22 @@ export function Swap() {
                     )}
                     <h3 className={toggleState === 1 ? "header active-header" : "header"}>Swap</h3>
                     <h3 className={toggleState === 2 ? "header active-header" : "header"}>Stable Swap</h3>
-                    <FaCog
-                      fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
-                      style={{ height: "1.4em", width: "1.4em" }}
-                      onClick={() => setOpenModal(true)}
-                    />
-                    <RiHistoryLine
-                      fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
-                      style={{ height: "1.4em", width: "1.4em" }}
-                      // onClick={setOpenTry()}
-                    />
-                    <AiOutlineReload
-                      fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
-                      style={{ height: "1.4em", width: "1.4em" }}
-                    />
+                    <div className="iconHeaderCard">
+                      <FaCog
+                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                        style={{ height: "1.4em", width: "1.4em" }}
+                        onClick={() => setOpenModal(true)}
+                      />
+                      <RiHistoryLine
+                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                        style={{ height: "1.4em", width: "1.4em" }}
+                        // onClick={setOpenTry()}
+                      />
+                      <AiOutlineReload
+                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                        style={{ height: "1.4em", width: "1.4em" }}
+                      />
+                    </div>
                   </div>
                   <p className="pg-tx">Trade tokens in an instant</p>
                 </div>
@@ -239,7 +249,11 @@ export function Swap() {
                         onClick={() => {
                           setOpenModalCrypto(true);
                         }}>
-                        <img src={bunnyLogo} alt="history icon"></img>
+                        {switchText === false ? (
+                          <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img>
+                        ) : (
+                          <img src={btclogo} alt="crypto icon" className="iconSize"></img>
+                        )}
                         {switchText === false ? <p>CAKE</p> : <p>BTCB</p>}
                         {toggleState === 1 && (
                           <IoIosArrowDown
@@ -279,7 +293,12 @@ export function Swap() {
                     </div>
                     <div className="input1Converter ">
                       <div className="fx-inline switchCryptoBtn" onClick={() => setOpenModalCrypto(true)}>
-                        <img src={bunnyLogo} alt="history icon"></img>
+                        {switchText === false ? (
+                          <img src={btclogo} alt="crypto icon" className="iconSize"></img>
+                        ) : (
+                          <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img>
+                        )}
+
                         {switchText === false ? <p>BTCB</p> : <p>CAKE</p>}
                         <SelectedOptionContext.Provider value={contextValue} />
                         {toggleState === 1 && (
