@@ -74,9 +74,10 @@ export function ModalCryptoSwap({ open, onClose }) {
           <CryptoModalRadioButtons />
         </div>
         <div className="cryptoList">
-          {options.map((option) => {
+          {options.map((option, index) => {
             return (
               <div
+                key={index}
                 className="cryptoElement"
                 onClick={() => {
                   setSelected(option.name);
