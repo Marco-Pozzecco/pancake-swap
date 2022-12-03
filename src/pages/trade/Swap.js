@@ -36,6 +36,7 @@ import bubble from "../../resources/limit/bubbleSwap.svg";
 import bubbleLight from "../../resources/limit/bubbleSwapLightTheme.svg";
 import btclogo from "../../resources/swap/BTC.png";
 import busdlogo from "../../resources/swap/BUSD-logo.png";
+import { ModalHistorySwap } from "../../components/modalHistorySwap/ModalHistorySwap";
 
 export function Swap() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
@@ -45,6 +46,7 @@ export function Swap() {
   const [isVisible, setVisibile] = useState(false);
   const [visible, setView] = useState(false);
   const [openCryptoModal, setOpenModalCrypto] = useState(false);
+  const [openModalHistory, setOpenModalHistory] = useState(false);
   const [switchText, setSwitch] = useState(false);
   const [option, setSelected] = useState("BTC");
   const [infoMessage, setMessageInfo] = useState(false);
@@ -230,7 +232,7 @@ export function Swap() {
                       <RiHistoryLine
                         fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
                         style={{ height: "1.4em", width: "1.4em" }}
-                        // onClick={setOpenTry()}
+                        onClick={() => setOpenModalHistory(true)}
                       />
                       <AiOutlineReload
                         fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
@@ -374,6 +376,13 @@ export function Swap() {
       </div>
 
       <ToastContainer />
+      <ModalHistorySwap
+        open={openModalHistory}
+        onClose={() => {
+          setOpenModalHistory(false);
+          document.body.style.overflow = "unset";
+        }}
+      />
       <ModalSettingSwap
         open={openModal}
         onClose={() => {
@@ -398,7 +407,7 @@ export function Swap() {
 
       <div
         className={
-          (openModal === true || openModalWallet === true || openCryptoModal === true) &&
+          (openModal === true || openModalWallet === true || openCryptoModal === true || openModalHistory === true) &&
           (document.body.style.overflow = "hidden")
             ? "overlay overlay-active"
             : "overlay"
@@ -407,6 +416,8 @@ export function Swap() {
           setOpenModal(false);
           setOpenModalWallet(false);
           setOpenModalCrypto(false);
+          setOpenModalHistory(false);
+
           document.body.style.overflow = "unset";
         }}></div>
     </div>
