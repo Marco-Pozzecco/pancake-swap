@@ -205,18 +205,11 @@ export function Swap() {
                   config={{
                     type: "line",
                     data: {
-                      labels: [
-                        "Red",
-                        "Blue",
-                        "Yellow",
-                        "Green",
-                        "Purple",
-                        "Orange",
-                      ], //labels, // string[]
+                      labels: labels, //labels, // string[]
                       datasets: [
                         {
                           label: "My First Dataset", // omettere
-                          data: [20, 10, 12, 19, 3, 5], //fiPrice, //number[]
+                          data: fiPrice, //fiPrice, //number[]
                           fill: "start", // string o boolean
                           borderColor: "rgb(75, 192, 192)", // string
                           tension: 0.1, // ???
