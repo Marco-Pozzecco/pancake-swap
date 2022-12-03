@@ -36,6 +36,7 @@ import bubble from "../../resources/limit/bubbleSwap.svg";
 import bubbleLight from "../../resources/limit/bubbleSwapLightTheme.svg";
 import btclogo from "../../resources/swap/BTC.png";
 import busdlogo from "../../resources/swap/BUSD-logo.png";
+import { json } from "react-router-dom";
 
 export function Swap() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
@@ -73,13 +74,18 @@ export function Swap() {
       days = 365;
     }
 
-    // chiamata API
-    const data = API.fetchHystoricalData(days, null, financialInstrument[0], financialInstrument[1]); // ritorna array {UNIX: number, price: number}
+    try {
+      // chiamata API
+      API.fetchHystoricalData(days, null, financialInstrument[0], financialInstrument[1])
+      .then(res => res.json()) // ritorna array [UNIX: number, price: number]
+      .then(json => {
+        setLabels(json.prices.map((row) => row[0])); // set stato labels
+        setFiPrice(json.prices.map((row) => row[1])); // set stato fiPrice
+      }) 
+    } catch (e) {
+      console.error(e);
+    } 
 
-    // impostare lo stato
-    setLabels(data.prices.map((row) => row[0]));
-    setFiPrice(data.prices.map((row) => row[1]));
-    
   }, [timeframe, financialInstrument]); //[timeframe, financialInstrument]
 
   const contextValue = {

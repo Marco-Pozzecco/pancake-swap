@@ -11,7 +11,7 @@ export class CoinGeckoAPI {
 
     return response;
   }
-  
+
   // days_range -> n di gg indietro
   // interval -> string can be omitted
   async fetchHystoricalData(days_range, interval, coin, vs_currency) {
@@ -23,8 +23,6 @@ export class CoinGeckoAPI {
       response = await fetch(`${this.URL}coins/${coin}/market_chart?vs_currency=${vs_currency}&days=${days_range}`)
     }
     
-    const json = await response.json();
-
-    return json
+    return response
   }
 }
