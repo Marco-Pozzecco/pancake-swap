@@ -13,6 +13,7 @@ import { CoinGeckoAPI } from "../../script/CoinGeckoAPI";
 import ModalConnectWallet from "../../components/modal-connect-wallet/ModalConnectWallet";
 import { ConnectWalletBtn } from "../../components/buttons/ConnectWalletBtn";
 import { ThemeContext } from "../../context/ThemeContext";
+import { TimeFrameRadioBtn } from "../../components/buttons/TimeFrameRadioBtn";
 
 //icon
 import { FaCog } from "react-icons/fa";
@@ -37,7 +38,6 @@ import bubbleLight from "../../resources/limit/bubbleSwapLightTheme.svg";
 import btclogo from "../../resources/swap/BTC.png";
 import busdlogo from "../../resources/swap/BUSD-logo.png";
 import { json } from "react-router-dom";
-import { TimeFrameRadioBtn } from "../../components/buttons/TimeFrameRadioBtn";
 
 export function Swap() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
@@ -51,7 +51,7 @@ export function Swap() {
   const [option, setSelected] = useState("BTC");
   const [infoMessage, setMessageInfo] = useState(false);
   // Financial Graph
-  const [timeframe, setTimeframe] = useState("24H");
+  const [timeframe, setTimeframe] = useState(0);
   const [financialInstrument, setFinancialInstrument] = useState(["bitcoin", "usd"]);
   const [labels, setLabels] = useState([]);
   const [fiPrice, setFiPrice] = useState([]);
@@ -103,6 +103,7 @@ export function Swap() {
   const toggleTab = (index) => {
     setTab(index);
     //console.log(index);
+    console.log(timeframe);
   };
 
   const Msg = () => (
@@ -181,7 +182,11 @@ export function Swap() {
                         )}
                         <p className="priceVariation">+0.014 (0.36%)</p>
                       </div>
-                      <TimeFrameRadioBtn radioGroup={["24H", "1W", "1M", "1Y"]} />
+                      <TimeFrameRadioBtn
+                        index={1}
+                        radioGroup={["24H", "1W", "1M", "1Y"]}
+                        onClick={() => setTimeframe()}
+                      />
                     </div>
                     <p className="dateNow">{formattedDate}</p>
                   </div>
@@ -318,7 +323,7 @@ export function Swap() {
                         )}
 
                         {switchText === false ? <p>BTCB</p> : <p>CAKE</p>}
-                        <SelectedOptionContext.Provider value={contextValue} />
+                        {/* <SelectedOptionContext.Provider value={contextValue} /> */}
                         {toggleState === 1 && (
                           <IoIosArrowDown
                             fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}

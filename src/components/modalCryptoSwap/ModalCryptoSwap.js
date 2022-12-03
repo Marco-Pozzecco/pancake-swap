@@ -80,8 +80,8 @@ export function ModalCryptoSwap({ open, onClose }) {
                 key={index}
                 className="cryptoElement"
                 onClick={() => {
-                  setSelected(option.name);
-                  onClose(ModalCryptoSwap(false));
+                  // setSelected(option.name);
+                  //ModalCryptoSwap(false);
                 }}>
                 <div className="cryptoLogo">{option.img}</div>
                 <div className="cryptoContent">
