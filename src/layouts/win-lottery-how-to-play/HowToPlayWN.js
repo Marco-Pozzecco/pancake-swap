@@ -1,8 +1,10 @@
 import React from "react";
 import "./how-to-play-wn.scss";
 import { HowToPlayCard } from "./HowToPlayCard";
+import PrizeFoundsCard from "./PrizeFoundsCard";
 import { PrizeFoundsText } from "./PrizeFoundsText";
 import { StillGotQuestions } from "./StillGotQuestions";
+import { WinningCriteriaCard } from "./WinningCriteriaCard";
 import { WinningCriteriaText } from "./WinningCriteriaText";
 
 export function HowToPlayWN() {
@@ -48,7 +50,9 @@ export function HowToPlayWN() {
             <div className="htpc-3-text">
               <WinningCriteriaText />
             </div>
-            <div className="htpc-3-card">CARD</div>
+            <div className="htpc-3-card">
+              <WinningCriteriaCard />
+            </div>
           </div>
           {/* // */}
           {/* // */}
@@ -65,7 +69,9 @@ export function HowToPlayWN() {
             <div className="htpc-4-text">
               <PrizeFoundsText />
             </div>
-            <div className="htpc-4-card">CARD</div>
+            <div className="htpc-4-card">
+              <PrizeFoundsCard />
+            </div>
           </div>
           {/* // */}
           {/* // */}
