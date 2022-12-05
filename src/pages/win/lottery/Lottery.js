@@ -10,7 +10,7 @@ export function Lottery() {
         elements={["Trading", "Prediction (BETA)", "Lottery", "Pottery (BETA)"]}
       />
 
-      <h1 className="provaH1">Lottery</h1>
+      {/* <h1 className="provaH1">Lottery</h1> */}
 
       <div className="sub-container-lottery">
         <WinLottery />
