@@ -1,0 +1,38 @@
+// Use rules
+
+@use "sass:map";
+
+// Import rules
+@import "../../abstracts/mixins";
+@import "../../abstracts/colors";
+
+.timeFrameBox {
+  width: auto;
+  background-color: var(--accent-tertiary);
+  border-radius: 30px;
+  @include flex(row, space-around, center);
+  border: 1px solid var(--colors-disabled);
+
+  .timeFRBtn {
+    padding: 0px 16px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 97;
+    color: $main-buttons-background-color;
+    font-weight: 600;
+    //transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 32px;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  .timeFRBtn-active {
+    border-radius: 18px;
+    background-color: $main-buttons-background-color;
+    color: #fff;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

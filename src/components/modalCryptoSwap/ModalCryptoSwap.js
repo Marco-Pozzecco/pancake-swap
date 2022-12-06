@@ -14,37 +14,44 @@ export function ModalCryptoSwap({ open, onClose }) {
       description: "Binance Chain Native Token",
     },
     {
-      name: "Ethereum",
+      name: "8PAY",
       img: <img className="fa-svg-icon" src={Ethereum} alt="ethereum icon"></img>,
       description: "lalala",
     },
-    { name: "Aptos", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    { name: "aBNBc", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
     {
-      name: "BNB",
+      name: "ACH",
       img: <img className="fa-svg-icon" src={bnbIcon} alt="bnb icon"></img>,
       description: "Binance Chain Native Token",
     },
     {
-      name: "Ethereum",
+      name: "ADA",
       img: <img className="fa-svg-icon" src={Ethereum} alt="ethereum icon"></img>,
       description: "lalala",
     },
-    { name: "Aptos", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    { name: "ADX", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
     {
-      name: "BNB",
+      name: "ALICE",
       img: <img className="fa-svg-icon" src={bnbIcon} alt="bnb icon"></img>,
       description: "Binance Chain Native Token",
     },
     {
-      name: "Ethereum",
+      name: "ALPA",
       img: <img className="fa-svg-icon" src={Ethereum} alt="ethereum icon"></img>,
       description: "lalala",
     },
-    { name: "Aptos", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    { name: "ALPACA", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    { name: "ALPHA", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    { name: "AMPL", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    { name: "ANKR", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    { name: "ANTEX", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    { name: "AOG", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    { name: "APX", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    { name: "APYS", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
   ];
 
   //const [selected, setSelected] = useState({ ...options[0] });
-  const [selected, setSelected] = useState({});
+  //const [selected, setSelected] = useState({});
   //const {setSelected} = useContext(SelectedOptionContext);
   if (!open) return null;
 
@@ -74,13 +81,15 @@ export function ModalCryptoSwap({ open, onClose }) {
           <CryptoModalRadioButtons />
         </div>
         <div className="cryptoList">
-          {options.map((option) => {
+          {options.map((option, index) => {
             return (
               <div
+                key={index}
                 className="cryptoElement"
                 onClick={() => {
-                  setSelected(option.name);
-                  onClose(ModalCryptoSwap(false));
+                  //props.selectedCryptoModal(option.name);
+                  //ModalCryptoSwap(false);
+                  console.log(option.name);
                 }}>
                 <div className="cryptoLogo">{option.img}</div>
                 <div className="cryptoContent">
