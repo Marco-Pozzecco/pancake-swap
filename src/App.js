@@ -25,6 +25,7 @@ import { Info } from "./pages/info/Info";
 import { Ifo } from "./pages/info/ifo/Ifo";
 import { Voting } from "./pages/info/voting/Voting";
 import { LeaderBoard } from "./pages/info/leaderboard/LeaderBoard";
+import { Pottery } from "./pages/win/pottery/Pottery";
 
 export function App() {
   const [theme, setTheme] = useState("theme-dark");
@@ -48,6 +49,7 @@ export function App() {
               <Route path="pools" element={<Pools />} />
               <Route path="trading" element={<TradingCompetition />} />
               <Route path="lottery" element={<Lottery />} />
+              <Route path="pottery" element={<Pottery />} />
 
               <Route path="overview" element={<Overview />} />
               <Route path="collections" element={<Collections />} />

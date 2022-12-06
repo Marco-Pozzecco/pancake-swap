@@ -1,0 +1,12 @@
+.wp-main-container {
+  color: yellow;
+  width: 100%;
+  height: auto;
+  border: 2px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 4px;
+}
