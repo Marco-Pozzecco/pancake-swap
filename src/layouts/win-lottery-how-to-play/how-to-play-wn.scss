@@ -9,7 +9,7 @@
   width: 100%;
   height: auto;
   padding: 14px 0 48px;
-  border: 1px solid red;
+  // border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@
     max-width: 1200px;
     height: 1554px;
     // background-color: rgb(208, 199, 199);
-    border: 1px solid rgb(234, 255, 0);
+    // border: 1px solid rgb(234, 255, 0);
 
     padding: 48px 24px;
 
@@ -27,7 +27,7 @@
       width: 100%;
       height: auto;
       padding: 2px;
-      border: 1px solid rgb(0, 255, 21);
+      // border: 1px solid rgb(0, 255, 21);
 
       .htp-content {
         width: 100%;
@@ -76,7 +76,7 @@
       // ---------
       .htpc-3 {
         // background-color: rgb(71, 71, 249);
-        border: 1px solid rgb(99, 201, 99);
+        // border: 1px solid rgb(99, 201, 99);
         height: auto;
         display: flex;
 
@@ -84,7 +84,7 @@
           width: 70%;
           height: 100%;
           // background-color: yellowgreen;
-          border: 1px solid yellowgreen;
+          // border: 1px solid yellowgreen;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -142,15 +142,14 @@
 
       .htpc-4 {
         // background-color: rgb(121, 121, 244);
-        border: 1px solid rgb(177, 88, 178);
+        // border: 1px solid rgb(177, 88, 178);
         height: auto;
         display: flex;
 
         .htpc-4-text {
-          width: 70%;
+          width: 65%;
           height: 100%;
-          // background-color: yellowgreen;
-          border: 1px solid yellowgreen;
+          // border: 1px solid yellowgreen;
 
           //PROVVISORIO, POI DEVO IMPLEMENTARE DELLE
           //CLASSI GENERICHE PER TUTTI I PARAGRAFI, TITOLI,  COLORI, FONT ETC
@@ -172,15 +171,15 @@
         }
 
         .htpc-4-card {
-          width: 30%;
+          width: 35%;
           height: 100%;
-          border: 1px solid red;
+          // border: 1px solid red;
         }
       }
 
       .htpc-5 {
         height: auto;
-        border: 1px solid rgb(182, 123, 221);
+        // border: 1px solid rgb(182, 123, 221);
 
         display: flex;
         justify-content: center;
