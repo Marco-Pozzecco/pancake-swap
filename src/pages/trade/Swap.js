@@ -14,6 +14,7 @@ import ModalConnectWallet from "../../components/modal-connect-wallet/ModalConne
 import { ConnectWalletBtn } from "../../components/buttons/ConnectWalletBtn";
 import { ThemeContext } from "../../context/ThemeContext";
 import { TimeFrameRadioBtn } from "../../components/buttons/TimeFrameRadioBtn";
+import { Chart } from "chart.js/auto";
 
 //icon
 import { FaCog } from "react-icons/fa";
@@ -38,6 +39,7 @@ import bubbleLight from "../../resources/limit/bubbleSwapLightTheme.svg";
 import btclogo from "../../resources/swap/BTC.png";
 import busdlogo from "../../resources/swap/BUSD-logo.png";
 import { json } from "react-router-dom";
+import { red } from "@mui/material/colors";
 
 export function Swap() {
   const [openModalWallet, setOpenModalWallet] = useState(false);
@@ -46,12 +48,16 @@ export function Swap() {
   const { theme } = useContext(ThemeContext);
   const [isVisible, setVisibile] = useState(false);
   const [visible, setView] = useState(false);
+
+  //Modal Crypto list
   const [openCryptoModal, setOpenModalCrypto] = useState(false);
   const [switchText, setSwitch] = useState(false);
-  const [option, setSelected] = useState("BTC");
+  const [option, setCryptoFromModal] = useState("BNB");
   const [infoMessage, setMessageInfo] = useState(false);
+  const [index, setIndex] = useState(0);
+
   // Financial Graph
-  const [timeframe, setTimeframe] = useState(0);
+  const [timeframe, setTimeframe] = useState("24H");
   const [financialInstrument, setFinancialInstrument] = useState(["bitcoin", "usd"]);
   const [labels, setLabels] = useState([]);
   const [fiPrice, setFiPrice] = useState([]);
@@ -59,7 +65,7 @@ export function Swap() {
   // API
   const API = new CoinGeckoAPI();
   //current date
-  const today = new Date(); //Dec 03, 2022, 04:35 PM //("MMM d, yyyy, HH:mm aaa")
+  const today = new Date(); //Dec 03, 2022, 04:35 PM
   const formattedDate = today.toLocaleString("en-US", {
     month: "short",
     day: "numeric",
@@ -67,43 +73,48 @@ export function Swap() {
     hour: "2-digit",
     minute: "2-digit",
   });
-  console.log(formattedDate);
+  //console.log(formattedDate);
 
   useEffect(() => {
     let days;
+    console.log(option);
 
     if (timeframe === "24H") {
       days = 1;
+      console.log(timeframe);
     } else if (timeframe === "1W") {
       days = 7;
+      console.log(timeframe);
     } else if (timeframe === "1M") {
       days = 30;
+      console.log(timeframe);
     } else {
       days = 365;
+      console.log(timeframe);
     }
 
     try {
       // chiamata API
       API.fetchHystoricalData(days, null, financialInstrument[0], financialInstrument[1])
-        .then((res) => res.json()) // ritorna array [UNIX: number, price: number]
+        .then((res) => res.json())
+        // ritorna array [UNIX: number, price: number]
         .then((json) => {
           setLabels(json.prices.map((row) => row[0])); // set stato labels
           setFiPrice(json.prices.map((row) => row[1])); // set stato fiPrice
+          //console.log(json);
         });
     } catch (e) {
       console.error(e);
     }
-  }, [timeframe, financialInstrument]); //[timeframe, financialInstrument]
+  }, [timeframe, financialInstrument]);
 
-  const contextValue = {
-    option,
-    setSelected,
-  };
+  // const contextValue = {
+  //   option,
+  //   setSelected,
+  // };
 
   const toggleTab = (index) => {
     setTab(index);
-    //console.log(index);
-    console.log(timeframe);
   };
 
   const Msg = () => (
@@ -125,6 +136,17 @@ export function Swap() {
       theme: "light",
     });
 
+  //   window.onload = function(){
+  //     var ctx = document.getElementById("swap-graph").getContext("2d");
+  //     const gradientBg = ctx.createLinearGradient(0, 0, 0, 400);
+  //     gradientBg.addColorStop(1, "rgb(75, 192, 192, 0.1)");
+  //     gradientBg.addColorStop(0, "rgb(75, 192, 192, 0.5)");
+
+  //     window.myLine = new Chart(ctx).Line(lineChartData, {
+  //       backgroundColor: gradientBg
+  //     });
+  // }
+
   return (
     <div className="swap-ext-page">
       <Subnav elements={["Swap", "Limit", "Liquidity", "Perpetual", "Bridge"]} />
@@ -137,16 +159,8 @@ export function Swap() {
                 <div className="jBdktT-topRow">
                   <div className="cryptoTitle">
                     <div className="logoDivGraph">
-                      {switchText === false ? (
-                        <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img>
-                      ) : (
-                        <img src={btclogo} alt="crypto icon" className="iconSize"></img>
-                      )}
-                      {switchText === false ? (
-                        <img src={btclogo} alt="crypto icon" className="iconSize"></img>
-                      ) : (
-                        <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img>
-                      )}
+                      {switchText === false ? <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img> : <img src={btclogo} alt="crypto icon" className="iconSize"></img>}
+                      {switchText === false ? <img src={btclogo} alt="crypto icon" className="iconSize"></img> : <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img>}
                     </div>
                     {switchText === false ? <p>CAKE</p> : <p>BTCB</p>}
                     <p>/</p>
@@ -169,24 +183,12 @@ export function Swap() {
                     <div className="timeFrameRow">
                       <div className="priceRow">
                         <p className="price">3.94</p>
-                        {switchText === false ? (
-                          <p className="cryptoTextGraph">CAKE</p>
-                        ) : (
-                          <p className="cryptoTextGraph">BTCB</p>
-                        )}
+                        {switchText === false ? <p className="cryptoTextGraph">CAKE</p> : <p className="cryptoTextGraph">BTCB</p>}
                         <p className="cryptoTextGraph">/</p>
-                        {switchText === false ? (
-                          <p className="cryptoTextGraph">BTCB</p>
-                        ) : (
-                          <p className="cryptoTextGraph">CAKE</p>
-                        )}
+                        {switchText === false ? <p className="cryptoTextGraph">BTCB</p> : <p className="cryptoTextGraph">CAKE</p>}
                         <p className="priceVariation">+0.014 (0.36%)</p>
                       </div>
-                      <TimeFrameRadioBtn
-                        index={1}
-                        radioGroup={["24H", "1W", "1M", "1Y"]}
-                        onClick={() => setTimeframe()}
-                      />
+                      <TimeFrameRadioBtn radioGroup={["24H", "1W", "1M", "1Y"]} timeFrameState={setTimeframe} />
                     </div>
                     <p className="dateNow">{formattedDate}</p>
                   </div>
@@ -198,16 +200,57 @@ export function Swap() {
                   config={{
                     type: "line",
                     data: {
+                      //labels: ["red", "yellow", "black", "yellow", "black", "red", "yellow", "black", "yellow", "black", "red", "yellow", "black", "yellow", "black"],
                       labels: labels, // string[]
                       datasets: [
                         {
-                          label: "My First Dataset", // omettere
-                          data: fiPrice, //number[]
-                          fill: "start", // string o boolean
-                          borderColor: "rgb(75, 192, 192)", // string
-                          tension: 0.1, // ???
+                          //data: ["30", "25", "34", "44", "25", "31", "27", "34", "37", "35", "30", "35", "34", "44", "45"], //fiPrice, //number[]
+                          data: fiPrice,
+                          fill: "start", // string || boolean
+                          backgroundColor: ["rgb(75, 192, 192, 0.1)"],
+                          borderColor: "#31d0aa", // string
+                          tension: 0, // 0 = straight || 1 = round line
+                          pointHoverBorderColor: "#fff",
+                          pointHoverBackgroundColor: "#31d0aa",
+                          pointHoverRadius: 6,
+                          pointHoverBorderWidth: 3,
+                          pointRadius: 1,
                         },
                       ],
+                    },
+                    options: {
+                      elements: {
+                        point: {
+                          //pointRadius: 0,
+                        },
+                      },
+                      tooltips: {
+                        enabled: true,
+                        intersect: false,
+                      },
+                      scales: {
+                        x: {
+                          //display: false,
+                          grid: {
+                            display: false,
+                            //drawTicks: true,
+                          },
+                        },
+                        y: {
+                          beginAtZero: true,
+                          max: 100,
+                          steps: 3,
+                          display: false,
+                          grid: {
+                            display: false,
+                          },
+                        },
+                      },
+                      plugins: {
+                        legend: {
+                          display: false,
+                        },
+                      },
                     },
                   }}
                 />
@@ -225,83 +268,44 @@ export function Swap() {
                   Stable Swap
                 </div>
               </div>
+
+              {/* ConverterCard */}
               <div className="ConverterCard ">
                 <div className="headerCard">
                   <div className="headerRow">
-                    {visible === false && (
-                      <FaChartBar
-                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
-                        style={{ height: "1.4em", width: "1.4em" }}
-                        onClick={() => setView(true)}
-                      />
-                    )}
-                    {visible === true && (
-                      <BiHide
-                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
-                        style={{ height: "1.4em", width: "1.4em" }}
-                        onClick={() => setView(false)}
-                      />
-                    )}
+                    {visible === false && <FaChartBar fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1.4em", width: "1.4em" }} onClick={() => setView(true)} />}
+                    {visible === true && <BiHide fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1.4em", width: "1.4em" }} onClick={() => setView(false)} />}
                     <h3 className={toggleState === 1 ? "header active-header" : "header"}>Swap</h3>
                     <h3 className={toggleState === 2 ? "header active-header" : "header"}>Stable Swap</h3>
                     <div className="iconHeaderCard">
-                      <FaCog
-                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
-                        style={{ height: "1.4em", width: "1.4em" }}
-                        onClick={() => setOpenModal(true)}
-                      />
-                      <RiHistoryLine
-                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
-                        style={{ height: "1.4em", width: "1.4em" }}
-                        // onClick={setOpenTry()}
-                      />
-                      <AiOutlineReload
-                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
-                        style={{ height: "1.4em", width: "1.4em" }}
-                      />
+                      <FaCog fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1.4em", width: "1.4em" }} onClick={() => setOpenModal(true)} />
+                      <RiHistoryLine fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1.4em", width: "1.4em" }} />
+                      <AiOutlineReload fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1.4em", width: "1.4em" }} />
                     </div>
                   </div>
                   <p className="pg-tx">Trade tokens in an instant</p>
                 </div>
 
+                {/* open modal crypto */}
                 <div className="ext-bottomCard">
                   <div className="bottomCard">
                     <div className="input1Converter">
                       <div
                         className="fx-inline switchCryptoBtn"
+                        passindex={(index) => setIndex(index)}
                         onClick={() => {
                           setOpenModalCrypto(true);
                         }}>
-                        {switchText === false ? (
-                          <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img>
-                        ) : (
-                          <img src={btclogo} alt="crypto icon" className="iconSize"></img>
-                        )}
+                        {switchText === false ? <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img> : <img src={btclogo} alt="crypto icon" className="iconSize"></img>}
                         {switchText === false ? <p>CAKE</p> : <p>BTCB</p>}
-                        {toggleState === 1 && (
-                          <IoIosArrowDown
-                            fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
-                            style={{ height: "1.3em", width: "1.3em" }}
-                          />
-                        )}
-                        {toggleState === 2 && (
-                          <MdContentCopy
-                            fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
-                            style={{ height: "1em", width: "1em" }}
-                          />
-                        )}
+                        {toggleState === 1 && <IoIosArrowDown fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1.3em", width: "1.3em" }} />}
+                        {toggleState === 2 && <MdContentCopy fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1em", width: "1em" }} />}
                       </div>
                       <input placeholder="0.0" className="convertInput"></input>
                     </div>
                     <div className="flex">
                       <button className="arrrowBtn">
-                        {isVisible === false && (
-                          <BiDownArrowAlt
-                            fill="#1fc7d4"
-                            style={{ height: "1.3em", width: "1.3em" }}
-                            onMouseEnter={() => setVisibile(true)}
-                          />
-                        )}
+                        {isVisible === false && <BiDownArrowAlt fill="#1fc7d4" style={{ height: "1.3em", width: "1.3em" }} onMouseEnter={() => setVisibile(true)} />}
                         {isVisible === true && (
                           <HiSwitchVertical
                             fill="#1fc7d4"
@@ -316,24 +320,12 @@ export function Swap() {
                     </div>
                     <div className="input1Converter ">
                       <div className="fx-inline switchCryptoBtn" onClick={() => setOpenModalCrypto(true)}>
-                        {switchText === false ? (
-                          <img src={btclogo} alt="crypto icon" className="iconSize"></img>
-                        ) : (
-                          <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img>
-                        )}
+                        {switchText === false ? <img src={btclogo} alt="crypto icon" className="iconSize"></img> : <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img>}
 
                         {switchText === false ? <p>BTCB</p> : <p>CAKE</p>}
                         {/* <SelectedOptionContext.Provider value={contextValue} /> */}
-                        {toggleState === 1 && (
-                          <IoIosArrowDown
-                            fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
-                            style={{ height: "1.3em", width: "1.3em" }}
-                          />
-                        )}
-                        <MdContentCopy
-                          fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
-                          style={{ height: "1em", width: "1em" }}
-                        />
+                        {toggleState === 1 && <IoIosArrowDown fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1.3em", width: "1.3em" }} />}
+                        <MdContentCopy fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1em", width: "1em" }} />
                       </div>
                       <input placeholder="0.0" className="convertInput"></input>
                     </div>
@@ -352,9 +344,8 @@ export function Swap() {
                         />
                         {infoMessage === true && (
                           <div className="infoRiskMEssage">
-                            The scan result is provided by 3rd parties and may not cover every token. Therefore the
-                            result is for reference only, do NOT take it as investment or financial advice. Always DYOR!
-                            Powered by Hashdit.
+                            The scan result is provided by 3rd parties and may not cover every token. Therefore the result is for reference only, do NOT take it as investment or financial advice.
+                            Always DYOR! Powered by Hashdit.
                           </div>
                         )}
                       </div>
@@ -383,11 +374,7 @@ export function Swap() {
           <div className="extBox-bunnyHelp">
             <div className="bubbleDiv">
               <div className="needHelpBubble">Need Help ?</div>
-              {theme === "theme-dark" ? (
-                <img className="bubbleIcon" src={bubble} alt="bubble icon"></img>
-              ) : (
-                <img className="bubbleIcon" src={bubbleLight} alt="bubble icon"></img>
-              )}
+              {theme === "theme-dark" ? <img className="bubbleIcon" src={bubble} alt="bubble icon"></img> : <img className="bubbleIcon" src={bubbleLight} alt="bubble icon"></img>}
               <div className="helpBunny">
                 <img src={helpBunny} alt="history icon"></img>
               </div>
@@ -412,6 +399,7 @@ export function Swap() {
         }}
       />
       <ModalCryptoSwap
+        selectedCryptoModal={setCryptoFromModal}
         open={openCryptoModal}
         onClose={() => {
           setOpenModalCrypto(false);
@@ -420,12 +408,7 @@ export function Swap() {
       />
 
       <div
-        className={
-          (openModal === true || openModalWallet === true || openCryptoModal === true) &&
-          (document.body.style.overflow = "hidden")
-            ? "overlay overlay-active"
-            : "overlay"
-        }
+        className={(openModal === true || openModalWallet === true || openCryptoModal === true) && (document.body.style.overflow = "hidden") ? "overlay overlay-active" : "overlay"}
         onClick={() => {
           setOpenModal(false);
           setOpenModalWallet(false);

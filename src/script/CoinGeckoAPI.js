@@ -16,13 +16,15 @@ export class CoinGeckoAPI {
   // interval -> string can be omitted
   async fetchHystoricalData(days_range, interval, coin, vs_currency) {
     let response;
-    
+
     if (interval) {
-      response = await fetch(`${this.URL}coins/${coin}/market_chart?vs_currency=${vs_currency}&days=${days_range}&interval=${interval}`)
+      response = await fetch(
+        `${this.URL}coins/${coin}/market_chart?vs_currency=${vs_currency}&days=${days_range}&interval=${interval}`
+      );
     } else {
-      response = await fetch(`${this.URL}coins/${coin}/market_chart?vs_currency=${vs_currency}&days=${days_range}`)
+      response = await fetch(`${this.URL}coins/${coin}/market_chart?vs_currency=${vs_currency}&days=${days_range}`);
     }
-    
-    return response
+
+    return response;
   }
 }

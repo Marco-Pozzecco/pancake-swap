@@ -6,7 +6,7 @@ export function TimeFrameRadioBtn(props) {
 
   const toggleTab = (i) => {
     setIndex(i);
-    console.log(i);
+    //console.log(i);
   };
 
   return (
@@ -14,7 +14,13 @@ export function TimeFrameRadioBtn(props) {
       {props.radioGroup.map((button, index) => {
         return (
           <div className={i === index ? "timeFRBtn timeFRBtn-active" : "timeFRBtn"}>
-            <div key={index} onClick={() => toggleTab(index)}>
+            <div
+              key={index}
+              onClick={() => {
+                toggleTab(index);
+                props.timeFrameState(button);
+                //console.log(button);
+              }}>
               {/* index={index} */}
               {button}{" "}
             </div>
