@@ -12,6 +12,14 @@ export function WinPottery() {
   return (
     <div className="wp-main-container">
       <h1>WinPottery.js</h1>
+      <h1>NON FARE MODIFICHE QUI!</h1>
+      <h3>spostarsi sul ramo: </h3>
+      <p>↓↓↓↓</p>
+
+      <p>↓↓↓↓↓↓↓↓</p>
+      <p>↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓</p>
+      <h1>ref-win-pottery</h1>
+      <p>↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</p>
       <ToBeWon />
       <CurrentPrizePot />
       <FinishedRoundWP />
