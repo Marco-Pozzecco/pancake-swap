@@ -1,0 +1,80 @@
+
+.violetSectionFinishBanner {
+    background-color: rgb(89, 53, 160);
+    padding: 24px;
+    width: fit-content;
+    border-radius: 16px;
+    display: inline-flex;
+    position: absolute;
+    overflow: visible;
+    background: linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+    top: -85px;
+    z-index: 5;
+
+    .violetSectionBannerContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .violetSectionBannerUpperSection {
+            display: flex;
+            align-items: flex-end;
+
+        }
+
+        .violetSectionBannerLowerSection {
+            margin-top: 2px;
+
+        }
+    }
+}
+
+.tradingCompetitionfullButton {
+    color: #191326;
+    background-color: rgb(31, 199, 212);
+    position: relative;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 48px;
+    padding: 0px 24px;
+}
+
+.violetSectionFinished {
+    padding: 0px 10px;
+    font-size: 40px;
+    line-height: 110%;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+    background: linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%) text;
+}
+.violetSectionHempIcon {
+    margin-bottom: 6px;
+    height: 32px;
+    width: auto;
+}
+.violetSectionHempIconYellow {
+    fill: #ffb237;
+}
+.violetSectionHempIconBlack {
+    fill: black;
+}
+.violetSectionHempIconWhite {
+    fill: #f4eeff;
+    height: 20px;
+    width: auto;
+    margin-bottom: 0px;
+}

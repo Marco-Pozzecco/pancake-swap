@@ -74,47 +74,7 @@ export function Swap() {
     hour: "2-digit",
     minute: "2-digit",
   });
-  console.log("render");
-
-  useEffect(() => {
-    setInterval(() => setDate(new Date()), 1000);
-    console.log(formattedDate + " newdate");
-  }, []);
-
-  // API
-  const API = new CoinGeckoAPI();
-
-  useEffect(() => {
-    let days;
-
-    if (timeframe === "24H") {
-      days = 1;
-    } else if (timeframe === "1W") {
-      days = 7;
-    } else if (timeframe === "1M") {
-      days = 30;
-    } else {
-      days = 365;
-    }
-    console.log(timeframe);
-
-    try {
-      // chiamata API
-      API.fetchHystoricalData(days, null, financialInstrument[0], financialInstrument[1])
-        .then((res) => res.json())
-        // ritorna array [UNIX: number, price: number]
-        .then((json) => {
-          setLabels(json.prices.map((row) => row[0])); // set stato labels
-          //setFiPrice(json.prices.map((row) => row[1])); // set stato fiPrice
-          const price1 = json.prices.map((row) => row[1]);
-          setFiPrice(price1);
-          console.log(console.log("label & price"));
-        });
-    } catch (e) {
-      console.error(e);
-    }
-    API.fetchHystoricalData(console.log(fiPrice));
-  }, [timeframe, financialInstrument]);
+  //console.log(formattedDate);
 
   // const contextValue = {
   //   option,
@@ -203,67 +163,7 @@ export function Swap() {
 
                   <div className="timeframeBtn"></div>
                 </div>
-                {labels && (
-                  <Graph
-                    id="swap-graph"
-                    config={{
-                      type: "line",
-                      data: {
-                        //labels: ["red", "yellow", "black", "yellow", "black", "red", "yellow", "black", "yellow", "black", "red", "yellow", "black", "yellow", "black"],
-                        labels: labels, // string[]
-                        datasets: [
-                          {
-                            //data: ["30", "25", "34", "44", "25", "31", "27", "34", "37", "35", "30", "35", "34", "44", "45"], //fiPrice, //number[]
-                            data: fiPrice,
-                            fill: "start", // string || boolean
-                            backgroundColor: ["rgb(75, 192, 192, 0.1)"],
-                            borderColor: "#31d0aa", // string
-                            tension: 0, // 0 = straight || 1 = round line
-                            pointHoverBorderColor: "#fff",
-                            pointHoverBackgroundColor: "#31d0aa",
-                            pointHoverRadius: 6,
-                            pointHoverBorderWidth: 3,
-                            pointRadius: 1,
-                          },
-                        ],
-                      },
-                      options: {
-                        elements: {
-                          point: {
-                            //pointRadius: 0,
-                          },
-                        },
-                        tooltips: {
-                          enabled: true,
-                          intersect: false,
-                        },
-                        scales: {
-                          x: {
-                            //display: false,
-                            grid: {
-                              display: false,
-                              //drawTicks: true,
-                            },
-                          },
-                          y: {
-                            //beginAtZero: true,
-                            //max: true,
-                            steps: 3,
-                            display: false,
-                            grid: {
-                              display: false,
-                            },
-                          },
-                        },
-                        plugins: {
-                          legend: {
-                            display: false,
-                          },
-                        },
-                      },
-                    }}
-                  />
-                )}
+                <Graph id="swap-graph" financialInstrument={financialInstrument} timeframe={timeframe} />
               </div>
             )}
           </section>
