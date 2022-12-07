@@ -1,8 +1,142 @@
 .tbw-main-container {
   width: 100%;
   height: auto;
+  padding: 87px 0 148px 0;
+  background: linear-gradient(rgb(255, 216, 0) 0%, rgb(253, 171, 50) 100%);
   border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .tbw-sub-container {
+    height: 550px;
+    width: 737px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //IMAGE
+    .tbw-image-container {
+      width: 50%;
+      height: 100%;
+
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    //TITLES  ---> MANCA IL COLORE DEL BORDO DEI TITOLI
+    .tbw-titles-container {
+      width: 50%;
+      height: 100%;
+      margin: 0 0 0 46px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .tbw-title-a {
+        width: 100%;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .tbw-title-a1 {
+          font-size: 24px;
+          padding: 0 2px;
+          margin: 0 0 4px 0;
+          color: rgb(255, 255, 255);
+          font-weight: 600;
+          line-height: 1.5;
+        }
+        .tbw-title-a2 {
+          font-size: 32px;
+          padding: 0 2px;
+          margin: 0 0 0 4px;
+          color: rgb(147, 108, 247);
+          font-weight: 600;
+          line-height: 1.5;
+        }
+      }
+
+      .tbw-title-amount {
+        font-size: 64px;
+        color: rgb(154, 106, 255);
+        padding: 0px 2px;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      .tbw-title-b {
+        font-size: 40px;
+        margin: 16px 0 0;
+        color: rgb(40, 13, 95);
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      .tbw-ticket {
+        background-color: rgb(8, 31, 208);
+        width: 100%;
+        height: 25%;
+      }
+
+      .tbw-features {
+        width: 100%;
+        height: auto;
+        margin: 30px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        .tbw-feature {
+          width: 100%;
+          height: auto;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 1.5;
+
+          .tbwf-a {
+            color: rgb(255, 255, 255);
+          }
+          .tbwf-b {
+            color: rgb(40, 13, 95);
+            margin: 0 3px;
+          }
+        }
+      }
+
+      .tbw-countdown-box-wrap {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px dotted white;
+        margin: 32px 0 0 0;
+
+        .tbw-countdown-box {
+          width: 100%;
+          margin: 0 0 3px;
+        }
+        .tbw-countdown-text {
+          width: 100%;
+          font-weight: 600;
+          line-height: 1.5;
+          font-size: 16px;
+          color: white;
+          margin: 0 0 3px;
+        }
+      }
+    }
+  }
+
+  //DA DECOMMENTARE POI - EVENTUALMENTE METTERE POSITION ABSOLUTE e/o Flex-direction column nel main container
+  // .tbw-animations-container {
+  //   width: 100%;
+  //   height: auto;
+  //   background-color: rgb(58, 58, 156);
+  // }
 }
