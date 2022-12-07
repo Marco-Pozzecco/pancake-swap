@@ -1,7 +1,7 @@
 import React from "react";
 import "./_prize-founds-card.scss";
 
-export default function PrizeFoundsCard() {
+export function PrizeFoundsCard() {
   return (
     <div className="pfc-main-container">
       <div className="pfc-sub-container">

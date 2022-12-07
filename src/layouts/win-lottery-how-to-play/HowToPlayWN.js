@@ -1,11 +1,12 @@
 import React from "react";
 import "./how-to-play-wn.scss";
 import { HowToPlayCard } from "./../../components/card/HowToPlayCard";
-import PrizeFoundsCard from "./PrizeFoundsCard";
+import { PrizeFoundsCard } from "./PrizeFoundsCard";
 import { PrizeFoundsText } from "./PrizeFoundsText";
 import { StillGotQuestions } from "./StillGotQuestions";
 import { WinningCriteriaCard } from "./WinningCriteriaCard";
 import { WinningCriteriaText } from "./WinningCriteriaText";
+import { GreyLine } from "../../components/lines/GreyLine";
 
 export function HowToPlayWN() {
   return (
@@ -39,8 +40,9 @@ export function HowToPlayWN() {
               htpsc_text="Once the round’s over, come back to the page and check to see if you’ve won!"
             />
           </div>
+
           {/* ----------------- */}
-          <div className="htp-div-line"></div>
+          <GreyLine />
           {/* ----------------- */}
 
           <div className="htp-content htpc-3">
@@ -51,9 +53,11 @@ export function HowToPlayWN() {
               <WinningCriteriaCard />
             </div>
           </div>
+
           {/* ----------------- */}
-          <div className="htp-div-line"></div>
+          <GreyLine />
           {/* ----------------- */}
+
           <div className="htp-content htpc-4">
             <div className="htpc-4-text">
               <PrizeFoundsText />
@@ -62,9 +66,11 @@ export function HowToPlayWN() {
               <PrizeFoundsCard />
             </div>
           </div>
+
           {/* ----------------- */}
-          <div className="htp-div-line"></div>
+          <GreyLine />
           {/* ----------------- */}
+
           <div className="htp-content htpc-5">
             <StillGotQuestions />
           </div>
