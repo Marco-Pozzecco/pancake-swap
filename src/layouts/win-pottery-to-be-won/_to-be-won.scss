@@ -10,7 +10,9 @@
 
   .tbw-sub-container {
     height: 550px;
-    width: 737px;
+    width: 100%;
+    max-width: 737px;
+
     display: flex;
     justify-content: center;
     align-items: center;
