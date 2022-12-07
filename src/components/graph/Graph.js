@@ -6,37 +6,40 @@ import { CoinGeckoAPI } from "../../script/CoinGeckoAPI";
 
 export function Graph(props) {
   const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isFinished, setIsFinished] = useState(false);
   // API
   const API = new CoinGeckoAPI();
 
   useEffect(() => {
+    // API sync declaration
     async function fetchData() {
-      setIsLoading(true);
       const days = [1, 7, 30, 365];
       const timeframe = ["24H", "1W", "1M", "1Y"];
       
       const response = await API.fetchHystoricalData(days[timeframe.indexOf(props.timeframe)], undefined, props.financialInstrument[0], props.financialInstrument[1]);
-      console.log(response);
+      console.log(props.timeframe, response)
+      
+      // setData(response);
 
-      setData(response);
-      setIsLoading(false);
+      await createChart(response);
     }
-    fetchData();
 
+    setTimeout(() => {
+      fetchData();
+    }, 500)
+    // API Call
     
-    
-    while (isLoading) {
-      const graphEl = document.querySelector(".graph");
-      const headingEl = document.createElement("h1");
-      headingEl.textContent = "Loading.."
-      graphEl.appendChild(headingEl);
-    }
 
     let graph;
 
-    while (data) {
-      const graphEl = document.querySelector(".graph");
+    async function createChart (data) {
+      // query div graph
+      const graphEl = document.querySelector('.graph');
+      // distruzione heading
+      const headingEl = document.getElementById(`${props.id}-title`);
+      graphEl.removeChild(headingEl);
+
+      // creazione grafico
       const canvasEl = document.createElement("canvas");
       
       canvasEl.setAttribute('id', props.id)
@@ -100,18 +103,98 @@ export function Graph(props) {
       });
       
       graph.render();
+    }
 
-    } 
+    const graphEl = document.querySelector(".graph");
+    const headingEl = document.createElement("h1");
+    headingEl.setAttribute('id', `${props.id}-title`);
+    headingEl.textContent = "Loading.."
+    graphEl.appendChild(headingEl);
 
     
 
+    
+    // if (isFinished) {
+    //   const graphEl = document.querySelector(".graph");
+    //   const canvasEl = document.createElement("canvas");
+      
+    //   canvasEl.setAttribute('id', props.id)
+    //   graphEl.appendChild(canvasEl);
+
+    //   graph = new Chart(document.getElementById(props.id), {
+    //     type: "line",
+    //     data: {
+    //       //labels: ["red", "yellow", "black", "yellow", "black", "red", "yellow", "black", "yellow", "black", "red", "yellow", "black", "yellow", "black"],
+    //       labels: data.prices.map((row) => row[0]), // string[]
+    //       datasets: [
+    //         {
+    //           //data: ["30", "25", "34", "44", "25", "31", "27", "34", "37", "35", "30", "35", "34", "44", "45"], //fiPrice, //number[]
+    //           data: data.prices.map((row) => row[1]),
+    //           fill: "start", // string || boolean
+    //           backgroundColor: ["rgb(75, 192, 192, 0.1)"],
+    //           borderColor: "#31d0aa", // string
+    //           tension: 0, // 0 = straight || 1 = round line
+    //           pointHoverBorderColor: "#fff",
+    //           pointHoverBackgroundColor: "#31d0aa",
+    //           pointHoverRadius: 6,
+    //           pointHoverBorderWidth: 3,
+    //           pointRadius: 1,
+    //         },
+    //       ],
+    //     },
+    //     options: {
+    //       elements: {
+    //         point: {
+    //           //pointRadius: 0,
+    //         },
+    //       },
+    //       tooltips: {
+    //         enabled: true,
+    //         intersect: false,
+    //       },
+    //       scales: {
+    //         x: {
+    //           //display: false,
+    //           grid: {
+    //             display: false,
+    //             //drawTicks: true,
+    //           },
+    //         },
+    //         // y: {
+    //         //   beginAtZero: true,
+    //         //   max: 100,
+    //         //   steps: 3,
+    //         //   display: false,
+    //         //   grid: {
+    //         //     display: false,
+    //         //   },
+    //         // },
+    //       },
+    //       plugins: {
+    //         legend: {
+    //           display: false,
+    //         },
+    //       },
+    //     },
+    //   });
+      
+    //   graph.render();
+
+    // } else {
+    //   const graphEl = document.querySelector(".graph");
+    //   const headingEl = document.createElement("h1");
+    //   headingEl.setAttribute('id', `${props.id}-title`);
+    //   headingEl.textContent = "Loading.."
+    //   graphEl.appendChild(headingEl);
+    // }
+
     return () => {
       if (document.querySelector(`#${props.id}`)) {
-        graph.destroy();
-      } else if (document.querySelector('h1')) {
+        return graph.destroy();
+      } else {
         const graphEl = document.querySelector('.graph');
-        const headingEl = document.querySelector('h1')
-        graphEl.removeChild(headingEl);
+        const headingEl = document.getElementById(`${props.id}-title`);
+        return graphEl.removeChild(headingEl);
       }
     }
   }, [props.financialInstrument, props.timeframe ]);
