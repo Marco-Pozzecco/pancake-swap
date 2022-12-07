@@ -25,6 +25,8 @@ export class CoinGeckoAPI {
       response = await fetch(`${this.URL}coins/${coin}/market_chart?vs_currency=${vs_currency}&days=${days_range}`);
     }
 
-    return response;
+    const json = await response.json();
+
+    return json;
   }
 }
