@@ -356,7 +356,13 @@
                   color: var(--text-color);
                   font-size: 14px;
                   z-index: 97;
+                  display: flex;
+                  align-items: center;
+                  box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
                   cursor: pointer;
+                  &:hover {
+                    opacity: 0.5;
+                  }
                 }
                 .infoRisk {
                   z-index: 97;

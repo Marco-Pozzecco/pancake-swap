@@ -24,7 +24,12 @@ export function ModalHistorySwap({ open, onClose }) {
         </div>
 
         <div className="flex-switch">
-          <ConnectWalletBtn type="fullButton button-aqg" action={() => setOpenModalWallet(true)} />
+          <ConnectWalletBtn
+            type="fullButton button-aqg"
+            action={() => {
+              setOpenModalWallet(true);
+            }}
+          />
         </div>
       </div>
       {/* <div
@@ -35,6 +40,7 @@ export function ModalHistorySwap({ open, onClose }) {
           setOpenModalWallet(false);
           document.body.style.overflow = "unset";
         }}></div> */}
+      (
       <ModalConnectWallet
         open={openModalWallet}
         onClose={() => {
@@ -42,6 +48,7 @@ export function ModalHistorySwap({ open, onClose }) {
           document.body.style.overflow = "unset";
         }}
       />
+      )
     </section>
   );
 }

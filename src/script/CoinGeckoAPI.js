@@ -5,9 +5,7 @@ export class CoinGeckoAPI {
     const BaseURL = this.URL;
     const today = Math.round(Date.now() / 1000); // today in seconds UNIX format
 
-    const response = await fetch(
-      `${BaseURL}coins/${coin}/market_chart/range?vs_currency=${vs_currency}&from=${start_date}&to=${today}`
-    ).then((res) => res.json());
+    const response = await fetch(`${BaseURL}coins/${coin}/market_chart/range?vs_currency=${vs_currency}&from=${start_date}&to=${today}`).then((res) => res.json());
 
     return response;
   }
@@ -18,9 +16,7 @@ export class CoinGeckoAPI {
     let response;
 
     if (interval) {
-      response = await fetch(
-        `${this.URL}coins/${coin}/market_chart?vs_currency=${vs_currency}&days=${days_range}&interval=${interval}`
-      );
+      response = await fetch(`${this.URL}coins/${coin}/market_chart?vs_currency=${vs_currency}&days=${days_range}&interval=${interval}`);
     } else {
       response = await fetch(`${this.URL}coins/${coin}/market_chart?vs_currency=${vs_currency}&days=${days_range}`);
     }

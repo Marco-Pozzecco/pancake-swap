@@ -63,37 +63,40 @@ export function Swap() {
   const [financialInstrument, setFinancialInstrument] = useState(["bitcoin", "usd"]);
   const [labels, setLabels] = useState([]);
   const [fiPrice, setFiPrice] = useState([]);
+  const [date, setDate] = useState(new Date());
 
-  // API
-  const API = new CoinGeckoAPI();
   //current date
-  const today = new Date(); //Dec 03, 2022, 04:35 PM
-  const formattedDate = today.toLocaleString("en-US", {
+  //const today = new Date(); //Dec 03, 2022, 04:35 PM
+  const formattedDate = date.toLocaleString("en-US", {
     month: "short",
     day: "numeric",
     year: "numeric",
     hour: "2-digit",
     minute: "2-digit",
   });
-  //console.log(formattedDate);
+  console.log("render");
+
+  useEffect(() => {
+    setInterval(() => setDate(new Date()), 1000);
+    console.log(formattedDate + " newdate");
+  }, []);
+
+  // API
+  const API = new CoinGeckoAPI();
 
   useEffect(() => {
     let days;
-    console.log(option);
 
     if (timeframe === "24H") {
       days = 1;
-      console.log(timeframe);
     } else if (timeframe === "1W") {
       days = 7;
-      console.log(timeframe);
     } else if (timeframe === "1M") {
       days = 30;
-      console.log(timeframe);
     } else {
       days = 365;
-      console.log(timeframe);
     }
+    console.log(timeframe);
 
     try {
       // chiamata API
@@ -102,12 +105,15 @@ export function Swap() {
         // ritorna array [UNIX: number, price: number]
         .then((json) => {
           setLabels(json.prices.map((row) => row[0])); // set stato labels
-          setFiPrice(json.prices.map((row) => row[1])); // set stato fiPrice
-          //console.log(json);
+          //setFiPrice(json.prices.map((row) => row[1])); // set stato fiPrice
+          const price1 = json.prices.map((row) => row[1]);
+          setFiPrice(price1);
+          console.log(console.log("label & price"));
         });
     } catch (e) {
       console.error(e);
     }
+    API.fetchHystoricalData(console.log(fiPrice));
   }, [timeframe, financialInstrument]);
 
   // const contextValue = {
@@ -197,65 +203,67 @@ export function Swap() {
 
                   <div className="timeframeBtn"></div>
                 </div>
-                <Graph
-                  id="swap-graph"
-                  config={{
-                    type: "line",
-                    data: {
-                      //labels: ["red", "yellow", "black", "yellow", "black", "red", "yellow", "black", "yellow", "black", "red", "yellow", "black", "yellow", "black"],
-                      labels: labels, // string[]
-                      datasets: [
-                        {
-                          //data: ["30", "25", "34", "44", "25", "31", "27", "34", "37", "35", "30", "35", "34", "44", "45"], //fiPrice, //number[]
-                          data: fiPrice,
-                          fill: "start", // string || boolean
-                          backgroundColor: ["rgb(75, 192, 192, 0.1)"],
-                          borderColor: "#31d0aa", // string
-                          tension: 0, // 0 = straight || 1 = round line
-                          pointHoverBorderColor: "#fff",
-                          pointHoverBackgroundColor: "#31d0aa",
-                          pointHoverRadius: 6,
-                          pointHoverBorderWidth: 3,
-                          pointRadius: 1,
-                        },
-                      ],
-                    },
-                    options: {
-                      elements: {
-                        point: {
-                          //pointRadius: 0,
-                        },
+                {labels && (
+                  <Graph
+                    id="swap-graph"
+                    config={{
+                      type: "line",
+                      data: {
+                        //labels: ["red", "yellow", "black", "yellow", "black", "red", "yellow", "black", "yellow", "black", "red", "yellow", "black", "yellow", "black"],
+                        labels: labels, // string[]
+                        datasets: [
+                          {
+                            //data: ["30", "25", "34", "44", "25", "31", "27", "34", "37", "35", "30", "35", "34", "44", "45"], //fiPrice, //number[]
+                            data: fiPrice,
+                            fill: "start", // string || boolean
+                            backgroundColor: ["rgb(75, 192, 192, 0.1)"],
+                            borderColor: "#31d0aa", // string
+                            tension: 0, // 0 = straight || 1 = round line
+                            pointHoverBorderColor: "#fff",
+                            pointHoverBackgroundColor: "#31d0aa",
+                            pointHoverRadius: 6,
+                            pointHoverBorderWidth: 3,
+                            pointRadius: 1,
+                          },
+                        ],
                       },
-                      tooltips: {
-                        enabled: true,
-                        intersect: false,
-                      },
-                      scales: {
-                        x: {
-                          //display: false,
-                          grid: {
-                            display: false,
-                            //drawTicks: true,
+                      options: {
+                        elements: {
+                          point: {
+                            //pointRadius: 0,
                           },
                         },
-                        y: {
-                          beginAtZero: true,
-                          max: 100,
-                          steps: 3,
-                          display: false,
-                          grid: {
+                        tooltips: {
+                          enabled: true,
+                          intersect: false,
+                        },
+                        scales: {
+                          x: {
+                            //display: false,
+                            grid: {
+                              display: false,
+                              //drawTicks: true,
+                            },
+                          },
+                          y: {
+                            //beginAtZero: true,
+                            //max: true,
+                            steps: 3,
+                            display: false,
+                            grid: {
+                              display: false,
+                            },
+                          },
+                        },
+                        plugins: {
+                          legend: {
                             display: false,
                           },
                         },
                       },
-                      plugins: {
-                        legend: {
-                          display: false,
-                        },
-                      },
-                    },
-                  }}
-                />
+                    }}
+                  />
+                )}
               </div>
             )}
           </section>
