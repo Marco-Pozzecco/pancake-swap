@@ -1,0 +1,30 @@
+// Use rules
+
+@use "sass:map";
+
+// Import rules
+@import "../../abstracts/mixins";
+@import "../../abstracts/colors";
+
+
+.radioBtn{
+    border-radius: 16px;
+    background-color: var(--tab-bg);
+    padding:  2px 16px;
+    margin-right: 10px;
+    color: $main-buttons-background-color;
+    cursor: pointer;
+    &:hover{
+        opacity: .5;
+    }
+}
+.radioBtn-active{
+    background-color: $main-buttons-background-color;
+    color: var(--text-color);
+
+}
+.messageError{
+    color: var(--status-warning);
+    font-size: 14px;
+    margin-top: 5px;
+}

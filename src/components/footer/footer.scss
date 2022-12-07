@@ -83,7 +83,6 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
   &-Firstbar {
     display: none;
   }
-
   &-Sub {
     flex-wrap: wrap;
     display: flex;
@@ -141,19 +140,20 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
 
     display: flex;
     flex-direction: row;
-    gap: 2%;
-    margin-top: 3%;
-    margin-left: 22.25%;
+    gap: 20px;
+    margin-top: 1px;
     align-self: start;
     width: 60%;
     border-bottom: #342f3b solid 0.5px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-bottom: 2rem;
   }
 
   &-Latestbar {
     width: 90%;
-    height: 10px;
+    height: 100%;
     margin-left: 5.2%;
-    margin-top: 1.5%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -286,8 +286,6 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
 
 @media screen and (max-width: 810px) {
   .Container-Footer-Icons {
-    margin-left: 5%;
-    gap: 5%;
   }
 }
 
@@ -357,14 +355,11 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
       &-All {
         margin-bottom: 25px;
       }
-
-      margin-top: 5rem;
       margin-bottom: 3rem;
-      align-self: flex-start;
-      width: 85%;
+      width: 100%;
       height: 45px;
-      margin-left: 30px;
       border-bottom: #342f3b solid 0.5px;
+      margin-left: -3rem;
     }
 
     &-Latestbar {
@@ -394,5 +389,53 @@ $theme-light: map.set($theme-light, "fa-sun", #f39c12);
 @media screen and (max-width: 405px) {
   .mobilefooter {
     width: 38%;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .Container-Footer-Latestbar {
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .Container-Footer-Sub-PancakeSwapLogo {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 1850px) {
+  .Container-Footer-Icons {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 1570px) {
+  .Container-Footer-Icons {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1390px) {
+  .Container-Footer-Icons {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .Container-Footer-Icons {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .Container-Footer-Icons {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .Container-Footer-Icons {
+    width: 100%;
   }
 }

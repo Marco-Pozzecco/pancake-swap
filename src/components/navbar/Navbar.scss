@@ -96,20 +96,24 @@ li a {
 }
 
 .menu-nav li {
-
   &:hover,
   &:focus {
     background-color: var(--hover-nav-ul);
-    border-radius: 0px;
+    border-radius: 15px;
 
-    &:not(:last-child, :first-child) {
-      border-radius: 5px;
+    &:last-child {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+    &:first-child {
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
     }
   }
 
   ul li:hover {
     background-color: var(--hover-nav-ul);
-    border-radius: 15%;
+    //border-radius: 15px;
   }
 }
 
@@ -159,7 +163,6 @@ nav {
 
       .active {
         color: $secondary-dk;
-
       }
 
       p {
@@ -200,8 +203,8 @@ nav {
             transition: opacity 200ms easy-in-out;
 
             li.line-dd {
-              border-bottom: 1px solid $input-color;
-              border-top: 1px solid $input-color;
+              border-bottom: 1px solid var(--dropdown-line);
+              border-top: 1px solid var(--dropdown-line);
             }
           }
         }
@@ -233,8 +236,10 @@ nav {
       // }
 
       .btn-gear {
-        border: none;
-        background-color: transparent;
+        // border: none;
+        // background-color: transparent;
+        cursor: pointer;
+        z-index: 98;
 
         i {
           color: $primary-color;
@@ -256,7 +261,6 @@ nav {
 }
 
 .fa-svg-icon {
-
   // fill: $secondary-color;
   &:hover {
     color: rgb(154, 106, 255, 30%);
@@ -281,7 +285,7 @@ nav {
 
 .overlay-active {
   opacity: 1;
-  z-index: 99;
+  z-index: 98;
 }
 
 //update untill now
@@ -290,7 +294,6 @@ nav {
   nav {
     .extern-box {
       .flex {
-
         #money,
         .igZcUN,
         .menu-nav-ul,
@@ -306,8 +309,8 @@ nav {
   nav {
     .extern-box {
       .flex {
-        //width: 60%;
-        //padding-right: 10px;
+        // width: 100%;
+        // padding-right: 30px;
 
         #money,
         .igZcUN,
@@ -315,10 +318,16 @@ nav {
         .mini-logo {
           display: none;
         }
-
-        .mobile-icon,
         .logoBunny {
           display: inline;
+        }
+        .PancakeLogo {
+          display: none;
+        }
+
+        .mobile-icon,
+        .pancakeicon {
+          display: none;
         }
 
         #main-logo {

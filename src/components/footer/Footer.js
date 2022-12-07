@@ -88,12 +88,7 @@ export function Footer() {
                             </div>
                             <div id="firstbar-left" className="Container-Footer-Latestbar-Left">
                                 <div>
-                                    <input type="checkbox" className="checkbx3" id="chk3" />
-                                    <label className="label3" for="chk3">
-                                        <i className="fa-regular fa-moon"></i>
-                                        <i className="fas fa-sun"></i>
-                                        <div className="ball3 circle-toggle"></div>
-                                    </label>
+                                    <ToggleTheme />
                                 </div>
                                 <div className="language">
                                     <svg
@@ -206,15 +201,15 @@ export function Footer() {
                         <div className="Container-Footer-Sub-PancakeSwapLogo">
                             <img src={fpancakelogo} alt="" />
                         </div>
-                    </div>
-                    <div className="Container-Footer-Icons">
-                        <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-Twitter" src={Twitter} alt="" />
-                        <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-Telegram" src={Telegram} alt="" />
-                        <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-Reddit" src={Reddit} alt="" />
-                        <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-Instagram" src={Instagram} alt="" />
-                        <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-GitHub" src={github} alt="" />
-                        <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-Discord" src={discord} alt="" />
-                        <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-Medium" src={Medium} alt="" />
+                        <div className="Container-Footer-Icons">
+                            <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-Twitter" src={Twitter} alt="" />
+                            <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-Telegram" src={Telegram} alt="" />
+                            <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-Reddit" src={Reddit} alt="" />
+                            <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-Instagram" src={Instagram} alt="" />
+                            <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-GitHub" src={github} alt="" />
+                            <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-Discord" src={discord} alt="" />
+                            <img className="Container-Footer-Icons-All" id="Container-Footer-Icons-Medium" src={Medium} alt="" />
+                        </div>
                     </div>
                     <div className="Container-Footer-Latestbar">
                         <div className="Container-Footer-Latestbar-Left">

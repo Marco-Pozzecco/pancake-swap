@@ -1,0 +1,31 @@
+// Use rules
+
+@use "sass:map";
+
+// Import rules
+@import "../../abstracts/mixins";
+@import "../../abstracts/colors";
+
+.cryptoBtn {
+  width: 85px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid var(--background-disabled);
+  border-radius: 10px;
+  //background-color: var(--tab-bg);
+  padding: 6px;
+
+  color: var(--text-color);
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+    background-color: var(--background-primary);
+  }
+}
+.cryptologo {
+  width: 22px;
+  height: 22px;
+}
+.cryptoBtn-active {
+  color: var(--text-disabled);
+}

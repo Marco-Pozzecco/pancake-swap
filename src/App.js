@@ -26,6 +26,8 @@ import { Ifo } from "./pages/info/ifo/Ifo";
 import { Voting } from "./pages/info/voting/Voting";
 import { LeaderBoard } from "./pages/info/leaderboard/LeaderBoard";
 
+import { ToastContainer } from "react-toastify";
+
 export function App() {
   const [theme, setTheme] = useState("theme-dark");
 

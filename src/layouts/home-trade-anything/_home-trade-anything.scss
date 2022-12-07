@@ -1,5 +1,5 @@
 // Use rules
-@use "../../components/buttons/Buttons.scss";
+@use "../../components/buttons/buttons";
 @use "sass:map";
 
 // Import rules
@@ -87,7 +87,7 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
 }
 
 .usedbyColors {
-  fill: #201335;
+  fill: var(--usedby-colors-trade);
   background: var(--background-trade);
   width: 100%;
 }
@@ -362,5 +362,31 @@ $theme-light: map.set($theme-light, "text", "header3-text", rgb(122, 110, 170));
 
   .usedbyColors {
     width: 150%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .ta-contents-section {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .earnColors {
+    margin-top: -1px;
+  }
+
+  .usedbyColors {
+    margin-top: -1px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .earnColors {
+    margin-top: -7px;
+  }
+
+  .usedbyColors {
+    width: 200%;
   }
 }

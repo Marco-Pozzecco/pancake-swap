@@ -17,7 +17,6 @@ import { IoIosGlobe } from "react-icons/io";
 export function Navbar() {
   const [openModal, setOpenModal] = useState(false);
   const [openModalWallet, setOpenModalWallet] = useState(false);
-  //const [theme, setLogo] = useState(false);
 
   const { theme } = useContext(ThemeContext);
 
@@ -26,7 +25,9 @@ export function Navbar() {
       <nav>
         <div className="extern-box">
           <div className="flex">
-            <Link to="/">{theme === "theme-dark" ? <img alt="" src={logoWhite} /> : <img alt="" src={logo} />}</Link>
+            <Link className="PancakeLogo" to="/">
+              {theme === "theme-dark" ? <img alt="" src={logoWhite} /> : <img alt="" src={logo} />}
+            </Link>
 
             <NavLink to="/">
               <img src={logoBunny} alt="logo bunny" className="logoBunny"></img>
@@ -134,7 +135,7 @@ export function Navbar() {
             </ul>
           </div>
           <section className="flex">
-            <div style={{ padding: "10px" }}>
+            <div>
               <svg
                 viewBox="0 0 96 96"
                 width="24px"
@@ -171,7 +172,7 @@ export function Navbar() {
               </svg>
             </div>
             <div id="money">
-              <p>$4.357</p>
+              <p>$3.383</p>
             </div>
             <div className="language">
               {theme === "theme-dark" ? (
@@ -214,26 +215,57 @@ export function Navbar() {
               </div>
             </div>
             {theme === "theme-dark" ? (
-              <FaCog fill="#b8add2" onClick={() => setOpenModal(true)} style={{ height: "1.2em", width: "1.2em" }} />
+              <FaCog
+                fill="#b8add2"
+                onClick={() => setOpenModal(true)}
+                style={{ height: "1.2em", width: "1.2em" }}
+                className="btn-gear"
+              />
             ) : (
-              <FaCog fill="#7a6eaa" onClick={() => setOpenModal(true)} style={{ height: "1.2em", width: "1.2em" }} />
+              <FaCog
+                fill="#7a6eaa"
+                onClick={() => setOpenModal(true)}
+                style={{ height: "1.2em", width: "1.2em" }}
+                className="btn-gear"
+              />
             )}
 
             <DropdownCrypto />
             <div>
-              <ConnectWalletBtn type="fullButton button-aquagreen" action={() => setOpenModalWallet(true)} />
+              <ConnectWalletBtn
+                className=""
+                type="fullButton button-aquagreen"
+                action={() => setOpenModalWallet(true)}
+              />
             </div>
           </section>
         </div>
       </nav>
-      <ModalConnectWallet open={openModalWallet} onClose={() => setOpenModalWallet(false)} />
-      <HpModalSettings open={openModal} onClose={() => setOpenModal(false)} />
+      <ModalConnectWallet
+        open={openModalWallet}
+        onClose={() => {
+          setOpenModalWallet(false);
+          document.body.style.overflow = "unset";
+        }}
+      />
+      <HpModalSettings
+        open={openModal}
+        onClose={() => {
+          setOpenModal(false);
+          document.body.style.overflow = "unset";
+        }}
+      />
 
       <div
-        className={openModal === true || openModalWallet === true ? "overlay overlay-active" : "overlay"}
+        className={
+          (openModal === true || openModalWallet === true) && (document.body.style.overflow = "hidden")
+            ? "overlay overlay-active"
+            : "overlay"
+        }
         onClick={() => {
           setOpenModal(false);
           setOpenModalWallet(false);
+          document.body.style.overflow = "unset";
         }}></div>
     </div>
   );
