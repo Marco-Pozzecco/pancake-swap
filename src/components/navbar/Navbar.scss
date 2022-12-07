@@ -281,10 +281,12 @@ nav {
   transition: 200ms ease-in-out;
   //z-index: 99;
   opacity: 0;
+  visibility: hidden;
 }
 
 .overlay-active {
   opacity: 1;
+  visibility: visible;
   z-index: 98;
 }
 
