@@ -1,7 +1,11 @@
 import React from "react";
+import { UntilTheDrawCD } from "../../components/count-down/until-the-draw-countdown/UntilTheDrawCD";
 import "./_get-your-tickets.scss";
 
 export function GetYourTickets() {
+  //COUNTDOWN DEADLINE DATE
+  const deadlineDate = "December 27 2022";
+
   return (
     <section className="gyt-section">
       <div className="gyt-main-container">
@@ -9,46 +13,11 @@ export function GetYourTickets() {
           <div className="gyt-header">
             <h2 className="gyt-h-title-a">Get your tickets now!</h2>
 
-            <div className="countdown-placeholder">
-              <span>23h 15m</span>
-              <span className="gyt-h-title-b">until the draw</span>
+            <div className="countdown-box">
+              <UntilTheDrawCD deadline={deadlineDate} />
             </div>
           </div>
-
-          {/* CREARE QUESTA CARD COME COMPONENTE ESTERNO E IMPORTARLO */}
-          <div className="gyt-body">
-            <div className="gyt-body-sc">
-              <div className="gytb-header">
-                <h3>Next Draw</h3>
-                <p>#732 | Draw: Nov 29, 2022, 1:00 PM</p>
-              </div>
-
-              <div className="gytb-body">
-                <div className="gytb-body-grid">
-                  <div className="gytb-b-grid-section gytb-bgs-item-a1">
-                    TITOLI
-                  </div>
-                  <div className="gytb-b-grid-section gytb-bgs-item-a2">
-                    {" "}
-                    TIIIIITOOOOLLIIIIII
-                  </div>
-
-                  <div className="gytb-b-grid-section gytb-bgs-item-b1">
-                    TITOLI
-                  </div>
-                  <div className="gytb-b-grid-section gytb-bgs-item-b2">
-                    TIIIIITOOOOLLIIIIII
-                  </div>
-                </div>
-              </div>
-
-              <div className="gytb-footer">
-                <button>PACEHOLDER DETAILS</button>
-              </div>
-
-              {/* ------------------- */}
-            </div>
-          </div>
+          <div className="gyt-body">CARD</div>
         </div>
       </div>
     </section>

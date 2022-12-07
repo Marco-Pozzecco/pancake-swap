@@ -41,6 +41,7 @@
         font-size: 40px;
         color: rgb(147, 108, 247);
         text-align: center;
+        border: 1px solid chartreuse;
       }
 
       .ccp-title-b {
@@ -59,8 +60,13 @@
 
       //CARD
       .ccp-card-container {
-        background-color: rgba(125, 199, 21, 0.368);
         width: 50%;
+        height: 100%;
+        border: 1px solid chartreuse;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
       }
 
       //IMAGE

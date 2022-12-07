@@ -1,6 +1,6 @@
 import React from "react";
 import "./how-to-play-wn.scss";
-import { HowToPlayCard } from "./HowToPlayCard";
+import { HowToPlayCard } from "./../../components/card/HowToPlayCard";
 import PrizeFoundsCard from "./PrizeFoundsCard";
 import { PrizeFoundsText } from "./PrizeFoundsText";
 import { StillGotQuestions } from "./StillGotQuestions";
@@ -43,9 +43,6 @@ export function HowToPlayWN() {
           <div className="htp-div-line"></div>
           {/* ----------------- */}
 
-          {/* // */}
-          {/* // */}
-          {/* // */}
           <div className="htp-content htpc-3">
             <div className="htpc-3-text">
               <WinningCriteriaText />
@@ -54,17 +51,9 @@ export function HowToPlayWN() {
               <WinningCriteriaCard />
             </div>
           </div>
-          {/* // */}
-          {/* // */}
-          {/* // */}
           {/* ----------------- */}
           <div className="htp-div-line"></div>
           {/* ----------------- */}
-          {/* // */}
-          {/* // */}
-          {/* // */}
-          {/* // */}
-          {/* // */}
           <div className="htp-content htpc-4">
             <div className="htpc-4-text">
               <PrizeFoundsText />
@@ -73,11 +62,6 @@ export function HowToPlayWN() {
               <PrizeFoundsCard />
             </div>
           </div>
-          {/* // */}
-          {/* // */}
-          {/* // */}
-          {/* // */}
-          {/* // */}
           {/* ----------------- */}
           <div className="htp-div-line"></div>
           {/* ----------------- */}

@@ -11,7 +11,7 @@ export function FinishedRoundWN() {
             <h2 className="frc-a-title">Finished Rounds</h2>
             <button className="frc-a-button">SWITCH - BUTTON</button>
           </div>
-          <div className="fr-content frc-b"></div>
+          <div className="fr-content frc-b">CARD</div>
         </div>
       </div>
     </section>

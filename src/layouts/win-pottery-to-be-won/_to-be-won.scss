@@ -112,25 +112,11 @@
 
       .tbw-countdown-box-wrap {
         width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        height: 45px;
         border-bottom: 1px dotted white;
         margin: 32px 0 0 0;
-
-        .tbw-countdown-box {
-          width: 100%;
-          margin: 0 0 3px;
-        }
-        .tbw-countdown-text {
-          width: 100%;
-          font-weight: 600;
-          line-height: 1.5;
-          font-size: 16px;
-          color: white;
-          margin: 0 0 3px;
-        }
+        padding: 2px;
+        border: 2px solid rgb(212, 16, 199);
       }
     }
   }

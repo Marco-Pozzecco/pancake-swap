@@ -1,7 +1,11 @@
 import React from "react";
+import { UntilTheDrawCD } from "../../components/count-down/until-the-draw-countdown/UntilTheDrawCD";
 import "./_to-be-won.scss";
 
 export function ToBeWon() {
+  //COUNTDOWN DEADLINE DATE
+  const deadlineDate = "December 27 2022";
+
   return (
     <section className="tbw-main-container">
       <div className="tbw-sub-container">
@@ -33,10 +37,7 @@ export function ToBeWon() {
           </div>
 
           <div className="tbw-countdown-box-wrap">
-            <div className="tbw-countdown-box">
-              <button>COUNTDOWN</button>
-            </div>
-            <div className="tbw-countdown-text">until the next draw</div>
+            <UntilTheDrawCD deadline={deadlineDate} />
           </div>
         </div>
       </div>
