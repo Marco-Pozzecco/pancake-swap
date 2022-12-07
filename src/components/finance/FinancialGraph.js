@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { BiCaretDown, BiSliderAlt } from "react-icons/bi";
 import { AdvancedChart } from "react-tradingview-embed";
-import { fetchModule } from "../../script/fetchModule";
+import { fetchModule } from "../../script/CoinGeckoAPI";
 import { Button } from "../buttons/Button";
 import { PerpetualItem } from "../container/PerpetualItem";
 
@@ -11,9 +11,13 @@ export function FinancialGraph() {
   const fetcher = new fetchModule();
 
   useEffect(() => {
-    let data = fetcher.fetchHystoricalData(Math.round((Date.now() - 2_629_743_000) / 1000), "bitcoin", "usd");
+    let data = fetcher.fetchHystoricalData(
+      Math.round((Date.now() - 2_629_743_000) / 1000),
+      "bitcoin",
+      "usd"
+    );
     console.log(data);
-  })
+  });
   // moment.unix(1454521239279/1000).format("DD MMM YYYY hh:mm a")
   // closings.map(x => [x[0], moment.unix(parseInt(x[1]) / 1000).format("DD MM YYYY hh:mm:ss"))
 
@@ -46,7 +50,7 @@ export function FinancialGraph() {
         </div>
       </div>
       <div className="graph-body">
-        <AdvancedChart 
+        <AdvancedChart
           widgetProps={{
             height: "100%",
             autosize: true,
@@ -61,7 +65,7 @@ export function FinancialGraph() {
             withdateranges: true,
             hide_top_toolbar: true,
             hide_side_toolbar: false,
-            allow_symbol_change: true
+            allow_symbol_change: true,
           }}
         />
       </div>
