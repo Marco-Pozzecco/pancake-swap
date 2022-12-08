@@ -1,95 +1,93 @@
 @import "../../abstracts/theme";
-
+@import "./marginratio";
 $graph-bar-height: 30px;
 
 body {
-    background-color: var(--background-perpetual);
+  background-color: var(--background-perpetual);
 }
 
 .perpetual-item {
-    box-sizing: border-box;
-    color: white;
-    margin: 0px;
-    min-width: 0px;
-    border-radius: 16px;
-    box-shadow: rgb(64, 51, 84) 0px 2px 0px;
-    width: 100%;
-    position: relative;
-    height: 100%;
-    overflow: hidden auto;
-    background-color: var(--background-perpetual-item);
+  box-sizing: border-box;
+  color: white;
+  margin: 0px;
+  min-width: 0px;
+  border-radius: 16px;
+  box-shadow: var(--colors-cardBorder) 0px 2px 0px;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  overflow: hidden auto;
+  background-color: var(--colors-usedbt-card);
 }
 
 // Typography
 .perpetual-text-subtle {
-    margin: 0;
+  margin: 0;
 }
 
 .perpetual-text-value {
-    margin: 0;
+  margin: 0;
 }
 
 .graph {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    
-    .graph-bar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        height: $graph-bar-height;
-        padding: 5px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-        .generalButtonRules {
-            padding: 0;
-            margin: 5px;
-            font-size: 80%;
-            color: var(--background-perpetual);
-        }
-
-    }
-    
-    .graph-body {
-        overflow: hidden;
-    }
-}
-
-.fis-bar {
+  .graph-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
-    .fis-title {
-        margin: 0;
+    height: $graph-bar-height;
+    padding: 5px 20px;
+
+    .generalButtonRules {
+      padding: 0;
+      margin: 5px;
+      font-size: 80%;
+      color: var(--background-perpetual);
+    }
+  }
+
+  .graph-body {
+    overflow: hidden;
+  }
+}
+
+.fis-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .fis-title {
+    margin: 0;
+  }
+
+  .fis-price-positive {
+  }
+
+  .fis-price-negative {
+  }
+
+  .fis-menu {
+    display: flex;
+    flex-direction: row;
+
+    .instrument-selector {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      margin-right: 10px;
+      border-right: 1px solid gray;
     }
 
-    .fis-price-positive {}
+    .stat {
+      display: flex;
+      flex-direction: column;
 
-    .fis-price-negative {}
-
-    
-
-    .fis-menu {
-        display: flex;
-        flex-direction: row;
-        
-
-        .instrument-selector {
-            display: flex;
-            flex-direction: row;
-            align-items: baseline;
-            margin-right: 10px;
-            border-right: 1px solid gray;
-        }
-
-        .stat {
-            display: flex;
-            flex-direction: column;
-
-            margin: 0 5px;
-        }
+      margin: 0 5px;
     }
+  }
 }
