@@ -1,0 +1,93 @@
+.tr-tc-main-container {
+  width: 100%;
+  height: auto;
+  border: 2px solid red;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 64px 0;
+
+  .tr-tc-main-svg-container {
+    width: 100%;
+    border: 1px solid chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tr-tc-sub-container {
+    background-color: rgba(240, 248, 255, 0.219);
+    width: 100%;
+    max-width: 1200px;
+    // height: auto;
+    height: 605px;
+    padding: 48px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //RANK ----------------------------------------------------
+    .tr-tc-rank-box {
+      width: 35%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 40px 0 0;
+
+      .tr-tc-podium-rank {
+        background-color: rgba(71, 61, 139, 0.269);
+        height: 60%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .trtc-pr-images-wrapper {
+          height: 100%;
+          width: 100%;
+          border: 2px solid rgb(2, 2, 255);
+        }
+        .tr-tc-pr-data-wrapper {
+          height: 100px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid rgb(255, 2, 44);
+        }
+      }
+
+      .tr-tc-partecipants {
+        background-color: rgba(27, 63, 33, 0.269);
+        height: 40%;
+        width: 100%;
+        position: relative;
+
+        //RIVEDERE SE L HO ANNIDATO NEL POSTO GIUSTO
+        .trtc-ttb-elelement-wrapper {
+          width: 100%;
+          height: 144px;
+          background-color: black;
+        }
+        .trtc-ttb-img-wrapper {
+          width: 50px;
+        }
+      }
+    }
+
+    //CARD ----------------------------------------------------
+    .tr-tc-top-traders-box {
+      width: 55%;
+      height: 100%;
+      border: 1px solid chartreuse;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
