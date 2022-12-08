@@ -1,23 +1,15 @@
-import { useEffect } from "react";
+// React
+import { useState } from "react";
+// Icons
 import { BiCaretDown, BiSliderAlt } from "react-icons/bi";
+// external libraries 
 import { AdvancedChart } from "react-tradingview-embed";
-import { fetchModule } from "../../script/CoinGeckoAPI";
+// internal components
 import { Button } from "../buttons/Button";
 import { PerpetualItem } from "../container/PerpetualItem";
 
 export function FinancialGraph() {
-  const data = {};
-
-  const fetcher = new fetchModule();
-
-  useEffect(() => {
-    let data = fetcher.fetchHystoricalData(
-      Math.round((Date.now() - 2_629_743_000) / 1000),
-      "bitcoin",
-      "usd"
-    );
-    console.log(data);
-  });
+  const [timeframe, setTimeframe] = useState('D');
   // moment.unix(1454521239279/1000).format("DD MMM YYYY hh:mm a")
   // closings.map(x => [x[0], moment.unix(parseInt(x[1]) / 1000).format("DD MM YYYY hh:mm:ss"))
 
@@ -30,11 +22,11 @@ export function FinancialGraph() {
             text="Time"
             style={{ margin: 0 + "px" }}
           />
-          <Button type="noBorderButton" text="15m" />
-          <Button type="noBorderButton" text="1H" />
-          <Button type="noBorderButton" text="4H" />
-          <Button type="noBorderButton" text="1D" />
-          <Button type="noBorderButton" text="1W" />
+          <Button type="noBorderButton" text="15m" onClick={() => setTimeframe("15m")} />
+          <Button type="noBorderButton" text="1H" onClick={() => setTimeframe("1H")} />
+          <Button type="noBorderButton" text="4H" onClick={() => setTimeframe("4H")} />
+          <Button type="noBorderButton" text="1D" onClick={() => setTimeframe("D")} />
+          <Button type="noBorderButton" text="1W" onClick={() => setTimeframe("W")} />
           <BiCaretDown />
           <BiSliderAlt />
           <Button
@@ -55,7 +47,7 @@ export function FinancialGraph() {
             height: "100%",
             autosize: true,
             symbol: "BINANCE:CAKEBNB",
-            interval: "D",
+            interval: timeframe,
             timezone: "UTC",
             theme: "dark",
             style: "1",
