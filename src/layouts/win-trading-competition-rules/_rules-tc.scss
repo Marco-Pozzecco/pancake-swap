@@ -1,9 +1,94 @@
 .r-tc-main-container {
   width: 100%;
   height: auto;
+  background: linear-gradient(
+    139.73deg,
+    rgb(49, 61, 92) 0%,
+    rgb(61, 42, 84) 100%
+  );
   border: 2px solid red;
   margin: 50px 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .r-tc-main-svg-container {
+    width: 100%;
+    height: 20px;
+    border: 1px solid chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .rtc-strip-svg-box {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+
+      & svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .rtc-main-svg-box-wrapper {
+      width: 175px;
+      height: 95px;
+      background-color: rgba(240, 248, 255, 0.322);
+      border: 1px solid crimson;
+      text-align: center;
+      // ---------------
+    }
+  }
+
+  .r-tc-sub-container {
+    height: 800px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 48px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .rtc-card-box-wrapper {
+      width: 50%;
+      height: 100%;
+      border: 1px solid rgb(1, 26, 253);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .rtc-description-box-wrapper {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .rtc-description {
+      border: 2px solid rgb(174, 0, 255);
+      width: 100%;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .rtc-img-box-wp {
+      border: 2px solid rgb(0, 255, 110);
+      width: 100%;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
