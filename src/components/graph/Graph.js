@@ -1,5 +1,7 @@
 import { Chart } from "chart.js/auto";
 import React, { useEffect } from "react";
+// external libraries
+import moment  from "moment"
 // API
 import { CoinGeckoAPI } from "../../script/CoinGeckoAPI";
 
@@ -19,7 +21,7 @@ export function Graph(props) {
       console.log(props.timeframe, response_fi1, response_fi2)
 
       const data = {
-        time: response_fi1.prices.map(row => row[0]),
+        time: response_fi1.prices.map(row => moment(row[0]).format("HH:MM")),
         price: response_fi1.prices.map(row => row[1]).map((price, index) => price / response_fi2.prices.map(row => row[1])[index])
       }
 
