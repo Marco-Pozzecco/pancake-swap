@@ -1,4 +1,5 @@
 import React from "react";
+import { GetYourTicketCard } from "../../components/card/get-your-ticket-card/GetYourTicketCard";
 import { UntilTheDrawCD } from "../../components/count-down/until-the-draw-countdown/UntilTheDrawCD";
 import "./_get-your-tickets.scss";
 
@@ -17,7 +18,9 @@ export function GetYourTickets() {
               <UntilTheDrawCD deadline={deadlineDate} />
             </div>
           </div>
-          <div className="gyt-body">CARD</div>
+          <div className="gyt-body">
+            <GetYourTicketCard />
+          </div>
         </div>
       </div>
     </section>
