@@ -11,6 +11,7 @@ import "../src/main.scss";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Layout } from "./pages/Layout";
 import { Overview } from "./pages/nft/Overview";
+import { Perpetual } from "./pages/perpetual/Perpetual"
 // ---------------------------------------------------
 
 // import "./App.css"
@@ -46,6 +47,7 @@ export function App() {
               <Route path="swap" element={<Swap />} />
               <Route path="limit" element={<Limit />} />
               <Route path="liquidity" element={<Liquidity />} />
+              <Route path="perpetual" element={<Perpetual />} />
               <Route path="farms" element={<Farms />} />
               <Route path="pools" element={<Pools />} />
               <Route path="trading" element={<TradingCompetition />} />
