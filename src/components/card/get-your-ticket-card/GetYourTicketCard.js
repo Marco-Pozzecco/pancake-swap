@@ -104,3 +104,8 @@ export function GetYourTicketCard() {
     </section>
   );
 }
+
+// // CREARE UN DIV COSI:
+// {<div></div> }
+// tra le graffe dove posso fare il conditional rendering
+// vedere il link su KEEP PERSONALE
