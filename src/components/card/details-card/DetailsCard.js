@@ -27,9 +27,10 @@ export function DetailsCard(props) {
                   style={{
                     color: "rgb(114, 239, 255)",
                     textDecoration: "none",
+                    gap: 8,
                   }}
                 >
-                  <FaAngleDown />
+                  <FaAngleDown style={{ marginLeft: 8, marginTop: 8 }} />
                 </Button>
               </div>
             </div>
@@ -44,7 +45,17 @@ export function DetailsCard(props) {
             <div className="dcb-sc-argument">
               <div className="dcb-sub-titles">{props.dc_sub_title_2}</div>
               <div className="dcb-btn-t-box">
-                <button>BUTTON</button>
+                <Button
+                  text="Details"
+                  type={"noBorderButton"}
+                  style={{
+                    color: "rgb(114, 239, 255)",
+                    textDecoration: "none",
+                    gap: 8,
+                  }}
+                >
+                  <FaAngleDown style={{ marginLeft: 8, marginTop: 8 }} />
+                </Button>
               </div>
             </div>
             {/* ---TEXT--- */}
@@ -58,7 +69,17 @@ export function DetailsCard(props) {
             <div className="dcb-sc-argument">
               <div className="dcb-sub-titles">{props.dc_sub_title_3}</div>
               <div className="dcb-btn-t-box">
-                <button>BUTTON</button>
+                <Button
+                  text="Details"
+                  type={"noBorderButton"}
+                  style={{
+                    color: "rgb(114, 239, 255)",
+                    textDecoration: "none",
+                    gap: 8,
+                  }}
+                >
+                  <FaAngleDown style={{ marginLeft: 8, marginTop: 8 }} />
+                </Button>
               </div>
             </div>
             {/* ---TEXT--- */}
