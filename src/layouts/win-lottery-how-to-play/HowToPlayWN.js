@@ -2,11 +2,11 @@ import React from "react";
 import "./how-to-play-wn.scss";
 import { HowToPlayCard } from "./../../components/card/HowToPlayCard";
 import { PrizeFoundsCard } from "./PrizeFoundsCard";
-import { PrizeFoundsText } from "./PrizeFoundsText";
 import { StillGotQuestions } from "./StillGotQuestions";
 import { WinningCriteriaCard } from "./WinningCriteriaCard";
 import { WinningCriteriaText } from "./WinningCriteriaText";
 import { GreyLine } from "../../components/lines/GreyLine";
+import { DataTextGraph } from "../../components/text-components/data-text-graph/DataTextGraph";
 
 export function HowToPlayWN() {
   return (
@@ -59,8 +59,30 @@ export function HowToPlayWN() {
           {/* ----------------- */}
 
           <div className="htp-content htpc-4">
-            <div className="htpc-4-text">
-              <PrizeFoundsText />
+            <div className="htpc-4-text-wrapper">
+              <div className="htpc-4-text-title-box">
+                <h2>Prize Funds</h2>
+              </div>
+              <div className="htpc-4-text-box">
+                <DataTextGraph
+                  dtg_introduction={
+                    "The prizes for each lottery round come from three sources:"
+                  }
+                  dtg_sub_title_a={"Ticket Purchases"}
+                  dtg_sub_title_b={"Rollover Prizes"}
+                  dtg_sub_title_c={"CAKE Injections"}
+                  // ---------
+                  dtg_list_a={
+                    "100% of the CAKE paid by people buying tickets that round goes back into the prize pools."
+                  }
+                  dtg_list_b={
+                    "After every round, if nobody wins in one of the prize brackets, the unclaimed CAKE for that bracket rolls over into the next round and are redistributed among the prize pools."
+                  }
+                  dtg_list_c={
+                    "An average total of 35,000 CAKE from the treasury is added to lottery rounds over the course of a week. This CAKE is of course also included in rollovers! Read more in our guide to CAKE Tokenomics"
+                  }
+                />
+              </div>
             </div>
             <div className="htpc-4-card">
               <PrizeFoundsCard />

@@ -1,5 +1,7 @@
 import React from "react";
 import { GreyLine } from "../../components/lines/GreyLine";
+import { DataTextGraph } from "../../components/text-components/data-text-graph/DataTextGraph";
+import { DataCardGraph } from "../../components/card/data-card-graph/DataCardGraph";
 import "./_split-breakdown.scss";
 
 export function SplitBreakdown() {
@@ -8,8 +10,22 @@ export function SplitBreakdown() {
       <div className="sb-sub-container">
         <h2 className="sb-title">Split Breakdown</h2>
         <div className="sb-data-wrapper">
-          <div className="sb-data-text-wrapper">TEXT</div>
-          <div className="sb-data-graph-wrapper">GRAPH</div>
+          <div className="sb-data-text-wrapper">
+            <DataTextGraph
+              dtg_introduction={"The staking rewards of funds"}
+              dtg_sub_title_a={"Prize Pool (80%)"}
+              dtg_sub_title_b={"Rewards (20%)"}
+              dtg_sub_title_c={"Fees (8%)"}
+              dtg_list_a={"80% of staking rewards from the funds deposited"}
+              dtg_list_b={"20% of the staking rewards from the funds deposited"}
+              dtg_list_c={
+                "8% of the prize pot distributed each week will be charged as fees"
+              }
+            />
+          </div>
+          <div className="sb-data-graph-wrapper">
+            <DataCardGraph />
+          </div>
         </div>
         <div className="sb-text-wrapper">
           <p>
