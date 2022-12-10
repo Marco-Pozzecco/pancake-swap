@@ -1,7 +1,10 @@
 import React from "react";
 import "./_details-card.scss";
+import { Button } from "../../buttons/Button";
 
 export function DetailsCard(props) {
+  // METTERE QUI LA LOGICA DEL BOTTONE(PER APRIRE E PER CAMBIARE TESTO, VEDI HPV FILM)
+
   return (
     <div className="dc-main-container">
       <div className="dc-sub-container">
@@ -17,7 +20,16 @@ export function DetailsCard(props) {
             <div className="dcb-sc-argument">
               <div className="dcb-sub-titles">{props.dc_sub_title_1}</div>
               <div className="dcb-btn-t-box">
-                <button>BUTTON</button>
+                <Button
+                  text="Details"
+                  type={"noBorderButton"}
+                  style={{
+                    color: "rgb(114, 239, 255)",
+                    textDecoration: "none",
+                  }}
+                >
+                  {/* <FaAngleDown /> */}
+                </Button>
               </div>
             </div>
             {/* ---TEXT--- */}
