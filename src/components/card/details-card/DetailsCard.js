@@ -1,6 +1,7 @@
 import React from "react";
 import "./_details-card.scss";
 import { Button } from "../../buttons/Button";
+import { FaAngleDown } from "react-icons/fa";
 
 export function DetailsCard(props) {
   // METTERE QUI LA LOGICA DEL BOTTONE(PER APRIRE E PER CAMBIARE TESTO, VEDI HPV FILM)
