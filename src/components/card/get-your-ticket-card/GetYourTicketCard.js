@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./_get-your-ticket-card.scss";
+import { FaAngleDown } from "react-icons/fa";
 
 export function GetYourTicketCard() {
   const [showDetails, setShowDetails] = useState(false);
