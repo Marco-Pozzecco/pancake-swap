@@ -29,7 +29,7 @@ export function DetailsCard(props) {
                     textDecoration: "none",
                   }}
                 >
-                  {/* <FaAngleDown /> */}
+                  <FaAngleDown />
                 </Button>
               </div>
             </div>
