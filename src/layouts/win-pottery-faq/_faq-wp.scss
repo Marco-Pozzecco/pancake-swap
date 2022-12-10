@@ -10,6 +10,9 @@
     width: 100%;
     max-width: 1140px;
     height: 440px;
+    max-height: 765px; //METTERE UN MAX-HEIGH ANCHE IN WIN LOTTERY NELL DIV CHE CONTIENE LA CARD, IN GET YOR TICKETS NOW, cosi quando si apre il div non blocca la card che deve far apparire i"data"
+    padding: 8px; // DA CANCELLARE
+
     display: flex;
     justify-content: flex-start;
     align-items: center;

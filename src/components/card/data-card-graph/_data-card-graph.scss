@@ -1,1 +1,126 @@
+.dcg-main-container {
+  width: 100%;
+  height: auto;
+  background-color: rgb(56, 50, 65);
+  border-radius: 24px;
+  padding: 1px 1px 3px 1px;
+  .dcg-sub-container {
+    background-color: rgb(39, 38, 44);
+    border-radius: 24px;
+    height: 100%;
+    padding: 24px;
 
+    .dcg-internal-box {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .dcg-ib-wrapper-graph {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 32px;
+
+        .dcg-ib-box-graph {
+          width: calc(100% / 3);
+          height: 100%;
+          & svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .dcg-ib-titles {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .dcg-ib-title-a {
+          color: rgb(147, 108, 247);
+          font-size: 12px;
+        }
+
+        .dcg-ib-title-b {
+          color: rgb(147, 108, 247);
+          font-size: 12px;
+        }
+      }
+      .dcg-ib-items {
+        width: 100%;
+        height: 60%;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .dcgib-item {
+          width: 100%;
+          height: 24px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          .dcgib-sub-item-a {
+            width: 80%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .dcgib-spot {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              margin: 0 8px 0 0;
+            }
+
+            .dcgib-s-0 {
+              background-color: rgb(255, 0, 0);
+            }
+            .dcgib-s-1 {
+              background-color: rgb(255, 227, 98);
+            }
+            .dcgib-s-2 {
+              background-color: rgb(133, 197, 78);
+            }
+            .dcgib-s-3 {
+              background-color: rgb(2, 142, 117);
+            }
+            .dcgib-s-4 {
+              background-color: rgb(54, 232, 245);
+            }
+            .dcgib-s-5 {
+              background-color: rgb(168, 129, 252);
+            }
+            .dcgib-s-6 {
+              background-color: rgb(215, 80, 178);
+            }
+            .dcgib-s-7 {
+              background-color: rgb(189, 194, 196);
+            }
+
+            .dcgib-text {
+              color: rgb(184, 173, 210);
+            }
+          }
+
+          .dcgib-sub-item-b {
+            color: rgb(243, 238, 254);
+            width: 20%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
