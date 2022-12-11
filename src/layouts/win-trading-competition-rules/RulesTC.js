@@ -13,6 +13,8 @@ export function RulesTC() {
       {/* -------------------------------------- */}
       <div className="r-tc-sub-container">
         <div className="rtc-card-box-wrapper">CARD</div>
+        PRIZES DA RICONTROLLARE O HO SBAGLIATO IO O è CAMBIATO IL SITO, da
+        invertire le card e cambiare i nomi
         <div className="rtc-description-box-wrapper">
           <div className="rtc-description">INSERIRE TAG PER TITOLI E TESTO</div>
           <div className="rtc-img-box-wp">
