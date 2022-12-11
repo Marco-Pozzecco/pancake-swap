@@ -6,7 +6,7 @@ export function FinishedRoundWP() {
     <section className="fr-wp-main-container">
       <div className="fr-wp-sub-container">
         <div className="fr-wp-title-wrapper">
-          <h2 className="fr-wp-title">Finished Rounds</h2>
+          <div className="fr-wp-title">Finished Rounds</div>
         </div>
         <div className="fr-wp-card">CARD</div>
       </div>

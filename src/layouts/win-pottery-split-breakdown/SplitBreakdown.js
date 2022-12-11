@@ -33,29 +33,16 @@ export function SplitBreakdown() {
               dg_main_title_a={"DIGITS MATCHED"}
               dg_main_title_b={"PRIZE POOL ALLOCATION"}
               //----------------------------------------
-              // dcg_data_name_prova={"titolo"}
-              // dcg_data_percentage_prova={"percentuale"}
-              //------------
-              dcg_data_name_1={"Matches first 1"}
-              dcg_data_percentage_1={"2%"}
+
+              dcg_data_name_4={"Fees"}
+              dcg_data_percentage_4={"6.4%"}
               // -----------
-              dcg_data_name_2={"Matches first 2"}
-              dcg_data_percentage_2={"3%"}
-              // -----------
-              dcg_data_name_3={"Matches first 3"}
-              dcg_data_percentage_3={"5%"}
-              // -----------
-              dcg_data_name_4={"Matches first 4"}
-              dcg_data_percentage_4={"10%"}
-              // -----------
-              dcg_data_name_5={"Matches first 5"}
+              dcg_data_name_5={"Rewards"}
               dcg_data_percentage_5={"20%"}
               // -----------
-              dcg_data_name_6={"Matches all 6"}
-              dcg_data_percentage_6={"4%"}
-              // -----------
-              dcg_data_name_7={"Burn Pool"}
-              dcg_data_percentage_7={"20%"}
+              dcg_data_name_6={"Prize Pool"}
+              dcg_data_percentage_6={"73.6%"}
+
               // -----------
             />
           </div>
