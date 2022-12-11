@@ -25,18 +25,18 @@ export function DataCardGraph(props) {
             {/* ------------------- */}
             {/* ------------------- */}
             {/* ----ITEM PROVA----- */}
-            <div className="dcgib-item">
-              <div className="dcgib-sub-item-a">
-                {/* ---SPOT--- */}
-                <div className="dcgib-spot dcgib-s-0"></div>
-                {/* ---NOME DATO--- */}
-                <div className="dcgib-text">{props.dcg_data_name_prova}</div>
-              </div>
-              {/* --  --percentuale--  --  -- */}
-              <div className="dcgib-sub-item-b">
+            {/* <div className="dcgib-item"> */}
+            {/* <div className="dcgib-sub-item-a"> */}
+            {/* ---SPOT--- */}
+            {/* <div className="dcgib-spot dcgib-s-0"></div> */}
+            {/* ---NOME DATO--- */}
+            {/* <div className="dcgib-text">{props.dcg_data_name_prova}</div> */}
+            {/* </div> */}
+            {/* --  --percentuale--  --  -- */}
+            {/* <div className="dcgib-sub-item-b">
                 {props.dcg_data_percentage_prova}
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
             {/* ------------------- */}
             {/* ------------------- */}
             {/* ------------------- */}
