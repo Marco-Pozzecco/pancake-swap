@@ -25,109 +25,144 @@ export function DataCardGraph(props) {
             {/* ------------------- */}
             {/* ------------------- */}
             {/* ----ITEM PROVA----- */}
-            {/* <div className="dcgib-item"> */}
-            {/* <div className="dcgib-sub-item-a"> */}
-            {/* ---SPOT--- */}
-            {/* <div className="dcgib-spot dcgib-s-0"></div> */}
-            {/* ---NOME DATO--- */}
-            {/* <div className="dcgib-text">{props.dcg_data_name_prova}</div> */}
-            {/* </div> */}
-            {/* --  --percentuale--  --  -- */}
-            {/* <div className="dcgib-sub-item-b">
-                {props.dcg_data_percentage_prova}
-              </div> */}
-            {/* </div> */}
-            {/* ------------------- */}
-            {/* ------------------- */}
-            {/* ------------------- */}
-            {/* ------------------- */}
-            {/* ------------------- */}
 
+            {props.dcg_data_name_prova ? (
+              <div className="dcgib-item">
+                <div className="dcgib-sub-item-a">
+                  {/* ---SPOT--- */}
+                  <div
+                    className={"dcgib-spot dcgib-s-0" + props.dcg_spot_color}
+                  ></div>
+                  {/* ---NOME DATO--- */}
+                  <div className="dcgib-text">{props.dcg_data_name_prova}</div>
+                </div>
+                {/* --  --percentuale--  --  -- */}
+                <div className="dcgib-sub-item-b">
+                  {props.dcg_data_percentage_prova}
+                </div>
+              </div>
+            ) : (
+              <div></div>
+            )}
+            {/* ------------------- */}
+            {/* ------------------- */}
+            {/* ------------------- */}
+            {/* ------------------- */}
+            {/* ------------------- */}
+            {}
             {/* ---ITEM 1------------ */}
-            <div className="dcgib-item">
-              <div className="dcgib-sub-item-a">
-                {/* --CIRCLE-- */}
-                <div className="dcgib-spot dcgib-s-1"></div>
-                <div className="dcgib-text">{props.dcg_data_name_1}</div>
-                {/* --- */}
+            {props.dcg_data_name_1 ? (
+              <div className="dcgib-item">
+                <div className="dcgib-sub-item-a">
+                  {/* --CIRCLE-- */}
+                  <div className="dcgib-spot dcgib-s-1"></div>
+                  <div className="dcgib-text">{props.dcg_data_name_1}</div>
+                  {/* --- */}
+                </div>
+                <div className="dcgib-sub-item-b">
+                  {props.dcg_data_percentage_1}
+                </div>
               </div>
-              <div className="dcgib-sub-item-b">
-                {props.dcg_data_percentage_1}
-              </div>
-            </div>
+            ) : (
+              <div></div>
+            )}
             {/* ---------------- */}
             {/* ---ITEM 2------------ */}
-            <div className="dcgib-item">
-              <div className="dcgib-sub-item-a">
-                {/* --CIRCLE-- */}
-                <div className="dcgib-spot dcgib-s-2"></div>
-                <div className="dcgib-text">{props.dcg_data_name_2}</div>
-                {/* --- */}
+            {props.dcg_data_name_2 ? (
+              <div className="dcgib-item">
+                <div className="dcgib-sub-item-a">
+                  {/* --CIRCLE-- */}
+                  <div className="dcgib-spot dcgib-s-2"></div>
+                  <div className="dcgib-text">{props.dcg_data_name_2}</div>
+                  {/* --- */}
+                </div>
+                <div className="dcgib-sub-item-b">
+                  {props.dcg_data_percentage_2}
+                </div>
               </div>
-              <div className="dcgib-sub-item-b">
-                {props.dcg_data_percentage_2}
-              </div>
-            </div>
+            ) : (
+              <div></div>
+            )}
             {/* ---ITEM 3------------ */}
-            <div className="dcgib-item">
-              <div className="dcgib-sub-item-a">
-                {/* --CIRCLE-- */}
-                <div className="dcgib-spot dcgib-s-3"></div>
-                <div className="dcgib-text">{props.dcg_data_name_3}</div>
-                {/* --- */}
+            {props.dcg_data_name_3 ? (
+              <div className="dcgib-item">
+                <div className="dcgib-sub-item-a">
+                  {/* --CIRCLE-- */}
+                  <div className="dcgib-spot dcgib-s-3"></div>
+                  <div className="dcgib-text">{props.dcg_data_name_3}</div>
+                  {/* --- */}
+                </div>
+                <div className="dcgib-sub-item-b">
+                  {props.dcg_data_percentage_3}
+                </div>
               </div>
-              <div className="dcgib-sub-item-b">
-                {props.dcg_data_percentage_3}
-              </div>
-            </div>
+            ) : (
+              <div></div>
+            )}
             {/* ---ITEM 4------------ */}
-            <div className="dcgib-item">
-              <div className="dcgib-sub-item-a">
-                {/* --CIRCLE-- */}
-                <div className="dcgib-spot dcgib-s-4"></div>
-                <div className="dcgib-text">{props.dcg_data_name_4}</div>
-                {/* --- */}
+            {props.dcg_data_name_4 ? (
+              <div className="dcgib-item">
+                <div className="dcgib-sub-item-a">
+                  {/* --CIRCLE-- */}
+                  <div className="dcgib-spot dcgib-s-4"></div>
+                  <div className="dcgib-text">{props.dcg_data_name_4}</div>
+                  {/* --- */}
+                </div>
+                <div className="dcgib-sub-item-b">
+                  {props.dcg_data_percentage_4}
+                </div>
               </div>
-              <div className="dcgib-sub-item-b">
-                {props.dcg_data_percentage_4}
-              </div>
-            </div>
+            ) : (
+              <div></div>
+            )}
             {/* ---ITEM 5------------ */}
-            <div className="dcgib-item">
-              <div className="dcgib-sub-item-a">
-                {/* --CIRCLE-- */}
-                <div className="dcgib-spot dcgib-s-5"></div>
-                <div className="dcgib-text">{props.dcg_data_name_5}</div>
-                {/* --- */}
+            {props.dcg_data_name_5 ? (
+              <div className="dcgib-item">
+                <div className="dcgib-sub-item-a">
+                  {/* --CIRCLE-- */}
+                  <div className="dcgib-spot dcgib-s-5"></div>
+                  <div className="dcgib-text">{props.dcg_data_name_5}</div>
+                  {/* --- */}
+                </div>
+                <div className="dcgib-sub-item-b">
+                  {props.dcg_data_percentage_5}
+                </div>
               </div>
-              <div className="dcgib-sub-item-b">
-                {props.dcg_data_percentage_5}
-              </div>
-            </div>
+            ) : (
+              <div></div>
+            )}
             {/* ---ITEM 6------------ */}
-            <div className="dcgib-item">
-              <div className="dcgib-sub-item-a">
-                {/* --CIRCLE-- */}
-                <div className="dcgib-spot dcgib-s-6"></div>
-                <div className="dcgib-text">{props.dcg_data_name_6}</div>
-                {/* --- */}
+            {props.dcg_data_name_6 ? (
+              <div className="dcgib-item">
+                <div className="dcgib-sub-item-a">
+                  {/* --CIRCLE-- */}
+                  <div className="dcgib-spot dcgib-s-6"></div>
+                  <div className="dcgib-text">{props.dcg_data_name_6}</div>
+                  {/* --- */}
+                </div>
+                <div className="dcgib-sub-item-b">
+                  {props.dcg_data_percentage_6}
+                </div>
               </div>
-              <div className="dcgib-sub-item-b">
-                {props.dcg_data_percentage_6}
-              </div>
-            </div>
+            ) : (
+              <div></div>
+            )}
             {/* ---ITEM 7------------ */}
-            <div className="dcgib-item">
-              <div className="dcgib-sub-item-a">
-                {/* --CIRCLE-- */}
-                <div className="dcgib-spot dcgib-s-7"></div>
-                <div className="dcgib-text">{props.dcg_data_name_7}</div>
-                {/* --- */}
+            {props.dcg_data_name_7 ? (
+              <div className="dcgib-item">
+                <div className="dcgib-sub-item-a">
+                  {/* --CIRCLE-- */}
+                  <div className="dcgib-spot dcgib-s-7"></div>
+                  <div className="dcgib-text">{props.dcg_data_name_7}</div>
+                  {/* --- */}
+                </div>
+                <div className="dcgib-sub-item-b">
+                  {props.dcg_data_percentage_7}
+                </div>
               </div>
-              <div className="dcgib-sub-item-b">
-                {props.dcg_data_percentage_7}
-              </div>
-            </div>
+            ) : (
+              <div></div>
+            )}
           </div>
         </div>
       </div>
