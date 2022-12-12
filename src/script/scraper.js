@@ -1,6 +1,6 @@
 const { Scraper, Root, DownloadContent, OpenLinks, CollectContent } = require('nodejs-web-scraper');
 
-export default async function scrape () {
+async function scrape() {
 
     const config = {
         baseSiteUrl: "https://pancakeswap.finance/farms",
@@ -12,24 +12,34 @@ export default async function scrape () {
 
     const root = new Root(); // Fetch dello startUrl ed inizia lo scraping
 
-    console.log("The Root: ", root);
-    
+    // getElementContent
+    function getElementContent(element) {
+        return element.textContent
+    }
+
     // sc-eecfaa46-0 e` la classe della card
-    const card = new CollectContent('.sc-eecfaa46-0', { getAllItems: true})
+    const card = new CollectContent('.sc-eecfaa46-0', { name: "card", getElementContent })
 
-    console.log("A Card: ", card);
+    const tableRow = new CollectContent(".sc-a2a3a72d-1", { name: "table-row"})
 
+    const title = new CollectContent('h1.sc-c56ebc7d-0', {name: "title"})
+    
+    
     // Scraping tree
-
     root.addOperation(card);
+    root.addOperation(tableRow);
+    root.addOperation(title);
 
     // start scraper
-
     await scraper.scrape(root);
 
     const cards = card.getData();
+    const row = tableRow.getData();
+    const titles = title.getData();
 
     console.log("Cards: ", cards);
+    console.log("Rows Data: ", row);
+    console.log(titles);
 }
 
 scrape();
