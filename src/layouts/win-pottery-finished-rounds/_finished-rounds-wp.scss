@@ -14,9 +14,9 @@
   padding: 40px 24px;
 
   .fr-wp-sub-container {
-    height: 490px;
-    // height: auto;
-    // max-height: 490px;
+    // height: 490px;
+    height: auto;
+    max-height: 490px;
     width: 100%;
     // max-width: ; non ce nè bisogno in questa sezione probabilmente, ma valutare con la card pronta
     display: flex;
@@ -59,6 +59,7 @@
       justify-content: center;
       align-items: center;
       border: 1px solid chartreuse;
+      padding: 7px; //da cancellare
     }
   }
 }

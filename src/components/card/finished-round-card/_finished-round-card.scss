@@ -1,0 +1,184 @@
+.frc-main-container {
+  width: 100%;
+  //   width: 579px;
+  height: 100%;
+  background-color: #383241;
+  border-radius: 24px;
+  color: #f4eeff;
+  overflow: hidden;
+  position: relative;
+  padding: 1px 1px 3px;
+  contain: content;
+
+  .frc-sub-container {
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: inherit;
+    background-color: rgb(39, 38, 44);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .frc-header-box {
+      width: 100%;
+      height: auto;
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #383241; // non cancellare
+
+      .frch-box-counter {
+        width: auto;
+        height: 100%;
+        border: 2px solid chartreuse;
+      }
+
+      .frch-box-date-wrapper {
+        width: auto;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .frch-box-date {
+          width: auto;
+          height: 100%;
+          color: #f4eeff;
+          font-weight: 400;
+          line-height: 1.5;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .frc-body-box {
+      //   background-color: rgba(240, 248, 255, 0.21);
+      width: 100%;
+      height: auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .frcb-data-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid #383241; // non cancellare
+
+        .frcb-sub-datas-title-container {
+          //   width: auto;
+          //   max-width: ;
+          width: 15%;
+          height: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-weight: 600;
+          line-height: 1.5;
+          font-size: 20px;
+          border: 3px solid rgb(92, 233, 165);
+
+          .frcb-sub-datas-title {
+            width: 100%;
+            height: 100%;
+            font-weight: 600;
+            line-height: 1.5;
+            font-size: 20px;
+          }
+        }
+
+        .frcb-sub-datas-container {
+          width: 316px;
+          height: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin: 0 0 0 32px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
+          flex-wrap: wrap;
+        }
+      }
+
+      .frcb-prize-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 8px 0 0 0;
+        text-align: left;
+
+        .frcb-pc-sub-title {
+          width: 100%;
+          height: auto;
+          color: rgb(244, 238, 255);
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 110%;
+        }
+
+        .frcb-pc-sub-prize {
+          width: 100%;
+          height: auto;
+          color: #9a6aff;
+          font-weight: 600;
+          line-height: 110%;
+          font-size: 40px;
+        }
+
+        .frcb-pc-sub-cake-number {
+          width: 100%;
+          height: auto;
+          color: #b8add2;
+          font-weight: 400;
+          line-height: 1.5;
+          margin-bottom: 18px;
+          font-size: 14px;
+        }
+
+        .frcb-pc-sub-subtitles-wrapper {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .frcb-pc-sub-subtitles {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .frcb-pcs-subtitle {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 5px;
+              line-height: 1.5;
+              font-size: 14px;
+
+              .frcb-pcs-subtitle-a {
+                font-weight: 400;
+              }
+
+              .frcb-pcs-subtitle-a {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
