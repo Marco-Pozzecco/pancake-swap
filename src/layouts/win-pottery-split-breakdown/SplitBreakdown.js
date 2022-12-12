@@ -36,8 +36,8 @@ export function SplitBreakdown() {
               // dcg_data_name_prova={"titolo"}
               // dcg_data_percentage_prova={"percentuale"}
               //------------
-              dcg_data_name_1={"Matches first 1"}
-              dcg_data_percentage_1={"2%"}
+              // dcg_data_name_1={"Matches first 1"}
+              // dcg_data_percentage_1={"2%"}
               // -----------
               dcg_data_name_2={"Matches first 2"}
               dcg_data_percentage_2={"3%"}
