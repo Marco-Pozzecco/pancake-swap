@@ -1,6 +1,8 @@
 const puppeteer = require('puppeteer')
 
 async function crawl() {
+    const cardSelector = '.sc-eecfaa46-0'
+
     try {
         const URL = "https://pancakeswap.finance/farms";
 
@@ -10,7 +12,13 @@ async function crawl() {
 
         await page.goto(URL)
 
-        const data = await page.content()
+        await page.waitForSelector(cardSelector)
+
+        const data = await page.evaluate( (sel) => {
+            const cards = [...document.querySelectorAll(sel)];
+            console.log(cards)
+            return cards;
+        }, cardSelector)
 
         console.log(data)
 
