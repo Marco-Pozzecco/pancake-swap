@@ -7,7 +7,13 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "chart.js": "^4.0.1",
+<<<<<<< HEAD
     "material-ui-colors": "^1.0.0",
+=======
+    "moment": "^2.29.4",
+    "nodejs-web-scraper": "^6.1.0",
+    "puppeteer": "^19.4.0",
+>>>>>>> c65686120bb24b2493d52fe3a872d2d86e37a689
     "react": "^18.2.0",
     "react-chartjs-2": "^5.0.1",
     "react-dom": "^18.2.0",

@@ -1,5 +1,7 @@
 import { Chart } from "chart.js/auto";
 import React, { useEffect } from "react";
+// external libraries
+import moment  from "moment"
 // API
 import { CoinGeckoAPI } from "../../script/CoinGeckoAPI";
 
@@ -15,14 +17,14 @@ export function Graph(props) {
       const timeframe = ["24H", "1W", "1M", "1Y"];
       
       const response_fi1 = await API.fetchHystoricalData(days[timeframe.indexOf(props.timeframe)], props.granularity, props.financialInstrument[0], "usd");
-      const response_fi2 = await API.fetchHystoricalData(days[timeframe.indexOf(props.timeframe)], props.granularity, props.financialInstrument[1], "usd");
-      console.log(props.timeframe, response_fi1, response_fi2)
+      // const response_fi2 = await API.fetchHystoricalData(days[timeframe.indexOf(props.timeframe)], props.granularity, props.financialInstrument[1], "usd");
+      console.log(props.timeframe, response_fi1)
 
       const data = {
-        time: response_fi1.prices.map(row => row[0]),
-        price: response_fi1.prices.map(row => row[1]).map((price, index) => price / response_fi2.prices.map(row => row[1])[index])
+        time: response_fi1.prices.map(row => moment(row[0]).format("HH:MM")),
+        price: response_fi1.prices.map(row => row[1])
       }
-
+      // .map((price, index) => price / response_fi2.prices.map(row => row[1])[index])
       await props.createChartFn(data);
     }
     // API f call
