@@ -33,7 +33,7 @@ export function WinningCriteriaText() {
           </li>
         </ul>
       </div>
-      {/* -------- */}
+      {/* --------- */}
       <div className="wct-text-box  wct-text wct-tb-c">
         Prize brackets don’t 'stack': if you match the first 3 digits in order,
         you’ll only win prizes from the 'Match 3' bracket, and not from 'Match
