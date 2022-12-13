@@ -1,7 +1,6 @@
 .sb-main-container {
   width: 100%;
   height: auto;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +8,7 @@
   .sb-sub-container {
     width: 100%;
     max-width: 1140px;
-    height: 603px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -33,15 +32,14 @@
       align-items: center;
 
       .sb-data-text-wrapper {
-        width: 50%;
+        width: 55%;
         height: 100%;
-        border: 1px solid chartreuse;
       }
 
       .sb-data-graph-wrapper {
-        margin: 0 0 0 40px;
+        margin: 0 0 0 30px;
         height: 100%;
-        width: 50%;
+        width: 45%;
         border: 1px solid rgb(0, 200, 255);
       }
     }

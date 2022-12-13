@@ -58,6 +58,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        gap: 24px;
       }
 
       .htpc-3 {
@@ -81,10 +82,32 @@
       .htpc-4 {
         height: auto;
         display: flex;
+        justify-content: space-between;
 
-        .htpc-4-text {
+        .htpc-4-text-wrapper {
           width: 65%;
           height: 100%;
+          display: flex;
+          flex-direction: column;
+          padding-right: 20px;
+
+          .htpc-4-text-title-box {
+            width: 100%;
+            height: 10%;
+
+            & h2 {
+              color: rgb(154, 106, 255);
+              font-size: 24px;
+              font-weight: 600;
+              line-height: 1.1;
+              margin: 0 0 24px;
+            }
+          }
+
+          .htpc-4-text-box {
+            height: 90%;
+            width: 100%;
+          }
         }
 
         .htpc-4-card {

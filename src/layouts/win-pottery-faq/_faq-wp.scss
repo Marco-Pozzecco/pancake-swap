@@ -1,7 +1,6 @@
 .faq-wp-main-container {
   width: 100%;
   height: auto;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +8,9 @@
   .faq-wp-sub-container {
     width: 100%;
     max-width: 1140px;
-    height: 440px;
+    height: auto;
+    max-height: 765px; //METTERE UN MAX-HEIGH ANCHE IN WIN LOTTERY NELL DIV CHE CONTIENE LA CARD, IN GET YOR TICKETS NOW, cosi quando si apre il div non blocca la card che deve far apparire i"data"
+
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -35,6 +36,7 @@
       justify-content: center;
       align-items: center;
       font-size: 40px;
+      padding: 10px; // DA CANCELLARE
     }
   }
 }
