@@ -8,9 +8,20 @@ import "./dropdown-crypto.scss";
 
 export default function DropdownCrypto() {
   const options = [
-    { name: "BNB Smart Chain", img: <img className="fa-svg-icon" src={bnbIcon} alt="bnb icon"></img> },
-    { name: "Ethereum", img: <img className="fa-svg-icon" src={Ethereum} alt="ethereum icon"></img> },
-    { name: "Aptos", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img> },
+    {
+      name: "BNB Smart Chain",
+      img: <img className="fa-svg-icon" src={bnbIcon} alt="bnb icon"></img>,
+    },
+    {
+      name: "Ethereum",
+      img: (
+        <img className="fa-svg-icon" src={Ethereum} alt="ethereum icon"></img>
+      ),
+    },
+    {
+      name: "Aptos",
+      img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>,
+    },
   ];
 
   const [selected, setSelected] = useState({ ...options[0] });
@@ -24,7 +35,8 @@ export default function DropdownCrypto() {
       }}
       onMouseLeave={() => {
         setDropdown(false);
-      }}>
+      }}
+    >
       <div className="button-navbar-bnb">
         {selected.img}
         {selected.name}
@@ -44,7 +56,8 @@ export default function DropdownCrypto() {
                     setSelected(option);
                     setDropdown(false);
                   }}
-                  key={index}>
+                  key={index}
+                >
                   {option.img} {option.name}
                 </li>
               );

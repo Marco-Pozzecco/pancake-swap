@@ -14,7 +14,8 @@ export function ModalSettingSwap({ open, onClose }) {
         id="modal"
         onClick={(e) => {
           e.stopPropagation();
-        }}>
+        }}
+      >
         <div className="modalSwap1 flex-switch">
           <h3 className="header">Settings</h3>
           <button data-close-btn className="close-btn" onClick={onClose}>
@@ -26,7 +27,9 @@ export function ModalSettingSwap({ open, onClose }) {
           <p className="parag">Default Transaction Speed (GWEI)</p>
         </div>
         <div className="flex-switch">
-          <RadioButtons radioGroup={["RPC Default", "Standard(5)", "Fast(6)", "Istant(7)"]} />
+          <RadioButtons
+            radioGroup={["RPC Default", "Standard(5)", "Fast(6)", "Istant(7)"]}
+          />
         </div>
         <div className="flex-switch">
           <p className="parag">Slippage Tolerance</p>
