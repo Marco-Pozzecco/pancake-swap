@@ -17,7 +17,7 @@ export function DataCardGraph(props) {
           </div>
           {/* -------------- */}
           {/* -------------- */}
-          {/* -----Datas container--------- */}
+          {/* -----Datas container-------- */}
           <div className="dcg-ib-items">
             {/* ------------------- */}
             {/* ------------------- */}
