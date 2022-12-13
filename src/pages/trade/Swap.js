@@ -58,8 +58,11 @@ export function Swap() {
 
   // Financial Graph
   const [timeframe, setTimeframe] = useState("24H");
-  const [financialInstrument, setFinancialInstrument] = useState(["bitcoin", "usd"]);
- 
+  const [financialInstrument, setFinancialInstrument] = useState([
+    "bitcoin",
+    "usd",
+  ]);
+
   //current date
   const today = new Date(); //Dec 03, 2022, 04:35 PM
   const formattedDate = today.toLocaleString("en-US", {
@@ -70,7 +73,7 @@ export function Swap() {
     minute: "2-digit",
   });
   //console.log(formattedDate);
-  
+
   // const contextValue = {
   //   option,
   //   setSelected,
@@ -112,7 +115,9 @@ export function Swap() {
 
   return (
     <div className="swap-ext-page">
-      <Subnav elements={["Swap", "Limit", "Liquidity", "Perpetual", "Bridge"]} />
+      <Subnav
+        elements={["Swap", "Limit", "Liquidity", "Perpetual", "Bridge"]}
+      />
 
       <div className="swap-int-page">
         <div className="jskBUs-box-page">
@@ -122,8 +127,32 @@ export function Swap() {
                 <div className="jBdktT-topRow">
                   <div className="cryptoTitle">
                     <div className="logoDivGraph">
-                      {switchText === false ? <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img> : <img src={btclogo} alt="crypto icon" className="iconSize"></img>}
-                      {switchText === false ? <img src={btclogo} alt="crypto icon" className="iconSize"></img> : <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img>}
+                      {switchText === false ? (
+                        <img
+                          src={bunnyLogo}
+                          alt="cryto icon"
+                          className="iconSize"
+                        ></img>
+                      ) : (
+                        <img
+                          src={btclogo}
+                          alt="crypto icon"
+                          className="iconSize"
+                        ></img>
+                      )}
+                      {switchText === false ? (
+                        <img
+                          src={btclogo}
+                          alt="crypto icon"
+                          className="iconSize"
+                        ></img>
+                      ) : (
+                        <img
+                          src={bunnyLogo}
+                          alt="cryto icon"
+                          className="iconSize"
+                        ></img>
+                      )}
                     </div>
                     {switchText === false ? <p>CAKE</p> : <p>BTCB</p>}
                     <p>/</p>
@@ -133,12 +162,16 @@ export function Swap() {
                       style={{ height: "1.4em", width: "1.4em" }}
                       fill="#0098a1"
                       onClick={() => {
-                        switchText === false ? setSwitch(true) : setSwitch(false);
+                        switchText === false
+                          ? setSwitch(true)
+                          : setSwitch(false);
                       }}
                     />
                   </div>
                   <div className="iconBox">
-                    <IoIosResize fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} />
+                    <IoIosResize
+                      fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                    />
                   </div>
                 </div>
                 <div className="cJNWTI-bottomRow">
@@ -146,12 +179,23 @@ export function Swap() {
                     <div className="timeFrameRow">
                       <div className="priceRow">
                         <p className="price">3.94</p>
-                        {switchText === false ? <p className="cryptoTextGraph">CAKE</p> : <p className="cryptoTextGraph">BTCB</p>}
+                        {switchText === false ? (
+                          <p className="cryptoTextGraph">CAKE</p>
+                        ) : (
+                          <p className="cryptoTextGraph">BTCB</p>
+                        )}
                         <p className="cryptoTextGraph">/</p>
-                        {switchText === false ? <p className="cryptoTextGraph">BTCB</p> : <p className="cryptoTextGraph">CAKE</p>}
+                        {switchText === false ? (
+                          <p className="cryptoTextGraph">BTCB</p>
+                        ) : (
+                          <p className="cryptoTextGraph">CAKE</p>
+                        )}
                         <p className="priceVariation">+0.014 (0.36%)</p>
                       </div>
-                      <TimeFrameRadioBtn radioGroup={["24H", "1W", "1M", "1Y"]} timeFrameState={setTimeframe} />
+                      <TimeFrameRadioBtn
+                        radioGroup={["24H", "1W", "1M", "1Y"]}
+                        timeFrameState={setTimeframe}
+                      />
                     </div>
                     <p className="dateNow">{formattedDate}</p>
                   </div>
@@ -159,88 +203,91 @@ export function Swap() {
                   <div className="timeframeBtn"></div>
                 </div>
                 <Graph
-          id="perpetual-graph"
-          timeframe={timeframe}
-          financialInstrument={financialInstrument}
-          // granularity=
-          createChartFn={
-            async (data) => {
-              // query div graph
-              const graphEl = document.querySelector('.graph');
-              // distruzione heading
-              const headingEl = document.getElementById(`perpetual-graph-title`);
-              graphEl.removeChild(headingEl);
+                  id="swap-graph"
+                  timeframe={timeframe}
+                  financialInstrument={financialInstrument}
+                  // granularity=
+                  createChartFn={async (data) => {
+                    // query div graph
+                    const graphEl = document.querySelector(".graph");
+                    // distruzione heading
+                    const headingEl = document.getElementById(
+                      `swap-graph-title`
+                    );
+                    graphEl.removeChild(headingEl);
 
-              // creazione grafico
-              const canvasEl = document.createElement("canvas");
+                    // creazione grafico
+                    const canvasEl = document.createElement("canvas");
 
-              canvasEl.setAttribute('id', "perpetual-graph")
-              graphEl.appendChild(canvasEl);
+                    canvasEl.setAttribute("id", "swap-graph");
+                    graphEl.appendChild(canvasEl);
 
-              const graph = new Chart(document.getElementById("perpetual-graph"), {
-                type: "line",
-                data: {
-                  labels: data.time, // string[]
-                  datasets: [
-                    {
-                      type: "line",
-                      data: data.price,
-                      fill: "start", // string || boolean
-                      backgroundColor: ["rgb(75, 192, 192, 0.1)"],
-                      borderColor: "#31d0aa", // string
-                      tension: 0, // 0 = straight || 1 = round line
-                      pointHoverBorderColor: "#fff",
-                      pointHoverBackgroundColor: "#31d0aa",
-                      pointHoverRadius: 6,
-                      pointHoverBorderWidth: 3,
-                      pointRadius: 1,
-                    },
-                    // {
-                    //   type: "bar",
-                    //   data: data.total_volumes.map((row) => row[1]),
-                    // }
-                  ],
-                },
-                options: {
-                  elements: {
-                    point: {
-                      //pointRadius: 0,
-                    },
-                  },
-                  tooltips: {
-                    enabled: true,
-                    intersect: false,
-                  },
-                  scales: {
-                    x: {
-                      //display: false,
-                      grid: {
-                        display: false,
-                        //drawTicks: true,
-                      },
-                    },
-                    // y: {
-                    //   beginAtZero: true,
-                    //   max: 100,
-                    //   steps: 3,
-                    //   display: false,
-                    //   grid: {
-                    //     display: false,
-                    //   },
-                    // },
-                  },
-                  plugins: {
-                    legend: {
-                      display: false,
-                    },
-                  },
-                },
-              });
+                    const graph = new Chart(
+                      document.getElementById("swap-graph"),
+                      {
+                        type: "line",
+                        data: {
+                          labels: data.time, // string[]
+                          datasets: [
+                            {
+                              type: "line",
+                              data: data.price,
+                              fill: "start", // string || boolean
+                              backgroundColor: ["rgb(75, 192, 192, 0.1)"],
+                              borderColor: "#31d0aa", // string
+                              tension: 0, // 0 = straight || 1 = round line
+                              pointHoverBorderColor: "#fff",
+                              pointHoverBackgroundColor: "#31d0aa",
+                              pointHoverRadius: 6,
+                              pointHoverBorderWidth: 3,
+                              pointRadius: 1,
+                            },
+                            // {
+                            //   type: "bar",
+                            //   data: data.total_volumes.map((row) => row[1]),
+                            // }
+                          ],
+                        },
+                        options: {
+                          elements: {
+                            point: {
+                              //pointRadius: 0,
+                            },
+                          },
+                          tooltips: {
+                            enabled: true,
+                            intersect: false,
+                          },
+                          scales: {
+                            x: {
+                              //display: false,
+                              grid: {
+                                display: false,
+                                //drawTicks: true,
+                              },
+                            },
+                            // y: {
+                            //   beginAtZero: true,
+                            //   max: 100,
+                            //   steps: 3,
+                            //   display: false,
+                            //   grid: {
+                            //     display: false,
+                            //   },
+                            // },
+                          },
+                          plugins: {
+                            legend: {
+                              display: false,
+                            },
+                          },
+                        },
+                      }
+                    );
 
-              graph.render();
-            }
-          }
-        />
+                    graph.render();
+                  }}
+                />
               </div>
             )}
           </section>
@@ -248,10 +295,16 @@ export function Swap() {
           <section className="main-swap-card">
             <div className="swap-card">
               <div className="bloc-tabs-card">
-                <div className={toggleState === 1 ? "tabs2 active-tabs" : "tabs2"} onClick={() => toggleTab(1)}>
+                <div
+                  className={toggleState === 1 ? "tabs2 active-tabs" : "tabs2"}
+                  onClick={() => toggleTab(1)}
+                >
                   Swap
                 </div>
-                <div className={toggleState === 2 ? "tabs2 active-tabs" : "tabs2"} onClick={() => toggleTab(2)}>
+                <div
+                  className={toggleState === 2 ? "tabs2 active-tabs" : "tabs2"}
+                  onClick={() => toggleTab(2)}
+                >
                   Stable Swap
                 </div>
               </div>
@@ -260,14 +313,48 @@ export function Swap() {
               <div className="ConverterCard ">
                 <div className="headerCard">
                   <div className="headerRow">
-                    {visible === false && <FaChartBar fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1.4em", width: "1.4em" }} onClick={() => setView(true)} />}
-                    {visible === true && <BiHide fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1.4em", width: "1.4em" }} onClick={() => setView(false)} />}
-                    <h3 className={toggleState === 1 ? "header active-header" : "header"}>Swap</h3>
-                    <h3 className={toggleState === 2 ? "header active-header" : "header"}>Stable Swap</h3>
+                    {visible === false && (
+                      <FaChartBar
+                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                        style={{ height: "1.4em", width: "1.4em" }}
+                        onClick={() => setView(true)}
+                      />
+                    )}
+                    {visible === true && (
+                      <BiHide
+                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                        style={{ height: "1.4em", width: "1.4em" }}
+                        onClick={() => setView(false)}
+                      />
+                    )}
+                    <h3
+                      className={
+                        toggleState === 1 ? "header active-header" : "header"
+                      }
+                    >
+                      Swap
+                    </h3>
+                    <h3
+                      className={
+                        toggleState === 2 ? "header active-header" : "header"
+                      }
+                    >
+                      Stable Swap
+                    </h3>
                     <div className="iconHeaderCard">
-                      <FaCog fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1.4em", width: "1.4em" }} onClick={() => setOpenModal(true)} />
-                      <RiHistoryLine fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1.4em", width: "1.4em" }} />
-                      <AiOutlineReload fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1.4em", width: "1.4em" }} />
+                      <FaCog
+                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                        style={{ height: "1.4em", width: "1.4em" }}
+                        onClick={() => setOpenModal(true)}
+                      />
+                      <RiHistoryLine
+                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                        style={{ height: "1.4em", width: "1.4em" }}
+                      />
+                      <AiOutlineReload
+                        fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                        style={{ height: "1.4em", width: "1.4em" }}
+                      />
                     </div>
                   </div>
                   <p className="pg-tx">Trade tokens in an instant</p>
@@ -282,37 +369,97 @@ export function Swap() {
                         passindex={(index) => setIndex(index)}
                         onClick={() => {
                           setOpenModalCrypto(true);
-                        }}>
-                        {switchText === false ? <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img> : <img src={btclogo} alt="crypto icon" className="iconSize"></img>}
+                        }}
+                      >
+                        {switchText === false ? (
+                          <img
+                            src={bunnyLogo}
+                            alt="cryto icon"
+                            className="iconSize"
+                          ></img>
+                        ) : (
+                          <img
+                            src={btclogo}
+                            alt="crypto icon"
+                            className="iconSize"
+                          ></img>
+                        )}
                         {switchText === false ? <p>CAKE</p> : <p>BTCB</p>}
-                        {toggleState === 1 && <IoIosArrowDown fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1.3em", width: "1.3em" }} />}
-                        {toggleState === 2 && <MdContentCopy fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1em", width: "1em" }} />}
+                        {toggleState === 1 && (
+                          <IoIosArrowDown
+                            fill={
+                              theme === "theme-dark" ? "#b8add2" : "#7a6eaa"
+                            }
+                            style={{ height: "1.3em", width: "1.3em" }}
+                          />
+                        )}
+                        {toggleState === 2 && (
+                          <MdContentCopy
+                            fill={
+                              theme === "theme-dark" ? "#b8add2" : "#7a6eaa"
+                            }
+                            style={{ height: "1em", width: "1em" }}
+                          />
+                        )}
                       </div>
                       <input placeholder="0.0" className="convertInput"></input>
                     </div>
                     <div className="flex">
                       <button className="arrrowBtn">
-                        {isVisible === false && <BiDownArrowAlt fill="#1fc7d4" style={{ height: "1.3em", width: "1.3em" }} onMouseEnter={() => setVisibile(true)} />}
+                        {isVisible === false && (
+                          <BiDownArrowAlt
+                            fill="#1fc7d4"
+                            style={{ height: "1.3em", width: "1.3em" }}
+                            onMouseEnter={() => setVisibile(true)}
+                          />
+                        )}
                         {isVisible === true && (
                           <HiSwitchVertical
                             fill="#1fc7d4"
                             style={{ height: "1.3em", width: "1.3em" }}
                             onMouseLeave={() => setVisibile(false)}
                             onClick={() => {
-                              switchText === false ? setSwitch(true) : setSwitch(false);
+                              switchText === false
+                                ? setSwitch(true)
+                                : setSwitch(false);
                             }}
                           />
                         )}
                       </button>
                     </div>
                     <div className="input1Converter ">
-                      <div className="fx-inline switchCryptoBtn" onClick={() => setOpenModalCrypto(true)}>
-                        {switchText === false ? <img src={btclogo} alt="crypto icon" className="iconSize"></img> : <img src={bunnyLogo} alt="cryto icon" className="iconSize"></img>}
+                      <div
+                        className="fx-inline switchCryptoBtn"
+                        onClick={() => setOpenModalCrypto(true)}
+                      >
+                        {switchText === false ? (
+                          <img
+                            src={btclogo}
+                            alt="crypto icon"
+                            className="iconSize"
+                          ></img>
+                        ) : (
+                          <img
+                            src={bunnyLogo}
+                            alt="cryto icon"
+                            className="iconSize"
+                          ></img>
+                        )}
 
                         {switchText === false ? <p>BTCB</p> : <p>CAKE</p>}
                         {/* <SelectedOptionContext.Provider value={contextValue} /> */}
-                        {toggleState === 1 && <IoIosArrowDown fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1.3em", width: "1.3em" }} />}
-                        <MdContentCopy fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"} style={{ height: "1em", width: "1em" }} />
+                        {toggleState === 1 && (
+                          <IoIosArrowDown
+                            fill={
+                              theme === "theme-dark" ? "#b8add2" : "#7a6eaa"
+                            }
+                            style={{ height: "1.3em", width: "1.3em" }}
+                          />
+                        )}
+                        <MdContentCopy
+                          fill={theme === "theme-dark" ? "#b8add2" : "#7a6eaa"}
+                          style={{ height: "1em", width: "1em" }}
+                        />
                       </div>
                       <input placeholder="0.0" className="convertInput"></input>
                     </div>
@@ -331,8 +478,10 @@ export function Swap() {
                         />
                         {infoMessage === true && (
                           <div className="infoRiskMEssage">
-                            The scan result is provided by 3rd parties and may not cover every token. Therefore the result is for reference only, do NOT take it as investment or financial advice.
-                            Always DYOR! Powered by Hashdit.
+                            The scan result is provided by 3rd parties and may
+                            not cover every token. Therefore the result is for
+                            reference only, do NOT take it as investment or
+                            financial advice. Always DYOR! Powered by Hashdit.
                           </div>
                         )}
                       </div>
@@ -344,11 +493,17 @@ export function Swap() {
                     {toggleState === 2 && (
                       <div className="message-card">
                         <img scr={attentionIcon} alt=""></img>
-                        <p>Trade stablecoins in StableSwap with lower slippage and trading fees!</p>
+                        <p>
+                          Trade stablecoins in StableSwap with lower slippage
+                          and trading fees!
+                        </p>
                       </div>
                     )}
                   </div>
-                  <ConnectWalletBtn type="fullButton button-aqg" action={() => setOpenModalWallet(true)} />
+                  <ConnectWalletBtn
+                    type="fullButton button-aqg"
+                    action={() => setOpenModalWallet(true)}
+                  />
                 </div>
               </div>
             </div>
@@ -361,7 +516,19 @@ export function Swap() {
           <div className="extBox-bunnyHelp">
             <div className="bubbleDiv">
               <div className="needHelpBubble">Need Help ?</div>
-              {theme === "theme-dark" ? <img className="bubbleIcon" src={bubble} alt="bubble icon"></img> : <img className="bubbleIcon" src={bubbleLight} alt="bubble icon"></img>}
+              {theme === "theme-dark" ? (
+                <img
+                  className="bubbleIcon"
+                  src={bubble}
+                  alt="bubble icon"
+                ></img>
+              ) : (
+                <img
+                  className="bubbleIcon"
+                  src={bubbleLight}
+                  alt="bubble icon"
+                ></img>
+              )}
               <div className="helpBunny">
                 <img src={helpBunny} alt="history icon"></img>
               </div>
@@ -395,13 +562,21 @@ export function Swap() {
       />
 
       <div
-        className={(openModal === true || openModalWallet === true || openCryptoModal === true) && (document.body.style.overflow = "hidden") ? "overlay overlay-active" : "overlay"}
+        className={
+          (openModal === true ||
+            openModalWallet === true ||
+            openCryptoModal === true) &&
+          (document.body.style.overflow = "hidden")
+            ? "overlay overlay-active"
+            : "overlay"
+        }
         onClick={() => {
           setOpenModal(false);
           setOpenModalWallet(false);
           setOpenModalCrypto(false);
           document.body.style.overflow = "unset";
-        }}></div>
+        }}
+      ></div>
     </div>
   );
 }

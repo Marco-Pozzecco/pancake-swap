@@ -19,13 +19,19 @@
   --gradient-bold: linear-gradient(#53dee9, #9a6aff);
   --gradient-usedby: linear-gradient(180deg, #09070c 22%, #201335 100%);
   // shadows
-  --shadows-level1: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.05);
-  --shadows-active: 0px 0px 0px 1px #0098a1, 0px 0px 4px 8px rgba(31, 199, 212, 0.4);
-  --shadows-success: 0px 0px 0px 1px #31d0aa, 0px 0px 0px 4px rgba(49, 208, 170, 0.2);
-  --shadows-warning: 0px 0px 0px 1px #ed4b9e, 0px 0px 0px 4px rgba(237, 75, 158, 0.2);
-  --shadows-focus: 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px rgba(118, 69, 217, 0.6);
+  --shadows-level1: 0px 2px 12px -8px rgba(25, 19, 38, 0.1),
+    0px 1px 1px rgba(25, 19, 38, 0.05);
+  --shadows-active: 0px 0px 0px 1px #0098a1,
+    0px 0px 4px 8px rgba(31, 199, 212, 0.4);
+  --shadows-success: 0px 0px 0px 1px #31d0aa,
+    0px 0px 0px 4px rgba(49, 208, 170, 0.2);
+  --shadows-warning: 0px 0px 0px 1px #ed4b9e,
+    0px 0px 0px 4px rgba(237, 75, 158, 0.2);
+  --shadows-focus: 0px 0px 0px 1px #7645d9,
+    0px 0px 0px 4px rgba(118, 69, 217, 0.6);
   --shadows-inset: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
-  --shadows-tooltip: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 4px 12px -8px rgba(14, 14, 44, 0.1);
+  --shadows-tooltip: 0px 0px 2px rgba(0, 0, 0, 0.2),
+    0px 4px 12px -8px rgba(14, 14, 44, 0.1);
 
   // text colors
   --text-primary: #f4eeff;
@@ -34,6 +40,7 @@
   --text-disabled: #666171;
   --text-accent: #9a6aff;
   --text-accent-alt: #1fc7d4;
+  --text-marginratio-perpetual: rgb(122, 110, 170);
 
   // accent colors
   --accent-primary: #1fc7d4;
@@ -86,7 +93,7 @@
   --background-secondary: #fff;
   --background-terziary: hsla(0, 0%, 100%, 0.7);
   --background-disabled: #e9eaeb;
-  --background-perpetual: #5b4f82;
+  --background-perpetual: #eff3ff;
   --background-perpetual-item: rgb(24, 26, 32);
 
   // gradients
@@ -100,13 +107,19 @@
   --gradient-bold: linear-gradient(#53dee9, #7645d9);
   --gradient-usedby: linear-gradient(180deg, #fff 22%, #d7caec 100%);
   // shadows
-  --shadows-level1: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.05);
-  --shadows-active: 0px 0px 0px 1px #0098a1, 0px 0px 4px 8px rgba(31, 199, 212, 0.4);
-  --shadows-success: 0px 0px 0px 1px #31d0aa, 0px 0px 0px 4px rgba(49, 208, 170, 0.2);
-  --shadows-warning: 0px 0px 0px 1px #ed4b9e, 0px 0px 0px 4px rgba(237, 75, 158, 0.2);
-  --shadows-focus: 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px rgba(118, 69, 217, 0.6);
+  --shadows-level1: 0px 2px 12px -8px rgba(25, 19, 38, 0.1),
+    0px 1px 1px rgba(25, 19, 38, 0.05);
+  --shadows-active: 0px 0px 0px 1px #0098a1,
+    0px 0px 4px 8px rgba(31, 199, 212, 0.4);
+  --shadows-success: 0px 0px 0px 1px #31d0aa,
+    0px 0px 0px 4px rgba(49, 208, 170, 0.2);
+  --shadows-warning: 0px 0px 0px 1px #ed4b9e,
+    0px 0px 0px 4px rgba(237, 75, 158, 0.2);
+  --shadows-focus: 0px 0px 0px 1px #7645d9,
+    0px 0px 0px 4px rgba(118, 69, 217, 0.6);
   --shadows-inset: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
-  --shadows-tooltip: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 4px 12px -8px rgba(14, 14, 44, 0.1);
+  --shadows-tooltip: 0px 0px 2px rgba(0, 0, 0, 0.2),
+    0px 4px 12px -8px rgba(14, 14, 44, 0.1);
 
   // text colors
   --text-primary: #280d5f;
@@ -115,6 +128,7 @@
   --text-disabled: #bdc2c4;
   --text-accent: #7645d9;
   --text-accent-alt: #1fc7d4;
+  --text-marginratio-perpetual: white;
 
   // accent colors
   --accent-primary: #1fc7d4;
