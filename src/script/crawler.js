@@ -14,20 +14,19 @@ async function crawl() {
 
         await page.goto(URL)
 
-        await page.waitForSelector(cardSelector)
-        
-        const data = await page.$$(cardSelector)
+        await page.waitForTimeout(1200)
+        for (let i = 0; i < 25; i++) {
+            await page.evaluate(() => {
+                window.scrollBy(0, window.innerHeight);
+            });
+            await page.waitForTimeout(1200)
+        }
+        const data = await page.evaluate(() => {
+            const trs = Array.from(document.querySelectorAll('tr')).map(y => [...Array.from(y.querySelectorAll('td')).map(x => x.textContent)]);
 
-        // const data = await page.evaluate( sel => {
-        //     const cards = document.querySelectorAll(sel);
-        //     console.count("cards")
-        //     return cards;
-        // }, cardSelector)
-        
-        data.forEach( async (el) => {
-            const HTML_El = await el.getProperties()
-            console.log(HTML_El)
+            return trs;
         })
+
 
         console.log(data)
 
