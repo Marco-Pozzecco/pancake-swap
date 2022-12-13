@@ -11,8 +11,6 @@ import "./_win-pottery.scss";
 export function WinPottery() {
   return (
     <div className="wp-main-container">
-      <h1>WinPottery.js</h1>
-      <h1>FARE MODIFICHE QUI! RAMO GIUSTO!</h1>
       <ToBeWon />
       <CurrentPrizePot />
       <FinishedRoundWP />
