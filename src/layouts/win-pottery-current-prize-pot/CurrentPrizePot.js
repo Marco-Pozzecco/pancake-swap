@@ -1,4 +1,5 @@
 import React from "react";
+import { PrizePotCard } from "../../components/card/prize-pot-card/PrizePotCard";
 import "./_current-prize-pot.scss";
 
 export function CurrentPrizePot() {
@@ -13,7 +14,9 @@ export function CurrentPrizePot() {
           </div>
         </div>
         <div className="ccp-content-wrapper">
-          <div className="ccp-card-container">CARD</div>
+          <div className="ccp-card-container">
+            <PrizePotCard />
+          </div>
           <div className="ccp-image-container">
             <img src="https://pancakeswap.finance/images/pottery/honeypot.png" />
           </div>
