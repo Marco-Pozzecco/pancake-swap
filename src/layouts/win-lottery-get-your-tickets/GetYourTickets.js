@@ -18,7 +18,7 @@ export function GetYourTickets() {
               <UntilTheDrawCD deadline={deadlineDate} />
             </div>
           </div>
-          <div className="gyt-body">
+          <div className="gyt-card-wrapper">
             <GetYourTicketCard />
           </div>
         </div>

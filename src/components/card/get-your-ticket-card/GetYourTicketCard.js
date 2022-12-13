@@ -33,7 +33,7 @@ export function GetYourTicketCard() {
                   <span>$23,567</span>
                 </div>
                 <div className="gytcbs-amount gytcbs-amount-b">
-                  <span>$23,567 CAKE</span>
+                  <span>23,567 CAKE</span>
                 </div>
               </div>
             </div>
@@ -80,24 +80,26 @@ export function GetYourTicketCard() {
 
         {/* --FOOTER------------------- */}
         <div className="gytc-footer-container">
-          <Button
-            text="Details"
-            type={"noBorderButton"}
-            style={{ color: "rgb(114, 239, 255)", textDecoration: "none" }}
-            onClick={() => setShowDetails(!showDetails)}
-          >
-            <FaAngleDown />
-          </Button>
-          {/* <div className="gytc-footer-btn">
-            Details
-            <a href="#" onClick={() => setShowDetails(!showDetails)}>
-              <svg width="32" height="32" viewBox="0 0 38 38">
-                <g fill="aqua">
-                  <path d={svgPath} />
-                </g>
-              </svg>
-            </a>
-          </div> */}
+          <div className="gytc-footer-sub-container gytc-fsc-datas-container">
+            <div className="gytc-fsc-datas-description-box">
+              Match the winning number in the same order to share prizes.
+              Current prizes up for grabs:
+            </div>
+            <div className="gytc-datas-container">DATA CONTAINER</div>
+          </div>
+          <div className="gytc-footer-sub-container gytc-fsc-button">
+            <Button
+              text="Details"
+              type={"noBorderButton"}
+              style={{
+                color: "rgb(114, 239, 255)",
+                textDecoration: "none",
+              }}
+              onClick={() => setShowDetails(!showDetails)}
+            >
+              <FaAngleDown />
+            </Button>
+          </div>
         </div>
         {/* -------------------------- */}
       </div>
@@ -109,3 +111,14 @@ export function GetYourTicketCard() {
 // {<div></div> }
 // tra le graffe dove posso fare il conditional rendering
 // vedere il link su KEEP PERSONALE
+
+/* <div className="gytc-footer-btn">
+            Details
+            <a href="#" onClick={() => setShowDetails(!showDetails)}>
+              <svg width="32" height="32" viewBox="0 0 38 38">
+                <g fill="aqua">
+                  <path d={svgPath} />
+                </g>
+              </svg>
+            </a>
+          </div> */
