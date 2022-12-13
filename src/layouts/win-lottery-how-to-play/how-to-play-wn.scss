@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Kanit, sans-serif;
+}
+
+.htp-section {
+  width: 100%;
+  height: auto;
+  padding: 14px 0 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .htp-main-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 1554px;
+
+    padding: 48px 24px;
+
+    .htp-sub-container {
+      width: 100%;
+      height: auto;
+      padding: 2px;
+
+      .htp-content {
+        width: 100%;
+      }
+      .htpc-1 {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 0 40px;
+
+        .htpc-1-title {
+          color: rgb(147, 108, 247);
+          font-size: 40px;
+          margin: 0 0 24px;
+        }
+
+        .htpc-1-text-a {
+          color: rgb(244, 238, 255);
+          font-size: 16px;
+        }
+
+        .htpc-1-text-b {
+          color: rgb(244, 238, 255);
+          font-size: 16px;
+        }
+      }
+
+      .htpc-2 {
+        height: autp;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .htpc-3 {
+        height: auto;
+        display: flex;
+
+        .htpc-3-text {
+          width: 70%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+        }
+        .htpc-3-card {
+          width: 30%;
+          height: 100%;
+        }
+      }
+
+      .htpc-4 {
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+
+        .htpc-4-text-wrapper {
+          width: 65%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          padding-right: 20px;
+
+          .htpc-4-text-title-box {
+            width: 100%;
+            height: 10%;
+
+            & h2 {
+              color: rgb(154, 106, 255);
+              font-size: 24px;
+              font-weight: 600;
+              line-height: 1.1;
+              margin: 0 0 24px;
+            }
+          }
+
+          .htpc-4-text-box {
+            height: 90%;
+            width: 100%;
+          }
+        }
+
+        .htpc-4-card {
+          width: 35%;
+          height: 100%;
+        }
+      }
+
+      .htpc-5 {
+        height: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .htpc-5-svg-box {
+          width: 30%;
+          height: 100%;
+          border: 1px solid rgb(121, 229, 58);
+        }
+        .htpc-5-text {
+          width: 30%;
+          height: 100%;
+          border: 1px solid red;
+        }
+      }
+    }
+  }
+}

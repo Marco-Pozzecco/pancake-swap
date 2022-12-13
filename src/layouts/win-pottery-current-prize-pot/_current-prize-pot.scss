@@ -1,0 +1,83 @@
+.ccp-main-container {
+  width: 100%;
+  height: auto;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 44px 16px 56px;
+  background: radial-gradient(
+    51.67% 114.22% at 51.67% 49.78%,
+    rgb(110, 66, 188) 0%,
+    rgb(168, 129, 252) 100%
+  );
+
+  .ccp-sub-container {
+    width: 100%;
+    max-width: 940px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .ccp-titles {
+      width: 100%;
+      height: 20%;
+
+      .ccp-title {
+        color: white;
+        font-weight: 600;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      .ccp-title-a {
+        font-size: 32px;
+      }
+
+      .ccp-amount {
+        font-size: 40px;
+        color: rgb(147, 108, 247);
+        text-align: center;
+        border: 1px solid chartreuse;
+      }
+
+      .ccp-title-b {
+        font-size: 24px;
+        margin: 10px 0 0;
+      }
+    }
+
+    .ccp-content-wrapper {
+      width: 100%;
+      height: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10%;
+
+      //CARD
+      .ccp-card-container {
+        width: 50%;
+        height: 100%;
+        border: 1px solid chartreuse;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+      }
+
+      //IMAGE
+      .ccp-image-container {
+        width: 50%;
+
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

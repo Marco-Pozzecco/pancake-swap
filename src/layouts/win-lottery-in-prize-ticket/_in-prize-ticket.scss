@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Kanit, sans-serif;
+  font-weight: 600;
+}
+
+.ipt-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 0;
+  width: 100%;
+  background: linear-gradient(rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
+  position: relative;
+
+  .in-prize-main-container {
+    padding: 24px 24px;
+    // background-color: rgba(90, 163, 212, 0.747);
+    max-width: 336px;
+    //   height: auto;
+    height: 404px;
+    //   max-height: 404px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .ip-sc-titles {
+      // background-color: rgba(255, 0, 0, 0.5);
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .ipt-title-a {
+        font-size: 20px;
+        color: white;
+      }
+
+      .ipt-number {
+        font-size: 64px;
+        color: rgb(244, 181, 82);
+      }
+
+      .ipt-title-b {
+        font-size: 24px;
+        color: white;
+      }
+    }
+  }
+
+  .bottom-svg-container {
+    width: 100%;
+    width: 20px;
+
+    &svg {
+      height: 100%;
+      width: 100%;
+      fill: white;
+    }
+  }
+}
