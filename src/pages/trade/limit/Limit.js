@@ -38,7 +38,9 @@ export function Limit() {
 
   return (
     <div className="body-limit">
-      <Subnav elements={["Swap", "Limit", "Liquidity", "Perpetual", "Bridge"]} />
+      <Subnav
+        elements={["Swap", "Limit", "Liquidity", "Perpetual", "Bridge"]}
+      />
 
       <div className="limit-external-box">
         <section className="col-1">
@@ -47,10 +49,16 @@ export function Limit() {
           <div className="col1-btm-page">
             <div className="col1-bottom-card">
               <div className="bloc-tabs-bottom-card">
-                <div className={toggleState === 1 ? "tabs2 active-tabs" : "tabs2"} onClick={() => toggleTab(1)}>
+                <div
+                  className={toggleState === 1 ? "tabs2 active-tabs" : "tabs2"}
+                  onClick={() => toggleTab(1)}
+                >
                   Open Orders
                 </div>
-                <div className={toggleState === 2 ? "tabs2 active-tabs" : "tabs2"} onClick={() => toggleTab(2)}>
+                <div
+                  className={toggleState === 2 ? "tabs2 active-tabs" : "tabs2"}
+                  onClick={() => toggleTab(2)}
+                >
                   Order History
                 </div>
               </div>
@@ -76,8 +84,24 @@ export function Limit() {
 
                 <div className="content-bottom-card">
                   <img className="" src={bunnyCard} alt="wallet" />
-                  <p className={toggleState === 1 ? " switchTxt active-switchImg" : "switchTxt"}>No Open orders</p>
-                  <p className={toggleState === 2 ? " switchTxt active-switchImg" : "switchTxt"}>No Order History</p>
+                  <p
+                    className={
+                      toggleState === 1
+                        ? " switchTxt active-switchImg"
+                        : "switchTxt"
+                    }
+                  >
+                    No Open orders
+                  </p>
+                  <p
+                    className={
+                      toggleState === 2
+                        ? " switchTxt active-switchImg"
+                        : "switchTxt"
+                    }
+                  >
+                    No Order History
+                  </p>
                 </div>
                 <div className="card-bottom-row">
                   <img className="switchImg" src={leftArrow} alt="wallet" />
@@ -113,7 +137,9 @@ export function Limit() {
                   style={{ height: "1.4em", width: "1.4em" }}
                 />
               </div>
-              <p className="pg-tx">Place a limit order to trade at a set price</p>
+              <p className="pg-tx">
+                Place a limit order to trade at a set price
+              </p>
             </div>
 
             <div className="ext-bottomCard">
@@ -141,7 +167,9 @@ export function Limit() {
                         style={{ height: "1.3em", width: "1.3em" }}
                         onMouseLeave={() => setVisibile(false)}
                         onClick={() => {
-                          switchText === false ? setSwitch(true) : setSwitch(false);
+                          switchText === false
+                            ? setSwitch(true)
+                            : setSwitch(false);
                         }}
                       />
                     )}
@@ -170,11 +198,22 @@ export function Limit() {
                   <p>CAKE</p>
                 </div>
               </div>
-              <ConnectWalletBtn type="fullButton button-aqg" action={() => setOpenModalWallet(true)} />
+              <ConnectWalletBtn
+                type="fullButton button-aqg"
+                action={() => setOpenModalWallet(true)}
+              />
               {theme === "theme-dark" ? (
-                <img src={poweredByGelatoWhite} alt="gelato icon" className="gelotoLogo"></img>
+                <img
+                  src={poweredByGelatoWhite}
+                  alt="gelato icon"
+                  className="gelotoLogo"
+                ></img>
               ) : (
-                <img src={poweredByGelato} alt="gelato icon" className="gelotoLogo"></img>
+                <img
+                  src={poweredByGelato}
+                  alt="gelato icon"
+                  className="gelotoLogo"
+                ></img>
               )}
             </div>
           </div>
@@ -183,9 +222,17 @@ export function Limit() {
             <div className="bubbleDiv">
               <div className="needHelpBubble">Need Help ?</div>
               {theme === "theme-dark" ? (
-                <img className="bubbleIcon" src={bubble} alt="bubble icon"></img>
+                <img
+                  className="bubbleIcon"
+                  src={bubble}
+                  alt="bubble icon"
+                ></img>
               ) : (
-                <img className="bubbleIcon" src={bubbleLight} alt="bubble icon"></img>
+                <img
+                  className="bubbleIcon"
+                  src={bubbleLight}
+                  alt="bubble icon"
+                ></img>
               )}
               <div className="helpBunny">
                 <img src={helpBunny} alt="history icon"></img>
@@ -193,13 +240,19 @@ export function Limit() {
             </div>
           </div>
         </section>
-        <ModalConnectWallet open={openModalWallet} onClose={() => setOpenModalWallet(false)} />
+        <ModalConnectWallet
+          open={openModalWallet}
+          onClose={() => setOpenModalWallet(false)}
+        />
       </div>
       <div
-        className={openModalWallet === true ? "overlay overlay-active" : "overlay"}
+        className={
+          openModalWallet === true ? "overlay overlay-active" : "overlay"
+        }
         onClick={() => {
           setOpenModalWallet(false);
-        }}></div>
+        }}
+      ></div>
     </div>
   );
 }

@@ -211,9 +211,8 @@ export function Swap() {
                     // query div graph
                     const graphEl = document.querySelector(".graph");
                     // distruzione heading
-                    const headingEl = document.getElementById(
-                      `swap-graph-title`
-                    );
+                    const headingEl =
+                      document.getElementById(`swap-graph-title`);
                     graphEl.removeChild(headingEl);
 
                     // creazione grafico

@@ -23,14 +23,17 @@ export function CryptoModalRadioButtons(props) {
     <div className="flex-switch">
       {radioGroup.map((button, index) => {
         return (
-          <div className={i === index ? "cryptoBtn cryptoBtn-active" : "cryptoBtn"}>
+          <div
+            className={i === index ? "cryptoBtn cryptoBtn-active" : "cryptoBtn"}
+          >
             <img src={button.img} alt="" className="cryptologo" />
             <div
               key={index}
               onClick={() => {
                 toggleTab(index);
                 props.selectedCrypto(button);
-              }}>
+              }}
+            >
               {button.name}{" "}
             </div>
           </div>

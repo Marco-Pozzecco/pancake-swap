@@ -27,7 +27,9 @@ export function Liquidity() {
 
   return (
     <div className="liquidity-ext-page">
-      <Subnav elements={["Swap", "Limit", "Liquidity", "Perpetual", "Bridge"]} />
+      <Subnav
+        elements={["Swap", "Limit", "Liquidity", "Perpetual", "Bridge"]}
+      />
 
       <div className="liq-ext-pg-child">
         <div className="liquidity-box-page">
@@ -61,18 +63,32 @@ export function Liquidity() {
 
                     <div className="headerIcon">
                       {theme === "theme-dark" ? (
-                        <FaCog fill="#b8add2" style={{ height: "1.5em", width: "1.5em" }} />
+                        <FaCog
+                          fill="#b8add2"
+                          style={{ height: "1.5em", width: "1.5em" }}
+                        />
                       ) : (
-                        <FaCog fill="#7a6eaa" style={{ height: "1.5em", width: "1.5em" }} />
+                        <FaCog
+                          fill="#7a6eaa"
+                          style={{ height: "1.5em", width: "1.5em" }}
+                        />
                       )}
                       {theme === "theme-dark" ? (
-                        <RiHistoryLine fill="#b8add2" style={{ height: "1.5em", width: "1.5em" }} />
+                        <RiHistoryLine
+                          fill="#b8add2"
+                          style={{ height: "1.5em", width: "1.5em" }}
+                        />
                       ) : (
-                        <RiHistoryLine fill="#7a6eaa" style={{ height: "1.5em", width: "1.5em" }} />
+                        <RiHistoryLine
+                          fill="#7a6eaa"
+                          style={{ height: "1.5em", width: "1.5em" }}
+                        />
                       )}
                     </div>
                   </div>
-                  <p className="pg-tx">Remove liquidity to receive tokens back</p>
+                  <p className="pg-tx">
+                    Remove liquidity to receive tokens back
+                  </p>
                 </div>
               </div>
 
@@ -96,12 +112,20 @@ export function Liquidity() {
                 </div>
                 <div className="buttonsLayout">
                   {show === 1 && (
-                    <AddLiquidityBtn type="fullButton button-addLiqu" action={() => toggleTab(2)}>
-                      <RiAddFill fill={theme === "theme-dark" ? "#b8add2" : "#fff"} />
+                    <AddLiquidityBtn
+                      type="fullButton button-addLiqu"
+                      action={() => toggleTab(2)}
+                    >
+                      <RiAddFill
+                        fill={theme === "theme-dark" ? "#b8add2" : "#fff"}
+                      />
                     </AddLiquidityBtn>
                   )}
                   {show === 2 && (
-                    <ConnectWalletBtn type="fullButton button-addLiqu" action={() => setOpenModalWallet(true)} />
+                    <ConnectWalletBtn
+                      type="fullButton button-addLiqu"
+                      action={() => setOpenModalWallet(true)}
+                    />
                   )}
                 </div>
               </div>
@@ -110,8 +134,10 @@ export function Liquidity() {
           <div className="empty-div-liquidity">
             {show === 2 && (
               <p className="text-div-liquidity">
-                🥞 By adding liquidity you'll earn 0.17% of all trades on this pair proportional to your share of the
-                pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity.
+                🥞 By adding liquidity you'll earn 0.17% of all trades on this
+                pair proportional to your share of the pool. Fees are added to
+                the pool, accrue in real time and can be claimed by withdrawing
+                your liquidity.
               </p>
             )}
           </div>
@@ -123,9 +149,17 @@ export function Liquidity() {
               <div className="bubbleDiv">
                 <div className="needHelpBubble">Need Help ?</div>
                 {theme === "theme-dark" ? (
-                  <img className="bubbleIcon" src={bubble} alt="bubble icon"></img>
+                  <img
+                    className="bubbleIcon"
+                    src={bubble}
+                    alt="bubble icon"
+                  ></img>
                 ) : (
-                  <img className="bubbleIcon" src={bubbleLight} alt="bubble icon"></img>
+                  <img
+                    className="bubbleIcon"
+                    src={bubbleLight}
+                    alt="bubble icon"
+                  ></img>
                 )}
                 <div className="helpBunny">
                   <img src={helpBunny} alt="history icon"></img>
@@ -133,14 +167,20 @@ export function Liquidity() {
               </div>
             </div>
           </div>
-          <ModalConnectWallet open={openModalWallet} onClose={() => setOpenModalWallet(false)} />
+          <ModalConnectWallet
+            open={openModalWallet}
+            onClose={() => setOpenModalWallet(false)}
+          />
         </div>
       </div>
       <div
-        className={openModalWallet === true ? "overlay overlay-active" : "overlay"}
+        className={
+          openModalWallet === true ? "overlay overlay-active" : "overlay"
+        }
         onClick={() => {
           setOpenModalWallet(false);
-        }}></div>
+        }}
+      ></div>
     </div>
   );
 }

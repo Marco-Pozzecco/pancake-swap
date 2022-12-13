@@ -13,14 +13,17 @@ export function TimeFrameRadioBtn(props) {
     <div className="flex-switch timeFrameBox">
       {props.radioGroup.map((button, index) => {
         return (
-          <div className={i === index ? "timeFRBtn timeFRBtn-active" : "timeFRBtn"}>
+          <div
+            className={i === index ? "timeFRBtn timeFRBtn-active" : "timeFRBtn"}
+          >
             <div
               key={index}
               onClick={() => {
                 toggleTab(index);
                 props.timeFrameState(button);
                 //console.log(button);
-              }}>
+              }}
+            >
               {/* index={index} */}
               {button}{" "}
             </div>

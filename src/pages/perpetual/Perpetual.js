@@ -1,15 +1,13 @@
 import { PerpetualGrid } from "../../layouts/perpetual-grid/PerpetualGrid";
 
 export function Perpetual() {
+  return (
+    <>
+      {/* Nav */}
 
-    return (
-        <>
-            {/* Nav */}
-
-            {/* Grid */}
-            <PerpetualGrid />
-            {/* Status bar */}
-
-        </>
-    )
+      {/* Grid */}
+      <PerpetualGrid />
+      {/* Status bar */}
+    </>
+  );
 }

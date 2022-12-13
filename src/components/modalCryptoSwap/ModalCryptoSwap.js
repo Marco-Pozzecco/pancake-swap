@@ -15,10 +15,16 @@ export function ModalCryptoSwap({ open, onClose }) {
     },
     {
       name: "8PAY",
-      img: <img className="fa-svg-icon" src={Ethereum} alt="ethereum icon"></img>,
+      img: (
+        <img className="fa-svg-icon" src={Ethereum} alt="ethereum icon"></img>
+      ),
       description: "lalala",
     },
-    { name: "aBNBc", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    {
+      name: "aBNBc",
+      img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>,
+      description: "lalala",
+    },
     {
       name: "ACH",
       img: <img className="fa-svg-icon" src={bnbIcon} alt="bnb icon"></img>,
@@ -26,10 +32,16 @@ export function ModalCryptoSwap({ open, onClose }) {
     },
     {
       name: "ADA",
-      img: <img className="fa-svg-icon" src={Ethereum} alt="ethereum icon"></img>,
+      img: (
+        <img className="fa-svg-icon" src={Ethereum} alt="ethereum icon"></img>
+      ),
       description: "lalala",
     },
-    { name: "ADX", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    {
+      name: "ADX",
+      img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>,
+      description: "lalala",
+    },
     {
       name: "ALICE",
       img: <img className="fa-svg-icon" src={bnbIcon} alt="bnb icon"></img>,
@@ -37,17 +49,51 @@ export function ModalCryptoSwap({ open, onClose }) {
     },
     {
       name: "ALPA",
-      img: <img className="fa-svg-icon" src={Ethereum} alt="ethereum icon"></img>,
+      img: (
+        <img className="fa-svg-icon" src={Ethereum} alt="ethereum icon"></img>
+      ),
       description: "lalala",
     },
-    { name: "ALPACA", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
-    { name: "ALPHA", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
-    { name: "AMPL", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
-    { name: "ANKR", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
-    { name: "ANTEX", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
-    { name: "AOG", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
-    { name: "APX", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
-    { name: "APYS", img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>, description: "lalala" },
+    {
+      name: "ALPACA",
+      img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>,
+      description: "lalala",
+    },
+    {
+      name: "ALPHA",
+      img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>,
+      description: "lalala",
+    },
+    {
+      name: "AMPL",
+      img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>,
+      description: "lalala",
+    },
+    {
+      name: "ANKR",
+      img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>,
+      description: "lalala",
+    },
+    {
+      name: "ANTEX",
+      img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>,
+      description: "lalala",
+    },
+    {
+      name: "AOG",
+      img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>,
+      description: "lalala",
+    },
+    {
+      name: "APX",
+      img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>,
+      description: "lalala",
+    },
+    {
+      name: "APYS",
+      img: <img className="fa-svg-icon" src={aptos} alt="aptos icon"></img>,
+      description: "lalala",
+    },
   ];
 
   //const [selected, setSelected] = useState({ ...options[0] });
@@ -61,7 +107,8 @@ export function ModalCryptoSwap({ open, onClose }) {
       id="modal"
       onClick={(e) => {
         e.stopPropagation();
-      }}>
+      }}
+    >
       <div className="modalHeader flex-switch">
         <h3 className="header">Select a Token</h3>
         <button data-close-btn className="close-btn-modal" onClick={onClose}>
@@ -71,7 +118,10 @@ export function ModalCryptoSwap({ open, onClose }) {
       <div className="bordeBottom"></div>
       <div className="bottomModal">
         <div className="input1Converter">
-          <input className="convertInput" placeholder="Search name or paste address"></input>
+          <input
+            className="convertInput"
+            placeholder="Search name or paste address"
+          ></input>
         </div>
 
         <div className="flex-switch">
@@ -90,7 +140,8 @@ export function ModalCryptoSwap({ open, onClose }) {
                   //props.selectedCryptoModal(option.name);
                   //ModalCryptoSwap(false);
                   console.log(option.name);
-                }}>
+                }}
+              >
                 <div className="cryptoLogo">{option.img}</div>
                 <div className="cryptoContent">
                   <div className="cryptoName">{option.name}</div>
