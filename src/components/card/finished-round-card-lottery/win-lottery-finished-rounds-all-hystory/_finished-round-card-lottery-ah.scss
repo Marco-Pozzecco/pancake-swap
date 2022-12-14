@@ -101,16 +101,47 @@
             width: 70.6px;
             height: 70.6px;
             display: flex;
-            -webkit-box-align: center;
+            // -webkit-box-align: center;
             align-items: center;
             -webkit-box-pack: center;
             justify-content: center;
+            position: relative;
 
             & svg {
               height: 100%;
               width: 100%;
+            }
 
-              // QUI MANCA DI AGGIUNGERE LE CLASSI E INSERIRE I DIV CON I NUMERI CHE CI SONO ALL INTENRO DELLE PALLE COLORATE
+            // QUI MANCA DI AGGIUNGERE LE CLASSI E INSERIRE I DIV CON I NUMERI CHE CI SONO ALL INTENRO DELLE PALLE COLORATE
+
+            .frcl-ahb-number-box {
+              position: absolute;
+              transform: translate(-50%, -50%);
+              font-weight: 600;
+              line-height: 1.5;
+              font-size: 42px;
+              color: rgb(0, 0, 0);
+              text-shadow: white -0.75px -0.75px 0px, white 0.75px -0.75px 0px,
+                white -0.75px 0.75px 0px, white 0.75px 0.75px 0px;
+            }
+
+            .frcl-ahb-nb-a {
+              transform: rotate(-27deg);
+            }
+            .frcl-ahb-nb-b {
+              transform: rotate(-25deg);
+            }
+            .frcl-ahb-nb-c {
+              transform: rotate(15deg);
+            }
+            .frcl-ahb-nb-d {
+              transform: rotate(30deg);
+            }
+            .frcl-ahb-nb-e {
+              transform: rotate(-17deg);
+            }
+            .frcl-ahb-nb-f {
+              transform: rotate(27deg);
             }
           }
         }
