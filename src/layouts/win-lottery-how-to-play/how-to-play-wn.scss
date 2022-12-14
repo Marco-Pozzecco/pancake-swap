@@ -12,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(8, 6, 11);
 
   .htp-main-container {
     width: 100%;
@@ -64,6 +65,7 @@
       .htpc-3 {
         height: auto;
         display: flex;
+        gap: 24px;
 
         .htpc-3-text {
           width: 70%;

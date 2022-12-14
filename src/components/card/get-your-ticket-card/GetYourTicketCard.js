@@ -85,7 +85,19 @@ export function GetYourTicketCard() {
               Match the winning number in the same order to share prizes.
               Current prizes up for grabs:
             </div>
-            <div className="gytc-datas-container">DATA CONTAINER</div>
+            <div className="gytc-datas-container">
+              <div>DATA</div>
+              <div>DATA</div>
+              <div>DATA</div>
+              <div>DATA</div>
+              <div>DATA</div>
+              <div>DATA</div>
+              <div>DATA</div>
+              <div>DATA</div>
+              <div>DATA</div>
+              <div>DATA</div>
+              <div>DATA</div>
+            </div>
           </div>
           <div className="gytc-footer-sub-container gytc-fsc-button">
             <Button
