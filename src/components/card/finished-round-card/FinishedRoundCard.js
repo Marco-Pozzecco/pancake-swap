@@ -1,5 +1,6 @@
 import React from "react";
 import { FinishedRoundsDatas } from "../../datas/finished-round-datas/FinishedRoundsDatas";
+import { RoundsInput } from "../../inpunts/round-input-with-counter/RoundsInput";
 import "./_finished-round-card.scss";
 
 export function FinishedRoundCard() {
@@ -7,7 +8,9 @@ export function FinishedRoundCard() {
     <div className="frc-main-container">
       <div className="frc-sub-container">
         <div className="frc-header-box">
-          <div className="frch-box-counter">Round 35</div>
+          <div className="frch-box-counter">
+            <RoundsInput />
+          </div>
           <div className="frch-box-date-wrapper">
             <div className="frch-box-date">Drawn Dec 9, 2022, 1:00 PM</div>
           </div>
