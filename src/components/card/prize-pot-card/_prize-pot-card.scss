@@ -1,7 +1,6 @@
 .ppc-main-container-wrapper {
   width: 100%;
   height: auto;
-  border: 1px solid yellow;
 
   .ppc-main-container {
     width: 100%;
@@ -24,10 +23,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: #372f47;
 
-        & :nth-child(1) {
+        .ppc-buttons-a {
           background-color: rgb(39, 38, 44);
         }
+
+        .ppc-buttons-b {
+          background-color: #372f47;
+        }
+
         & button {
           width: 100%;
           border-radius: 24px 24px 0 0;
@@ -222,6 +227,27 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            .cvbtn-pot {
+              width: 100%;
+              height: auto;
+              position: relative;
+              -webkit-box-align: center;
+              align-items: center;
+              border: 0px;
+              box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+              cursor: pointer;
+              font-size: 16px;
+              font-weight: 600;
+              justify-content: center;
+              line-height: 1;
+              opacity: 1;
+              transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+              height: 48px;
+              padding: 0px 24px;
+              background-color: #1fc7d4;
+              color: #191326;
+            }
           }
         }
       }
