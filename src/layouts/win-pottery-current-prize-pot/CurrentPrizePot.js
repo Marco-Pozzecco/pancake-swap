@@ -5,6 +5,9 @@ import "./_current-prize-pot.scss";
 export function CurrentPrizePot() {
   return (
     <section className="ccp-main-container">
+      {/* ----------------SVG CONTAINER(senza svg, utilizzato un altro metodo)------------------- */}
+      <div className="ccp-top-svg-container"></div>
+      {/* ----------------COMPONENTS------------------- */}
       <div className="ccp-sub-container">
         <div className="ccp-titles">
           <div className="ccp-title-a ccp-title">Current Prize Pot</div>

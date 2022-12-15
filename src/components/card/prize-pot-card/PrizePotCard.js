@@ -73,7 +73,7 @@ export function PrizePotCard() {
               </div>
               {/* -- Button wrapper -- */}
               <div className="ppcb-csc-btn-wrapper">
-                <ConnectWalletBtn className="cvbtn-pot" />
+                <ConnectWalletBtn type={"fullButton"} />
               </div>
             </div>
           </section>
