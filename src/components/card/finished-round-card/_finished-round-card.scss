@@ -1,6 +1,5 @@
 .frc-main-container {
   width: 100%;
-  //   width: 579px;
   height: 100%;
   background-color: #383241;
   border-radius: 24px;
@@ -155,35 +154,94 @@
 
         .frcb-pc-sub-subtitles-wrapper {
           width: 100%;
-          height: auto;
+          height: 100%;
           display: flex;
           justify-content: space-between;
-          align-items: center;
-
-          a {
-            border: 3px solid chartreuse; //DA SISTEMARE--------------------------------
-          }
+          align-items: flex-end;
 
           .frcb-pc-sub-subtitles {
+            width: 100%;
+            height: 100%;
+            //   width: 100%;
+
+            .frcb-pcss-text {
+              width: 100%;
+              display: flex;
+              justify-content: flex-start;
+              align-items: flex-start;
+
+              & :first-child {
+                color: #f4eeff;
+                font-weight: 400;
+                line-height: 1.5;
+                font-size: 14px;
+              }
+
+              & :nth-child(2) {
+                color: #f4eeff;
+                font-weight: 600;
+                line-height: 1.5;
+                margin-left: 4px;
+                font-size: 14px;
+              }
+            }
+
+            //   .frcb-pcs-subtitle {
+            //     display: flex;
+            //     justify-content: space-between;
+            //     align-items: center;
+            //     gap: 5px;
+            //     line-height: 1.5;
+            //     font-size: 14px;
+            //     border: 2px solid yellow;
+            //     width: 100%;
+
+            //     .frcb-pcs-subtitle-a {
+            //       font-weight: 400;
+            //       border: 3px solid blue;
+            //     }
+
+            //     .frcb-pcs-subtitle-b {
+            //       font-weight: 600;
+            //       border: 3px solid white;
+
+            //       a {
+            //         border: 3px solid chartreuse; //DA SISTEMARE--------------------------------
+            //       }
+            //     }
+            //   }
+          }
+
+          .frcb-pcss-a {
+            width: auto;
+            text-align: left;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
+          }
 
-            .frcb-pcs-subtitle {
-              display: flex;
-              justify-content: flex-start;
-              align-items: center;
-              gap: 5px;
+          .frcb-pcss-b {
+            width: auto;
+            text-align: right;
+            height: 100%;
+
+            .frcb-bottom-link {
+              color: #1fc7d4;
+              font-weight: 600;
               line-height: 1.5;
-              font-size: 14px;
+              font-size: 16px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
 
-              .frcb-pcs-subtitle-a {
-                font-weight: 400;
+              &:hover {
+                text-decoration: underline;
               }
 
-              .frcb-pcs-subtitle-a {
-                font-weight: 600;
+              & svg {
+                margin-left: 3px;
+                fill: #1fc7d4;
               }
             }
           }
