@@ -1,5 +1,6 @@
 import React from "react";
 import "./_prize-pot-card.scss";
+import { ConnectWalletBtn } from "../../buttons/ConnectWalletBtn";
 
 export function PrizePotCard() {
   return (
@@ -8,8 +9,8 @@ export function PrizePotCard() {
         <section className="ppc-sub-container">
           {/* --- TOP HEADER-(Buttons) --- */}
           <section className="ppc-buttons-top-container">
-            <button>Deposit</button>
-            <button>Claim</button>
+            <button className="ppc-buttons-a">Deposit</button>
+            <button className="ppc-buttons-b">Claim</button>
           </section>
 
           {/* --- CARD main CONTAINER 1 --- */}
@@ -72,7 +73,7 @@ export function PrizePotCard() {
               </div>
               {/* -- Button wrapper -- */}
               <div className="ppcb-csc-btn-wrapper">
-                <button>Button</button>
+                <ConnectWalletBtn type={"fullButton"} />
               </div>
             </div>
           </section>
