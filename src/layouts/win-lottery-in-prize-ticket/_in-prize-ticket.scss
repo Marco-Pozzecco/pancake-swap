@@ -8,6 +8,7 @@
 
 .ipt-section {
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,16 +18,13 @@
   position: relative;
 
   .in-prize-main-container {
-    padding: 24px 24px;
-    // background-color: rgba(90, 163, 212, 0.747);
-    max-width: 336px;
-    //   height: auto;
-    height: 404px;
-    //   max-height: 404px;
+    padding: 48px 24px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    //TITLES
     .ip-sc-titles {
       // background-color: rgba(255, 0, 0, 0.5);
       width: 100%;
@@ -38,28 +36,46 @@
       .ipt-title-a {
         font-size: 20px;
         color: white;
+        margin: 0 0 8px 0;
       }
 
       .ipt-number {
         font-size: 64px;
         color: rgb(244, 181, 82);
+        margin: 0 0 8px 0;
       }
 
       .ipt-title-b {
         font-size: 24px;
         color: white;
+        margin: 0 0 32px;
       }
+    }
+
+    //SVG Wrapper---------------
+    .ipt-ticket-container-wrapper {
+      width: 290px;
+      height: 115px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
-  .bottom-svg-container {
+  .bottom-background-img-container {
+    color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // ------------------
+    position: absolute;
     width: 100%;
-    width: 20px;
-
-    &svg {
-      height: 100%;
-      width: 100%;
-      fill: white;
-    }
+    height: 100%;
+    background: url(https://pancakeswap.finance/images/decorations/bg-star.svg)
+      center 0px no-repeat;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
