@@ -101,9 +101,45 @@ export function InPrizeTicket(props) {
           />
         </div>
       </div>
-      <div className="bottom-background-img-container"></div>
-      <div className="bottom-moving-img-container">
-        DA INSERIRE LE STELLE e togliere questo sfondo blu
+      {/* --------------------------------------------------------------- */}
+      <div className="ipt-bottom-background-img-container"></div>
+      <div className="ipt-bottom-moving-img-container">
+        {/* nth-child(1)--  --  --  --  --  --  --  --  -- */}
+        <img
+          src="https://pancakeswap.finance/images/lottery/star-small.png"
+          width="124px"
+          height="109px"
+          alt=""
+        />
+        {/* nth-child(2)--  --  --  --  --  --  --  --  -- */}
+        <img
+          src="https://pancakeswap.finance/images/lottery/star-small.png"
+          width="70px"
+          height="62px"
+          alt=""
+        />
+        {/* nth-child(3)--  --  --  --  --  --  --  --  -- */}
+        <img
+          src="https://pancakeswap.finance/images/lottery/three-stars.png"
+          width="130px"
+          height="144px"
+          alt=""
+        />
+        {/* nth-child(4)--  --  --  --  --  --  --  --  -- */}
+        <img
+          src="https://pancakeswap.finance/images/lottery/ticket-l.png"
+          width="123px"
+          height="83px"
+          alt=""
+        />
+        {/* nth-child(5)--  --  --  --  --  --  --  --  -- */}
+        <img
+          src="https://pancakeswap.finance/images/lottery/ticket-r.png"
+          width="121px"
+          height="72px"
+          alt=""
+        />
+        {/* --  --  --  --  --  --  --  --  -- */}
       </div>
     </section>
   );

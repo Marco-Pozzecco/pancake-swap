@@ -63,8 +63,7 @@
     }
   }
   //BACKGROUND IMAGE
-  .bottom-background-img-container {
-    color: chartreuse;
+  .ipt-bottom-background-img-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,7 +80,7 @@
   }
 
   //MOVING IMAGES
-  .bottom-moving-img-container {
+  .ipt-bottom-moving-img-container {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -89,9 +88,36 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 26, 255, 0.275);
     z-index: 0;
-    color: chartreuse;
-    font-size: 40px;
+
+    & img {
+      border: 2px solid chartreuse;
+      position: absolute;
+    }
+
+    & :nth-child(1) {
+      left: 19%;
+      top: 42%;
+    }
+
+    & :nth-child(2) {
+      left: 25%;
+      top: 23%;
+    }
+
+    & :nth-child(3) {
+      right: 19%;
+      top: 24%;
+    }
+
+    & :nth-child(4) {
+      left: 24%;
+      top: 67%;
+    }
+
+    & :nth-child(5) {
+      right: 25%;
+      top: 73%;
+    }
   }
 }
