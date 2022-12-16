@@ -44,16 +44,19 @@
           font-size: 40px;
           margin: 0 0 24px;
         }
+
+        //Countdown Wrapper
         .countdown-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           height: 40px;
-          width: auto;
+          width: 100%;
           margin: 0 0 48px 0;
-          background-color: rgba(240, 248, 255, 0.342);
         }
       }
 
       .gyt-card-wrapper {
-        // border: 1px solid chartreuse;
         height: auto;
         width: 100%;
         display: flex;
