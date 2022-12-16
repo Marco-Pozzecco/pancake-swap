@@ -1,1 +1,239 @@
- 
+.ppc-main-container-wrapper {
+  width: 100%;
+  height: auto;
+
+  .ppc-main-container {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    contain: content;
+    background-color: #372f479c;
+
+    .ppc-sub-container {
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
+      contain: content;
+      background-color: #372f479c;
+
+      //BUTTONS TOP CONTAINER-------
+      .ppc-buttons-top-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #372f47;
+
+        .ppc-buttons-a {
+          background-color: rgb(39, 38, 44);
+        }
+
+        .ppc-buttons-b {
+          background-color: #372f47;
+        }
+
+        & button {
+          width: 100%;
+          border-radius: 24px 24px 0 0;
+          background-color: transparent;
+          border: none;
+          color: rgb(243, 238, 254);
+          height: 48px;
+          padding: 0 24px;
+          line-height: 1;
+          font-size: 16px;
+        }
+
+        & button:hover {
+          opacity: 0.65;
+        }
+      }
+
+      //CARD main CONTAINER 1---------
+      .ppc-card-main-container {
+        width: 100%;
+        height: auto;
+        background-color: rgb(39, 38, 44);
+
+        .ppcb-card-sub-container {
+          width: 100%;
+          height: auto;
+        }
+
+        //TOP Container
+        .ppcc-sc-top {
+          width: 100%;
+          padding: 24px;
+          padding: 24px 24px 16px 24px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #383241;
+
+          .ppcc-sct-titles {
+            height: 100%;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            & h2 {
+              font-size: 24px;
+              font-weight: 600;
+              line-height: 1.1;
+              color: rgb(244, 238, 255);
+            }
+
+            & div {
+              font-weight: 400;
+              line-height: 1.5;
+              font-size: 14px;
+              color: rgb(184, 173, 210);
+            }
+          }
+
+          //Icons - img
+          .ppcc-sct-icons-wrapper {
+            width: 64px;
+            height: 64px;
+            position: relative;
+
+            //Bunny img
+            .ppcc-sct-main-icon {
+              width: 92%;
+              height: 92%;
+              position: absolute;
+              top: 0;
+              left: 0;
+
+              & img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            //Ticket img
+            .ppcc-sct-secondary-icon {
+              width: 50%;
+              height: 50%;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              & img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+
+        //BOTTOM Container
+        .ppcc-sc-bottom {
+          width: 100%;
+
+          //Datas Wrapper
+          .ppcb-csc-datas-wrapper {
+            padding: 16px 24px;
+            border-bottom: 1px solid #383241;
+            margin: 0 0 28px 0;
+
+            .ppcb-csc-data-display {
+              padding: 20px;
+              background-color: rgb(30, 29, 32);
+              border-radius: 16px;
+              margin: 0 0 20px 0;
+
+              .ppcb-csc-data-display-content {
+                width: auto;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                .ppcb-csc-dd-title {
+                  margin: 0 0 8px 0;
+                  font-weight: 600;
+                  line-height: 1.5;
+                  text-transform: uppercase;
+                  font-size: 12px;
+
+                  & :nth-child(1) {
+                    color: #b8add2;
+                  }
+                  & :nth-child(2) {
+                    color: #9a6aff;
+                    margin: 0 0 0 4px;
+                  }
+                }
+
+                .ppcb-csc-dd-amount {
+                  color: #f4eeff;
+                  font-weight: 600;
+                  font-size: 24px;
+                  line-height: 110%;
+                }
+
+                .ppcb-csc-dd-sub-amount {
+                  color: #b8add2;
+                  font-weight: 400;
+                  line-height: 1.5;
+                  font-size: 12px;
+                }
+              }
+            }
+
+            .ppcb-csc-datas-spec-wrapper {
+              width: 100%;
+              height: auto;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+
+              .ppcb-csc-datas-specs-row {
+                width: 100%;
+                height: 24px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .ppcb-csc-data-title {
+                  color: #b8add2;
+
+                  font-weight: 400;
+                  line-height: 1.5;
+                  font-size: 16px;
+                }
+
+                .ppcb-csc-data-number {
+                  color: #f4eeff;
+                  font-weight: 600;
+                  line-height: 1.5;
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+
+          //Button Wrapper
+          .ppcb-csc-btn-wrapper {
+            padding: 26px 36px 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & Button {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

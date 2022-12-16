@@ -1,0 +1,33 @@
+.filter-toggle-main-container {
+  background-color: #372f47;
+  border-radius: 16px;
+  border: 1px solid #262130;
+  width: 100%;
+  height: 100%;
+  contain: content;
+  display: flex;
+  justify-content: space-between;
+
+  .ft-buttons {
+    width: 100%;
+    border-radius: 16px;
+    border: 0;
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ft-button-a {
+    width: 100%;
+    background-color: #b8add2;
+    color: #27262c;
+  }
+
+  .ft-button-b {
+    width: 100%;
+    background-color: transparent;
+    color: #b8add2;
+  }
+}

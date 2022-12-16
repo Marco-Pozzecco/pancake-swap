@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FinishedRoundsDatas } from "../../datas/finished-round-datas/FinishedRoundsDatas";
+import { RoundsInput } from "../../inpunts/round-input-with-counter/RoundsInput";
 import "./_finished-round-card.scss";
 
 export function FinishedRoundCard() {
@@ -7,7 +9,9 @@ export function FinishedRoundCard() {
     <div className="frc-main-container">
       <div className="frc-sub-container">
         <div className="frc-header-box">
-          <div className="frch-box-counter">Round 35</div>
+          <div className="frch-box-counter">
+            <RoundsInput />
+          </div>
           <div className="frch-box-date-wrapper">
             <div className="frch-box-date">Drawn Dec 9, 2022, 1:00 PM</div>
           </div>
@@ -173,25 +177,31 @@ export function FinishedRoundCard() {
             <div className="frcb-pc-sub-prize">~$1,648</div>
             <div className="frcb-pc-sub-cake-number">425 CAKE</div>
             <div className="frcb-pc-sub-subtitles-wrapper">
-              <div className="frcb-pc-sub-subtitles">
-                <div className="frcb-pcs-subtitle">
-                  <div className="frcb-pcs-subtitle-a">
-                    Total players this round:
-                  </div>
-                  <div className="frcb-pcs-subtitle-b">1,816</div>
+              <div className="frcb-pc-sub-subtitles frcb-pcss-a">
+                <div className="frcb-pcss-text">
+                  <span>Total players this round:</span>
+                  <span>1,816</span>
                 </div>
-                {/* -- -- -- -- --  */}
-                <div className="frcb-pcs-subtitle">
-                  <div className="frcb-pcs-subtitle-a">
-                    Pottery deposited on:
-                  </div>
-                  <div className="frcb-pcs-subtitle-b">
-                    Nov 8, 2022, 1:00 AM
-                  </div>
+                <div className="frcb-pcss-text">
+                  <span>Pottery deposited on:</span>
+                  <span>Nov 8, 2022, 1:00 AM</span>
                 </div>
               </div>
-              {/* 　⇓　<a> da SOSTITUIRE POI CON IL PERSORSO <Link></Link> */}
-              <a>View on BscScan</a>
+              {/* -- -- -- -- -- -- -- -- -- -- -- -- -- */}
+              <div className="frcb-pc-sub-subtitles frcb-pcss-b">
+                <Link className="frcb-bottom-link" to="">
+                  View on BscScan{" "}
+                  <svg
+                    viewBox="0 0 24 24"
+                    color="primary"
+                    width="20px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="sc-4ba21b47-0 ceTLum"
+                  >
+                    <path d="M18 19H6C5.45 19 5 18.55 5 18V6C5 5.45 5.45 5 6 5H11C11.55 5 12 4.55 12 4C12 3.45 11.55 3 11 3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V13C21 12.45 20.55 12 20 12C19.45 12 19 12.45 19 13V18C19 18.55 18.55 19 18 19ZM14 4C14 4.55 14.45 5 15 5H17.59L8.46 14.13C8.07 14.52 8.07 15.15 8.46 15.54C8.85 15.93 9.48 15.93 9.87 15.54L19 6.41V9C19 9.55 19.45 10 20 10C20.55 10 21 9.55 21 9V4C21 3.45 20.55 3 20 3H15C14.45 3 14 3.45 14 4Z"></path>
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -1,7 +1,9 @@
 .ccp-main-container {
+  font-family: Kanit, sans-serif;
   width: 100%;
   height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -11,7 +13,38 @@
     rgb(110, 66, 188) 0%,
     rgb(168, 129, 252) 100%
   );
+  position: relative;
 
+  //SVG CONTAINER TOP(senza svg, utilizzato un altro metodo)
+  .ccp-top-svg-container {
+    width: 100%;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    // ----------------------
+    content: "";
+    width: 100%;
+    height: 48px;
+    position: absolute;
+    top: -45px;
+    left: 0px;
+    z-index: 1;
+    clip-path: polygon(0px 0%, 0% 100%, 100% 100%);
+    background: linear-gradient(
+      90deg,
+      rgb(168, 129, 252) 0%,
+      rgb(160, 121, 244) 15%,
+      rgb(145, 104, 226) 30%,
+      rgb(136, 95, 216) 45%,
+      rgb(139, 98, 219) 65%,
+      rgb(148, 108, 230) 80%,
+      rgb(168, 129, 252) 100%
+    );
+  }
+
+  //COMPONENTS
   .ccp-sub-container {
     width: 100%;
     max-width: 940px;
@@ -24,6 +57,7 @@
     .ccp-titles {
       width: 100%;
       height: 20%;
+      margin-bottom: 40px;
 
       .ccp-title {
         color: white;
@@ -37,10 +71,17 @@
       }
 
       .ccp-amount {
+        margin: -10px 0 0;
         font-size: 40px;
         color: rgb(147, 108, 247);
+        font-weight: 600;
+        line-height: 1.5;
         text-align: center;
-        border: 1px solid chartreuse;
+        text-shadow: -2px 2px 0px white, 2px -2px 0px white, -2px -2px 0px white,
+          2px 2px 0px white;
+        -webkit-text-stroke: 8px transparent;
+        vertical-align: baseline;
+        -webkit-font-smoothing: antialiased;
       }
 
       .ccp-title-b {
@@ -61,7 +102,6 @@
       .ccp-card-container {
         width: 50%;
         height: 100%;
-        border: 1px solid chartreuse;
         display: flex;
         justify-content: center;
         align-items: center;
