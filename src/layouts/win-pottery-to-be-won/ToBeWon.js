@@ -131,7 +131,25 @@ export function ToBeWon() {
           </div>
         </div>
       </div>
-      {/* <div className="tbw-animations-container">animation container</div>   DA DECPMMENTARE POI*/}
+      <div className="tbw-bottom-background-img-container"></div>
+      {/* -------------------------------------------------------------- */}
+      <div className="ipt-bottom-moving-img-container">
+        {/* nth-child(1)--  --  --  --  --  --  --  --  -- */}
+        <img src="https://pancakeswap.finance/images/pottery/banner-ticket/left1.png" />
+        {/* nth-child(2)--  --  --  --  --  --  --  --  -- */}
+        <img src="https://pancakeswap.finance/images/pottery/banner-ticket/left2.png" />
+        {/* nth-child(3)--  --  --  --  --  --  --  --  -- */}
+        <img src="https://pancakeswap.finance/images/pottery/banner-ticket/left3.png" />
+        {/* nth-child(4)--  --  --  --  --  --  --  --  -- */}
+        <img src="https://pancakeswap.finance/images/pottery/banner-ticket/left4.png" />
+        {/* nth-child(5)--  --  --  --  --  --  --  --  -- */}
+        <img src="https://pancakeswap.finance/images/pottery/banner-ticket/right1.png" />
+        {/* nth-child(6)--  --  --  --  --  --  --  --  -- */}
+        <img src="https://pancakeswap.finance/images/pottery/banner-ticket/right2.png" />
+        {/* nth-child(7)--  --  --  --  --  --  --  --  -- */}
+        <img src="https://pancakeswap.finance/images/pottery/banner-ticket/right3.png" />
+        {/* --  --  --  --  --  --  --  --  -- */}
+      </div>
     </section>
   );
 }

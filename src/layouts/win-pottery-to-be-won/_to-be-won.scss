@@ -15,11 +15,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  contain: content;
 
   .tbw-sub-container {
     height: 550px;
     width: 100%;
     max-width: 737px;
+    z-index: 3;
 
     display: flex;
     justify-content: center;
@@ -135,10 +138,89 @@
     }
   }
 
-  //DA DECOMMENTARE POI - EVENTUALMENTE METTERE POSITION ABSOLUTE e/o Flex-direction column nel main container
-  // .tbw-animations-container {
-  //   width: 100%;
-  //   height: auto;
-  //   background-color: rgb(58, 58, 156);
-  // }
+  //BOTTOM CONTAINERS
+
+  //BACKGROUND IMAGE
+  .tbw-bottom-background-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(https://pancakeswap.finance/images/pottery/bg-star.svg)
+      center 0px / cover no-repeat;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  //MOVING IMAGES
+  .ipt-bottom-moving-img-container {
+    // border: 3px solid rgb(21, 4, 255);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+
+    & img {
+      border: 2px solid chartreuse;
+      position: absolute;
+    }
+
+    & :nth-child(1) {
+      top: -7px;
+      left: 20%;
+      width: 92px;
+      height: 48px;
+    }
+
+    & :nth-child(2) {
+      top: 56px;
+      left: -1%;
+      width: 135px;
+      height: 85px;
+    }
+
+    & :nth-child(3) {
+      top: 26%;
+      left: 3%;
+      width: 232px;
+      height: 106px;
+    }
+
+    & :nth-child(4) {
+      bottom: 7%;
+      left: 16px;
+      width: 248px;
+      height: 178px;
+    }
+
+    & :nth-child(5) {
+      top: 25px;
+      right: 4%;
+      width: 151px;
+      height: 43px;
+    }
+
+    & :nth-child(6) {
+      top: 26%;
+      right: 3%;
+      width: 160px;
+      height: 89px;
+    }
+
+    & :nth-child(7) {
+      bottom: 7%;
+      right: -1%;
+      width: 156px;
+      height: 205px;
+    }
+  }
 }
+//
