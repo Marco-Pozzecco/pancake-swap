@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./_until-the-draw-cd.scss";
 
-export function UntilTheDrawCD({ deadline, ...props }) {
+export function UntilTheDrawCD({ deadline }) {
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -35,15 +35,15 @@ export function UntilTheDrawCD({ deadline, ...props }) {
   return (
     <div className="utd-cd-main-container">
       <div className="utd-cd-box">
-        <div class="utd-counter">
-          <h2 class="utd-cd-item utd-cd-number">{leading0(days)}</h2>
-          <h2 class="utd-cd-item utd-cd-time">d</h2>
-          <h2 class="utd-cd-item utd-cd-number">{leading0(hours)}</h2>
-          <h2 class="utd-cd-item utd-cd-time">h</h2>
-          <h2 class="utd-cd-item utd-cd-number">{leading0(minutes)}</h2>
-          <h2 class="utd-cd-item utd-cd-time">m</h2>
-          <h2 class="utd-cd-item utd-cd-number">{leading0(seconds)}</h2>
-          <h2 class="utd-cd-item utd-cd-time">s</h2>
+        <div className="utd-counter">
+          <h2 className="utd-cd-item utd-cd-number">{leading0(days)}</h2>
+          <h2 className="utd-cd-item utd-cd-time">d</h2>
+          <h2 className="utd-cd-item utd-cd-number">{leading0(hours)}</h2>
+          <h2 className="utd-cd-item utd-cd-time">h</h2>
+          <h2 className="utd-cd-item utd-cd-number">{leading0(minutes)}</h2>
+          <h2 className="utd-cd-item utd-cd-time">m</h2>
+          {/* <h2 className="utd-cd-item utd-cd-number">{leading0(seconds)}</h2>
+          <h2 className="utd-cd-item utd-cd-time">s</h2> */}
         </div>
       </div>
       <div className="utd-cd-text">until the next draw</div>

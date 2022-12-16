@@ -12,6 +12,20 @@ import { DataCardGraph } from "../../components/card/data-card-graph/DataCardGra
 export function HowToPlayWN() {
   return (
     <section className="htp-section">
+      {/* --- SVG TOP CONTAINER --- */}
+      <div className="htp-top-main-container">
+        <div className="htp-top-sub-container">
+          {" "}
+          <svg width="0" height="0">
+            <defs>
+              <clipPath id="topConvexCurve" clipPathUnits="objectBoundingBox">
+                <path d="M0 1V0h1v1C.75 0 .25 0 0 1z"></path>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      {/* --- MAIN CONTENTS CONTAINER --- */}
       <div className="htp-main-container">
         <div className="htp-sub-container">
           {/* ----------------- */}

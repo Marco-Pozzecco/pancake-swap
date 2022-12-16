@@ -9,6 +9,20 @@ export function GetYourTickets() {
 
   return (
     <section className="gyt-section">
+      {/* --- SVG / IMAGE TOP CONTAINER --- */}
+      <div className="gyt-top-svg-main-container">
+        <div className="gyt-top-svg-sub-container">
+          <svg width="0" height="0">
+            <defs>
+              <clipPath id="topConcaveCurve" clipPathUnits="objectBoundingBox">
+                <path d="M0 0v1h1V0C.75 1 .25 1 0 0z"></path>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      {/* --- MAIN CONTENT CONTAINER --- */}
       <div className="gyt-main-container">
         <div className="gyt-sub-main-container">
           <div className="gyt-header">

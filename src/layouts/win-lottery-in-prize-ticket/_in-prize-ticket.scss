@@ -8,6 +8,7 @@
 
 .ipt-section {
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,16 +18,14 @@
   position: relative;
 
   .in-prize-main-container {
-    padding: 24px 24px;
-    // background-color: rgba(90, 163, 212, 0.747);
-    max-width: 336px;
-    //   height: auto;
-    height: 404px;
-    //   max-height: 404px;
+    padding: 48px 24px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 3;
 
+    //TITLES
     .ip-sc-titles {
       // background-color: rgba(255, 0, 0, 0.5);
       width: 100%;
@@ -38,28 +37,89 @@
       .ipt-title-a {
         font-size: 20px;
         color: white;
+        margin: 0 0 8px 0;
       }
 
       .ipt-number {
         font-size: 64px;
         color: rgb(244, 181, 82);
+        margin: 0 0 8px 0;
       }
 
       .ipt-title-b {
         font-size: 24px;
         color: white;
+        margin: 0 0 32px;
       }
     }
+
+    //SVG Wrapper---------------
+    .ipt-ticket-container-wrapper {
+      width: 290px;
+      height: 115px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  //BACKGROUND IMAGE
+  .ipt-bottom-background-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // ------------------
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(https://pancakeswap.finance/images/decorations/bg-star.svg)
+      center 0px no-repeat;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 
-  .bottom-svg-container {
+  //MOVING IMAGES
+  .ipt-bottom-moving-img-container {
+    position: absolute;
     width: 100%;
-    width: 20px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
 
-    &svg {
-      height: 100%;
-      width: 100%;
-      fill: white;
+    & img {
+      border: 2px solid chartreuse;
+      position: absolute;
+    }
+
+    & :nth-child(1) {
+      left: 19%;
+      top: 42%;
+    }
+
+    & :nth-child(2) {
+      left: 25%;
+      top: 23%;
+    }
+
+    & :nth-child(3) {
+      right: 19%;
+      top: 24%;
+    }
+
+    & :nth-child(4) {
+      left: 24%;
+      top: 67%;
+    }
+
+    & :nth-child(5) {
+      right: 25%;
+      top: 73%;
     }
   }
 }
+
+//
