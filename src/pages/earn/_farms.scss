@@ -171,3 +171,73 @@
   background-color: var(--background-primary);
   height: 100vh;
 }
+
+@media screen and (max-width: 1240px) {
+  .FarmsPageTop {
+    gap: 3%;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .FarmsContainer2 {
+    margin-top: -6%;
+    align-self: center;
+    margin-left: -10%;
+    width: 100%;
+  }
+  .FarmsImg1 {
+    left: 75%;
+    top: -75%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .FarmsContainer2 {
+    margin-top: -3%;
+  }
+  .FarmsImg1 {
+    left: 75%;
+    top: -65%;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .FarmsContainer2 {
+    margin-left: -15%;
+  }
+  .FarmsImg1 {
+    left: 75%;
+    top: -60%;
+  }
+  .FarmsParagraph {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .FarmsInput {
+    padding-left: 2px;
+  }
+  .FarmsSubFilters {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .FarmsContainer1 {
+    margin-left: -20%;
+  }
+  .FarmsContainer2 {
+    margin-left: -20%;
+  }
+  .FarmsImg1 {
+    left: 70%;
+    top: -60%;
+  }
+  .FarmsParagraph {
+    font-size: 14px;
+  }
+  .FarmsAuction {
+    font-size: 14px;
+  }
+}
