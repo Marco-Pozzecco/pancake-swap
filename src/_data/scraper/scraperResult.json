@@ -1,0 +1,599 @@
+[
+    {
+        "financialInstrument": "CAKE-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "19.92%",
+            "39,09%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "CAKE-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "20.79%",
+            "36,44%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "CAKE-USDT",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "21.22%",
+            "36,80%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "BUSD-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "12.79%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "SQUAD-CAKE",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "218.33%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "USDT-USDCStable LP",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "4.58%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "USDC-BUSDStable LP",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "3.28%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "USDT-BUSDStable LP",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "3.11%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "HFT-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "32.2%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "HOOK-CAKE",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "62.35%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "XCAD-CAKE",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "48.87%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "MGP-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "120.58%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "WMX-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "102.63%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "KRS-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "123.77%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "ARV-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "81.43%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "CO-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "71.84%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "HOOP-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "87.34%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "GQ-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "39.79%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "WOM-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "55.33%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "SFUND-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "41.73%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "PEEL-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "62.32%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "HIGH-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "22.38%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "OLE-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "57.19%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "CHR-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "15.88%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "METIS-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "18.71%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "GAL-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "12.28%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "CEEK-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "14.05%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "GMT-USDC",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "11.07%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "BTT-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "3.73%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "RACA-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "40.97%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "APX-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "24.91%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "SANTOS-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "35.03%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "DAR-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "26.15%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "TRX-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "4.4%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "WIN-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "8.79%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "SPS-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "57.67%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "C98-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "18.24%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "AXS-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "27.82%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "CHESS-USDC",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "21.68%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "BSCPAD-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "41.39%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "WOO-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "19.93%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "ETH-USDC",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "6.4%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "BTCB-ETH",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "3.48%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "MBOX-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "3.84%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "TUSD-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "2.73%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "DOGE-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "14.59%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "BTCB-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "5.78%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "ALPACA-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "7.02%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "ALICE-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "18.35%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "IOTX-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "8.48%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "SFP-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "7.29%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "BTCST-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "77.37%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "LTC-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "6.46%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "DAI-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "2.19%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "VAI-BUSD",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "4.26%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "INJ-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "20.61%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "UNI-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "7.3%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "XRP-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "10.44%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "USDT-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "12.97%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "BTCB-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "7.65%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "ETH-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "7.24%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "XVS-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "23.98%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "TWT-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "40.32%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "LINK-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "7.36%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "DOT-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "11.38%"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": "ADA-BNB",
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "11.29%"
+        ],
+        "details": "Details"
+    }
+]
