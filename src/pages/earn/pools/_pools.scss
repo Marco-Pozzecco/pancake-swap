@@ -91,3 +91,12 @@
   background-color: var(--background-primary);
   height: 100vh;
 }
+
+@media screen and (max-width: 340px) {
+  .PoolsTitle {
+    font-size: 40px;
+  }
+  .PoolsParagraph {
+    font-size: 16px;
+  }
+}

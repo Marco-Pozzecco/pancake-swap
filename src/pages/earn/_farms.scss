@@ -200,3 +200,35 @@
     top: -65%;
   }
 }
+
+@media screen and (max-width: 410px) {
+  .FarmsContainer2 {
+    margin-left: -15%;
+  }
+  .FarmsImg1 {
+    left: 75%;
+    top: -60%;
+  }
+  .FarmsParagraph {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .FarmsContainer1 {
+    margin-left: -20%;
+  }
+  .FarmsContainer2 {
+    margin-left: -20%;
+  }
+  .FarmsImg1 {
+    left: 70%;
+    top: -60%;
+  }
+  .FarmsParagraph {
+    font-size: 14px;
+  }
+  .FarmsAuction {
+    font-size: 14px;
+  }
+}
