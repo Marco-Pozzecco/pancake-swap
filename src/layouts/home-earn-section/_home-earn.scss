@@ -397,7 +397,6 @@ body {
 }
 
 @include mq("tablet-small") {
-  
   .ea-earn {
     .ea-wrapper {
       @include flex(column-reverse, center);
@@ -478,5 +477,11 @@ body {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ea-contents-section {
+    margin-right: 40%;
   }
 }

@@ -102,7 +102,7 @@ export function Navbar() {
                 </ul>
               </li>
               <li>
-                <NavLink to="/info">...</NavLink>
+                <NavLink className="navdots" to="/info">...</NavLink>
                 <ul>
                   <li>
                     <NavLink to="info">Info</NavLink>

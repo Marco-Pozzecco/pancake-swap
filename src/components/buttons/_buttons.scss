@@ -4,123 +4,123 @@
 
 // All buttons have these rules
 .generalButtonRules {
-    font-size: 16px;
-    padding: 0 24px;
-    border-radius: 16px;
-    line-height: 1;
-    cursor: pointer;
-    &:hover {
-        opacity: 0.65;
-    }
+  font-size: 16px;
+  padding: 0 24px;
+  border-radius: 16px;
+  line-height: 1;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.65;
+  }
 }
 
 .fullButton {
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    border: 0px;
-    border-radius: 16px;
-    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    line-height: 1;
-    opacity: 1;
-    outline: 0px;
-    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
-    height: 48px;
-    padding: 0px 16px;
-    text-decoration: none;
-    @include flex();
-    background-color: $main-buttons-background-color; /* rgb(31, 199, 212)*/
-    color: $main-buttons-color; /* white*/
-    &:active {
-        transform: translateY(2px);
-    }
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 48px;
+  padding: 0px 16px;
+  text-decoration: none;
+  @include flex();
+  background-color: $main-buttons-background-color; /* rgb(31, 199, 212)*/
+  color: var(--background-primary); /* white*/
+  &:active {
+    transform: translateY(2px);
+  }
 }
 
 .onlyBorderButton {
-    background-color: $ob-buttons-background-color; /*transparent*/
-    color: $ob-buttons-color; /* rgb(31, 199, 212)*/
-    border: $ob-buttons-border; /* 2px solid  rgb(31, 199, 212)*/
-    height: 48px; /**/
-    font-size: $ob-buttons-font-size; /*16px*/
-    font-weight: $ob-buttons-font-weigth; /*600*/
+  background-color: $ob-buttons-background-color; /*transparent*/
+  color: $ob-buttons-color; /* rgb(31, 199, 212)*/
+  border: $ob-buttons-border; /* 2px solid  rgb(31, 199, 212)*/
+  height: 48px; /**/
+  font-size: $ob-buttons-font-size; /*16px*/
+  font-weight: $ob-buttons-font-weigth; /*600*/
 
-    &:active {
-        transform: translateY(1px);
-    }
+  &:active {
+    transform: translateY(1px);
+  }
 }
 
 .noBorderButton {
-    color: rgb(31, 199, 212);
-    background-color: transparent;
-    border: none;
-        &:hover {
-            text-decoration: underline;
-        }
+  color: rgb(31, 199, 212);
+  background-color: transparent;
+  border: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .pillButton {
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    border: 0px;
-    border-radius: 16px;
-    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    line-height: 1;
-    opacity: 1;
-    outline: 0px;
-    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
-    height: 32px;
-    padding: 0px 16px;
-    text-decoration: none;
-    @include flex();
-    background-color: $main-buttons-background-color; /* rgb(31, 199, 212)*/
-    color: $main-buttons-color; /* white*/
-    &:active {
-        transform: translateY(2px);
-    }
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  border: 0px;
+  border-radius: 16px;
+  box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 32px;
+  padding: 0px 16px;
+  text-decoration: none;
+  @include flex();
+  background-color: $main-buttons-background-color; /* rgb(31, 199, 212)*/
+  color: $main-buttons-color; /* white*/
+  &:active {
+    transform: translateY(2px);
+  }
 }
 
 /* -------BOTTONE POPUP NAVBAR----------- */
 .link-popup-navbar {
-    text-decoration: none;
-    .button-navbar-bnb {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        border: none;
-        // background-color: rgb(239, 244, 245);
-        // color: rgb(31, 199, 212);
-        height: 32px;
-        font-size: 14px; /*16px*/
-        font-weight: 600; /*600*/
-        box-shadow: rgba(14, 14, 44, 0.4) 0px -2px 0px inset;
-    }
-    &:active {
-        transform: translateY(2px);
-    }
+  text-decoration: none;
+  .button-navbar-bnb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    // background-color: rgb(239, 244, 245);
+    // color: rgb(31, 199, 212);
+    height: 32px;
+    font-size: 14px; /*16px*/
+    font-weight: 600; /*600*/
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -2px 0px inset;
+  }
+  &:active {
+    transform: translateY(2px);
+  }
 }
 
 /* ------BOTTONE CON SOLO IN BORDO------- */
 .button-onlyborder {
-    background-color: $ob-buttons-background-color; /*transparent*/
-    color: $ob-buttons-color; /* rgb(31, 199, 212)*/
-    border: $ob-buttons-border; /* 2px solid  rgb(31, 199, 212)*/
-    height: 48px; /**/
-    font-size: $ob-buttons-font-size; /*16px*/
-    font-weight: $ob-buttons-font-weigth; /*600*/
+  background-color: $ob-buttons-background-color; /*transparent*/
+  color: $ob-buttons-color; /* rgb(31, 199, 212)*/
+  border: $ob-buttons-border; /* 2px solid  rgb(31, 199, 212)*/
+  height: 48px; /**/
+  font-size: $ob-buttons-font-size; /*16px*/
+  font-weight: $ob-buttons-font-weigth; /*600*/
 
-    &:active {
-        transform: translateY(1px);
-    }
+  &:active {
+    transform: translateY(1px);
+  }
 }
 
 //dalle pagine TRADE.........................
@@ -128,209 +128,209 @@
 
 /* ---BOTTONE HWMY DEL GRAFICO(Hour,Week,Month,Year)---------- */
 .div-hwmy {
-    background-color: $hwmy-buttons-background-div-color; /*rgb(53, 53, 71)*/
-    border: $hwmy-buttons-div-border; /*1px solid   rgb(82, 75, 99)*/
-    border-radius: 16px;
+  background-color: $hwmy-buttons-background-div-color; /*rgb(53, 53, 71)*/
+  border: $hwmy-buttons-div-border; /*1px solid   rgb(82, 75, 99)*/
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+
+  .button-hwmy {
+    background-color: $hwmy-buttons-background-color; /* transparent*/
+    color: $hwmy-buttons-color; /* white*/
+    border: $hwmy-buttons-border; /*none*/
     display: flex;
-    flex-direction: row;
-    width: auto;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    font-weight: $hwmy-buttons-font-weigth; /*600*/
 
-    .button-hwmy {
-        background-color: $hwmy-buttons-background-color; /* transparent*/
-        color: $hwmy-buttons-color; /* white*/
-        border: $hwmy-buttons-border; /*none*/
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 32px;
-        font-weight: $hwmy-buttons-font-weigth; /*600*/
-
-        &:active {
-            transform: translateY(2px);
-        }
+    &:active {
+      transform: translateY(2px);
     }
+  }
 
-    .button-hwmy:first-child {
-        background-color: rgb(31, 199, 212); /**/
-    }
+  .button-hwmy:first-child {
+    background-color: rgb(31, 199, 212); /**/
+  }
 }
 
 .button-1W,
 .button-1M,
 .button-1Y {
-    background-color: transparent; /**/
-    color: white; /**/
+  background-color: transparent; /**/
+  color: white; /**/
 }
 
 /* ---BOTTONE SEMI TRASPARENTE-------------------- */
 .button-semitransparent {
-    background-color: $semi-transp-buttons-background-color; /*rgba(31, 200, 212, 0.65)*/
-    color: $semi-transp-buttons-color; /*white*/
-    border: $semi-stransp-buttons-border; /*none*/
-    height: 32px; /**/
-    font-weight: $semi-transp-buttons-font-weigth; /*600*/
-    padding: 4px 8px; /**/
-    border-radius: 6px; /**/
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: $semi-transp-buttons-background-color; /*rgba(31, 200, 212, 0.65)*/
+  color: $semi-transp-buttons-color; /*white*/
+  border: $semi-stransp-buttons-border; /*none*/
+  height: 32px; /**/
+  font-weight: $semi-transp-buttons-font-weigth; /*600*/
+  padding: 4px 8px; /**/
+  border-radius: 6px; /**/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* --BOTTONE QUADRATO TRASPARENTE (per convertire , ampliare, etc..)--------- */
 .button-converter {
-    background-color: $transp-converter-buttons-background-color; /* transparent*/
-    color: $transp-converter-buttons-color; /*rgb(31, 199, 212)*/
-    border: $transp-converter-buttons-border; /*none*/
-    width: 48px; /**/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: $transp-converter-buttons-font-size; /*16px*/
+  background-color: $transp-converter-buttons-background-color; /* transparent*/
+  color: $transp-converter-buttons-color; /*rgb(31, 199, 212)*/
+  border: $transp-converter-buttons-border; /*none*/
+  width: 48px; /**/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $transp-converter-buttons-font-size; /*16px*/
 
-    &:active {
-        transform: translateY(2px);
-    }
+  &:active {
+    transform: translateY(2px);
+  }
 }
 
 /* Bottoni nel div-SWAP(a sinistra)-- */
 /* --bottone in alto a sinistra sbarrato----------------- */
 
 .button-won-graph {
-    // *WON = With Or Not (Graphic in the page)
-    background-color: $won-graph-buttons-background-color; /* transparent*/
-    color: $won-graph-buttons-color; /*rgb(184, 173, 210)*/
-    border: $won-graph-buttons-border; /**/
-    text-decoration: line-through; /**/
-    width: 32px; /**/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
+  // *WON = With Or Not (Graphic in the page)
+  background-color: $won-graph-buttons-background-color; /* transparent*/
+  color: $won-graph-buttons-color; /*rgb(184, 173, 210)*/
+  border: $won-graph-buttons-border; /**/
+  text-decoration: line-through; /**/
+  width: 32px; /**/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
 
-    &:hover {
-        opacity: 0.65;
-    }
+  &:hover {
+    opacity: 0.65;
+  }
 
-    &:active {
-        transform: translateY(2px);
-    }
+  &:active {
+    transform: translateY(2px);
+  }
 }
 
 /* blocco bottoni nel div Swap--------------------------------------------*/
 
 /* "DIV" dei 3 bottoni  in alto a destara[〇〇〇] */
 .swap-box-3b {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+  .button-sb1,
+  .button-sb2,
+  .button-sb3 {
+    background-color: $sw-buttons-background-color; /*transparent*/
+    color: $sw-buttons-color; /* rgb(184, 173, 210)*/
+    border: $sw-buttons-border; /*none*/
+    border-radius: 50%; /**/
+    padding: 0 17px; /**/
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
+    width: 32px; /**/
+    height: 32px;
+    padding: 0;
 
-    .button-sb1,
-    .button-sb2,
-    .button-sb3 {
-        background-color: $sw-buttons-background-color; /*transparent*/
-        color: $sw-buttons-color; /* rgb(184, 173, 210)*/
-        border: $sw-buttons-border; /*none*/
-        border-radius: 50%; /**/
-        padding: 0 17px; /**/
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 32px; /**/
-        height: 32px;
-        padding: 0;
-
-        &:hover,
-        &:hover,
-        &:hover {
-            opacity: 0.65;
-        }
-
-        &:active {
-            transform: translateY(2px);
-        }
+    &:hover,
+    &:hover,
+    &:hover {
+      opacity: 0.65;
     }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
 }
 
 /* --Bottoni scelta valute BNB, CAKE, etc------------------------------------------------- */
 
 .currency-btn {
-    background-color: yellow;
-    // background-color: $currency-buttons-background-color; /*transparent*/
-    font-size: $currency-buttons-font-size; /*16px*/
-    font-weight: $currency-buttons-font-weigth; /*600*/
-    height: 32px;
-    padding: 0 0.5rem;
-    border: $currency-buttons-border; /*none*/
+  background-color: yellow;
+  // background-color: $currency-buttons-background-color; /*transparent*/
+  font-size: $currency-buttons-font-size; /*16px*/
+  font-weight: $currency-buttons-font-weigth; /*600*/
+  height: 32px;
+  padding: 0 0.5rem;
+  border: $currency-buttons-border; /*none*/
 
-    &:hover {
-        opacity: 0.65;
-    }
+  &:hover {
+    opacity: 0.65;
+  }
 
-    &:active {
-        transform: translateY(2px);
-    }
+  &:active {
+    transform: translateY(2px);
+  }
 
-    .currency-btn-content-box {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        color: $currency-buttons-box-color; /*white*/
-    }
+  .currency-btn-content-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: $currency-buttons-box-color; /*white*/
+  }
 }
 
 /* --Bottone rotondo semi-trasparente per convertire----- */
 
 .button-converter-smt {
-    //*SMT = SemiTransparenT
-    background-color: $converter-smt-buttons-background-color; /*rgb(55, 47, 71)*/
-    box-shadow: $converter-smt-buttons-shadow; /*rgb(0 0 0 / 10%) 0px -2px 0px inset*/
-    color: $converter-smt-buttons-color; /*rgb(31, 199, 212)*/
-    border: $converter-smt-buttons-border; /*none*/
-    padding: 11px 14px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  //*SMT = SemiTransparenT
+  background-color: $converter-smt-buttons-background-color; /*rgb(55, 47, 71)*/
+  box-shadow: $converter-smt-buttons-shadow; /*rgb(0 0 0 / 10%) 0px -2px 0px inset*/
+  color: $converter-smt-buttons-color; /*rgb(31, 199, 212)*/
+  border: $converter-smt-buttons-border; /*none*/
+  padding: 11px 14px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    &:hover {
-        background-color: rgb(31, 199, 212); /**/
-        color: rgb(255, 255, 255); /**/
-    }
+  &:hover {
+    background-color: rgb(31, 199, 212); /**/
+    color: rgb(255, 255, 255); /**/
+  }
 
-    &:active {
-        transform: translateY(2px);
-    }
+  &:active {
+    transform: translateY(2px);
+  }
 
-    .hover-arrow {
-        display: none; /**/
-    }
+  .hover-arrow {
+    display: none; /**/
+  }
 }
 
 /* ---BOTTONI TRADE LIMIT - MARKET......................... */
 /* Bottone nel container LIMIT, il terzo, price market */
 
 .btn-limit-market {
-    background-color: $lmm-buttons-background-color; /*transparent*/
-    color: $lmm-buttons-color; /*rgb(102, 97, 113)*/
-    border: $lmm-buttons-border; /* 1px solid rgb(102, 97, 113)*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    height: 20px;
-    cursor: not-allowed;
-    font-weight: 600; /**/
-    font-size: $lmm-buttons-font-size; /*12px*/
+  background-color: $lmm-buttons-background-color; /*transparent*/
+  color: $lmm-buttons-color; /*rgb(102, 97, 113)*/
+  border: $lmm-buttons-border; /* 1px solid rgb(102, 97, 113)*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 20px;
+  cursor: not-allowed;
+  font-weight: 600; /**/
+  font-size: $lmm-buttons-font-size; /*12px*/
 
-    & > svg {
-        margin-right: 0.5rem;
-    }
+  & > svg {
+    margin-right: 0.5rem;
+  }
 }
 
 /*Bottone: FAKE SWITCH. -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
@@ -339,251 +339,251 @@ che si trova sotto al div Limit = V2 e V1(old)
 (Questo non ha l effetto switch--- */
 
 .box-button-fake-switch-big {
-    background-color: $fake-switch-buttons-box-background-color; /* rgb(55, 47, 71)*/
-    border: $fake-switch-buttons-box-border; /*1px solid rgb(38, 33, 48)*/
-    border-radius: 16px; /**/
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: $fake-switch-buttons-box-font-size; /*16px*/
-    font-weight: $fake-switch-buttons-box-font-weigth; /*600*/
-    padding: 0.2px;
+  background-color: $fake-switch-buttons-box-background-color; /* rgb(55, 47, 71)*/
+  border: $fake-switch-buttons-box-border; /*1px solid rgb(38, 33, 48)*/
+  border-radius: 16px; /**/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: $fake-switch-buttons-box-font-size; /*16px*/
+  font-weight: $fake-switch-buttons-box-font-weigth; /*600*/
+  padding: 0.2px;
 
-    .button-fake-switch-big {
-        background-color: $fake-switch-buttons-background-color; /*rgb(184, 173, 210)*/
-        color: $fake-switch-buttons-color; /*rgb(39, 38, 44)*/
-        border: $fake-switch-buttons-color; /*none*/
-        padding: 0 16px;
-        font-weight: $fake-switch-buttons-font-weigth; /*600*/
-        height: 32px;
+  .button-fake-switch-big {
+    background-color: $fake-switch-buttons-background-color; /*rgb(184, 173, 210)*/
+    color: $fake-switch-buttons-color; /*rgb(39, 38, 44)*/
+    border: $fake-switch-buttons-color; /*none*/
+    padding: 0 16px;
+    font-weight: $fake-switch-buttons-font-weigth; /*600*/
+    height: 32px;
 
-        &:active {
-            transform: translateY(2px);
-        }
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  .link-fake-switch-big {
+    text-decoration: none; /**/
+    color: $fake-switch-buttons-background-color-a; /* rgb(184, 173, 210)*/
+    padding: 0 16px;
+    font-size: $fake-switch-buttons-font-size-a; /*16px*/
+    font-weight: $fake-switch-buttons-font-weigth-a; /*600*/
+
+    &:hover {
+      opacity: 0.65;
     }
 
-    .link-fake-switch-big {
-        text-decoration: none; /**/
-        color: $fake-switch-buttons-background-color-a; /* rgb(184, 173, 210)*/
-        padding: 0 16px;
-        font-size: $fake-switch-buttons-font-size-a; /*16px*/
-        font-weight: $fake-switch-buttons-font-weigth-a; /*600*/
-
-        &:hover {
-            opacity: 0.65;
-        }
-
-        &:active {
-            transform: translateY(2px);
-        }
+    &:active {
+      transform: translateY(2px);
     }
+  }
 }
 
 /* ---Bottoni scelta per visualizzazione a Griglia o a Lista-------------- */
 
 .box-buttons-grid-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .btn-grid-view {
+    background-color: $grid-buttons-background-color; /*transparent*/
+    fill: $grid-buttons-svg-fill; /* rgb(102, 97, 113)*/
+    border: $grid-buttons-border; /*none*/
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
 
-    .btn-grid-view {
-        background-color: $grid-buttons-background-color; /*transparent*/
-        fill: $grid-buttons-svg-fill; /* rgb(102, 97, 113)*/
-        border: $grid-buttons-border; /*none*/
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 32px;
-        height: 32px;
-        padding: 0;
-
-        &:active {
-            transform: translateY(2px);
-        }
+    &:active {
+      transform: translateY(2px);
     }
+  }
 
-    .btn-list-view {
-        background-color: transparent;
-        fill: $list-buttons-background-color; /*rgb(31, 199, 212)*/ /*cambiare il colore nell svg nell HTML*/
-        border: $list-buttons-border; /*none*/
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 32px;
-        height: 32px;
-        padding: 0;
+  .btn-list-view {
+    background-color: transparent;
+    fill: $list-buttons-background-color; /*rgb(31, 199, 212)*/ /*cambiare il colore nell svg nell HTML*/
+    border: $list-buttons-border; /*none*/
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
 
-        &:active {
-            transform: translateY(2px);
-        }
+    &:active {
+      transform: translateY(2px);
     }
+  }
 }
 
 /* BUTTON SWITCH SMALL  -- Check-Box - Staked Only - (ON/OFF Button) */
 .main-box-button-switch-small {
-    background-color: $bss-mainb-buttons-background-color; /*transparent*/
+  background-color: $bss-mainb-buttons-background-color; /*transparent*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+
+  .box-button-switch-small {
+    background-color: $bss-sub-mainb-buttons-background-color; /*rgb(55, 47, 71)*/
+    padding: 2px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20px;
+    width: 36px;
+    border-radius: 24px;
 
-    .box-button-switch-small {
-        background-color: $bss-sub-mainb-buttons-background-color; /*rgb(55, 47, 71)*/
-        padding: 2px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        height: 20px;
-        width: 36px;
-        border-radius: 24px;
+    .on-off-dot {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $bss-on-off-dot-buttons-background-color; /*rgb(39, 38, 44)*/
+      border-radius: 50%;
+      contain: content;
+      height: 100%;
+      width: 50%;
 
-        .on-off-dot {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: $bss-on-off-dot-buttons-background-color; /*rgb(39, 38, 44)*/
-            border-radius: 50%;
-            contain: content;
-            height: 100%;
-            width: 50%;
-
-            .on-off-input-check {
-                visibility: hidden;
-                position: absolute;
-            }
-        }
+      .on-off-input-check {
+        visibility: hidden;
+        position: absolute;
+      }
     }
+  }
 
-    /* ---HOVER----- */
-    .box-button-switch-small:hover > .on-off-dot {
-        border: $hover-bss-on-off-dot-btn-border; /* 1px solid rgb(172, 34, 172)*/
-        box-shadow: 0px 0px 0px 3px rgba(211, 108, 211, 0.4); /**/
-    }
-    /* ---HOVER----- */
-    .box-button-switch-small:hover > .on-off-dot {
-        border: $hover-bss-on-off-dot-btn-border; /*1px solid rgb(172, 34, 172)*/
-        box-shadow: 0px 0px 0px 3px rgba(211, 108, 211, 0.4); /**/
-    }
-    /* ---HOVER----- */
-    .box-button-switch-small:active {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        background-color: $active-bss-sub-mainb-buttons-background-color; /*rgb(31, 199, 212)*/
-    }
+  /* ---HOVER----- */
+  .box-button-switch-small:hover > .on-off-dot {
+    border: $hover-bss-on-off-dot-btn-border; /* 1px solid rgb(172, 34, 172)*/
+    box-shadow: 0px 0px 0px 3px rgba(211, 108, 211, 0.4); /**/
+  }
+  /* ---HOVER----- */
+  .box-button-switch-small:hover > .on-off-dot {
+    border: $hover-bss-on-off-dot-btn-border; /*1px solid rgb(172, 34, 172)*/
+    box-shadow: 0px 0px 0px 3px rgba(211, 108, 211, 0.4); /**/
+  }
+  /* ---HOVER----- */
+  .box-button-switch-small:active {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $active-bss-sub-mainb-buttons-background-color; /*rgb(31, 199, 212)*/
+  }
 
-    // NON FUNZIONA<<<<<<<<<<<<<<<<
-    /* ---HOVER----- */
-    // .box-button-switch-small:focus .on-off-dot {
-    //     border: 1px solid rgb(172, 34, 172); /**/
-    //     box-shadow:  0px 0px 0px 3px rgba(211, 108, 211, 0.4);   /**/
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: flex-end;
-    //     align-items: center;
-    //     background-color: rgb(31, 199, 212); /**/
-    // }
+  // NON FUNZIONA<<<<<<<<<<<<<<<<
+  /* ---HOVER----- */
+  // .box-button-switch-small:focus .on-off-dot {
+  //     border: 1px solid rgb(172, 34, 172); /**/
+  //     box-shadow:  0px 0px 0px 3px rgba(211, 108, 211, 0.4);   /**/
+  //     display: flex;
+  //     flex-direction: row;
+  //     justify-content: flex-end;
+  //     align-items: center;
+  //     background-color: rgb(31, 199, 212); /**/
+  // }
 
-    .box-button-switch-small-text {
-        color: $text-box-bss-button-color; /*white*/
-        margin: 0 0 0 8px;
-        font-size: 16px; /**/
-        font-weight: 600; /**/
-    }
+  .box-button-switch-small-text {
+    color: $text-box-bss-button-color; /*white*/
+    margin: 0 0 0 8px;
+    font-size: 16px; /**/
+    font-weight: 600; /**/
+  }
 }
 
 /* -- BOTTONE SWITCH BIG --- con effetto switch originale-- */
 //-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 .box-button-switch-big {
-    background-color: $bbsb-box-button-background-color; /*rgb(55, 47, 71)*/
-    border: $bbsb-box-buttons-border; /* 1px solid rgb(38, 33, 48)*/
-    border-radius: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: $bbsb-box-buttons-font-size; /*16px*/
-    font-weight: $bbsb-box-buttons-font-weigth; /*600*/
+  background-color: $bbsb-box-button-background-color; /*rgb(55, 47, 71)*/
+  border: $bbsb-box-buttons-border; /* 1px solid rgb(38, 33, 48)*/
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: $bbsb-box-buttons-font-size; /*16px*/
+  font-weight: $bbsb-box-buttons-font-weigth; /*600*/
 
-    .button-switch-big {
-        background-color: $bsb-box-button-background-color; /*rgb(184, 173, 210)*/
-        color: $bsb-box-button-color; /* rgb(39, 38, 44)*/
-        border: $bsb-box-buttons-border; /*none*/
-        padding: 0 16px;
-        height: 32px;
+  .button-switch-big {
+    background-color: $bsb-box-button-background-color; /*rgb(184, 173, 210)*/
+    color: $bsb-box-button-color; /* rgb(39, 38, 44)*/
+    border: $bsb-box-buttons-border; /*none*/
+    padding: 0 16px;
+    height: 32px;
 
-        &:active {
-            transform: translateY(2px);
-        }
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  .link-switch-big {
+    text-decoration: none;
+    color: $lsb1-box-button-color; /*rgb(39, 38, 44)*/
+    padding: 0 12px;
+    font-size: $lsb1-box-buttons-font-size; /*16px*/
+    font-weight: $lsb1-box-buttons-font-weigth; /*600*/
+
+    &:hover {
+      opacity: 0.65;
     }
 
-    .link-switch-big {
-        text-decoration: none;
-        color: $lsb1-box-button-color; /*rgb(39, 38, 44)*/
-        padding: 0 12px;
-        font-size: $lsb1-box-buttons-font-size; /*16px*/
-        font-weight: $lsb1-box-buttons-font-weigth; /*600*/
-
-        &:hover {
-            opacity: 0.65;
-        }
-
-        &:active {
-            transform: translateY(2px);
-        }
+    &:active {
+      transform: translateY(2px);
     }
+  }
 
-    //lsb1 {
-    //}
+  //lsb1 {
+  //}
 
-    .lsb2 {
-        color: $lsb2-box-button-color; /*rgb(184, 173, 210)*/
-    }
+  .lsb2 {
+    color: $lsb2-box-button-color; /*rgb(184, 173, 210)*/
+  }
 }
 
 /* BOTTONE SEMI TRASPARENTE-2 --- (HARVEST)
 che appare nella sezione che esce dopo che si clicca su una sezione della griglia/lista in Trade → Farm---- */
 .button-semi-trasp-dark {
-    background-color: $semi-transp2-buttons-background-color; /*rgb(60, 55, 66)*/
-    border: $semi-stransp2-buttons-border; /*1px solid rgb(60, 55, 66)*/
-    color: $semi-transp2-buttons-color; /*rgb(102, 97, 113)*/
-    cursor: not-allowed;
-    height: 48px;
-    font-size: $semi-transp2-buttons-font-size; /*16px*/
-    font-weight: $semi-transp2-buttons-font-weigth; /*600*/
+  background-color: $semi-transp2-buttons-background-color; /*rgb(60, 55, 66)*/
+  border: $semi-stransp2-buttons-border; /*1px solid rgb(60, 55, 66)*/
+  color: $semi-transp2-buttons-color; /*rgb(102, 97, 113)*/
+  cursor: not-allowed;
+  height: 48px;
+  font-size: $semi-transp2-buttons-font-size; /*16px*/
+  font-weight: $semi-transp2-buttons-font-weigth; /*600*/
 
-    &:hover {
-        opacity: initial;
-    }
+  &:hover {
+    opacity: initial;
+  }
 }
 
 /* ----Farm → POOLS---- */
 
 /* --Bottone per tornare in alto, all inizio della lista ------------------------- */
 .to-top-button {
-    background-color: $tt-button-background-color; /*transparent*/
-    color: $tt-buttons-background-color; /*rgb(31, 199, 212)*/
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: $tt-buttons-font-size; /*16px*/
-    font-weight: $tt-buttons-font-weigth; /*600*/
-    letter-spacing: 0.05rem;
-    height: 48px;
-    padding: 0 24px;
-    border: none; /**/
+  background-color: $tt-button-background-color; /*transparent*/
+  color: $tt-buttons-background-color; /*rgb(31, 199, 212)*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: $tt-buttons-font-size; /*16px*/
+  font-weight: $tt-buttons-font-weigth; /*600*/
+  letter-spacing: 0.05rem;
+  height: 48px;
+  padding: 0 24px;
+  border: none; /**/
 
-    &:hover {
-        opacity: 0.65;
-    }
+  &:hover {
+    opacity: 0.65;
+  }
 }
 
 /*WIN ..............................................*/
@@ -591,39 +591,39 @@ che appare nella sezione che esce dopo che si clicca su una sezione della grigli
 
 /*--BOTTONI ETICHETTE -------*/
 .button-label {
-    background-color: $label-button-background-color; /*rgb(56, 50, 65)*/
-    color: $label-buttons-color; /* rgb(184, 173, 210)*/
-    border: $label-buttons-border; /*none*/
-    border-radius: 16px 16px 0 0;
-    padding: 8px;
+  background-color: $label-button-background-color; /*rgb(56, 50, 65)*/
+  color: $label-buttons-color; /* rgb(184, 173, 210)*/
+  border: $label-buttons-border; /*none*/
+  border-radius: 16px 16px 0 0;
+  padding: 8px;
 
-    .button-label:hover {
-        opacity: unset;
-    }
+  .button-label:hover {
+    opacity: unset;
+  }
 }
 
 .initial-btn-lbl {
-    background-color: $i-label-button-background-color; /*rgb(184, 173, 210)*/
-    color: $i-label-buttons-color; /* rgb(39, 38, 44)*/
+  background-color: $i-label-button-background-color; /*rgb(184, 173, 210)*/
+  color: $i-label-buttons-color; /* rgb(39, 38, 44)*/
 }
 
 /*BOTTONE DROPDOWN DETAILS TRASPARENTE*/
 .button-dropdown-trsp {
-    color: $transp-dropdown-buttons-color; /*rgb(31, 199, 212)*/
-    font-size: $transp-dropdown-buttons-font-size; /*16px*/
-    font-weight: $transp-dropdown-buttons-font-weigth; /*600*/
-    padding: 0 24px;
-    height: 48px;
-    background-color: transparent; /**/
-    border: none; /**/
+  color: $transp-dropdown-buttons-color; /*rgb(31, 199, 212)*/
+  font-size: $transp-dropdown-buttons-font-size; /*16px*/
+  font-weight: $transp-dropdown-buttons-font-weigth; /*600*/
+  padding: 0 24px;
+  height: 48px;
+  background-color: transparent; /**/
+  border: none; /**/
 
-    &:hover {
-        opacity: 0.65;
-    }
+  &:hover {
+    opacity: 0.65;
+  }
 
-    &:active {
-        transform: translateY(2px);
-    }
+  &:active {
+    transform: translateY(2px);
+  }
 }
 
 // .bddt1 {
@@ -631,73 +631,73 @@ che appare nella sezione che esce dopo che si clicca su una sezione della grigli
 // }
 
 .bddt2 {
-    display: none;
+  display: none;
 }
 
 /* ----WIN → PREDICTION (BETA)---- */
 /*ETICHETTE Sovrapposte*/
 
 .box-labels-overlap {
-    width: auto;
-    height: auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+
+  .button-label-overlap {
+    background-color: rgb(39, 38, 44); /**/
     display: flex;
-    // justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    white-space: nowrap;
-    position: relative;
+    border-radius: 24px 24px 0 0;
+    height: 48px;
+    color: white; /**/
+    font-size: 16px; /**/
+    font-weight: 600; /**/
 
-    .button-label-overlap {
-        background-color: rgb(39, 38, 44); /**/
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        border-radius: 24px 24px 0 0;
-        height: 48px;
-        color: white; /**/
-        font-size: 16px; /**/
-        font-weight: 600; /**/
-
-        &:first-child {
-            z-index: 1;
-            position: absolute;
-        }
-
-        &:hover {
-            opacity: inherit;
-        }
-
-        .blol-icon {
-            margin-right: 10px;
-        }
-    }
-    .blol-1 {
-        position: absolute;
-        z-index: 1;
-        left: 0;
+    &:first-child {
+      z-index: 1;
+      position: absolute;
     }
 
-    .blol-2 {
-        position: absolute;
-        z-index: 0;
-        margin-left: 100px;
-        background-color: rgb(55, 47, 71); /**/
-        opacity: 0.65;
+    &:hover {
+      opacity: inherit;
     }
+
+    .blol-icon {
+      margin-right: 10px;
+    }
+  }
+  .blol-1 {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+  }
+
+  .blol-2 {
+    position: absolute;
+    z-index: 0;
+    margin-left: 100px;
+    background-color: rgb(55, 47, 71); /**/
+    opacity: 0.65;
+  }
 }
 
 /* ----WIN → LOTTERY---- */
 
 .ticket-button {
-    background: $ticket-buttons-background-color; /*linear-gradient(#7645d9 0%, rgb(69, 42, 122) 100%)*/
-    border: $ticket-buttons-border; /*none*/
-    color: $ticket-buttons-color; /*white*/
-    letter-spacing: 0.05rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: $ticket-buttons-font-size; /*16px*/
-    font-weight: $ticket-buttons-font-weigth; /*600*/
-    height: 48px;
-    width: 240px;
+  background: $ticket-buttons-background-color; /*linear-gradient(#7645d9 0%, rgb(69, 42, 122) 100%)*/
+  border: $ticket-buttons-border; /*none*/
+  color: $ticket-buttons-color; /*white*/
+  letter-spacing: 0.05rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: $ticket-buttons-font-size; /*16px*/
+  font-weight: $ticket-buttons-font-weigth; /*600*/
+  height: 48px;
+  width: 240px;
 }
