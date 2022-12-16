@@ -214,6 +214,15 @@
   }
 }
 
+@media screen and (max-width: 360px) {
+  .FarmsInput {
+    padding-left: 2px;
+  }
+  .FarmsSubFilters {
+    margin-left: 10px;
+  }
+}
+
 @media screen and (max-width: 340px) {
   .FarmsContainer1 {
     margin-left: -20%;
