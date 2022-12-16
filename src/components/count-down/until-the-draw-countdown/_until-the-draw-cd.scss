@@ -1,13 +1,14 @@
 .utd-cd-main-container {
-  width: 100%;
+  width: auto;
   height: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   gap: 8px;
 
+  //DATE
   .utd-cd-box {
-    width: 100%;
+    width: auto;
     height: 100%;
     margin: 0 0 3px;
 
@@ -21,13 +22,15 @@
       gap: 4px;
       align-items: baseline;
 
+      //ITEMS
       .utd-cd-item {
         font-weight: 600;
         line-height: 1.1;
-        background: linear-gradient(
-          rgb(128, 81, 214) 0%,
-          rgb(73, 34, 134) 100%
-        );
+        // background: linear-gradient(
+        //   rgb(128, 81, 214) 0%,
+        //   rgb(73, 34, 134) 100%
+        // );
+        background-color: chartreuse;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -43,8 +46,11 @@
       }
     }
   }
+
+  //TEXT
   .utd-cd-text {
-    width: 100%;
+    width: auto;
+    height: auto;
     font-weight: 600;
     line-height: 1.5;
     font-size: 16px;
@@ -52,3 +58,7 @@
     margin: 0 0 3px;
   }
 }
+
+// .aaa-bg {
+//   background: linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
+// }

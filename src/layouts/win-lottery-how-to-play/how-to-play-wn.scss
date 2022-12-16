@@ -17,12 +17,44 @@
 .htp-section {
   width: 100%;
   height: auto;
-  padding: 14px 0 48px;
+  padding: 0 0 48px 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   background-color: rgb(8, 6, 11);
+  // position: relative;
 
+  //SVG/IMAGE TOP CONTAINER
+  .htp-top-main-container {
+    width: 100%;
+    height: 20px;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #08060b;
+    z-index: 2;
+    position: relative;
+
+    .htp-top-sub-container {
+      width: 100%;
+      height: 20px;
+      clip-path: url(#topConvexCurve);
+      background: rgb(102, 87, 141);
+      transform: translate(0px, -1px);
+
+      & svg {
+        width: 100%;
+        height: 100&;
+      }
+    }
+  }
+
+  //MAIN CONTENTS CONTAINER
   .htp-main-container {
     width: 100%;
     max-width: 1200px;
