@@ -23,6 +23,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 3;
 
     //TITLES
     .ip-sc-titles {
@@ -61,7 +62,7 @@
       align-items: center;
     }
   }
-
+  //BACKGROUND IMAGE
   .bottom-background-img-container {
     color: chartreuse;
     display: flex;
@@ -77,5 +78,20 @@
     bottom: 0;
     left: 0;
     right: 0;
+  }
+
+  //MOVING IMAGES
+  .bottom-moving-img-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 26, 255, 0.275);
+    z-index: 0;
+    color: chartreuse;
+    font-size: 40px;
   }
 }

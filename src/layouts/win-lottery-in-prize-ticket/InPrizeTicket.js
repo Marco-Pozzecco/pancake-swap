@@ -102,6 +102,9 @@ export function InPrizeTicket(props) {
         </div>
       </div>
       <div className="bottom-background-img-container"></div>
+      <div className="bottom-moving-img-container">
+        DA INSERIRE LE STELLE e togliere questo sfondo blu
+      </div>
     </section>
   );
 }
