@@ -171,3 +171,32 @@
   background-color: var(--background-primary);
   height: 100vh;
 }
+
+@media screen and (max-width: 1240px) {
+  .FarmsPageTop {
+    gap: 3%;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .FarmsContainer2 {
+    margin-top: -6%;
+    align-self: center;
+    margin-left: -10%;
+    width: 100%;
+  }
+  .FarmsImg1 {
+    left: 75%;
+    top: -75%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .FarmsContainer2 {
+    margin-top: -3%;
+  }
+  .FarmsImg1 {
+    left: 75%;
+    top: -65%;
+  }
+}
