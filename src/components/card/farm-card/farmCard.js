@@ -1,29 +1,32 @@
 import React from "react";
-import fs from "fs";
-import { Button, ConnectWalletBtn } from "../../buttons/Button";
-
+import { Button } from "../../buttons/Button";
+import FarmCard from "../../../_data/scraper/scraperResult.json";
+import { ConnectWalletBtn } from "../../buttons/ConnectWalletBtn"
+import "./FarmCard.scss";
 // Props:
 // - images => string[]
 // - fi =>  string
 // - apr => string
 //
-export function earnCard(props) {
-  const json = fs.readFile("src/_data/scraper/scraperResult.json");
-  const data = JSON.parse(json);
+{/* {props.images &&
+              props.images.forEach((imgSrc, index) => {
+                return <img src={`${imgSrc}`} id={`fi-img-${index}`} />;
+              })} */}
+
+
+export function EarnCard(props) {
+  const data = FarmCard;
 
   return (
     <>
       <div className="earn-card">
         <div className="card-header">
           <div className="card-fi-img">
-            {props.images &&
-              props.images.forEach((imgSrc, index) => {
-                return <img src={`${imgSrc}`} id={`fi-img-${index}`} />;
-              })}
+            <img src="" alt="" />
           </div>
           <div className="card-fi-stat">
             <div className="card-fi-title">
-              {props.fi && <h1>{props.fi}</h1>}
+              {data[0].financialInstrument && <h1>{data[0].financialInstrument}</h1>}
             </div>
             <div className="card-fi-details"></div>
           </div>
@@ -31,14 +34,14 @@ export function earnCard(props) {
         <div className="card-body">
           <div className="card-body-apr card-entry">
             <p className="apr-paragraph">APR:</p>
-            {props.apr && <p className="apr-value">{props.apr}</p>}
+            {data[0].apr && <p className="apr-value">{data[0].apr}</p>}
           </div>
           <div className="card-body-earn card-entry">
-            <p className="earn-paragraph">Earn:</p>
+            <p className="earn-paragraph">Earn: {data[0].earned && data[0].earned}</p>
             <p className="earn-value">CAKE + fees</p>
           </div>
           <div className="card-body-earned-cake card-entry">
-            <div className="">
+            <div className="cake-earned-area">
               <p className="cake-earned-paragraph">CAKE EARNED:</p>
               <p className="cake-earned-value">0.00000</p>
             </div>
@@ -53,7 +56,7 @@ export function earnCard(props) {
             </div>
           )}
           <div className="card-fi-stack">
-            <p className="card-fi-stack-paragraph">{props.fi} LP STAKED</p>
+            <p className="card-fi-stack-paragraph">{data[0].financialInstrument} LP STAKED</p>
             <ConnectWalletBtn />
           </div>
         </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Subnav from "../../components/subnav/Subnav";
 import "./_farms.scss";
 import boosterCardImage from "../../resources/boosterCardImage.webp";
-
+import { EarnCard } from "../../components/card/farm-card/FarmCard"
 
 export function Farms() {
     const [fillfcc, setFillfcc] = useState("gray")
@@ -55,7 +55,9 @@ export function Farms() {
                     <input type="search" className="FarmsInput" placeholder="Search Farms" />
                 </div>
             </div>
-            <div className="farmCardsArea"></div>
+            <div className="farmCardsArea">
+                <EarnCard />
+            </div>
         </>
     );
 }
