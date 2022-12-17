@@ -3,7 +3,6 @@ import "./_finished-rounds-wn.scss";
 import { Card } from "../../../src/components/card/Card";
 import { FinishedRoundCardLotteryAH } from "../../components/card/finished-round-card-lottery/win-lottery-finished-rounds-all-hystory/FinishedRoundCardLotteryAH";
 import { FilterToggle } from "../../components/toggle/filter-toggle/FilterToggle";
-import { CardPlace } from "../../components/card/CardPlace";
 
 export function FinishedRoundWN() {
   return (
@@ -21,7 +20,6 @@ export function FinishedRoundWN() {
           </div>
           <div className="fr-content frc-b">
             <FinishedRoundCardLotteryAH />
-            <CardPlace />
           </div>
         </div>
       </div>
