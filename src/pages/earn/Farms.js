@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Subnav from "../../components/subnav/Subnav";
 import "./_farms.scss";
 import boosterCardImage from "../../resources/boosterCardImage.webp";
-import { EarnCard } from "../../components/card/farm-card/FarmCard"
+import { EarnCard } from "../../components/card/farm-card/farmCard"
 
 export function Farms() {
     const [fillfcc, setFillfcc] = useState("gray")

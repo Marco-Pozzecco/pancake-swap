@@ -34,7 +34,7 @@ export function EarnCard(props) {
         <div className="card-body">
           <div className="card-body-apr card-entry">
             <p className="apr-paragraph">APR:</p>
-            {data[0].apr && <p className="apr-value">{data[0].apr}</p>}
+            {data[0].apr[0] && <p className="apr-value">{data[0].apr[0]}</p>}
           </div>
           <div className="card-body-earn card-entry">
             <p className="earn-paragraph">Earn: {data[0].earned && data[0].earned}</p>
