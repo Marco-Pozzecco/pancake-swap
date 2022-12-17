@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-@import "../../abstracts/mixins";
-@import "../../abstracts/colors";
-@import "../../abstracts/animations";
-@import "../../abstracts/theme";
-@import "../../abstracts/typography";
-@import "../../abstracts/root";
-@import "../../abstracts/utility";
-@import "../../abstracts/variables";
-=======
 @import "../../abstracts/animations";
 @import "../../abstracts/mixins";
 
 @include float(-10px, "NE");
 // @include float(-10px, "NE");
->>>>>>> ref-wp-pottery-2.6
 
 .tbw-main-container {
   width: 100%;

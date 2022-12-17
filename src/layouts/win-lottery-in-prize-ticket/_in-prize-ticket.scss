@@ -1,27 +1,8 @@
-<<<<<<< HEAD
-@import "../../abstracts/mixins";
-@import "../../abstracts/colors";
-@import "../../abstracts/animations";
-@import "../../abstracts/theme";
-@import "../../abstracts/typography";
-@import "../../abstracts/root";
-@import "../../abstracts/utility";
-@import "../../abstracts/variables";
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Kanit, sans-serif;
-  font-weight: 600;
-}
-=======
 @import "../../abstracts/animations";
 @import "../../abstracts/mixins";
 
 @include float(10px, "NE");
 @include float(10px, "NW");
->>>>>>> ref-wp-pottery-2.6
 
 .ipt-section {
   width: 100%;
