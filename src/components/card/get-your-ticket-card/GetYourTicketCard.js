@@ -8,8 +8,8 @@ export function GetYourTicketCard() {
   const [showDetails, setShowDetails] = useState(false);
   // ------------------------------------------------------
   const handleClick = () => {
-    setShowDetails(!showDetails)
-  } 
+    setShowDetails(!showDetails);
+  };
 
   return (
     <section className="gytc-main-container">
@@ -66,14 +66,20 @@ export function GetYourTicketCard() {
           {/* -------- */}
           {/* -------- */}
 
-          <div className={`hidden-section-body-row ${showDetails && "active"}`}
-            style={{display: showDetails ? "block" : "none"}}></div>
-
+          <div
+            className={`hidden-section-body-row ${showDetails && "active"}`}
+            style={{ display: showDetails ? "block" : "none" }}
+          ></div>
         </div>
 
         {/* --FOOTER------------------- */}
         <div className="gytc-footer-container">
-          <div className={`gytc-footer-sub-container gytc-fsc-datas-container ${showDetails && "active"}`} style={{display: showDetails ? "block" : "none"}}>
+          <div
+            className={`gytc-footer-sub-container gytc-fsc-datas-container ${
+              showDetails && "active"
+            }`}
+            style={{ display: showDetails ? "block" : "none" }}
+          >
             <div className="gytc-fsc-datas-description-box">
               Match the winning number in the same order to share prizes.
               Current prizes up for grabs:
@@ -93,8 +99,10 @@ export function GetYourTicketCard() {
             </div>
           </div>
 
-          <div className="gytc-footer-sub-container gytc-fsc-button" onClick={handleClick}
->
+          <div
+            className="gytc-footer-sub-container gytc-fsc-button"
+            onClick={handleClick}
+          >
             <Button
               text="Details"
               type={"noBorderButton"}
@@ -102,7 +110,7 @@ export function GetYourTicketCard() {
                 color: "rgb(114, 239, 255)",
                 textDecoration: "none",
               }}
-              onClick={handleClick}
+              // onClick={handleClick}
             >
               <FaAngleDown />
             </Button>
