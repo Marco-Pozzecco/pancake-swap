@@ -133,6 +133,7 @@ export function ToBeWon() {
       </div>
       <div className="tbw-bottom-background-img-container"></div>
       {/* -------------------------------------------------------------- */}
+
       <div className="ipt-bottom-moving-img-container">
         {/* nth-child(1)--  --  --  --  --  --  --  --  -- */}
         <img src="https://pancakeswap.finance/images/pottery/banner-ticket/left1.png" />
