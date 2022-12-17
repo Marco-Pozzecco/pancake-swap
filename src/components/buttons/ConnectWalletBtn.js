@@ -4,6 +4,6 @@ import { Button } from "./Button";
 
 export function ConnectWalletBtn(props) {
   return (
-    <Button type={props.type} action={props.action} text="Connect Wallet" />
+    <Button type={props.type} action={props.action} text={"Connect Wallet"} />
   );
 }

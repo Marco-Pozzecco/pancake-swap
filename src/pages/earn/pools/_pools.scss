@@ -1,0 +1,108 @@
+@import "../../../abstracts/theme";
+
+.PoolsPageTop {
+  display: flex;
+  width: 100%;
+  background-color: var(--gradient-bubblegum);
+  justify-content: center;
+  gap: 50%;
+  flex-wrap: wrap;
+}
+
+.PoolsContainer1 {
+  display: flex;
+  flex-direction: column;
+  gap: 8%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+.PoolsTitle {
+  font-size: 3.4rem;
+  font-weight: 900;
+  color: var(--accent-secondary);
+}
+
+.PoolsParagraph {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+.PoolsFilters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48%;
+  background-color: var(--background-primary);
+  padding: 18px 20px 15px 0px;
+}
+.PoolsSubFilters {
+  display: flex;
+  gap: 8px;
+  margin-top: 2.7%;
+}
+
+.PoolsCardView {
+  background: none;
+  border: none;
+  fill: gray;
+}
+
+.PoolsCardView:hover {
+  opacity: 0.8;
+}
+
+.PoolsTableView {
+  background: none;
+  border: none;
+  fill: gray;
+}
+
+.PoolsTableView:hover {
+  opacity: 0.8;
+}
+
+.PoolsSearch {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.PoolsInput {
+  font-weight: 500;
+  font-size: 16px;
+  padding-left: 18px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 11px;
+  width: 100%;
+  border: 2px solid var(--colors-disabled);
+  text-align: start;
+  background-color: var(--colors-disabled);
+  color: var(--text-muted);
+}
+
+.PoolsInput:focus {
+  outline-style: none;
+  border: 2px solid var(--text-accent);
+}
+.poolsCardsArea {
+  width: 100%;
+  background-color: var(--background-primary);
+  height: 100vh;
+}
+
+@media screen and (max-width: 360px) {
+  .PoolsTitle {
+    font-size: 40px;
+  }
+  .PoolsParagraph {
+    font-size: 16px;
+  }
+  .PoolsInput {
+    padding-left: 2px;
+  }
+  .PoolsSubFilters {
+    margin-left: 10px;
+  }
+}
