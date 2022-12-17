@@ -1,598 +1,1916 @@
 [
     {
-        "financialInstrument": "CAKE-BNB",
+        "financialInstrument": [
+            "CAKE-BNB"
+        ],
+        "images": null,
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>",
+                "<svg viewBox=\"0 0 15 15\" width=\"18px\" color=\"success\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 brxWMV\"><path d=\"M8.34588 13.6273C8.0575 13.8656 7.63823 13.7399 7.49172 13.3958L6.78828 11.7438C7.73587 11.3939 8.62311 10.9234 9.44396 10.3744C9.44396 10.3744 9.66966 11.6436 9.38982 12.3723C9.20938 12.8421 8.73469 13.3061 8.34588 13.6273ZM3.25141 8.2087L1.60451 7.50815C1.25825 7.36086 1.1335 6.93831 1.37577 6.6505C1.69974 6.26564 2.16489 5.79794 2.63298 5.61886C3.35861 5.34125 4.62149 5.55437 4.62149 5.55437C4.07225 6.3748 3.60147 7.26158 3.25141 8.2087ZM12.8903 2.10977C12.8903 2.10977 9.90266 0.830267 6.4865 4.2453C5.1647 5.56643 4.37403 7.02028 3.861 8.29315C3.69201 8.7456 3.80668 9.24027 4.13864 9.57809L5.42423 10.857C5.75619 11.1948 6.25111 11.3034 6.70378 11.1345C8.22388 10.5552 9.6041 9.66087 10.7537 8.51033C14.1699 5.09589 12.8903 2.10977 12.8903 2.10977ZM8.62311 6.3748C8.15233 5.90426 8.15233 5.13812 8.62311 4.66758C9.09389 4.19704 9.86042 4.19704 10.3312 4.66758C10.7959 5.13812 10.802 5.90426 10.3312 6.3748C9.86042 6.84534 9.09389 6.84534 8.62311 6.3748Z\"></path><path d=\"M3.77609 10.3019C3.54971 10.0756 3.23604 9.92849 2.92949 10.0208C2.22706 10.2322 1.71542 10.8838 1.71542 11.6548L1.71542 13.361H3.42253C4.19392 13.361 4.84581 12.8496 5.05736 12.1476C5.14968 11.8412 5.00246 11.5277 4.77608 11.3014L3.77609 10.3019Z\"></path></svg>"
+            ],
+            "text": [
+                "Core",
+                "Boosted"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "19.92%",
-            "39,09%"
+            "19.69%",
+            "38,63%"
+        ],
+        "liquidity": [
+            "$164.992.127"
+        ],
+        "multiplier": [
+            "40x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "CAKE-BUSD",
+        "financialInstrument": [
+            "CAKE-BUSD"
+        ],
+        "images": null,
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>",
+                "<svg viewBox=\"0 0 15 15\" width=\"18px\" color=\"success\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 brxWMV\"><path d=\"M8.34588 13.6273C8.0575 13.8656 7.63823 13.7399 7.49172 13.3958L6.78828 11.7438C7.73587 11.3939 8.62311 10.9234 9.44396 10.3744C9.44396 10.3744 9.66966 11.6436 9.38982 12.3723C9.20938 12.8421 8.73469 13.3061 8.34588 13.6273ZM3.25141 8.2087L1.60451 7.50815C1.25825 7.36086 1.1335 6.93831 1.37577 6.6505C1.69974 6.26564 2.16489 5.79794 2.63298 5.61886C3.35861 5.34125 4.62149 5.55437 4.62149 5.55437C4.07225 6.3748 3.60147 7.26158 3.25141 8.2087ZM12.8903 2.10977C12.8903 2.10977 9.90266 0.830267 6.4865 4.2453C5.1647 5.56643 4.37403 7.02028 3.861 8.29315C3.69201 8.7456 3.80668 9.24027 4.13864 9.57809L5.42423 10.857C5.75619 11.1948 6.25111 11.3034 6.70378 11.1345C8.22388 10.5552 9.6041 9.66087 10.7537 8.51033C14.1699 5.09589 12.8903 2.10977 12.8903 2.10977ZM8.62311 6.3748C8.15233 5.90426 8.15233 5.13812 8.62311 4.66758C9.09389 4.19704 9.86042 4.19704 10.3312 4.66758C10.7959 5.13812 10.802 5.90426 10.3312 6.3748C9.86042 6.84534 9.09389 6.84534 8.62311 6.3748Z\"></path><path d=\"M3.77609 10.3019C3.54971 10.0756 3.23604 9.92849 2.92949 10.0208C2.22706 10.2322 1.71542 10.8838 1.71542 11.6548L1.71542 13.361H3.42253C4.19392 13.361 4.84581 12.8496 5.05736 12.1476C5.14968 11.8412 5.00246 11.5277 4.77608 11.3014L3.77609 10.3019Z\"></path></svg>"
+            ],
+            "text": [
+                "Core",
+                "Boosted"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "20.79%",
-            "36,44%"
+            "20.81%",
+            "36,46%"
+        ],
+        "liquidity": [
+            "$12.470.403"
+        ],
+        "multiplier": [
+            "2.5x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "CAKE-USDT",
+        "financialInstrument": [
+            "CAKE-USDT"
+        ],
+        "images": [
+            "/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png",
+            "/images/tokens/0x55d398326f99059fF775485246999027B3197955.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>",
+                "<svg viewBox=\"0 0 15 15\" width=\"18px\" color=\"success\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 brxWMV\"><path d=\"M8.34588 13.6273C8.0575 13.8656 7.63823 13.7399 7.49172 13.3958L6.78828 11.7438C7.73587 11.3939 8.62311 10.9234 9.44396 10.3744C9.44396 10.3744 9.66966 11.6436 9.38982 12.3723C9.20938 12.8421 8.73469 13.3061 8.34588 13.6273ZM3.25141 8.2087L1.60451 7.50815C1.25825 7.36086 1.1335 6.93831 1.37577 6.6505C1.69974 6.26564 2.16489 5.79794 2.63298 5.61886C3.35861 5.34125 4.62149 5.55437 4.62149 5.55437C4.07225 6.3748 3.60147 7.26158 3.25141 8.2087ZM12.8903 2.10977C12.8903 2.10977 9.90266 0.830267 6.4865 4.2453C5.1647 5.56643 4.37403 7.02028 3.861 8.29315C3.69201 8.7456 3.80668 9.24027 4.13864 9.57809L5.42423 10.857C5.75619 11.1948 6.25111 11.3034 6.70378 11.1345C8.22388 10.5552 9.6041 9.66087 10.7537 8.51033C14.1699 5.09589 12.8903 2.10977 12.8903 2.10977ZM8.62311 6.3748C8.15233 5.90426 8.15233 5.13812 8.62311 4.66758C9.09389 4.19704 9.86042 4.19704 10.3312 4.66758C10.7959 5.13812 10.802 5.90426 10.3312 6.3748C9.86042 6.84534 9.09389 6.84534 8.62311 6.3748Z\"></path><path d=\"M3.77609 10.3019C3.54971 10.0756 3.23604 9.92849 2.92949 10.0208C2.22706 10.2322 1.71542 10.8838 1.71542 11.6548L1.71542 13.361H3.42253C4.19392 13.361 4.84581 12.8496 5.05736 12.1476C5.14968 11.8412 5.00246 11.5277 4.77608 11.3014L3.77609 10.3019Z\"></path></svg>"
+            ],
+            "text": [
+                "Core",
+                "Boosted"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "21.22%",
-            "36,80%"
+            "21.35%",
+            "37,05%"
+        ],
+        "liquidity": [
+            "$9.945.432"
+        ],
+        "multiplier": [
+            "2x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "BUSD-BNB",
+        "financialInstrument": [
+            "BUSD-BNB"
+        ],
+        "images": [
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "12.79%"
+            "12.92%"
+        ],
+        "liquidity": [
+            "$139.121.291"
+        ],
+        "multiplier": [
+            "11x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "SQUAD-CAKE",
+        "financialInstrument": [
+            "SQUAD-CAKE"
+        ],
+        "images": [
+            "/images/tokens/0x724A32dFFF9769A0a0e1F0515c0012d1fB14c3bd.png",
+            "/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "218.33%"
+            "79.33%"
+        ],
+        "liquidity": [
+            "$196.908"
+        ],
+        "multiplier": [
+            "0.2x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "USDT-USDCStable LP",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "4.58%"
+        "financialInstrument": [
+            "USDT-USDC"
         ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "USDC-BUSDStable LP",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "3.28%"
+        "images": [
+            "/images/tokens/0x55d398326f99059fF775485246999027B3197955.png",
+            "/images/tokens/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d.png"
         ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "USDT-BUSDStable LP",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "3.11%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "HFT-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "32.2%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "HOOK-CAKE",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "62.35%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "XCAD-CAKE",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "48.87%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "MGP-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "120.58%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "WMX-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "102.63%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "KRS-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "123.77%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "ARV-BNB",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "81.43%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "CO-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "71.84%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "HOOP-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "87.34%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "GQ-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "39.79%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "WOM-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "55.33%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "SFUND-BNB",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "41.73%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "PEEL-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "62.32%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "HIGH-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "22.38%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "OLE-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "57.19%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "CHR-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "15.88%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "METIS-BNB",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "18.71%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "GAL-BNB",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "12.28%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "CEEK-BNB",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "14.05%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "GMT-USDC",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "11.07%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "BTT-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "3.73%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "RACA-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "40.97%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "APX-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "24.91%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "SANTOS-BNB",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "35.03%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "DAR-BNB",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "26.15%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "TRX-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "4.4%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "WIN-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "8.79%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "SPS-BNB",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "57.67%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "C98-BNB",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "18.24%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "AXS-BNB",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "27.82%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "CHESS-USDC",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "21.68%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "BSCPAD-BNB",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "41.39%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "WOO-BNB",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "19.93%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "ETH-USDC",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "6.4%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "BTCB-ETH",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "3.48%"
-        ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "MBOX-BNB",
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
             "3.84%"
         ],
-        "details": "Details"
-    },
-    {
-        "financialInstrument": "TUSD-BUSD",
-        "earned": "Earned",
-        "amount": 0,
-        "apr": [
-            "2.73%"
+        "liquidity": [
+            "$30.631.657"
+        ],
+        "multiplier": [
+            "1.5x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "DOGE-BNB",
+        "financialInstrument": [
+            "USDC-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "14.59%"
+            "3.13%"
+        ],
+        "liquidity": [
+            "$62.736.598"
+        ],
+        "multiplier": [
+            "2.5x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "BTCB-BUSD",
+        "financialInstrument": [
+            "USDT-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x55d398326f99059fF775485246999027B3197955.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "5.78%"
+            "2.93%"
+        ],
+        "liquidity": [
+            "$80.438.014"
+        ],
+        "multiplier": [
+            "3x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "ALPACA-BUSD",
+        "financialInstrument": [
+            "HFT-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x44Ec807ce2F4a6F2737A92e985f318d035883e47.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "7.02%"
+            "75.02%"
+        ],
+        "liquidity": [
+            "$114.258"
+        ],
+        "multiplier": [
+            "0.1x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "ALICE-BNB",
+        "financialInstrument": [
+            "HOOK-CAKE"
+        ],
+        "images": [
+            "/images/tokens/0xa260E12d2B924cb899AE80BB58123ac3fEE1E2F0.png",
+            "/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "18.35%"
+            "63.51%"
+        ],
+        "liquidity": [
+            "$192.001"
+        ],
+        "multiplier": [
+            "0.1x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "IOTX-BUSD",
+        "financialInstrument": [
+            "XCAD-CAKE"
+        ],
+        "images": [
+            "/images/tokens/0x431e0cD023a32532BF3969CddFc002c00E98429d.png",
+            "/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "8.48%"
+            "44.2%"
+        ],
+        "liquidity": [
+            "$367.402"
+        ],
+        "multiplier": [
+            "0.2x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "SFP-BNB",
+        "financialInstrument": [
+            "MGP-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0xD06716E1Ff2E492Cc5034c2E81805562dd3b45fa.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "7.29%"
+            "115.71%"
+        ],
+        "liquidity": [
+            "$350.495"
+        ],
+        "multiplier": [
+            "0.5x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "BTCST-BNB",
+        "financialInstrument": [
+            "WMX-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0xa75d9ca2a0a1D547409D82e1B06618EC284A2CeD.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "77.37%"
+            "133.53%"
+        ],
+        "liquidity": [
+            "$332.845"
+        ],
+        "multiplier": [
+            "0.5x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "LTC-BNB",
+        "financialInstrument": [
+            "KRS-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x37b53894e7429f794B56F22a32E1695567Ee9913.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "6.46%"
+            "119.4%"
+        ],
+        "liquidity": [
+            "$341.821"
+        ],
+        "multiplier": [
+            "0.5x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "DAI-BUSD",
+        "financialInstrument": [
+            "ARV-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x6679eB24F59dFe111864AEc72B443d1Da666B360.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "2.19%"
+            "83.61%"
+        ],
+        "liquidity": [
+            "$139.346"
+        ],
+        "multiplier": [
+            "0.1x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "VAI-BUSD",
+        "financialInstrument": [
+            "CO-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x936B6659Ad0C1b244Ba8Efe639092acae30dc8d6.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "4.26%"
+            "74.89%"
+        ],
+        "liquidity": [
+            "$124.788"
+        ],
+        "multiplier": [
+            "0.1x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "INJ-BNB",
+        "financialInstrument": [
+            "HOOP-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0xF19cfb40B3774dF6Eed83169Ad5aB0Aaf6865F25.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "20.61%"
+            "83.44%"
+        ],
+        "liquidity": [
+            "$113.458"
+        ],
+        "multiplier": [
+            "0.1x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "UNI-BNB",
+        "financialInstrument": [
+            "GQ-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0xF700D4c708C2be1463E355F337603183D20E0808.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "7.3%"
+            "37.81%"
+        ],
+        "liquidity": [
+            "$247.126"
+        ],
+        "multiplier": [
+            "0.1x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "XRP-BNB",
+        "financialInstrument": [
+            "WOM-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0xAD6742A35fB341A9Cc6ad674738Dd8da98b94Fb1.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "10.44%"
+            "100.08%"
+        ],
+        "liquidity": [
+            "$837.406"
+        ],
+        "multiplier": [
+            "1x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "USDT-BNB",
+        "financialInstrument": [
+            "SFUND-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x477bC8d23c634C154061869478bce96BE6045D12.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "12.97%"
+            "41.02%"
+        ],
+        "liquidity": [
+            "$397.273"
+        ],
+        "multiplier": [
+            "0.2x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "BTCB-BNB",
+        "financialInstrument": [
+            "PEEL-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x734548a9e43d2D564600b1B2ed5bE9C2b911c6aB.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "7.65%"
+            "59.58%"
+        ],
+        "liquidity": [
+            "$158.367"
+        ],
+        "multiplier": [
+            "0.1x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "ETH-BNB",
+        "financialInstrument": [
+            "HIGH-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x5f4Bde007Dc06b867f86EBFE4802e34A1fFEEd63.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "7.24%"
+            "21.74%"
+        ],
+        "liquidity": [
+            "$451.332"
+        ],
+        "multiplier": [
+            "0.1x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "XVS-BNB",
+        "financialInstrument": [
+            "OLE-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0xa865197A84E780957422237B5D152772654341F3.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "23.98%"
+            "56.51%"
+        ],
+        "liquidity": [
+            "$144.434"
+        ],
+        "multiplier": [
+            "0.1x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "TWT-BNB",
+        "financialInstrument": [
+            "CHR-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0xf9CeC8d50f6c8ad3Fb6dcCEC577e05aA32B224FE.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "40.32%"
+            "15.83%"
+        ],
+        "liquidity": [
+            "$577.190"
+        ],
+        "multiplier": [
+            "0.1x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "LINK-BNB",
+        "financialInstrument": [
+            "METIS-BNB"
+        ],
+        "images": [
+            "/images/tokens/0xe552Fb52a4F19e44ef5A967632DBc320B0820639.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "7.36%"
+            "20.66%"
+        ],
+        "liquidity": [
+            "$446.729"
+        ],
+        "multiplier": [
+            "0.1x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "DOT-BNB",
+        "financialInstrument": [
+            "GAL-BNB"
+        ],
+        "images": [
+            "/images/tokens/0xe4Cc45Bb5DBDA06dB6183E8bf016569f40497Aa5.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "11.38%"
+            "12.83%"
+        ],
+        "liquidity": [
+            "$742.129"
+        ],
+        "multiplier": [
+            "0.1x"
         ],
         "details": "Details"
     },
     {
-        "financialInstrument": "ADA-BNB",
+        "financialInstrument": [
+            "CEEK-BNB"
+        ],
+        "images": [
+            "/images/tokens/0xe0F94Ac5462997D2BC57287Ac3a3aE4C31345D66.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
         "earned": "Earned",
         "amount": 0,
         "apr": [
-            "11.29%"
+            "14.09%"
+        ],
+        "liquidity": [
+            "$710.152"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "GMT-USDC"
+        ],
+        "images": [
+            "/images/tokens/0x3019BF2a2eF8040C242C9a4c5c4BD4C81678b2A1.png",
+            "/images/tokens/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "11.96%"
+        ],
+        "liquidity": [
+            "$1.845.190"
+        ],
+        "multiplier": [
+            "0.2x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "BTT-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x352Cb5E19b12FC216548a2677bD0fce83BaE434B.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "3.59%"
+        ],
+        "liquidity": [
+            "$5.025.620"
+        ],
+        "multiplier": [
+            "0.2x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "RACA-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x12BB890508c125661E03b09EC06E404bc9289040.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "45.09%"
+        ],
+        "liquidity": [
+            "$904.248"
+        ],
+        "multiplier": [
+            "0.5x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "APX-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x78F5d389F5CDCcFc41594aBaB4B0Ed02F31398b3.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "23.66%"
+        ],
+        "liquidity": [
+            "$333.823"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "SANTOS-BNB"
+        ],
+        "images": [
+            "/images/tokens/0xA64455a4553C9034236734FadDAddbb64aCE4Cc7.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "36.07%"
+        ],
+        "liquidity": [
+            "$277.878"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "DAR-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x23CE9e926048273eF83be0A3A8Ba9Cb6D45cd978.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "26.17%"
+        ],
+        "liquidity": [
+            "$594.709"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "TRX-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x85EAC5Ac2F758618dFa09bDbe0cf174e7d574D5B.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "4.27%"
+        ],
+        "liquidity": [
+            "$5.500.883"
+        ],
+        "multiplier": [
+            "0.2x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "WIN-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0xaeF0d72a118ce24feE3cD1d43d383897D05B4e99.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "8.53%"
+        ],
+        "liquidity": [
+            "$1.062.349"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "SPS-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x1633b7157e7638C4d6593436111Bf125Ee74703F.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "55.6%"
+        ],
+        "liquidity": [
+            "$142.260"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": null,
+        "images": [
+            "/images/tokens/0xaEC945e04baF28b135Fa7c640f624f8D90F1C3a6.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "18.54%"
+        ],
+        "liquidity": [
+            "$546.875"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "AXS-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x715D400F88C167884bbCc41C5FeA407ed4D2f8A0.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "27.58%"
+        ],
+        "liquidity": [
+            "$355.082"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "CHESS-USDC"
+        ],
+        "images": [
+            "/images/tokens/0x20de22029ab63cf9A7Cf5fEB2b737Ca1eE4c82A6.png",
+            "/images/tokens/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "21.22%"
+        ],
+        "liquidity": [
+            "$454.293"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "BSCPAD-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x5A3010d4d8D3B5fB49f8B6E57FB9E48063f16700.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "40.21%"
+        ],
+        "liquidity": [
+            "$206.429"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "WOO-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x4691937a7508860F876c9c0a2a617E7d9E945D4B.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "19.95%"
+        ],
+        "liquidity": [
+            "$591.962"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "ETH-USDC"
+        ],
+        "images": [
+            "/images/tokens/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png",
+            "/images/tokens/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "6.58%"
+        ],
+        "liquidity": [
+            "$16.699.550"
+        ],
+        "multiplier": [
+            "1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "BTCB-ETH"
+        ],
+        "images": [
+            "/images/tokens/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c.png",
+            "/images/tokens/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "3.17%"
+        ],
+        "liquidity": [
+            "$30.412.281"
+        ],
+        "multiplier": [
+            "1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "MBOX-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x3203c9E46cA618C8C1cE5dC67e7e9D75f5da2377.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "3.81%"
+        ],
+        "liquidity": [
+            "$18.341.765"
+        ],
+        "multiplier": [
+            "0.5x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "TUSD-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x14016E85a25aeb13065688cAFB43044C2ef86784.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "2.61%"
+        ],
+        "liquidity": [
+            "$4.175.321"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "DOGE-BNB"
+        ],
+        "images": [
+            "/images/tokens/0xbA2aE424d960c26247Dd6c32edC70B295c744C43.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "14.72%"
+        ],
+        "liquidity": [
+            "$2.151.328"
+        ],
+        "multiplier": [
+            "0.2x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "BTCB-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "5.55%"
+        ],
+        "liquidity": [
+            "$49.571.683"
+        ],
+        "multiplier": [
+            "2.5x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "ALPACA-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x8F0528cE5eF7B51152A59745bEfDD91D97091d2F.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "6.71%"
+        ],
+        "liquidity": [
+            "$3.657.052"
+        ],
+        "multiplier": [
+            "0.2x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "ALICE-BNB"
+        ],
+        "images": [
+            "/images/tokens/0xAC51066d7bEC65Dc4589368da368b212745d63E8.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "18.5%"
+        ],
+        "liquidity": [
+            "$517.717"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "IOTX-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x9678E42ceBEb63F23197D726B29b1CB20d0064E5.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "8.31%"
+        ],
+        "liquidity": [
+            "$1.169.460"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "SFP-BNB"
+        ],
+        "images": [
+            "/images/tokens/0xD41FDb03Ba84762dD66a0af1a6C8540FF1ba5dfb.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "7.45%"
+        ],
+        "liquidity": [
+            "$8.628.897"
+        ],
+        "multiplier": [
+            "0.2x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "BTCST-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x78650B139471520656b9E7aA7A5e9276814a38e9.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "78.63%"
+        ],
+        "liquidity": [
+            "$298.996"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "LTC-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x4338665CBB7B2485A8855A139b75D5e34AB0DB94.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "6.45%"
+        ],
+        "liquidity": [
+            "$2.956.315"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "DAI-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "2.15%"
+        ],
+        "liquidity": [
+            "$7.735.149"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "VAI-BUSD"
+        ],
+        "images": [
+            "/images/tokens/0x4BD17003473389A42DAF6a0a729f6Fdb328BbBd7.png",
+            "/images/tokens/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "4.25%"
+        ],
+        "liquidity": [
+            "$2.032.812"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "INJ-BNB"
+        ],
+        "images": [
+            "/images/tokens/0xa2B726B1145A4773F68593CF171187d8EBe4d495.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "20.63%"
+        ],
+        "liquidity": [
+            "$453.583"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "UNI-BNB"
+        ],
+        "images": [
+            "/images/tokens/0xBf5140A22578168FD562DCcF235E5D43A02ce9B1.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "7.23%"
+        ],
+        "liquidity": [
+            "$3.813.781"
+        ],
+        "multiplier": [
+            "0.2x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "XRP-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "10.24%"
+        ],
+        "liquidity": [
+            "$6.699.534"
+        ],
+        "multiplier": [
+            "0.5x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "USDT-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x55d398326f99059fF775485246999027B3197955.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "13.09%"
+        ],
+        "liquidity": [
+            "$102.287.505"
+        ],
+        "multiplier": [
+            "6x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "BTCB-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "8.23%"
+        ],
+        "liquidity": [
+            "$33.126.790"
+        ],
+        "multiplier": [
+            "2.5x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "ETH-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "7.32%"
+        ],
+        "liquidity": [
+            "$43.393.309"
+        ],
+        "multiplier": [
+            "2.5x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "XVS-BNB"
+        ],
+        "images": [
+            "/images/tokens/0xcF6BB5389c92Bdda8a3747Ddb454cB7a64626C63.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "23.82%"
+        ],
+        "liquidity": [
+            "$747.361"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "TWT-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x4B0F1812e5Df2A09796481Ff14017e6005508003.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "40.67%"
+        ],
+        "liquidity": [
+            "$1.603.641"
+        ],
+        "multiplier": [
+            "0.1x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "LINK-BNB"
+        ],
+        "images": [
+            "/images/tokens/0xF8A0BF9cF54Bb92F17374d9e9A321E6a111a51bD.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "7.25%"
+        ],
+        "liquidity": [
+            "$7.938.210"
+        ],
+        "multiplier": [
+            "0.5x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "DOT-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x7083609fCE4d1d8Dc0C979AAb8c869Ea2C873402.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "11.4%"
+        ],
+        "liquidity": [
+            "$4.686.957"
+        ],
+        "multiplier": [
+            "0.5x"
+        ],
+        "details": "Details"
+    },
+    {
+        "financialInstrument": [
+            "ADA-BNB"
+        ],
+        "images": [
+            "/images/tokens/0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47.png",
+            "/images/tokens/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png"
+        ],
+        "labels": {
+            "svg": [
+                "<svg viewBox=\"0 0 24 24\" width=\"18px\" color=\"secondary\" xmlns=\"http://www.w3.org/2000/svg\" class=\"sc-4ba21b47-0 dRdpmE\"><path d=\"M23 12L20.56 9.21L20.9 5.52L17.29 4.7L15.4 1.5L12 2.96L8.6 1.5L6.71 4.69L3.1 5.5L3.44 9.2L1 12L3.44 14.79L3.1 18.49L6.71 19.31L8.6 22.5L12 21.03L15.4 22.49L17.29 19.3L20.9 18.48L20.56 14.79L23 12ZM9.38 16.01L7 13.61C6.61 13.22 6.61 12.59 7 12.2L7.07 12.13C7.46 11.74 8.1 11.74 8.49 12.13L10.1 13.75L15.25 8.59C15.64 8.2 16.28 8.2 16.67 8.59L16.74 8.66C17.13 9.05 17.13 9.68 16.74 10.07L10.82 16.01C10.41 16.4 9.78 16.4 9.38 16.01Z\"></path></svg>"
+            ],
+            "text": [
+                "Core"
+            ]
+        },
+        "earned": "Earned",
+        "amount": 0,
+        "apr": [
+            "11.24%"
+        ],
+        "liquidity": [
+            "$4.515.602"
+        ],
+        "multiplier": [
+            "0.5x"
         ],
         "details": "Details"
     }

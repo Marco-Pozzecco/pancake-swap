@@ -3,15 +3,21 @@ const fs = require('fs')
 
 async function crawl() {
     const cardSelector = '.sc-a2a3a72d-1'
+    console.time("crawling time")
 
     try {
         const URL = "https://pancakeswap.finance/farms";
 
         const browser = await puppeteer.launch({
-            headless: true
+            headless: true,
         })
 
         const page = await browser.newPage()
+
+        await page.setViewport({
+            width: 1200,
+            height: 1000
+        })
 
         await page.goto(URL)
 
@@ -22,8 +28,9 @@ async function crawl() {
             });
             await page.waitForTimeout(500)
         }
+
         const data = await page.evaluate(() => {
-            const trs = Array.from(document.querySelectorAll('tr')).map(y => [...Array.from(y.querySelectorAll('td')).map(x => x.textContent)]);
+            const trs = Array.from(document.querySelectorAll('tr')).map(y => [...Array.from(y.querySelectorAll('td')).map(x => x.innerHTML)]);
 
             return trs;
         })
@@ -31,10 +38,17 @@ async function crawl() {
         // Process data
         const json = JSON.stringify(data.map( row => {
             return {
-                financialInstrument: row[0],
+                financialInstrument: row[0].match(/[A-Z]+-[A-Z]+/g),
+                images: row[0].match(/\/images\/tokens\/[0-9A-Za-z]+\.png/gm),
+                labels: {
+                    svg: row[1].match(/<svg.+?<\/svg>/g),
+                    text: row[1].match(/Core|Boosted|Stable-LP/gm)
+                },
                 earned: "Earned",
                 amount: 0,
-                apr: row[2].match(/\d+\.\d+%|\d+\,\d+%|\d+%/g),
+                apr: row[3].match(/\d+\.\d+%|\d+\,\d+%|\d+%/g),
+                liquidity: row[4].match(/\$[\d\.]+/gm),
+                multiplier: row[5].match(/[\d\.]+x/gm),
                 details: "Details"
             }
         }))
@@ -54,6 +68,7 @@ async function crawl() {
     } catch (error) {
         console.log(error)
     }
+    console.timeEnd("crawling time")
 }
 
 crawl()
