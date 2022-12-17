@@ -55,14 +55,14 @@ export function UntilTheDrawCD(props) {
           <h2 className={"utd-cd-item utd-cd-time" + props.utd_cd_color_items}>
             m
           </h2>
-          <h2
+          {/* <h2
             className={"utd-cd-item utd-cd-number" + props.utd_cd_color_items}
           >
             {secondi.toString().padStart(2, "0")}
-          </h2>
-          <h2 className={"utd-cd-item utd-cd-time" + props.utd_cd_color_items}>
+          </h2> */}
+          {/* <h2 className={"utd-cd-item utd-cd-time" + props.utd_cd_color_items}>
             s
-          </h2>
+          </h2> */}
         </div>
       </div>
       <div className="utd-cd-text">until the next draw</div>
