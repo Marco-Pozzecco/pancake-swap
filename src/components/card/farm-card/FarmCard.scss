@@ -3,4 +3,105 @@
   background-color: white;
   max-width: 350px;
   padding: 20px;
+  border-radius: 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.token1 {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  top: -30px;
+}
+
+.token2 {
+  position: relative;
+  left: -20px;
+  width: 55px;
+  height: 55px;
+}
+
+.card-entry {
+  padding: 4px;
+}
+
+.card-fi-title {
+  font-size: 9px;
+}
+
+.card-body-apr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-body-earn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-body-earned-cake {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-fi-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  border-bottom: 1px solid black;
+}
+.earn-paragraph {
+  margin-bottom: 8px;
+}
+.cake-earned-paragraph {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.earn-value {
+  font-weight: 900;
+}
+.yield-booster-paragraph {
+  font-size: 12px;
+}
+.cake-earned-value {
+  font-weight: 900;
+  margin-right: 110px;
+}
+.yield-booster-content {
+  font-weight: 900;
+  font-size: 18px;
+}
+.yield-booster-action {
+  font-size: 12px;
+}
+
+.upto2icon {
+  fill: black;
+}
+
+.HarvestButton {
+  margin-top: 12px;
+  height: 42px;
+  border: none;
+  background-color: gray;
+}
+
+.card-fi-stack-paragraph {
+  font-size: 12px;
+}
+
+.farmsconnectwallet {
+  padding: 16px !important;
+  font-size: 15px !important;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: gray;
 }

@@ -36,7 +36,7 @@ async function crawl() {
         })
 
         // Process data
-        const json = JSON.stringify(data.map( row => {
+        const json = JSON.stringify(data.map(row => {
             return {
                 financialInstrument: row[0].match(/[A-Z]+-[A-Z]+/g),
                 images: row[0].match(/\/images\/tokens\/[0-9A-Za-z]+\.png/gm),
@@ -52,7 +52,7 @@ async function crawl() {
                 details: "Details"
             }
         }))
-        
+
         // Writing to file
         fs.writeFile("src/_data/scraper/scraperResult.json", json, (err) => {
             if (err) {

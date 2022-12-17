@@ -167,9 +167,10 @@
   border: 2px solid var(--text-accent);
 }
 .farmCardsArea {
+  display: flex;
+  justify-content: center;
   width: 100%;
   background-color: var(--background-primary);
-  height: 100vh;
 }
 
 @media screen and (max-width: 1240px) {
