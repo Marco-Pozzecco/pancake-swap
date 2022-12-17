@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../../../buttons/Button";
 import "./_finished-round-card-lottery-ah.scss";
 import { FaAngleDown } from "react-icons/fa";
 import { RoundsInput } from "../../../inpunts/round-input-with-counter/RoundsInput";
+import MatchesDatas from "../../../datas/matches-datas/MatchesDatas";
 
-export function FinishedRoundCardLotteryAH() {
+export function FinishedRoundCardLotteryAH(props) {
+  const [showDetails, setShowDetails] = useState(false);
+  // ------------------------------------------------------
+  const handleClick = () => {
+    setShowDetails(!showDetails);
+  };
   return (
     <div className="frcl-ah-main-container">
       <div className="frcl-ah-sub-container">
@@ -99,7 +105,6 @@ export function FinishedRoundCardLotteryAH() {
                   ></path>
                 </svg>
                 {/* -- -- -- -- -- --  */}
-                {/* // QUI MANCA DI AGGIUNGERE I DIV CON I NUMERI CHE CI SONO ALL INTENRO DELLE PALLE COLORATE */}
                 <div className="frcl-ahb-number-box frcl-ahb-nb-b">9</div>
               </div>
               {/* -------------------------------- */}
@@ -260,8 +265,12 @@ export function FinishedRoundCardLotteryAH() {
         {/* --- FOOTER / DATI --- */}
         <div className="frcl-ah-footer-container">
           <div className="frcl-ah-footer-sub-container">
-            {/* -- -- -- -- DATA -- -- -- --  */}
-            <div className="frcl-ahf-data-container">
+            {/* --X -- -- -- DATA -- -- -- X--  */}
+            <div
+              className={`frcl-ahf-data-container  ${showDetails && "active"}`}
+              style={{ display: showDetails ? "block" : "none" }}
+            >
+              {/* ------------------------------------------ */}
               <div className="frcl-ahf-data-sub-container">
                 {/* --- Titles --- */}
                 <div className="frcl-ahf-data-prize-pot-wrapper">
@@ -281,12 +290,69 @@ export function FinishedRoundCardLotteryAH() {
                     Match the winning number in the same order to share prizes.
                   </div>
                   {/* --   --   --   --    */}
-                  <div className="frcl-ahf-data-component-wrapper">DATA</div>
+                  <div className="frcl-ahf-data-component-wrapper">
+                    <MatchesDatas
+                      matches_data_title={"Match first 1"}
+                      matches_data_amount_up={"~$7,197"}
+                      matches_data_cakes_number={"2,194 CAKE"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"1.60 CAKE each"}
+                      matches_winning_tickets={"449 Winning Tickets"}
+                    />
+                    <MatchesDatas
+                      matches_data_title={"Match first 3"}
+                      matches_data_amount_up={"~$8,337"}
+                      matches_data_cakes_number={"894 CAKE"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"6.85 CAKE each"}
+                      matches_winning_tickets={"965 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Match first 1"}
+                      matches_data_amount_up={"~$17,197"}
+                      matches_data_cakes_number={"6194 CAKE"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"3.20 CAKE each"}
+                      matches_winning_tickets={"429 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Match first 1"}
+                      matches_data_amount_up={"~$3,137"}
+                      matches_data_cakes_number={"2,194 CAKE"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"456.78 CAKE each"}
+                      matches_winning_tickets={"1 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Match first 2"}
+                      matches_data_amount_up={"~$1,974"}
+                      matches_data_cakes_number={"2,194 CAKE"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"81.87 CAKE each"}
+                      matches_winning_tickets={"35 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Match first 3"}
+                      matches_data_amount_up={"~$4,169"}
+                      matches_data_cakes_number={"919 CAKE"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"13.93 CAKE each"}
+                      matches_winning_tickets={"2 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Burn"}
+                      // matches_data_amount_up={"~$7,197"}
+                      matches_data_cakes_number={"2,194 CAKE"}
+                      matches_data_amount_down={"~$7,197"}
+                      // matches_data_cake_each={"60 CAKE each"}
+                      // matches_winning_tickets={"4 Winning Tickets"}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
             {/* -- -- -- -- BUTTON -- -- -- --  */}
-            <div className="frcl-ahf-button-container">
+            <div className="frcl-ahf-button-container" onClick={handleClick}>
               <Button
                 text="Details"
                 type={"noBorderButton"}

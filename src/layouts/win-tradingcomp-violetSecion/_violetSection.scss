@@ -1,8 +1,15 @@
 @import "../../abstracts/mixins";
 @import "../../abstracts/colors";
 @import "../../abstracts/animations";
+@import "../../abstracts/theme";
+@import "../../abstracts/typography";
+@import "../../abstracts/root";
+@import "../../abstracts/utility";
+@import "../../abstracts/variables";
+
 
 .violetSectionWrapper {
+    // importare @flex mixin
     display: flex;
     width: 100%;
     // height: 500px;

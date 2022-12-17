@@ -1,3 +1,11 @@
+@import "../../abstracts/mixins";
+@import "../../abstracts/colors";
+@import "../../abstracts/animations";
+@import "../../abstracts/theme";
+@import "../../abstracts/typography";
+@import "../../abstracts/root";
+@import "../../abstracts/utility";
+@import "../../abstracts/variables";
 @import "../../abstracts/animations";
 @import "../../abstracts/mixins";
 
@@ -52,7 +60,6 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        border: 3px solid chartreuse;
 
         .tbw-title-a1 {
           font-size: 24px;
@@ -61,6 +68,9 @@
           color: rgb(255, 255, 255);
           font-weight: 600;
           line-height: 1.5;
+          text-shadow: -1.5px 1px 0px rgb(147, 108, 247),
+            1.5px -1px 0px rgb(147, 108, 247),
+            -1.5px -1px 0px rgb(147, 108, 247), 1.5px 1px 0px rgb(147, 108, 247);
         }
         .tbw-title-a2 {
           font-size: 32px;
@@ -69,17 +79,29 @@
           color: rgb(147, 108, 247);
           font-weight: 600;
           line-height: 1.5;
+          text-shadow: -1.5px 1px 0px rgb(255, 255, 255),
+            1.5px -1px 0px rgb(255, 255, 255),
+            -1.5px -1px 0px rgb(255, 255, 255), 1.5px 1px 0px rgb(255, 255, 255);
         }
       }
 
       .tbw-title-amount {
-        border: 3px solid chartreuse;
-
         font-size: 64px;
         color: rgb(154, 106, 255);
         padding: 0px 2px;
         font-weight: 600;
         line-height: 1.5;
+        // ----------------------------
+        font-weight: 600;
+        line-height: 1.5;
+        text-align: center;
+        text-shadow: -3px 3px 0px white, 3px -3px 0px white, -3px -3px 0px white,
+          3px 3px 0px white;
+        // text-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px,
+        //   rgba(14, 14, 44, 0.1) 0px 4px 12px;
+        -webkit-text-stroke: 8px transparent;
+        vertical-align: baseline;
+        -webkit-font-smoothing: antialiased;
       }
 
       .tbw-title-b {
@@ -93,7 +115,6 @@
 
       //Wrapper BIGLIETTO---------------
       .tbw-ticket {
-        border: 3px solid chartreuse;
         width: 100%;
         height: 25%;
         display: flex;
@@ -170,7 +191,6 @@
     z-index: 0;
 
     & img {
-      border: 2px solid chartreuse;
       position: absolute;
     }
 

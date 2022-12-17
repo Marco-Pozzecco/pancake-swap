@@ -130,11 +130,9 @@
       .gytc-fsc-datas-container {
         padding: 24px;
         background-color: rgb(8, 6, 11);
-        color: yellow;
-        display: none; // TOGLIERE QUESTO PER FAR APPARIRE I DATI----------------------------------------------
+        // display: none; // TOGLIERE QUESTO PER FAR APPARIRE I DATI----------------------------------------------
 
         .gytc-fsc-datas-description-box {
-          background-color: #f4eeff1f;
           width: 100%;
           color: #f4eeff;
           font-weight: 400;
@@ -148,11 +146,11 @@
         .gytc-datas-container {
           width: 100%;
           height: auto;
-          background-color: #f4eeff15;
           display: grid;
           grid-template-columns: 1fr 1fr 1fr 1fr;
           grid-template-rows: auto;
           flex-wrap: wrap; //  Questo necessita essendo gia grid??? controllare quando inserisco i componenti
+          row-gap: 16px;
         }
       }
       .gytc-fsc-button {

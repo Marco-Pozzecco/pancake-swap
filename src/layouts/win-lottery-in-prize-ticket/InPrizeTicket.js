@@ -16,7 +16,7 @@ export function InPrizeTicket(props) {
 
         <div className="ipt-ticket-container-wrapper">
           <MovingTicket
-            moving_ticket_title={"Stake to WIN!"}
+            moving_ticket_title={"Buy Tickets"}
             moving_ticket_svg_ticket_color={
               <svg
                 xmlns="http://www.w3.org/2000/svg"

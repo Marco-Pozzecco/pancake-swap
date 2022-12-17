@@ -1,0 +1,17 @@
+giuseppe frisella16:47
+import {useState} from 'react'
+export default function MyApp() {
+  const [show, setShow] = useState(false)
+
+  const invert = () => {
+    setShow(!show)
+  }
+  
+  return (
+    <div style={{display: "flex", justifyContent: "space-between"}}>
+      {show && <div onClick={invert}>Welcome to my app</div>}
+      {!show && <div onClick={invert}> Who are you</div>}
+      
+    </div>
+  );
+}

@@ -26,15 +26,16 @@
       .utd-cd-item {
         font-weight: 600;
         line-height: 1.1;
-        // background: linear-gradient(
-        //   rgb(128, 81, 214) 0%,
-        //   rgb(73, 34, 134) 100%
-        // );
-        background-color: chartreuse;
+        background: linear-gradient(
+          rgb(128, 81, 214) 0%,
+          rgb(73, 34, 134) 100%
+        );
+        // background-color: chartreuse;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         -text-fill-color: transparent;
+        border: 3px solid chartreuse; //--------------------------------------------------
       }
 
       .utd-cd-number {

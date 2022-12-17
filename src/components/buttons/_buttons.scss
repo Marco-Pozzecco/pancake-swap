@@ -12,6 +12,14 @@
   &:hover {
     opacity: 0.65;
   }
+  font-size: 16px;
+  padding: 0 24px;
+  border-radius: 16px;
+  line-height: 1;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.65;
+  }
 }
 
 .fullButton {
@@ -34,7 +42,7 @@
   text-decoration: none;
   @include flex();
   background-color: $main-buttons-background-color; /* rgb(31, 199, 212)*/
-  color: var(--background-primary); /* white*/
+  color: $main-buttons-color; /* white*/
   &:active {
     transform: translateY(2px);
   }
@@ -284,7 +292,7 @@
   }
 }
 
-/* --Bottone rotondo semi-trasparente per convertire----- */
+/* --Bottone rotondo semi-trasparente per convertire---- */
 
 .button-converter-smt {
   //*SMT = SemiTransparenT
@@ -701,3 +709,5 @@ che appare nella sezione che esce dopo che si clicca su una sezione della grigli
   height: 48px;
   width: 240px;
 }
+
+//
