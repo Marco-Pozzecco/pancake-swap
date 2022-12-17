@@ -4,6 +4,7 @@ import { Button } from "../../components/buttons/Button";
 import { FaArrowRight } from "react-icons/fa";
 import { MainBannerCounterLottery } from "./MainBannerCounterLottery";
 import "../../abstracts/_theme.scss";
+import { CDR } from "../../components/count-down/ref-cd-hmb/CDR";
 
 // PRIMO BANNER - BANNER-A
 export function BannerA() {
@@ -47,7 +48,7 @@ export function BannerA() {
 
 // SECONDO BANNER - BANNER-B  ---> woth Counter
 export function BannerB() {
-  let eventDate = "December, 31, 2022";
+  // let eventDate = "December, 31, 2022";
 
   return (
     <div className="mbssc banner-b" id="banner2">
@@ -60,7 +61,9 @@ export function BannerB() {
 
         {/* <!--- -- -- -- -- Titles Content - COUNTER Lottery-- -- -- -- -- ---- -- -- -- --> */}
 
-        <MainBannerCounterLottery deadline={eventDate} />
+        {/* <MainBannerCounterLottery deadline={eventDate} /> */}
+
+        <CDR />
 
         <Button
           text="Play Now"

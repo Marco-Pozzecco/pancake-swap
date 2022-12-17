@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./_home-main-banner.scss";
 
 export function MainBannerCounterLottery({ deadline }) {
-  const [days, setDays] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
+  const [days, setDays] = useState([]);
+  const [hours, setHours] = useState([]);
+  const [minutes, setMinutes] = useState([]);
+  const [seconds, setSeconds] = useState([]);
 
   const leading0 = (num) => {
     return num < 10 ? "0" + num : num;
@@ -30,7 +30,7 @@ export function MainBannerCounterLottery({ deadline }) {
     setInterval(() => getTimeUntil(deadline), 1000);
 
     return () => getTimeUntil(deadline);
-  }, [deadline]);
+  }, [deadline, days, hours, minutes, seconds]);
 
   return (
     //   COUNTER Lottery

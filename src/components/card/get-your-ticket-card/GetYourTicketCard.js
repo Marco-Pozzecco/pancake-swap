@@ -3,6 +3,7 @@ import "./_get-your-ticket-card.scss";
 import { Button } from "../../buttons/Button";
 import "../../buttons/_buttons.scss";
 import { FaAngleDown } from "react-icons/fa";
+import MatchesDatas from "../../datas/matches-datas/MatchesDatas";
 
 export function GetYourTicketCard() {
   const [showDetails, setShowDetails] = useState(false);
@@ -60,11 +61,6 @@ export function GetYourTicketCard() {
 
           {/* -------- */}
           {/* -------- */}
-          {/* -------- */}
-          {/* -------- */}
-          {/* -------- */}
-          {/* -------- */}
-          {/* -------- */}
 
           <div
             className={`hidden-section-body-row ${showDetails && "active"}`}
@@ -85,17 +81,62 @@ export function GetYourTicketCard() {
               Current prizes up for grabs:
             </div>
             <div className="gytc-datas-container">
-              <div>DATA</div>
-              <div>DATA</div>
-              <div>DATA</div>
-              <div>DATA</div>
-              <div>DATA</div>
-              <div>DATA</div>
-              <div>DATA</div>
-              <div>DATA</div>
-              <div>DATA</div>
-              <div>DATA</div>
-              <div>DATA</div>
+              <MatchesDatas
+                matches_data_title={"Match first 1"}
+                // matches_data_amount_up={"~$7,197"}
+                matches_data_cakes_number={"2,194 CAKE"}
+                matches_data_amount_down={"~$7,197"}
+                matches_data_cake_each={"1.60 CAKE each"}
+                matches_winning_tickets={"449 Winning Tickets"}
+              />
+              <MatchesDatas
+                matches_data_title={"Match first 3"}
+                // matches_data_amount_up={"~$8,337"}
+                matches_data_cakes_number={"894 CAKE"}
+                matches_data_amount_down={"~$7,197"}
+                matches_data_cake_each={"6.85 CAKE each"}
+                matches_winning_tickets={"965 Winning Tickets"}
+              />
+              <MatchesDatas
+                matches_data_title={"Match first 1"}
+                // matches_data_amount_up={"~$17,197"}
+                matches_data_cakes_number={"6194 CAKE"}
+                matches_data_amount_down={"~$7,197"}
+                matches_data_cake_each={"3.20 CAKE each"}
+                matches_winning_tickets={"429 Winning Tickets"}
+              />
+              <MatchesDatas
+                matches_data_title={"Match first 1"}
+                // matches_data_amount_up={"~$3,137"}
+                matches_data_cakes_number={"2,194 CAKE"}
+                matches_data_amount_down={"~$7,197"}
+                matches_data_cake_each={"456.78 CAKE each"}
+                matches_winning_tickets={"1 Winning Tickets"}
+              />
+              <MatchesDatas
+                matches_data_title={"Match first 2"}
+                // matches_data_amount_up={"~$1,974"}
+                matches_data_cakes_number={"2,194 CAKE"}
+                matches_data_amount_down={"~$7,197"}
+                matches_data_cake_each={"81.87 CAKE each"}
+                matches_winning_tickets={"35 Winning Tickets"}
+              />
+              <MatchesDatas
+                matches_data_title={"Match first 3"}
+                // matches_data_amount_up={"~$4,169"}
+                matches_data_cakes_number={"919 CAKE"}
+                matches_data_amount_down={"~$7,197"}
+                matches_data_cake_each={"13.93 CAKE each"}
+                matches_winning_tickets={"2 Winning Tickets"}
+              />
+              <MatchesDatas
+                matches_data_title={"Burn"}
+                // matches_data_amount_up={"~$7,197"}
+                matches_data_cakes_number={"2,194 CAKE"}
+                matches_data_amount_down={"~$7,197"}
+                // matches_data_cake_each={"4406 CAKE each"}
+                // matches_winning_tickets={"4 Winning Tickets"}
+              />
             </div>
           </div>
 

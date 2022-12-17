@@ -3,8 +3,9 @@ import { Button } from "../../../buttons/Button";
 import "./_finished-round-card-lottery-ah.scss";
 import { FaAngleDown } from "react-icons/fa";
 import { RoundsInput } from "../../../inpunts/round-input-with-counter/RoundsInput";
+import MatchesDatas from "../../../datas/matches-datas/MatchesDatas";
 
-export function FinishedRoundCardLotteryAH() {
+export function FinishedRoundCardLotteryAH(props) {
   const [showDetails, setShowDetails] = useState(false);
   // ------------------------------------------------------
   const handleClick = () => {
@@ -104,7 +105,6 @@ export function FinishedRoundCardLotteryAH() {
                   ></path>
                 </svg>
                 {/* -- -- -- -- -- --  */}
-                {/* // QUI MANCA DI AGGIUNGERE I DIV CON I NUMERI CHE CI SONO ALL INTENRO DELLE PALLE COLORATE */}
                 <div className="frcl-ahb-number-box frcl-ahb-nb-b">9</div>
               </div>
               {/* -------------------------------- */}
@@ -290,7 +290,64 @@ export function FinishedRoundCardLotteryAH() {
                     Match the winning number in the same order to share prizes.
                   </div>
                   {/* --   --   --   --    */}
-                  <div className="frcl-ahf-data-component-wrapper">DATA</div>
+                  <div className="frcl-ahf-data-component-wrapper">
+                    <MatchesDatas
+                      matches_data_title={"Match first 1"}
+                      matches_data_amount_up={"~$7,197"}
+                      matches_data_cakes_number={"2,194 CAKE"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"1.60 CAKE each"}
+                      matches_winning_tickets={"449 Winning Tickets"}
+                    />
+                    <MatchesDatas
+                      matches_data_title={"Match first 3"}
+                      matches_data_amount_up={"~$8,337"}
+                      matches_data_cakes_number={"894 CAKE"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"6.85 CAKE each"}
+                      matches_winning_tickets={"965 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Match first 1"}
+                      matches_data_amount_up={"~$17,197"}
+                      matches_data_cakes_number={"6194 CAKE"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"3.20 CAKE each"}
+                      matches_winning_tickets={"429 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Match first 1"}
+                      matches_data_amount_up={"~$3,137"}
+                      matches_data_cakes_number={"2,194 CAKE"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"456.78 CAKE each"}
+                      matches_winning_tickets={"1 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Match first 2"}
+                      matches_data_amount_up={"~$1,974"}
+                      matches_data_cakes_number={"2,194 CAKE"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"81.87 CAKE each"}
+                      matches_winning_tickets={"35 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Match first 3"}
+                      matches_data_amount_up={"~$4,169"}
+                      matches_data_cakes_number={"919 CAKE"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"13.93 CAKE each"}
+                      matches_winning_tickets={"2 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Burn"}
+                      // matches_data_amount_up={"~$7,197"}
+                      matches_data_cakes_number={"2,194 CAKE"}
+                      matches_data_amount_down={"~$7,197"}
+                      // matches_data_cake_each={"60 CAKE each"}
+                      // matches_winning_tickets={"4 Winning Tickets"}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
