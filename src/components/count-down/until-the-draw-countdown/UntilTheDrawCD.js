@@ -1,49 +1,68 @@
 import React, { useEffect, useState } from "react";
 import "./_until-the-draw-cd.scss";
+import moment from "moment";
 
-export function UntilTheDrawCD({ deadline }) {
-  const [days, setDays] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
-
-  const leading0 = (num) => {
-    return num < 10 ? "0" + num : num;
-  };
-
-  const getTimeUntil = (deadline) => {
-    const time = Date.parse(deadline) - Date.parse(new Date());
-    if (time < 0) {
-      setDays(0);
-      setHours(0);
-      setMinutes(0);
-      setSeconds(0);
-    } else {
-      setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
-      setHours(Math.floor(time / (1000 * 60 * 60)) % 24);
-      setMinutes(Math.floor(time / 1000 / 60) % 60);
-      setSeconds(Math.floor(time / 1000) % 60);
-    }
-  };
+export function UntilTheDrawCD(props) {
+  const [secondi, setSecondi] = useState([]);
+  const [minuti, setMinuti] = useState([]);
+  const [ore, setOre] = useState([]);
+  const [giorni, setGiorni] = useState([]);
 
   useEffect(() => {
-    setInterval(() => getTimeUntil(deadline), 1000);
+    window.setInterval(() => {
+      const date = moment("31/12/2022 14:42:00", "DD/MM/YYYY HH:mm:ss");
+      const diff = date.diff(moment(), "seconds");
 
-    return () => getTimeUntil(deadline);
-  }, [deadline]);
+      const days = Math.floor(diff / 24 / 60 / 60);
+
+      const hours = Math.floor((diff / (60 * 60)) % 24);
+
+      const minutes = Math.floor((diff / 60) % 60);
+
+      const seconds = Math.floor(diff % 60);
+      // -------------------------------------------------------------------------------------------
+
+      setSecondi(seconds);
+      setMinuti(minutes);
+      setGiorni(days);
+      setOre(hours);
+    });
+  });
 
   return (
     <div className="utd-cd-main-container">
       <div className="utd-cd-box">
         <div className="utd-counter">
-          <h2 className="utd-cd-item utd-cd-number">{leading0(days)}</h2>
-          <h2 className="utd-cd-item utd-cd-time">d</h2>
-          <h2 className="utd-cd-item utd-cd-number">{leading0(hours)}</h2>
-          <h2 className="utd-cd-item utd-cd-time">h</h2>
-          <h2 className="utd-cd-item utd-cd-number">{leading0(minutes)}</h2>
-          <h2 className="utd-cd-item utd-cd-time">m</h2>
-          {/* <h2 className="utd-cd-item utd-cd-number">{leading0(seconds)}</h2>
-          <h2 className="utd-cd-item utd-cd-time">s</h2> */}
+          <h2 className="utd-cd-item utd-cd-number">
+            {giorni.toString().padStart(2, "0")}
+          </h2>
+          <h2 className={"utd-cd-item utd-cd-time" + props.utd_cd_color_items}>
+            d
+          </h2>
+          <h2
+            className={"utd-cd-item utd-cd-number" + props.utd_cd_color_items}
+          >
+            {ore.toString().padStart(2, "0")}
+          </h2>
+          <h2 className={"utd-cd-item utd-cd-time" + props.utd_cd_color_items}>
+            h
+          </h2>
+          <h2
+            className={"utd-cd-item utd-cd-number" + props.utd_cd_color_items}
+          >
+            {minuti.toString().padStart(2, "0")}
+          </h2>
+          <h2 className={"utd-cd-item utd-cd-time" + props.utd_cd_color_items}>
+            m
+          </h2>
+          <h2
+            className={"utd-cd-item utd-cd-number" + props.utd_cd_color_items}
+          >
+            {secondi.toString().padStart(2, "0")}
+          </h2>
+          <h2 className={"utd-cd-item utd-cd-time" + props.utd_cd_color_items}>
+            s
+          </h2>
         </div>
       </div>
       <div className="utd-cd-text">until the next draw</div>

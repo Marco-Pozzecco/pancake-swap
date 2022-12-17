@@ -1,0 +1,44 @@
+.matches-datas-main-container {
+  width: 100%;
+  height: auto;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .msds-data-main-title {
+    color: #9a6aff;
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+
+  .msds-data-amount {
+    color: #b8add2;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+
+  .msds-data-cakes {
+    color: #f4eeff;
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 20px;
+  }
+
+  .msds-data-cake-each {
+    color: #b8add2;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+
+  .msds-data-winning-tickets {
+    color: #b8add2;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+}
