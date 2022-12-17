@@ -1,3 +1,9 @@
+@import "../../abstracts/animations";
+@import "../../abstracts/mixins";
+
+@include float(-10px, "NE");
+// @include float(-10px, "NE");
+
 .tbw-main-container {
   width: 100%;
   height: auto;
@@ -173,6 +179,8 @@
       left: 20%;
       width: 92px;
       height: 48px;
+      // -------------
+      @include float-anim(4s, "NE");
     }
 
     & :nth-child(2) {
@@ -180,6 +188,8 @@
       left: -1%;
       width: 135px;
       height: 85px;
+      // -------------
+      @include float-anim(5s, "NE");
     }
 
     & :nth-child(3) {
@@ -187,6 +197,8 @@
       left: 3%;
       width: 232px;
       height: 106px;
+      // -------------
+      @include float-anim(6s, "NE");
     }
 
     & :nth-child(4) {
@@ -194,6 +206,8 @@
       left: 16px;
       width: 248px;
       height: 178px;
+      // -------------
+      @include float-anim(5s, "NE");
     }
 
     & :nth-child(5) {
@@ -201,6 +215,8 @@
       right: 4%;
       width: 151px;
       height: 43px;
+      // -------------
+      @include float-anim(3s, "NE");
     }
 
     & :nth-child(6) {
@@ -208,6 +224,8 @@
       right: 3%;
       width: 160px;
       height: 89px;
+      // -------------
+      @include float-anim(5s, "NE");
     }
 
     & :nth-child(7) {
@@ -215,6 +233,8 @@
       right: -1%;
       width: 156px;
       height: 205px;
+      // -------------
+      @include float-anim(5s, "NE");
     }
   }
 }
