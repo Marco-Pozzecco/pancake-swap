@@ -34,7 +34,7 @@
   text-decoration: none;
   @include flex();
   background-color: $main-buttons-background-color; /* rgb(31, 199, 212)*/
-  color: var(--background-primary); /* white*/
+  color: $main-buttons-color; /* white*/
   &:active {
     transform: translateY(2px);
   }
@@ -284,7 +284,7 @@
   }
 }
 
-/* --Bottone rotondo semi-trasparente per convertire----- */
+/* --Bottone rotondo semi-trasparente per convertire---- */
 
 .button-converter-smt {
   //*SMT = SemiTransparenT
