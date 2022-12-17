@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../../../buttons/Button";
 import "./_finished-round-card-lottery-ah.scss";
 import { FaAngleDown } from "react-icons/fa";
 import { RoundsInput } from "../../../inpunts/round-input-with-counter/RoundsInput";
 
 export function FinishedRoundCardLotteryAH() {
+  const [showDetails, setShowDetails] = useState(false);
+  // ------------------------------------------------------
+  const handleClick = () => {
+    setShowDetails(!showDetails);
+  };
   return (
     <div className="frcl-ah-main-container">
       <div className="frcl-ah-sub-container">
@@ -260,8 +265,12 @@ export function FinishedRoundCardLotteryAH() {
         {/* --- FOOTER / DATI --- */}
         <div className="frcl-ah-footer-container">
           <div className="frcl-ah-footer-sub-container">
-            {/* -- -- -- -- DATA -- -- -- --  */}
-            <div className="frcl-ahf-data-container">
+            {/* --X -- -- -- DATA -- -- -- X--  */}
+            <div
+              className={`frcl-ahf-data-container  ${showDetails && "active"}`}
+              style={{ display: showDetails ? "block" : "none" }}
+            >
+              {/* ------------------------------------------ */}
               <div className="frcl-ahf-data-sub-container">
                 {/* --- Titles --- */}
                 <div className="frcl-ahf-data-prize-pot-wrapper">
@@ -286,7 +295,7 @@ export function FinishedRoundCardLotteryAH() {
               </div>
             </div>
             {/* -- -- -- -- BUTTON -- -- -- --  */}
-            <div className="frcl-ahf-button-container">
+            <div className="frcl-ahf-button-container" onClick={handleClick}>
               <Button
                 text="Details"
                 type={"noBorderButton"}

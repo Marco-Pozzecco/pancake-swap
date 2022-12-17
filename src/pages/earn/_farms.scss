@@ -1,0 +1,243 @@
+@import "../../abstracts/theme";
+
+.FarmsPageTop {
+  display: flex;
+  width: 100%;
+  background-color: var(--gradient-bubblegum);
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10%;
+}
+
+.FarmsContainer1 {
+  display: flex;
+  flex-direction: column;
+  gap: 8%;
+  margin: 8%;
+  margin-top: 2%;
+}
+
+.FarmsTitle {
+  font-size: 3.4rem;
+  font-weight: 900;
+  color: var(--accent-secondary);
+}
+
+.FarmsParagraph {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+.FarmsAuction {
+  display: flex;
+  font-size: 1.1rem;
+  color: var(--text-accent-alt);
+}
+
+#farrow {
+  fill: var(--text-accent-alt);
+  font-weight: 900;
+}
+
+.FarmssubContainer {
+  display: flex;
+}
+
+.FarmsImg1 {
+  position: relative;
+  top: 3.4rem;
+  left: 5.6rem;
+  height: 70%;
+}
+
+.FarmsContainer2 {
+  margin: 8%;
+  display: flex;
+  width: 50%;
+  background-color: var(--colors-backgroundAlt);
+  border-radius: 15px;
+  padding: 3.8%;
+}
+
+.FarmsSubcontainer1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.FarmsSubcontainer2 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--text-muted);
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+.YieldTitle {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+#fiumrocket {
+  fill: var(--text-primary);
+}
+
+#eh {
+  fill: var(--text-primary);
+}
+
+.YieldParagraph1 {
+  color: var(--text-muted);
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.YieldParagraph2 {
+  color: var(--text-muted);
+  font-weight: 100;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.FarmsConnectWallet {
+  border: none;
+  border-radius: 16px;
+  background-color: var(--text-muted);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--colors-invertedContrast);
+}
+
+.FarmsFilters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48%;
+  background-color: var(--background-primary);
+  padding: 18px 20px 15px 0px;
+}
+.FarmsSubFilters {
+  display: flex;
+  gap: 8px;
+  margin-top: 2.7%;
+}
+
+.FarmsCardView {
+  background: none;
+  border: none;
+  fill: gray;
+}
+
+.FarmsCardView:hover {
+  opacity: 0.8;
+}
+
+.FarmsTableView {
+  background: none;
+  border: none;
+  fill: gray;
+}
+
+.FarmsTableView:hover {
+  opacity: 0.8;
+}
+
+.FarmsSearch {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.FarmsInput {
+  font-weight: 500;
+  font-size: 16px;
+  padding-left: 18px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 11px;
+  width: 100%;
+  border: 2px solid var(--colors-disabled);
+  text-align: start;
+  background-color: var(--colors-disabled);
+  color: var(--text-muted);
+}
+
+.FarmsInput:focus {
+  outline-style: none;
+  border: 2px solid var(--text-accent);
+}
+.farmCardsArea {
+  width: 100%;
+  background-color: var(--background-primary);
+  height: 100vh;
+}
+
+@media screen and (max-width: 1240px) {
+  .FarmsPageTop {
+    gap: 3%;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .FarmsContainer2 {
+    margin-top: -6%;
+    align-self: center;
+    margin-left: -10%;
+    width: 100%;
+  }
+  .FarmsImg1 {
+    left: 75%;
+    top: -75%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .FarmsContainer2 {
+    margin-top: -3%;
+  }
+  .FarmsImg1 {
+    left: 75%;
+    top: -65%;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .FarmsContainer2 {
+    margin-left: -15%;
+  }
+  .FarmsImg1 {
+    left: 75%;
+    top: -60%;
+  }
+  .FarmsParagraph {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .FarmsInput {
+    padding-left: 2px;
+  }
+  .FarmsSubFilters {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .FarmsContainer1 {
+    margin-left: -20%;
+  }
+  .FarmsContainer2 {
+    margin-left: -20%;
+  }
+  .FarmsImg1 {
+    left: 70%;
+    top: -60%;
+  }
+  .FarmsParagraph {
+    font-size: 14px;
+  }
+  .FarmsAuction {
+    font-size: 14px;
+  }
+}
