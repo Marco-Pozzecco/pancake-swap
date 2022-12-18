@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from "../../buttons/Button";
 import { ConnectWalletBtn } from "../../buttons/ConnectWalletBtn";
+import { Core } from "../../buttons/Core";
+
 import "./FarmCard.scss";
 
 // Props:
