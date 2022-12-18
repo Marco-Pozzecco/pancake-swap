@@ -14,7 +14,6 @@ export function Farms() {
 
   const [farmsCard, setFarmsCards] = useState(data);
 
-
   async function fcclickHandle() {
     setFillftc("gray");
     setFillfcc("#1fc7d4");
@@ -23,6 +22,12 @@ export function Farms() {
   async function ftclickHandle() {
     setFillfcc("gray");
     setFillftc("#1fc7d4");
+  }
+
+  function handleSearch (e) {
+    const farmsFilteredIdx = data.map(x => x.financialInstrument ? x.financialInstrument[0].split('-').map(y => y.toLowerCase().includes(e.target.value.toLowerCase())).some(x => x === true) : null);
+    
+    setFarmsCards([...data.filter((x, idx) => farmsFilteredIdx[idx])])
   }
 
   return (
@@ -126,10 +131,7 @@ export function Farms() {
             type="search"
             className="FarmsInput"
             placeholder="Search Farms"
-            onChange={(e) => {
-              const farmsFilteredIdx = FarmCard.map(x => x.financialInstrument ? x.financialInstrument[0].split('-').map(y => y.toLowerCase().includes(e.target.value.toLowerCase())).some(x => x === true) : null);
-              setFarmsCards([...FarmCard.filter((x, idx) => farmsFilteredIdx[idx])])
-            }}
+            onChange={handleSearch}
           // 
           />
         </div>
