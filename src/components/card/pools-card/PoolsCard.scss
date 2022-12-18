@@ -123,7 +123,7 @@
   color: var(--text-primary);
 }
 
-.farmsconnectwallet {
+.Poolsconnectwallet {
   padding: 16px !important;
   font-size: 15px !important;
   margin-top: 8px;
@@ -133,7 +133,7 @@
   color: var(--colors-invertedContrast);
   z-index: 0;
 }
-.farmCardsArea {
+.PoolCardsArea {
   position: relative;
   z-index: -2;
   .container {
@@ -237,7 +237,7 @@
   color: var(--status-success);
 }
 
-.DetailsFarm {
+.DetailsPool {
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -252,7 +252,7 @@
   color: var(--text-primary);
 }
 
-.LiquidityFarms {
+.LiquidityPools {
   display: flex;
   justify-content: space-between;
   color: var(--text-primary);
@@ -269,7 +269,7 @@
   padding-right: 16px;
 }
 
-.FarmsLink {
+.PoolsLink {
   color: var(--text-accent-alt);
   fill: var(--text-accent-alt);
 }
