@@ -15,15 +15,9 @@ export function DataCardGraph(props) {
             <div className="dcg-ib-title-a">{props.dg_main_title_a}</div>
             <div className="dcg-ib-title-b">{props.dg_main_title_b}</div>
           </div>
-          {/* -------------- */}
-          {/* -------------- */}
+
           {/* -----Datas container-------- */}
           <div className="dcg-ib-items">
-            {/* ------------------- */}
-            {/* ------------------- */}
-            {/* ------------------- */}
-            {/* ------------------- */}
-            {/* ------------------- */}
             {/* ----ITEM PROVA----- */}
 
             {props.dcg_data_name_prova ? (
@@ -44,12 +38,7 @@ export function DataCardGraph(props) {
             ) : (
               <div></div>
             )}
-            {/* ------------------- */}
-            {/* ------------------- */}
-            {/* ------------------- */}
-            {/* ------------------- */}
-            {/* ------------------- */}
-            {}
+
             {/* ---ITEM 1------------ */}
             {props.dcg_data_name_1 ? (
               <div className="dcgib-item">
@@ -66,7 +55,6 @@ export function DataCardGraph(props) {
             ) : (
               <div></div>
             )}
-            {/* ---------------- */}
             {/* ---ITEM 2------------ */}
             {props.dcg_data_name_2 ? (
               <div className="dcgib-item">
@@ -169,8 +157,3 @@ export function DataCardGraph(props) {
     </div>
   );
 }
-
-// {
-//   <div>nome</div> & <div>nome</div> ?
-//     <div>pallino</div> & <div>nome</div> & <div>cifra</div> : <div></div> ;
-// }

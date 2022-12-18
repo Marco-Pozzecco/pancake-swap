@@ -39,7 +39,6 @@
         align-items: center;
 
         .frcl-ahhs-a-1 {
-          border: 2px solid chartreuse;
           font-size: 20px;
           font-weight: 600;
         }
@@ -102,7 +101,6 @@
             width: 70.6px;
             height: 70.6px;
             display: flex;
-            // -webkit-box-align: center;
             align-items: center;
             -webkit-box-pack: center;
             justify-content: center;
@@ -112,8 +110,6 @@
               height: 100%;
               width: 100%;
             }
-
-            // QUI MANCA DI AGGIUNGERE LE CLASSI E INSERIRE I DIV CON I NUMERI CHE CI SONO ALL INTENRO DELLE PALLE COLORATE
 
             .frcl-ahb-number-box {
               position: absolute;
@@ -165,106 +161,99 @@
         align-items: center;
         background-color: #08060b;
 
-        //DATA  Main Container
-        .frcl-ahf-data-container {
+        .frcl-ah-footer-sc-all-datas {
           width: 100%;
           height: 100%;
-          padding: 24px;
-          display: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
-          .frcl-ahf-data-sub-container {
+          .frcl-ahf-sc-main-box-datas {
             width: 100%;
-            height: auto;
+            height: 100%;
             display: flex;
-            justify-content: flex-start;
-            align-items: center;
+            padding: 24px;
+          }
+          .frcl-ahf-sc-main-datas-title-box {
+            height: auto;
+            width: 30%;
+            margin-right: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
 
-            //Data Component Titles
-            .frcl-ahf-data-prize-pot-wrapper {
-              width: auto;
-              height: auto;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-              align-items: flex-start;
-              margin: 0 24px 0 0;
-              background-color: red;
-
-              //Top Title
-              .frcl-ahf-data-prize-pot-a {
-                border: 2px solid rgb(0, 179, 255);
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-
-                .frcl-ahf-data-title {
-                  font-size: 20px;
-                  font-weight: 600;
-                  line-height: 1.1;
-                  color: #f4eeff;
-                }
-                .frcl-ahf-data-amount {
-                  font-size: 40px;
-                  color: #9a6aff;
-                  font-weight: 600;
-                  line-height: 1.1;
-                }
-                .frcl-ahf-data-subtitle {
-                  color: #b8add2;
-                  font-weight: 400;
-                  line-height: 1.5;
-                  font-size: 14px;
-                }
-              }
-
-              //BottomTitle
-              .frcl-ahf-data-prize-pot-b {
-                border: 2px solid rgb(0, 179, 255);
-
-                color: #f4eeff;
-                font-weight: 400;
-                line-height: 1.5;
-                font-size: 14px;
-                display: inline;
-              }
-            }
-
-            // ---------------------------
-
-            //Data Components Wrapper
-            .frcl-ahf-data-main-box {
+            .frcl-ahf-scd-title-box {
               width: 100%;
               height: auto;
               display: flex;
               flex-direction: column;
               justify-content: flex-start;
               align-items: flex-start;
+            }
 
-              //Descpripion
-              .frcl-ahf-data-description {
-                width: 100%;
+            .frcl-ahf-scdt-box-a {
+              font-size: 100%;
+              vertical-align: baseline;
+
+              & :nth-child(1) {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 1.1;
                 color: #f4eeff;
+              }
+
+              & :nth-child(2) {
+                color: #9a6aff;
+                font-size: 40px;
+                font-weight: 600;
+                line-height: 1.1;
+              }
+
+              & :nth-child(3) {
+                color: #b8add2;
                 font-weight: 400;
                 line-height: 1.5;
-                margin: 0 0 24px 0;
                 font-size: 14px;
               }
+            }
 
-              // CCOMPONENTS CONTAINER ---------------------------------------------------------------
-              .frcl-ahf-data-component-wrapper {
-                width: 100%;
-                height: auto;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                grid-template-rows: auto;
-                row-gap: 16px;
-              }
+            // - - - - - - - - - - -
+
+            .frcl-ahf-scdt-box-b {
+              color: #f4eeff;
+              font-weight: 400;
+              line-height: 1.5;
+              font-size: 14px;
+              display: inline;
+            }
+          }
+
+          .frcl-ahf-sc-main-datas-box {
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .frcl-ahf-sc-main-datas-description {
+              color: #f4eeff;
+              font-size: 14px;
+              margin: 0 0 24px;
+              width: 100%;
+            }
+
+            .frcl-ahf-sc-main-data-components-wrapper {
+              width: 100%;
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+              grid-template-rows: auto;
+              row-gap: 15px;
             }
           }
         }
-
-        // ---   ---   ---   ---   ---   ---- -
+        // ---   ---   ---   ---   ---   ---
 
         //BUTTON container
         .frcl-ahf-button-container {

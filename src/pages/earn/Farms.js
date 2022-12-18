@@ -2,14 +2,17 @@ import React, { useState } from "react";
 import Subnav from "../../components/subnav/Subnav";
 import "./_farms.scss";
 import boosterCardImage from "../../resources/boosterCardImage.webp";
-import { EarnCard } from "../../components/card/farm-card/farmCard";
-import FarmCard from "../../_data/scraper/scraperResult.json";
+
+import { FarmCard } from "../../components/card/farm-card/farmCard";
+import { FarmCardRow } from "../../components/card/farm-card/FarmCardRow";
+
+import data from "../../_data/scraper/scraperResult.json";
 
 export function Farms() {
   const [fillfcc, setFillfcc] = useState("gray");
   const [fillftc, setFillftc] = useState("gray");
 
-  const [farmsCard, setFarmsCards] = useState(FarmCard);
+  const [farmsCard, setFarmsCards] = useState(data);
 
 
   async function fcclickHandle() {
@@ -134,7 +137,7 @@ export function Farms() {
       <div className="farmCardsArea">
         <div className="container">
           {farmsCard.map((card, index) => (
-            <EarnCard data={card} idx={index} />
+            <FarmCard data={card} idx={index} />
           ))}
         </div>
 

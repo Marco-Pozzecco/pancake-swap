@@ -1,3 +1,5 @@
+@import url("../../../abstracts/_theme.scss");
+
 .earn-card {
   border: 1px solid violet;
   background-color: var(--colors-backgroundAlt);
@@ -281,5 +283,79 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+.earn-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+
+  padding: 20px 10px;
+
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+
+  &:first-child {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  .card-col-1 {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+
+    .token1 {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      top: -15px;
+      right: 5px;
+    }
+
+    .token2 {
+      position: relative;
+      left: -15px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .card-col-2 {
+    display: flex;
+    flex-direction: row;
+
+    .card-fi-details {
+      width: 250px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  .card-col-3 {
+  }
+
+  .card-col-4 {
+    .apr {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .chip {
+    .multiplier-title {
+    }
+
+    .multiplier-value {
+    }
   }
 }
