@@ -127,7 +127,7 @@ export function ToBeWon() {
           </div>
 
           <div className="tbw-countdown-box-wrap">
-            <UntilTheDrawCD deadline={deadlineDate} td_cd_color_items={""} />
+            <UntilTheDrawCD deadline={deadlineDate} color={"purple"} />
           </div>
         </div>
       </div>

@@ -32,24 +32,52 @@ export function UntilTheDrawCD(props) {
     <div className="utd-cd-main-container">
       <div className="utd-cd-box">
         <div className="utd-counter">
-          <h2 className="utd-cd-item utd-cd-number">
+          <h2
+            className={`utd-cd-item utd-cd-item-${props.color} utd-cd-number `}
+            style={{ fontSize: 40 }}
+          >
             {giorni.toString().padStart(2, "0")}
           </h2>
-          <h2 className="utd-cd-item utd-cd-time">d</h2>
-          <h2 className="utd-cd-item utd-cd-number">
+          <h2
+            className={`utd-cd-item utd-cd-item-${props.color} utd-cd-time`}
+            style={{ fontSize: 20 }}
+          >
+            d
+          </h2>
+          <h2
+            className={`utd-cd-item utd-cd-item-${props.color} utd-cd-number`}
+            style={{ fontSize: 40 }}
+          >
             {ore.toString().padStart(2, "0")}
           </h2>
-          <h2 className="utd-cd-item utd-cd-time">h</h2>
-          <h2 className="utd-cd-item utd-cd-number">
+          <h2
+            className={`utd-cd-item utd-cd-item-${props.color} utd-cd-time`}
+            style={{ fontSize: 20 }}
+          >
+            h
+          </h2>
+          <h2
+            className={`utd-cd-item utd-cd-item-${props.color} utd-cd-number`}
+            style={{ fontSize: 40 }}
+          >
             {minuti.toString().padStart(2, "0")}
           </h2>
-          <h2 className="utd-cd-item utd-cd-time">m</h2>
+          <h2
+            className={`utd-cd-item utd-cd-item-${props.color} utd-cd-time`}
+            style={{ fontSize: 20 }}
+          >
+            m
+          </h2>
           {/* <h2
-            className="utd-cd-item utd-cd-number"
+            className={`utd-cd-item utd-cd-item-${props.color} utd-cd-number`}            style={{ fontSize: 20 }}
+            style={{ fontSize: 40 }}
+
           >
             {secondi.toString().padStart(2, "0")}
           </h2> */}
-          {/* <h2 className="utd-cd-item utd-cd-time">
+          {/* <h2 className={`utd-cd-item utd-cd-item-${props.color} utd-cd-time`} 
+          style={{ fontSize: 20 }}
+>
             s
           </h2> */}
         </div>
