@@ -1,9 +1,10 @@
 .earn-card {
   border: 1px solid violet;
-  background-color: white;
+  background-color: var(--colors-backgroundAlt);
   max-width: 350px;
   padding: 20px;
   border-radius: 20px;
+  border-color: var(--colors-cardBorder);
 }
 
 .card-header {
@@ -32,16 +33,20 @@
 .card-fi-title {
   font-size: 9px;
   text-align: right;
+  color: var(--text-primary);
+  margin-bottom: 4px;
 }
 
 .card-body-apr {
   display: flex;
   justify-content: space-between;
+  color: var(--text-primary);
 }
 
 .card-body-earn {
   display: flex;
   justify-content: space-between;
+  color: var(--text-primary);
 }
 
 .card-body-earned-cake {
@@ -54,8 +59,10 @@
   flex-direction: column;
 }
 
-.card-body {
-  border-bottom: 1px solid black;
+.card-details {
+  border-top: 1px solid var(--colors-cardBorder);
+  width: 113%;
+  margin-left: -20px;
 }
 .earn-paragraph {
   margin-bottom: 8px;
@@ -63,6 +70,7 @@
 .cake-earned-paragraph {
   font-size: 12px;
   margin-bottom: 8px;
+  color: var(--text-primary);
 }
 
 .earn-value {
@@ -70,32 +78,47 @@
 }
 .yield-booster-paragraph {
   font-size: 12px;
+  color: var(--text-primary);
 }
 .cake-earned-value {
   font-weight: 900;
   margin-right: 110px;
+  color: var(--text-disabled);
 }
 .yield-booster-content {
   font-weight: 900;
   font-size: 18px;
+  color: var(--text-primary);
 }
 .yield-booster-action {
   font-size: 12px;
+  color: var(--text-primary);
 }
 
 .upto2icon {
-  fill: black;
+  fill: var(--text-primary);
+}
+
+.rocketupto {
+  fill: var(--status-success);
 }
 
 .HarvestButton {
   margin-top: 12px;
   height: 42px;
   border: none;
-  background-color: gray;
+  color: var(--text-disabled);
+  background-color: var(--background-disabled);
+}
+
+.text-bold {
+  font-weight: 800;
+  color: var(--text-accent);
 }
 
 .card-fi-stack-paragraph {
   font-size: 12px;
+  color: var(--text-primary);
 }
 
 .farmsconnectwallet {
@@ -104,7 +127,9 @@
   margin-top: 8px;
   margin-bottom: 20px;
   border: none;
-  background-color: gray;
+  background-color: var(--text-accent-alt);
+  color: var(--colors-invertedContrast);
+  z-index: 0;
 }
 .farmCardsArea {
   position: relative;
@@ -126,6 +151,7 @@
           background-color: transparent;
           align-items: center;
           margin-right: 3px;
+          font-size: 14px;
           * {
             margin-right: 1px;
             margin-left: 1px;
@@ -137,17 +163,31 @@
           padding: 1px 4px;
           border: 3px solid #23a6d5;
           border-radius: 24px;
+          padding-left: 8x;
+          padding-right: 8px;
+          border-color: var(--accent-secondary80);
+          color: var(--accent-secondary80);
+          fill: var(--accent-secondary80);
         }
         .boosted {
           background-color: transparent;
           padding: 1px 4px;
           border: 3px solid #e73c7e;
           border-radius: 24px;
+          padding-left: 8px;
+          padding-right: 8px;
+          color: var(--status-success);
+          border-color: var(--status-success);
+          fill: var(--status-success);
         }
         .multiplier {
-          background-color: #ee7752;
+          background-color: var(--accent-secondary);
           padding: 1px 4px;
           border-radius: 24px;
+          padding-left: 9px;
+          padding-right: 9px;
+          color: white;
+          border-color: var(--accent-secondary);
         }
       }
     }
@@ -156,7 +196,7 @@
       border: none;
       .border-animated {
         width: 101.4%;
-        height: 101%;
+        height: 100.8%;
         padding: 10px;
         background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
         background-size: 400% 400%;
@@ -176,40 +216,60 @@
 .apr-value {
   display: flex;
   gap: 5px;
+  color: var(--status-success);
+}
+
+.aprsvg {
+  fill: var(--text-primary);
 }
 
 .apr-value2 {
   text-decoration: line-through;
   font-size: 15px;
+  color: var(--text-primary);
 }
 
 .upTo {
   display: flex;
   gap: 4px;
+  color: var(--status-success);
 }
 
 .DetailsFarm {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  margin-left: 10px;
+  color: var(--text-accent-alt);
+  fill: var(--text-accent-alt);
 }
 
 .TotalLiquidity {
   display: flex;
   justify-content: space-between;
+  color: var(--text-primary);
 }
 
 .LiquidityFarms {
   display: flex;
   justify-content: space-between;
+  color: var(--text-primary);
+}
+
+.DetailsClosed {
+  display: none;
 }
 
 .DetailsOpen {
   display: flex;
   flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .FarmsLink {
+  color: var(--text-accent-alt);
+  fill: var(--text-accent-alt);
 }
 
 @keyframes earnCardGradient {
