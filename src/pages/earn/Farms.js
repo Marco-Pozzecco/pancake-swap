@@ -3,10 +3,14 @@ import Subnav from "../../components/subnav/Subnav";
 import "./_farms.scss";
 import boosterCardImage from "../../resources/boosterCardImage.webp";
 import { EarnCard } from "../../components/card/farm-card/farmCard";
+import FarmCard from "../../_data/scraper/scraperResult.json";
 
 export function Farms() {
   const [fillfcc, setFillfcc] = useState("gray");
   const [fillftc, setFillftc] = useState("gray");
+
+  const [farmsCard, setFarmsCards] = useState(FarmCard);
+
 
   async function fcclickHandle() {
     setFillftc("gray");
@@ -119,11 +123,22 @@ export function Farms() {
             type="search"
             className="FarmsInput"
             placeholder="Search Farms"
+            onChange={(e) => {
+              const farmsFilteredIdx = FarmCard.map(x => x.financialInstrument ? x.financialInstrument[0].split('-').map(y => y.toLowerCase().includes(e.target.value.toLowerCase())).some(x => x === true) : null);
+              setFarmsCards([...FarmCard.filter((x, idx) => farmsFilteredIdx[idx])])
+            }}
+          // 
           />
         </div>
       </div>
       <div className="farmCardsArea">
-        <EarnCard />
+        <div className="container">
+          {farmsCard.map((card, index) => (
+            <EarnCard data={card} idx={index} />
+          ))}
+        </div>
+
+
       </div>
     </>
   );
