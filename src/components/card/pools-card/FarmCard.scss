@@ -1,0 +1,361 @@
+@import url("../../../abstracts/_theme.scss");
+
+.earn-card {
+  border: 1px solid violet;
+  background-color: var(--colors-backgroundAlt);
+  max-width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  border-color: var(--colors-cardBorder);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.token1 {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  top: -30px;
+}
+
+.token2 {
+  position: relative;
+  left: -20px;
+  width: 55px;
+  height: 55px;
+}
+
+.card-entry {
+  padding: 4px;
+}
+
+.card-fi-title {
+  font-size: 9px;
+  text-align: right;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.card-body-apr {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-primary);
+}
+
+.card-body-earn {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-primary);
+}
+
+.card-body-earned-cake {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-fi-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-details {
+  border-top: 1px solid var(--colors-cardBorder);
+  width: 113%;
+  margin-left: -20px;
+}
+.earn-paragraph {
+  margin-bottom: 8px;
+}
+.cake-earned-paragraph {
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.earn-value {
+  font-weight: 900;
+}
+.yield-booster-paragraph {
+  font-size: 12px;
+  color: var(--text-primary);
+}
+.cake-earned-value {
+  font-weight: 900;
+  margin-right: 110px;
+  color: var(--text-disabled);
+}
+.yield-booster-content {
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+.yield-booster-action {
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+.upto2icon {
+  fill: var(--text-primary);
+}
+
+.rocketupto {
+  fill: var(--status-success);
+}
+
+.HarvestButton {
+  margin-top: 12px;
+  height: 42px;
+  border: none;
+  color: var(--text-disabled);
+  background-color: var(--background-disabled);
+}
+
+.text-bold {
+  font-weight: 800;
+  color: var(--text-accent);
+}
+
+.card-fi-stack-paragraph {
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+.farmsconnectwallet {
+  padding: 16px !important;
+  font-size: 15px !important;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: var(--text-accent-alt);
+  color: var(--colors-invertedContrast);
+  z-index: 0;
+}
+.farmCardsArea {
+  position: relative;
+  z-index: -2;
+  .container {
+    width: 1200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    .earn-card {
+      margin: 1rem;
+      .card-fi-details {
+        display: flex;
+        flex-direction: row;
+        .chip {
+          display: flex;
+          flex-direction: row;
+          padding: 2px;
+          background-color: transparent;
+          align-items: center;
+          margin-right: 3px;
+          font-size: 14px;
+          * {
+            margin-right: 1px;
+            margin-left: 1px;
+            height: 20px;
+          }
+        }
+        .core {
+          background-color: transparent;
+          padding: 1px 4px;
+          border: 3px solid #23a6d5;
+          border-radius: 24px;
+          padding-left: 8x;
+          padding-right: 8px;
+          border-color: var(--accent-secondary80);
+          color: var(--accent-secondary80);
+          fill: var(--accent-secondary80);
+        }
+        .boosted {
+          background-color: transparent;
+          padding: 1px 4px;
+          border: 3px solid #e73c7e;
+          border-radius: 24px;
+          padding-left: 8px;
+          padding-right: 8px;
+          color: var(--status-success);
+          border-color: var(--status-success);
+          fill: var(--status-success);
+        }
+        .multiplier {
+          background-color: var(--accent-secondary);
+          padding: 1px 4px;
+          border-radius: 24px;
+          padding-left: 9px;
+          padding-right: 9px;
+          color: white;
+          border-color: var(--accent-secondary);
+        }
+      }
+    }
+    .earn-card-border-animated {
+      position: relative;
+      border: none;
+      .border-animated {
+        width: 101.4%;
+        height: 100.8%;
+        padding: 10px;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+
+        animation: earnCardGradient 3s ease infinite;
+        z-index: -1;
+        border-radius: 19px;
+        display: block;
+        left: -2.6px;
+        top: -2px;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.apr-value {
+  display: flex;
+  gap: 5px;
+  color: var(--status-success);
+}
+
+.aprsvg {
+  fill: var(--text-primary);
+}
+
+.apr-value2 {
+  text-decoration: line-through;
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+.upTo {
+  display: flex;
+  gap: 4px;
+  color: var(--status-success);
+}
+
+.DetailsFarm {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: var(--text-accent-alt);
+  fill: var(--text-accent-alt);
+}
+
+.TotalLiquidity {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-primary);
+}
+
+.LiquidityFarms {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-primary);
+}
+
+.DetailsClosed {
+  display: none;
+}
+
+.DetailsOpen {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.FarmsLink {
+  color: var(--text-accent-alt);
+  fill: var(--text-accent-alt);
+}
+
+@keyframes earnCardGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.earn-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+
+  padding: 20px 10px;
+
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+
+  &:first-child {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  .card-col-1 {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+
+    .token1 {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      top: -15px;
+      right: 5px;
+    }
+
+    .token2 {
+      position: relative;
+      left: -15px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .card-col-2 {
+    display: flex;
+    flex-direction: row;
+
+    .card-fi-details {
+      width: 250px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  .card-col-3 {
+  }
+
+  .card-col-4 {
+    .apr {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .chip {
+    .multiplier-title {
+    }
+
+    .multiplier-value {
+    }
+  }
+}
