@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import Subnav from "../../components/subnav/Subnav";
 import "./_farms.scss";
 import boosterCardImage from "../../resources/boosterCardImage.webp";
+
 import { FarmCard } from "../../components/card/farm-card/farmCard";
+import { FarmCardRow } from "../../components/card/farm-card/FarmCardRow";
+
 import data from "../../_data/scraper/scraperResult.json";
 
 export function Farms() {
@@ -134,7 +137,7 @@ export function Farms() {
       <div className="farmCardsArea">
         <div className="container">
           {farmsCard.map((card, index) => (
-            <FarmCard data={card} idx={index} />
+            <FarmCardRow data={card} idx={index} />
           ))}
         </div>
 

@@ -8,7 +8,7 @@ import "./FarmCard.scss";
 // - fi =>  string
 // - apr => string
 
-export function EarnCard(props) {
+export function FarmCardRow(props) {
   const data = props.data;
 
   let upTo = (
@@ -41,12 +41,11 @@ export function EarnCard(props) {
   return (
     <>
       <div
-        className={`earn-row ${
-          parseInt(props.idx) < 3 && "earn-card-border-animated"
-        }`}
+        className={`earn-row ${parseInt(props.idx) < 3 && "earn-card-border-animated"}`}
       >
         {parseInt(props.idx) < 3 && <div className="border-animated"></div>}
-        <div className="card-header">
+        
+        <div className="card-col-1">
           <div className="card-fi-img">
             <img
               className="token1"
@@ -59,31 +58,34 @@ export function EarnCard(props) {
               alt=""
             />
           </div>
-          <div className="card-fi-stat">
-            <div className="card-fi-title">
+          <div className="card-fi-title">
               {data.financialInstrument && <h1>{data.financialInstrument}</h1>}
-            </div>
-            <div className="card-fi-details">
-              {data.labels.text.map((text, idx) => (
-                <div className={`chip ${text.toLowerCase()}`}>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: data.labels.svg[idx] }}
-                  />
-                  {text}
-                </div>
-              ))}
-              <div className="chip multiplier">{data.multiplier}</div>
-            </div>
           </div>
         </div>
-        <div className="card-body">
-          <div className="card-body-apr card-entry">
-            <p className="apr-paragraph">APR:</p>
+        
+        <div className="card-col-2">
+          <div className="card-fi-details">
+            {data.labels.text.map((text, idx) => (
+              <div className={`chip ${text.toLowerCase()}`}>
+                <div dangerouslySetInnerHTML={{ __html: data.labels.svg[idx] }} />
+                {text}
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <div className="card-col-3">
+          <div className="cake-earned-area">
+            <p className="cake-earned-paragraph">Earned</p>
+            <p className="cake-earned-value">0</p>
+          </div>
+        </div>
+
+        <div className="card-col-4">
+          <div className="c-apr card-entry">
+            <p className="apr-paragraph">APR</p>
             {data.apr && (
               <p className="apr-value">
-                {" "}
-                {parseInt(props.idx) < 3 && upTo}
-                {data.apr[1]}{" "}
                 <span
                   className={`apr-value ${
                     parseInt(props.idx) < 3 && "apr-value2"
@@ -105,78 +107,60 @@ export function EarnCard(props) {
                   <path d="M8 18H9.5V16H11.5V14.5H9.5V12.5H8V14.5H6V16H8V18Z"></path>
                   <path d="M14.09 10.95L15.5 9.54L16.91 10.95L17.97 9.89L16.56 8.47L17.97 7.06L16.91 6L15.5 7.41L14.09 6L13.03 7.06L14.44 8.47L13.03 9.89L14.09 10.95Z"></path>
                 </svg>
+                {" "}
+                {parseInt(props.idx) < 3 && upTo}
+                {data.apr[1]}{" "}
               </p>
             )}
           </div>
-          <div className="card-body-earn card-entry">
-            <p className="earn-paragraph">Earn:</p>
-            <p className="earn-value">CAKE + fees</p>
-          </div>
-          <div className="card-body-earned-cake card-entry">
-            <div className="cake-earned-area">
-              <p className="cake-earned-paragraph">CAKE EARNED:</p>
-              <p className="cake-earned-value">0.00000</p>
-            </div>
-            <Button type="HarvestButton" text="Harvest" />
-          </div>
-          {props.idx < 3 && (
-            <div className="card-body-yield-booster card-entry">
-              <p className="yield-booster-paragraph">YIELD BOOSTER</p>
-              <p className="yield-booster-content">
-                Up to 2x{" "}
-                <svg
-                  viewBox="0 0 24 24"
-                  width="20px"
-                  height="20px"
-                  color="text"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="upto2icon"
-                >
-                  <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z"></path>
-                </svg>
-              </p>
-              <p className="yield-booster-action">
-                Connect wallet to activate yield booster
-              </p>
-            </div>
-          )}
+        </div>
 
-          <div className="card-fi-stack">
-            <p className="card-fi-stack-paragraph">
-              {data.financialInstrument} LP STAKED
-            </p>
-            <ConnectWalletBtn type={"farmsconnectwallet"} />
+        <div className="card-col-5">
+          <div className="liquidity">
+            <p className="liquidity-title">Liquidity</p>
+            <p className="liquidity-value">{data.liquidity}</p>
           </div>
         </div>
-        <div className="card-details">
-          {" "}
-          <p className="DetailsFarm">
-            Details{" "}
-            <svg
-              viewBox="0 0 24 24"
-              color="text"
-              width="20px"
-              xmlns="http://www.w3.org/2000/svg"
-              class="sc-4ba21b47-0 IIbzK"
-            >
-              <path d="M8.11997 9.29006L12 13.1701L15.88 9.29006C16.27 8.90006 16.9 8.90006 17.29 9.29006C17.68 9.68006 17.68 10.3101 17.29 10.7001L12.7 15.2901C12.31 15.6801 11.68 15.6801 11.29 15.2901L6.69997 10.7001C6.30997 10.3101 6.30997 9.68006 6.69997 9.29006C7.08997 8.91006 7.72997 8.90006 8.11997 9.29006Z"></path>
-            </svg>
-          </p>
-          <div className="DetailsOpen">
-            <div className="LiquidityFarms">
-              <p className="TotalLiquidity">Total Liquidity:</p>
-              <p>{data.liquidity}</p>
-            </div>
-            <a className="FarmsLink" href="">
-              Get CAKE-BNB LP {svglink}
-            </a>
-            <a className="FarmsLink" href="">
-              View Contract {svglink}
-            </a>
-            <a className="FarmsLink" href="">
-              See Pair Info {svglink}
-            </a>
+
+        <div className="card-col-6">
+          <div className="chip multiplier">
+            <div className="multiplier-title">Multiplier</div>
+            <div className="multiplier-value">{data.multiplier}</div>
           </div>
+        </div>
+
+        <div className="card-col-7">
+          <svg
+                viewBox="0 0 24 24"
+                color="text"
+                width="20px"
+                xmlns="http://www.w3.org/2000/svg"
+                class="sc-4ba21b47-0 IIbzK"
+              >
+                <path d="M8.11997 9.29006L12 13.1701L15.88 9.29006C16.27 8.90006 16.9 8.90006 17.29 9.29006C17.68 9.68006 17.68 10.3101 17.29 10.7001L12.7 15.2901C12.31 15.6801 11.68 15.6801 11.29 15.2901L6.69997 10.7001C6.30997 10.3101 6.30997 9.68006 6.69997 9.29006C7.08997 8.91006 7.72997 8.90006 8.11997 9.29006Z"></path>
+              </svg>
+        </div>
+        
+      </div>
+      <div className="card-details">
+        <p className="DetailsFarm">
+          Details{" "}
+          
+        </p>
+        <div className="DetailsOpen">
+          <div className="LiquidityFarms">
+            <p className="TotalLiquidity">Total Liquidity:</p>
+            <p>{data.liquidity}</p>
+          </div>
+          <a className="FarmsLink" href="">
+            Get CAKE-BNB LP {svglink}
+          </a>
+          <a className="FarmsLink" href="">
+            View Contract {svglink}
+          </a>
+          <a className="FarmsLink" href="">
+            See Pair Info {svglink}
+          </a>
         </div>
       </div>
     </>
