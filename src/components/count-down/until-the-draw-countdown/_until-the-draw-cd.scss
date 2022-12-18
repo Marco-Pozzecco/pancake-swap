@@ -1,5 +1,5 @@
 .utd-cd-main-container {
-  width: auto;
+  width: fit-content;
   height: 100%;
   display: flex;
   justify-content: flex-end;
@@ -8,7 +8,7 @@
 
   //DATE
   .utd-cd-box {
-    width: auto;
+    width: fit-content;
     height: 100%;
     margin: 0 0 3px;
 
@@ -30,7 +30,6 @@
           rgb(128, 81, 214) 0%,
           rgb(73, 34, 134) 100%
         );
-        // background-color: chartreuse;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -59,7 +58,3 @@
     margin: 0 0 3px;
   }
 }
-
-// .aaa-bg {
-//   background: linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
-// }

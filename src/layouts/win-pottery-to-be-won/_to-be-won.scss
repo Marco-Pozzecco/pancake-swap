@@ -28,7 +28,6 @@
     width: 100%;
     max-width: 737px;
     z-index: 3;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +42,7 @@
         height: 100%;
       }
     }
-    //TITLES  ---> MANCA IL COLORE DEL BORDO DEI TITOLI
+    //TITLES-------------
     .tbw-titles-container {
       width: 50%;
       height: 100%;
@@ -91,14 +90,12 @@
         padding: 0px 2px;
         font-weight: 600;
         line-height: 1.5;
-        // ----------------------------
+        // --------------
         font-weight: 600;
         line-height: 1.5;
         text-align: center;
         text-shadow: -3px 3px 0px white, 3px -3px 0px white, -3px -3px 0px white,
           3px 3px 0px white;
-        // text-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px,
-        //   rgba(14, 14, 44, 0.1) 0px 4px 12px;
         -webkit-text-stroke: 8px transparent;
         vertical-align: baseline;
         -webkit-font-smoothing: antialiased;
@@ -113,7 +110,7 @@
         margin-bottom: 25px;
       }
 
-      //Wrapper BIGLIETTO---------------
+      //Wrapper BIGLIETTO-------
       .tbw-ticket {
         width: 100%;
         height: 25%;
@@ -149,18 +146,20 @@
         }
       }
 
+      //COUNTDOWN container----------------
       .tbw-countdown-box-wrap {
-        width: 100%;
+        width: 110%;
         height: 45px;
         border-bottom: 1px dotted white;
         margin: 32px 0 0 0;
-        padding: 2px;
-        border: 2px solid rgb(212, 16, 199);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
       }
     }
   }
 
-  //BOTTOM CONTAINERS
+  //BOTTOM CONTAINERS-------------------------------------------
 
   //BACKGROUND IMAGE
   .tbw-bottom-background-img-container {
@@ -258,3 +257,6 @@
     }
   }
 }
+
+//
+//
