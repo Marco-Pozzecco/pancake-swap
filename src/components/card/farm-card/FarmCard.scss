@@ -1,3 +1,5 @@
+@import url("../../../abstracts/_theme.scss");
+
 .earn-card {
   border: 1px solid violet;
   background-color: white;
@@ -31,6 +33,7 @@
 
 .card-fi-title {
   font-size: 9px;
+  text-align: right;
 }
 
 .card-body-apr {
@@ -104,4 +107,194 @@
   margin-bottom: 20px;
   border: none;
   background-color: gray;
+}
+.farmCardsArea {
+  position: relative;
+  z-index: -2;
+  .container {
+    width: 1200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    .earn-card {
+      margin: 1rem;
+      .card-fi-details {
+        display: flex;
+        flex-direction: row;
+        .chip {
+          display: flex;
+          flex-direction: row;
+          padding: 2px;
+          background-color: transparent;
+          align-items: center;
+          margin-right: 3px;
+          * {
+            margin-right: 1px;
+            margin-left: 1px;
+            height: 20px;
+          }
+        }
+        .core {
+          background-color: transparent;
+          padding: 1px 4px;
+          border: 3px solid #23a6d5;
+          border-radius: 24px;
+        }
+        .boosted {
+          background-color: transparent;
+          padding: 1px 4px;
+          border: 3px solid #e73c7e;
+          border-radius: 24px;
+        }
+        .multiplier {
+          background-color: #ee7752;
+          padding: 1px 4px;
+          border-radius: 24px;
+        }
+      }
+    }
+    .earn-card-border-animated {
+      position: relative;
+      border: none;
+      .border-animated {
+        width: 101.4%;
+        height: 101%;
+        padding: 10px;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+
+        animation: earnCardGradient 3s ease infinite;
+        z-index: -1;
+        border-radius: 19px;
+        display: block;
+        left: -2.6px;
+        top: -2px;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.apr-value {
+  display: flex;
+  gap: 5px;
+}
+
+.apr-value2 {
+  text-decoration: line-through;
+  font-size: 15px;
+}
+
+.upTo {
+  display: flex;
+  gap: 4px;
+}
+
+.DetailsFarm {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.TotalLiquidity {
+  display: flex;
+  justify-content: space-between;
+}
+
+.LiquidityFarms {
+  display: flex;
+  justify-content: space-between;
+}
+
+.DetailsOpen {
+  display: flex;
+  flex-direction: column;
+}
+
+.FarmsLink {
+}
+
+@keyframes earnCardGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.earn-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+
+  padding: 20px 10px;
+
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+
+  &:first-child {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  .card-col-1 {
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .card-col-2 {
+    display: flex;
+    flex-direction: row;
+
+    .card-fi-details {
+      width: fit-content;
+    }
+
+  }
+
+  .card-col-3 {
+
+  }
+
+  .card-col-4 {
+    
+
+    .apr {
+      display: flex;
+      flex-direction: column;
+    }
+
+
+  }
+
+  .chip {
+
+    .multiplier-title {
+
+    }
+
+    .multiplier-value {
+
+    }
+  }
+
+  
+}
+.card-details {
+  display: none;
+  background-color: var(--background-secondary);
+
+  width: 100%;
 }
