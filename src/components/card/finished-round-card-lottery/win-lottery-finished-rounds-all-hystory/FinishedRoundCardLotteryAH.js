@@ -262,7 +262,12 @@ export function FinishedRoundCardLotteryAH(props) {
           <div className="frcl-ah-footer-sub-container">
             {/* //////////////////////////////////////////////////////////////////////////// */}
 
-            <div className="frcl-ah-footer-sc-all-datas">
+            <div
+              className={`frcl-ah-footer-sc-all-datas ${
+                showDetails && "active"
+              }`}
+              style={{ display: showDetails ? "block" : "none" }}
+            >
               {/* -- -- Data Titles -- --  */}
               <div className="frcl-ahf-sc-main-box-datas">
                 <div className="frcl-ahf-sc-main-datas-title-box">
