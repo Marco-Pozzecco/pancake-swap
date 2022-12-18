@@ -11,10 +11,7 @@ export function CDR() {
 
   useEffect(() => {
     window.setInterval(() => {
-      const date = moment(
-        "31/12/2022 14:42:00",
-        "DD/MM/YYYY HH:mm:ss"
-      ); /*  Il 17 Dicembre dell anno 20222 siamo riusciti a far funzionare il countdown  */
+      const date = moment("31/12/2022 14:42:00", "DD/MM/YYYY HH:mm:ss");
       const diff = date.diff(moment(), "seconds");
 
       const days = Math.floor(diff / 24 / 60 / 60);

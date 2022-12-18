@@ -102,7 +102,6 @@
             width: 70.6px;
             height: 70.6px;
             display: flex;
-            // -webkit-box-align: center;
             align-items: center;
             -webkit-box-pack: center;
             justify-content: center;
@@ -112,8 +111,6 @@
               height: 100%;
               width: 100%;
             }
-
-            // QUI MANCA DI AGGIUNGERE LE CLASSI E INSERIRE I DIV CON I NUMERI CHE CI SONO ALL INTENRO DELLE PALLE COLORATE
 
             .frcl-ahb-number-box {
               position: absolute;
@@ -251,7 +248,7 @@
                 font-size: 14px;
               }
 
-              // CCOMPONENTS CONTAINER ---------------------------------------------------------------
+              // COMPONENTS CONTAINER --------------------------
               .frcl-ahf-data-component-wrapper {
                 width: 100%;
                 height: auto;
