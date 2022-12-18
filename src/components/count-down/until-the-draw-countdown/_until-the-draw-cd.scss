@@ -22,31 +22,44 @@
       gap: 4px;
       align-items: baseline;
 
-      //ITEMS
+      //ITEMS--------------
       .utd-cd-item {
         font-weight: 600;
         line-height: 1.1;
-        background: linear-gradient(
-          rgb(128, 81, 214) 0%,
-          rgb(73, 34, 134) 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        -text-fill-color: transparent;
-        border: 3px solid chartreuse; //--------------------------------------------------
-      }
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // background-clip: text;
+        // -text-fill-color: transparent;
 
-      .utd-cd-number {
-        font-size: 40px;
-      }
+        &-purple {
+          background: linear-gradient(
+            rgb(128, 81, 214) 0%,
+            rgb(73, 34, 134) 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          -text-fill-color: transparent;
+        }
 
-      .utd-cd-time {
-        font-size: 20px;
+        &-orange {
+          background: linear-gradient(180deg, #ffd800, #fdab32);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          -text-fill-color: transparent;
+        }
+
+        .utd-cd-number {
+          font-size: 40px;
+        }
+
+        .utd-cd-time {
+          font-size: 20px;
+        }
       }
     }
   }
-
   //TEXT
   .utd-cd-text {
     width: auto;

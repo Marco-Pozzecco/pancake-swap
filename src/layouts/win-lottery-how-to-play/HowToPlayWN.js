@@ -8,6 +8,7 @@ import { WinningCriteriaText } from "./WinningCriteriaText";
 import { GreyLine } from "../../components/lines/GreyLine";
 import { DataTextGraph } from "../../components/text-components/data-text-graph/DataTextGraph";
 import { DataCardGraph } from "../../components/card/data-card-graph/DataCardGraph";
+import { Link } from "react-router-dom";
 
 export function HowToPlayWN() {
   return (
@@ -94,7 +95,15 @@ export function HowToPlayWN() {
                     "After every round, if nobody wins in one of the prize brackets, the unclaimed CAKE for that bracket rolls over into the next round and are redistributed among the prize pools."
                   }
                   dtg_list_c={
-                    "An average total of 35,000 CAKE from the treasury is added to lottery rounds over the course of a week. This CAKE is of course also included in rollovers! Read more in our guide to CAKE Tokenomics"
+                    <>
+                      An average total of 35,000 CAKE from the treasury is added
+                      to lottery rounds over the course of a week. This CAKE is
+                      of course also included in rollovers! Read more in our
+                      guide to
+                      <Link className="htpc-bottom-link" to="">
+                        CAKE Tokenomics
+                      </Link>
+                    </>
                   }
                 />
               </div>
@@ -249,20 +258,3 @@ export function HowToPlayWN() {
     </section>
   );
 }
-
-// #######################################################
-
-//
-// ⇓⇓ NON CANCELLARE ⇓⇓
-//
-//
-
-// style={...props.outerCardStyle}
-// style={...props.innerCardStyle}
-// // -------------------
-// <Card outerCardStyle={{}}>
-//   {/* -------------- */}
-//   <Card outerCardClasses={"outercardStyle2"}
-//   // --------------------
-//   <div className={...outerCardClasses + " blablabla"}>
-//     {/* ----------------- */}

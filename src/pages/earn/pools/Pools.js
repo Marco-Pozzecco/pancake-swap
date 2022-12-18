@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import Subnav from '../../../components/subnav/Subnav';
 import "./_pools.scss";
+import { PoolCard } from "../../../components/card/pools-card/poolsCard";
+import data from "../../../_data/scraper/ResultForPools.json";
 
 export function Pools() {
   const [fillpcc, setFillpcc] = useState("gray")
   const [fillptc, setFillptc] = useState("gray")
+  const [PoolsCard, setPoolsCards] = useState(data);
 
   async function pcclickHandle() {
     setFillptc("gray")
@@ -36,10 +39,27 @@ export function Pools() {
         </div>
         <div>
           <p className="PoolsSearch">SEARCH</p>
-          <input type="search" className="PoolsInput" placeholder="Search Pools" />
+          <input
+            type="search"
+            className="PoolsInput"
+            placeholder="Search Pools"
+            onChange={(e) => {
+              const PoolsFilteredIdx = PoolsCard.map(x => x.financialInstrument ? x.financialInstrument[0].split('-').map(y => y.toLowerCase().includes(e.target.value.toLowerCase())).some(x => x === true) : null);
+              setPoolsCards([...PoolsCard.filter((x, idx) => PoolsFilteredIdx[idx])])
+            }}
+          // 
+          />
         </div>
       </div>
-      <div className="poolsCardsArea"></div>
+      <div className="PoolCardsArea">
+        <div className="container">
+          {PoolsCard.map((card, index) => (
+            <PoolCard data={card} idx={index} />
+          ))}
+        </div>
+
+
+      </div>
     </>
   )
 }

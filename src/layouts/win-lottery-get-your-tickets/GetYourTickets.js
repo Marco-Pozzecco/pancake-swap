@@ -29,7 +29,7 @@ export function GetYourTickets() {
             <h2 className="gyt-h-title-a">Get your tickets now!</h2>
 
             <div className="countdown-box">
-              <UntilTheDrawCD deadline={deadlineDate} />
+              <UntilTheDrawCD deadline={deadlineDate} color={"orange"} />
             </div>
           </div>
           <div className="gyt-card-wrapper">

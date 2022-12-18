@@ -86,10 +86,14 @@
   outline-style: none;
   border: 2px solid var(--text-accent);
 }
-.poolsCardsArea {
+.PoolsCardsArea {
   width: 100%;
   background-color: var(--background-primary);
   height: 100vh;
+}
+.PoolCardsArea {
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 360px) {

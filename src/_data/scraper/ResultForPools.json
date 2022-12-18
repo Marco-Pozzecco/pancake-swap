@@ -1,0 +1,71 @@
+[
+    {
+        "financialInstrument": [
+            "Stake CAKE",
+            "Stake, Earn - And more!"
+        ],
+        "images": [
+            "/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.svg",
+            "/images/tokens/autorenew.svg"
+        ],
+        "flexible-apy": "2.70%",
+        "locked APR": "Up to 57.91%",
+        "autolocked": true,
+        "manual": false,  
+        "total-staked": "246,963,279 CAKE",
+        "total-locked": "193,394,020 CAKE",
+        "lock-duration": "42 weeks",
+        "fee": "0~2%",
+        "tutorial": true
+    },
+{
+        "financialInstrument": [
+            "Earn SQUAD",
+            "Stake CAKE"
+        ],
+        "images": [
+            "/images/tokens/0x724A32dFFF9769A0a0e1F0515c0012d1fB14c3bd.png",
+            "/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.svg"
+        ],
+        "autolocked": false,
+        "apr": "37.98%",
+        "manual": true,  
+        "total-staked": "978,221 CAKE",
+        "max-staked": "100 CAKE",
+        "max-stakelimit": "52,010 blocks",
+        "ends-in": "3,363,997 Blocks",
+        "website": true
+    },
+    {
+        "financialInstrument": [
+            "Earn XCAD",
+            "Stake CAKE"
+        ],
+        "images": [
+            "/images/tokens/0x431e0cD023a32532BF3969CddFc002c00E98429d.png",
+            "/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.svg"
+        ],
+        "autolocked": false,
+        "apr": "5.80%",
+        "manual": true,  
+        "total-staked": "5,844,685 CAKE",
+        "ends-in": "1,477,601 Blocks",
+        "website": true
+    },
+    {
+        "financialInstrument": [
+            "Earn MGP",
+            "Stake CAKE"
+        ],
+        "images": [
+            "/images/tokens/0xD06716E1Ff2E492Cc5034c2E81805562dd3b45fa.png",
+            "/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.svg"
+        ],
+        "autolocked": false,
+        "apr": "6.06%",
+        "manual": true,  
+        "total-staked": "4,987,916 CAKE",
+        "ends-in": "1,976,920 Blocks",
+        "website": true
+    }
+]
