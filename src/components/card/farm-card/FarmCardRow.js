@@ -41,9 +41,9 @@ export function FarmCardRow(props) {
   return (
     <>
       <div
-        className={`earn-row ${parseInt(props.idx) < 3 && "earn-card-border-animated"}`}
+        className={`earn-row`}
       >
-        {parseInt(props.idx) < 3 && <div className="border-animated"></div>}
+        
         
         <div className="card-col-1">
           <div className="card-fi-img">
