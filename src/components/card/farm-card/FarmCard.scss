@@ -155,23 +155,61 @@
       position: relative;
       border: none;
       .border-animated {
-        width: 102%;
-        height: 102%;
+        width: 101.4%;
+        height: 101%;
         padding: 10px;
         background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
         background-size: 400% 400%;
 
         animation: earnCardGradient 3s ease infinite;
         z-index: -1;
-        left: -4px;
         border-radius: 19px;
         display: block;
-        left: -3.3px;
-        top: -4px;
+        left: -2.6px;
+        top: -2px;
         position: absolute;
       }
     }
   }
+}
+
+.apr-value {
+  display: flex;
+  gap: 5px;
+}
+
+.apr-value2 {
+  text-decoration: line-through;
+  font-size: 15px;
+}
+
+.upTo {
+  display: flex;
+  gap: 4px;
+}
+
+.DetailsFarm {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.TotalLiquidity {
+  display: flex;
+  justify-content: space-between;
+}
+
+.LiquidityFarms {
+  display: flex;
+  justify-content: space-between;
+}
+
+.DetailsOpen {
+  display: flex;
+  flex-direction: column;
+}
+
+.FarmsLink {
 }
 
 @keyframes earnCardGradient {
