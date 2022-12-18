@@ -1,6 +1,7 @@
 @import "../../abstracts/variables";
 @import "../../abstracts/mixins";
 @import "../../abstracts/colors";
+@import "../../abstracts/theme";
 
 // All buttons have these rules
 .generalButtonRules {
@@ -58,6 +59,48 @@
 
   &:active {
     transform: translateY(1px);
+  }
+
+  &-purple {
+    background-color: $ob-buttons-background-color; /*transparent*/
+    color: var(--accent-secondary); /* rgb(31, 199, 212)*/
+    border: 2px solid var(--accent-secondary); /* 2px solid  rgb(31, 199, 212)*/
+    height: 28px; /**/
+    font-size: 16px; /*16px*/
+    font-weight: $ob-buttons-font-weigth; /*600*/
+    padding: 0 5px;
+    margin: 0 5px; 
+
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+
+
+    svg {
+      fill: var(--accent-secondary);
+      margin-right: 2px;
+    }
+  }
+
+  &-cyan {
+    background-color: $ob-buttons-background-color; /*transparent*/
+    color: var(--status-success); /* rgb(31, 199, 212)*/
+    border: 2px solid var(--status-success); /* 2px solid  rgb(31, 199, 212)*/
+    height: 28px; /**/
+    font-size: 16px; /*16px*/
+    font-weight: $ob-buttons-font-weigth; /*600*/
+    padding: 0 5px;
+    margin: 0 5px; 
+
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+
+
+    svg {
+      fill: var(--status-success);
+      margin-right: 2px;
+    }
   }
 }
 

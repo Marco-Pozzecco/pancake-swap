@@ -1,7 +1,10 @@
 import { elementAcceptingRef } from "@mui/utils";
 import React, { useState, useEffect } from "react";
 import { Button } from "../../buttons/Button";
-import { ConnectWalletBtn } from "../../buttons/ConnectWalletBtn"
+import { ConnectWalletBtn } from "../../buttons/ConnectWalletBtn";
+import { Core } from "../../buttons/Core";
+import { Boosted } from "../../buttons/Boosted";
+
 import "./FarmCard.scss";
 // Props:
 // - images => string[]
@@ -50,15 +53,14 @@ export function FarmCard(props) {
               {data.financialInstrument && <h1>{data.financialInstrument}</h1>}
             </div>
             <div className="card-fi-details">
-              {data.labels.text.map((text, idx) => (
-                <div className={`chip ${text.toLowerCase()}`}>
-                  <div dangerouslySetInnerHTML={{ __html: data.labels.svg[idx] }} />
-                  {text}
-                </div>
-              ))}
-              <div className="chip multiplier">
-                {data.multiplier}
-              </div>
+              {data.labels.text.map((text) => {
+                if (text === "Core") {
+                  return <Core />
+                } else if (text === "Boosted") {
+                  return <Boosted />
+                }
+              })}
+              <div className="chip multiplier">{data.multiplier}</div>
             </div>
           </div>
         </div>

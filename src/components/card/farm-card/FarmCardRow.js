@@ -1,6 +1,8 @@
 import React from "react";
+import { Boosted } from "../../buttons/Boosted";
 import { Button } from "../../buttons/Button";
 import { ConnectWalletBtn } from "../../buttons/ConnectWalletBtn";
+import { Core } from "../../buttons/Core";
 import "./FarmCard.scss";
 
 // Props:
@@ -65,12 +67,13 @@ export function FarmCardRow(props) {
         
         <div className="card-col-2">
           <div className="card-fi-details">
-            {data.labels.text.map((text, idx) => (
-              <div className={`chip ${text.toLowerCase()}`}>
-                <div dangerouslySetInnerHTML={{ __html: data.labels.svg[idx] }} />
-                {text}
-              </div>
-            ))}
+            {data.labels.text.map((text) => {
+              if (text === "Core") {
+                return <Core />
+              } else if (text === "Boosted") {
+                return <Boosted />
+              }
+            })}
           </div>
         </div>
         
