@@ -260,92 +260,44 @@ export function FinishedRoundCardLotteryAH(props) {
         {/* --- FOOTER / DATI --- */}
         <div className="frcl-ah-footer-container">
           <div className="frcl-ah-footer-sub-container">
-            {/* --X -- -- -- DATA -- -- -- X--  */}
-            <div
-              className={`frcl-ahf-data-container  ${showDetails && "active"}`}
-              style={{ display: showDetails ? "block" : "none" }}
-            >
-              {/* ------------------------------------------ */}
-              <div className="frcl-ahf-data-sub-container">
-                {/* --- Titles --- */}
-                <div className="frcl-ahf-data-prize-pot-wrapper">
-                  <div className="frcl-ahf-data-prize-pot-a">
-                    <h2 className="frcl-ahf-data-title">Prize pot</h2>
-                    <h2 className="frcl-ahf-data-amount">~$127.476</h2>
-                    <div className="frcl-ahf-data-subtitle">34,070 CAKE</div>
+            {/* //////////////////////////////////////////////////////////////////////////// */}
+
+            <div className="frcl-ah-footer-sc-all-datas">
+              {/* -- -- Data Titles -- --  */}
+              <div className="frcl-ahf-sc-main-box-datas">
+                <div className="frcl-ahf-sc-main-datas-title-box">
+                  <div className="frcl-ahf-scd-title-box frcl-ahf-scdt-box-a">
+                    <h2>Prize pot</h2>
+                    <h2>~$77.915</h2>
+                    <div>22,979 CAKE</div>
                   </div>
-                  {/* ---   ---   ---   ---   --- */}
-                  <div className="frcl-ahf-data-prize-pot-b">
-                    Total players this round: <br /> 653
+                  {/* -   -   -    -  */}
+                  <div className="frcl-ahf-scd-title-box frcl-ahf-scdt-box-b">
+                    Total players this round: 310
                   </div>
                 </div>
-                {/* --- Data Components --- */}
-                <div className="frcl-ahf-data-main-box">
-                  <div className="frcl-ahf-data-description">
+                {/* -- -- Data and Description container -- --  */}
+                <div className="frcl-ahf-sc-main-datas-box">
+                  <div className="frcl-ahf-sc-main-datas-description">
                     Match the winning number in the same order to share prizes.
                   </div>
-                  {/* --   --   --   --    */}
-                  <div className="frcl-ahf-data-component-wrapper">
-                    <MatchesDatas
-                      matches_data_title={"Match first 1"}
-                      matches_data_amount_up={"~$7,197"}
-                      matches_data_cakes_number={"2,194 CAKE"}
-                      // matches_data_amount_down={"~$7,197"}
-                      matches_data_cake_each={"1.60 CAKE each"}
-                      matches_winning_tickets={"449 Winning Tickets"}
-                    />
-                    <MatchesDatas
-                      matches_data_title={"Match first 3"}
-                      matches_data_amount_up={"~$8,337"}
-                      matches_data_cakes_number={"894 CAKE"}
-                      // matches_data_amount_down={"~$7,197"}
-                      matches_data_cake_each={"6.85 CAKE each"}
-                      matches_winning_tickets={"965 Winning Tickets"}
-                    />{" "}
-                    <MatchesDatas
-                      matches_data_title={"Match first 1"}
-                      matches_data_amount_up={"~$17,197"}
-                      matches_data_cakes_number={"6194 CAKE"}
-                      // matches_data_amount_down={"~$7,197"}
-                      matches_data_cake_each={"3.20 CAKE each"}
-                      matches_winning_tickets={"429 Winning Tickets"}
-                    />{" "}
-                    <MatchesDatas
-                      matches_data_title={"Match first 1"}
-                      matches_data_amount_up={"~$3,137"}
-                      matches_data_cakes_number={"2,194 CAKE"}
-                      // matches_data_amount_down={"~$7,197"}
-                      matches_data_cake_each={"456.78 CAKE each"}
-                      matches_winning_tickets={"1 Winning Tickets"}
-                    />{" "}
-                    <MatchesDatas
-                      matches_data_title={"Match first 2"}
-                      matches_data_amount_up={"~$1,974"}
-                      matches_data_cakes_number={"2,194 CAKE"}
-                      // matches_data_amount_down={"~$7,197"}
-                      matches_data_cake_each={"81.87 CAKE each"}
-                      matches_winning_tickets={"35 Winning Tickets"}
-                    />{" "}
-                    <MatchesDatas
-                      matches_data_title={"Match first 3"}
-                      matches_data_amount_up={"~$4,169"}
-                      matches_data_cakes_number={"919 CAKE"}
-                      // matches_data_amount_down={"~$7,197"}
-                      matches_data_cake_each={"13.93 CAKE each"}
-                      matches_winning_tickets={"2 Winning Tickets"}
-                    />{" "}
-                    <MatchesDatas
-                      matches_data_title={"Burn"}
-                      // matches_data_amount_up={"~$7,197"}
-                      matches_data_cakes_number={"2,194 CAKE"}
-                      matches_data_amount_down={"~$7,197"}
-                      // matches_data_cake_each={"60 CAKE each"}
-                      // matches_winning_tickets={"4 Winning Tickets"}
-                    />
+                  {/* ----------------------DATA COMPONENT CONTAINER------------------------------ */}
+                  <div className="frcl-ahf-sc-main-data-components-wrapper">
+                    <div>data</div>
+                    <div>data</div>
+                    <div>data</div>
+
+                    <div>data</div>
+                    <div>data</div>
+                    <div>data</div>
+                    <div>data</div>
+                    <div>data</div>
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* //////////////////////////////////////////////////////////////////////////// */}
             {/* -- -- -- -- BUTTON -- -- -- --  */}
             <div className="frcl-ahf-button-container" onClick={handleClick}>
               <Button
