@@ -24,6 +24,7 @@ export function GetYourTicketCard() {
             #734 | Draw: Dec 1, 2022, 1:00 PM
           </div>
         </div>
+
         {/* ----BODY--------------------- */}
         <div className="gytc-body-container">
           <div className="gytc-body-sub-container">
@@ -56,12 +57,8 @@ export function GetYourTicketCard() {
                 />
               </div>
             </div>
-            {/* --   --   --   --   --   --    */}
           </div>
-
-          {/* -------- */}
-          {/* -------- */}
-
+          {/* --   --   --   --   --   --    */}
           <div
             className={`hidden-section-body-row ${showDetails && "active"}`}
             style={{ display: showDetails ? "block" : "none" }}
@@ -86,32 +83,32 @@ export function GetYourTicketCard() {
                 // matches_data_amount_up={"~$7,197"}
                 matches_data_cakes_number={"2,194 CAKE"}
                 matches_data_amount_down={"~$7,197"}
-                matches_data_cake_each={"1.60 CAKE each"}
-                matches_winning_tickets={"449 Winning Tickets"}
+                // matches_data_cake_each={"1.60 CAKE each"}
+                // matches_winning_tickets={"449 Winning Tickets"}
               />
               <MatchesDatas
                 matches_data_title={"Match first 3"}
                 // matches_data_amount_up={"~$8,337"}
                 matches_data_cakes_number={"894 CAKE"}
                 matches_data_amount_down={"~$7,197"}
-                matches_data_cake_each={"6.85 CAKE each"}
-                matches_winning_tickets={"965 Winning Tickets"}
+                // matches_data_cake_each={"6.85 CAKE each"}
+                // matches_winning_tickets={"965 Winning Tickets"}
               />
               <MatchesDatas
                 matches_data_title={"Match first 1"}
                 // matches_data_amount_up={"~$17,197"}
                 matches_data_cakes_number={"6194 CAKE"}
                 matches_data_amount_down={"~$7,197"}
-                matches_data_cake_each={"3.20 CAKE each"}
-                matches_winning_tickets={"429 Winning Tickets"}
+                // matches_data_cake_each={"3.20 CAKE each"}
+                // matches_winning_tickets={"429 Winning Tickets"}
               />
               <MatchesDatas
                 matches_data_title={"Match first 1"}
                 // matches_data_amount_up={"~$3,137"}
                 matches_data_cakes_number={"2,194 CAKE"}
                 matches_data_amount_down={"~$7,197"}
-                matches_data_cake_each={"456.78 CAKE each"}
-                matches_winning_tickets={"1 Winning Tickets"}
+                // matches_data_cake_each={"456.78 CAKE each"}
+                // matches_winning_tickets={"1 Winning Tickets"}
               />
               <MatchesDatas
                 matches_data_title={"Match first 2"}
@@ -151,7 +148,6 @@ export function GetYourTicketCard() {
                 color: "rgb(114, 239, 255)",
                 textDecoration: "none",
               }}
-              // onClick={handleClick}
             >
               <FaAngleDown />
             </Button>
@@ -162,19 +158,3 @@ export function GetYourTicketCard() {
     </section>
   );
 }
-
-// // CREARE UN DIV COSI:
-// {<div></div> }
-// tra le graffe dove posso fare il conditional rendering
-// vedere il link su KEEP PERSONALE
-
-/* <div className="gytc-footer-btn">
-            Details
-            <a href="#" onClick={() => setShowDetails(!showDetails)}>
-              <svg width="32" height="32" viewBox="0 0 38 38">
-                <g fill="aqua">
-                  <path d={svgPath} />
-                </g>
-              </svg>
-            </a>
-          </div> */

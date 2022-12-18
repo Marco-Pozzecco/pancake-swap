@@ -1,7 +1,3 @@
-* {
-  font-family: kanit, sans-serif;
-}
-
 .gytc-main-container {
   width: 754px;
   height: auto;
@@ -104,11 +100,6 @@
             }
           }
         }
-
-        // .gytcsbi-a {
-        // }
-        // .gytcsbi-b {
-        // }
       }
     }
 
@@ -130,7 +121,6 @@
       .gytc-fsc-datas-container {
         padding: 24px;
         background-color: rgb(8, 6, 11);
-        // display: none; // TOGLIERE QUESTO PER FAR APPARIRE I DATI----------------------------------------------
 
         .gytc-fsc-datas-description-box {
           width: 100%;
@@ -149,7 +139,7 @@
           display: grid;
           grid-template-columns: 1fr 1fr 1fr 1fr;
           grid-template-rows: auto;
-          flex-wrap: wrap; //  Questo necessita essendo gia grid??? controllare quando inserisco i componenti
+          flex-wrap: wrap;
           row-gap: 16px;
         }
       }

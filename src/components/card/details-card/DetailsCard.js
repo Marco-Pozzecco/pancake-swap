@@ -4,7 +4,6 @@ import { Button } from "../../buttons/Button";
 import { FaAngleDown } from "react-icons/fa";
 
 export function DetailsCard(props) {
-  // METTERE QUI LA LOGICA DEL BOTTONE(PER APRIRE E PER CAMBIARE TESTO, VEDI HPV FILM)
   const [showDetails1, setShowDetails1] = useState(false);
   const [showDetails2, setShowDetails2] = useState(false);
   const [showDetails3, setShowDetails3] = useState(false);

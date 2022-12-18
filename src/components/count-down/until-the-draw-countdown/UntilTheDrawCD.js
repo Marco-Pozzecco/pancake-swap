@@ -20,7 +20,6 @@ export function UntilTheDrawCD(props) {
       const minutes = Math.floor((diff / 60) % 60);
 
       const seconds = Math.floor(diff % 60);
-      // -------------------------------------------------------------------------------------------
 
       setSecondi(seconds);
       setMinuti(minutes);
@@ -36,31 +35,21 @@ export function UntilTheDrawCD(props) {
           <h2 className="utd-cd-item utd-cd-number">
             {giorni.toString().padStart(2, "0")}
           </h2>
-          <h2 className={"utd-cd-item utd-cd-time" + props.utd_cd_color_items}>
-            d
-          </h2>
-          <h2
-            className={"utd-cd-item utd-cd-number" + props.utd_cd_color_items}
-          >
+          <h2 className="utd-cd-item utd-cd-time">d</h2>
+          <h2 className="utd-cd-item utd-cd-number">
             {ore.toString().padStart(2, "0")}
           </h2>
-          <h2 className={"utd-cd-item utd-cd-time" + props.utd_cd_color_items}>
-            h
-          </h2>
-          <h2
-            className={"utd-cd-item utd-cd-number" + props.utd_cd_color_items}
-          >
+          <h2 className="utd-cd-item utd-cd-time">h</h2>
+          <h2 className="utd-cd-item utd-cd-number">
             {minuti.toString().padStart(2, "0")}
           </h2>
-          <h2 className={"utd-cd-item utd-cd-time" + props.utd_cd_color_items}>
-            m
-          </h2>
+          <h2 className="utd-cd-item utd-cd-time">m</h2>
           {/* <h2
-            className={"utd-cd-item utd-cd-number" + props.utd_cd_color_items}
+            className="utd-cd-item utd-cd-number"
           >
             {secondi.toString().padStart(2, "0")}
           </h2> */}
-          {/* <h2 className={"utd-cd-item utd-cd-time" + props.utd_cd_color_items}>
+          {/* <h2 className="utd-cd-item utd-cd-time">
             s
           </h2> */}
         </div>

@@ -5,7 +5,6 @@ export function DataTextGraph(props) {
   return (
     <div className="dtg-main-container">
       <div className="dtg-sub-container">
-        {/* --------------- */}
         <div className="dtg-text-style">{props.dtg_introduction}</div>
         {/* --------------- */}
         <h2 className="dtg-titles-style">{props.dtg_sub_title_a}</h2>
