@@ -283,15 +283,62 @@ export function FinishedRoundCardLotteryAH(props) {
                   </div>
                   {/* ----------------------DATA COMPONENT CONTAINER------------------------------ */}
                   <div className="frcl-ahf-sc-main-data-components-wrapper">
-                    <div>data</div>
-                    <div>data</div>
-                    <div>data</div>
-
-                    <div>data</div>
-                    <div>data</div>
-                    <div>data</div>
-                    <div>data</div>
-                    <div>data</div>
+                    <MatchesDatas
+                      matches_data_title={"Match first 1"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cakes_number={"2,194 CAKE"}
+                      matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"1.60 CAKE each"}
+                      matches_winning_tickets={"449 Winning Tickets"}
+                    />
+                    <MatchesDatas
+                      matches_data_title={"Match first 2"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cakes_number={"894 CAKE"}
+                      matches_data_amount_down={"~$8,337"}
+                      matches_data_cake_each={"6.85 CAKE each"}
+                      matches_winning_tickets={"965 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Match first 3"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cakes_number={"6194 CAKE"}
+                      matches_data_amount_down={"~$17,197"}
+                      matches_data_cake_each={"3.20 CAKE each"}
+                      matches_winning_tickets={"429 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Match first 4"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cakes_number={"2,194 CAKE"}
+                      matches_data_amount_down={"~$3,137"}
+                      matches_data_cake_each={"456.78 CAKE each"}
+                      matches_winning_tickets={"1 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Match first 5"}
+                      matches_data_amount_down={"~$1,974"}
+                      matches_data_cakes_number={"2,194 CAKE"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"81.87 CAKE each"}
+                      matches_winning_tickets={"35 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Match all"}
+                      matches_data_amount_down={"~$4,169"}
+                      matches_data_cakes_number={"919 CAKE"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cake_each={"13.93 CAKE each"}
+                      matches_winning_tickets={"2 Winning Tickets"}
+                    />{" "}
+                    <MatchesDatas
+                      matches_data_title={"Burn"}
+                      // matches_data_amount_down={"~$7,197"}
+                      matches_data_cakes_number={"2,194 CAKE"}
+                      matches_data_amount_down={"~$7,197"}
+                      // matches_data_cake_each={"60 CAKE each"}
+                      // matches_winning_tickets={"4 Winning Tickets"}
+                    />
                   </div>
                 </div>
               </div>
