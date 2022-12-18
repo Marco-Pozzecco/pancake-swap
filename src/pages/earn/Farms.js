@@ -9,19 +9,23 @@ import { FarmCardRow } from "../../components/card/farm-card/FarmCardRow";
 import data from "../../_data/scraper/scraperResult.json";
 
 export function Farms() {
-  const [fillfcc, setFillfcc] = useState("gray");
+  const [fillfcc, setFillfcc] = useState("#1fc7d4");
   const [fillftc, setFillftc] = useState("gray");
+
+  const [view, setView] = useState('grid');
 
   const [farmsCard, setFarmsCards] = useState(data);
 
   async function fcclickHandle() {
     setFillftc("gray");
     setFillfcc("#1fc7d4");
+    setView('grid')
   }
 
   async function ftclickHandle() {
     setFillfcc("gray");
     setFillftc("#1fc7d4");
+    setView('table')
   }
 
   function handleSearch (e) {
@@ -138,12 +142,14 @@ export function Farms() {
       </div>
       <div className="farmCardsArea">
         <div className="container">
-          {farmsCard.map((card, index) => (
-            <FarmCardRow data={card} idx={index} />
-          ))}
+          {farmsCard.map((card, index) => {
+            if (view == "grid") {
+              return <FarmCard data={card} idx={index} />
+            } else if (view === "table") {
+              return <FarmCardRow data={card} idx={index} />
+            }
+          })}   
         </div>
-
-
       </div>
     </>
   );
