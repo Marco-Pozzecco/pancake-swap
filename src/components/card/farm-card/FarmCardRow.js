@@ -1,4 +1,5 @@
 import React from "react";
+import { Boosted } from "../../buttons/Boosted";
 import { Button } from "../../buttons/Button";
 import { ConnectWalletBtn } from "../../buttons/ConnectWalletBtn";
 import { Core } from "../../buttons/Core";
@@ -70,7 +71,7 @@ export function FarmCardRow(props) {
               if (text === "Core") {
                 return <Core />
               } else if (text === "Boosted") {
-                return <p>Boosted!</p>
+                return <Boosted />
               }
             })}
           </div>
