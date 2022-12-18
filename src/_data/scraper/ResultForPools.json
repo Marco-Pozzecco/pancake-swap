@@ -12,9 +12,9 @@
         "locked APR": "Up to 57.91%",
         "autolocked": true,
         "manual": false,  
-        "total-staked": "246,963,279 CAKE",
-        "total-locked": "193,394,020 CAKE",
-        "lock-duration": "42 weeks",
+        "totalstaked": "246,963,279 CAKE",
+        "totallocked": "193,394,020 CAKE",
+        "lockduration": "42 weeks",
         "fee": "0~2%",
         "tutorial": true
     },
@@ -30,10 +30,10 @@
         "autolocked": false,
         "apr": "37.98%",
         "manual": true,  
-        "total-staked": "978,221 CAKE",
-        "max-staked": "100 CAKE",
-        "max-stakelimit": "52,010 blocks",
-        "ends-in": "3,363,997 Blocks",
+        "totalstaked": "978,221 CAKE",
+        "maxstaked": "100 CAKE",
+        "maxstakelimit": "52,010 blocks",
+        "endsin": "3,363,997 Blocks",
         "website": true
     },
     {
@@ -48,8 +48,8 @@
         "autolocked": false,
         "apr": "5.80%",
         "manual": true,  
-        "total-staked": "5,844,685 CAKE",
-        "ends-in": "1,477,601 Blocks",
+        "totalstaked": "5,844,685 CAKE",
+        "endsin": "1,477,601 Blocks",
         "website": true
     },
     {
@@ -64,8 +64,8 @@
         "autolocked": false,
         "apr": "6.06%",
         "manual": true,  
-        "total-staked": "4,987,916 CAKE",
-        "ends-in": "1,976,920 Blocks",
+        "totalstaked": "4,987,916 CAKE",
+        "endsin": "1,976,920 Blocks",
         "website": true
     }
 ]

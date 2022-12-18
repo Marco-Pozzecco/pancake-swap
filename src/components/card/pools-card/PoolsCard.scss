@@ -1,0 +1,266 @@
+@import url("../../../abstracts/_theme.scss");
+
+.earn-cardpo {
+  border: 1px solid violet;
+  background-color: var(--colors-backgroundAlt);
+  width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  border-color: var(--colors-cardBorder);
+}
+
+.cardpo-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.token3 {
+  z-index: 1;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  left: 50px;
+  top: -4px;
+}
+
+.token4 {
+  position: relative;
+  left: -8px;
+  top: -10px;
+  width: 50px;
+  height: 50px;
+}
+
+.cardpo-fi-title {
+  font-size: 9px;
+  text-align: right;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.cardpo-body-apr {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-primary);
+}
+
+.cardpo-fi-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardpo-details {
+  border-top: 1px solid var(--colors-cardBorder);
+  width: 113%;
+  margin-left: 0px;
+}
+
+.Poolsconnectwallet {
+  padding: 16px !important;
+  font-size: 15px !important;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: var(--text-accent-alt);
+  color: var(--colors-invertedContrast);
+  z-index: 0;
+}
+.PoolCardsArea {
+  position: relative;
+  z-index: -2;
+  background-color: var(--background-primary);
+  .container {
+    width: 1200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    margin-left: 12%;
+    .earn-cardpo {
+      margin: 1rem;
+      .cardpo-fi-details {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    .earn-cardpo-border-animated {
+      position: relative;
+      border: none;
+      .border-animated {
+        width: 101.2%;
+        height: 100.8%;
+        padding: 10px;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+
+        animation: earnCardGradient 3s ease infinite;
+        z-index: -1;
+        border-radius: 19px;
+        display: block;
+        left: -2.6px;
+        top: -2px;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.pools-sizes2 {
+  display: flex;
+  font-size: 13px;
+}
+
+.pools-sizes {
+  display: flex;
+  font-size: 20px;
+}
+
+.apr-value {
+  display: flex;
+  gap: 5px;
+  color: var(--status-success);
+}
+
+.aprsvg {
+  fill: var(--text-primary);
+}
+
+.apr-value2 {
+  text-decoration: line-through;
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+.DetailsPool {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: var(--text-accent-alt);
+  fill: var(--text-accent-alt);
+}
+
+.TotalStaked {
+  display: flex;
+  margin-top: 8px;
+  justify-content: space-between;
+  color: var(--text-primary);
+}
+
+.LiquidityPools {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-primary);
+}
+
+.DetailsClosed {
+  display: none;
+}
+
+.DetailsOpen {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.PoolsLink {
+  display: flex;
+  margin-top: 8px;
+  color: var(--text-accent-alt);
+  fill: var(--text-accent-alt);
+}
+
+@keyframes earnCardGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.earn-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+
+  padding: 20px 10px;
+
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+
+  &:first-child {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  .cardpo-col-1 {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+
+    .token1 {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      top: -15px;
+      right: 5px;
+    }
+
+    .token2 {
+      position: relative;
+      left: -15px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .cardpo-col-2 {
+    display: flex;
+    flex-direction: row;
+
+    .cardpo-fi-details {
+      width: 250px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  .cardpo-col-3 {
+  }
+
+  .cardpo-col-4 {
+    .apr {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .chip {
+    .multiplier-title {
+    }
+
+    .multiplier-value {
+    }
+  }
+}
+.cardpo-details {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-secondary);
+
+  width: 100%;
+}
