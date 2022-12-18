@@ -137,7 +137,7 @@ export function Farms() {
       <div className="farmCardsArea">
         <div className="container">
           {farmsCard.map((card, index) => (
-            <FarmCard data={card} idx={index} />
+            <FarmCardRow data={card} idx={index} />
           ))}
         </div>
 
