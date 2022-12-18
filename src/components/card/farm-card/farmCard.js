@@ -66,14 +66,13 @@ export function FarmCard(props) {
               {data.financialInstrument && <h1>{data.financialInstrument}</h1>}
             </div>
             <div className="card-fi-details">
-              {data.labels.text.map((text, idx) => (
-                <div className={`chip ${text.toLowerCase()}`}>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: data.labels.svg[idx] }}
-                  />
-                  {text}
-                </div>
-              ))}
+              {data.labels.text.map((text) => {
+                if (text === "Core") {
+                  return <Core />
+                } else if (text === "Boosted") {
+                  return <Boosted />
+                }
+              })}
               <div className="chip multiplier">{data.multiplier}</div>
             </div>
           </div>
