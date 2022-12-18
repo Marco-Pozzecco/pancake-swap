@@ -359,3 +359,9 @@
     }
   }
 }
+.card-details {
+  display: flex;
+  background-color: var(--background-secondary);
+
+  width: 100%;
+}

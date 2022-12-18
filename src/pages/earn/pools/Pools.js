@@ -43,11 +43,6 @@ export function Pools() {
             type="search"
             className="PoolsInput"
             placeholder="Search Pools"
-            onChange={(e) => {
-              const PoolsFilteredIdx = PoolsCard.map(x => x.financialInstrument ? x.financialInstrument[0].split('-').map(y => y.toLowerCase().includes(e.target.value.toLowerCase())).some(x => x === true) : null);
-              setPoolsCards([...PoolsCard.filter((x, idx) => PoolsFilteredIdx[idx])])
-            }}
-          // 
           />
         </div>
       </div>
