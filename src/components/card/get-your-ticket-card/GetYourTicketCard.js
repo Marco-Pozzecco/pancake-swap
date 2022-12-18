@@ -83,32 +83,32 @@ export function GetYourTicketCard() {
                 // matches_data_amount_up={"~$7,197"}
                 matches_data_cakes_number={"2,194 CAKE"}
                 matches_data_amount_down={"~$7,197"}
-                matches_data_cake_each={"1.60 CAKE each"}
-                matches_winning_tickets={"449 Winning Tickets"}
+                // matches_data_cake_each={"1.60 CAKE each"}
+                // matches_winning_tickets={"449 Winning Tickets"}
               />
               <MatchesDatas
                 matches_data_title={"Match first 3"}
                 // matches_data_amount_up={"~$8,337"}
                 matches_data_cakes_number={"894 CAKE"}
                 matches_data_amount_down={"~$7,197"}
-                matches_data_cake_each={"6.85 CAKE each"}
-                matches_winning_tickets={"965 Winning Tickets"}
+                // matches_data_cake_each={"6.85 CAKE each"}
+                // matches_winning_tickets={"965 Winning Tickets"}
               />
               <MatchesDatas
                 matches_data_title={"Match first 1"}
                 // matches_data_amount_up={"~$17,197"}
                 matches_data_cakes_number={"6194 CAKE"}
                 matches_data_amount_down={"~$7,197"}
-                matches_data_cake_each={"3.20 CAKE each"}
-                matches_winning_tickets={"429 Winning Tickets"}
+                // matches_data_cake_each={"3.20 CAKE each"}
+                // matches_winning_tickets={"429 Winning Tickets"}
               />
               <MatchesDatas
                 matches_data_title={"Match first 1"}
                 // matches_data_amount_up={"~$3,137"}
                 matches_data_cakes_number={"2,194 CAKE"}
                 matches_data_amount_down={"~$7,197"}
-                matches_data_cake_each={"456.78 CAKE each"}
-                matches_winning_tickets={"1 Winning Tickets"}
+                // matches_data_cake_each={"456.78 CAKE each"}
+                // matches_winning_tickets={"1 Winning Tickets"}
               />
               <MatchesDatas
                 matches_data_title={"Match first 2"}
