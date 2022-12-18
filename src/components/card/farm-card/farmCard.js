@@ -1,13 +1,10 @@
 import { elementAcceptingRef } from "@mui/utils";
 import React, { useState, useEffect } from "react";
 import { Button } from "../../buttons/Button";
-<<<<<<< HEAD
 import { ConnectWalletBtn } from "../../buttons/ConnectWalletBtn";
 import { Core } from "../../buttons/Core";
+import { Boosted } from "../../buttons/Boosted";
 
-=======
-import { ConnectWalletBtn } from "../../buttons/ConnectWalletBtn"
->>>>>>> ec215769efa4741497d29ed3fb4b92e4eeb7d3dd
 import "./FarmCard.scss";
 // Props:
 // - images => string[]
