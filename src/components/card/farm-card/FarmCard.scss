@@ -291,8 +291,8 @@
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-
-  padding: 20px 10px;
+  padding: 20px 25px;
+  
 
   background-color: var(--background-secondary);
   color: var(--text-primary);
@@ -311,6 +311,20 @@
     display: flex;
     flex-direction: row;
     width: 200px;
+
+    .card-fi-title {
+      display: flex;
+      align-items: center;
+    }
+
+    .card-fi-img {
+      display: flex;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
 
     .token1 {
       position: relative;
@@ -331,37 +345,62 @@
   .card-col-2 {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 200px;
 
     .card-fi-details {
-      width: 250px;
+      width: 100%;
       display: flex;
       flex-direction: row;
-      align-items: center;
       justify-content: flex-start;
     }
   }
 
   .card-col-3 {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 1 100px;
+
   }
 
   .card-col-4 {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 1 200px;
+
     .apr {
       display: flex;
       flex-direction: column;
     }
   }
 
-  .chip {
-    .multiplier-title {
-    }
-
-    .multiplier-value {
-    }
+  .card-col-5 {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 1 200px;
   }
-}
-.card-details {
-  display: flex;
-  background-color: var(--background-secondary);
 
-  width: 100%;
+  .card-col-6 {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 1 100px;
+  }
+
+  .card-col-7 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 1 20px;
+  }
+
+  .title {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0;
+  }
+
 }
+
+

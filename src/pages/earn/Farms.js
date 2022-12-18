@@ -9,20 +9,29 @@ import { FarmCardRow } from "../../components/card/farm-card/FarmCardRow";
 import data from "../../_data/scraper/scraperResult.json";
 
 export function Farms() {
-  const [fillfcc, setFillfcc] = useState("gray");
+  const [fillfcc, setFillfcc] = useState("#1fc7d4");
   const [fillftc, setFillftc] = useState("gray");
 
-  const [farmsCard, setFarmsCards] = useState(data);
+  const [view, setView] = useState('grid');
 
+  const [farmsCard, setFarmsCards] = useState(data);
 
   async function fcclickHandle() {
     setFillftc("gray");
     setFillfcc("#1fc7d4");
+    setView('grid')
   }
 
   async function ftclickHandle() {
     setFillfcc("gray");
     setFillftc("#1fc7d4");
+    setView('table')
+  }
+
+  function handleSearch (e) {
+    const farmsFilteredIdx = data.map(x => x.financialInstrument ? x.financialInstrument[0].split('-').map(y => y.toLowerCase().includes(e.target.value.toLowerCase())).some(x => x === true) : null);
+    
+    setFarmsCards([...data.filter((x, idx) => farmsFilteredIdx[idx])])
   }
 
   return (
@@ -126,22 +135,21 @@ export function Farms() {
             type="search"
             className="FarmsInput"
             placeholder="Search Farms"
-            onChange={(e) => {
-              const farmsFilteredIdx = FarmCard.map(x => x.financialInstrument ? x.financialInstrument[0].split('-').map(y => y.toLowerCase().includes(e.target.value.toLowerCase())).some(x => x === true) : null);
-              setFarmsCards([...FarmCard.filter((x, idx) => farmsFilteredIdx[idx])])
-            }}
+            onChange={handleSearch}
           // 
           />
         </div>
       </div>
       <div className="farmCardsArea">
         <div className="container">
-          {farmsCard.map((card, index) => (
-            <FarmCard data={card} idx={index} />
-          ))}
+          {farmsCard.map((card, index) => {
+            if (view == "grid") {
+              return <FarmCard data={card} idx={index} />
+            } else if (view === "table") {
+              return <FarmCardRow data={card} idx={index} />
+            }
+          })}   
         </div>
-
-
       </div>
     </>
   );

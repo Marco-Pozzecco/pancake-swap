@@ -18,6 +18,7 @@ export function FarmCardRow(props) {
       <svg
         viewBox="0 0 15 15"
         color="success"
+        fill="#31d0aa"
         width="20px"
         xmlns="http://www.w3.org/2000/svg"
         class="sc-4ba21b47-0 fIulHr"
@@ -78,15 +79,15 @@ export function FarmCardRow(props) {
         </div>
         
         <div className="card-col-3">
-          <div className="cake-earned-area">
-            <p className="cake-earned-paragraph">Earned</p>
+          <div className="cake-earned-area card-entry">
+            <p className="cake-earned-paragraph title">Earned</p>
             <p className="cake-earned-value">0</p>
           </div>
         </div>
 
         <div className="card-col-4">
           <div className="c-apr card-entry">
-            <p className="apr-paragraph">APR</p>
+            <p className="apr-paragraph title">APR</p>
             {data.apr && (
               <p className="apr-value">
                 <span
@@ -99,6 +100,7 @@ export function FarmCardRow(props) {
                 <svg
                   viewBox="0 0 24 24"
                   width="18px"
+                  fill="#b8add2"
                   color="text"
                   xmlns="http://www.w3.org/2000/svg"
                   class="sc-4ba21b47-0 IIbzK"
@@ -120,14 +122,14 @@ export function FarmCardRow(props) {
 
         <div className="card-col-5">
           <div className="liquidity">
-            <p className="liquidity-title">Liquidity</p>
+            <p className="liquidity-title title">Liquidity</p>
             <p className="liquidity-value">{data.liquidity}</p>
           </div>
         </div>
 
         <div className="card-col-6">
           <div className="chip multiplier">
-            <div className="multiplier-title">Multiplier</div>
+            <div className="multiplier-title title">Multiplier</div>
             <div className="multiplier-value">{data.multiplier}</div>
           </div>
         </div>
@@ -135,7 +137,7 @@ export function FarmCardRow(props) {
         <div className="card-col-7">
           <svg
                 viewBox="0 0 24 24"
-                color="text"
+                fill="whitesmoke"
                 width="20px"
                 xmlns="http://www.w3.org/2000/svg"
                 class="sc-4ba21b47-0 IIbzK"
@@ -145,12 +147,8 @@ export function FarmCardRow(props) {
         </div>
         
       </div>
-      <div className="card-details">
-        <p className="DetailsFarm">
-          Details{" "}
-          
-        </p>
-        <div className="DetailsOpen">
+
+        <div className="DetailsClosed">
           <div className="LiquidityFarms">
             <p className="TotalLiquidity">Total Liquidity:</p>
             <p>{data.liquidity}</p>
@@ -165,7 +163,7 @@ export function FarmCardRow(props) {
             See Pair Info {svglink}
           </a>
         </div>
-      </div>
+      
     </>
   );
 }
