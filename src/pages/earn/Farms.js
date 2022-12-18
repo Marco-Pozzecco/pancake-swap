@@ -3,13 +3,13 @@ import Subnav from "../../components/subnav/Subnav";
 import "./_farms.scss";
 import boosterCardImage from "../../resources/boosterCardImage.webp";
 import { FarmCard } from "../../components/card/farm-card/farmCard";
-import FarmCard from "../../_data/scraper/scraperResult.json";
+import data from "../../_data/scraper/scraperResult.json";
 
 export function Farms() {
   const [fillfcc, setFillfcc] = useState("gray");
   const [fillftc, setFillftc] = useState("gray");
 
-  const [farmsCard, setFarmsCards] = useState(FarmCard);
+  const [farmsCard, setFarmsCards] = useState(data);
 
 
   async function fcclickHandle() {

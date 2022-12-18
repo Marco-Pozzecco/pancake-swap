@@ -41,7 +41,7 @@ export function EarnCard(props) {
   return (
     <>
       <div
-        className={`earn-card ${
+        className={`earn-row ${
           parseInt(props.idx) < 3 && "earn-card-border-animated"
         }`}
       >
