@@ -3,10 +3,14 @@
 .FarmsPageTop {
   display: flex;
   width: 100%;
-  background-color: var(--gradient-bubblegum);
+  background: var(--temporary-bubblegum);
+  background: var(--gradient-bubblegum);
   justify-content: center;
   flex-wrap: wrap;
   gap: 10%;
+  height: 100%;
+  padding: 10px;
+  z-index: -1;
 }
 
 .FarmsContainer1 {
