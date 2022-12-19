@@ -234,6 +234,123 @@
           }
         }
       }
+
+      // ########################################################################
+      // ########################################################################
+
+      .ppcb-card-sub-container-2 {
+        width: 100%;
+        height: auto;
+      }
+      // .ppcc-sc-bottom-2 {
+      //   height: auto;
+      // }
+
+      //Top container seconda card
+      .ppcb-csc-2-top {
+        width: 100%;
+        height: auto;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        .ppcb-csc2-t {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .ppcb-csc-2-top-a {
+          width: 100%;
+
+          .ppcb-csc-2-top-a-svg-box {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .ppcb-csc-2-top-b {
+          font-size: 16px;
+          margin: 16px 0;
+          color: #f4eeff;
+        }
+        .ppcb-csc-2-top-c {
+          font-size: 20px;
+
+          & :nth-child(1) {
+            width: 100%;
+            color: black;
+          }
+        }
+      }
+
+      //Bottom container seconda card
+      .ppcb-csc-2-bottom {
+        background-color: rgb(59, 63, 82);
+        padding: 16px 24px;
+
+        .ppcb-csc-2-bottom-a {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+
+          .ppcb-csc2b-a-child {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .ppcb-csc2b-a-child-a {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: flex-end;
+
+              & :nth-child(2) {
+                margin-left: 4px;
+              }
+
+              .ppcb-csc2b-aca-a {
+                color: rgb(182, 173, 207);
+                font-weight: 600;
+                line-height: 1.5;
+                text-transform: uppercase;
+                font-size: 12px;
+              }
+              .ppcb-csc2b-aca-b {
+                color: rgb(147, 108, 247);
+                font-weight: 600;
+                line-height: 1.5;
+                text-transform: uppercase;
+                margin-left: 4px;
+                font-size: 12px;
+              }
+            }
+
+            .ppcb-csc2b-a-child-b {
+              color: rgb(244, 238, 255);
+              font-weight: 600;
+              line-height: 1.5;
+              font-size: 16px;
+            }
+          }
+        }
+      }
     }
   }
 }
