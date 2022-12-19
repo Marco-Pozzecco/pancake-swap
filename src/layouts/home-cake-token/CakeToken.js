@@ -22,16 +22,12 @@ export function CakeToken() {
         let response = await fetch(`${baseURL}coins/pancakeswap-token?tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=true`);
         let data = await response.json();
         setToken(data);
-        console.log(data);
     }
-    
-    useEffect(() => {
-        getPancakeSwapData();
-    }, [])
 
     useEffect(() => {
+        getPancakeSwapData();
         const intervalID = setInterval(() => getPancakeSwapData(), 6000);
-        return clearInterval(intervalID);
+        return () => clearInterval(intervalID);
     }, []) 
 
     return (

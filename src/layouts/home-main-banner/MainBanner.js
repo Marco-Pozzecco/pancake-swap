@@ -17,9 +17,9 @@ export function MainBanner() {
         bannerIdx = 0;
         setBannerIndex(0);
       }
-
-      return () => clearInterval(intervalID)
     }, 5000);
+    
+    return () => clearInterval(intervalID)
   }, []);
 
   return (
