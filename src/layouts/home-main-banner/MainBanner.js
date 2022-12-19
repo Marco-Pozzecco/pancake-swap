@@ -10,16 +10,18 @@ export function MainBanner() {
   React.useEffect(() => {
     let bannerIdx = 0;
 
-    window.setInterval(() => {
+    const intervalID = window.setInterval(() => {
       bannerIdx += 1;
-      console.log(bannerIndex);
       if (bannerIdx < 3) setBannerIndex(bannerIdx);
       else {
         bannerIdx = 0;
         setBannerIndex(0);
       }
     }, 5000);
+    
+    return () => clearInterval(intervalID)
   }, []);
+
   return (
     <section className="main-banner-container">
       <div className="main-banner-sub-container">
