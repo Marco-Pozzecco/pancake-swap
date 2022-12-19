@@ -5,7 +5,7 @@ import winIcon from "../../resources/home/responsive-navbar/win.svg";
 import earnIcon from "../../resources/home/responsive-navbar/earn-icon.svg";
 import nftIcon from "../../resources/home/responsive-navbar/nft.svg";
 import dotIcon from "../../resources/home/responsive-navbar/dot.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import exitIcon from "../../resources/home/cake/exit-icon.svg";
 
 export function ResponsiveNavbar() {
@@ -117,15 +117,15 @@ export function ResponsiveNavbar() {
                   <NavLink to="leaderboard">Leaderboard</NavLink>
                 </li>
                 <li>
-                  <a href="https://medium.com/pancakeswap" target="blank">
+                  <Link to="https://medium.com/pancakeswap" target="blank">
                     Blog
-                  </a>
+                  </Link>
                   <img src={exitIcon} alt="exit icon"></img>
                 </li>
                 <li>
-                  <a href="https://docs.pancakeswap.finance" target="blank">
+                  <Link to="https://docs.pancakeswap.finance" target="blank">
                     Docs
-                  </a>
+                  </Link>
                   <img src={exitIcon} alt="exit icon"></img>
                 </li>
               </ul>
