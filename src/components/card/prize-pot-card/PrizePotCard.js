@@ -1,17 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import "./_prize-pot-card.scss";
 import { ConnectWalletBtn } from "../../buttons/ConnectWalletBtn";
 
 export function PrizePotCard() {
+  const [show, setShow] = useState(true);
+
+  const deposit = () => {
+    setShow(true);
+  };
+
+  const claim = () => {
+    setShow(false);
+  };
+
   return (
     <section className="ppc-main-container-wrapper">
       <section className="ppc-main-container">
         <section className="ppc-sub-container">
           {/* --- TOP HEADER-(Buttons) --- */}
-          <section className="ppc-buttons-top-container">
-            <button className="ppc-buttons-a">Deposit</button>
-            <button className="ppc-buttons-b">Claim</button>
-          </section>
+          {show && (
+            <section className="ppc-buttons-top-container">
+              <button className="ppc-buttons-a" onClick={deposit}>
+                Deposit
+              </button>
+
+              <button className="ppc-buttons-b" onClick={claim}>
+                Claim
+              </button>
+            </section>
+          )}
+
+          {!show && (
+            <section className="ppc-buttons-top-container">
+              <button className="ppc-buttons-b" onClick={deposit}>
+                Deposit
+              </button>
+
+              <button className="ppc-buttons-a" onClick={claim}>
+                Claim
+              </button>
+            </section>
+          )}
 
           {/* --- CARD main CONTAINER 1 --- */}
           <section className="ppc-card-main-container">
@@ -35,47 +64,179 @@ export function PrizePotCard() {
               {/* ----- */}
             </div>
             {/* -- BOTTOM Container -- */}
-            <div className="ppcb-card-sub-container ppcc-sc-bottom">
-              {/* -- Datas wrapper -- */}
-              <div className="ppcb-csc-datas-wrapper">
-                {/* -- Display -- */}
-                <div className="ppcb-csc-data-display">
-                  <div className="ppcb-csc-data-display-content">
-                    <div className="ppcb-csc-dd-title">
-                      <span>YOUR</span>
-                      <span>DEPOSIT</span>
+            {show && (
+              <div className="ppcb-card-sub-container ppcc-sc-bottom">
+                {/* -- Datas wrapper -- */}
+                <div className="ppcb-csc-datas-wrapper">
+                  {/* -- Display -- */}
+                  <div className="ppcb-csc-data-display">
+                    <div className="ppcb-csc-data-display-content">
+                      <div className="ppcb-csc-dd-title">
+                        <span>YOUR</span>
+                        <span>DEPOSIT</span>
+                      </div>
+                      <div className="ppcb-csc-dd-amount">0.000</div>
+                      <div className="ppcb-csc-dd-sub-amount">~0.000</div>
                     </div>
-                    <div className="ppcb-csc-dd-amount">0.000</div>
-                    <div className="ppcb-csc-dd-sub-amount">~0.000</div>
+                  </div>
+                  {/* --DATA NUMBERS-- */}
+                  <div className="ppcb-csc-datas-spec-wrapper">
+                    <div className="ppcb-csc-datas-specs-row">
+                      <div className="ppcb-csc-data-title">APY</div>
+                      <div className="ppcb-csc-data-number">13.41%</div>
+                    </div>
+                    <div className="ppcb-csc-datas-specs-row">
+                      <div className="ppcb-csc-data-title">Next draw date</div>
+                      <div className="ppcb-csc-data-number">in22h34m</div>
+                    </div>
+                    <div className="ppcb-csc-datas-specs-row">
+                      <div className="ppcb-csc-data-title">
+                        Total Value Locked
+                      </div>
+                      <div className="ppcb-csc-data-number">
+                        234,881.93 CAKE
+                      </div>
+                    </div>
+                    <div className="ppcb-csc-datas-specs-row">
+                      <div className="ppcb-csc-data-title">
+                        Max. deposit cap
+                      </div>
+                      <div className="ppcb-csc-data-number">
+                        870,000.00 CAKE
+                      </div>
+                    </div>
                   </div>
                 </div>
-                {/* --DATA NUMBERS-- */}
-                <div className="ppcb-csc-datas-spec-wrapper">
-                  <div className="ppcb-csc-datas-specs-row">
-                    <div className="ppcb-csc-data-title">APY</div>
-                    <div className="ppcb-csc-data-number">13.41%</div>
-                  </div>
-                  <div className="ppcb-csc-datas-specs-row">
-                    <div className="ppcb-csc-data-title">Next draw date</div>
-                    <div className="ppcb-csc-data-number">in22h34m</div>
-                  </div>
-                  <div className="ppcb-csc-datas-specs-row">
-                    <div className="ppcb-csc-data-title">
-                      Total Value Locked
+                {/* -- Button wrapper -- */}
+                <div className="ppcb-csc-btn-wrapper">
+                  <ConnectWalletBtn type={"fullButton"} />
+                </div>
+              </div>
+            )}
+
+            {/* ################################################################################################################### */}
+
+            {!show && (
+              <div className="ppcb-card-sub-container-2">
+                <div className="ppcb-csc-2-top">
+                  <div className="ppcb-csc-2-top-a ppcb-csc2-t">
+                    <div className="ppcb-csc-2-top-a-svg-box">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="80"
+                        height="80"
+                        className="sc-4ba21b47-0 IIbzK"
+                        color="text"
+                        viewBox="0 0 72 72"
+                      >
+                        <path
+                          fill="#3C3742"
+                          d="M72 36c0 19.882-16.118 36-36 36S0 55.882 0 36 16.118 0 36 0s36 16.118 36 36z"
+                        ></path>
+                        <mask
+                          id="mask0"
+                          width="66"
+                          height="66"
+                          x="3"
+                          y="3"
+                          maskUnits="userSpaceOnUse"
+                        >
+                          <path
+                            fill="#C4C4C4"
+                            d="M68.25 36c0 17.811-14.439 32.25-32.25 32.25S3.75 53.811 3.75 36 18.189 3.75 36 3.75 68.25 18.189 68.25 36z"
+                          ></path>
+                        </mask>
+                        <g mask="url(#mask0)">
+                          <path
+                            fill="#666171"
+                            fillRule="evenodd"
+                            d="M20.993 23.265c5.136-.129 9.09 4.463 8.21 9.523l-1.52 8.757a42.362 42.362 0 018.04-.758c1.983 0 3.92.134 5.786.387l7.777-11.601a8.08 8.08 0 0111.212-2.213c4.285 2.873 4.818 8.97 1.096 12.542l-6.336 6.08c4.646 3.019 7.872 7.316 7.873 12.425v3.915c0 5.322-3.521 9.778-8.443 12.786-4.96 3.031-11.672 4.833-18.965 4.833-7.294 0-14.004-1.802-18.965-4.833-4.922-3.008-8.443-7.464-8.443-12.786v-3.915c0-3.978 1.981-7.49 5.023-10.248l-.328-16.544c-.09-4.5 3.483-8.236 7.983-8.35zm-5.376 25.886a4.347 4.347 0 01-.03-.426l-.34-17.154a5.96 5.96 0 015.802-6.069c3.722-.094 6.588 3.231 5.95 6.903l-2.102 12.111a35.39 35.39 0 012.376-.603 39.822 39.822 0 018.45-.888c2.44 0 4.798.212 7.029.608.12-.372.294-.733.522-1.074l7.87-11.74a5.843 5.843 0 018.108-1.6c3.098 2.077 3.484 6.486.793 9.069l-8.498 8.156c.717.355 1.402.733 2.05 1.133 4.51 2.78 7.296 6.606 7.296 10.83v3.915c0 8.495-11.269 15.382-25.17 15.382-13.901 0-25.17-6.887-25.17-15.382v-3.915c0-3.475 1.885-6.68 5.064-9.256z"
+                            clipRule="evenodd"
+                          ></path>
+                          <path
+                            fill="#3C3742"
+                            d="M60.893 62.322c0 8.495-11.269 15.382-25.17 15.382-13.901 0-25.17-6.887-25.17-15.382v-3.915h50.34v3.915z"
+                          ></path>
+                          <path
+                            fill="#3C3742"
+                            fillRule="evenodd"
+                            d="M27 32.405c.637-3.672-2.229-6.997-5.951-6.903a5.96 5.96 0 00-5.802 6.069l.34 17.153c.003.145.013.287.03.427-3.18 2.576-5.065 5.781-5.065 9.256 0 8.495 11.27 15.382 25.17 15.382 13.902 0 25.171-6.887 25.171-15.382 0-4.832-3.645-9.143-9.346-11.963l8.498-8.156c2.69-2.583 2.305-6.992-.793-9.07a5.843 5.843 0 00-8.107 1.6l-7.87 11.74c-.23.341-.403.703-.523 1.075a40.316 40.316 0 00-7.03-.608c-3.875 0-7.546.535-10.825 1.491L27 32.406z"
+                            clipRule="evenodd"
+                          ></path>
+                          <path
+                            fill="#666171"
+                            d="M32.087 57.288c0 2.317-1.252 4.195-2.796 4.195-1.545 0-2.797-1.878-2.797-4.195s1.252-4.195 2.797-4.195c1.544 0 2.796 1.878 2.796 4.195z"
+                          ></path>
+                          <path
+                            fill="#666171"
+                            fillRule="evenodd"
+                            d="M28.891 54.035c.57.855.959 2.1.959 3.533a1.119 1.119 0 002.237 0c0-1.812-.487-3.503-1.334-4.774-.842-1.263-2.128-2.218-3.7-2.218-1.571 0-2.857.955-3.7 2.218-.846 1.27-1.334 2.962-1.334 4.774 0 .982.143 1.923.405 2.778a1.119 1.119 0 102.14-.655 7.274 7.274 0 01-.308-2.123c0-1.432.39-2.678.96-3.533.575-.862 1.246-1.222 1.837-1.222s1.263.36 1.838 1.222zM48.188 54.035c.57.855.96 2.1.96 3.533a1.119 1.119 0 102.236 0c0-1.812-.487-3.503-1.334-4.774-.842-1.263-2.128-2.218-3.7-2.218-1.571 0-2.857.955-3.699 2.218-.847 1.27-1.335 2.962-1.335 4.774 0 .982.143 1.923.406 2.778a1.119 1.119 0 002.139-.655 7.27 7.27 0 01-.307-2.123c0-1.432.389-2.678.959-3.533.575-.862 1.247-1.222 1.837-1.222.591 0 1.263.36 1.838 1.222z"
+                            clipRule="evenodd"
+                          ></path>
+                          <path
+                            fill="#666171"
+                            d="M51.384 57.288c0 2.317-1.252 4.195-2.796 4.195-1.545 0-2.797-1.878-2.797-4.195s1.252-4.195 2.797-4.195c1.544 0 2.796 1.878 2.796 4.195zM34.022 25.946v-.676c0-.95.19-1.745.57-2.386.404-.641.938-1.27 1.602-1.888a16.823 16.823 0 011.817-1.531 7.359 7.359 0 001.46-1.354c.38-.474.57-1.032.57-1.673 0-.926-.333-1.58-.997-1.959-.641-.404-1.722-.605-3.241-.605-.997 0-1.983.13-2.956.391-.974.238-1.805.546-2.493.926v-4.808c.879-.427 1.911-.771 3.098-1.032 1.211-.261 2.529-.392 3.953-.392 2.754 0 4.856.605 6.304 1.816 1.448 1.187 2.172 2.825 2.172 4.915 0 1.33-.273 2.41-.819 3.24-.546.808-1.341 1.639-2.386 2.494a64.494 64.494 0 00-2.208 1.923c-.594.522-.89 1.234-.89 2.136v.463h-5.556zm-.25 6.304v-4.131h6.02v4.13h-6.02z"
+                          ></path>
+                        </g>
+                        <path
+                          fill="#666171"
+                          fillRule="evenodd"
+                          d="M71.984 37.09l-2.25-.067a34.427 34.427 0 000-2.046l2.25-.067a36.553 36.553 0 010 2.18zm-.13-4.35l-2.24.201a33.84 33.84 0 00-.244-2.023l2.225-.336c.108.712.194 1.432.26 2.158zm-.649-4.299l-2.2.47a33.518 33.518 0 00-.486-1.979l2.167-.603c.194.696.367 1.4.52 2.112zm-1.165-4.188l-2.127.733a33.459 33.459 0 00-.723-1.905l2.078-.861c.277.667.535 1.345.772 2.033zm-1.665-4.016l-2.023.987a33.636 33.636 0 00-.949-1.805l1.96-1.107a35.9 35.9 0 011.012 1.925zm-2.14-3.785l-1.888 1.223a33.91 33.91 0 00-1.16-1.677l1.811-1.335c.43.583.843 1.18 1.237 1.789zm-2.579-3.5l-1.728 1.441a34.012 34.012 0 00-1.353-1.526l1.638-1.542c.497.527.978 1.07 1.443 1.627zm-2.98-3.165l-1.543 1.638a33.95 33.95 0 00-1.526-1.353l1.441-1.728c.557.465 1.1.946 1.627 1.443zm-3.34-2.785l-1.334 1.81a33.881 33.881 0 00-1.677-1.159l1.223-1.888c.61.394 1.206.807 1.789 1.237zm-3.648-2.364l-1.107 1.959c-.59-.334-1.192-.65-1.805-.95l.987-2.022c.653.319 1.295.657 1.925 1.013zM49.78 2.732L48.92 4.81c-.626-.26-1.261-.5-1.905-.723l.733-2.127c.688.237 1.366.495 2.033.772zm-4.109-1.418l-.603 2.168a33.502 33.502 0 00-1.98-.487l.47-2.2c.713.152 1.417.325 2.113.519zM41.418.405l-.336 2.225a33.8 33.8 0 00-2.023-.243L39.26.146c.726.065 1.446.151 2.158.259zM37.09.016a36.67 36.67 0 00-2.18 0l.067 2.25a34.427 34.427 0 012.046 0l.067-2.25zm-4.35.13l.201 2.24a33.8 33.8 0 00-2.023.244L30.582.405a36.048 36.048 0 012.158-.26zM28.44.795l.47 2.2c-.667.143-1.327.305-1.979.487l-.603-2.168c.696-.194 1.4-.367 2.112-.52zM24.253 1.96l.733 2.127c-.644.222-1.279.464-1.905.723l-.861-2.078a35.765 35.765 0 012.033-.772zm-4.016 1.665l.987 2.023c-.613.298-1.214.615-1.805.949l-1.107-1.96c.63-.355 1.272-.693 1.925-1.012zm-3.785 2.14l1.223 1.888c-.571.37-1.13.757-1.677 1.16l-1.335-1.811c.583-.43 1.18-.843 1.789-1.237zm-3.5 2.579l1.441 1.728c-.522.436-1.03.887-1.526 1.353l-1.542-1.638c.527-.497 1.07-.978 1.627-1.443zm-3.165 2.98l1.638 1.543a33.95 33.95 0 00-1.353 1.526l-1.728-1.441c.465-.557.946-1.1 1.443-1.627zm-2.785 3.34l1.81 1.334c-.402.547-.789 1.106-1.159 1.677l-1.888-1.223c.394-.61.807-1.206 1.237-1.789zm-2.364 3.648l1.959 1.107c-.334.59-.65 1.192-.95 1.805l-2.022-.987c.319-.653.657-1.295 1.013-1.925zM2.732 22.22l2.078.861c-.26.626-.5 1.261-.723 1.905l-2.127-.733c.237-.688.495-1.366.772-2.033zm-1.418 4.109l2.168.603a33.502 33.502 0 00-.487 1.98l-2.2-.47c.152-.713.325-1.417.519-2.113zm-.909 4.253l2.225.336a33.8 33.8 0 00-.243 2.023L.146 32.74c.065-.726.151-1.446.259-2.158zM.016 34.91a36.67 36.67 0 000 2.18l2.25-.067a34.427 34.427 0 010-2.046l-2.25-.067zm.13 4.35l2.24-.201a33.8 33.8 0 00.244 2.023l-2.225.336a36.047 36.047 0 01-.26-2.158zm.649 4.299l2.2-.47c.143.667.305 1.327.487 1.979l-2.168.603c-.194-.696-.367-1.4-.52-2.112zm1.165 4.189l2.127-.734c.222.644.464 1.279.723 1.904l-2.078.862a35.765 35.765 0 01-.772-2.032zm1.665 4.015l2.023-.986c.298.612.615 1.213.949 1.804l-1.96 1.107a35.886 35.886 0 01-1.012-1.925zm2.14 3.785l1.888-1.223c.37.571.757 1.13 1.16 1.677l-1.811 1.335c-.43-.583-.843-1.18-1.237-1.789zm2.579 3.5l1.728-1.441c.436.522.887 1.03 1.353 1.526l-1.638 1.542a36.233 36.233 0 01-1.443-1.627zm2.98 3.165l1.543-1.638c.495.466 1.004.917 1.526 1.353l-1.441 1.728c-.557-.465-1.1-.946-1.627-1.443zm3.34 2.785l1.334-1.81c.547.402 1.106.789 1.677 1.159l-1.223 1.888a36.07 36.07 0 01-1.789-1.237zm3.648 2.364l1.107-1.959c.59.334 1.192.65 1.805.95l-.987 2.022a35.793 35.793 0 01-1.925-1.013zm3.908 1.906l.861-2.078c.626.26 1.261.5 1.905.723l-.733 2.127a35.72 35.72 0 01-2.033-.772zm4.109 1.418l.603-2.168c.652.182 1.312.344 1.98.487l-.47 2.2a35.703 35.703 0 01-2.113-.519zm4.253.909l.336-2.225c.668.101 1.342.182 2.023.243l-.201 2.241a36.158 36.158 0 01-2.158-.259zm4.328.389l.067-2.25a34.427 34.427 0 002.046 0l.067 2.25a36.553 36.553 0 01-2.18 0zm4.35-.13l-.201-2.24a33.84 33.84 0 002.023-.244l.336 2.225c-.712.108-1.432.194-2.158.26zm4.299-.649l-.47-2.2a33.518 33.518 0 001.979-.486l.603 2.167c-.696.194-1.4.367-2.112.52zm4.189-1.165l-.734-2.127c.644-.222 1.279-.464 1.904-.723l.862 2.078a35.72 35.72 0 01-2.032.772zm4.015-1.665l-.986-2.023a33.636 33.636 0 001.804-.949l1.107 1.96c-.63.355-1.272.693-1.925 1.012zm3.785-2.14l-1.223-1.888a33.91 33.91 0 001.677-1.16l1.335 1.811c-.583.43-1.18.843-1.789 1.237zm3.5-2.579l-1.441-1.728a34.012 34.012 0 001.526-1.353l1.542 1.638c-.527.497-1.07.978-1.627 1.443zm3.165-2.98l-1.638-1.543c.466-.495.917-1.004 1.353-1.526l1.728 1.441c-.465.557-.946 1.1-1.443 1.627zm2.785-3.34l-1.81-1.334a33.91 33.91 0 001.159-1.677l1.888 1.223a36.07 36.07 0 01-1.237 1.789zm2.364-3.648l-1.959-1.107c.334-.59.65-1.192.95-1.805l2.022.987a35.793 35.793 0 01-1.013 1.925zm1.906-3.908l-2.078-.861c.26-.626.5-1.261.723-1.905l2.127.733a35.72 35.72 0 01-.772 2.033zm1.418-4.109l-2.168-.603c.182-.652.344-1.312.487-1.98l2.2.47a35.703 35.703 0 01-.519 2.113zm.909-4.253l-2.225-.336c.101-.668.182-1.342.243-2.023l2.241.201a36.158 36.158 0 01-.259 2.158z"
+                          clipRule="evenodd"
+                        ></path>
+                      </svg>
                     </div>
-                    <div className="ppcb-csc-data-number">234,881.93 CAKE</div>
                   </div>
-                  <div className="ppcb-csc-datas-specs-row">
-                    <div className="ppcb-csc-data-title">Max. deposit cap</div>
-                    <div className="ppcb-csc-data-number">870,000.00 CAKE</div>
+                  <div className="ppcb-csc-2-top-b ppcb-csc2-t">
+                    Wallet not connected
+                  </div>
+                  <div className="ppcb-csc-2-top-c ppcb-csc2-t">
+                    <ConnectWalletBtn type={"fullButton"} />
+                  </div>
+                </div>
+                {/* ----------------- */}
+                <div className="ppcb-csc-2-bottom">
+                  <div className="ppcb-csc-2-bottom-a">
+                    {/* -- -- -- */}
+                    <div className="ppcb-csc-2-bottom-a ppcb-csc2b-a-child">
+                      <div className="ppcb-csc2b-a-child-a">
+                        <span className="ppcb-csc2b-aca-a">WEIGHTED</span>
+                        <span className="ppcb-csc2b-aca-b">AVG MULTIPLIER</span>
+                      </div>
+                      <div className="ppcb-csc2b-a-child-b">-</div>
+                    </div>
+                    {/* -- -- -- */}
+
+                    <div className="ppcb-csc-2-bottom-a ppcb-csc2b-a-child">
+                      <div className="ppcb-csc2b-a-child-a">
+                        <span className="ppcb-csc2b-aca-b">DEPOSIT</span>
+                        <span className="ppcb-csc2b-aca-a">BY COHORT</span>
+                      </div>
+                      <div className="ppcb-csc2b-a-child-b">-</div>
+                    </div>
+                    {/* -- -- -- */}
+
+                    <div className="ppcb-csc-2-bottom-a ppcb-csc2b-a-child">
+                      <div className="ppcb-csc2b-a-child-a">
+                        <span className="ppcb-csc2b-aca-b">REMAINING</span>
+                        <span className="ppcb-csc2b-aca-a">PERIOD</span>
+                      </div>
+                      <div className="ppcb-csc2b-a-child-b">-</div>
+                    </div>
+                    {/* -- -- -- */}
+
+                    <div className="ppcb-csc-2-bottom-a ppcb-csc2b-a-child">
+                      <div className="ppcb-csc2b-a-child-a">
+                        <span className="ppcb-csc2b-aca-a">TOTAL #</span>
+                        <span className="ppcb-csc2b-aca-b">WINNINGS</span>
+                      </div>
+                      <div className="ppcb-csc2b-a-child-b">-</div>
+                    </div>
+                    {/* -- -- -- */}
                   </div>
                 </div>
               </div>
-              {/* -- Button wrapper -- */}
-              <div className="ppcb-csc-btn-wrapper">
-                <ConnectWalletBtn type={"fullButton"} />
-              </div>
-            </div>
+            )}
           </section>
         </section>
       </section>
