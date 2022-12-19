@@ -9,7 +9,13 @@
   --background-perpetual-item: rgb(24, 26, 32);
 
   // gradients
-  --gradient-bubblegum: linear-gradient(139.73deg, #313d5c, #3d2a54);
+  --temporary-bubblegum: rgb(49, 61, 92);
+  --gradient-bubblegum: linear-gradient(
+    164deg,
+    rgba(49, 61, 92, 1) 0%,
+    rgba(49, 61, 92, 1) 29%,
+    rgba(49, 32, 70, 1) 80%
+  );
   --gradient-inverseBubblegum: linear-gradient(139.73deg, #3d2a54, #313d5c);
   --gradient-cardHeader: linear-gradient(166.77deg, #3b4155, #3a3045);
   --gradient-blue: linear-gradient(180deg, #00707f, #19778c);
@@ -97,6 +103,13 @@
   --background-perpetual-item: rgb(24, 26, 32);
 
   // gradients
+  --temporary-bubblegum: rgb(49, 61, 92);
+  --gradient-bubblegum: linear-gradient(
+    164deg,
+    rgba(49, 61, 92, 1) 0%,
+    rgba(49, 61, 92, 1) 29%,
+    rgba(49, 32, 70, 1) 80%
+  );
   --gradient-bubblegum: linear-gradient(139.73deg, #e5fdff, #f3efff);
   --gradient-inverseBubblegum: linear-gradient(139.73deg, #f3efff, #e5fdff);
   --gradient-cardHeader: linear-gradient(111.68deg, #f2ecf2, #e8f2f6);
