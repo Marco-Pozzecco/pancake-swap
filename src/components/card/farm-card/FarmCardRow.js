@@ -66,11 +66,11 @@ export function FarmCardRow(props) {
         
         <div className="card-col-2">
           <div className="card-fi-details">
-            {data.labels.text.map((text) => {
+            {data.labels.text.map((text, index) => {
               if (text === "Core") {
-                return <Core />
+                return <Core key={index} />
               } else if (text === "Boosted") {
-                return <Boosted />
+                return <Boosted key={index} />
               }
             })}
           </div>
