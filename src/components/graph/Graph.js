@@ -25,31 +25,17 @@ export function Graph(props) {
         price: response_fi1.prices.map(row => row[1])
       }
       // .map((price, index) => price / response_fi2.prices.map(row => row[1])[index])
-      await props.createChartFn(data);
+      graph = await props.createChartFn(data);
     }
     // API f call
     setTimeout(() => {
       fetchData();
-    }, 500)
+    }, 50)
 
     let graph;
 
-    // Creates loading.. heading while loading chart
-    const graphEl = document.querySelector(".graph");
-    const headingEl = document.createElement("h1");
-    headingEl.setAttribute('id',`${props.id}-title`);
-    headingEl.textContent = "Loading.."
-    graphEl.appendChild(headingEl);
-
-
-    return () => {
-      if (document.querySelector(`#${props.id}`)) {
-        return graph.destroy();
-      } else {
-        const graphEl = document.querySelector('.graph');
-        const headingEl = document.getElementById(`${props.id}-title`);
-        return graphEl.removeChild(headingEl);
-      }
+    return () => { 
+      return graph.destroy()
     }
   }, [props.financialInstrument, props.timeframe]);
 

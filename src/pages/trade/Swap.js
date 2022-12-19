@@ -211,9 +211,8 @@ export function Swap() {
                     // query div graph
                     const graphEl = document.querySelector(".graph");
                     // distruzione heading
-                    const headingEl =
-                      document.getElementById(`swap-graph-title`);
-                    graphEl.removeChild(headingEl);
+                    const headingEl = document.getElementById(`swap-graph-title`);
+                    if (headingEl) graphEl.removeChild(headingEl);
 
                     // creazione grafico
                     const canvasEl = document.createElement("canvas");
@@ -285,6 +284,7 @@ export function Swap() {
                     );
 
                     graph.render();
+                    return graph
                   }}
                 />
               </div>
