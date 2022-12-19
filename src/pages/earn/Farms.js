@@ -140,9 +140,9 @@ export function Farms() {
         <div className="container">
           {farmsCard.map((card, index) => {
             if (view == "grid") {
-              return <FarmCard data={card} idx={index} />
+              return <FarmCard data={card} idx={index} key={index}/>
             } else if (view === "table") {
-              return <FarmCardRow data={card} idx={index} />
+              return <FarmCardRow data={card} idx={index} key={index} />
             }
           })}   
         </div>
