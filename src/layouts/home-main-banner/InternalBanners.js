@@ -121,7 +121,7 @@ export function BannerC() {
             <picture>
               <source
                 media="(max-width: 576px)"
-                srcset="
+                srcSet="
                                 https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FIFOMobile.a93e96d8.png&w=384&q=75
                             "
               />
