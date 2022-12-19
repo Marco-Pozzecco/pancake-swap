@@ -18,14 +18,29 @@ export function PrizePotCard() {
       <section className="ppc-main-container">
         <section className="ppc-sub-container">
           {/* --- TOP HEADER-(Buttons) --- */}
-          <section className="ppc-buttons-top-container">
-            <button className="ppc-buttons-a" onClick={deposit}>
-              Deposit
-            </button>
-            <button className="ppc-buttons-b" onClick={claim}>
-              Claim
-            </button>
-          </section>
+          {show && (
+            <section className="ppc-buttons-top-container">
+              <button className="ppc-buttons-a" onClick={deposit}>
+                Deposit
+              </button>
+
+              <button className="ppc-buttons-b" onClick={claim}>
+                Claim
+              </button>
+            </section>
+          )}
+
+          {!show && (
+            <section className="ppc-buttons-top-container">
+              <button className="ppc-buttons-b" onClick={deposit}>
+                Deposit
+              </button>
+
+              <button className="ppc-buttons-a" onClick={claim}>
+                Claim
+              </button>
+            </section>
+          )}
 
           {/* --- CARD main CONTAINER 1 --- */}
           <section className="ppc-card-main-container">
