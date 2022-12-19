@@ -79,7 +79,7 @@ export function BannerB() {
         <picture>
           <source
             media="(max-width: 968px)"
-            srcset="
+            srcSet="
                         https://pancakeswap.finance/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FlotteryMobile.7ad41ede.png&w=384&q=75
                     "
           />

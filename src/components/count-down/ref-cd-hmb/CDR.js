@@ -32,21 +32,21 @@ export function CDR() {
 
   return (
     //   COUNTER Lottery
-    <div class="mb-counter-lottery">
-      <h2 class="mbcl-item mbcli-number">
+    <div className="mb-counter-lottery">
+      <h2 className="mbcl-item mbcli-number">
         {giorni.toString().padStart(2, "0")}
       </h2>
-      <h2 class="mbcl-item mbcli-time">d</h2>
-      <h2 class="mbcl-item mbcli-number">{ore.toString().padStart(2, "0")}</h2>
-      <h2 class="mbcl-item mbcli-time">h</h2>
-      <h2 class="mbcl-item mbcli-number">
+      <h2 className="mbcl-item mbcli-time">d</h2>
+      <h2 className="mbcl-item mbcli-number">{ore.toString().padStart(2, "0")}</h2>
+      <h2 className="mbcl-item mbcli-time">h</h2>
+      <h2 className="mbcl-item mbcli-number">
         {minuti.toString().padStart(2, "0")}
       </h2>
-      <h2 class="mbcl-item mbcli-time">m</h2>
-      <h2 class="mbcl-item mbcli-number">
+      <h2 className="mbcl-item mbcli-time">m</h2>
+      <h2 className="mbcl-item mbcli-number">
         {secondi.toString().padStart(2, "0")}
       </h2>
-      <h2 class="mbcl-item mbcli-time">s</h2>
+      <h2 className="mbcl-item mbcli-time">s</h2>
     </div>
   );
 }
