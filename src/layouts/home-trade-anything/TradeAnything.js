@@ -10,7 +10,7 @@ export function TradeAnything() {
     return (
         <>
             <div className="usedbyColors">
-                <svg viewBox="0 0 1660 48" preserveAspectRatio="none" color="text" width="100%" xmlns="http://www.w3.org/2000/svg" class="sc-4ba21b47-0 IIbzK"><path d="M1660 48C1139.02 46.1887 336.256 15.2453 0 0H1660V48Z"></path></svg>
+                <svg viewBox="0 0 1660 48" preserveAspectRatio="none" color="text" width="100%" xmlns="http://www.w3.org/2000/svg" className="sc-4ba21b47-0 IIbzK"><path d="M1660 48C1139.02 46.1887 336.256 15.2453 0 0H1660V48Z"></path></svg>
             </div>
             <section className="ta-trade-anything">
                 <div className="ta-wrapper">
@@ -48,7 +48,7 @@ export function TradeAnything() {
                 </div>
             </section>
             <div className="earnColors">
-                <svg viewBox="0 0 1660 48" preserveAspectRatio="none" color="text" width="100%" xmlns="http://www.w3.org/2000/svg" class="sc-4ba21b47-0 IIbzK"><path d="M-346 48C174.985 46.1887 977.744 15.2453 1314 0H-346V48Z"></path></svg>
+                <svg viewBox="0 0 1660 48" preserveAspectRatio="none" color="text" width="100%" xmlns="http://www.w3.org/2000/svg" className="sc-4ba21b47-0 IIbzK"><path d="M-346 48C174.985 46.1887 977.744 15.2453 1314 0H-346V48Z"></path></svg>
             </div>
         </>
     );
