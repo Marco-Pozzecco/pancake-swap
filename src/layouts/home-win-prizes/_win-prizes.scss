@@ -97,7 +97,6 @@ $theme-light: map.set(
   position: relative;
   overflow: hidden;
   @include flex(column);
-  // @include mq('laptop', 'desktop-wide') {
   .floating-balls {
     position: absolute;
     z-index: 1;

@@ -15,11 +15,6 @@
 // ------------------------------------------------------------
 
 @media screen and (min-width: 968px) {
-  // body {
-  //     @include flex(column);
-  //     width: 100%;
-  //     height: auto;
-
   .main-banner-container {
     @include flex();
     padding: 20px;
@@ -40,8 +35,6 @@
         /*TITOLI + IMMAGINE*/
         width: 100%;
         height: 100%;
-        // background-color: rgba(216, 230, 242, 0.349);
-        // border: 2px solid red;
         padding: 24px;
         position: absolute;
         left: 0;
@@ -50,8 +43,6 @@
           //TITOLI
           width: 100%;
           height: 100%;
-          // border: 3px solid black;
-          // background-color: rgba(55, 99, 5, 0.557);
           @include flex(column);
           justify-content: center;
           align-items: flex-start;
@@ -79,7 +70,7 @@
           background: $main-banner-orange-gradient-titles; /*linear-gradient(rgb(255, 216, 0), rgb(235, 140, 0))*/
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          -webkit-background-clip: text; /*controllare quale usare, forse vanno messi entrambi, sia con sia senza il prefisso WEBKIT*/
+          -webkit-background-clip: text;
           margin-bottom: 8px;
         }
 
@@ -100,7 +91,6 @@
 
         // STILE IMMAGINE
         .bunny-container-a {
-          // border: 3px solid yellow;
           width: 45%;
           height: 121.5%;
           position: absolute;
@@ -157,13 +147,11 @@
             }
 
             .mbcli-number {
-              // background-color: rgba(128, 255, 0, 0.485);
               font-size: 40px;
               margin: 0px 4px -4px 0px;
             }
 
             .mbcli-time {
-              // background-color: rgba(235, 131, 211, 0.279);
               font-size: 20px;
               margin: 0px 12px 0px 0px;
             }
@@ -218,7 +206,7 @@
           background: $main-banner-orange-gradient-titles; /*linear-gradient(rgb(255, 216, 0), rgb(235, 140, 0))*/
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          -webkit-background-clip: text; /*controllare quale usare, forse vanno messi entrambi, sia con sia senza il prefisso WEBKIT*/
+          -webkit-background-clip: text;
           margin-bottom: 8px;
         }
 
@@ -239,7 +227,6 @@
 
         // STILE IMMAGINE
         .bunny-container-c {
-          // border: 3px solid skyblue;
           height: 110%;
           width: 25%;
           position: absolute;
@@ -250,11 +237,9 @@
           .bc-internalwrapper-c {
             width: 100%;
             height: 100%;
-            // border: 3px solid cornsilk;
             position: relative;
 
             .bunny-container-c1 {
-              // border: 3px solid yellow;
               width: 100%;
               height: 110%;
               position: absolute;
@@ -270,7 +255,6 @@
             }
 
             .bunny-container-c2 {
-              // border: 3px solid orange;
               width: 60px;
               height: 60px;
               position: absolute;
@@ -319,18 +303,11 @@
       // }
     }
   }
-
-  // }  // <--- body
 }
 
 // ------------------------------------------------------------
 
 @media screen and (max-width: 968px) and (min-width: 576px) {
-  // body {
-  //     @include flex(column);
-  //     width: 100%;
-  //     height: auto;
-
   .main-banner-container {
     @include flex();
     padding: 20px;
@@ -350,8 +327,6 @@
       .mbssc {
         width: 100%;
         height: 100%;
-        // background-color: rgba(216, 230, 242, 0.349);
-        // border: 2px solid red;
         padding: 24px;
         position: absolute;
         left: 0;
@@ -360,8 +335,6 @@
           //TITOLI
           width: 100%;
           height: 100%;
-          // border: 3px solid black;
-          // background-color: rgba(55, 99, 5, 0.557);
           @include flex(column);
           justify-content: center;
           align-items: flex-start;
@@ -388,7 +361,7 @@
           background: $main-banner-orange-gradient-titles; /*linear-gradient(rgb(255, 216, 0), rgb(235, 140, 0))*/
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          -webkit-background-clip: text; /*controllare quale usare, forse vanno messi entrambi, sia con sia senza il prefisso WEBKIT*/
+          -webkit-background-clip: text;
           margin-bottom: 8px;
         }
 
@@ -409,9 +382,7 @@
 
         // STILE IMMAGINE
         .bunny-container-a {
-          // border: 3px solid yellow;
           width: 30%;
-          // min-width: 208px;
           height: 120%;
           position: absolute;
           right: 0;
@@ -469,13 +440,11 @@
             }
 
             .mbcli-number {
-              // background-color: rgba(128, 255, 0, 0.485);
               font-size: 40px;
               margin: 0px 4px -4px 0px;
             }
 
             .mbcli-time {
-              // background-color: rgba(235, 131, 211, 0.279);
               font-size: 20px;
               margin: 0px 12px 0px 0px;
             }
@@ -493,7 +462,6 @@
 
         // STILE IMMAGINE
         .bunny-container-b {
-          // border: 2px solid yellow;
           width: 27%;
           height: 65%;
           border-radius: 24px;
@@ -533,7 +501,7 @@
           background: $main-banner-orange-gradient-titles; /*linear-gradient(rgb(255, 216, 0), rgb(235, 140, 0))*/
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          -webkit-background-clip: text; /*controllare quale usare, forse vanno messi entrambi, sia con sia senza il prefisso WEBKIT*/
+          -webkit-background-clip: text;
           margin-bottom: 8px;
         }
 
@@ -554,7 +522,6 @@
 
         // STILE IMMAGINE
         .bunny-container-c {
-          // border: 3px solid skyblue;
           height: 110%;
           width: 25%;
           position: absolute;
@@ -565,11 +532,9 @@
           .bc-internalwrapper-c {
             width: 100%;
             height: 100%;
-            // border: 3px solid cornsilk;
             position: relative;
 
             .bunny-container-c1 {
-              // border: 3px solid yellow;
               width: 100%;
               height: 110%;
               position: absolute;
@@ -585,7 +550,6 @@
             }
 
             .bunny-container-c2 {
-              // border: 3px solid orange;
               width: 60px;
               height: 60px;
               position: absolute;
@@ -634,8 +598,6 @@
       // }
     }
   }
-
-  // }    <--- body
 }
 
 // ------------------------------------------------------------
@@ -654,7 +616,6 @@
       background: $main-banner-background-gradient; /*linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%)*/
       height: 220px;
       width: 100%;
-      // padding: 24px;
       border-radius: 24px;
       position: relative;
 
@@ -662,8 +623,6 @@
       .mbssc {
         width: 100%;
         height: 100%;
-        // background-color: rgba(216, 230, 242, 0.349);
-        // border: 2px solid red;
         padding: 24px;
         position: absolute;
         left: 0;
@@ -672,8 +631,6 @@
         .main-banner-content-container {
           width: 100%;
           height: 100%;
-          // border: 3px solid black;
-          // background-color: rgba(55, 99, 5, 0.557);
           @include flex(column);
           justify-content: center;
           align-items: flex-start;
@@ -701,7 +658,7 @@
           background: $main-banner-orange-gradient-titles; /*linear-gradient(rgb(255, 216, 0), rgb(235, 140, 0))*/
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          -webkit-background-clip: text; /*controllare quale usare, forse vanno messi entrambi, sia con sia senza il prefisso WEBKIT*/
+          -webkit-background-clip: text;
           margin-bottom: 8px;
         }
 
@@ -726,7 +683,6 @@
 
         // STILE IMMAGINE
         .bunny-container-a {
-          // border: 3px solid yellow;
           width: 40%;
           min-width: 208px;
           height: 120%;
@@ -790,13 +746,11 @@
             }
 
             .mbcli-number {
-              // background-color: rgba(128, 255, 0, 0.485);
               font-size: 18px;
               margin: 0px 4px -4px 0px;
             }
 
             .mbcli-time {
-              // background-color: rgba(235, 131, 211, 0.279);
               font-size: 20px;
               margin: 0px 12px 0px 0px;
             }
@@ -814,7 +768,6 @@
 
         // STILE IMMAGINE
         .bunny-container-b {
-          // border: 2px solid yellow;
           width: 140px;
           height: 65%;
           border-radius: 24px;
@@ -856,7 +809,7 @@
           background: $main-banner-orange-gradient-titles; /*linear-gradient(rgb(255, 216, 0), rgb(235, 140, 0))*/
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          -webkit-background-clip: text; /*controllare quale usare, forse vanno messi entrambi, sia con sia senza il prefisso WEBKIT*/
+          -webkit-background-clip: text;
           margin-bottom: 8px;
         }
 
@@ -877,7 +830,6 @@
 
         // STILE IMMAGINE
         .bunny-container-c {
-          // border: 3px solid skyblue;
           height: 65%;
           width: 40%;
           min-width: 150px;
@@ -889,11 +841,9 @@
           .bc-internalwrapper-c {
             width: 100%;
             height: 100%;
-            // border: 3px solid cornsilk;
             position: relative;
 
             .bunny-container-c1 {
-              // border: 3px solid yellow;
               width: 100%;
               height: 100%;
               position: absolute;
@@ -909,7 +859,6 @@
             }
 
             .bunny-container-c2 {
-              // border: 3px solid orange;
               width: 35px;
               height: 35px;
               position: absolute;
@@ -960,8 +909,4 @@
       // }
     }
   }
-
-  // }  <--- body
 }
-
-// ------------------------------------------------------------
